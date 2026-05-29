@@ -1,0 +1,17 @@
+{
+  "name": "Mark Smalley",
+  "headline": "Engineering Leader · Protocol Architect · AI-Native Builder",
+  "availability": {
+    "status": "available",
+    "text": "Open to CTO, RegTech, and DevRel roles",
+    "regions": ["UK", "Europe", "Remote globally"]
+  },
+  "contact": {
+    "email": "mark@smalley.my",
+    "phone": "+44 (0) 7526 860 262",
+    "github": "msmalley",
+    "linkedin": "msmalley",
+    "twitter": "m_smalley",
+    "website": "smalley.my"
+  }
+}

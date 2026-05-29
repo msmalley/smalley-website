@@ -1,0 +1,55 @@
+[
+  {
+    "type": "recognition",
+    "title": "Deloitte Top 50 Global RegTech Companies",
+    "outlet": "Deloitte",
+    "year": 2017,
+    "note": "Neuroware — only Malaysian company listed"
+  },
+  {
+    "type": "recognition",
+    "title": "Digerati50 — Malaysia's Top 50 Digital Leaders",
+    "outlet": "Digital News Asia",
+    "year": 2018,
+    "note": "Inaugural list alongside Catcha Group and Grab founders"
+  },
+  {
+    "type": "recognition",
+    "title": "VentureBeat Top 5 — 500 Startups Batch 9 Demo Day",
+    "outlet": "VentureBeat",
+    "year": 2014,
+    "note": "5 startups that caught our eye"
+  },
+  {
+    "type": "press",
+    "title": "Securities Commission Malaysia Completes Blockchain Pilot Project",
+    "outlet": "FinTech News Malaysia",
+    "year": 2018,
+    "url": "https://fintechnews.my/19193/blockchain/this-is-project-castor-securities-commission-malaysias-new-blockchain-blueprint/"
+  },
+  {
+    "type": "press",
+    "title": "CoKeeps — First Regulated Digital Asset Custodian",
+    "outlet": "The Edge Malaysia",
+    "year": 2023
+  },
+  {
+    "type": "publication",
+    "title": "Unravelling Blockchain's Future",
+    "outlet": "Islamic Finance News (IFN)",
+    "year": 2017
+  },
+  {
+    "type": "radio",
+    "title": "Introduction to Blockchains / Unblocking the Mystery",
+    "outlet": "BFM Radio Malaysia",
+    "year": 2016,
+    "note": "Two live appearances on Malaysia's English business radio"
+  },
+  {
+    "type": "press",
+    "title": "Featured blockchain infrastructure voice",
+    "outlet": "CoinDesk",
+    "year": 2015
+  }
+]

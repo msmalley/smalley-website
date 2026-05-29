@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="sm-base" content="/personal/smalley-rebuild">
+<meta name="theme-color" content="#0B0F1A">
+<title>SADO Protocol — Mark Smalley</title>
+<meta name="description" content="Co-authored decentralised trading protocol for Bitcoin Ordinals. Open-source SDK adopted by Ordzaar and third-party exchanges.">
+<link rel="stylesheet" href="../../css/_sm.css?v=1.0.0">
+<link rel="stylesheet" href="../../css/case-study.css?v=1.0.0">
+</head>
+<body>
+<div id="nav-root"></div>
+
+<section class="case-hero">
+  <div class="container">
+    <div class="case-hero-eyebrow" data-accent="teal">R1 (contracted by Cake) · 2023</div>
+    <h1>SADO Protocol</h1>
+    <div class="case-hero-tagline">Decentralised trading protocol for Bitcoin Ordinals</div>
+    <div class="case-meta">
+      <div class="case-meta-item"><span class="case-meta-label">Role</span><span class="case-meta-value">Lead Developer &amp; Co-author</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">Status</span><span class="case-meta-value">Production — open source</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">Adoption</span><span class="case-meta-value">Ordzaar + third-party exchanges</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="page-content">
+  <div class="container">
+    <div class="case-content">
+      <h2>Challenge</h2>
+      <p>Bitcoin Ordinals had no trustless trading mechanism. Existing NFT marketplaces relied on centralised order books and custodial escrow — antithetical to Bitcoin's ethos. The ecosystem needed an open, auditable standard that anyone could build on without permission.</p>
+
+      <h2>Approach</h2>
+      <p>I designed and built SADO — a <strong>Self-Authenticating Decentralised Ordinals</strong> protocol that uses IPFS for storing semi-signed transactions (PSBTs) with content identifiers published on-chain. The protocol supports any meta-protocol operating on UTXO data, not just Ordinals.</p>
+      <ul>
+        <li>3-step instant purchasing: buyer signs PSBT, seller counter-signs, transaction broadcasts</li>
+        <li>6-step bidding mechanism for auction-style trading</li>
+        <li>IPFS-based storage — no central server holds order state</li>
+        <li>Published as open-source SDK at github.com/sadoprotocol</li>
+        <li>Expanded into Sado.Space — a suite of tools and services</li>
+      </ul>
+
+      <h2>Outcome</h2>
+      <p>SADO became the backbone of Ordzaar's trading engine and was adopted by third-party exchanges. The open protocol design proved that <strong>transparent, auditable trading infrastructure can exist natively on Bitcoin</strong> without centralised intermediaries.</p>
+
+      <div class="case-outcome">
+        <div class="case-outcome-label">Result</div>
+        <div class="case-outcome-text">Open protocol standard adopted in production by multiple exchanges</div>
+      </div>
+
+      <div class="case-tech">
+        <span class="pill">Bitcoin</span>
+        <span class="pill">PSBTs</span>
+        <span class="pill">IPFS</span>
+        <span class="pill">Ordinals</span>
+        <span class="pill">Inscriptions</span>
+        <span class="pill">Node.js</span>
+      </div>
+
+      <div class="case-links">
+        <a class="btn-secondary" href="https://github.com/sadoprotocol" target="_blank" rel="noopener">GitHub</a>
+      </div>
+
+      <nav class="case-nav">
+        <a href="../ordzaar/">← Ordzaar</a>
+        <a href="../cokeeps/">Next: CoKeeps →</a>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<div id="footer-root"></div>
+<script src="../../js/sm-loader.js?v=1.0.0"></script>
+</body>
+</html>

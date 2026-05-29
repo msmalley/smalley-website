@@ -1,0 +1,80 @@
+[
+  {
+    "slug": "ordzaar",
+    "title": "Ordzaar",
+    "role": "Sole Prototype Developer",
+    "company": "CakeDefi",
+    "year": "2023",
+    "accent": "teal",
+    "tagline": "Bitcoin's leading Ordinals marketplace",
+    "summary": "Built the initial fully-decentralised browser-based marketplace from scratch. Operated entirely on-chain without reliance on traditional databases. Grew beyond a single developer into Cake's fifth product vertical, then spun out as an independent startup.",
+    "outcome": "Became CakeDefi's 5th business vertical, then independent startup",
+    "tech": ["Bitcoin", "Ordinals", "Taproot", "UTXO", "BitcoinJS", "IPFS", "SADO Protocol"],
+    "links": { "live": "https://ordzaar.com" }
+  },
+  {
+    "slug": "sado-protocol",
+    "title": "SADO Protocol",
+    "role": "Lead Developer & Co-author",
+    "company": "R1 (contracted by Cake)",
+    "year": "2023",
+    "accent": "teal",
+    "tagline": "Decentralised trading protocol for Bitcoin Ordinals",
+    "summary": "Designed and built a trustless peer-to-peer trading protocol using IPFS for storing semi-signed transactions (PSBTs) with content identifiers published on-chain. Supports 3-step instant purchasing and 6-step bidding mechanisms. Expanded into Sado.Space — a suite of open-source tools.",
+    "outcome": "Adopted by Ordzaar and third-party exchanges; open-source SDK ecosystem",
+    "tech": ["Bitcoin", "IPFS", "PSBTs", "Ordinals", "Inscriptions", "Node.js"],
+    "links": { "repo": "https://github.com/sadoprotocol" }
+  },
+  {
+    "slug": "cokeeps",
+    "title": "CoKeeps",
+    "role": "Co-founder, Investor & Technical Architect",
+    "company": "R1",
+    "year": "2018–2023",
+    "accent": "gold",
+    "tagline": "Malaysia's first regulated Digital Asset Custodian",
+    "summary": "Co-founded and funded through R1 — providing two years of product development capital and three years of operational funding while awaiting regulatory approval. Designed compliance architecture, KYC/AML pipelines, and custody infrastructure. Emerged from Project Castor — the SC Malaysia blockchain blueprint Mark advised on.",
+    "outcome": "First company in Malaysia approved as a regulated Digital Asset Custodian",
+    "tech": ["KYC/AML", "Digital Custody", "Regulatory Compliance", "Node.js", "VueJS"],
+    "links": {}
+  },
+  {
+    "slug": "moddable",
+    "title": "Moddable Games",
+    "role": "CEO & Founder",
+    "company": "Moddable Limited",
+    "year": "2025",
+    "accent": "violet",
+    "tagline": "Open-source games studio using AI-augmented engineering",
+    "summary": "Shipped four games, two open-source engines (64-variant chess + hex map framework), nine mods, and a developer tools platform in under six months. Built entirely using LLM-driven development workflows. Custom PDF pagination engine producing 190+ page rulebook libraries.",
+    "outcome": "4 games, 2 engines, 9 mods — all live and public in 6 months",
+    "tech": ["JavaScript", "Canvas", "AI/LLM", "Puppeteer", "GitHub Pages"],
+    "links": { "live": "https://moddable.games" }
+  },
+  {
+    "slug": "oviato",
+    "title": "Oviato",
+    "role": "Co-founder & Chief Blockchain Officer",
+    "company": "Oviato",
+    "year": "2025",
+    "accent": "teal",
+    "tagline": "Passkey-native wallet infrastructure",
+    "summary": "Co-founded and led the technical pivot from consumer app to passkey-native wallet-as-a-service infrastructure. Built on Project Eden — a weekend hackathon prototype demonstrating WebAuthN-based crypto wallets without passwords. The pivot secured DraperVC investment.",
+    "outcome": "Secured DraperVC investment; pivoted from consumer app to B2B infrastructure",
+    "tech": ["PassKeys", "WebAuthN", "React", "Schnorr Signatures", "Bitcoin", "Ethereum"],
+    "links": {}
+  },
+  {
+    "slug": "neuroware",
+    "title": "Neuroware",
+    "role": "Chief Technology Officer",
+    "company": "Neuroware Inc",
+    "year": "2013–2018",
+    "accent": "gold",
+    "tagline": "500 Startups-funded blockchain compliance infrastructure",
+    "summary": "Launched at TechCrunch Disrupt London after 500 Startups Batch 9. Raised US$300K+ that sustained operations for five years. Built open-source blockchain wallet and SDK infrastructure handling 1M+ API requests. The only Malaysian company in Deloitte's Top 50 Global RegTech.",
+    "outcome": "Deloitte Top 50 RegTech, VentureBeat Top 5, $300K+ raised, TechCrunch Disrupt",
+    "tech": ["UTXO", "Solidity", "EthersJS", "BitcoinJS", "IPFS", "MongoDB", "Node.js"],
+    "links": {}
+  }
+]

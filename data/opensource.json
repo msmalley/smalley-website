@@ -1,0 +1,60 @@
+[
+  {
+    "title": "SADO Protocol",
+    "role": "Co-author",
+    "description": "Self-authenticating, decentralised ordinals order-book standard for Bitcoin. Uses IPFS for semi-signed transaction storage with on-chain content identifiers.",
+    "repo": "https://github.com/sadoprotocol",
+    "accent": "teal",
+    "status": "production",
+    "adoptedBy": ["Ordzaar", "Third-party exchanges"]
+  },
+  {
+    "title": "DN-Key Protocol",
+    "role": "Author",
+    "description": "Decentralised key management standard using DNS TXT records to broadcast public keys. Designed for regulated digital asset custody environments.",
+    "accent": "teal",
+    "status": "production",
+    "adoptedBy": ["ATA Plus ECF"],
+    "year": 2016
+  },
+  {
+    "title": "Ordit SDK",
+    "role": "Lead developer",
+    "description": "Open-source indexer, parser, and API toolkit for Bitcoin Ordinals and Inscriptions. Multiple repos under the sadoprotocol organisation.",
+    "repo": "https://github.com/sadoprotocol/ordit",
+    "accent": "teal",
+    "status": "production"
+  },
+  {
+    "title": "Moddable Chess Engine",
+    "role": "Creator",
+    "description": "Modular chess engine with 64 playable variants, built-in AI opponent (minimax), embed API, URL parameter interface, and plugin architecture. Includes developer guide for community contributions.",
+    "repo": "https://github.com/Moddable-Games/moddable-chess",
+    "demo": "https://chess.moddable.games",
+    "accent": "violet",
+    "status": "production"
+  },
+  {
+    "title": "Moddable Hexmaps",
+    "role": "Creator",
+    "description": "Hex map framework with seeded procedural generation, multiple render styles, URL parameter API, JSON export/import, and iframe embed support.",
+    "repo": "https://github.com/Moddable-Games/moddable-hexmaps",
+    "demo": "https://hex.moddable.games",
+    "accent": "violet",
+    "status": "production"
+  },
+  {
+    "title": "BackPress",
+    "role": "Core contributor",
+    "description": "Contributed to Automattic's BackPress framework — a standalone library extracted from WordPress core.",
+    "accent": "gold",
+    "status": "legacy"
+  },
+  {
+    "title": "Blockchain Embassy of Asia",
+    "role": "Founder",
+    "description": "ASEAN's first public blockchain consortium. Operated a private proof-of-authority EVM network with members from Maybank, RHB, Capital Bay, and ATA Plus.",
+    "accent": "gold",
+    "year": 2016
+  }
+]

@@ -1,0 +1,61 @@
+[
+  {
+    "title": "The Cost of Cash",
+    "event": "TEDx Sarawak",
+    "year": 2017,
+    "type": "keynote",
+    "videoId": "66ctEX47I4E",
+    "description": "Demystifying Bitcoin and decentralised money for a mainstream audience. First formal public presentation at Sarawak's inaugural TEDx event, attended by government dignitaries.",
+    "featured": true
+  },
+  {
+    "title": "Introducing Bitcoin: The Mostly Visual Guide",
+    "event": "WebCamp KL",
+    "year": 2013,
+    "type": "talk",
+    "description": "One of the earliest Bitcoin developer presentations in Southeast Asia. Multiple recorded sessions at WebCamp KL meetups."
+  },
+  {
+    "title": "Gold, Bitcoin, and Digital Sunnah Instruments",
+    "event": "Islamic Finance News Forum, Kuala Lumpur",
+    "year": 2017,
+    "type": "conference",
+    "description": "Blockchain applications in Islamic Finance — addressing institutional audiences on digital asset frameworks."
+  },
+  {
+    "title": "Blockchain in Financial Crime Prevention",
+    "event": "Financial Crime Summit",
+    "year": 2017,
+    "type": "conference",
+    "description": "Blockchain applications in financial crime prevention and compliance."
+  },
+  {
+    "title": "Banking on the Future of Blockchains",
+    "event": "MDEC FinTech Conference",
+    "year": 2017,
+    "type": "conference",
+    "description": "Addressing institutional adoption of blockchain infrastructure for financial services."
+  },
+  {
+    "title": "Regional FinTech Leadership",
+    "event": "Finnovasia",
+    "year": 2017,
+    "type": "conference",
+    "description": "Presenting on blockchain infrastructure for financial services at a regional FinTech leadership forum."
+  },
+  {
+    "title": "Introduction to Blockchains / Unblocking the Mystery",
+    "event": "BFM Radio Malaysia",
+    "year": 2016,
+    "type": "radio",
+    "description": "Two live radio appearances on Malaysia's English business radio explaining blockchain to mainstream business audiences."
+  },
+  {
+    "title": "Blockchain Infrastructure for Developers",
+    "event": "Neuroware / YouTube",
+    "year": 2016,
+    "type": "talk",
+    "videoId": "FTkdMvxyQAQ",
+    "description": "Developer and institutional audiences on blockchain infrastructure."
+  }
+]

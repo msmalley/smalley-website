@@ -1,0 +1,114 @@
+@font-face { font-family: 'Syne'; src: url('../fonts/syne-700.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'Syne'; src: url('../fonts/syne-800.woff2') format('woff2'); font-weight: 800; font-display: swap; }
+@font-face { font-family: 'Space Grotesk'; src: url('../fonts/space-grotesk-500.woff2') format('woff2'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'Space Grotesk'; src: url('../fonts/space-grotesk-600.woff2') format('woff2'); font-weight: 600; font-display: swap; }
+@font-face { font-family: 'Space Grotesk'; src: url('../fonts/space-grotesk-700.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'DM Sans'; src: url('../fonts/dm-sans-400.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'DM Sans'; src: url('../fonts/dm-sans-500.woff2') format('woff2'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'DM Sans'; src: url('../fonts/dm-sans-600.woff2') format('woff2'); font-weight: 600; font-display: swap; }
+@font-face { font-family: 'JetBrains Mono'; src: url('../fonts/jetbrains-mono-400.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'JetBrains Mono'; src: url('../fonts/jetbrains-mono-500.woff2') format('woff2'); font-weight: 500; font-display: swap; }
+
+:root {
+  --sm-deep: #0B0F1A;
+  --sm-surface: #141824;
+  --sm-surface-alt: #1C2235;
+  --sm-border: rgba(255,255,255,0.08);
+  --sm-border-hover: rgba(255,255,255,0.16);
+  --sm-text: #F0F2F5;
+  --sm-muted: #8B92A5;
+  --sm-faint: #4A5168;
+  --sm-teal: #0E7490;
+  --sm-teal-glow: #22D3EE;
+  --sm-gold: #9A6F2E;
+  --sm-gold-glow: #F59E0B;
+  --sm-violet: #6D28D9;
+  --sm-violet-glow: #A78BFA;
+  --sm-link: #6FB5FF;
+  --sm-success: #34D399;
+  --f-display: 'Syne', system-ui, sans-serif;
+  --f-heading: 'Space Grotesk', system-ui, sans-serif;
+  --f-body: 'DM Sans', system-ui, sans-serif;
+  --f-mono: 'JetBrains Mono', monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--f-body);
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--sm-text);
+  background: var(--sm-deep);
+  -webkit-font-smoothing: antialiased;
+  text-wrap: pretty;
+}
+
+a { color: var(--sm-link); text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--sm-teal-glow); }
+
+img { max-width: 100%; height: auto; display: block; }
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.eyebrow {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--sm-muted);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: var(--f-heading);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--sm-text);
+  margin-bottom: 32px;
+}
+
+.pill {
+  display: inline-block;
+  font-family: var(--f-mono);
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  border: 1px solid var(--sm-border);
+  color: var(--sm-muted);
+}
+
+.card {
+  background: var(--sm-surface);
+  border: 1px solid var(--sm-border);
+  border-radius: 16px;
+  padding: 28px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.card:hover {
+  border-color: var(--sm-border-hover);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .container { padding: 0 16px; }
+  .section-title { font-size: 22px; }
+}

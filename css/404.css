@@ -1,0 +1,21 @@
+.error-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+.error-code {
+  font-family: var(--f-mono);
+  font-size: 64px;
+  color: var(--sm-faint);
+  margin-bottom: 16px;
+}
+.error-message {
+  font-family: var(--f-heading);
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+.error-link {
+  font-size: 14px;
+}

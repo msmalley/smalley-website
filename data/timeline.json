@@ -1,0 +1,14 @@
+[
+  { "year": "2025", "title": "CEO & Founder", "company": "Moddable Limited", "location": "United Kingdom", "accent": "violet", "highlights": ["4 games, 2 engines shipped in 6 months", "AI-augmented engineering workflows", "Custom PDF pagination engine"] },
+  { "year": "2025", "title": "Co-founder & CBO", "company": "Oviato", "location": "United Kingdom", "accent": "teal", "highlights": ["Passkey-native wallet infrastructure", "DraperVC investment secured", "Built on Project Eden prototype"] },
+  { "year": "2024", "title": "Project Eden", "company": "R1", "location": "Malaysia", "accent": "teal", "highlights": ["Weekend hackathon → passkey wallet prototype", "WebAuthN + Schnorr signatures", "Evolved into Oviato"] },
+  { "year": "2023", "title": "Head of Engineering", "company": "CakeDefi", "location": "Singapore", "accent": "teal", "highlights": ["Sole developer of Ordzaar prototype", "Co-authored SADO Protocol", "P4 → M3 promotion", "Founded Moonshot team"] },
+  { "year": "2023", "title": "CoKeeps Approved", "company": "CoKeeps", "location": "Malaysia", "accent": "gold", "highlights": ["First regulated Digital Asset Custodian in Malaysia", "5 years from concept to approval"] },
+  { "year": "2019", "title": "BloqVerse", "company": "R1 / Neuroware", "location": "Malaysia", "accent": "teal", "highlights": ["30+ interconnected Ethereum smart contracts", "On-chain multiplayer RPG", "Consortium onboarding tool"] },
+  { "year": "2018", "title": "Project Castor", "company": "SC Malaysia", "location": "Malaysia", "accent": "gold", "highlights": ["Advised on SC blockchain blueprint", "Led to Digital Asset Custodian regulation", "Digerati50 recognition"] },
+  { "year": "2017", "title": "TEDx Speaker", "company": "TEDx Sarawak", "location": "Malaysia", "accent": "gold", "highlights": ["'The Cost of Cash'", "First TEDx in Sarawak", "Deloitte Top 50 RegTech (Neuroware)"] },
+  { "year": "2016", "title": "Blockchain Embassy", "company": "R1", "location": "Malaysia", "accent": "gold", "highlights": ["First registered consortium in Malaysia", "Maybank, RHB, Capital Bay, ATA Plus", "DN-Key protocol authored", "BFM Radio appearances"] },
+  { "year": "2014", "title": "500 Startups Batch 9", "company": "Neuroware / BlockStrap", "location": "USA", "accent": "teal", "highlights": ["US$300K+ raised", "TechCrunch Disrupt London launch", "VentureBeat Top 5"] },
+  { "year": "2012", "title": "CEO & Founder", "company": "R1", "location": "Malaysia", "accent": "gold", "highlights": ["First company in SC Malaysia sandbox", "13 years of blockchain infrastructure", "DBS Bank and Baker Hostetler clients"] },
+  { "year": "2011", "title": "WebCamp KL", "company": "Community", "location": "Malaysia", "accent": "violet", "highlights": ["Founded developer meetup community", "Earliest blockchain developer events in region"] }
+]

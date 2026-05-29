@@ -1,0 +1,49 @@
+[
+  {
+    "slug": "pdf-pagination-engine",
+    "title": "PDF Pagination Engine",
+    "tagline": "Intelligent document pagination with orphan prevention",
+    "description": "A JavaScript-native pagination system that measures actual rendered element heights, groups headings with their content atomically, enforces minimum page-fill (30%), and assembles multi-section documents (cover, content, appendix, back-cover). No wkhtmltopdf. No fragile CSS workarounds. Pure DOM measurement.",
+    "stats": [
+      { "value": "190+", "label": "pages assembled" },
+      { "value": "0", "label": "orphaned elements" },
+      { "value": "64", "label": "variant PDFs generated" }
+    ],
+    "tech": ["JavaScript", "Puppeteer", "DOM measurement", "pdfunite"],
+    "repo": "https://github.com/Moddable-Games/moddable-rules",
+    "demo": "https://rules.moddable.games",
+    "accent": "violet"
+  },
+  {
+    "slug": "moddable-chess-engine",
+    "title": "Moddable Chess Engine",
+    "tagline": "64 variants. AI opponent. Embed API. Plugin system.",
+    "description": "A modular chess engine supporting 64 playable variants on boards from 4x8 to 12x8. Zero dependencies, pure JavaScript. Built-in minimax AI with piece evaluation. Embed via iframe with URL parameters. Community can add variants via a single-file plugin without touching engine code.",
+    "stats": [
+      { "value": "64", "label": "playable variants" },
+      { "value": "0", "label": "dependencies" },
+      { "value": "2000+", "label": "documented variants" }
+    ],
+    "tech": ["JavaScript", "Canvas", "Minimax AI", "Plugin architecture"],
+    "repo": "https://github.com/Moddable-Games/moddable-chess",
+    "demo": "https://chess.moddable.games",
+    "accent": "violet",
+    "quickstart": "<iframe src=\"https://chess.moddable.games/play/?variant=standard&embed=1\" width=\"400\" height=\"480\"></iframe>"
+  },
+  {
+    "slug": "moddable-hexmaps",
+    "title": "Moddable Hexmaps",
+    "tagline": "Seeded procedural hex maps with JSON export",
+    "description": "A shared hexagonal map framework for board game tools. Generates, renders, and edits hex-based boards with seeded RNG for reproducible maps. Multiple terrain palettes, click-to-edit, JSON export/import, and full URL parameter API for embedding.",
+    "stats": [
+      { "value": "∞", "label": "seeded maps" },
+      { "value": "4", "label": "games supported" },
+      { "value": "3", "label": "render styles" }
+    ],
+    "tech": ["JavaScript", "Canvas", "Seeded RNG", "URL param API"],
+    "repo": "https://github.com/Moddable-Games/moddable-hexmaps",
+    "demo": "https://hex.moddable.games",
+    "accent": "violet",
+    "quickstart": "<iframe src=\"https://hex.moddable.games/?theme=nukes&rings=4&boardonly=1\" width=\"400\" height=\"400\"></iframe>"
+  }
+]

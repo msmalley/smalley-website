@@ -30,9 +30,10 @@
 }
 .case-hero-bg {
   position: absolute;
-  inset: -40%;
-  background-size: cover;
-  background-position: center 30%;
+  top: -30%;
+  left: -10%;
+  right: -10%;
+  bottom: -30%;
   will-change: transform;
   transition: none;
 }
@@ -58,7 +59,10 @@
     min-height: 65vh;
   }
   .case-hero-bg {
-    inset: -20%;
+    top: -15%;
+    left: -5%;
+    right: -5%;
+    bottom: -15%;
   }
 }
 .case-hero-eyebrow {
@@ -253,6 +257,12 @@
 }
 .case-tech .pill {
   font-size: 11px;
+  text-decoration: none;
+  transition: border-color 0.15s, color 0.15s;
+}
+a.pill:hover {
+  border-color: var(--sm-teal);
+  color: var(--sm-text);
 }
 
 .case-links {

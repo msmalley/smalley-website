@@ -17,21 +17,21 @@ NEW="${MAJOR}.${MINOR}.${PATCH}"
 echo "$NEW" > version.txt
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
-  SED="sed -i ''"
+  SED="sed -i '' -E"
 else
-  SED="sed -i"
+  SED="sed -i -E"
 fi
 
-find . -name "*.html" -not -path "./node_modules/*" | while read -r file; do
-  eval "$SED 's/\?v=[0-9]\+\.[0-9]\+\.[0-9]\+/?v=$NEW/g' \"$file\""
+find . -name "*.html" -not -path "./node_modules/*" -not -path "./cvs/node_modules/*" | while read -r file; do
+  eval "$SED 's/\\?v=[0-9]+\\.[0-9]+\\.[0-9]+/?v=$NEW/g' \"$file\""
 done
 
 find . -name "sm-loader.js" | while read -r file; do
-  eval "$SED \"s/var V = '[0-9]\+\.[0-9]\+\.[0-9]\+'/var V = '$NEW'/\" \"$file\""
+  eval "$SED \"s/var V = '[0-9]+\\.[0-9]+\\.[0-9]+'/var V = '$NEW'/\" \"$file\""
 done
 
 find . -name "sm-core.js" | while read -r file; do
-  eval "$SED \"s/const VERSION = '[0-9]\+\.[0-9]\+\.[0-9]\+'/const VERSION = '$NEW'/\" \"$file\""
+  eval "$SED \"s/const VERSION = '[0-9]+\\.[0-9]+\\.[0-9]+'/const VERSION = '$NEW'/\" \"$file\""
 done
 
 echo "Bumped $CURRENT → $NEW ($TYPE)"

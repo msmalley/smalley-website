@@ -63,38 +63,33 @@
 
   function renderOpenSource() {
     SM.getData('opensource').then(function(items) {
-      var container = document.querySelector('.oss-list');
-      if (!container) return;
+      var grid = document.querySelector('.oss-grid');
+      if (!grid) return;
       for (var i = 0; i < items.length; i++) {
         var o = items[i];
         var status = o.status || 'production';
-        var stats = SM.el('div', { class: 'tool-stats' });
+        var stats = SM.el('div', { class: 'tool-card-stats' });
         if (o.stats) {
           for (var s = 0; s < o.stats.length; s++) {
-            stats.appendChild(SM.el('div', null,
-              SM.el('div', { class: 'tool-stat-value', 'data-accent': o.accent }, o.stats[s].value),
-              SM.el('div', { class: 'tool-stat-label' }, o.stats[s].label)
-            ));
+            stats.appendChild(SM.el('span', { class: 'tool-card-stat', 'data-accent': o.accent }, o.stats[s].value + ' ' + o.stats[s].label));
           }
         }
-        var links = SM.el('div', { class: 'tool-links' });
-        if (o.slug) links.appendChild(SM.el('a', { class: 'btn-primary', href: SM.url('/open-source/' + o.slug + '/') }, 'Read More'));
-        if (o.repo) links.appendChild(SM.el('a', { class: 'btn-secondary', href: o.repo, target: '_blank', rel: 'noopener' }, 'Repository'));
-        if (o.demo) links.appendChild(SM.el('a', { class: 'btn-secondary', href: o.demo, target: '_blank', rel: 'noopener' }, 'Live Demo'));
-        var card = SM.el('div', { class: 'tool-card reveal' },
+        var tag = o.slug ? 'a' : 'div';
+        var attrs = { class: 'project-card reveal' };
+        if (o.slug) attrs.href = SM.url('/open-source/' + o.slug + '/');
+        var card = SM.el(tag, attrs,
           SM.el('div', { class: 'card' },
             SM.el('div', { class: 'oss-card-header' },
-              SM.el('div', { class: 'tool-card-title' }, o.title),
+              SM.el('div', { class: 'project-card-eyebrow', 'data-accent': o.accent }, o.role),
               SM.el('span', { class: 'oss-badge oss-badge-' + status }, status)
             ),
-            SM.el('div', { class: 'oss-role' }, o.role),
-            SM.el('div', { class: 'tool-card-tagline' }, o.tagline),
-            SM.el('div', { class: 'tool-card-desc' }, o.description),
-            stats,
-            links
+            SM.el('div', { class: 'project-card-title' }, o.title),
+            SM.el('div', { class: 'project-card-desc' }, o.tagline),
+            SM.el('div', { class: 'project-card-desc' }, o.description),
+            stats
           )
         );
-        container.appendChild(card);
+        grid.appendChild(card);
       }
       SM.observe();
     });
@@ -102,31 +97,24 @@
 
   function renderTools() {
     SM.getData('tools').then(function(tools) {
-      var container = document.querySelector('.tools-list');
-      if (!container) return;
+      var grid = document.querySelector('.tools-grid');
+      if (!grid) return;
       for (var i = 0; i < tools.length; i++) {
         var t = tools[i];
-        var stats = SM.el('div', { class: 'tool-stats' });
+        var stats = SM.el('div', { class: 'tool-card-stats' });
         for (var s = 0; s < t.stats.length; s++) {
-          stats.appendChild(SM.el('div', null,
-            SM.el('div', { class: 'tool-stat-value', 'data-accent': t.accent }, t.stats[s].value),
-            SM.el('div', { class: 'tool-stat-label' }, t.stats[s].label)
-          ));
+          stats.appendChild(SM.el('span', { class: 'tool-card-stat', 'data-accent': t.accent }, t.stats[s].value + ' ' + t.stats[s].label));
         }
-        var links = SM.el('div', { class: 'tool-links' });
-        if (t.slug) links.appendChild(SM.el('a', { class: 'btn-primary', href: SM.url('/tools/' + t.slug + '/') }, 'Read More'));
-        if (t.demo) links.appendChild(SM.el('a', { class: 'btn-secondary', href: t.demo, target: '_blank', rel: 'noopener' }, 'Live Demo'));
-        if (t.repo) links.appendChild(SM.el('a', { class: 'btn-secondary', href: t.repo, target: '_blank', rel: 'noopener' }, 'Repository'));
-        var card = SM.el('div', { class: 'tool-card reveal' },
+        var card = SM.el('a', { class: 'project-card reveal', href: SM.url('/tools/' + t.slug + '/') },
           SM.el('div', { class: 'card' },
-            SM.el('div', { class: 'tool-card-title' }, t.title),
-            SM.el('div', { class: 'tool-card-tagline' }, t.tagline),
-            SM.el('div', { class: 'tool-card-desc' }, t.description),
-            stats,
-            links
+            SM.el('div', { class: 'project-card-eyebrow', 'data-accent': t.accent }, 'Open Source · MIT'),
+            SM.el('div', { class: 'project-card-title' }, t.title),
+            SM.el('div', { class: 'project-card-desc' }, t.tagline),
+            SM.el('div', { class: 'project-card-desc' }, t.description),
+            stats
           )
         );
-        container.appendChild(card);
+        grid.appendChild(card);
       }
       SM.observe();
     });

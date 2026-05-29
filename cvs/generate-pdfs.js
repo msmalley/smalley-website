@@ -8,8 +8,8 @@ const cvs = [
   { file: 'cv_c_devrel.html', pdf: 'Mark-Smalley-CV-DevRel.pdf', screenshot: 'cv_c_devrel.png' },
 ];
 
-const htmlDir = path.resolve(__dirname, '..', 'html');
-const outDir = path.resolve(__dirname, '..', 'dist');
+const htmlDir = path.resolve(__dirname, 'html');
+const outDir = path.resolve(__dirname, 'dist');
 
 async function generate() {
   if (fs.existsSync(outDir)) {

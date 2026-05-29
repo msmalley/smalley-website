@@ -2,8 +2,8 @@ window.SM = (() => {
   const VERSION = '1.0.10';
   const META_BASE = (document.querySelector('meta[name="sm-base"]') || {}).content;
   const BASE = META_BASE != null ? META_BASE
-    : location.pathname.includes('/personal/smalley-rebuild')
-      ? '/personal/smalley-rebuild' : '';
+    : location.pathname.includes('/personal/smalley-website')
+      ? '/personal/smalley-website' : '';
   function url(path) { return BASE + path; }
 
   const T = {

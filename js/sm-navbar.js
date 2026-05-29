@@ -6,6 +6,7 @@
     { label: 'Portfolio', href: '/portfolio/' },
     { label: 'CVs', href: '/cvs/' },
     { label: 'How I Build', href: '/process/' },
+    { label: 'RegTech', href: '/regtech/' },
     { label: 'Speaking', href: '/speaking/' },
     { label: 'Open Source', href: '/open-source/' },
     { label: 'Tools', href: '/tools/' },

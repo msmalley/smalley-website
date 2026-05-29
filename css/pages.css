@@ -344,6 +344,10 @@ a.timeline-item:hover {
   color: var(--sm-muted);
 }
 
+.speaking-cta {
+  padding: 80px 0;
+}
+
 @media (max-width: 768px) {
   .project-grid { grid-template-columns: 1fr; }
   .tools-grid { grid-template-columns: 1fr; }

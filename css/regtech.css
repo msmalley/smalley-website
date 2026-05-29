@@ -134,28 +134,8 @@
   border: 1.5px solid var(--sm-gold-glow);
 }
 
-.cta-box {
-  background: var(--sm-surface);
-  border: 1px solid var(--sm-border);
-  border-radius: 16px;
-  padding: 48px;
-  text-align: center;
-}
-.cta-title {
-  font-family: var(--f-heading);
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-.cta-desc {
-  font-size: 15px;
-  color: var(--sm-muted);
-  margin-bottom: 24px;
-}
-
 @media (max-width: 768px) {
   .credentials-grid { grid-template-columns: 1fr; }
   .bridge-grid { grid-template-columns: 1fr; }
   .milestone { grid-template-columns: 1fr; gap: 4px; }
-  .cta-box { padding: 32px 20px; }
 }

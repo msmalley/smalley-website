@@ -142,7 +142,27 @@ img { max-width: 100%; height: auto; display: block; }
   background: var(--sm-surface-alt);
 }
 
+.cta-box {
+  background: var(--sm-surface);
+  border: 1px solid var(--sm-border);
+  border-radius: 16px;
+  padding: 48px;
+  text-align: center;
+}
+.cta-title {
+  font-family: var(--f-heading);
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.cta-desc {
+  font-size: 15px;
+  color: var(--sm-muted);
+  margin-bottom: 24px;
+}
+
 @media (max-width: 768px) {
   .container { padding: 0 16px; }
   .section-title { font-size: 22px; }
+  .cta-box { padding: 32px 20px; }
 }

@@ -46,6 +46,23 @@ body {
   text-wrap: pretty;
 }
 
+h1, h2, h3, h4, h5, h6,
+.section-title,
+.hero-headline,
+.page-hero-desc,
+.case-hero-tagline,
+.process-hero-tagline,
+.regtech-hero-tagline,
+.cta-title,
+.featured-card-title,
+.project-card-title,
+.credential-title,
+.eco-title,
+.step-title,
+.principle-title {
+  text-wrap: balance;
+}
+
 a { color: var(--sm-link); text-decoration: none; transition: color 0.2s; }
 a:hover { color: var(--sm-teal-glow); }
 

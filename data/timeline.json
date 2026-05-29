@@ -10,5 +10,5 @@
   { "year": "2016", "title": "Blockchain Embassy", "company": "R1", "location": "Malaysia", "accent": "gold", "link": "/open-source/blockchain-embassy/", "highlights": ["First registered consortium in Malaysia", "Maybank, RHB, Capital Bay, ATA Plus", "DN-Key protocol authored", "BFM Radio appearances"] },
   { "year": "2014", "title": "500 Startups Batch 9", "company": "Neuroware / BlockStrap", "location": "USA", "accent": "teal", "link": "/portfolio/neuroware/", "highlights": ["US$300K+ raised", "TechCrunch Disrupt London launch", "VentureBeat Top 5"] },
   { "year": "2012", "title": "CEO & Founder", "company": "R1", "location": "Malaysia", "accent": "gold", "link": "/portfolio/r1/", "highlights": ["First company in SC Malaysia sandbox", "13 years of blockchain infrastructure", "DBS Bank and Baker Hostetler clients"] },
-  { "year": "2011", "title": "WebCamp KL", "company": "Community", "location": "Malaysia", "accent": "violet", "link": "/speaking/webcamp-kl/", "highlights": ["Founded developer meetup community", "Earliest blockchain developer events in region"] }
+  { "year": "2011", "title": "WebCamp KL", "company": "Community", "location": "Malaysia", "accent": "violet", "link": "/speaking/webcamp-kl/", "highlights": ["Regular speaker from the early days", "Earliest blockchain developer presentations in region"] }
 ]

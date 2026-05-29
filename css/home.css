@@ -105,8 +105,8 @@
 }
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
 }
 .stat-item {
   text-align: center;

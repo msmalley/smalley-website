@@ -1,0 +1,106 @@
+.thoughts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: var(--sm-border);
+  border: 1px solid var(--sm-border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.thought-card {
+  display: block;
+  text-decoration: none;
+  background: var(--sm-surface);
+  padding: 28px 32px;
+  transition: background 0.2s;
+}
+.thought-card:hover { background: var(--sm-surface-alt); }
+.thought-card-date {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  color: var(--sm-faint);
+  margin-bottom: 8px;
+}
+.thought-card-title {
+  font-family: var(--f-heading);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--sm-text);
+  margin-bottom: 8px;
+}
+.thought-card-excerpt {
+  font-size: 14px;
+  color: var(--sm-muted);
+  line-height: 1.6;
+}
+
+.article-content {
+  max-width: 700px;
+  padding: 60px 0 80px;
+}
+.article-date {
+  font-family: var(--f-mono);
+  font-size: 12px;
+  color: var(--sm-faint);
+  margin-bottom: 32px;
+}
+.article-content h2 {
+  font-family: var(--f-heading);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--sm-text);
+  margin: 40px 0 16px;
+}
+.article-content h2:first-of-type { margin-top: 0; }
+.article-content p {
+  font-size: 16px;
+  color: var(--sm-muted);
+  line-height: 1.85;
+  margin-bottom: 20px;
+}
+.article-content p strong { color: var(--sm-text); }
+.article-content a { text-decoration: underline; text-underline-offset: 3px; }
+.article-content ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.article-content ul li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 15px;
+  color: var(--sm-muted);
+  line-height: 1.8;
+  margin-bottom: 8px;
+}
+.article-content ul li::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 0.7em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  border: 1.5px solid var(--sm-violet);
+}
+.article-content code {
+  font-family: var(--f-mono);
+  font-size: 13px;
+  background: var(--sm-surface-alt);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.article-content blockquote {
+  border-left: 3px solid var(--sm-violet);
+  padding: 8px 0 8px 20px;
+  margin: 24px 0;
+  font-style: italic;
+  color: var(--sm-muted);
+}
+.article-back {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--sm-border);
+  font-family: var(--f-mono);
+  font-size: 12px;
+}

@@ -1,0 +1,354 @@
+:root {
+  --navy:   #1B3A5C;
+  --gold:   #9A6F2E;
+  --gold-l: #FEF3C7;
+  --gold-s: #B8860B;
+  --slate:  #374151;
+  --muted:  #6B7280;
+  --rule:   #E5E7EB;
+  --bg:     #FDFCF9;
+  --white:  #FFFFFF;
+  --text:   #1F2937;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Source Serif 4', serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-wrap: pretty;
+}
+
+.page {
+  max-width: 100%;
+  margin: 0;
+  background: var(--white);
+  padding: 0;
+  overflow: hidden;
+}
+
+/* ── Header ── */
+.header {
+  background: var(--navy);
+  padding: 44px 0 36px;
+}
+.header-inner {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 72px;
+}
+.header-top {
+  margin-bottom: 14px;
+}
+.header h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 46px;
+  color: var(--white);
+  letter-spacing: -0.5px;
+  line-height: 1.05;
+}
+.header-badge { display: none; }
+.header .headline {
+  font-size: 14.5px;
+  color: var(--gold);
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  margin-bottom: 6px;
+}
+.header .availability {
+  font-size: 12px;
+  color: #94A3B8;
+  font-style: italic;
+}
+.header-rule {
+  height: 1px;
+  background: linear-gradient(to right, var(--gold) 40%, rgba(154,111,46,0.3) 70%, transparent);
+  margin-top: 18px;
+}
+
+/* ── Contact bar ── */
+.contact-bar {
+  background: #142D4A;
+  padding: 12px 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: #94A3B8;
+}
+.contact-bar-inner {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 72px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 4px 0;
+  font-size: 10.5px;
+}
+.contact-bar a { color: #CBD5E1; text-decoration: none; }
+.contact-bar a:hover { color: var(--gold); }
+.contact-bar .sep { margin: 0 10px; color: var(--gold); }
+
+/* ── Body ── */
+.body a { color: inherit; text-decoration-color: var(--gold); text-underline-offset: 2px; }
+.body a:hover { color: var(--gold); }
+.body {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 40px 72px 64px;
+}
+
+/* ── Sections ── */
+.section { margin-bottom: 32px; }
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 7px;
+  margin-bottom: 14px;
+  letter-spacing: 0.2px;
+  position: relative;
+}
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 48px;
+  height: 2px;
+  background: var(--gold);
+}
+
+/* ── Summary ── */
+.summary p {
+  font-size: 13.5px;
+  color: var(--slate);
+  line-height: 1.85;
+  font-style: italic;
+  border-left: 3px solid var(--gold);
+  padding: 8px 0 8px 20px;
+  max-width: 700px;
+  text-align: justify;
+}
+
+/* ── Regulatory bullets ── */
+.reg-list { list-style: none; padding: 0; }
+.reg-list li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 13px;
+  color: var(--slate);
+  margin-bottom: 8px;
+  line-height: 1.7;
+  text-wrap: balance;
+}
+.reg-list li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 0.63em;
+  width: 5px;
+  height: 5px;
+  background: var(--gold);
+  border-radius: 1px;
+}
+
+/* ── Jobs ── */
+.job {
+  margin-bottom: 24px;
+  padding-left: 16px;
+  padding-bottom: 24px;
+  border-left: 2px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  position: relative;
+}
+.job:last-child { border-bottom: none; padding-bottom: 0; }
+.job::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 2px solid var(--gold);
+}
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+.job-title {
+  font-weight: 600;
+  font-size: 14.5px;
+  color: var(--navy);
+  font-family: 'Source Serif 4', serif;
+}
+.job-title .job-active { font-weight: 400; font-size: 12px; color: var(--gold); }
+.job-company { font-size: 12.5px; color: var(--gold); font-weight: 600; margin-left: 8px; }
+.job-dates {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  color: var(--muted);
+  background: #F9FAFB;
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+.job-summary {
+  font-size: 12.5px;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 10px;
+  line-height: 1.7;
+  text-align: justify;
+  text-wrap: pretty;
+}
+.job ul { list-style: none; padding: 0; }
+.job ul li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 13px;
+  color: var(--slate);
+  margin-bottom: 6px;
+  line-height: 1.65;
+  text-wrap: balance;
+}
+.job ul li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 0.63em;
+  width: 5px;
+  height: 5px;
+  background: var(--gold-l);
+  border: 1px solid var(--gold);
+  border-radius: 1px;
+}
+
+/* ── Domain expertise ── */
+.domain-grid {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 10px 20px;
+}
+.domain-label {
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--navy);
+  padding-top: 3px;
+}
+.domain-value {
+  font-size: 12.5px;
+  color: var(--slate);
+  line-height: 1.6;
+  padding: 3px 0 3px 12px;
+  border-left: 2px solid var(--gold-l);
+}
+
+/* ── Speaking ── */
+.speaking-list { list-style: none; padding: 0; }
+.speaking-list li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 13px;
+  color: var(--slate);
+  margin-bottom: 7px;
+  line-height: 1.65;
+  text-wrap: balance;
+}
+.speaking-list li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 0.63em;
+  width: 5px;
+  height: 5px;
+  background: var(--gold);
+  border-radius: 1px;
+}
+
+/* ── Credentials ── */
+.creds-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 32px;
+}
+.cred-item {
+  font-size: 12.5px;
+  color: var(--slate);
+  padding: 5px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* ── References ── */
+.refs { display: flex; flex-wrap: wrap; gap: 20px 48px; }
+.ref-name {
+  font-weight: 600;
+  color: var(--navy);
+  font-size: 13.5px;
+  font-family: 'Source Serif 4', serif;
+}
+.ref-detail {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+@page { margin: 36px 0; size: A4; }
+@page :first { margin-top: 0; }
+@media print {
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { background: white; margin: 0; padding: 0; width: 210mm; }
+  .page {
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+    border-top: none;
+    padding: 0;
+    width: 210mm;
+    max-width: 210mm;
+  }
+  .header { padding: 36px 0 12px; }
+  .header-inner { max-width: 100%; padding: 0 48px; }
+  .header h1 { font-size: 30px; }
+  .header .headline { font-size: 11px; margin-bottom: 2px; }
+  .header .availability { font-size: 9.5px; }
+  .header-top { margin-bottom: 6px; }
+  .header-rule { margin-top: 6px; }
+  .contact-bar { padding: 6px 0; }
+  .contact-bar-inner { max-width: 100%; padding: 0 48px; font-size: 9px; flex-wrap: nowrap; }
+  .body { padding: 24px 48px 36px; max-width: 100%; }
+  .section { margin-bottom: 14px; }
+  .section-title { font-size: 11px; margin-bottom: 4px; padding-bottom: 2px; }
+  .summary p { font-size: 10px; line-height: 1.45; padding: 2px 0 2px 10px; }
+  .reg-list li { font-size: 10px; line-height: 1.35; margin-bottom: 1px; padding-left: 12px; }
+  .job { break-inside: avoid; margin-bottom: 6px; padding-bottom: 6px; padding-left: 12px; margin-left: 4px; }
+  .job::before { left: -5px; top: 7px; width: 6px; height: 6px; border-width: 1.5px; }
+  .reg-list li::before, .job ul li::before, .speaking-list li::before { top: 0.4em; }
+  .job-title { font-size: 12px; }
+  .job-company { font-size: 10px; }
+  .job-dates { font-size: 9px; }
+  .job-summary { font-size: 10px; line-height: 1.4; margin-bottom: 2px; }
+  .job ul li { font-size: 10.5px; line-height: 1.4; margin-bottom: 1px; }
+  .domain-grid { break-inside: avoid; gap: 2px 10px; grid-template-columns: 110px 1fr; }
+  .domain-label { font-size: 10px; }
+  .domain-value { font-size: 10px; line-height: 1.35; padding: 1px 0 1px 8px; }
+  .speaking-list li { font-size: 10px; line-height: 1.35; margin-bottom: 1px; }
+  .creds-grid { gap: 1px 14px; }
+  .cred-item { font-size: 10px; padding: 1px 0; }
+  .refs { gap: 4px 16px; }
+  .ref-name { font-size: 10.5px; }
+  .ref-detail { font-size: 8.5px; }
+  p { orphans: 3; widows: 3; }
+  li { text-wrap: auto; }
+}

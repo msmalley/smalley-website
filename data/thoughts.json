@@ -1,0 +1,14 @@
+[
+  {
+    "slug": "building-open-source-game-engines",
+    "title": "Building Two Open-Source Game Engines in Six Months (With AI)",
+    "date": "2025-05-29",
+    "excerpt": "What happens when you point LLM-driven development at the problem of building modular, embeddable game engines from scratch? 64 chess variants and infinite hex maps later, here's what I learned."
+  },
+  {
+    "slug": "cardinal-sins-of-bitcoin-ordinals",
+    "title": "The Cardinal Sins of Bitcoin Ordinals",
+    "date": "2024-03-15",
+    "excerpt": "Did you know that although your wallet might say that you only have 0.00000001 Bitcoin, depending upon where that Bitcoin came from and what's attached, it could actually be worth millions of dollars?"
+  }
+]

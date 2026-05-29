@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="sm-base" content="/personal/smalley-rebuild">
+<meta name="theme-color" content="#0B0F1A">
+<title>Thoughts — Mark Smalley</title>
+<meta name="description" content="Writing on blockchain infrastructure, AI-augmented development, and building in public.">
+<meta property="og:title" content="Thoughts — Mark Smalley">
+<meta property="og:description" content="Writing on blockchain, AI development, and building in public.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../css/_sm.css?v=1.0.0">
+<link rel="stylesheet" href="../css/thoughts.css?v=1.0.0">
+</head>
+<body data-page="thoughts">
+<div id="nav-root"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Thoughts</div>
+    <h1>Writing</h1>
+    <p class="page-hero-desc">On blockchain infrastructure, AI-augmented development, and lessons from 15 years of building.</p>
+  </div>
+</section>
+
+<section class="page-content">
+  <div class="container">
+    <div class="thoughts-grid" id="thoughts-list"></div>
+  </div>
+</section>
+
+<div id="footer-root"></div>
+<script src="../js/sm-loader.js?v=1.0.0"></script>
+<script>
+SM.getData('thoughts').then(function(posts) {
+  var list = document.getElementById('thoughts-list');
+  for (var i = 0; i < posts.length; i++) {
+    var p = posts[i];
+    var card = SM.el('a', { class: 'thought-card', href: SM.url('/thoughts/' + p.slug + '/') },
+      SM.el('div', { class: 'thought-card-date' }, p.date),
+      SM.el('div', { class: 'thought-card-title' }, p.title),
+      SM.el('div', { class: 'thought-card-excerpt' }, p.excerpt)
+    );
+    list.appendChild(card);
+  }
+});
+</script>
+</body>
+</html>

@@ -8,6 +8,7 @@
     { label: 'Speaking', href: '/speaking/' },
     { label: 'Open Source', href: '/open-source/' },
     { label: 'Tools', href: '/tools/' },
+    { label: 'Thoughts', href: '/thoughts/' },
     { label: 'Timeline', href: '/timeline/' },
   ];
 

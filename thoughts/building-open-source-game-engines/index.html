@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="sm-base" content="/personal/smalley-rebuild">
+<meta name="theme-color" content="#0B0F1A">
+<title>Building Two Open-Source Game Engines in Six Months (With AI) — Mark Smalley</title>
+<meta name="description" content="What happens when you point LLM-driven development at the problem of building modular, embeddable game engines from scratch?">
+<link rel="stylesheet" href="../../css/_sm.css?v=1.0.0">
+<link rel="stylesheet" href="../../css/thoughts.css?v=1.0.0">
+<link rel="stylesheet" href="../../css/pages.css?v=1.0.0">
+</head>
+<body>
+<div id="nav-root"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Thoughts</div>
+    <h1>Building Two Open-Source Game Engines in Six Months (With AI)</h1>
+  </div>
+</section>
+
+<section class="page-content">
+  <div class="container">
+    <div class="article-content">
+      <div class="article-date">29 May 2025</div>
+
+      <p>Have you ever tried to embed a chess game on a website? If you have, you probably reached for one of the established libraries — Chessboard.js, chess.js, Lichess's board component. They work. But what if you wanted <strong>Atomic Chess</strong>? Or <strong>Racing Kings</strong>? Or a variant where pieces can clone themselves? Suddenly you're forking entire codebases and fighting against architectures designed for one game.</p>
+
+      <p>That frustration is what led me to build <strong>Moddable Chess Engine</strong> — a modular engine that treats variants as first-class citizens. And once I had the architecture patterns right, the same thinking produced <strong>Moddable Hexmaps</strong> — a framework where any hex-based board game can be generated, edited, and shared with a URL.</p>
+
+      <p>Both shipped to production in under six months. Both are MIT-licensed. And both were built almost entirely using AI-augmented engineering workflows.</p>
+
+      <h2>The Chess Engine: 64 Variants, Zero Dependencies</h2>
+
+      <p>The Moddable Chess Engine supports 64 playable variants on boards from 4x8 to 12x8. It has a built-in minimax AI opponent with piece evaluation. It runs entirely client-side — pure JavaScript, no build step, no dependencies. You can embed it with a single iframe tag.</p>
+
+      <p>But the interesting part isn't what it does — it's how it's designed to be extended. Every variant is a self-contained plugin file. The engine exposes hooks for custom move generation, victory conditions, board geometry, and piece behaviour. I wrote a "Build a Variant" developer guide that lets someone create a new chess variant without understanding the engine internals.</p>
+
+      <p>This is a DevRel problem as much as an engineering one. The question isn't "can I make the engine support more variants?" — it's "can I make the extension interface so clear that a community member could add one without asking me?" That meant investing heavily in documentation, examples, and a plugin architecture that fails loudly when you get the interface wrong.</p>
+
+      <ul>
+        <li><strong>64 playable variants</strong> — from Atomic Chess to Zen Chess</li>
+        <li><strong>Embed API</strong> — one iframe, URL parameters control everything</li>
+        <li><strong>Plugin system</strong> — single-file variants with <code>registerVariant()</code></li>
+        <li><strong>AI opponent</strong> — minimax with configurable depth and evaluation</li>
+        <li><strong>Developer guide</strong> — "Build a Variant" documentation for community contributions</li>
+      </ul>
+
+      <h2>The Hex Map Framework: Infinite Seeded Worlds</h2>
+
+      <p>Moddable Hexmaps solves a different problem: board game designers need maps, but designing them manually is tedious and sharing them is friction-heavy. What if every map had a URL? And what if that URL could be deterministically regenerated from a seed string?</p>
+
+      <p>The framework generates hex grids via Canvas — flat-top or pointy-top, at any ring count. It uses seeded RNG so the same seed always produces the same map. Multiple terrain palettes support different games (Nukes gets volcanic landscapes, Talisman gets fantasy biomes). Maps export to JSON. Maps import from JSON. Maps embed in iframes. Everything is controlled via URL parameters.</p>
+
+      <p>This means sharing a map is sharing a URL. Reproducibility is guaranteed by the seed. And because everything renders client-side, there's no server cost regardless of how many maps people generate.</p>
+
+      <ul>
+        <li><strong>Seeded procedural generation</strong> — same seed = same map, always</li>
+        <li><strong>4 games supported</strong> — Nukes, Talisman, Twilight Imperium, Colony</li>
+        <li><strong>URL parameter API</strong> — <code>?theme=nukes&amp;rings=4&amp;seed=volcano</code></li>
+        <li><strong>Click-to-edit</strong> — manual overrides on any generated hex</li>
+        <li><strong>JSON export/import</strong> — save, share, and reload board states</li>
+      </ul>
+
+      <h2>The AI-Augmented Part</h2>
+
+      <p>Both engines were built using LLM-driven development as the core methodology. Not "AI wrote my code" — but AI as a pair programmer operating at the architecture level. Designing hook systems, catching edge cases across 64 variants, writing documentation that developers can actually follow, identifying which abstractions pay for themselves and which are premature.</p>
+
+      <p>The velocity difference is real. A solo founder shouldn't be able to ship two engines, four games, nine mods, a tools platform, and a 190-page rulebook pipeline in six months. But when your pair programmer has read every programming book ever written and never gets tired, the bottleneck shifts from "can I build this?" to "should I build this?"</p>
+
+      <p>That's the actual lesson. The engines are the proof that the methodology works. The methodology is the thing worth talking about.</p>
+
+      <h2>Try Them</h2>
+
+      <p>Both engines are live, MIT-licensed, and waiting for someone to build something weird with them.</p>
+
+      <ul>
+        <li><a href="https://chess.moddable.games" target="_blank" rel="noopener">chess.moddable.games</a> — play any of the 64 variants right now</li>
+        <li><a href="https://hex.moddable.games" target="_blank" rel="noopener">hex.moddable.games</a> — generate a map, grab the seed, share the URL</li>
+        <li><a href="https://github.com/Moddable-Games" target="_blank" rel="noopener">github.com/Moddable-Games</a> — everything is open source</li>
+      </ul>
+
+      <div class="article-back">
+        <a href="../">← All thoughts</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-root"></div>
+<script src="../../js/sm-loader.js?v=1.0.0"></script>
+</body>
+</html>

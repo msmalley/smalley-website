@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="sm-base" content="/personal/smalley-rebuild">
+<meta name="theme-color" content="#0B0F1A">
+<title>The Cardinal Sins of Bitcoin Ordinals — Mark Smalley</title>
+<meta name="description" content="Your wallet says 0.00000001 BTC. But depending on where that satoshi came from, it could be worth millions.">
+<link rel="stylesheet" href="../../css/_sm.css?v=1.0.0">
+<link rel="stylesheet" href="../../css/thoughts.css?v=1.0.0">
+<link rel="stylesheet" href="../../css/pages.css?v=1.0.0">
+</head>
+<body>
+<div id="nav-root"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Thoughts</div>
+    <h1>The Cardinal Sins of Bitcoin Ordinals</h1>
+  </div>
+</section>
+
+<section class="page-content">
+  <div class="container">
+    <div class="article-content">
+      <div class="article-date">15 March 2024</div>
+
+      <p>Did you know that although your wallet might say you only have 0.00000001 Bitcoin, depending on where that satoshi came from and what's attached to it, it could actually be worth millions of dollars?</p>
+
+      <p>Welcome to the world of <strong>Bitcoin Ordinals</strong> — where every single satoshi has a unique identity, a serial number determined by the order in which it was mined. This is ordinal theory: the idea that individual sats can be tracked, collected, and valued independently of their face value as currency.</p>
+
+      <h2>Meta Protocols and Hidden Layers</h2>
+
+      <p>Bitcoin was designed as a ledger — a record of who owns what. But since 2023, a shadow-market has emerged operating on top of that ledger. Ordinals, Inscriptions, Runes, BRC-20 — these are all <strong>meta protocols</strong>. They use Bitcoin as a data availability layer while layering new meaning onto the raw transaction data.</p>
+
+      <p>The beauty is that none of this requires changes to Bitcoin itself. The consensus rules haven't changed. The nodes don't know or care about ordinal theory. The sat numbering exists only in the eyes of those who choose to index it.</p>
+
+      <p>And there's the first sin.</p>
+
+      <h2>The Indexing Problem</h2>
+
+      <p>Ordinal theory requires <strong>indexing by non-core nodes</strong>. Bitcoin Core doesn't track individual satoshis through the UTXO graph. It doesn't know which sat is "special." To assign value to a specific sat, you need a separate indexer — ord, Ordit, or another tool — that traces the lineage of every satoshi from its coinbase origin through every subsequent transaction.</p>
+
+      <p>This creates a philosophical tension. Bitcoin's value proposition is trustless verification. Anyone running a node can verify the entire state of the network. But ordinal value exists <em>outside</em> that verification layer. You're trusting an indexer to correctly trace sat provenance. If two indexers disagree about which sat is which after a complex transaction, there's no consensus mechanism to resolve it.</p>
+
+      <h2>Inscriptions: Luxury Canvas or Bloat?</h2>
+
+      <p>Inscriptions take this further. By embedding arbitrary data into witness space (enabled by Taproot's relaxed script size limits), you can permanently attach images, text, even applications to individual satoshis. The blockchain becomes a luxury canvas for digital art — permanent, uncensorable, and expensive.</p>
+
+      <p>The counter-argument is that this is "bloat" — consuming block space for non-financial data, increasing the cost of running full nodes, and potentially pricing out legitimate financial transactions during high-demand periods.</p>
+
+      <p>Both sides have merit. The market has spoken — people will pay significant fees to inscribe data on Bitcoin. Whether that's a feature or a bug depends on whether you believe Bitcoin's purpose is narrowly financial or broadly computational.</p>
+
+      <h2>The Cardinal Sin</h2>
+
+      <p>So what's the actual cardinal sin? It's not inscriptions. It's not the indexing dependency. It's the <strong>conflation of protocol-level guarantees with application-level assumptions</strong>.</p>
+
+      <p>When someone says "this sat is rare" or "this inscription is permanent," they're making claims that Bitcoin's protocol doesn't make. The rarity is defined by an indexer's interpretation. The permanence depends on nodes continuing to store witness data (which they're allowed to prune). The value depends on consensus among ordinal participants — a social layer, not a technical one.</p>
+
+      <p>That doesn't make ordinals worthless. It makes them honest about what they are: <strong>an application-layer market operating on Bitcoin's data availability guarantees, not its consensus guarantees</strong>. The sin is when that distinction gets lost in the marketing.</p>
+
+      <p>I've built on this layer — co-authored the SADO Protocol for trustless ordinal trading, built Ordzaar's initial marketplace, contributed to the Ordit indexer. I believe the technology works. I just think we should be precise about <em>what exactly</em> is being guaranteed, and by whom.</p>
+
+      <div class="article-back">
+        <a href="../">← All thoughts</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-root"></div>
+<script src="../../js/sm-loader.js?v=1.0.0"></script>
+</body>
+</html>

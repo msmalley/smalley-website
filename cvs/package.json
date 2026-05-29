@@ -1,0 +1,25 @@
+{
+  "name": "cvs",
+  "version": "1.0.0",
+  "description": "Three tailored CVs for three distinct job search paths, built from a comprehensive review of the original CV, personal site (smalley.my), GitHub (msmalley), and public content research.",
+  "main": "index.js",
+  "scripts": {
+    "pdf": "node scripts/generate-pdfs.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msmalley/cvs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/msmalley/cvs/issues"
+  },
+  "homepage": "https://github.com/msmalley/cvs#readme",
+  "dependencies": {
+    "puppeteer": "^25.0.4"
+  }
+}

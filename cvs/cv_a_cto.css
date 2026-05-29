@@ -1,0 +1,323 @@
+:root {
+  --navy:   #1B2A4A;
+  --teal:   #0E7490;
+  --teal-l: #CFFAFE;
+  --teal-s: #0D9488;
+  --slate:  #334155;
+  --muted:  #64748B;
+  --rule:   #E2E8F0;
+  --bg:     #F8FAFC;
+  --white:  #FFFFFF;
+  --text:   #1E293B;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  text-wrap: pretty;
+}
+
+.page {
+  max-width: 100%;
+  margin: 0;
+  background: var(--white);
+  padding: 0;
+  overflow: hidden;
+}
+
+/* ── Header ── */
+.header {
+  background: var(--navy);
+  padding: 44px 0 36px;
+}
+.header-inner {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 72px;
+}
+.header h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 44px;
+  color: var(--white);
+  letter-spacing: -1.5px;
+  line-height: 1.05;
+}
+.header .headline {
+  font-size: 15px;
+  color: var(--teal-l);
+  font-weight: 500;
+  margin-top: 8px;
+  letter-spacing: 0.2px;
+}
+.header .availability {
+  font-size: 12.5px;
+  color: #94A3B8;
+  font-style: italic;
+  margin-top: 6px;
+}
+
+/* ── Contact bar ── */
+.contact-bar {
+  background: #0F1D32;
+  padding: 12px 0;
+  font-family: 'DM Mono', monospace;
+  font-size: 11.5px;
+  color: #94A3B8;
+}
+.contact-bar-inner {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 72px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 6px 12px;
+  font-size: 10px;
+}
+.contact-bar a, .contact-bar span { color: #CBD5E1; text-decoration: none; }
+.contact-bar a:hover { color: #CFFAFE; }
+.contact-bar .sep { color: #475569; }
+
+/* ── Body ── */
+.body a { color: inherit; text-decoration-color: var(--teal); text-underline-offset: 2px; }
+.body a:hover { color: var(--teal); }
+.body {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 40px 72px 64px;
+}
+
+/* ── Sections ── */
+.section { margin-bottom: 32px; }
+.section-title {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1.5px solid var(--rule);
+}
+
+/* ── Profile ── */
+.profile p {
+  font-size: 13.5px;
+  color: var(--slate);
+  line-height: 1.8;
+  max-width: 680px;
+  text-align: justify;
+}
+
+/* ── Skills table ── */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 10px 20px;
+}
+.skill-label {
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--navy);
+  padding-top: 3px;
+}
+.skill-value {
+  font-size: 12.5px;
+  color: var(--slate);
+  border-left: 2px solid var(--teal-l);
+  padding: 3px 0 3px 12px;
+  line-height: 1.6;
+}
+
+/* ── Job entries ── */
+.job { margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--rule); }
+.job:last-child { border-bottom: none; padding-bottom: 0; }
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+.job-title { font-weight: 600; font-size: 15px; color: var(--navy); }
+.job-title .job-active { font-weight: 400; font-size: 12px; color: var(--teal); }
+.job-company { font-size: 13px; color: var(--teal); font-weight: 500; margin-left: 8px; }
+.job-dates {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  white-space: nowrap;
+  background: #F1F5F9;
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+.job-summary {
+  font-size: 12.5px;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 10px;
+  line-height: 1.7;
+  text-align: justify;
+  text-wrap: pretty;
+}
+.job ul { list-style: none; padding: 0; }
+.job ul li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 13px;
+  color: var(--slate);
+  margin-bottom: 5px;
+  line-height: 1.65;
+  text-wrap: balance;
+}
+.job ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.54em;
+  width: 0;
+  height: 0;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-left: 4.5px solid var(--teal);
+}
+
+/* ── Open source ── */
+.oss ul { list-style: none; padding: 0; }
+.oss ul li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 13px;
+  color: var(--slate);
+  margin-bottom: 7px;
+  line-height: 1.65;
+  text-wrap: balance;
+}
+.oss ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.54em;
+  width: 0;
+  height: 0;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-left: 4.5px solid var(--teal);
+}
+.oss code {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  background: var(--teal-l);
+  padding: 2px 6px;
+  border-radius: 3px;
+  color: var(--navy);
+}
+
+/* ── Achievements ── */
+.achievements ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 32px;
+}
+.achievements ul li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 12.5px;
+  color: var(--slate);
+  line-height: 1.6;
+  text-wrap: balance;
+}
+.achievements ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.54em;
+  width: 0;
+  height: 0;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-left: 4.5px solid var(--teal);
+}
+
+/* ── Credentials ── */
+.creds-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 32px;
+}
+.cred-item {
+  font-size: 12.5px;
+  color: var(--slate);
+  padding: 5px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* ── References ── */
+.refs { display: flex; flex-wrap: wrap; gap: 20px 48px; }
+.ref-name { font-weight: 600; color: var(--navy); font-size: 13.5px; }
+.ref-detail { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+/* ── Print ── */
+@page { margin: 48px 0; size: A4; }
+@page :first { margin-top: 0; }
+@media print {
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { background: white; margin: 0; padding: 0; width: 210mm; }
+  .page {
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    width: 210mm;
+    max-width: 210mm;
+  }
+  .header { padding: 48px 0 18px; }
+  .header-inner { max-width: 100%; padding: 0 48px; }
+  .header h1 { font-size: 32px; letter-spacing: -1px; }
+  .header .headline { font-size: 12px; margin-top: 4px; }
+  .header .availability { font-size: 10.5px; margin-top: 3px; }
+  .contact-bar { padding: 8px 0; }
+  .contact-bar-inner { max-width: 100%; padding: 0 48px; gap: 4px 12px; flex-wrap: nowrap; font-size: 9.5px; }
+  .body { padding: 32px 48px 48px; max-width: 100%; }
+  .section { margin-bottom: 18px; }
+  .section-title { margin-bottom: 6px; padding-bottom: 3px; font-size: 8.5px; letter-spacing: 2px; }
+  .profile p { font-size: 11px; line-height: 1.55; max-width: 100%; }
+  .job { break-inside: avoid; margin-bottom: 8px; padding-bottom: 8px; }
+  .job-header { margin-bottom: 2px; }
+  .job-title { font-size: 12.5px; }
+  .job-company { font-size: 11px; }
+  .job-dates { font-size: 9.5px; padding: 1px 6px; }
+  .job-summary { margin-bottom: 3px; font-size: 10.5px; line-height: 1.45; }
+  .job ul li { margin-bottom: 1px; font-size: 11px; line-height: 1.45; padding-left: 12px; }
+  .job ul li::before { top: 0.42em; border-top-width: 2.5px; border-bottom-width: 2.5px; border-left-width: 4px; }
+  .oss ul li::before { top: 0.42em; border-top-width: 2.5px; border-bottom-width: 2.5px; border-left-width: 4px; }
+  .achievements ul li::before { top: 0.42em; border-top-width: 2.5px; border-bottom-width: 2.5px; border-left-width: 4px; }
+  .skills-grid { break-inside: avoid; gap: 2px 12px; grid-template-columns: 120px 1fr; }
+  .skill-value { text-wrap: auto; font-size: 10.5px; line-height: 1.4; padding: 1px 0 1px 8px; }
+  .skill-label { font-size: 10.5px; }
+  .oss ul li { font-size: 11px; line-height: 1.45; margin-bottom: 2px; padding-left: 12px; }
+  .oss code { font-size: 9.5px; }
+  .achievements ul { gap: 3px 20px; }
+  .achievements ul li { font-size: 11px; line-height: 1.4; padding-left: 12px; }
+  .creds-grid { gap: 2px 20px; }
+  .cred-item { font-size: 11px; padding: 2px 0; }
+  .refs { gap: 8px 24px; }
+  .ref-name { font-size: 11.5px; }
+  .ref-detail { font-size: 10px; }
+  .achievements { break-inside: avoid; }
+  .creds-grid { break-inside: avoid; }
+  .refs { break-inside: avoid; }
+  p { orphans: 3; widows: 3; }
+  li { text-wrap: auto; }
+}

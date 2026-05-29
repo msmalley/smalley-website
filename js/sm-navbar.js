@@ -10,6 +10,7 @@
     { label: 'Tools', href: '/tools/' },
     { label: 'Thoughts', href: '/thoughts/' },
     { label: 'Timeline', href: '/timeline/' },
+    { label: 'Explore', href: '/explore/' },
   ];
 
   var currentPath = location.pathname.replace(SM.BASE, '');

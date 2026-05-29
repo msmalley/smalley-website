@@ -1,36 +1,53 @@
 [
   {
-    "title": "SADO Protocol",
-    "role": "Co-author",
-    "description": "Self-authenticating, decentralised ordinals order-book standard for Bitcoin. Uses IPFS for semi-signed transaction storage with on-chain content identifiers.",
-    "repo": "https://github.com/sadoprotocol",
-    "accent": "teal",
-    "status": "production",
-    "adoptedBy": ["Ordzaar", "Third-party exchanges"]
-  },
-  {
-    "slug": "dn-key-protocol",
-    "title": "DN-Key Protocol",
-    "role": "Author",
-    "description": "Decentralised key management standard using DNS TXT records to broadcast public keys. Designed for regulated digital asset custody environments.",
-    "accent": "teal",
-    "status": "production",
-    "adoptedBy": ["ATA Plus ECF"],
-    "year": 2016
-  },
-  {
     "slug": "ordit-sdk",
     "title": "Ordit SDK",
+    "tagline": "Open-source toolkit for Bitcoin Ordinals and Inscriptions",
     "role": "Lead developer",
-    "description": "Open-source indexer, parser, and API toolkit for Bitcoin Ordinals and Inscriptions. Multiple repos under the sadoprotocol organisation.",
+    "description": "Indexer, parser, and API toolkit for Bitcoin Ordinals and Inscriptions. Multiple repos under the sadoprotocol organisation powering Ordzaar and third-party marketplaces.",
+    "stats": [
+      { "value": "3", "label": "packages" },
+      { "value": "Production", "label": "status" }
+    ],
     "repo": "https://github.com/sadoprotocol/ordit",
     "accent": "teal",
     "status": "production"
   },
   {
+    "title": "SADO Protocol",
+    "tagline": "Decentralised ordinals order-book standard for Bitcoin",
+    "role": "Co-author",
+    "description": "Self-authenticating, decentralised order-book standard using IPFS for semi-signed transaction storage with on-chain content identifiers. Adopted by Ordzaar and third-party exchanges.",
+    "stats": [
+      { "value": "IPFS", "label": "storage layer" },
+      { "value": "PSBTs", "label": "trade mechanism" }
+    ],
+    "repo": "https://github.com/sadoprotocol",
+    "accent": "teal",
+    "status": "production"
+  },
+  {
+    "slug": "dn-key-protocol",
+    "title": "DN-Key Protocol",
+    "tagline": "Decentralised key management via DNS TXT records",
+    "role": "Author",
+    "description": "Key management standard using DNS TXT records to broadcast public keys. Designed for regulated digital asset custody environments. Adopted by ATA Plus ECF for institutional custody.",
+    "stats": [
+      { "value": "DNS", "label": "transport layer" },
+      { "value": "2016", "label": "published" }
+    ],
+    "accent": "teal",
+    "status": "production"
+  },
+  {
     "title": "Moddable Chess Engine",
+    "tagline": "64 variants, AI opponent, embed API, plugin system",
     "role": "Creator",
-    "description": "Modular chess engine with 64 playable variants, built-in AI opponent (minimax), embed API, URL parameter interface, and plugin architecture. Includes developer guide for community contributions.",
+    "description": "Modular chess engine with 64 playable variants, built-in minimax AI, embed API with URL parameters, and a plugin architecture allowing community variant contributions via single-file plugins.",
+    "stats": [
+      { "value": "64", "label": "variants" },
+      { "value": "0", "label": "dependencies" }
+    ],
     "repo": "https://github.com/Moddable-Games/moddable-chess",
     "demo": "https://chess.moddable.games",
     "accent": "violet",
@@ -38,26 +55,41 @@
   },
   {
     "title": "Moddable Hexmaps",
+    "tagline": "Seeded procedural hex maps with JSON export",
     "role": "Creator",
-    "description": "Hex map framework with seeded procedural generation, multiple render styles, URL parameter API, JSON export/import, and iframe embed support.",
+    "description": "Hex map framework with seeded procedural generation, multiple render styles, URL parameter API, JSON export/import, and iframe embed support. Powers 4 games in the Moddable ecosystem.",
+    "stats": [
+      { "value": "4", "label": "games supported" },
+      { "value": "∞", "label": "seeded maps" }
+    ],
     "repo": "https://github.com/Moddable-Games/moddable-hexmaps",
     "demo": "https://hex.moddable.games",
     "accent": "violet",
     "status": "production"
   },
   {
-    "title": "BackPress",
-    "role": "Core contributor",
-    "description": "Contributed to Automattic's BackPress framework — a standalone library extracted from WordPress core.",
+    "slug": "blockchain-embassy",
+    "title": "Blockchain Embassy of Asia",
+    "tagline": "ASEAN's first public blockchain consortium",
+    "role": "Founder",
+    "description": "ASEAN's first public blockchain consortium. Operated a private proof-of-authority EVM network with members from Maybank, RHB, Capital Bay, and ATA Plus.",
+    "stats": [
+      { "value": "5+", "label": "member institutions" },
+      { "value": "PoA", "label": "consensus" }
+    ],
     "accent": "gold",
     "status": "legacy"
   },
   {
-    "slug": "blockchain-embassy",
-    "title": "Blockchain Embassy of Asia",
-    "role": "Founder",
-    "description": "ASEAN's first public blockchain consortium. Operated a private proof-of-authority EVM network with members from Maybank, RHB, Capital Bay, and ATA Plus.",
+    "title": "BackPress",
+    "tagline": "Standalone library extracted from WordPress core",
+    "role": "Core contributor",
+    "description": "Contributed to Automattic's BackPress framework — a standalone library extracted from WordPress core providing authentication, taxonomy, and option handling without the full WordPress stack.",
+    "stats": [
+      { "value": "Automattic", "label": "organisation" },
+      { "value": "PHP", "label": "language" }
+    ],
     "accent": "gold",
-    "year": 2016
+    "status": "legacy"
   }
 ]

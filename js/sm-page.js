@@ -63,23 +63,38 @@
 
   function renderOpenSource() {
     SM.getData('opensource').then(function(items) {
-      var list = document.querySelector('.oss-list');
-      if (!list) return;
+      var container = document.querySelector('.oss-list');
+      if (!container) return;
       for (var i = 0; i < items.length; i++) {
         var o = items[i];
-        var links = SM.el('div', { class: 'oss-links' });
-        if (o.slug) links.appendChild(SM.el('a', { href: SM.url('/open-source/' + o.slug + '/') }, 'Read More'));
-        if (o.repo) links.appendChild(SM.el('a', { href: o.repo, target: '_blank', rel: 'noopener' }, 'Repository'));
-        if (o.demo) links.appendChild(SM.el('a', { href: o.demo, target: '_blank', rel: 'noopener' }, 'Live Demo'));
         var status = o.status || 'production';
-        var item = SM.el('li', { class: 'oss-item reveal' },
-          SM.el('div', { class: 'oss-title' }, o.title),
-          SM.el('div', { class: 'oss-role' }, o.role),
-          SM.el('div', { class: 'oss-desc' }, o.description),
-          links,
-          SM.el('span', { class: 'oss-badge oss-badge-' + status }, status)
+        var stats = SM.el('div', { class: 'tool-stats' });
+        if (o.stats) {
+          for (var s = 0; s < o.stats.length; s++) {
+            stats.appendChild(SM.el('div', null,
+              SM.el('div', { class: 'tool-stat-value', 'data-accent': o.accent }, o.stats[s].value),
+              SM.el('div', { class: 'tool-stat-label' }, o.stats[s].label)
+            ));
+          }
+        }
+        var links = SM.el('div', { class: 'tool-links' });
+        if (o.slug) links.appendChild(SM.el('a', { class: 'btn-primary', href: SM.url('/open-source/' + o.slug + '/') }, 'Read More'));
+        if (o.repo) links.appendChild(SM.el('a', { class: 'btn-secondary', href: o.repo, target: '_blank', rel: 'noopener' }, 'Repository'));
+        if (o.demo) links.appendChild(SM.el('a', { class: 'btn-secondary', href: o.demo, target: '_blank', rel: 'noopener' }, 'Live Demo'));
+        var card = SM.el('div', { class: 'tool-card reveal' },
+          SM.el('div', { class: 'card' },
+            SM.el('div', { class: 'oss-card-header' },
+              SM.el('div', { class: 'tool-card-title' }, o.title),
+              SM.el('span', { class: 'oss-badge oss-badge-' + status }, status)
+            ),
+            SM.el('div', { class: 'oss-role' }, o.role),
+            SM.el('div', { class: 'tool-card-tagline' }, o.tagline),
+            SM.el('div', { class: 'tool-card-desc' }, o.description),
+            stats,
+            links
+          )
         );
-        list.appendChild(item);
+        container.appendChild(card);
       }
       SM.observe();
     });

@@ -1,5 +1,13 @@
 [
   {
+    "slug": "the-case-for-vanilla-js",
+    "title": "The Case for Vanilla JS in 2026",
+    "date": "2026-05-29",
+    "readingTime": "8 min",
+    "tags": ["JavaScript", "Architecture", "Plugin architecture", "GitHub Pages"],
+    "excerpt": "Six production sites, two game engines, 169 JS modules — zero frameworks, zero build steps, zero dependencies. The constraint isn't a limitation. It's the architecture."
+  },
+  {
     "slug": "building-open-source-game-engines",
     "title": "Building Two Open-Source Game Engines in Six Months (With AI)",
     "date": "2025-05-29",

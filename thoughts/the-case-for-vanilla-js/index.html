@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="sm-base" content="/personal/smalley-website">
+<meta name="theme-color" content="#0B0F1A">
+<title>The Case for Vanilla JS in 2026 — Mark Smalley</title>
+<meta name="description" content="Six production sites, two game engines, 169 JS modules — zero frameworks, zero build steps, zero dependencies. Here's why the constraint is the feature.">
+<meta property="og:title" content="The Case for Vanilla JS in 2026 — Mark Smalley">
+<meta property="og:description" content="Six production sites, two game engines, 169 JS modules — zero frameworks, zero build steps, zero dependencies.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://smalley.my/thoughts/the-case-for-vanilla-js/">
+<meta property="og:site_name" content="Mark Smalley">
+<meta property="og:image" content="https://smalley.my/img/og/og-default.png?v=1.0.11">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Case for Vanilla JS in 2026 — Mark Smalley">
+<meta name="twitter:description" content="Six production sites, two game engines, 169 JS modules — zero frameworks, zero build steps, zero dependencies.">
+<meta name="twitter:image" content="https://smalley.my/img/og/og-default.png?v=1.0.11">
+<link rel="stylesheet" href="../../css/_sm.css?v=1.0.11">
+<link rel="stylesheet" href="../../css/thoughts.css?v=1.0.11">
+<link rel="stylesheet" href="../../css/pages.css?v=1.0.11">
+</head>
+<body>
+<div id="nav-root"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Thoughts</div>
+    <h1>The Case for Vanilla JS in 2026</h1>
+  </div>
+</section>
+
+<section class="page-content">
+  <div class="container">
+    <div class="article-content">
+      <div class="article-date">29 May 2026 · 8 min read</div>
+
+      <p>Every framework is a bet. You're betting that the abstractions someone else chose will continue to serve your needs, that the community will maintain compatibility with your version, that the build toolchain won't break between now and when you need to ship a critical fix on a Sunday night. Sometimes that bet pays off. But there's a different bet you can make — one where you own the entire surface area, where every abstraction exists because you chose it, and where the only dependency that can break your deployment is the browser itself.</p>
+
+      <p>I've spent the past six months shipping an entire software ecosystem without a single framework, build step, or external dependency. Six production sites. Two game engines. 169 JavaScript modules. 535 commits. The chess engine alone supports 64 playable variants with an AI opponent. Every project deploys by pushing to main. Every project runs on any static file server on earth. And every project can be ported to any language, platform, or runtime without untangling someone else's opinions from my architecture.</p>
+
+      <p>This is not an anti-framework position. It's a pro-portability, pro-ownership, pro-longevity position that happens to make frameworks unnecessary for a specific — and I'd argue common — class of work.</p>
+
+      <h2>The Portability Argument</h2>
+
+      <p>Here's the thing nobody talks about when they choose React, Vue, or Svelte: you're not writing JavaScript anymore. You're writing React. The mental model, the component lifecycle, the state management patterns, the JSX syntax — none of it transfers. Your React app cannot become a mobile app without React Native. It cannot become a desktop app without Electron. It cannot become a backend service without a complete rewrite. It cannot become a Python application, a Rust CLI tool, or a WebAssembly module. It is locked into the React ecosystem permanently.</p>
+
+      <p>Vanilla JavaScript has no such constraint. A function that takes data and returns a DOM node is comprehensible to any programmer in any language. The patterns are universal: fetch data, transform it, render it. A Python developer can read my chess engine's move generation and port it directly — there's no framework idiom to decode, no lifecycle hook to understand, no virtual DOM diffing to account for. The logic is the logic.</p>
+
+      <p>This matters more than most people realise. When I built the <a href="../../tools/moddable-chess-engine/">Moddable Chess Engine</a>, I didn't know it would need an embed API. I didn't know it would need to run inside an iframe with postMessage communication. I didn't know it would need to be consumed by three different parent sites with different theming requirements. None of that required architectural changes — because there was no framework boundary constraining where the code could run or how it could be consumed. It's just JavaScript. It runs anywhere JavaScript runs.</p>
+
+      <p>Every other language can understand vanilla JS. Every other language can be built directly from it. That sentence sounds simple but its implications are profound. Your React component cannot be meaningfully translated to Swift. My <code>registerVariant()</code> plugin interface can be — because it's just a function signature and a data contract.</p>
+
+      <h2>The Constraint is the Feature</h2>
+
+      <p>Without a framework making decisions for you, you're forced to make them yourself. And that's where the interesting architecture happens. When there's no component model handed to you, you design one that fits your actual problem. When there's no state management library, you discover that your state is simple enough to not need one — or you build a minimal solution that does exactly what's required and nothing else.</p>
+
+      <p>The Moddable Chess Engine's plugin system emerged from this constraint. Sixty-four chess variants need to coexist in one codebase without any variant knowing about any other. In React, you'd reach for context providers, custom hooks, maybe a state machine library. In vanilla JS, I designed a hook-based registration system — <code>registerVariant(key, config)</code> — where each variant is a single file declaring its rule overrides. The engine's core never changes. Variant #65 takes minutes to add, not hours.</p>
+
+      <p>That architecture isn't possible in a framework. Or rather — it's possible, but you'd be fighting the framework's opinions the entire time. React wants you to think in components and props. My problem isn't a component tree. It's a behaviour composition system. The framework's abstractions would be overhead, not help.</p>
+
+      <h2>The Deployment Tax</h2>
+
+      <p>Every framework introduces a build step. That build step introduces a toolchain. That toolchain introduces configuration. That configuration introduces environment-specific behaviour. Suddenly you need CI/CD pipelines, artifact management, staging environments, and a deployment process that takes minutes instead of seconds.</p>
+
+      <p>My deployment process: <code>git push</code>. GitHub Pages picks up the change. Cache-busting query strings ensure browsers get the new version. The entire ecosystem — six sites, two engines, all supporting infrastructure — deploys in under ten seconds. There is no build. There is no artifact. The source code <em>is</em> the deployment.</p>
+
+      <p>This isn't a trivial convenience. It's a velocity multiplier. When you can ship every forty minutes without ceremony, you iterate differently. You don't batch changes. You don't wait for build pipelines. You don't coordinate deployments. You push, you verify, you move to the next thing. 535 commits in 16 days isn't possible when each one requires a build step.</p>
+
+      <h2>The Data-Architecture Payoff</h2>
+
+      <p>When you can't lean on a framework's data-binding, you're forced to separate data from presentation cleanly. Every project in the Moddable ecosystem stores content in JSON files fetched at runtime. Pages are templates that consume data. Adding a new chess variant means adding a JSON entry and a plugin file. Adding a new game to the hexmap framework means adding a terrain definition. Adding a new article to a blog means adding a JSON object.</p>
+
+      <p>This separation has a consequence that framework-coupled code never achieves: the data layer is API-shaped from day one. When — not if — these projects need a real backend, the migration is a URL change. Swap <code>fetch('/data/variants.json')</code> for <code>fetch('https://api.moddable.games/variants')</code>. The consuming code doesn't change. The templates don't change. The rendering logic doesn't change. You cannot get this property from a framework that couples data-fetching to its component lifecycle.</p>
+
+      <h2>When Frameworks Are Correct</h2>
+
+      <p>This is not a blanket position. Frameworks earn their complexity when the problem demands it: large teams that need enforced conventions, applications with deeply nested interactive state, projects where the framework's opinion <em>is</em> the architecture you'd build anyway. If you're building a real-time collaborative editor, you want something managing the DOM diff for you. If you're building a design tool with undo/redo across a complex object graph, a state management library is worth its weight.</p>
+
+      <p>But most things on the web are not those things. Most things on the web are: fetch data, render it, let people interact with it. For that — which describes marketing sites, documentation, portfolios, content platforms, embeddable tools, and even reasonably complex game engines — a framework is overhead you pay for in build complexity, deployment friction, and architectural lock-in without receiving proportional value in return.</p>
+
+      <h2>The Longevity Bet</h2>
+
+      <p>jQuery peaked and declined. Angular 1 was abandoned for an incompatible rewrite. React is sixteen years in with increasing competition from signals-based alternatives. Every framework has a half-life. The JavaScript that runs in a browser today will still run in a browser in ten years — because browsers don't break backwards compatibility. That's the real bet I'm making.</p>
+
+      <p>The Moddable Chess Engine will still work in 2036 without a single line changed. A React app from 2016 will not.</p>
+
+      <p>When I look at the projects I've built — the ones that have lasted, the ones that survived company pivots and team changes and technology shifts — they all share one property. They're built on the platform, not on an abstraction over the platform. They own their entire surface area. They can be understood, ported, maintained, and extended by anyone who reads JavaScript — not just anyone who reads React, or Vue, or whatever comes next.</p>
+
+      <p>The constraint isn't a limitation. It's the architecture. And the architecture is what ships.</p>
+
+      <div class="article-tags">
+        <a class="pill" href="../../explore/?tag=JavaScript">JavaScript</a>
+        <a class="pill" href="../../explore/?tag=Architecture">Architecture</a>
+        <a class="pill" href="../../explore/?tag=Plugin architecture">Plugin architecture</a>
+        <a class="pill" href="../../explore/?tag=GitHub Pages">GitHub Pages</a>
+      </div>
+
+      <div class="article-back">
+        <a href="../">← All thoughts</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-root"></div>
+<script src="../../js/sm-loader.js?v=1.0.11"></script>
+</body>
+</html>

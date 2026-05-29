@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Mark Smalley — Thoughts</title>
+  <link>https://smalley.my/thoughts/</link>
+  <description>Writing on blockchain infrastructure, AI-augmented development, and building in public.</description>
+  <language>en</language>
+  <atom:link href="https://smalley.my/feed.xml" rel="self" type="application/rss+xml"/>
+  <item>
+    <title>Building Two Open-Source Game Engines in Six Months (With AI)</title>
+    <link>https://smalley.my/thoughts/building-open-source-game-engines/</link>
+    <guid>https://smalley.my/thoughts/building-open-source-game-engines/</guid>
+    <pubDate>Thu, 29 May 2025 00:00:00 +0000</pubDate>
+    <description>What happens when you point LLM-driven development at the problem of building modular, embeddable game engines from scratch? 64 chess variants and infinite hex maps later, here's what I learned.</description>
+  </item>
+  <item>
+    <title>The Cardinal Sins of Bitcoin Ordinals</title>
+    <link>https://smalley.my/thoughts/cardinal-sins-of-bitcoin-ordinals/</link>
+    <guid>https://smalley.my/thoughts/cardinal-sins-of-bitcoin-ordinals/</guid>
+    <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
+    <description>Did you know that although your wallet might say that you only have 0.00000001 Bitcoin, depending upon where that Bitcoin came from and what's attached, it could actually be worth millions of dollars?</description>
+  </item>
+</channel>
+</rss>

@@ -56,11 +56,12 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 - Fixed WebCamp KL attribution, StartingBlock attribution
 - Homepage updates: 2x2 featured grid, timeline card, stats strip cleanup, centred intro with quote marks
 - Fixed bump.sh for macOS, polished footer, added Explore to nav
+- Removed all inline style attributes — hero backgrounds now use data-bg + JS
+- Added OG and Twitter Card meta tags to all 33 pages with dedicated OG image
 - Pushed to GitHub (msmalley/smalley-website)
-- Version: 1.0.10
 
-#### 2025-05-28
+#### 2026-05-28
 - Merged CVs into main site, added thoughts/blog section
 
-#### 2025-05-27
+#### 2026-05-27
 - Initial site build: all pages, data, and infrastructure

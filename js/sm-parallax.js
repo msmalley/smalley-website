@@ -2,6 +2,11 @@ document.addEventListener('DOMContentLoaded', function() {
   var bg = document.querySelector('.case-hero-bg');
   if (!bg) return;
 
+  var bgUrl = bg.getAttribute('data-bg');
+  if (bgUrl) {
+    bg.style.background = "url('" + bgUrl + "') center center / cover no-repeat";
+  }
+
   var hero = bg.parentElement;
   var speed = 0.6;
   var ticking = false;

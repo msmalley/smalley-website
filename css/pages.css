@@ -169,6 +169,17 @@
   font-size: 13px;
   color: var(--sm-muted);
   line-height: 1.6;
+  margin-bottom: 12px;
+}
+.speaking-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.speaking-card-tags .pill {
+  font-size: 10px;
+  padding: 2px 8px;
+  text-decoration: none;
 }
 
 .oss-list { list-style: none; }

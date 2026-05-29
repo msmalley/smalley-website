@@ -71,11 +71,12 @@ document.addEventListener('DOMContentLoaded', function() {
       items.push({
         title: s.title,
         desc: s.description,
-        tags: [],
+        tags: s.tags || [],
         type: 'Speaking',
         accent: 'gold',
         url: s.slug ? SM.url('/speaking/' + s.slug + '/') : null
       });
+      addTags(s.tags);
     }
 
     renderTags();

@@ -97,6 +97,21 @@
   font-style: italic;
   color: var(--sm-muted);
 }
+.article-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 40px 0 0;
+}
+.article-tags .pill {
+  font-size: 11px;
+  text-decoration: none;
+  transition: border-color 0.15s, color 0.15s;
+}
+.article-tags a.pill:hover {
+  border-color: var(--sm-teal);
+  color: var(--sm-text);
+}
 .article-content img {
   width: 100%;
   height: auto;

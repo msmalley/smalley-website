@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="sm-base" content="/personal/smalley-rebuild">
+<meta name="theme-color" content="#0B0F1A">
+<title>Project Castor — Mark Smalley</title>
+<meta name="description" content="Two-year blockchain advisory with Malaysia's Securities Commission, leading to the Digital Asset Custodian regulatory framework.">
+<link rel="stylesheet" href="../../css/_sm.css?v=1.0.0">
+<link rel="stylesheet" href="../../css/case-study.css?v=1.0.0">
+</head>
+<body>
+<div id="nav-root"></div>
+
+<section class="case-hero" data-bg>
+  <div class="case-hero-bg" style="background-image: url('../../img/portfolio/castor-hero.png')" aria-hidden="true"></div>
+  <div class="container">
+    <div class="case-hero-eyebrow" data-accent="gold">Securities Commission Malaysia · 2018</div>
+    <h1>Project Castor</h1>
+    <div class="case-hero-tagline">Advising Malaysia's capital markets regulator on blockchain infrastructure</div>
+    <div class="case-meta">
+      <div class="case-meta-item"><span class="case-meta-label">Role</span><span class="case-meta-value">Technical Advisor</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">Duration</span><span class="case-meta-value">~2 years</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">Outcome</span><span class="case-meta-value">Digital Asset Custodian regulation</span></div>
+    </div>
+</div>
+</section>
+
+<section class="page-content">
+  <div class="container">
+    <div class="case-content">
+      <h2>Background</h2>
+      <p>The engagement with the Securities Commission of Malaysia began with blockchain education — workshops explaining distributed ledger technology to regulators who would ultimately need to write policy around it. Over two years, through R1's training and consulting division, the relationship evolved from education into extensive technical workshops and eventually a feasibility study for decentralised secondary markets.</p>
+      <p>This wasn't a typical consulting engagement. The SC needed to understand blockchain deeply enough to regulate it intelligently — not just the financial risks, but the technical architecture, the on-chain/off-chain tradeoffs, and what was genuinely possible versus what was marketing hype.</p>
+
+      <h2>Technical Work</h2>
+      <p>The project utilised <a href="../neuroware/">Neuroware</a>'s Cortex product to manage network infrastructure and demonstrate working implementations. The system incorporated:</p>
+      <ul>
+        <li><strong>Digital identities</strong> — on-chain identity primitives suitable for regulated environments</li>
+        <li><strong>Token factories</strong> — supporting both fungible (ERC-20) and non-fungible (ERC-721) assets representing different financial instruments</li>
+        <li><strong>Standalone compliance contracts</strong> — escrow, KYC, and AML functionality as discrete, auditable smart contracts</li>
+        <li><strong>Upgradeable architecture</strong> — permission-based contract upgrades allowing iteration without losing state or breaking compliance</li>
+        <li><strong>Database-free applications</strong> — login, media management, and analytics all operating without stored credentials</li>
+      </ul>
+
+      <img src="../../img/portfolio/castor-01.png" alt="Project Castor architecture — digital identities and token factories">
+      <img src="../../img/portfolio/castor-03.png" alt="Cortex platform managing network infrastructure">
+
+      <h2>Evolution</h2>
+      <p>The blockchain architecture went through two stages during the engagement:</p>
+      <ol>
+        <li><strong>Stage one: Dogecoin</strong> — used as distributed key-value storage, proving the concept of on-chain data management in the simplest possible environment</li>
+        <li><strong>Stage two: Ethereum</strong> — migration to leverage ERC-20 and ERC-721 standards, enabling investors to use standard-compatible wallets and unlocking programmable compliance logic via smart contracts</li>
+      </ol>
+      <p>The modular design was deliberate — demonstrating to the SC that blockchain applications for capital markets weren't monolithic systems but composable components that could be applied across different financial products: equity crowdfunding, bond issuance, secondary market trading.</p>
+
+      <img src="../../img/portfolio/castor-02.png" alt="Project Castor modular blockchain design for capital markets">
+
+      <h2>Regulatory Impact</h2>
+      <p>Project Castor directly informed the Securities Commission's blockchain blueprint and led to the creation of Malaysia's <strong>Digital Asset Custodian</strong> regulatory framework — the same framework under which <a href="../cokeeps/">CoKeeps</a> later became the first approved custodian in 2023.</p>
+      <p>The work also earned Neuroware/R1 the <strong>Digerati50</strong> recognition — Malaysia's top 50 digital companies — acknowledging the contribution to national digital infrastructure policy.</p>
+      <p>The path from "educating regulators" to "regulation exists and companies are approved under it" took five years in total. Project Castor was the critical middle phase — the point where theory became demonstrated capability, and regulators gained enough technical confidence to write frameworks rather than blanket bans.</p>
+
+      <div class="case-outcome">
+        <div class="case-outcome-label">Result</div>
+        <div class="case-outcome-text">Two-year advisory → national blockchain blueprint → Digital Asset Custodian regulation → CoKeeps approval</div>
+      </div>
+
+      <div class="case-tech">
+        <span class="pill">Ethereum</span>
+        <span class="pill">Solidity</span>
+        <span class="pill">ERC-20</span>
+        <span class="pill">ERC-721</span>
+        <span class="pill">KYC/AML</span>
+        <span class="pill">Regulatory Compliance</span>
+        <span class="pill">Dogecoin</span>
+      </div>
+
+      <div class="case-links">
+        <a class="btn-secondary" href="https://neuroware.io/blog/project-castor-blockchain-pilot-project/" target="_blank" rel="noopener">Original Article</a>
+      </div>
+
+      <nav class="case-nav">
+        <a href="../">← All Projects</a>
+        <span></span>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<div id="footer-root"></div>
+<script src="../../js/sm-loader.js?v=1.0.0"></script>
+</body>
+</html>

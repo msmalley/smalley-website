@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="sm-base" content="/personal/smalley-rebuild">
+<meta name="theme-color" content="#0B0F1A">
+<title>PDF Pagination Engine — Mark Smalley</title>
+<meta name="description" content="A JavaScript-native pagination system that measures actual rendered element heights to produce orphan-free multi-section documents.">
+<link rel="stylesheet" href="../../css/_sm.css?v=1.0.0">
+<link rel="stylesheet" href="../../css/case-study.css?v=1.0.0">
+</head>
+<body>
+<div id="nav-root"></div>
+
+<section class="case-hero" data-bg>
+  <div class="case-hero-bg" style="background-image: url('../../img/tools/nukes-banner.jpg')" aria-hidden="true"></div>
+  <div class="container">
+    <div class="case-hero-eyebrow" data-accent="violet">Moddable Games · 2025</div>
+    <h1>PDF Pagination Engine</h1>
+    <div class="case-hero-tagline">Intelligent document pagination with orphan prevention</div>
+    <div class="case-meta">
+      <div class="case-meta-item"><span class="case-meta-label">Role</span><span class="case-meta-value">Creator</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">Pages assembled</span><span class="case-meta-value">190+</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">Orphaned elements</span><span class="case-meta-value">0</span></div>
+    </div>
+</div>
+</section>
+
+<section class="page-content">
+  <div class="container">
+    <div class="case-content">
+      <h2>The Problem</h2>
+      <p>CSS page-break rules are a blunt instrument. <code>break-inside: avoid</code> works for simple cases but fails catastrophically when you need to paginate complex, multi-section documents — rulebooks with variant-specific content blocks, tables that span multiple pages, headings that must stay grouped with their following content, and appendices that need distinct formatting.</p>
+      <p>Every existing approach I tried — wkhtmltopdf with CSS, Puppeteer with <code>@page</code> rules, even commercial PDF libraries — produced documents with orphaned headings, awkward page breaks mid-paragraph, and inconsistent spacing. The fundamental issue: they make pagination decisions without measuring actual rendered content.</p>
+
+      <h2>The Approach</h2>
+      <p>The engine works by <strong>measuring before deciding</strong>. It renders content into a hidden DOM container at exact print dimensions, measures every element's actual height (including margins, padding, and line-wrapping effects), then assembles pages by packing elements into fixed-height frames with explicit rules about what can and cannot be separated.</p>
+      <ul>
+        <li><strong>Atomic grouping</strong> — headings are bound to their following content; a heading never appears alone at the bottom of a page</li>
+        <li><strong>Minimum fill enforcement</strong> — a page must be at least 30% full or its content gets pulled back to the previous page</li>
+        <li><strong>Section-aware composition</strong> — cover pages, content sections, appendices, and back-covers each have independent layout rules</li>
+        <li><strong>Variant multiplication</strong> — one content source produces 64 distinct PDFs, each with variant-specific rules, piece definitions, and setup diagrams</li>
+      </ul>
+
+      <h2>How It Works</h2>
+      <p>The pipeline runs in three stages:</p>
+      <ol>
+        <li><strong>Render and measure</strong> — inject HTML into a Puppeteer page at A4 dimensions, walk the DOM tree, record each element's computed height</li>
+        <li><strong>Pack pages</strong> — iterate elements, accumulating into the current page until adding the next element would overflow. Apply atomic-group rules: if a heading is the last element on a page, pull it forward to the next page along with its content block</li>
+        <li><strong>Emit</strong> — render each assembled page to PDF via Puppeteer, concatenate with pdfunite</li>
+      </ol>
+      <p>The result is deterministic. Same input always produces same pagination. No manual page-break annotations needed in the source content.</p>
+
+      <h2>Results</h2>
+      <p>The engine now produces the complete Moddable Chess rulebook library — 64 variant rulebooks assembled from structured game data. Each rulebook includes cover art, rules sections, piece movement diagrams, setup instructions, and an appendix. Zero orphaned elements across 190+ pages of output.</p>
+
+      <div class="case-outcome">
+        <div class="case-outcome-label">Result</div>
+        <div class="case-outcome-text">64 variant PDFs, 190+ pages, zero orphans — fully automated from structured data</div>
+      </div>
+
+      <div class="case-tech">
+        <span class="pill">JavaScript</span>
+        <span class="pill">Puppeteer</span>
+        <span class="pill">DOM measurement</span>
+        <span class="pill">pdfunite</span>
+      </div>
+
+      <div class="case-links">
+        <a class="btn-secondary" href="https://rules.moddable.games" target="_blank" rel="noopener">Live Rulebooks</a>
+        <a class="btn-secondary" href="https://github.com/Moddable-Games/moddable-rules" target="_blank" rel="noopener">GitHub</a>
+      </div>
+
+      <nav class="case-nav">
+        <a href="../">← All Tools</a>
+        <a href="../moddable-chess-engine/">Next: Moddable Chess Engine →</a>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<div id="footer-root"></div>
+<script src="../../js/sm-loader.js?v=1.0.0"></script>
+</body>
+</html>

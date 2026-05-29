@@ -36,7 +36,7 @@
     "summary": "Co-founded and funded through R1 — providing two years of product development capital and three years of operational funding while awaiting regulatory approval. Designed compliance architecture, KYC/AML pipelines, and custody infrastructure. Emerged from Project Castor — the SC Malaysia blockchain blueprint Mark advised on.",
     "outcome": "First company in Malaysia approved as a regulated Digital Asset Custodian",
     "tech": ["KYC/AML", "Digital Custody", "Regulatory Compliance", "Node.js", "VueJS"],
-    "links": {}
+    "links": { "live": "https://cokeeps.com" }
   },
   {
     "slug": "moddable",
@@ -62,7 +62,7 @@
     "summary": "Co-founded and led the technical pivot from consumer app to passkey-native wallet-as-a-service infrastructure. Built on Project Eden — a weekend hackathon prototype demonstrating WebAuthN-based crypto wallets without passwords. The pivot secured DraperVC investment.",
     "outcome": "Secured DraperVC investment; pivoted from consumer app to B2B infrastructure",
     "tech": ["PassKeys", "WebAuthN", "React", "Schnorr Signatures", "Bitcoin", "Ethereum"],
-    "links": {}
+    "links": { "live": "https://oviato.com" }
   },
   {
     "slug": "neuroware",
@@ -75,6 +75,19 @@
     "summary": "Launched at TechCrunch Disrupt London after 500 Startups Batch 9. Raised US$300K+ that sustained operations for five years. Built open-source blockchain wallet and SDK infrastructure handling 1M+ API requests. The only Malaysian company in Deloitte's Top 50 Global RegTech.",
     "outcome": "Deloitte Top 50 RegTech, VentureBeat Top 5, $300K+ raised, TechCrunch Disrupt",
     "tech": ["UTXO", "Solidity", "EthersJS", "BitcoinJS", "IPFS", "MongoDB", "Node.js"],
-    "links": {}
+    "links": { "live": "https://neuroware.io" }
+  },
+  {
+    "slug": "r1",
+    "title": "R1",
+    "role": "CEO & Founder",
+    "company": "R1",
+    "year": "2012–present",
+    "accent": "gold",
+    "tagline": "13 years of blockchain infrastructure, from first principles",
+    "summary": "Holding and operating company behind Neuroware, CoKeeps, Blockchain Embassy, and more. First company in the SC Malaysia regulatory sandbox. Enterprise clients include DBS Bank and Baker Hostetler.",
+    "outcome": "First SC Malaysia sandbox company, incubated 5+ ventures, advised national regulators",
+    "tech": ["Bitcoin", "Ethereum", "Regulatory Compliance", "Digital Custody", "Node.js", "Solidity"],
+    "links": { "live": "https://r1.my" }
   }
 ]

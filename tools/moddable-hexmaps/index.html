@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="sm-base" content="/personal/smalley-rebuild">
+<meta name="theme-color" content="#0B0F1A">
+<title>Moddable Hexmaps — Mark Smalley</title>
+<meta name="description" content="Hex map framework with seeded procedural generation, multiple render styles, and full URL parameter API for embedding.">
+<link rel="stylesheet" href="../../css/_sm.css?v=1.0.0">
+<link rel="stylesheet" href="../../css/case-study.css?v=1.0.0">
+</head>
+<body>
+<div id="nav-root"></div>
+
+<section class="case-hero" data-bg>
+  <div class="case-hero-bg" style="background-image: url('../../img/tools/hexmaps-hexed.png')" aria-hidden="true"></div>
+  <div class="container">
+    <div class="case-hero-eyebrow" data-accent="violet">Moddable Games · 2025</div>
+    <h1>Moddable Hexmaps</h1>
+    <div class="case-hero-tagline">Seeded procedural hex maps with JSON export</div>
+    <div class="case-meta">
+      <div class="case-meta-item"><span class="case-meta-label">Maps possible</span><span class="case-meta-value">∞ (seeded)</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">Games supported</span><span class="case-meta-value">4</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">Render styles</span><span class="case-meta-value">3</span></div>
+    </div>
+</div>
+</section>
+
+<section class="page-content">
+  <div class="container">
+    <div class="case-content">
+      <h2>The Problem</h2>
+      <p>Board game designers need hex maps. Designing them manually is tedious — dozens or hundreds of hexes, each with terrain assignments, each needing visual consistency. Sharing maps means exporting images or proprietary file formats. Collaborating means sending files back and forth. There was no tool where a map could be a URL.</p>
+
+      <h2>Architecture</h2>
+      <p>The framework treats hex maps as deterministic functions of their parameters. A seed string plus a configuration (ring count, theme, orientation) always produces the same map. This makes maps shareable as URLs, reproducible across devices, and embeddable without hosting.</p>
+      <ul>
+        <li><strong>Seeded RNG</strong> — same seed always produces the same terrain distribution. Share a map by sharing its URL</li>
+        <li><strong>Canvas rendering</strong> — flat-top or pointy-top orientation, configurable ring count, three distinct visual styles</li>
+        <li><strong>Theme system</strong> — each game has its own terrain palette (volcanic for Nukes, fantasy biomes for Talisman, space for Twilight Imperium, colonial for Colony)</li>
+        <li><strong>Click-to-edit</strong> — override any hex's terrain after generation for manual refinement</li>
+        <li><strong>JSON export/import</strong> — full board state serialisation for saving and restoring edited maps</li>
+      </ul>
+
+      <h2>URL Parameter API</h2>
+      <p>Every aspect of the map is controllable via URL parameters, making it trivially embeddable:</p>
+      <ul>
+        <li><code>?theme=nukes</code> — select terrain palette</li>
+        <li><code>?rings=4</code> — set board size</li>
+        <li><code>?seed=volcano</code> — deterministic generation from this seed</li>
+        <li><code>?orientation=flat</code> — flat-top or pointy-top hexes</li>
+        <li><code>?boardonly=1</code> — minimal chrome for iframe embedding</li>
+      </ul>
+
+      <h2>Use Cases</h2>
+      <p>The framework currently supports four games in the Moddable Games ecosystem — Nukes (area control), Talisman (adventure), Twilight Imperium (4X strategy), and Colony (resource management). Each uses the same hex engine with different terrain definitions, generation rules, and visual themes.</p>
+      <p>Because maps are URLs, game sessions can be set up by sharing a link. Tournament organisers can publish map seeds in advance. Players can create custom maps and export them as JSON for inclusion in community map packs.</p>
+
+      <div class="case-outcome">
+        <div class="case-outcome-label">Result</div>
+        <div class="case-outcome-text">Infinite reproducible maps, 4 game themes, shareable via URL</div>
+      </div>
+
+      <div class="case-tech">
+        <span class="pill">JavaScript</span>
+        <span class="pill">Canvas</span>
+        <span class="pill">Seeded RNG</span>
+        <span class="pill">URL param API</span>
+      </div>
+
+      <div class="case-links">
+        <a class="btn-secondary" href="https://hex.moddable.games" target="_blank" rel="noopener">Generate Maps</a>
+        <a class="btn-secondary" href="https://github.com/Moddable-Games/moddable-hexmaps" target="_blank" rel="noopener">GitHub</a>
+      </div>
+
+      <nav class="case-nav">
+        <a href="../moddable-chess-engine/">← Prev: Moddable Chess Engine</a>
+        <span></span>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<div id="footer-root"></div>
+<script src="../../js/sm-loader.js?v=1.0.0"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="sm-base" content="/personal/smalley-rebuild">
+<meta name="theme-color" content="#0B0F1A">
+<title>DN-Key Protocol — Mark Smalley</title>
+<meta name="description" content="Decentralised key management standard using DNS TXT records to broadcast public keys for regulated digital asset custody.">
+<link rel="stylesheet" href="../../css/_sm.css?v=1.0.0">
+<link rel="stylesheet" href="../../css/case-study.css?v=1.0.0">
+</head>
+<body>
+<div id="nav-root"></div>
+
+<section class="case-hero" data-bg>
+  <div class="case-hero-bg" style="background-image: url('../../img/open-source/blockchain-embassy.jpg')" aria-hidden="true"></div>
+  <div class="container">
+    <div class="case-hero-eyebrow" data-accent="teal">R1 · 2016</div>
+    <h1>DN-Key Protocol</h1>
+    <div class="case-hero-tagline">Decentralised key management via DNS infrastructure</div>
+    <div class="case-meta">
+      <div class="case-meta-item"><span class="case-meta-label">Role</span><span class="case-meta-value">Author</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">Status</span><span class="case-meta-value">Production</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">Adopted by</span><span class="case-meta-value">ATA Plus ECF</span></div>
+    </div>
+</div>
+</section>
+
+<section class="page-content">
+  <div class="container">
+    <div class="case-content">
+      <h2>The Problem</h2>
+      <p>Blockchain custody environments need a way to verify public keys without relying on centralised key servers. PGP keyservers suffer from spam, lack of authentication, and no clear ownership verification. In regulated environments — particularly digital asset custody — you need to prove that a key belongs to an organisation with the same certainty that an SSL certificate proves domain ownership.</p>
+
+      <h2>The Insight</h2>
+      <p>DNS already solves this problem for other domains. SPF records prove email sending authority. DKIM records publish email signing keys. DMARC policies dictate enforcement. The infrastructure for broadcasting machine-readable key material via DNS TXT records is battle-tested, globally distributed, and already trusted by regulated institutions.</p>
+      <p>DN-Key applies the same pattern to cryptographic public keys: publish your Bitcoin, Ethereum, or arbitrary public keys as DNS TXT records on a domain you control. Verification becomes a DNS lookup — no custom infrastructure, no trust in third-party keyservers, no registration required.</p>
+
+      <h2>How It Works</h2>
+      <ul>
+        <li><strong>Key publication</strong> — add a TXT record to your domain: <code>_dnkey.example.com TXT "v=DNKEY1; k=bitcoin; p=xpub..."</code></li>
+        <li><strong>Discovery</strong> — clients resolve the TXT record to find the public key for a given domain and key type</li>
+        <li><strong>Verification</strong> — domain ownership is proven by DNS control (same trust model as SSL). The key is authentic because only the domain owner can set TXT records</li>
+        <li><strong>Multi-key support</strong> — multiple records for different chains, key types, or purposes on the same domain</li>
+      </ul>
+
+      <h2>Design Decisions</h2>
+      <p>The protocol deliberately mirrors email authentication standards (SPF/DKIM) so that existing DNS management tools, compliance workflows, and audit procedures work without modification. Regulated custodians already have DNS management processes audited by compliance teams — DN-Key slots into that existing workflow rather than introducing new infrastructure that needs separate audit.</p>
+      <p>The format is intentionally simple — a single TXT record with key-value pairs. No custom DNS record types (which require registrar support), no complex encoding, no dependencies beyond standard DNS resolution.</p>
+
+      <h2>Adoption</h2>
+      <p>DN-Key was adopted by ATA Plus ECF (a member of the <a href="../blockchain-embassy/">Blockchain Embassy</a> consortium) for their custody infrastructure, proving the concept in a regulated Malaysian financial services context. The protocol informed later work on <a href="../../portfolio/cokeeps/">CoKeeps</a> — Malaysia's first approved Digital Asset Custodian — where key management and proof of custody were central regulatory requirements.</p>
+
+      <div class="case-outcome">
+        <div class="case-outcome-label">Result</div>
+        <div class="case-outcome-text">Production key management standard using existing DNS infrastructure — no new trust assumptions required</div>
+      </div>
+
+      <div class="case-tech">
+        <span class="pill">DNS</span>
+        <span class="pill">TXT Records</span>
+        <span class="pill">Public Key Infrastructure</span>
+        <span class="pill">Digital Custody</span>
+      </div>
+
+      <nav class="case-nav">
+        <a href="../">← All Open Source</a>
+        <a href="../ordit-sdk/">Next: Ordit SDK →</a>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<div id="footer-root"></div>
+<script src="../../js/sm-loader.js?v=1.0.0"></script>
+</body>
+</html>

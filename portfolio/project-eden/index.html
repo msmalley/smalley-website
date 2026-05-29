@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="sm-base" content="/personal/smalley-rebuild">
+<meta name="theme-color" content="#0B0F1A">
+<title>Project Eden — Mark Smalley</title>
+<meta name="description" content="Weekend hackathon prototype proving passkey-native crypto wallets without passwords or seed phrases. Evolved into Oviato.">
+<link rel="stylesheet" href="../../css/_sm.css?v=1.0.0">
+<link rel="stylesheet" href="../../css/case-study.css?v=1.0.0">
+</head>
+<body>
+<div id="nav-root"></div>
+
+<section class="case-hero" data-bg>
+  <div class="case-hero-bg" style="background-image: url('../../img/portfolio/oviato-passkey.png')" aria-hidden="true"></div>
+  <div class="container">
+    <div class="case-hero-eyebrow" data-accent="teal">R1 · 2024</div>
+    <h1>Project Eden</h1>
+    <div class="case-hero-tagline">Passwordless crypto wallets — from hackathon prototype to funded infrastructure</div>
+    <div class="case-meta">
+      <div class="case-meta-item"><span class="case-meta-label">Role</span><span class="case-meta-value">Creator</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">Duration</span><span class="case-meta-value">Weekend hackathon</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">Evolved into</span><span class="case-meta-value">Oviato (DraperVC)</span></div>
+</div>
+  </div>
+</section>
+
+<section class="page-content">
+  <div class="container">
+    <div class="case-content">
+      <h2>The Question</h2>
+      <p>What if crypto wallets didn't need passwords or seed phrases at all?</p>
+      <p>Every existing wallet solution forces users to either trust a custodian (and accept the counterparty risk of an FTX-style collapse) or manage their own keys (and accept the UX burden of seed phrases, hardware devices, and the permanent risk of loss). The industry had accepted this as a fundamental tradeoff.</p>
+      <p>Project Eden was a weekend hackathon to test whether <strong>WebAuthN and PassKeys</strong> — the same technology that lets you log into websites with your fingerprint — could generate and manage cryptographic keys suitable for blockchain transactions. Not a wrapper around existing keys. Not a custodial abstraction. Actual non-custodial wallets where the passkey <em>is</em> the private key material.</p>
+
+      <h2>The Prototype</h2>
+      <p>Over a weekend, I built a working proof-of-concept demonstrating:</p>
+      <ul>
+        <li><strong>Passkey-derived wallet creation</strong> — using WebAuthN credentials to generate deterministic key material for Bitcoin and EVM networks</li>
+        <li><strong>Schnorr signature transactions</strong> — signing Bitcoin transactions using passkey-derived keys without ever exposing a seed phrase or raw private key</li>
+        <li><strong>MPC transaction signing</strong> — multi-party computation approach where no single device holds complete key material</li>
+        <li><strong>Cross-device compatibility</strong> — passkeys sync across devices via platform authenticators (iCloud Keychain, Google Password Manager), meaning wallet access follows the user without manual key backup</li>
+        <li><strong>Multi-chain support</strong> — same passkey generating valid keys for both Bitcoin (Schnorr/Taproot) and Ethereum (secp256k1)</li>
+      </ul>
+
+      <h2>Why It Works</h2>
+      <p>The insight is that WebAuthN's credential creation ceremony already generates a P-256 or Ed25519 keypair bound to a specific origin. With the right derivation path, this can produce keys compatible with blockchain signature schemes. The user never sees a seed phrase because there isn't one — the key lives in the device's secure enclave, protected by biometrics, and synced via the platform's existing passkey infrastructure.</p>
+      <p>This isn't custodial — no server ever holds the key. It isn't traditional self-custody either — there's no seed phrase to lose. It's a third category: <strong>platform-secured self-custody</strong>, where the security model is the device manufacturer's secure enclave rather than the user's ability to remember 24 words.</p>
+
+      <h2>What Happened Next</h2>
+      <p>The prototype was functional enough to demonstrate the viability of the approach. I co-founded <a href="../oviato/">Oviato</a> to turn this proof-of-concept into production infrastructure — passkey-native wallet-as-a-service APIs for third-party builders. The technical demonstration and pivot narrative directly secured <strong>DraperVC investment</strong>.</p>
+      <p>Project Eden proved that the hardest problem in crypto UX — key management — had a solution hiding in plain sight in the Web Authentication standard. Oviato is packaging that solution for the industry.</p>
+
+      <div class="case-outcome">
+        <div class="case-outcome-label">Result</div>
+        <div class="case-outcome-text">Weekend prototype proving passkey-native wallets are viable → co-founded Oviato → secured DraperVC funding</div>
+      </div>
+
+      <div class="case-tech">
+        <span class="pill">WebAuthN</span>
+        <span class="pill">PassKeys</span>
+        <span class="pill">Schnorr Signatures</span>
+        <span class="pill">MPC</span>
+        <span class="pill">Bitcoin</span>
+        <span class="pill">Ethereum</span>
+        <span class="pill">Secure Enclave</span>
+      </div>
+
+      <nav class="case-nav">
+        <a href="../">← All Projects</a>
+        <a href="../oviato/">Next: Oviato →</a>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<div id="footer-root"></div>
+<script src="../../js/sm-loader.js?v=1.0.0"></script>
+</body>
+</html>

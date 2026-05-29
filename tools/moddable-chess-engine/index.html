@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="sm-base" content="/personal/smalley-rebuild">
+<meta name="theme-color" content="#0B0F1A">
+<title>Moddable Chess Engine — Mark Smalley</title>
+<meta name="description" content="A modular chess engine supporting 64 playable variants with AI opponent, embed API, and plugin architecture.">
+<link rel="stylesheet" href="../../css/_sm.css?v=1.0.0">
+<link rel="stylesheet" href="../../css/case-study.css?v=1.0.0">
+</head>
+<body>
+<div id="nav-root"></div>
+
+<section class="case-hero" data-bg>
+  <div class="case-hero-bg" style="background-image: url('../../img/tools/chess-hyper.png')" aria-hidden="true"></div>
+  <div class="container">
+    <div class="case-hero-eyebrow" data-accent="violet">Moddable Games · 2025</div>
+    <h1>Moddable Chess Engine</h1>
+    <div class="case-hero-tagline">64 variants. AI opponent. Embed API. Plugin system.</div>
+    <div class="case-meta">
+      <div class="case-meta-item"><span class="case-meta-label">Variants</span><span class="case-meta-value">64 playable</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">Dependencies</span><span class="case-meta-value">0</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">Documented variants</span><span class="case-meta-value">2000+</span></div>
+    </div>
+</div>
+</section>
+
+<section class="page-content">
+  <div class="container">
+    <div class="case-content">
+      <h2>The Problem</h2>
+      <p>Existing chess libraries — Chessboard.js, chess.js, Lichess components — are designed for standard chess. If you want Atomic Chess, Racing Kings, or any variant with non-standard rules, you're forking entire codebases and fighting architectures that assume one set of rules. There was no engine that treated chess variants as a first-class extension point.</p>
+
+      <h2>Architecture</h2>
+      <p>The engine separates concerns into layers that can be independently replaced:</p>
+      <ul>
+        <li><strong>Board geometry</strong> — supports boards from 4x8 to 12x8 with configurable square properties</li>
+        <li><strong>Move generation</strong> — base engine handles standard moves; variants override via hooks for custom piece behaviour, capture rules, and victory conditions</li>
+        <li><strong>AI opponent</strong> — minimax with alpha-beta pruning, configurable depth, piece-value evaluation that adapts to variant rules</li>
+        <li><strong>Rendering</strong> — pure Canvas, no DOM manipulation during gameplay. Responsive, touch-friendly, works in iframes</li>
+        <li><strong>Plugin interface</strong> — each variant is a single file calling <code>registerVariant()</code> with its rule overrides</li>
+      </ul>
+
+      <h2>The Developer Experience</h2>
+      <p>This is a DevRel problem as much as an engineering one. The question isn't "can the engine support more variants?" — it's "can someone add one without understanding the engine internals?"</p>
+      <p>The "Build a Variant" guide walks a developer through creating a new variant from scratch. The plugin interface fails loudly with clear error messages when the contract is violated. Example variants ship as reference implementations at increasing complexity levels.</p>
+
+      <h2>Embed API</h2>
+      <p>Any variant can be embedded on any website with a single iframe. URL parameters control everything:</p>
+      <ul>
+        <li><code>?variant=atomic</code> — select the variant</li>
+        <li><code>?ai=black&amp;depth=3</code> — configure AI opponent</li>
+        <li><code>?embed=1</code> — minimal chrome for embedding</li>
+        <li><code>?fen=...</code> — start from a specific position</li>
+      </ul>
+
+      <div class="case-outcome">
+        <div class="case-outcome-label">Result</div>
+        <div class="case-outcome-text">64 playable variants, zero dependencies, community-extensible plugin system</div>
+      </div>
+
+      <div class="case-tech">
+        <span class="pill">JavaScript</span>
+        <span class="pill">Canvas</span>
+        <span class="pill">Minimax AI</span>
+        <span class="pill">Plugin architecture</span>
+      </div>
+
+      <div class="case-links">
+        <a class="btn-secondary" href="https://chess.moddable.games" target="_blank" rel="noopener">Play Now</a>
+        <a class="btn-secondary" href="https://github.com/Moddable-Games/moddable-chess" target="_blank" rel="noopener">GitHub</a>
+      </div>
+
+      <nav class="case-nav">
+        <a href="../pdf-pagination-engine/">← Prev: PDF Pagination Engine</a>
+        <a href="../moddable-hexmaps/">Next: Moddable Hexmaps →</a>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<div id="footer-root"></div>
+<script src="../../js/sm-loader.js?v=1.0.0"></script>
+</body>
+</html>

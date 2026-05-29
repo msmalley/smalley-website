@@ -1,5 +1,6 @@
 [
   {
+    "slug": "the-cost-of-cash",
     "title": "The Cost of Cash",
     "event": "TEDx Sarawak",
     "year": 2017,
@@ -9,6 +10,7 @@
     "featured": true
   },
   {
+    "slug": "webcamp-kl",
     "title": "Introducing Bitcoin: The Mostly Visual Guide",
     "event": "WebCamp KL",
     "year": 2013,

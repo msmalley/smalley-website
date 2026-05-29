@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="sm-base" content="/personal/smalley-rebuild">
+<meta name="theme-color" content="#0B0F1A">
+<title>Ordit SDK — Mark Smalley</title>
+<meta name="description" content="Open-source indexer, parser, and API toolkit for Bitcoin Ordinals and Inscriptions.">
+<link rel="stylesheet" href="../../css/_sm.css?v=1.0.0">
+<link rel="stylesheet" href="../../css/case-study.css?v=1.0.0">
+</head>
+<body>
+<div id="nav-root"></div>
+
+<section class="case-hero" data-bg>
+  <div class="case-hero-bg" style="background-image: url('../../img/portfolio/ordzaar-hero.jpg')" aria-hidden="true"></div>
+  <div class="container">
+    <div class="case-hero-eyebrow" data-accent="teal">sadoprotocol · 2023</div>
+    <h1>Ordit SDK</h1>
+    <div class="case-hero-tagline">Indexer, parser, and API toolkit for Bitcoin Ordinals</div>
+    <div class="case-meta">
+      <div class="case-meta-item"><span class="case-meta-label">Role</span><span class="case-meta-value">Lead Developer</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">Status</span><span class="case-meta-value">Production</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">Org</span><span class="case-meta-value">sadoprotocol</span></div>
+    </div>
+</div>
+</section>
+
+<section class="page-content">
+  <div class="container">
+    <div class="case-content">
+      <h2>Context</h2>
+      <p>When the Ordinals protocol emerged in early 2023, the only way to interact with it was through Casey Rodarmor's reference <code>ord</code> indexer — a Rust binary that requires a full Bitcoin node and produces a local database. There was no JavaScript SDK, no REST API, no way for web developers to build Ordinals applications without running heavy infrastructure.</p>
+      <p>Ordit was built to fill that gap: a JavaScript-native toolkit that gives web developers everything they need to build on Ordinals without running their own indexer.</p>
+
+      <h2>Architecture</h2>
+      <p>The SDK operates at three layers:</p>
+      <ul>
+        <li><strong>Indexer</strong> — connects to a Bitcoin node, traces sat provenance through the UTXO graph, indexes inscriptions and their content. Produces a queryable database of ordinal state</li>
+        <li><strong>Parser</strong> — decodes inscription content from witness data, handles recursive inscriptions, resolves parent-child relationships between inscriptions</li>
+        <li><strong>API toolkit</strong> — JavaScript client library for querying ordinal data, constructing inscription transactions, building PSBTs for ordinal transfers</li>
+      </ul>
+
+      <h2>Why It Matters</h2>
+      <p>Ordit was the infrastructure layer that made <a href="../../portfolio/sado-protocol/">SADO Protocol</a> and <a href="../../portfolio/ordzaar/">Ordzaar</a> possible. Without a reliable, fast indexer and a developer-friendly API, building a marketplace would have meant every consumer application re-implementing the same low-level Bitcoin parsing logic.</p>
+      <p>The SDK abstracts the complexity of sat tracking (tracing individual satoshis through transaction inputs and outputs), inscription decoding (extracting data from Taproot witness scripts), and PSBT construction (building partially-signed transactions for trustless trading) into clean JavaScript interfaces.</p>
+
+      <h2>Open Source Ecosystem</h2>
+      <p>Ordit lives under the <code>sadoprotocol</code> GitHub organisation alongside the SADO Protocol itself, reference implementations, and documentation. Multiple repositories cover different aspects of the stack — from the core indexer to API wrappers to example applications.</p>
+
+      <div class="case-outcome">
+        <div class="case-outcome-label">Result</div>
+        <div class="case-outcome-text">Production SDK powering Ordzaar and third-party exchanges — JavaScript access to Bitcoin Ordinals without running infrastructure</div>
+      </div>
+
+      <div class="case-tech">
+        <span class="pill">JavaScript</span>
+        <span class="pill">Bitcoin</span>
+        <span class="pill">Ordinals</span>
+        <span class="pill">Inscriptions</span>
+        <span class="pill">UTXO</span>
+        <span class="pill">Node.js</span>
+      </div>
+
+      <div class="case-links">
+        <a class="btn-secondary" href="https://github.com/sadoprotocol/ordit" target="_blank" rel="noopener">GitHub</a>
+      </div>
+
+      <nav class="case-nav">
+        <a href="../dn-key-protocol/">← Prev: DN-Key Protocol</a>
+        <a href="../blockchain-embassy/">Next: Blockchain Embassy →</a>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<div id="footer-root"></div>
+<script src="../../js/sm-loader.js?v=1.0.0"></script>
+</body>
+</html>

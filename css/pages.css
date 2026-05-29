@@ -241,6 +241,18 @@
 }
 .timeline-item[data-accent="gold"]::before { border-color: var(--sm-gold-glow); }
 .timeline-item[data-accent="violet"]::before { border-color: var(--sm-violet-glow); }
+a.timeline-item {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 8px;
+  padding: 20px 16px;
+  margin: 0 -16px;
+  transition: background 0.2s;
+}
+a.timeline-item:hover {
+  background: var(--sm-surface);
+}
 .timeline-year {
   font-family: var(--f-mono);
   font-size: 12px;

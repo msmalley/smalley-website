@@ -4,7 +4,9 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background: transparent;
+  background: rgba(11, 15, 26, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   transition: background 0.3s, box-shadow 0.3s;
 }
 .sm-nav.scrolled {

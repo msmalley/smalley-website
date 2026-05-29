@@ -45,6 +45,7 @@
         var badges = SM.el('div', null);
         if (t.type) badges.appendChild(SM.el('span', { class: 'talk-badge' }, t.type));
         if (t.videoId) badges.appendChild(SM.el('a', { class: 'talk-badge', href: 'https://www.youtube.com/watch?v=' + t.videoId, target: '_blank', rel: 'noopener' }, 'video'));
+        if (t.slug) badges.appendChild(SM.el('a', { class: 'talk-badge talk-badge-link', href: SM.url('/speaking/' + t.slug + '/') }, 'read more'));
         var item = SM.el('li', { class: 'talk-item reveal' },
           SM.el('div', { class: 'talk-year' }, String(t.year)),
           SM.el('div', null,
@@ -67,6 +68,7 @@
       for (var i = 0; i < items.length; i++) {
         var o = items[i];
         var links = SM.el('div', { class: 'oss-links' });
+        if (o.slug) links.appendChild(SM.el('a', { href: SM.url('/open-source/' + o.slug + '/') }, 'Read More'));
         if (o.repo) links.appendChild(SM.el('a', { href: o.repo, target: '_blank', rel: 'noopener' }, 'Repository'));
         if (o.demo) links.appendChild(SM.el('a', { href: o.demo, target: '_blank', rel: 'noopener' }, 'Live Demo'));
         var status = o.status || 'production';
@@ -97,6 +99,7 @@
           ));
         }
         var links = SM.el('div', { class: 'tool-links' });
+        if (t.slug) links.appendChild(SM.el('a', { class: 'btn-primary', href: SM.url('/tools/' + t.slug + '/') }, 'Read More'));
         if (t.demo) links.appendChild(SM.el('a', { class: 'btn-secondary', href: t.demo, target: '_blank', rel: 'noopener' }, 'Live Demo'));
         if (t.repo) links.appendChild(SM.el('a', { class: 'btn-secondary', href: t.repo, target: '_blank', rel: 'noopener' }, 'Repository'));
         var card = SM.el('div', { class: 'tool-card reveal' },
@@ -124,7 +127,10 @@
         for (var h = 0; h < e.highlights.length; h++) {
           highlights.appendChild(SM.el('li', null, e.highlights[h]));
         }
-        var item = SM.el('li', { class: 'timeline-item reveal', 'data-accent': e.accent },
+        var tag = e.link ? 'a' : 'li';
+        var attrs = { class: 'timeline-item reveal', 'data-accent': e.accent };
+        if (e.link) attrs.href = SM.url(e.link);
+        var item = SM.el(tag, attrs,
           SM.el('div', { class: 'timeline-year' }, e.year),
           SM.el('div', { class: 'timeline-title' }, e.title),
           SM.el('div', { class: 'timeline-company' }, e.company + (e.location ? ' — ' + e.location : '')),

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="sm-base" content="/personal/smalley-rebuild">
+<meta name="theme-color" content="#0B0F1A">
+<title>BloqVerse — Mark Smalley</title>
+<meta name="description" content="On-chain multiplayer game platform built on 30+ interconnected Ethereum smart contracts. Emerged from research at the Blockchain Embassy.">
+<link rel="stylesheet" href="../../css/_sm.css?v=1.0.0">
+<link rel="stylesheet" href="../../css/case-study.css?v=1.0.0">
+</head>
+<body>
+<div id="nav-root"></div>
+
+<section class="case-hero" data-bg>
+  <div class="case-hero-bg" style="background-image: url('../../img/portfolio/bloqverse-hero.gif')" aria-hidden="true"></div>
+  <div class="container">
+    <div class="case-hero-eyebrow" data-accent="teal">R1 / Neuroware · 2019</div>
+    <h1>BloqVerse</h1>
+    <div class="case-hero-tagline">On-chain multiplayer RPG and consortium onboarding tool</div>
+    <div class="case-meta">
+      <div class="case-meta-item"><span class="case-meta-label">Role</span><span class="case-meta-value">Creator</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">Smart contracts</span><span class="case-meta-value">30+</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">Origin</span><span class="case-meta-value">Blockchain Embassy R&D</span></div>
+    </div>
+</div>
+</section>
+
+<section class="page-content">
+  <div class="container">
+    <div class="case-content">
+      <h2>What It Is</h2>
+      <p>BloqVerse is a blockchain-based game platform that emerged from research at the <a href="../../open-source/blockchain-embassy/">Blockchain Embassy</a>. Players inhabit interconnected universes where they combine elements following real-world scientific rules to create resources, trade assets, and build value — all tracked on-chain with no traditional backend.</p>
+      <p>At its core, it's a proof-of-concept for a radically different application architecture: <strong>the entire backend is smart contracts</strong>. No databases. No servers. Frontend assets served via IPFS. The game logic, user state, asset ownership, and inter-player transactions all live on a permissioned EVM network pegged to public Ethereum.</p>
+
+      <h2>Technical Architecture</h2>
+      <p>The platform runs on approximately 30 Solidity smart contracts split into two categories:</p>
+      <ul>
+        <li><strong>~20 upgradeable contracts</strong> — logical functions and interfaces that can be iterated without losing state. These handle game mechanics, marketplace logic, and user interactions.</li>
+        <li><strong>~10 immutable contracts</strong> — authentication and data storage that cannot be modified after deployment. These are the ground truth layer — once an asset exists, it exists permanently.</li>
+      </ul>
+      <p>The frontend is entirely static HTML5, compatible with any device. Asset storage and retrieval happens through IPFS, meaning the game can operate without any traditional server infrastructure. A player needs only a browser and a wallet.</p>
+
+      <div class="img-row">
+        <img src="../../img/portfolio/bloqverse-planet.png" alt="BloqVerse planet generation">
+        <img src="../../img/portfolio/bloqverse-player.png" alt="BloqVerse player interface">
+      </div>
+
+      <h2>The Game Layer</h2>
+      <p>BloqVerse's game mechanic is combinatorial: players discover and combine elements (following real-world chemistry and physics) to produce new resources. These resources are on-chain tokens — fungible for commodities, non-fungible for unique discoveries. The interconnected universe system means assets from one game context can flow into another.</p>
+      <p>This wasn't primarily entertainment — it was a demonstration platform. The game mechanics proved that complex, stateful, multi-user applications could run entirely on smart contracts with acceptable performance on permissioned networks.</p>
+
+      <img src="../../img/portfolio/bloqverse-lms.png" alt="BloqVerse social learning platform">
+
+      <h2>The Training Layer</h2>
+      <p>BloqVerse doubled as an onboarding tool for the Blockchain Embassy consortium. New members and bootcamp participants would interact with the game as their first experience of blockchain applications — learning by playing rather than by reading documentation.</p>
+      <ul>
+        <li><strong>Dedicated training universe</strong> — bootcamp participants get their own isolated game world to experiment in</li>
+        <li><strong>Industry simulations</strong> — ECF (equity crowdfunding) markets, stablecoin trading, escrow services modelled as game mechanics</li>
+        <li><strong>Sector extensions</strong> — property, telecom, and healthcare scenarios demonstrating cross-industry blockchain applications</li>
+        <li><strong>Gamified credentials</strong> — completion of training modules awarded as on-chain tokens</li>
+      </ul>
+
+      <h2>Significance</h2>
+      <p>BloqVerse demonstrated in 2019 what most of the industry was still theorising about: that upgradeable contract patterns, IPFS-served frontends, and permissioned-network performance could support real interactive applications — not just token transfers. The patterns developed here (upgradeable contract architecture, serverless frontends, on-chain state machines) informed the technical decisions behind <a href="../cokeeps/">CoKeeps</a>' custody infrastructure and later work on <a href="../oviato/">Oviato</a>'s wallet architecture.</p>
+
+      <div class="case-outcome">
+        <div class="case-outcome-label">Result</div>
+        <div class="case-outcome-text">30+ interconnected smart contracts running a fully on-chain game — no servers, no databases, just contracts and IPFS</div>
+      </div>
+
+      <div class="case-tech">
+        <span class="pill">Solidity</span>
+        <span class="pill">Ethereum</span>
+        <span class="pill">IPFS</span>
+        <span class="pill">Upgradeable Contracts</span>
+        <span class="pill">ERC-20</span>
+        <span class="pill">ERC-721</span>
+        <span class="pill">Proof of Authority</span>
+      </div>
+
+      <div class="case-links">
+        <a class="btn-secondary" href="https://r1.my/wtf-is-bloqverse/" target="_blank" rel="noopener">Original Article</a>
+      </div>
+
+      <nav class="case-nav">
+        <a href="../">← All Projects</a>
+        <span></span>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<div id="footer-root"></div>
+<script src="../../js/sm-loader.js?v=1.0.0"></script>
+</body>
+</html>

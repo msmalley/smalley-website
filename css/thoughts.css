@@ -97,6 +97,13 @@
   font-style: italic;
   color: var(--sm-muted);
 }
+.article-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--sm-border);
+  margin: 24px 0;
+}
 .article-back {
   margin-top: 48px;
   padding-top: 24px;

@@ -9,6 +9,7 @@
     "adoptedBy": ["Ordzaar", "Third-party exchanges"]
   },
   {
+    "slug": "dn-key-protocol",
     "title": "DN-Key Protocol",
     "role": "Author",
     "description": "Decentralised key management standard using DNS TXT records to broadcast public keys. Designed for regulated digital asset custody environments.",
@@ -18,6 +19,7 @@
     "year": 2016
   },
   {
+    "slug": "ordit-sdk",
     "title": "Ordit SDK",
     "role": "Lead developer",
     "description": "Open-source indexer, parser, and API toolkit for Bitcoin Ordinals and Inscriptions. Multiple repos under the sadoprotocol organisation.",
@@ -51,6 +53,7 @@
     "status": "legacy"
   },
   {
+    "slug": "blockchain-embassy",
     "title": "Blockchain Embassy of Asia",
     "role": "Founder",
     "description": "ASEAN's first public blockchain consortium. Operated a private proof-of-authority EVM network with members from Maybank, RHB, Capital Bay, and ATA Plus.",

@@ -44,9 +44,20 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 
 ## Changelog
 
-#### 2025-05-29
-- Extracted inline script from thoughts page into `js/sm-thoughts.js`
-- Added README
+#### 2026-05-29
+- Added 13 sub-pages (portfolio, tools, open-source, speaking) — every timeline entry now links to a detail page
+- Created /explore/ page: filterable grid of all content by tech tag with search and highlighting
+- Full-bleed parallax hero images with scroll-driven blur/brightness reveal
+- 25 images from source sites, 52+ internal cross-links between pages
+- Restructured speaking section into card grid with 5 sub-pages (TEDx, WebCamp KL, Conferences, BFM Radio, Blockchain for Developers)
+- Conference page with SlideShare embeds (FOSS Asia, Bitcoin World Conf, MDEC FinTech)
+- Tech pills on all sub-pages linking to /explore/?tag=X
+- Sharpened CVs with verified data (15 SlideShares, BloqVerse architecture, Project Castor evolution)
+- Fixed WebCamp KL attribution, StartingBlock attribution
+- Homepage updates: 2x2 featured grid, timeline card, stats strip cleanup, centred intro with quote marks
+- Fixed bump.sh for macOS, polished footer, added Explore to nav
+- Pushed to GitHub (msmalley/smalley-website)
+- Version: 1.0.10
 
 #### 2025-05-28
 - Merged CVs into main site, added thoughts/blog section

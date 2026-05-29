@@ -45,6 +45,9 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 ## Changelog
 
 #### 2026-05-29
+- Added /process/ page: "How I Build" — AI-augmented engineering process with live stats and demos
+- Added live interactive embeds (chess engine + hexmap generator) to portfolio/moddable, tools/chess, tools/hexmaps
+- Added "How I Build" to site navigation and homepage featured section
 - Added 13 sub-pages (portfolio, tools, open-source, speaking) — every timeline entry now links to a detail page
 - Created /explore/ page: filterable grid of all content by tech tag with search and highlighting
 - Full-bleed parallax hero images with scroll-driven blur/brightness reveal

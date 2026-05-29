@@ -53,13 +53,19 @@
         <li><strong>JSON export/import</strong> — full board state serialisation for saving and restoring edited maps</li>
       </ul>
 
+      <h2>Try It</h2>
+      <p>A procedurally generated Nukes map below. Same seed always produces the same map — refresh and it persists. Click any hex to cycle its terrain.</p>
+      <div class="demo-embed demo-embed-wide">
+        <iframe src="https://hex.moddable.games/generate/?game=nukes&boardonly=1&size=4&seed=smalley-demo&bg=0B0F1A" width="100%" height="480" frameborder="0" loading="lazy"></iframe>
+      </div>
+      <p class="demo-caption">Live embed of the Hexmap Framework — Nukes theme, seed "smalley-demo", 4 rings</p>
+
       <h2>URL Parameter API</h2>
       <p>Every aspect of the map is controllable via URL parameters, making it trivially embeddable:</p>
       <ul>
-        <li><code>?theme=nukes</code> — select terrain palette</li>
-        <li><code>?rings=4</code> — set board size</li>
+        <li><code>?game=nukes</code> — select terrain palette</li>
+        <li><code>?size=4</code> — set board size (ring count)</li>
         <li><code>?seed=volcano</code> — deterministic generation from this seed</li>
-        <li><code>?orientation=flat</code> — flat-top or pointy-top hexes</li>
         <li><code>?boardonly=1</code> — minimal chrome for iframe embedding</li>
       </ul>
 

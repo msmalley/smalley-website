@@ -272,6 +272,44 @@ a.pill:hover {
   flex-wrap: wrap;
 }
 
+.demo-embed {
+  margin: 24px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--sm-border);
+  background: var(--sm-deep);
+}
+.demo-embed iframe {
+  display: block;
+  width: 100%;
+  min-height: 400px;
+}
+.demo-embed-wide iframe {
+  min-height: 480px;
+}
+.demo-caption {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  color: var(--sm-faint);
+  margin-top: -8px;
+  margin-bottom: 32px;
+}
+.demo-embed-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 24px 0;
+}
+.demo-embed-col .demo-embed {
+  margin: 0 0 8px;
+}
+.demo-embed-col .demo-caption {
+  margin: 0 0 16px;
+}
+@media (max-width: 768px) {
+  .demo-embed-row { grid-template-columns: 1fr; }
+}
+
 .case-nav {
   margin-top: 60px;
   padding-top: 32px;

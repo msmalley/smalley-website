@@ -45,9 +45,14 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 ## Changelog
 
 #### 2026-05-29
+- Added /regtech/ credibility page consolidating all regulatory expertise with CV callout
 - Added /process/ page: "How I Build" — AI-augmented engineering process with live stats and demos
 - Added live interactive embeds (chess engine + hexmap generator) to portfolio/moddable, tools/chess, tools/hexmaps
-- Added "How I Build" to site navigation and homepage featured section
+- Added "How I Build" and "RegTech" to site navigation and homepage
+- Unified tools and open-source index pages into card-grid layout (matching portfolio/speaking)
+- CV callouts: CTO on /process/, DevRel on /speaking/, RegTech on /regtech/
+- Fixed orphan words site-wide: text-wrap balance on all short text, pretty on body
+- Moved btn-primary/btn-secondary and cta-box to shared _sm.css
 - Added 13 sub-pages (portfolio, tools, open-source, speaking) — every timeline entry now links to a detail page
 - Created /explore/ page: filterable grid of all content by tech tag with search and highlighting
 - Full-bleed parallax hero images with scroll-driven blur/brightness reveal

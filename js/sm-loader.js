@@ -4,6 +4,8 @@
   var src = scripts[scripts.length - 1].getAttribute('src');
   var base = src.replace(/sm-loader\.js.*$/, '');
   var cssBase = base.replace(/js\/$/, 'css/');
+  var rootBase = cssBase.replace(/css\/$/, '');
+  document.write('<link rel="alternate" type="application/rss+xml" title="Mark Smalley — Thoughts" href="' + rootBase + 'feed.xml">');
   var styles = ['navbar.css', 'footer.css'];
   for (var s = 0; s < styles.length; s++) {
     document.write('<link rel="stylesheet" href="' + cssBase + styles[s] + '?v=' + V + '">');

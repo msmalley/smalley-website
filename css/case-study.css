@@ -64,6 +64,15 @@
     right: -5%;
     bottom: -15%;
   }
+  .page-content > .container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .case-sidebar {
+    position: static;
+    padding: 0 0 40px;
+  }
+  .demo-embed-row { grid-template-columns: 1fr; }
 }
 .case-hero-eyebrow {
   font-family: var(--f-mono);
@@ -134,10 +143,48 @@
   margin-bottom: 24px;
 }
 
+.page-content > .container {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 48px;
+  align-items: start;
+}
 .case-content {
   padding: 60px 0;
-  max-width: 720px;
+  min-width: 0;
 }
+.case-sidebar {
+  position: sticky;
+  top: 88px;
+  padding: 60px 0;
+}
+.case-sidebar-section {
+  margin-bottom: 28px;
+}
+.case-sidebar-label {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--sm-faint);
+  margin-bottom: 10px;
+}
+.case-sidebar .pill {
+  margin: 0 4px 6px 0;
+}
+.case-sidebar .btn-secondary {
+  display: block;
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.case-sidebar .case-outcome {
+  margin-top: 0;
+  padding: 20px;
+}
+.case-sidebar .case-outcome-label { font-size: 9px; }
+.case-sidebar .case-outcome-text { font-size: 15px; }
 .case-content h2 {
   font-family: var(--f-heading);
   font-size: 20px;

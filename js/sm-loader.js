@@ -16,7 +16,8 @@
     'sm-footer.js',
     'sm-animations.js',
     'sm-parallax.js',
-    'sm-related.js'
+    'sm-related.js',
+    'sm-sidebar.js'
   ];
   for (var i = 0; i < modules.length; i++) {
     document.write('<script src="' + base + modules[i] + '?v=' + V + '"><\/script>');

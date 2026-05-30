@@ -80,6 +80,16 @@
 
       <p>But most things on the web are not those things. Most things on the web are: fetch data, render it, let people interact with it. For that — which describes marketing sites, documentation, portfolios, content platforms, embeddable tools, and even reasonably complex game engines — a framework is overhead you pay for in build complexity, deployment friction, and architectural lock-in without receiving proportional value in return.</p>
 
+      <h2>The Hiring Signal</h2>
+
+      <p>I've interviewed a lot of senior developers over the years. The pattern is consistent: candidates who only know React can only solve problems that look like React problems. Ask them to build something outside that paradigm — a canvas-based game engine, an embed API, a data pipeline — and they reach for the framework anyway, bending the problem into a shape React can hold rather than solving it directly. They've internalised someone else's abstractions so deeply that they've lost the ability to think below them.</p>
+
+      <p>The developers I hired were the ones who could do it both ways. They understood frameworks — often deeply — but they could also write vanilla JS that solved the problem on its own terms. They understood <em>why</em> a virtual DOM exists, not just <em>how</em> to use one. They could evaluate whether a given project actually needed React's reconciliation model or whether a simpler approach would serve better.</p>
+
+      <p>Only those developers got the luxury of choosing for themselves what was needed. Everyone else had already made the choice by default — because React was all they knew. That's not seniority. That's dependency.</p>
+
+      <p>When I build teams, I want people who can assess a problem on its own terms and select — or reject — tools accordingly. You can't do that assessment if you've never built anything without the tool. The vanilla JS constraint isn't just an architectural preference. It's a hiring signal and a professional standard.</p>
+
       <h2>The Longevity Bet</h2>
 
       <p>jQuery peaked and declined. Angular 1 was abandoned for an incompatible rewrite. React is sixteen years in with increasing competition from signals-based alternatives. Every framework has a half-life. The JavaScript that runs in a browser today will still run in a browser in ten years — because browsers don't break backwards compatibility. That's the real bet I'm making.</p>

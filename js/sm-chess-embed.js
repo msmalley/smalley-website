@@ -51,7 +51,7 @@
       if (existing) existing.remove();
 
       var iframe = document.createElement('iframe');
-      iframe.src = BASE + '?variant=' + v.key + '&embed=1&boardonly=1&mode=solo&bg=' + BG + '&radius=8px';
+      iframe.src = BASE + '?variant=' + v.key + '&embed=1&boardonly=1&mode=solo&theme=cosmic&bg=' + BG + '&radius=8px';
       iframe.setAttribute('scrolling', 'no');
       iframe.setAttribute('loading', 'lazy');
       iframe.style.aspectRatio = '1 / 1';

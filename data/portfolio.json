@@ -46,8 +46,8 @@
     "year": "2025",
     "accent": "violet",
     "tagline": "Open-source games studio using AI-augmented engineering",
-    "summary": "Shipped four games, two open-source engines (64-variant chess + hex map framework), nine mods, and a developer tools platform in under six months. Built entirely using LLM-driven development workflows. Custom PDF pagination engine producing 190+ page rulebook libraries.",
-    "outcome": "4 games, 2 engines, 9 mods — all live and public in 6 months",
+    "summary": "Shipped four games, two open-source engines (64-variant chess + hex map framework), nine mods, and a developer tools platform in 16 days. Built entirely using LLM-driven development workflows. Custom PDF pagination engine producing 190+ page rulebook libraries.",
+    "outcome": "4 games, 2 engines, 9 mods — all live and public in 16 days",
     "tech": ["JavaScript", "Canvas", "AI/LLM", "Puppeteer", "GitHub Pages"],
     "links": { "live": "https://moddable.games" }
   },

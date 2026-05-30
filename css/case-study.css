@@ -278,21 +278,39 @@ a.pill:hover {
   overflow: hidden;
   border: 1px solid var(--sm-border);
   background: var(--sm-deep);
+  padding: 20px;
 }
 .demo-embed iframe {
   display: block;
   width: 100%;
-  min-height: 400px;
+  border: none;
+  border-radius: 8px;
+  background: var(--sm-deep);
+  aspect-ratio: 1 / 1;
 }
 .demo-embed-wide iframe {
-  min-height: 480px;
+  aspect-ratio: 4 / 3;
+}
+.demo-controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.demo-controls select {
+  font-family: var(--f-mono);
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--sm-border);
+  background: var(--sm-surface-alt);
+  color: var(--sm-text);
+  cursor: pointer;
 }
 .demo-caption {
   font-family: var(--f-mono);
   font-size: 11px;
   color: var(--sm-faint);
-  margin-top: -8px;
-  margin-bottom: 32px;
+  margin-top: 12px;
 }
 .demo-embed-row {
   display: grid;
@@ -301,10 +319,10 @@ a.pill:hover {
   margin: 24px 0;
 }
 .demo-embed-col .demo-embed {
-  margin: 0 0 8px;
+  margin: 0;
 }
 .demo-embed-col .demo-caption {
-  margin: 0 0 16px;
+  margin: 8px 0 16px;
 }
 @media (max-width: 768px) {
   .demo-embed-row { grid-template-columns: 1fr; }

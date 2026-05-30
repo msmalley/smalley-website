@@ -30,6 +30,9 @@
   }
   inner.appendChild(linkList);
 
+  var rssLink = SM.el('a', { class: 'sm-nav-rss', href: SM.url('/feed.xml'), title: 'RSS Feed', 'aria-label': 'RSS Feed', html: '<svg width="16" height="16" viewBox="0 0 448 448" fill="currentColor"><circle cx="80" cy="368" r="80"/><path d="M0 176v80c132.5 0 240 107.5 240 240h80C320 310.8 185.2 176 0 176z"/><path d="M0 0v80c220.9 0 400 179.1 400 400h48C448 215 233 0 0 0z"/></svg>' });
+  inner.appendChild(rssLink);
+
   var navbar = SM.el('nav', { class: 'sm-nav' }, inner);
   nav.appendChild(navbar);
 

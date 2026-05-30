@@ -194,14 +194,12 @@
     <p class="process-intro">Both engines are embeddable anywhere with a single iframe and URL parameters. These are live — play a game or generate a map right here.</p>
     <div class="demo-embed-row reveal">
       <div class="demo-embed-col">
-        <div class="demo-embed">
-          <iframe src="https://chess.moddable.games/play/?embed=1&boardonly=1&variant=kingOfTheHill&mode=solo&theme=cosmic" width="100%" height="420" frameborder="0" loading="lazy"></iframe>
-        </div>
-        <p class="demo-caption">King of the Hill — get your king to the centre to win</p>
+        <div class="demo-embed" id="chess-demo-process"></div>
+        <p class="demo-caption">Chess engine — switch variants above</p>
       </div>
       <div class="demo-embed-col">
         <div class="demo-embed">
-          <iframe src="https://hex.moddable.games/generate/?game=talisman&boardonly=1&size=4&seed=process-demo&bg=0B0F1A" width="100%" height="420" frameborder="0" loading="lazy"></iframe>
+          <iframe src="https://hex.moddable.games/generate/?game=talisman&boardonly=1&size=4&seed=process-demo&bg=0B0F1A" scrolling="no" loading="lazy"></iframe>
         </div>
         <p class="demo-caption">Talisman: Hexed — 5-ring fantasy adventure map</p>
       </div>
@@ -247,5 +245,6 @@
 
 <div id="footer-root"></div>
 <script src="../js/sm-loader.js?v=1.0.11"></script>
+<script src="../js/sm-chess-embed.js?v=1.0.11"></script>
 </body>
 </html>

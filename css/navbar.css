@@ -56,6 +56,23 @@
   color: var(--sm-text);
   background: var(--sm-surface-alt);
 }
+.sm-nav-rss {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  color: var(--sm-muted);
+  transition: color 0.2s, background 0.2s;
+  margin-left: 4px;
+}
+.sm-nav-rss:hover {
+  color: var(--sm-gold-glow);
+  background: var(--sm-surface);
+}
+.sm-nav-rss svg { display: block; }
+
 .sm-nav-toggle {
   display: none;
   background: none;

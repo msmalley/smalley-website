@@ -58,11 +58,9 @@
       <p>The "Build a Variant" guide walks a developer through creating a new variant from scratch. The plugin interface fails loudly with clear error messages when the contract is violated. Example variants ship as reference implementations at increasing complexity levels.</p>
 
       <h2>Try It</h2>
-      <p>Play Atomic Chess against the AI below — pieces explode on capture, destroying everything in a 3x3 radius. This is one of 64 variants running in the engine.</p>
-      <div class="demo-embed">
-        <iframe src="https://chess.moddable.games/play/?embed=1&variant=atomic&mode=solo&theme=cosmic" width="100%" height="520" frameborder="0" loading="lazy"></iframe>
-      </div>
-      <p class="demo-caption">Live embed of the Moddable Chess Engine — Atomic variant, cosmic theme, AI opponent</p>
+      <p>Play against the AI below. Switch variants to see how the same engine handles completely different rule sets — from exploding pieces to fog of war to racing your king.</p>
+      <div class="demo-embed" id="chess-demo"></div>
+      <p class="demo-caption">Live embed — variant switcher controls the iframe URL, background matched, no scrolling</p>
 
       <h2>Embed API</h2>
       <p>Any variant can be embedded on any website with a single iframe. URL parameters control everything:</p>
@@ -101,5 +99,6 @@
 
 <div id="footer-root"></div>
 <script src="../../js/sm-loader.js?v=1.0.11"></script>
+<script src="../../js/sm-chess-embed.js?v=1.0.11"></script>
 </body>
 </html>

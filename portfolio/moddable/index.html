@@ -55,17 +55,15 @@
       </ul>
 
       <h2>Try the Engines</h2>
-      <p>Both engines are embeddable anywhere with a single iframe. Play a game of Fog of War chess (hidden information — you only see squares your pieces attack) or generate a hex map below.</p>
+      <p>Both engines are embeddable anywhere with a single iframe. Switch variants to see the chess engine handle different rule sets, or click hexes on the map to cycle terrain.</p>
       <div class="demo-embed-row">
         <div class="demo-embed-col">
-          <div class="demo-embed">
-            <iframe src="https://chess.moddable.games/play/?embed=1&boardonly=1&variant=fogOfWar&mode=solo&theme=cosmic" width="100%" height="400" frameborder="0" loading="lazy"></iframe>
-          </div>
-          <p class="demo-caption">Fog of War Chess — you can only see what your pieces attack</p>
+          <div class="demo-embed" id="chess-demo-portfolio"></div>
+          <p class="demo-caption">Chess engine — switch variants above</p>
         </div>
         <div class="demo-embed-col">
           <div class="demo-embed">
-            <iframe src="https://hex.moddable.games/generate/?game=nukes&boardonly=1&size=3&seed=portfolio-demo&bg=0B0F1A" width="100%" height="400" frameborder="0" loading="lazy"></iframe>
+            <iframe src="https://hex.moddable.games/generate/?game=nukes&boardonly=1&size=3&seed=portfolio-demo&bg=0B0F1A" scrolling="no" loading="lazy"></iframe>
           </div>
           <p class="demo-caption">Nukes Hexmap — seeded procedural generation</p>
         </div>
@@ -106,5 +104,6 @@
 
 <div id="footer-root"></div>
 <script src="../../js/sm-loader.js?v=1.0.11"></script>
+<script src="../../js/sm-chess-embed.js?v=1.0.11"></script>
 </body>
 </html>

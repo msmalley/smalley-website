@@ -13,8 +13,7 @@
         SM.el('div', { class: 'sm-footer-label' }, 'Links'),
         SM.el('a', { href: 'https://github.com/msmalley', target: '_blank', rel: 'noopener' }, 'GitHub'),
         SM.el('a', { href: 'https://linkedin.com/in/msmalley', target: '_blank', rel: 'noopener' }, 'LinkedIn'),
-        SM.el('a', { href: 'https://x.com/m_smalley', target: '_blank', rel: 'noopener' }, 'X / Twitter'),
-        SM.el('a', { href: SM.url('/feed.xml'), class: 'sm-footer-rss' }, '◉ RSS Feed')
+        SM.el('a', { href: 'https://x.com/m_smalley', target: '_blank', rel: 'noopener' }, 'X / Twitter')
       ),
       SM.el('div', { class: 'sm-footer-col' },
         SM.el('div', { class: 'sm-footer-label' }, 'Projects'),

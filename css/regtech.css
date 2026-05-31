@@ -68,8 +68,8 @@
   margin-bottom: 12px;
 }
 
-.milestone-list {
-  max-width: 720px;
+.milestone-wrapper {
+  max-width: 600px;
   margin: 0 auto;
 }
 .milestone {

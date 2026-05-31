@@ -231,7 +231,18 @@
 }
 
 @media (max-width: 768px) {
-  .numbers-grid { grid-template-columns: repeat(2, 1fr); }
+  .process-hero,
+  .process-numbers,
+  .process-what,
+  .process-how,
+  .process-philosophy,
+  .process-demo,
+  .process-evidence { padding: 48px 0; }
+  .process-hero { padding-top: 100px; text-align: center; }
+  .process-hero-tagline { margin: 0 auto; }
+  .process-intro { text-align: center; margin: 0 auto 32px; }
+  .numbers-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .number-value { font-size: 32px; }
   .ecosystem-grid { grid-template-columns: 1fr; }
   .principles-grid { grid-template-columns: 1fr; }
   .evidence-grid { grid-template-columns: 1fr; }

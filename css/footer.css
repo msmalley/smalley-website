@@ -54,6 +54,8 @@
 }
 
 @media (max-width: 768px) {
-  .sm-footer-inner { grid-template-columns: 1fr; gap: 32px; }
-  .sm-footer-col:last-child { text-align: left; align-items: flex-start; }
+  .sm-footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; text-align: center; }
+  .sm-footer-col { align-items: center; }
+  .sm-footer-col:last-child { text-align: center; align-items: center; }
+  .sm-footer-bottom { justify-content: center; gap: 16px; }
 }

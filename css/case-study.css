@@ -56,7 +56,7 @@
 }
 @media (max-width: 768px) {
   .case-hero[data-bg] {
-    min-height: 65vh;
+    min-height: 55vh;
   }
   .case-hero-bg {
     top: -15%;
@@ -64,6 +64,8 @@
     right: -5%;
     bottom: -15%;
   }
+  .case-hero[data-bg] .container { text-align: center; }
+  .case-meta { justify-content: center; }
   .page-content > .container {
     grid-template-columns: 1fr;
     gap: 0;
@@ -72,7 +74,9 @@
     position: static;
     padding: 0 0 40px;
   }
+  .case-content { padding: 40px 0; }
   .demo-embed-row { grid-template-columns: 1fr; }
+  .demo-embed { padding: 12px; }
 }
 .case-hero-eyebrow {
   font-family: var(--f-mono);

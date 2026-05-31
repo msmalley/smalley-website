@@ -357,9 +357,15 @@ a.timeline-item:hover {
 }
 
 @media (max-width: 768px) {
+  .page-hero { padding: 100px 0 40px; text-align: center; }
+  .page-hero-desc { margin: 0 auto; }
+  .page-content { padding: 40px 0; }
+  .cv-intro { text-align: center; margin-top: -12px; }
   .project-grid { grid-template-columns: 1fr; }
   .tools-grid { grid-template-columns: 1fr; }
   .oss-grid { grid-template-columns: 1fr; }
+  .speaking-grid { grid-template-columns: 1fr; }
   .talk-item { grid-template-columns: 1fr; gap: 4px; }
   .tool-stats { gap: 20px; flex-wrap: wrap; }
+  .timeline-list { padding-left: 24px; }
 }

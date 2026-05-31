@@ -201,8 +201,17 @@
 }
 
 @media (max-width: 768px) {
-  .hero { padding: 100px 0 60px; }
-  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
-  .live-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero { padding: 100px 0 60px; text-align: center; }
+  .hero-content { margin: 0 auto; }
+  .hero-ctas { justify-content: center; }
+  .hero-badge { margin-left: auto; margin-right: auto; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .stat-value { font-size: 24px; }
+  .intro-section { padding: 48px 0; }
+  .intro-text { padding: 0 16px; }
+  .live-activity { padding: 40px 0; }
+  .live-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .live-value { font-size: 22px; }
+  .featured-section { padding: 48px 0; }
   .featured-grid { grid-template-columns: 1fr; }
 }

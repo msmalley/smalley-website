@@ -135,7 +135,14 @@
 }
 
 @media (max-width: 768px) {
+  .regtech-hero { padding: 100px 0 40px; text-align: center; }
+  .regtech-hero-tagline { margin: 0 auto; }
+  .regtech-credentials,
+  .regtech-timeline,
+  .regtech-bridge,
+  .regtech-cta { padding: 48px 0; }
   .credentials-grid { grid-template-columns: 1fr; }
   .bridge-grid { grid-template-columns: 1fr; }
+  .bridge-content > p { text-align: center; margin: 0 auto 32px; }
   .milestone { grid-template-columns: 1fr; gap: 4px; }
 }

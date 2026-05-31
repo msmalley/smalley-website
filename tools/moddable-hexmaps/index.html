@@ -12,13 +12,13 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://smalley.my/tools/moddable-hexmaps/">
 <meta property="og:site_name" content="Mark Smalley">
-<meta property="og:image" content="https://smalley.my/img/tools/hexmaps-hexed.png?v=1.0.14">
+<meta property="og:image" content="https://smalley.my/img/tools/hexmaps-hexed.png?v=1.0.15">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Moddable Hexmaps — Mark Smalley">
 <meta name="twitter:description" content="Hex map framework with seeded procedural generation, multiple render styles, and full URL parameter API for embedding.">
-<meta name="twitter:image" content="https://smalley.my/img/tools/hexmaps-hexed.png?v=1.0.14">
-<link rel="stylesheet" href="../../css/_sm.css?v=1.0.14">
-<link rel="stylesheet" href="../../css/case-study.css?v=1.0.14">
+<meta name="twitter:image" content="https://smalley.my/img/tools/hexmaps-hexed.png?v=1.0.15">
+<link rel="stylesheet" href="../../css/_sm.css?v=1.0.15">
+<link rel="stylesheet" href="../../css/case-study.css?v=1.0.15">
 </head>
 <body>
 <div id="nav-root"></div>
@@ -54,11 +54,9 @@
       </ul>
 
       <h2>Try It</h2>
-      <p>A procedurally generated Nukes map below. Same seed always produces the same map — refresh and it persists. Click any hex to cycle its terrain.</p>
-      <div class="demo-embed demo-embed-wide">
-        <iframe src="https://hex.moddable.games/generate/?game=nukes&boardonly=1&size=4&seed=smalley-demo&bg=0B0F1A" scrolling="no" loading="lazy" class="hex-embed"></iframe>
-      </div>
-      <p class="demo-caption">Live embed of the Hexmap Framework — Nukes theme, seed "smalley-demo", 4 rings</p>
+      <p>A procedurally generated map below. Switch games and styles, or click any hex to cycle its terrain.</p>
+      <div class="demo-embed demo-embed-wide" id="hex-demo-tools"></div>
+      <p class="demo-caption">Live embed — same seed always produces the same map</p>
 
       <h2>URL Parameter API</h2>
       <p>Every aspect of the map is controllable via URL parameters, making it trivially embeddable:</p>
@@ -99,6 +97,7 @@
 </section>
 
 <div id="footer-root"></div>
-<script src="../../js/sm-loader.js?v=1.0.14"></script>
+<script src="../../js/sm-loader.js?v=1.0.15"></script>
+<script src="../../js/sm-hex-embed.js?v=1.0.15"></script>
 </body>
 </html>

@@ -12,6 +12,7 @@
   }
   var modules = [
     'sm-core.js',
+    'sm-theme.js',
     'sm-navbar.js',
     'sm-footer.js',
     'sm-animations.js',

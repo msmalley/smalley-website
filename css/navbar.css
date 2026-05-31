@@ -57,6 +57,31 @@
   color: var(--sm-text);
   background: var(--sm-surface-alt);
 }
+.sm-theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: none;
+  background: none;
+  color: var(--sm-muted);
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  margin-left: 4px;
+}
+.sm-theme-toggle:hover {
+  color: var(--sm-gold-glow);
+  background: var(--sm-surface);
+  transform: rotate(-20deg);
+}
+.sm-theme-toggle svg { display: block; }
+[data-theme="dark"] .sm-theme-sun { display: block; }
+[data-theme="dark"] .sm-theme-moon { display: none; }
+[data-theme="light"] .sm-theme-sun { display: none; }
+[data-theme="light"] .sm-theme-moon { display: block; }
+
 .sm-nav-rss {
   display: flex;
   align-items: center;

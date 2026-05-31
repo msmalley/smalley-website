@@ -1,10 +1,13 @@
 (function() {
-  var hero = document.querySelector('.hero-bg');
-  if (!hero) return;
+  var heroSection = document.querySelector('.hero');
+  var heroBg = document.querySelector('.hero-bg');
+  if (!heroSection || !heroBg) return;
 
   var canvas = document.createElement('canvas');
-  canvas.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;opacity:0.4;';
-  hero.appendChild(canvas);
+  canvas.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;opacity:0.4;pointer-events:none;';
+  heroBg.appendChild(canvas);
+
+  var hero = heroSection;
 
   var ctx = canvas.getContext('2d');
   var cols, rows, cellSize = 48;
@@ -13,8 +16,8 @@
   var raf;
 
   function resize() {
-    canvas.width = hero.offsetWidth;
-    canvas.height = hero.offsetHeight;
+    canvas.width = heroSection.offsetWidth;
+    canvas.height = heroSection.offsetHeight;
     cols = Math.ceil(canvas.width / cellSize) + 1;
     rows = Math.ceil(canvas.height / cellSize) + 1;
     nodes = [];
@@ -88,13 +91,13 @@
     raf = requestAnimationFrame(draw);
   }
 
-  hero.addEventListener('mousemove', function(e) {
-    var rect = hero.getBoundingClientRect();
+  heroSection.addEventListener('mousemove', function(e) {
+    var rect = heroSection.getBoundingClientRect();
     mouse.x = e.clientX - rect.left;
     mouse.y = e.clientY - rect.top;
   });
 
-  hero.addEventListener('mouseleave', function() {
+  heroSection.addEventListener('mouseleave', function() {
     mouse.x = -1000;
     mouse.y = -1000;
   });
@@ -114,5 +117,5 @@
       raf = null;
     }
   });
-  scrollObs.observe(hero.parentElement);
+  scrollObs.observe(heroSection);
 })();

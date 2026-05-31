@@ -74,9 +74,13 @@
             stats.appendChild(SM.el('span', { class: 'tool-card-stat', 'data-accent': o.accent }, o.stats[s].value + ' ' + o.stats[s].label));
           }
         }
-        var tag = o.slug ? 'a' : 'div';
+        var href = o.slug ? SM.url('/open-source/' + o.slug + '/') : (o.demo || o.repo || null);
+        var tag = href ? 'a' : 'div';
         var attrs = { class: 'project-card reveal' };
-        if (o.slug) attrs.href = SM.url('/open-source/' + o.slug + '/');
+        if (href) {
+          attrs.href = href;
+          if (!o.slug) { attrs.target = '_blank'; attrs.rel = 'noopener'; }
+        }
         var card = SM.el(tag, attrs,
           SM.el('div', { class: 'card' },
             SM.el('div', { class: 'oss-card-header' },

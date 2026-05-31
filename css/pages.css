@@ -368,5 +368,7 @@ a.timeline-item:hover {
   .speaking-grid { grid-template-columns: 1fr; }
   .talk-item { grid-template-columns: 1fr; gap: 4px; }
   .tool-stats { gap: 20px; flex-wrap: wrap; }
-  .timeline-list { padding-left: 24px; }
+  .timeline-list { padding-left: 0; }
+  .timeline-list::before { display: none; }
+  .timeline-item::before { display: none; }
 }

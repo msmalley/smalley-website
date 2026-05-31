@@ -230,8 +230,8 @@ a.eco-card {
   border: none;
 }
 .demo-embed iframe.hex-embed {
-  aspect-ratio: 1 / 1;
   min-height: 0;
+  height: 100%;
   background: #0b0f1a;
 }
 .demo-caption {
@@ -244,9 +244,20 @@ a.eco-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+  align-items: stretch;
+}
+.demo-embed-col {
+  display: flex;
+  flex-direction: column;
 }
 .demo-embed-col .demo-embed {
-  margin: 0 0 8px;
+  margin: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.demo-embed-col .demo-caption {
+  margin-top: 8px;
 }
 
 @media (max-width: 768px) {

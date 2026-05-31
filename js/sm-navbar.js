@@ -18,7 +18,7 @@
   var currentPath = location.pathname.replace(SM.BASE, '');
 
   var inner = SM.el('div', { class: 'sm-nav-inner' },
-    SM.el('a', { class: 'sm-nav-brand', href: SM.url('/') }, 'Mark Smalley'),
+    SM.el('a', { class: 'sm-nav-brand', href: SM.url('/'), html: 'Mark<span class="sm-nav-hide"> Smalley</span>' }),
     SM.el('button', { class: 'sm-nav-toggle', 'aria-label': 'Menu', onClick: toggleMenu }, SM.el('span', { class: 'sm-nav-hamburger' }))
   );
 

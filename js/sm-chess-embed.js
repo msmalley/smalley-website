@@ -19,6 +19,7 @@
 
   containers.forEach(function(container) {
     var currentIdx = 0;
+    var iframe = null;
 
     var controls = document.createElement('div');
     controls.className = 'demo-controls';
@@ -32,7 +33,7 @@
     }
     select.addEventListener('change', function() {
       currentIdx = parseInt(this.value, 10);
-      buildIframe();
+      switchVariant();
     });
     controls.appendChild(select);
 
@@ -47,11 +48,8 @@
 
     function buildIframe() {
       var v = VARIANTS[currentIdx];
-      var existing = container.querySelector('iframe');
-      if (existing) existing.remove();
-
-      var iframe = document.createElement('iframe');
-      iframe.src = BASE + '?variant=' + v.key + '&embed=1&boardonly=1&mode=solo&theme=cosmic&bg=' + BG + '&radius=8px';
+      iframe = document.createElement('iframe');
+      iframe.src = BASE + '?variant=' + v.key + '&embed=1&boardonly=1&mode=solo&theme=transparent&bg=' + BG + '&radius=8px';
       iframe.setAttribute('scrolling', 'no');
       iframe.setAttribute('loading', 'lazy');
       iframe.style.aspectRatio = '1 / 1';
@@ -60,9 +58,16 @@
       iframe.style.borderRadius = '8px';
       iframe.style.display = 'block';
       iframe.style.background = '#' + BG;
-
       container.appendChild(iframe);
       descEl.textContent = v.desc;
+    }
+
+    function switchVariant() {
+      var v = VARIANTS[currentIdx];
+      descEl.textContent = v.desc;
+      if (iframe && iframe.contentWindow) {
+        iframe.contentWindow.postMessage({ type: 'chess:setVariant', variant: v.key }, '*');
+      }
     }
 
     buildIframe();

@@ -100,6 +100,10 @@
 .sm-nav-hamburger::before { top: -6px; }
 .sm-nav-hamburger::after { top: 6px; }
 
+@media (max-width: 1100px) {
+  .sm-nav-hide { display: none; }
+}
+
 @media (max-width: 768px) {
   .sm-nav-toggle { display: block; }
   .sm-nav-links {

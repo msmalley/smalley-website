@@ -5,10 +5,10 @@
   var links = [
     { label: 'Portfolio', href: '/portfolio/' },
     { label: 'CVs', href: '/cvs/' },
-    { label: 'How I Build', href: '/process/' },
+    { label: 'How I Build', shortLabel: 'How', href: '/process/' },
     { label: 'RegTech', href: '/regtech/' },
     { label: 'Speaking', href: '/speaking/' },
-    { label: 'Open Source', href: '/open-source/' },
+    { label: 'Open Source', shortLabel: 'Open', href: '/open-source/' },
     { label: 'Tools', href: '/tools/' },
     { label: 'Thoughts', href: '/thoughts/' },
     { label: 'Timeline', href: '/timeline/' },
@@ -26,7 +26,13 @@
   for (var i = 0; i < links.length; i++) {
     var l = links[i];
     var isActive = currentPath.startsWith(l.href) ? ' active' : '';
-    linkList.appendChild(SM.el('a', { class: 'sm-nav-link' + isActive, href: SM.url(l.href) }, l.label));
+    if (l.shortLabel) {
+      var a = SM.el('a', { class: 'sm-nav-link' + isActive, href: SM.url(l.href) });
+      a.innerHTML = l.shortLabel + '<span class="sm-nav-hide">' + l.label.slice(l.shortLabel.length) + '</span>';
+      linkList.appendChild(a);
+    } else {
+      linkList.appendChild(SM.el('a', { class: 'sm-nav-link' + isActive, href: SM.url(l.href) }, l.label));
+    }
   }
   inner.appendChild(linkList);
 

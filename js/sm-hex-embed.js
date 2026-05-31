@@ -41,7 +41,9 @@
       currentLayout = game.defaultLayout || null;
       buildStyleSelect();
       buildSizeSelect();
-      buildIframe();
+      if (iframe && iframe.contentWindow) {
+        iframe.contentWindow.postMessage({ type: 'hexmap:setGame', game: game.key, style: game.styles[0] }, '*');
+      }
     });
     controls.appendChild(gameSelect);
 

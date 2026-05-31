@@ -121,6 +121,7 @@ a.eco-card {
 
 .workflow-steps {
   max-width: 720px;
+  margin: 0 auto;
 }
 .workflow-step {
   display: flex;

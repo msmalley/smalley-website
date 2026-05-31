@@ -76,7 +76,6 @@
   }
   .case-content { padding: 40px 0; }
   .demo-embed-row { grid-template-columns: 1fr; }
-  .demo-embed { padding: 12px; }
 }
 .case-hero-eyebrow {
   font-family: var(--f-mono);
@@ -327,9 +326,7 @@ a.pill:hover {
   margin: 24px 0;
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid var(--sm-border);
   background: var(--sm-deep);
-  padding: 20px;
 }
 .demo-embed iframe {
   display: block;

@@ -43,10 +43,10 @@
         var dy = mouse.y - n.y;
         var dist = Math.sqrt(dx * dx + dy * dy);
 
-        if (dist < 220) {
-          var force = (1 - dist / 220) * 12;
-          n.vx -= (dx / dist) * force * 0.02;
-          n.vy -= (dy / dist) * force * 0.02;
+        if (dist < 300) {
+          var force = (1 - dist / 300) * 40;
+          n.vx -= (dx / dist) * force * 0.04;
+          n.vy -= (dy / dist) * force * 0.04;
         }
 
         n.vx += (n.baseX - n.x) * 0.04;

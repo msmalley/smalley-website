@@ -76,6 +76,16 @@
   position: relative;
   z-index: 1;
 }
+@media (max-width: 960px) {
+  .page-content > .container {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .case-sidebar {
+    position: static;
+    padding: 0 0 40px;
+  }
+}
 @media (max-width: 768px) {
   .case-hero[data-bg] {
     min-height: 55vh;
@@ -88,14 +98,6 @@
   }
   .case-hero[data-bg] .container { text-align: center; }
   .case-meta { justify-content: center; }
-  .page-content > .container {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-  .case-sidebar {
-    position: static;
-    padding: 0 0 40px;
-  }
   .case-content { padding: 40px 0; }
   .demo-embed-row { grid-template-columns: 1fr; }
 }

@@ -44,6 +44,25 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 
 ## Changelog
 
+#### 2026-05-31
+- Design elevation: staggered animations, hexagonal hero canvas, typography scale, micro-interactions, noise texture
+- Dark/light theme toggle with animated transition (persists to localStorage)
+- Social sharing buttons on article sidebar (X, Facebook, LinkedIn, Copy)
+- Font swap: Syne → Space Grotesk for display headings
+- Nav responsiveness: truncated labels below 1100px, RSS icon, theme toggle
+- Mobile pass: centred footer, heroes, stats; sidebar collapses at 1100px
+- Interactive hexagonal grid in homepage hero (mouse-reactive, teal nodes)
+- Primary CTA shimmer animation, secondary button teal border hover
+- Animated link underlines site-wide (slide from left)
+- RegTech article drafted with Malaysia vs Singapore regulatory comparison
+- Ecosystem cards on /process/ now clickable, workflow section centred
+- RegTech credential cards now full clickable links, milestones centred
+- Open source cards link to sub-pages, demos, or repos
+- Hexmap embed fixes (awaiting moddable-hexmaps#33 for bg colour)
+- Timeline dots hidden on mobile to prevent clipping
+- Stats grid orphan item spans full width on mobile
+- Version: 1.0.13
+
 #### 2026-05-29
 - Added /regtech/ credibility page consolidating all regulatory expertise with CV callout
 - Added /process/ page: "How I Build" — AI-augmented engineering process with live stats and demos

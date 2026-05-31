@@ -66,11 +66,22 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
+a.eco-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
 .eco-card {
   background: var(--sm-surface);
   border: 1px solid var(--sm-border);
   border-radius: 12px;
   padding: 28px;
+  transition: border-color 0.3s, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s;
+}
+.eco-card:hover {
+  border-color: rgba(34, 211, 238, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(14, 116, 144, 0.08);
 }
 .eco-icon {
   width: 8px;

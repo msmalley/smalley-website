@@ -119,9 +119,11 @@ a.eco-card {
   letter-spacing: 0.5px;
 }
 
-.workflow-steps {
+.workflow-wrapper {
   max-width: 720px;
   margin: 0 auto;
+}
+.workflow-steps {
 }
 .workflow-step {
   display: flex;

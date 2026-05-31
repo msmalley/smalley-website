@@ -17,9 +17,9 @@
       ),
       SM.el('div', { class: 'sm-footer-col' },
         SM.el('div', { class: 'sm-footer-label' }, 'Projects'),
-        SM.el('a', { href: 'https://moddable.games', target: '_blank', rel: 'noopener' }, 'Moddable Games'),
-        SM.el('a', { href: 'https://chess.moddable.games', target: '_blank', rel: 'noopener' }, 'Moddable Chess'),
-        SM.el('a', { href: 'https://rules.moddable.games', target: '_blank', rel: 'noopener' }, 'Moddable Rules')
+        SM.el('a', { href: 'https://moddable.games', target: '_blank', rel: 'noopener' }, 'Games'),
+        SM.el('a', { href: 'https://chess.moddable.games', target: '_blank', rel: 'noopener' }, 'Chess'),
+        SM.el('a', { href: 'https://hex.moddable.games', target: '_blank', rel: 'noopener' }, 'Maps')
       )
     ),
     SM.el('div', { class: 'sm-footer-bottom' },

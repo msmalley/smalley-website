@@ -137,7 +137,17 @@
   margin-bottom: 20px;
 }
 .article-content p strong { color: var(--sm-text); }
-.article-content a { text-decoration: underline; text-underline-offset: 3px; }
+.article-content a {
+  text-decoration: none;
+  background-image: linear-gradient(var(--sm-teal-glow), var(--sm-teal-glow));
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s;
+}
+.article-content a:hover {
+  background-size: 100% 1px;
+}
 .article-content ul {
   list-style: none;
   padding: 0;

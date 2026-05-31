@@ -35,6 +35,7 @@
   color: var(--sm-muted);
   text-decoration: none;
   transition: color 0.15s;
+  width: fit-content;
 }
 .sm-footer-col a:hover { color: var(--sm-teal-glow); }
 .sm-footer-bottom {

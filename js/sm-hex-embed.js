@@ -14,7 +14,6 @@
     : 'https://hex.moddable.games/generate/';
 
   var BG = '0B0F1A';
-  var seedCounter = 0;
 
   containers.forEach(function(container) {
     var currentGameIdx = 0;
@@ -79,10 +78,8 @@
     randomBtn.textContent = 'Randomise';
     randomBtn.className = 'demo-btn';
     randomBtn.addEventListener('click', function() {
-      seedCounter++;
-      var seed = 'demo-' + Date.now() + '-' + seedCounter;
       if (iframe && iframe.contentWindow) {
-        iframe.contentWindow.postMessage({ type: 'hexmap:regenerate', seed: seed }, '*');
+        iframe.contentWindow.postMessage({ type: 'hexmap:regenerate', random: true }, '*');
       }
     });
     controls.appendChild(randomBtn);
@@ -140,7 +137,7 @@
       var existing = container.querySelector('iframe');
       if (existing) existing.remove();
 
-      var src = BASE + '?game=' + game.key + '&boardonly=1&bg=' + BG + '&style=' + style + '&seed=smalley-demo';
+      var src = BASE + '?game=' + game.key + '&boardonly=1&bg=' + BG + '&style=' + style + '&random=1';
       if (game.layouts) {
         src += '&layout=' + (currentLayout || game.defaultLayout);
       } else {

@@ -11,6 +11,16 @@
     { key: 'racingKings', label: 'Racing Kings', desc: 'Race your king to rank 8 — no checks allowed' }
   ];
 
+  var THEMES = [
+    { key: 'transparent', label: 'Transparent' },
+    { key: 'cosmic', label: 'Cosmic Dark' },
+    { key: 'classic', label: 'Classic' },
+    { key: 'wood', label: 'Wood' },
+    { key: 'marble', label: 'Marble' },
+    { key: 'neon', label: 'Neon' },
+    { key: 'minimal', label: 'Minimal' }
+  ];
+
   var BASE = location.hostname === 'localhost'
     ? '/MODDABLE/moddable-chess/play/'
     : 'https://chess.moddable.games/play/';
@@ -19,6 +29,7 @@
 
   containers.forEach(function(container) {
     var currentIdx = 0;
+    var currentThemeIdx = 0;
     var iframe = null;
 
     var controls = document.createElement('div');
@@ -37,6 +48,29 @@
     });
     controls.appendChild(select);
 
+    var themeSelect = document.createElement('select');
+    for (var i = 0; i < THEMES.length; i++) {
+      var opt = document.createElement('option');
+      opt.value = i;
+      opt.textContent = THEMES[i].label;
+      themeSelect.appendChild(opt);
+    }
+    themeSelect.addEventListener('change', function() {
+      currentThemeIdx = parseInt(this.value, 10);
+      switchTheme();
+    });
+    controls.appendChild(themeSelect);
+
+    var newGameBtn = document.createElement('button');
+    newGameBtn.textContent = 'New Game';
+    newGameBtn.className = 'demo-btn';
+    newGameBtn.addEventListener('click', function() {
+      if (iframe && iframe.contentWindow) {
+        iframe.contentWindow.postMessage({ type: 'chess:newGame' }, '*');
+      }
+    });
+    controls.appendChild(newGameBtn);
+
     var descEl = document.createElement('span');
     descEl.className = 'demo-caption';
     descEl.style.margin = '0';
@@ -48,8 +82,9 @@
 
     function buildIframe() {
       var v = VARIANTS[currentIdx];
+      var t = THEMES[currentThemeIdx];
       iframe = document.createElement('iframe');
-      iframe.src = BASE + '?variant=' + v.key + '&embed=1&boardonly=1&mode=solo&theme=transparent&bg=' + BG + '&radius=8px';
+      iframe.src = BASE + '?variant=' + v.key + '&embed=1&boardonly=1&mode=solo&theme=' + t.key + '&bg=' + BG + '&radius=8px';
       iframe.setAttribute('scrolling', 'no');
       iframe.setAttribute('loading', 'lazy');
       iframe.style.aspectRatio = '1 / 1';
@@ -67,6 +102,13 @@
       descEl.textContent = v.desc;
       if (iframe && iframe.contentWindow) {
         iframe.contentWindow.postMessage({ type: 'chess:setVariant', variant: v.key }, '*');
+      }
+    }
+
+    function switchTheme() {
+      var t = THEMES[currentThemeIdx];
+      if (iframe && iframe.contentWindow) {
+        iframe.contentWindow.postMessage({ type: 'chess:setTheme', theme: t.key }, '*');
       }
     }
 

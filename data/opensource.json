@@ -84,6 +84,7 @@
     "title": "BackPress",
     "tagline": "Standalone library extracted from WordPress core",
     "role": "Core contributor",
+    "demo": "https://backpress.org/projects-using-backpress/",
     "description": "Contributed to Automattic's BackPress framework — a standalone library extracted from WordPress core providing authentication, taxonomy, and option handling without the full WordPress stack.",
     "stats": [
       { "value": "Automattic", "label": "organisation" },

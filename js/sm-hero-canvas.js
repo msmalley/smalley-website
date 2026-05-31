@@ -9,29 +9,40 @@
     heroBg.appendChild(canvas);
 
     var ctx = canvas.getContext('2d');
-    var cellSize = 52;
-    var cols, rows, nodes = [];
+    var hexSize = 28;
+    var nodes = [];
     var mouse = { x: -1000, y: -1000 };
     var raf = null;
 
     function resize() {
       canvas.width = heroSection.offsetWidth;
       canvas.height = heroSection.offsetHeight;
-      cols = Math.ceil(canvas.width / cellSize) + 1;
-      rows = Math.ceil(canvas.height / cellSize) + 1;
       nodes = [];
-      for (var r = 0; r < rows; r++) {
-        for (var c = 0; c < cols; c++) {
-          nodes.push({
-            x: c * cellSize,
-            y: r * cellSize,
-            baseX: c * cellSize,
-            baseY: r * cellSize,
-            vx: 0,
-            vy: 0
-          });
+
+      var w = Math.sqrt(3) * hexSize;
+      var h = hexSize * 1.5;
+      var cols = Math.ceil(canvas.width / w) + 2;
+      var rows = Math.ceil(canvas.height / h) + 2;
+
+      for (var r = -1; r < rows; r++) {
+        for (var c = -1; c < cols; c++) {
+          var x = c * w + (r % 2 === 0 ? 0 : w * 0.5);
+          var y = r * h;
+          nodes.push({ x: x, y: y, baseX: x, baseY: y, vx: 0, vy: 0 });
         }
       }
+    }
+
+    function hexPath(cx, cy, size) {
+      ctx.beginPath();
+      for (var i = 0; i < 6; i++) {
+        var angle = Math.PI / 3 * i - Math.PI / 6;
+        var hx = cx + size * Math.cos(angle);
+        var hy = cy + size * Math.sin(angle);
+        if (i === 0) ctx.moveTo(hx, hy);
+        else ctx.lineTo(hx, hy);
+      }
+      ctx.closePath();
     }
 
     function draw() {
@@ -57,30 +68,15 @@
         n.y += n.vy;
       }
 
-      ctx.strokeStyle = 'rgba(14, 116, 144, 0.25)';
+      ctx.strokeStyle = 'rgba(14, 116, 144, 0.2)';
       ctx.lineWidth = 0.5;
 
-      for (var r = 0; r < rows; r++) {
-        for (var c = 0; c < cols; c++) {
-          var idx = r * cols + c;
-          var n = nodes[idx];
-
-          if (c < cols - 1) {
-            ctx.beginPath();
-            ctx.moveTo(n.x, n.y);
-            ctx.lineTo(nodes[idx + 1].x, nodes[idx + 1].y);
-            ctx.stroke();
-          }
-          if (r < rows - 1) {
-            ctx.beginPath();
-            ctx.moveTo(n.x, n.y);
-            ctx.lineTo(nodes[idx + cols].x, nodes[idx + cols].y);
-            ctx.stroke();
-          }
-        }
+      for (var i = 0; i < nodes.length; i++) {
+        hexPath(nodes[i].x, nodes[i].y, hexSize * 0.9);
+        ctx.stroke();
       }
 
-      ctx.fillStyle = 'rgba(34, 211, 238, 0.45)';
+      ctx.fillStyle = 'rgba(34, 211, 238, 0.4)';
       for (var i = 0; i < nodes.length; i++) {
         ctx.beginPath();
         ctx.arc(nodes[i].x, nodes[i].y, 2, 0, Math.PI * 2);

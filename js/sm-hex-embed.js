@@ -3,10 +3,10 @@
   if (!containers.length) return;
 
   var GAMES = [
-    { key: 'nukes', label: 'Nukes', desc: 'Area control — capture territory across volcanic terrain', styles: ['artistic', 'classic', 'kenney', 'realistic'] },
-    { key: 'talisman', label: 'Talisman', desc: '5-ring fantasy adventure map', styles: ['artistic', 'classic'] },
-    { key: 'twilight', label: 'Twilight', desc: 'Galactic strategy — planetary systems and anomalies', styles: ['artistic', 'classic'] },
-    { key: 'colony', label: 'Colony', desc: 'Resource management — settlements, ports, and trade routes', styles: ['classic', 'kenney', 'realistic'] }
+    { key: 'nukes', label: 'Nukes', desc: 'Area control — capture territory across volcanic terrain', styles: ['artistic', 'classic', 'kenney', 'realistic'], sizes: [2, 3, 4, 5, 6], defaultSize: 4 },
+    { key: 'talisman', label: 'Talisman', desc: '5-ring fantasy adventure map', styles: ['artistic', 'classic'], sizes: [3, 4, 5], defaultSize: 3 },
+    { key: 'twilight', label: 'Twilight', desc: 'Galactic strategy — planetary systems and anomalies', styles: ['artistic', 'classic'], layouts: ['3p', '4p', '5p', '6p', '7p', '8p', '8p-pok'], defaultLayout: '6p' },
+    { key: 'colony', label: 'Colony', desc: 'Resource management — settlements, ports, and trade routes', styles: ['classic', 'kenney', 'realistic'], sizes: [3, 4], defaultSize: 3 }
   ];
 
   var BASE = location.hostname === 'localhost'
@@ -14,10 +14,13 @@
     : 'https://hex.moddable.games/generate/';
 
   var BG = '0B0F1A';
+  var seedCounter = 0;
 
   containers.forEach(function(container) {
     var currentGameIdx = 0;
     var currentStyleIdx = 0;
+    var currentSize = GAMES[0].defaultSize;
+    var currentLayout = null;
     var iframe = null;
 
     var controls = document.createElement('div');
@@ -33,7 +36,11 @@
     gameSelect.addEventListener('change', function() {
       currentGameIdx = parseInt(this.value, 10);
       currentStyleIdx = 0;
+      var game = GAMES[currentGameIdx];
+      currentSize = game.defaultSize || null;
+      currentLayout = game.defaultLayout || null;
       buildStyleSelect();
+      buildSizeSelect();
       buildIframe();
     });
     controls.appendChild(gameSelect);
@@ -48,6 +55,35 @@
       updateDesc();
     });
     controls.appendChild(styleSelect);
+
+    var sizeSelect = document.createElement('select');
+    sizeSelect.addEventListener('change', function() {
+      var game = GAMES[currentGameIdx];
+      if (game.layouts) {
+        currentLayout = this.value;
+        if (iframe && iframe.contentWindow) {
+          iframe.contentWindow.postMessage({ type: 'hexmap:regenerate', layout: currentLayout }, '*');
+        }
+      } else {
+        currentSize = parseInt(this.value, 10);
+        if (iframe && iframe.contentWindow) {
+          iframe.contentWindow.postMessage({ type: 'hexmap:regenerate', size: currentSize }, '*');
+        }
+      }
+    });
+    controls.appendChild(sizeSelect);
+
+    var randomBtn = document.createElement('button');
+    randomBtn.textContent = 'Randomise';
+    randomBtn.className = 'demo-btn';
+    randomBtn.addEventListener('click', function() {
+      seedCounter++;
+      var seed = 'demo-' + Date.now() + '-' + seedCounter;
+      if (iframe && iframe.contentWindow) {
+        iframe.contentWindow.postMessage({ type: 'hexmap:regenerate', seed: seed }, '*');
+      }
+    });
+    controls.appendChild(randomBtn);
 
     var descEl = document.createElement('span');
     descEl.className = 'demo-caption';
@@ -70,6 +106,28 @@
       styleSelect.value = '0';
     }
 
+    function buildSizeSelect() {
+      var game = GAMES[currentGameIdx];
+      sizeSelect.innerHTML = '';
+      if (game.layouts) {
+        for (var i = 0; i < game.layouts.length; i++) {
+          var opt = document.createElement('option');
+          opt.value = game.layouts[i];
+          opt.textContent = game.layouts[i].toUpperCase();
+          sizeSelect.appendChild(opt);
+        }
+        sizeSelect.value = game.defaultLayout;
+      } else if (game.sizes) {
+        for (var i = 0; i < game.sizes.length; i++) {
+          var opt = document.createElement('option');
+          opt.value = game.sizes[i];
+          opt.textContent = game.sizes[i] + ' rings';
+          sizeSelect.appendChild(opt);
+        }
+        sizeSelect.value = game.defaultSize;
+      }
+    }
+
     function updateDesc() {
       descEl.textContent = GAMES[currentGameIdx].desc;
     }
@@ -80,8 +138,15 @@
       var existing = container.querySelector('iframe');
       if (existing) existing.remove();
 
+      var src = BASE + '?game=' + game.key + '&boardonly=1&bg=' + BG + '&style=' + style + '&seed=smalley-demo';
+      if (game.layouts) {
+        src += '&layout=' + (currentLayout || game.defaultLayout);
+      } else {
+        src += '&size=' + (currentSize || game.defaultSize);
+      }
+
       iframe = document.createElement('iframe');
-      iframe.src = BASE + '?game=' + game.key + '&boardonly=1&size=4&seed=smalley-demo&bg=' + BG + '&style=' + style;
+      iframe.src = src;
       iframe.setAttribute('scrolling', 'no');
       iframe.setAttribute('loading', 'lazy');
       iframe.className = 'hex-embed';
@@ -97,6 +162,7 @@
     }
 
     buildStyleSelect();
+    buildSizeSelect();
     buildIframe();
   });
 })();

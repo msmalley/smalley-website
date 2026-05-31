@@ -380,6 +380,21 @@ a.pill:hover {
   color: var(--sm-text);
   cursor: pointer;
 }
+.demo-btn {
+  font-family: var(--f-mono);
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--sm-border);
+  background: transparent;
+  color: var(--sm-text-muted);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+.demo-btn:hover {
+  border-color: var(--sm-teal);
+  color: var(--sm-text);
+}
 .demo-caption {
   font-family: var(--f-mono);
   font-size: 11px;

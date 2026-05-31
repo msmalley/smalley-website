@@ -259,6 +259,37 @@ a.eco-card {
 .demo-embed-col .demo-caption {
   margin-top: 8px;
 }
+.demo-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.demo-controls select {
+  font-family: var(--f-mono);
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--sm-border);
+  background: var(--sm-surface-alt);
+  color: var(--sm-text);
+  cursor: pointer;
+}
+.demo-btn {
+  font-family: var(--f-mono);
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--sm-border);
+  background: transparent;
+  color: var(--sm-text-muted);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+.demo-btn:hover {
+  border-color: var(--sm-teal);
+  color: var(--sm-text);
+}
 
 @media (max-width: 768px) {
   .process-hero,

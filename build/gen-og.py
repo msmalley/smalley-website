@@ -222,6 +222,14 @@ def generate_all():
          'TEDx to Boardrooms', 'Blockchain, compliance, and developer education'),
         ('thoughts.png', 'teal', 'Thoughts',
          'Writing', 'On architecture, blockchain, and building in public'),
+        ('thoughts-vanilla-js.png', 'violet', 'Thoughts',
+         'The Case for Vanilla JS in 2026', '70-variant chess engine, zero frameworks, zero build steps'),
+        ('thoughts-game-engines.png', 'violet', 'Thoughts',
+         'Building Two Open-Source Game Engines (With AI)', '70 chess variants and infinite hex maps'),
+        ('thoughts-regulators.png', 'gold', 'Thoughts',
+         'What Regulators Actually Need from Blockchain Teams', "After 2 years advising Malaysia's Securities Commission"),
+        ('thoughts-ordinals.png', 'teal', 'Thoughts',
+         'The Cardinal Sins of Bitcoin Ordinals', 'What the ecosystem gets wrong about digital artifacts'),
     ]
 
     for entry in pages:

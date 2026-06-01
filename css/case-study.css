@@ -30,12 +30,23 @@
 }
 .case-hero-bg {
   position: absolute;
-  top: -30%;
-  left: -10%;
-  right: -10%;
-  bottom: -30%;
+  inset: 0;
   will-change: transform;
   transition: none;
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 30%, var(--hero-accent, rgba(99, 102, 241, 0.15)) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 80% at 80% 70%, var(--hero-accent-2, rgba(45, 212, 191, 0.1)) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 50% at 50% 50%, rgba(255, 255, 255, 0.02) 0%, transparent 80%);
+}
+.case-hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.4;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+  mix-blend-mode: overlay;
 }
 .case-hero-bg::after {
   content: '';
@@ -43,22 +54,34 @@
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(11, 15, 26, 0.05) 0%,
-    rgba(11, 15, 26, 0.2) 25%,
-    rgba(11, 15, 26, 0.55) 50%,
-    rgba(11, 15, 26, 0.85) 75%,
+    transparent 0%,
+    transparent 50%,
+    rgba(11, 15, 26, 0.6) 75%,
     rgba(11, 15, 26, 1) 100%
   );
 }
 [data-theme="light"] .case-hero-bg::after {
   background: linear-gradient(
     to bottom,
-    rgba(248, 249, 252, 0.05) 0%,
-    rgba(248, 249, 252, 0.2) 25%,
-    rgba(248, 249, 252, 0.55) 50%,
-    rgba(248, 249, 252, 0.85) 75%,
+    transparent 0%,
+    transparent 50%,
+    rgba(248, 249, 252, 0.6) 75%,
     rgba(248, 249, 252, 1) 100%
   );
+}
+
+/* Accent colours per page type */
+.case-hero-bg[data-accent="violet"] {
+  --hero-accent: rgba(139, 92, 246, 0.18);
+  --hero-accent-2: rgba(99, 102, 241, 0.12);
+}
+.case-hero-bg[data-accent="teal"] {
+  --hero-accent: rgba(45, 212, 191, 0.15);
+  --hero-accent-2: rgba(6, 182, 212, 0.1);
+}
+.case-hero-bg[data-accent="gold"] {
+  --hero-accent: rgba(251, 191, 36, 0.12);
+  --hero-accent-2: rgba(245, 158, 11, 0.08);
 }
 .case-hero[data-bg] .container {
   color: #F0F2F5;
@@ -81,10 +104,7 @@
     min-height: 55vh;
   }
   .case-hero-bg {
-    top: -15%;
-    left: -5%;
-    right: -5%;
-    bottom: -15%;
+    inset: 0;
   }
   .case-hero[data-bg] .container { text-align: center; }
   .case-meta { justify-content: center; }

@@ -168,6 +168,9 @@ def generate_all():
         ('og-default.png', 'violet', 'Mark Smalley',
          'Engineering Leader · Protocol Architect · AI-Native Builder',
          'CTO, RegTech, and Developer Relations'),
+        ('404.png', 'violet', '404',
+         "You found the one page I didn't ship",
+         "535 commits and this link still doesn't work"),
 
         # Portfolio pages
         ('portfolio.png', 'teal', 'Portfolio',

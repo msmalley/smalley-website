@@ -21,7 +21,7 @@
     "date": "2025-05-29",
     "readingTime": "6 min",
     "tags": ["AI/LLM", "JavaScript", "Plugin architecture", "Canvas"],
-    "excerpt": "What happens when you point LLM-driven development at the problem of building modular, embeddable game engines from scratch? 64 chess variants and infinite hex maps later, here's what I learned."
+    "excerpt": "What happens when you point LLM-driven development at the problem of building modular, embeddable game engines from scratch? 70 chess variants and infinite hex maps later, here's what I learned."
   },
   {
     "slug": "cardinal-sins-of-bitcoin-ordinals",

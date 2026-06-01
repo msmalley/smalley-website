@@ -7,7 +7,7 @@
     "stats": [
       { "value": "190+", "label": "pages assembled" },
       { "value": "0", "label": "orphaned elements" },
-      { "value": "64", "label": "variant PDFs generated" }
+      { "value": "70", "label": "variant PDFs generated" }
     ],
     "tech": ["JavaScript", "Puppeteer", "DOM measurement", "pdfunite"],
     "repo": "https://github.com/Moddable-Games/moddable-rules",
@@ -17,14 +17,14 @@
   {
     "slug": "moddable-chess-engine",
     "title": "Moddable Chess Engine",
-    "tagline": "64 variants. AI opponent. Embed API. Plugin system.",
-    "description": "A modular chess engine supporting 64 playable variants on boards from 4x8 to 12x8. Zero dependencies, pure JavaScript. Built-in minimax AI with piece evaluation. Embed via iframe with URL parameters. Community can add variants via a single-file plugin without touching engine code.",
+    "tagline": "70 variants. AI with opening books. Embed API. Plugin system.",
+    "description": "A modular chess engine supporting 70 playable variants on boards from 4x8 to 12x8. Zero dependencies, pure JavaScript. Multi-depth AI with iterative deepening, transposition tables, quiescence search, opening books, and variant-aware evaluation. PostMessage embed API. Tiered plugin architecture (Tier 1–3) with developer guides.",
     "stats": [
-      { "value": "64", "label": "playable variants" },
+      { "value": "70", "label": "playable variants" },
       { "value": "0", "label": "dependencies" },
       { "value": "2000+", "label": "documented variants" }
     ],
-    "tech": ["JavaScript", "Canvas", "Minimax AI", "Plugin architecture"],
+    "tech": ["JavaScript", "SVG", "Web Worker AI", "Plugin architecture"],
     "repo": "https://github.com/Moddable-Games/moddable-chess",
     "demo": "https://chess.moddable.games",
     "accent": "violet",

@@ -44,20 +44,20 @@
 
       <img src="../../img/tools/chess-hyper.png" alt="Moddable Chess — Hyper Chess variant">
 
-      <h2>The Chess Engine: 64 Variants, Zero Dependencies</h2>
+      <h2>The Chess Engine: 70 Variants, Zero Dependencies</h2>
 
-      <p>The Moddable Chess Engine supports 64 playable variants on boards from 4x8 to 12x8. It has a built-in minimax AI opponent with piece evaluation. It runs entirely client-side — pure JavaScript, no build step, no dependencies. You can embed it with a single iframe tag.</p>
+      <p>The Moddable Chess Engine supports 70 playable variants on boards from 4x8 to 12x8. It has a multi-depth AI with Web Worker threading, iterative deepening, transposition tables, quiescence search, opening books, and variant-aware evaluation. It runs entirely client-side — pure JavaScript, no build step, no dependencies. You can embed it with a single iframe tag.</p>
 
-      <p>But the interesting part isn't what it does — it's how it's designed to be extended. Every variant is a self-contained plugin file. The engine exposes hooks for custom move generation, victory conditions, board geometry, and piece behaviour. I wrote a "Build a Variant" developer guide that lets someone create a new chess variant without understanding the engine internals.</p>
+      <p>But the interesting part isn't what it does — it's how it's designed to be extended. Every variant is a self-contained plugin file. The engine exposes a tiered hook system (Tier 1: rule overrides, Tier 2: engine extensions, Tier 3: effects, mutations, and action moves). Multiple developer guides walk through each complexity level — from basic rule variants to Crazyhouse-style piece drops to Poison Chess effects.</p>
 
-      <p>This is a DevRel problem as much as an engineering one. The question isn't "can I make the engine support more variants?" — it's "can I make the extension interface so clear that a community member could add one without asking me?" That meant investing heavily in documentation, examples, and a plugin architecture that fails loudly when you get the interface wrong.</p>
+      <p>This is a DevRel problem as much as an engineering one. The question isn't "can I make the engine support more variants?" — it's "can I make the extension interface so clear that a community member could add one without asking me?" That meant investing heavily in documentation, tiered examples, and a plugin architecture that fails loudly when you get the interface wrong.</p>
 
       <ul>
-        <li><strong>64 playable variants</strong> — from Atomic Chess to Zen Chess</li>
-        <li><strong>Embed API</strong> — one iframe, URL parameters control everything</li>
-        <li><strong>Plugin system</strong> — single-file variants with <code>registerVariant()</code></li>
-        <li><strong>AI opponent</strong> — minimax with configurable depth and evaluation</li>
-        <li><strong>Developer guide</strong> — "Build a Variant" documentation for community contributions</li>
+        <li><strong>70 playable variants</strong> — from Atomic Chess to Medusa Chess</li>
+        <li><strong>PostMessage embed API</strong> — control variants and themes without iframe reload</li>
+        <li><strong>Tiered plugin system</strong> — Tier 1/2/3 variants with <code>registerVariant()</code></li>
+        <li><strong>AI with opening books</strong> — Web Worker search, variant-specific evaluators, multiple difficulty levels</li>
+        <li><strong>Developer guides</strong> — Build a Variant, Crazyhouse (Tier 3), Poison Chess (effects)</li>
       </ul>
 
       <img src="../../img/tools/hexmaps-hexed.png" alt="Moddable Hexmaps — procedural hex generation">
@@ -80,7 +80,7 @@
 
       <h2>The AI-Augmented Part</h2>
 
-      <p>Both engines were built using LLM-driven development as the core methodology. Not "AI wrote my code" — but AI as a pair programmer operating at the architecture level. Designing hook systems, catching edge cases across 64 variants, writing documentation that developers can actually follow, identifying which abstractions pay for themselves and which are premature.</p>
+      <p>Both engines were built using LLM-driven development as the core methodology. Not "AI wrote my code" — but AI as a pair programmer operating at the architecture level. Designing hook systems, catching edge cases across 70 variants, writing documentation that developers can actually follow, identifying which abstractions pay for themselves and which are premature.</p>
 
       <p>The velocity difference is real. A solo founder shouldn't be able to ship two engines, four games, nine mods, a tools platform, and a 190-page rulebook pipeline in 16 days. But when your pair programmer has read every programming book ever written and never gets tired, the bottleneck shifts from "can I build this?" to "should I build this?"</p>
 
@@ -91,7 +91,7 @@
       <p>Both engines are live, MIT-licensed, and waiting for someone to build something weird with them.</p>
 
       <ul>
-        <li><a href="https://chess.moddable.games" target="_blank" rel="noopener">chess.moddable.games</a> — play any of the 64 variants right now</li>
+        <li><a href="https://chess.moddable.games" target="_blank" rel="noopener">chess.moddable.games</a> — play any of the 70 variants right now</li>
         <li><a href="https://hex.moddable.games" target="_blank" rel="noopener">hex.moddable.games</a> — generate a map, grab the seed, share the URL</li>
         <li><a href="https://github.com/Moddable-Games" target="_blank" rel="noopener">github.com/Moddable-Games</a> — everything is open source</li>
       </ul>

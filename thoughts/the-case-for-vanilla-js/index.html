@@ -6,7 +6,7 @@
 <meta name="sm-base" content="/personal/smalley-website">
 <meta name="theme-color" content="#0B0F1A">
 <title>The Case for Vanilla JS in 2026 — Mark Smalley</title>
-<meta name="description" content="Six production sites, two game engines, 169 JS modules — zero frameworks, zero build steps, zero dependencies. Here's why the constraint is the feature.">
+<meta name="description" content="Six production sites, a 70-variant chess engine with tiered plugin architecture, 169 JS modules — zero frameworks, zero build steps. Here's why the constraint is the feature.">
 <meta property="og:title" content="The Case for Vanilla JS in 2026 — Mark Smalley">
 <meta property="og:description" content="Six production sites, two game engines, 169 JS modules — zero frameworks, zero build steps, zero dependencies.">
 <meta property="og:type" content="article">
@@ -34,7 +34,7 @@
 <section class="page-content">
   <div class="container">
     <div class="article-content">
-      <div class="article-date">29 May 2026 · 8 min read</div>
+      <div class="article-date">29 May 2026 · 12 min read</div>
 
       <p>Every framework is a bet. You're betting that the abstractions someone else chose will continue to serve your needs, that the community will maintain compatibility with your version, that the build toolchain won't break between now and when you need to ship a critical fix on a Sunday night. Sometimes that bet pays off. But there's a different bet you can make — one where you own the entire surface area, where every abstraction exists because you chose it, and where the only dependency that can break your deployment is the browser itself.</p>
 
@@ -56,9 +56,49 @@
 
       <p>Without a framework making decisions for you, you're forced to make them yourself. And that's where the interesting architecture happens. When there's no component model handed to you, you design one that fits your actual problem. When there's no state management library, you discover that your state is simple enough to not need one — or you build a minimal solution that does exactly what's required and nothing else.</p>
 
-      <p>The Moddable Chess Engine's plugin system emerged from this constraint. Sixty-four chess variants need to coexist in one codebase without any variant knowing about any other. In React, you'd reach for context providers, custom hooks, maybe a state machine library. In vanilla JS, I designed a hook-based registration system — <code>registerVariant(key, config)</code> — where each variant is a single file declaring its rule overrides. The engine's core never changes. Variant #65 takes minutes to add, not hours.</p>
+      <p>The Moddable Chess Engine's plugin system emerged from this constraint. Seventy chess variants need to coexist in one codebase without any variant knowing about any other. In React, you'd reach for context providers, custom hooks, maybe a state machine library. In vanilla JS, I designed a hook-based registration system — <code>registerVariant(key, config)</code> — where each variant is a single file declaring its rule overrides. The engine's core never changes. Variant #71 takes minutes to add, not hours.</p>
 
       <p>That architecture isn't possible in a framework. Or rather — it's possible, but you'd be fighting the framework's opinions the entire time. React wants you to think in components and props. My problem isn't a component tree. It's a behaviour composition system. The framework's abstractions would be overhead, not help.</p>
+
+      <h2>The Plugin Architecture That Proves It</h2>
+
+      <p>Let me go deeper on the chess engine, because it's the strongest evidence I have. 70 variants is not a trivial extension problem. These aren't skins or configuration tweaks — they're fundamentally different games. Atomic Chess explodes pieces in a 3x3 radius on capture. Crazyhouse lets you drop captured pieces back onto the board. Medusa Chess freezes pieces in line of sight. Each requires different move generation, different victory conditions, different board mutations.</p>
+
+      <p>The vanilla JS constraint forced me to design a tiered hook system rather than reaching for a framework's built-in extension model:</p>
+
+      <ul>
+        <li><strong>Tier 1</strong> — rule overrides. A variant declares its board size, piece layout, and simple configuration flags. Standard Chess is 12 lines. Racing Kings adds <code>noCheck: true</code> and a custom victory condition. No engine changes required.</li>
+        <li><strong>Tier 2</strong> — engine extensions. Hooks like <code>moveFilter</code> let variants modify the legal move list. Dice Chess rolls before each turn and restricts which pieces can move. Displacement Chess tracks piece history via <code>pieceData</code>. Small surface area, powerful composition.</li>
+        <li><strong>Tier 3</strong> — effects, mutations, and action moves. <code>beforeMove</code> intercepts captures (Atomic's explosions). <code>afterMove</code> mutates the board post-move (Crazyhouse's piece drops). <code>init</code> sets up variant-specific state (hands, cooldowns, immunities). The engine provides the primitives; the variant composes them.</li>
+      </ul>
+
+      <p>Here's what Standard Chess looks like as a plugin:</p>
+
+      <pre><code>MCE.registerVariant('standard', {
+  label: 'Standard',
+  group: 'Classic',
+  rows: 8, cols: 8,
+  description: 'Classic FIDE chess. Checkmate the opponent\'s king to win.',
+});</code></pre>
+
+      <p>And here's the shape of something like Crazyhouse — a Tier 3 variant with piece drops, hand management, and board mutations:</p>
+
+      <pre><code>MCE.registerVariant('crazyhouse', {
+  label: 'Crazyhouse',
+  rows: 8, cols: 8,
+  init: function(g) { g.hand = { w: [], b: [] }; },
+  moveFilter: function(g, moves) { /* add drop moves */ },
+  afterMove: function(g, move, undo) { /* place from hand, capture to hand */ },
+  undoAfterMove: function(g, move, undo) { /* reverse hand changes */ },
+});</code></pre>
+
+      <p>Every hook is a plain function. No decorators, no lifecycle methods, no dependency injection. The engine calls the hook if it exists, skips it if it doesn't. Variants compose by declaring only the hooks they need. The contract is explicit: you get the game state and an undo object; you mutate the board via <code>MCE.mutateBoard()</code> so the engine can track reversibility. Violate the contract and the engine throws — loudly, with a useful message.</p>
+
+      <p>This is what "owning the full surface area" actually buys you. I didn't have to ask whether React's reconciler would play nicely with board mutations triggered inside a hook callback. I didn't have to work around a framework's state management when a piece drop changes both a hand array and the board simultaneously. I didn't have to fight a virtual DOM that wants to own all rendering when my SVG board renderer needs pixel-level control. Every decision was mine to make, and every decision served the problem rather than the framework.</p>
+
+      <p>The AI system makes the same point differently. A Web Worker running iterative deepening search with transposition tables and quiescence search doesn't map onto any framework's component model. It's a pure computation boundary — the main thread posts a position, the worker posts back a move. In a framework-heavy codebase you'd need escape hatches, refs, and effect cleanup to manage that lifecycle. In vanilla JS it's just <code>worker.postMessage()</code> and an event listener. Eight lines of glue, not eighty.</p>
+
+      <p>The result: 70 variants, five difficulty levels, variant-specific AI evaluators, opening books, and a postMessage embed API — all in ~2000 lines of core engine code with zero dependencies. A framework would have given me an opinions tax on every one of those features. Vanilla JS gave me a blank canvas and let the architecture emerge from the problem.</p>
 
       <h2>The Deployment Tax</h2>
 

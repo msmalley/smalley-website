@@ -21,6 +21,14 @@
     { key: 'minimal', label: 'Minimal' }
   ];
 
+  var DIFFICULTIES = [
+    { key: 'beginner', label: 'Beginner' },
+    { key: 'easy', label: 'Easy' },
+    { key: 'medium', label: 'Medium' },
+    { key: 'hard', label: 'Hard' },
+    { key: 'expert', label: 'Expert' }
+  ];
+
   var BASE = location.hostname === 'localhost'
     ? '/MODDABLE/moddable-chess/play/'
     : 'https://chess.moddable.games/play/';
@@ -60,6 +68,22 @@
       switchTheme();
     });
     controls.appendChild(themeSelect);
+
+    var diffSelect = document.createElement('select');
+    for (var i = 0; i < DIFFICULTIES.length; i++) {
+      var opt = document.createElement('option');
+      opt.value = i;
+      opt.textContent = DIFFICULTIES[i].label;
+      if (DIFFICULTIES[i].key === 'medium') opt.selected = true;
+      diffSelect.appendChild(opt);
+    }
+    diffSelect.addEventListener('change', function() {
+      var d = DIFFICULTIES[parseInt(this.value, 10)];
+      if (iframe && iframe.contentWindow) {
+        iframe.contentWindow.postMessage({ type: 'chess:setDifficulty', difficulty: d.key }, '*');
+      }
+    });
+    controls.appendChild(diffSelect);
 
     var newGameBtn = document.createElement('button');
     newGameBtn.textContent = 'New Game';

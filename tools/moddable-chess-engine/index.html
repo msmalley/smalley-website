@@ -63,12 +63,22 @@
       <p class="demo-caption">Live embed — variant switcher controls the iframe URL, background matched, no scrolling</p>
 
       <h2>Embed API</h2>
-      <p>Any variant can be embedded on any website with a single iframe. URL parameters control everything:</p>
+      <p>Any variant can be embedded on any website with a single iframe. URL parameters handle initial configuration:</p>
       <ul>
         <li><code>?variant=atomic</code> — select the variant</li>
-        <li><code>?ai=black&amp;depth=3</code> — configure AI opponent</li>
-        <li><code>?embed=1</code> — minimal chrome for embedding</li>
-        <li><code>?fen=...</code> — start from a specific position</li>
+        <li><code>?difficulty=hard</code> — AI level (beginner, easy, medium, hard, expert)</li>
+        <li><code>?embed=1&amp;boardonly=1</code> — minimal chrome for embedding</li>
+        <li><code>?theme=transparent&amp;bg=0B0F1A</code> — visual theming</li>
+      </ul>
+
+      <h2>PostMessage API</h2>
+      <p>Once embedded, control the engine at runtime without rebuilding the iframe — switch variants, themes, difficulty, or start new games via <code>postMessage</code>:</p>
+      <ul>
+        <li><code>chess:setVariant</code> — switch to any variant instantly</li>
+        <li><code>chess:setTheme</code> — change visual theme</li>
+        <li><code>chess:setDifficulty</code> — change AI level (beginner → expert)</li>
+        <li><code>chess:newGame</code> — reset the board with current settings</li>
+        <li><code>chess:setBg</code> — change background colour</li>
       </ul>
 
       <div class="case-outcome">

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="sm-base" content="/personal/smalley-website">
+<meta name="theme-color" content="#0B0F1A">
+<title>Everstore Protocol — Mark Smalley</title>
+<meta name="description" content="Complete relational database engine on UTXO blockchains — CRUD, encryption, indexing, audit trails — all via BIP32 key derivation. Published 2016, before Ethereum existed.">
+<meta property="og:title" content="Everstore Protocol — Mark Smalley">
+<meta property="og:description" content="Complete relational database engine on UTXO blockchains — CRUD, encryption, indexing, audit trails — all via BIP32 key derivation. Published 2016, before Ethereum existed.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://smalley.my/open-source/everstore/">
+<meta property="og:site_name" content="Mark Smalley">
+<meta property="og:image" content="https://smalley.my/img/og/opensource-everstore.jpg?v=1.0.22">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Everstore Protocol — Mark Smalley">
+<meta name="twitter:description" content="Structured database functionality on UTXO blockchains using HD key derivation as schema — smart contract capabilities before Ethereum existed.">
+<meta name="twitter:image" content="https://smalley.my/img/og/opensource-everstore.jpg?v=1.0.22">
+<link rel="stylesheet" href="../../css/_sm.css?v=1.0.22">
+<link rel="stylesheet" href="../../css/case-study.css?v=1.0.22">
+</head>
+<body>
+<div id="nav-root"></div>
+
+<section class="case-hero" data-bg>
+  <div class="case-hero-bg" data-bg="../../img/open-source/blockchain-embassy.jpg" aria-hidden="true"></div>
+  <div class="container">
+    <div class="case-hero-eyebrow" data-accent="teal">Neuroware · 2016</div>
+    <h1>Everstore Protocol</h1>
+    <div class="case-hero-tagline">A complete relational database engine on UTXO blockchains</div>
+    <div class="case-meta">
+      <div class="case-meta-item"><span class="case-meta-label">Role</span><span class="case-meta-value">Author</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">Year</span><span class="case-meta-value">2016 (pre-EVM)</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">Origin</span><span class="case-meta-value">DBS Bank Hackathon</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="page-content">
+  <div class="container">
+    <div class="case-content">
+      <h2>The Constraint</h2>
+      <p>In 2016, Bitcoin's OP_RETURN output allowed roughly 38 bytes of usable payload per transaction. Prior to Segregated Witness and Taproot, that was the ceiling for arbitrary data storage on a UTXO chain. Most developers looked at 38 bytes and concluded you couldn't build anything meaningful. The question Everstore asked was different: what if the 38 bytes aren't the database — they're the schema?</p>
+
+      <h2>The Insight</h2>
+      <p>Everstore maps a complete relational database engine onto BIP32 hierarchical deterministic key derivation. Each branch of the key tree has a defined purpose — a node map: Meta (route 1), Schema-Tree (route 2), Index-Tree (route 3), Record-Tree (route 4), Accumulation-Tree (route 5), Public-Tree (route 6). Each route derives a unique blockchain address. A path like <code>2 | 6032 | 38</code> means Schema-Tree → datastore #6032 → field #38.</p>
+      <p>Data lives in the OP_RETURN of transactions sent <em>from</em> those derived addresses. The latest transaction from a node represents the current value. Previous transactions form an immutable audit trail. Reading is a lookup of the most recent output from a known address. Writing is sending a new transaction from that address with updated OP_RETURN data. Anyone with the master public key can independently derive all addresses and read all public data — only writing requires the private keys.</p>
+      <p>The result: full CRUD operations, up to 999 million datastores each with 999 million fields, unlimited records, three encryption levels (public, secure, private), indexed lookups, relationships, and pseudo-delete via hashbang commands — entirely on UTXO blockchains. Smart contract functionality before smart contracts and EVM were even a thing.</p>
+
+      <h2>Origin</h2>
+      <p>Everstore emerged from a 2015 hackathon organised by DBS Bank in Singapore, where teams needed to store structured data beyond Bitcoin's OP_RETURN limits. The constraint forced a design that's actually superior to "put everything on-chain" approaches — minimal chain footprint, flexible auxiliary storage, and deterministic addressing that doesn't depend on any single storage provider.</p>
+
+      <h2>Design Philosophy</h2>
+      <ul>
+        <li><strong>Blockchain-agnostic</strong> — works on any UTXO chain with OP_RETURN and BIP32 support (Bitcoin, Dogecoin, tested on both)</li>
+        <li><strong>Everything on-chain</strong> — no auxiliary storage, no IPFS, no external dependencies. The blockchain IS the database</li>
+        <li><strong>HD keys as dual-purpose</strong> — derivation paths define both the schema (what the data means) and the address (where to find it). Master public key = read access to all public data</li>
+        <li><strong>Three encryption tiers</strong> — public (anyone can read), secure (node key holders), private (master key only) — using AES with key hash as secret</li>
+        <li><strong>Perpetual availability</strong> — no server management, no database administration, no single point of failure. Every previous transaction is an immutable audit trail</li>
+      </ul>
+
+      <h2>First Deployment</h2>
+      <p>BlockAuth was Everstore's first public deployment — a decentralised identity protocol that stored identity claims using Everstore's structured on-chain schema. The identity concept was sound but premature; consumer key management in 2016 made the UX impossible. Nine years later, <a href="../../portfolio/oviato/">Oviato</a> solved the same problem using passkeys — proving the architecture was right, but the platform needed to catch up.</p>
+
+      <div class="case-outcome">
+        <div class="case-outcome-label">Result</div>
+        <div class="case-outcome-text">Smart contract-like database functionality on UTXO chains in 2016 — before Ethereum's EVM made programmable blockchains mainstream</div>
+      </div>
+
+      <div class="case-tech">
+        <a class="pill" href="../../explore/?tag=Bitcoin">Bitcoin</a>
+        <a class="pill" href="../../explore/?tag=Protocol+Design">Protocol Design</a>
+        <a class="pill" href="../../explore/?tag=UTXO">UTXO</a>
+        <a class="pill" href="../../explore/?tag=Dogecoin">Dogecoin</a>
+        <a class="pill" href="../../explore/?tag=HD+Keys">HD Keys</a>
+      </div>
+
+      <nav class="case-nav">
+        <a href="../">← All Open Source</a>
+        <a href="../dn-key-protocol/">Next: DN-Key Protocol →</a>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<div id="footer-root"></div>
+<script src="../../js/sm-loader.js?v=1.0.22"></script>
+</body>
+</html>

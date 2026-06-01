@@ -247,6 +247,10 @@ def generate_all():
          'What Regulators Actually Need from Blockchain Teams', "After 2 years advising Malaysia's Securities Commission"),
         ('thoughts-ordinals.png', 'teal', 'Thoughts',
          'The Cardinal Sins of Bitcoin Ordinals', 'What the ecosystem gets wrong about digital artifacts'),
+        ('thoughts-protocols.png', 'teal', 'Thoughts',
+         'Four Protocols, Nine Years, One Design Philosophy', "From Everstore's 38-byte database to Oviato's passkey wallets"),
+        ('opensource-everstore.png', 'teal', 'Neuroware · 2016',
+         'Everstore Protocol', 'Structured database functionality on UTXO blockchains (pre-EVM)'),
     ]
 
     for entry in pages:

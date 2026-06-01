@@ -12,13 +12,13 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://smalley.my/open-source/dn-key-protocol/">
 <meta property="og:site_name" content="Mark Smalley">
-<meta property="og:image" content="https://smalley.my/img/og/opensource-dnkey.jpg?v=1.0.21">
+<meta property="og:image" content="https://smalley.my/img/og/opensource-dnkey.jpg?v=1.0.22">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="DN-Key Protocol — Mark Smalley">
 <meta name="twitter:description" content="Decentralised key management standard using DNS TXT records to broadcast public keys for regulated digital asset custody.">
-<meta name="twitter:image" content="https://smalley.my/img/og/opensource-dnkey.jpg?v=1.0.21">
-<link rel="stylesheet" href="../../css/_sm.css?v=1.0.21">
-<link rel="stylesheet" href="../../css/case-study.css?v=1.0.21">
+<meta name="twitter:image" content="https://smalley.my/img/og/opensource-dnkey.jpg?v=1.0.22">
+<link rel="stylesheet" href="../../css/_sm.css?v=1.0.22">
+<link rel="stylesheet" href="../../css/case-study.css?v=1.0.22">
 </head>
 <body>
 <div id="nav-root"></div>
@@ -60,11 +60,13 @@
       <p>The format is intentionally simple — a single TXT record with key-value pairs. No custom DNS record types (which require registrar support), no complex encoding, no dependencies beyond standard DNS resolution.</p>
 
       <h2>Adoption</h2>
-      <p>DN-Key was adopted by ATA Plus ECF (a member of the <a href="../blockchain-embassy/">Blockchain Embassy</a> consortium) for their custody infrastructure, proving the concept in a regulated Malaysian financial services context. The protocol informed later work on <a href="../../portfolio/cokeeps/">CoKeeps</a> — Malaysia's first approved Digital Asset Custodian — where key management and proof of custody were central regulatory requirements.</p>
+      <p>DN-Key was adopted by ATA Plus ECF (a member of the <a href="../blockchain-embassy/">Blockchain Embassy</a> consortium) for their custody infrastructure, proving the concept in a regulated Malaysian financial services context.</p>
+      <p>The protocol was subsequently <strong>cited by name in the Securities Commission Malaysia's official capital markets blueprint</strong> during <a href="../../portfolio/project-castor/">Project Castor</a> (2018) — used for multi-signature redeem scripts, deterministic key creation, and enforcement of pre-approved multi-signature accounts. This represents a national regulator formally incorporating an independently authored protocol into its capital markets architecture.</p>
+      <p>DN-Key informed later work on <a href="../../portfolio/cokeeps/">CoKeeps</a> — Malaysia's first approved Digital Asset Custodian — where key management and proof of custody were central regulatory requirements. In 2025, the protocol was reused in <a href="../../portfolio/oviato/">Oviato</a>'s chain-agnostic identity layer for passkey-native wallets, and made Nostr NIP-05 compatible — proving forward-compatibility with protocols that didn't exist when DN-Key was written in 2016.</p>
 
       <div class="case-outcome">
         <div class="case-outcome-label">Result</div>
-        <div class="case-outcome-text">Production key management standard using existing DNS infrastructure — no new trust assumptions required</div>
+        <div class="case-outcome-text">One protocol, nine years of adoption — from ATA Plus (2016) to SC Malaysia blueprint (2018) to CoKeeps custody (2023) to Oviato identity (2025)</div>
       </div>
 
       <div class="case-tech">
@@ -75,7 +77,7 @@
       </div>
 
       <nav class="case-nav">
-        <a href="../">← All Open Source</a>
+        <a href="../everstore/">← Everstore Protocol</a>
         <a href="../ordit-sdk/">Next: Ordit SDK →</a>
       </nav>
     </div>
@@ -83,6 +85,6 @@
 </section>
 
 <div id="footer-root"></div>
-<script src="../../js/sm-loader.js?v=1.0.21"></script>
+<script src="../../js/sm-loader.js?v=1.0.22"></script>
 </body>
 </html>

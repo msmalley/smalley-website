@@ -1,5 +1,13 @@
 [
   {
+    "slug": "protocol-design-lessons",
+    "title": "Four Protocols, Nine Years, One Design Philosophy",
+    "date": "2026-06-01",
+    "readingTime": "8 min",
+    "tags": ["Protocol Design", "Bitcoin", "PSBTs", "WebAuthn", "DNS"],
+    "excerpt": "From Everstore's 38-byte database to Oviato's passkey wallets — what I learned designing protocols that other people actually adopt."
+  },
+  {
     "slug": "what-regulators-need",
     "title": "What Regulators Actually Need from Blockchain Teams",
     "date": "2026-05-30",

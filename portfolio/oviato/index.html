@@ -12,13 +12,13 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://smalley.my/portfolio/oviato/">
 <meta property="og:site_name" content="Mark Smalley">
-<meta property="og:image" content="https://smalley.my/img/og/portfolio-oviato.jpg?v=1.0.21">
+<meta property="og:image" content="https://smalley.my/img/og/portfolio-oviato.jpg?v=1.0.22">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Oviato — Mark Smalley">
 <meta name="twitter:description" content="Co-founded passkey-native wallet infrastructure. Led technical pivot that secured DraperVC investment.">
-<meta name="twitter:image" content="https://smalley.my/img/og/portfolio-oviato.jpg?v=1.0.21">
-<link rel="stylesheet" href="../../css/_sm.css?v=1.0.21">
-<link rel="stylesheet" href="../../css/case-study.css?v=1.0.21">
+<meta name="twitter:image" content="https://smalley.my/img/og/portfolio-oviato.jpg?v=1.0.22">
+<link rel="stylesheet" href="../../css/_sm.css?v=1.0.22">
+<link rel="stylesheet" href="../../css/case-study.css?v=1.0.22">
 </head>
 <body>
 <div id="nav-root"></div>
@@ -53,21 +53,31 @@
       </ul>
 
       <h2>Outcome</h2>
-      <p>The technical work and pivot narrative directly secured <strong>DraperVC investment</strong>. Oviato demonstrates how a hackathon prototype can evolve into funded B2B infrastructure when the technical insight is sound and the articulation is clear.</p>
+      <p>The technical work and pivot narrative directly secured <strong>DraperVC investment</strong>, followed by Boost VC, Bitcoin Frontier Fund, CoinGecko Ventures, and Etherscan.</p>
+
+      <h2>Where It Is Now</h2>
+      <p>Oviato has evolved beyond the initial wallet infrastructure into a full identity and payments platform:</p>
+      <ul>
+        <li><strong>Ovi ID</strong> — chain-agnostic identity layer across Bitcoin, EVM, and Solana. One identity, every chain, no key duplication or bridging</li>
+        <li><strong>Agentic payments</strong> — x402 (HTTP 402 Payment Required) and ERC-3009 for pay-per-request USDC transactions. Users and AI agents on the same rail, gasless on Base with ~1.5s settlement</li>
+        <li><strong>@oviato/connect SDK</strong> — drop-in ConnectButton component for third-party wallet integration</li>
+        <li><strong>DN-Key reuse</strong> — Ovi ID uses <a href="../../open-source/dn-key-protocol/">DN-Key</a> (my 2016 protocol) for DNS-based organisational verification, combined with passkey-based user verification. Made Nostr NIP-05 compatible</li>
+      </ul>
+      <p>The gap between 2016's "publish a public key via DNS TXT record" and 2025's "one identity across every chain with passkey auth and agentic payments" is massive — but the trust model is identical. Domain proves org. Device proves user. No intermediary.</p>
 
       <div class="case-outcome">
         <div class="case-outcome-label">Result</div>
-        <div class="case-outcome-text">Weekend hackathon → DraperVC-backed wallet infrastructure</div>
+        <div class="case-outcome-text">Weekend hackathon → multi-VC-backed identity and payments infrastructure shipping Ovi ID, agentic payments, and developer SDK</div>
       </div>
 
       <div class="case-tech">
         <a class="pill" href="../../explore/?tag=PassKeys">PassKeys</a>
         <a class="pill" href="../../explore/?tag=WebAuthN">WebAuthN</a>
+        <a class="pill" href="../../explore/?tag=DN-Key Protocol">DN-Key Protocol</a>
         <a class="pill" href="../../explore/?tag=Schnorr Signatures">Schnorr Signatures</a>
-        <a class="pill" href="../../explore/?tag=MPC">MPC</a>
-        <a class="pill" href="../../explore/?tag=React">React</a>
         <a class="pill" href="../../explore/?tag=Bitcoin">Bitcoin</a>
         <a class="pill" href="../../explore/?tag=Ethereum">Ethereum</a>
+        <a class="pill" href="../../explore/?tag=Solana">Solana</a>
       </div>
 
       <div class="case-links">
@@ -83,6 +93,6 @@
 </section>
 
 <div id="footer-root"></div>
-<script src="../../js/sm-loader.js?v=1.0.21"></script>
+<script src="../../js/sm-loader.js?v=1.0.22"></script>
 </body>
 </html>

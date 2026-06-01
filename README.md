@@ -44,6 +44,16 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 
 ## Changelog
 
+#### 2026-06-01
+- New article: "Four Protocols, Nine Years, One Design Philosophy" — Everstore, DN-Key, SADO, Oviato design lessons
+- New page: /open-source/everstore/ — complete relational database engine on UTXO chains (2016, pre-EVM)
+- Updated DN-Key page with SC Malaysia blueprint citation and full 9-year adoption arc
+- Updated Oviato page with Ovi ID, agentic payments, additional investors, DN-Key connection
+- Updated all 3 CVs: Everstore added, DN-Key arc strengthened, pre-EVM claim stated
+- Code block upgrade: Prism.js syntax highlighting, copy-to-clipboard, full-width dark blocks site-wide
+- OG images generated for new pages
+- Version: 1.0.22
+
 #### 2026-05-31
 - Design elevation: staggered animations, hexagonal hero canvas, typography scale, micro-interactions, noise texture
 - Dark/light theme toggle with animated transition (persists to localStorage)

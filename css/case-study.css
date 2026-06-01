@@ -320,6 +320,66 @@
   background: var(--sm-surface-alt);
   border-radius: 4px;
 }
+.case-content pre {
+  position: relative;
+  margin: 28px -24px;
+  padding: 24px 28px;
+  background: var(--sm-surface);
+  border: 1px solid var(--sm-border);
+  border-left: 3px solid var(--sm-teal-glow);
+  border-radius: 8px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+@media (max-width: 600px) {
+  .case-content pre {
+    margin-left: -16px;
+    margin-right: -16px;
+    border-radius: 0;
+    padding: 20px 16px;
+  }
+}
+.case-content pre code {
+  display: block;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: -0.01em;
+  white-space: pre;
+  color: var(--sm-text);
+  tab-size: 2;
+}
+.case-content pre .copy-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 5px 12px;
+  font-family: var(--f-mono);
+  font-size: 11px;
+  font-weight: 500;
+  background: var(--sm-surface-alt);
+  border: 1px solid var(--sm-border);
+  border-radius: 6px;
+  color: var(--sm-muted);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s, border-color 0.2s, color 0.2s;
+  user-select: none;
+}
+.case-content pre:hover .copy-btn {
+  opacity: 1;
+}
+.case-content pre .copy-btn:hover {
+  color: var(--sm-teal-glow);
+  border-color: var(--sm-teal-glow);
+}
+.case-content pre .copy-btn.copied {
+  color: var(--sm-teal-glow);
+  border-color: var(--sm-teal-glow);
+}
 
 .case-outcome {
   margin-top: 40px;

@@ -19,14 +19,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
   Promise.all([
     SM.getData('portfolio'),
-    SM.getData('tools'),
     SM.getData('opensource'),
     SM.getData('speaking')
   ]).then(function(results) {
     var portfolio = results[0];
-    var tools = results[1];
-    var opensource = results[2];
-    var speaking = results[3];
+    var opensource = results[1];
+    var speaking = results[2];
 
     for (var i = 0; i < portfolio.length; i++) {
       var p = portfolio[i];
@@ -41,29 +39,17 @@ document.addEventListener('DOMContentLoaded', function() {
       addTags(p.tech);
     }
 
-    for (var i = 0; i < tools.length; i++) {
-      var t = tools[i];
-      items.push({
-        title: t.title,
-        desc: t.description || t.tagline,
-        tags: t.tech || [],
-        type: 'Tool',
-        accent: t.accent,
-        url: SM.url('/tools/' + t.slug + '/')
-      });
-      addTags(t.tech);
-    }
-
     for (var i = 0; i < opensource.length; i++) {
       var o = opensource[i];
       items.push({
         title: o.title,
         desc: o.description,
-        tags: [],
+        tags: o.tech || [],
         type: 'Open Source',
         accent: o.accent || 'teal',
         url: o.slug ? SM.url('/open-source/' + o.slug + '/') : null
       });
+      addTags(o.tech);
     }
 
     for (var i = 0; i < speaking.length; i++) {

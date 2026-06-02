@@ -1,9 +1,62 @@
 [
   {
+    "slug": "moddable-chess-engine",
+    "title": "Moddable Chess Engine",
+    "tagline": "Consumer game SDK — 70 variants, renderer hooks, controller API, AI with opening books",
+    "role": "Creator",
+    "category": "engine",
+    "description": "Modular chess engine and consumer game framework (v0.7.0). 70 playable variants, multi-depth AI with opening books and variant-aware evaluation, postMessage embed API, tiered plugin architecture. Consumer SDK: createGameController(), createReplay(), renderer extensions (tilePainter, pieceProvider), unit templates, terrain predicates. Dungeon Chess runs entirely on MCE as a game subsystem.",
+    "stats": [
+      { "value": "70", "label": "variants" },
+      { "value": "2", "label": "games powered" }
+    ],
+    "tech": ["JavaScript", "SVG", "Web Worker AI", "Consumer SDK"],
+    "repo": "https://github.com/Moddable-Games/moddable-chess",
+    "demo": "https://chess.moddable.games",
+    "accent": "violet",
+    "status": "production"
+  },
+  {
+    "slug": "moddable-hexmaps",
+    "title": "Moddable Hexmaps",
+    "tagline": "Seeded procedural hex maps with JSON export",
+    "role": "Creator",
+    "category": "engine",
+    "description": "Hex map framework with seeded procedural generation, multiple render styles, URL parameter API, JSON export/import, and iframe embed support. Powers 4 games in the Moddable ecosystem.",
+    "stats": [
+      { "value": "4", "label": "games supported" },
+      { "value": "∞", "label": "seeded maps" }
+    ],
+    "tech": ["JavaScript", "Canvas", "Seeded RNG", "URL param API"],
+    "repo": "https://github.com/Moddable-Games/moddable-hexmaps",
+    "demo": "https://hex.moddable.games",
+    "accent": "violet",
+    "status": "production"
+  },
+  {
+    "slug": "pdf-pagination-engine",
+    "title": "PDF Pagination Engine",
+    "tagline": "Intelligent document pagination with orphan prevention",
+    "role": "Creator",
+    "category": "engine",
+    "description": "A JavaScript-native pagination system that measures actual rendered element heights, groups headings with their content atomically, enforces minimum page-fill (30%), and assembles multi-section documents (cover, content, appendix, back-cover). No wkhtmltopdf. No fragile CSS workarounds. Pure DOM measurement.",
+    "stats": [
+      { "value": "190+", "label": "pages assembled" },
+      { "value": "0", "label": "orphaned elements" },
+      { "value": "70", "label": "variant PDFs generated" }
+    ],
+    "tech": ["JavaScript", "Puppeteer", "DOM measurement", "pdfunite"],
+    "repo": "https://github.com/Moddable-Games/moddable-rules",
+    "demo": "https://rules.moddable.games",
+    "accent": "violet",
+    "status": "production"
+  },
+  {
     "slug": "ordit-sdk",
     "title": "Ordit SDK",
     "tagline": "Open-source toolkit for Bitcoin Ordinals and Inscriptions",
     "role": "Lead developer",
+    "category": "protocol",
     "description": "Indexer, parser, and API toolkit for Bitcoin Ordinals and Inscriptions. Multiple repos under the sadoprotocol organisation powering Ordzaar and third-party marketplaces.",
     "stats": [
       { "value": "3", "label": "packages" },
@@ -17,6 +70,7 @@
     "title": "SADO Protocol",
     "tagline": "Decentralised ordinals order-book standard for Bitcoin",
     "role": "Co-author",
+    "category": "protocol",
     "description": "Self-authenticating, decentralised order-book standard using IPFS for semi-signed transaction storage with on-chain content identifiers. Adopted by Ordzaar and third-party exchanges.",
     "stats": [
       { "value": "IPFS", "label": "storage layer" },
@@ -31,6 +85,7 @@
     "title": "Everstore Protocol",
     "tagline": "Structured database functionality on UTXO blockchains (pre-EVM)",
     "role": "Author",
+    "category": "protocol",
     "description": "Complete relational database engine mapped onto BIP32 key derivation — CRUD operations, 999M datastores, indexed lookups, three encryption tiers, immutable audit trails. All data on-chain. Published 2016, before Ethereum made programmable blockchains mainstream.",
     "stats": [
       { "value": "25 pages", "label": "whitepaper" },
@@ -44,6 +99,7 @@
     "title": "DN-Key Protocol",
     "tagline": "Decentralised key management via DNS TXT records",
     "role": "Author",
+    "category": "protocol",
     "description": "Key management standard using DNS TXT records to broadcast public keys. Adopted by ATA Plus ECF (2016), cited in SC Malaysia's capital markets blueprint (2018), reused in Oviato's chain-agnostic identity layer (2025).",
     "stats": [
       { "value": "DNS", "label": "transport layer" },
@@ -53,38 +109,11 @@
     "status": "production"
   },
   {
-    "title": "Moddable Chess Engine",
-    "tagline": "Consumer game SDK — 70 variants, renderer hooks, controller API, AI with opening books",
-    "role": "Creator",
-    "description": "Modular chess engine and consumer game framework (v0.7.0). 70 playable variants, multi-depth AI with opening books and variant-aware evaluation, postMessage embed API, tiered plugin architecture. Consumer SDK: createGameController(), createReplay(), renderer extensions (tilePainter, pieceProvider), unit templates, terrain predicates. Dungeon Chess runs entirely on MCE as a game subsystem.",
-    "stats": [
-      { "value": "70", "label": "variants" },
-      { "value": "2", "label": "games powered" }
-    ],
-    "repo": "https://github.com/Moddable-Games/moddable-chess",
-    "demo": "https://chess.moddable.games",
-    "accent": "violet",
-    "status": "production"
-  },
-  {
-    "title": "Moddable Hexmaps",
-    "tagline": "Seeded procedural hex maps with JSON export",
-    "role": "Creator",
-    "description": "Hex map framework with seeded procedural generation, multiple render styles, URL parameter API, JSON export/import, and iframe embed support. Powers 4 games in the Moddable ecosystem.",
-    "stats": [
-      { "value": "4", "label": "games supported" },
-      { "value": "∞", "label": "seeded maps" }
-    ],
-    "repo": "https://github.com/Moddable-Games/moddable-hexmaps",
-    "demo": "https://hex.moddable.games",
-    "accent": "violet",
-    "status": "production"
-  },
-  {
     "slug": "blockchain-embassy",
     "title": "Blockchain Embassy of Asia",
     "tagline": "ASEAN's first public blockchain consortium",
     "role": "Founder",
+    "category": "infrastructure",
     "description": "ASEAN's first public blockchain consortium. Operated a private proof-of-authority EVM network with members from Maybank, RHB, Capital Bay, and ATA Plus.",
     "stats": [
       { "value": "5+", "label": "member institutions" },
@@ -97,6 +126,7 @@
     "title": "BackPress",
     "tagline": "Standalone library extracted from WordPress core",
     "role": "Core contributor",
+    "category": "infrastructure",
     "demo": "https://backpress.org/projects-using-backpress/",
     "description": "Contributed to Automattic's BackPress framework — a standalone library extracted from WordPress core providing authentication, taxonomy, and option handling without the full WordPress stack.",
     "stats": [

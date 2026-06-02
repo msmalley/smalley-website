@@ -7,7 +7,6 @@
     cvs: renderCvs,
     speaking: renderSpeaking,
     opensource: renderOpenSource,
-    tools: renderTools,
     timeline: renderTimeline
   };
 
@@ -90,31 +89,6 @@
             SM.el('div', { class: 'project-card-title' }, o.title),
             SM.el('div', { class: 'project-card-desc' }, o.tagline),
             SM.el('div', { class: 'project-card-desc' }, o.description),
-            stats
-          )
-        );
-        grid.appendChild(card);
-      }
-      SM.observe();
-    });
-  }
-
-  function renderTools() {
-    SM.getData('tools').then(function(tools) {
-      var grid = document.querySelector('.tools-grid');
-      if (!grid) return;
-      for (var i = 0; i < tools.length; i++) {
-        var t = tools[i];
-        var stats = SM.el('div', { class: 'tool-card-stats' });
-        for (var s = 0; s < t.stats.length; s++) {
-          stats.appendChild(SM.el('span', { class: 'tool-card-stat', 'data-accent': t.accent }, t.stats[s].value + ' ' + t.stats[s].label));
-        }
-        var card = SM.el('a', { class: 'project-card reveal', href: SM.url('/tools/' + t.slug + '/') },
-          SM.el('div', { class: 'card' },
-            SM.el('div', { class: 'project-card-eyebrow', 'data-accent': t.accent }, 'Open Source · MIT'),
-            SM.el('div', { class: 'project-card-title' }, t.title),
-            SM.el('div', { class: 'project-card-desc' }, t.tagline),
-            SM.el('div', { class: 'project-card-desc' }, t.description),
             stats
           )
         );

@@ -9,7 +9,6 @@
     { label: 'RegTech', href: '/regtech/' },
     { label: 'Speaking', href: '/speaking/' },
     { label: 'Open Source', shortLabel: 'Open', href: '/open-source/' },
-    { label: 'Tools', href: '/tools/' },
     { label: 'Thoughts', href: '/thoughts/' },
     { label: 'Timeline', href: '/timeline/' },
     { label: 'Explore', href: '/explore/' },

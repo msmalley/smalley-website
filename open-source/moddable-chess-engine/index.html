@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="sm-base" content="/personal/smalley-website">
+<meta name="theme-color" content="#0B0F1A">
+<title>Moddable Chess Engine — Mark Smalley</title>
+<meta name="description" content="Consumer game framework: 70 chess variants + SDK powering Dungeon Chess. Renderer hooks, game controller, AI with opening books, zero dependencies.">
+<meta property="og:title" content="Moddable Chess Engine — Mark Smalley">
+<meta property="og:description" content="Consumer game framework: 70 chess variants + SDK powering Dungeon Chess. Renderer hooks, game controller, AI with opening books, zero dependencies.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://smalley.my/open-source/moddable-chess-engine/">
+<meta property="og:site_name" content="Mark Smalley">
+<meta property="og:image" content="https://smalley.my/img/og/tools-chess.jpg?v=1.0.23">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Moddable Chess Engine — Mark Smalley">
+<meta name="twitter:description" content="Consumer game framework: 70 chess variants + SDK powering Dungeon Chess. Renderer hooks, game controller, AI with opening books, zero dependencies.">
+<meta name="twitter:image" content="https://smalley.my/img/og/tools-chess.jpg?v=1.0.23">
+<link rel="stylesheet" href="../../css/_sm.css?v=1.0.23">
+<link rel="stylesheet" href="../../css/case-study.css?v=1.0.23">
+</head>
+<body>
+<div id="nav-root"></div>
+
+<section class="case-hero" data-bg>
+  <div class="case-hero-bg" data-bg="../../img/tools/chess-board-crop.png" aria-hidden="true"></div>
+  <div class="container">
+    <div class="case-hero-eyebrow" data-accent="violet">Moddable Games · 2025</div>
+    <h1>Moddable Chess Engine</h1>
+    <div class="case-hero-tagline">Consumer game SDK. 70 variants. Renderer hooks. AI with opening books.</div>
+    <div class="case-meta">
+      <div class="case-meta-item"><span class="case-meta-label">Variants</span><span class="case-meta-value">70 playable</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">Games powered</span><span class="case-meta-value">2</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">Dependencies</span><span class="case-meta-value">0</span></div>
+    </div>
+</div>
+</section>
+
+<section class="page-content">
+  <div class="container">
+    <div class="case-content">
+      <h2>The Problem</h2>
+      <p>Existing chess libraries — Chessboard.js, chess.js, Lichess components — are designed for standard chess. If you want Atomic Chess, Racing Kings, or any variant with non-standard rules, you're forking entire codebases and fighting architectures that assume one set of rules. There was no engine that treated chess variants as a first-class extension point — and certainly nothing you could build an entirely different game on top of.</p>
+
+      <h2>Architecture</h2>
+      <p>The engine separates concerns into layers that can be independently replaced or extended by consumers:</p>
+      <ul>
+        <li><strong>Board geometry</strong> — supports boards from 4x8 to 12x8 with configurable square properties</li>
+        <li><strong>Move generation</strong> — base engine handles standard moves; variants override via hooks for custom piece behaviour, capture rules, and victory conditions</li>
+        <li><strong>AI system</strong> — Web Worker-threaded search with iterative deepening, transposition tables, quiescence search, move ordering, opening books (26 variants), and variant-specific evaluators</li>
+        <li><strong>Rendering</strong> — pure SVG with renderer extension hooks: <code>tilePainter</code> for custom tile visuals, <code>pieceProvider</code> for custom piece graphics, <code>afterRender</code> for overlays, <code>legalMoveRenderer</code> for move indicators</li>
+        <li><strong>Plugin interface</strong> — tiered architecture (Tier 1: rule overrides, Tier 2: engine extensions, Tier 3: effects/mutations/action moves). Each variant is a single file calling <code>registerVariant()</code></li>
+      </ul>
+
+      <h2>Consumer Game SDK (v0.7.0)</h2>
+      <p>The engine evolved beyond chess variants into a reusable game framework. Consumer APIs let other games use MCE's move engine, AI, and renderer without being chess:</p>
+      <ul>
+        <li><strong>createGameController()</strong> — reusable game loop with turn cycling, AI scheduling, and interaction hooks</li>
+        <li><strong>createReplay()</strong> — move-by-move playback module for any game built on MCE</li>
+        <li><strong>Renderer extensions</strong> — tilePainter, pieceProvider, legalMoveRenderer, suppressHighlights, excludePiece for animation</li>
+        <li><strong>Unit template system</strong> — config-driven piece registration for non-chess units</li>
+        <li><strong>Terrain predicates</strong> — generic system replacing hardcoded game-specific checks</li>
+        <li><strong>Effect lifecycle hooks</strong> — before/after move callbacks for game-specific logic</li>
+      </ul>
+      <p><strong>Proof:</strong> <a href="https://dungeon.moddable.games" target="_blank" rel="noopener">Dungeon Chess</a> — an asymmetric skirmish game with 4 factions, dungeon terrain, and XP-budgeted drafting — runs entirely on MCE's consumer SDK. Custom tilePainter renders dungeon walls and water; custom pieceProvider renders fantasy units; the game controller handles multi-faction turn cycling. Zero engine forks.</p>
+
+      <h2>The Developer Experience</h2>
+      <p>This is a DevRel problem as much as an engineering one. The question isn't "can the engine support more variants?" — it's "can someone add one without understanding the engine internals?"</p>
+      <p>Tiered developer guides walk through increasing complexity: "Build a Variant" (Tier 1 basics), Crazyhouse (Tier 3 hooks and piece drops), and Poison Chess (beforeMove effects). The plugin interface fails loudly with clear error messages when the contract is violated. Example variants ship as reference implementations at every tier.</p>
+
+      <h2>Try It</h2>
+      <p>Play against the AI below. Switch variants to see how the same engine handles completely different rule sets — from exploding pieces to fog of war to racing your king.</p>
+      <div class="demo-embed" id="chess-demo"></div>
+      <p class="demo-caption">Live embed — variant switcher controls the iframe URL, background matched, no scrolling</p>
+
+      <h2>Embed API</h2>
+      <p>Any variant can be embedded on any website with a single iframe. URL parameters handle initial configuration:</p>
+      <ul>
+        <li><code>?variant=atomic</code> — select the variant</li>
+        <li><code>?difficulty=hard</code> — AI level (beginner, easy, medium, hard, expert)</li>
+        <li><code>?embed=1&amp;boardonly=1</code> — minimal chrome for embedding</li>
+        <li><code>?theme=transparent&amp;bg=0B0F1A</code> — visual theming</li>
+      </ul>
+
+      <h2>PostMessage API</h2>
+      <p>Once embedded, control the engine at runtime without rebuilding the iframe — switch variants, themes, difficulty, or start new games via <code>postMessage</code>:</p>
+      <ul>
+        <li><code>chess:setVariant</code> — switch to any variant instantly</li>
+        <li><code>chess:setTheme</code> — change visual theme</li>
+        <li><code>chess:setDifficulty</code> — change AI level (beginner → expert)</li>
+        <li><code>chess:newGame</code> — reset the board with current settings</li>
+        <li><code>chess:setBg</code> — change background colour</li>
+      </ul>
+
+      <div class="case-outcome">
+        <div class="case-outcome-label">Result</div>
+        <div class="case-outcome-text">Consumer game framework powering 2 games — 70 chess variants + Dungeon Chess running on the same engine via renderer hooks and controller APIs</div>
+      </div>
+
+      <div class="case-tech">
+        <a class="pill" href="../../explore/?tag=JavaScript">JavaScript</a>
+        <a class="pill" href="../../explore/?tag=SVG">SVG</a>
+        <a class="pill" href="../../explore/?tag=Web Worker AI">Web Worker AI</a>
+        <a class="pill" href="../../explore/?tag=Consumer SDK">Consumer SDK</a>
+        <a class="pill" href="../../explore/?tag=Plugin architecture">Plugin architecture</a>
+      </div>
+
+      <div class="case-links">
+        <a class="btn-secondary" href="https://chess.moddable.games" target="_blank" rel="noopener">Play Now</a>
+        <a class="btn-secondary" href="https://github.com/Moddable-Games/moddable-chess" target="_blank" rel="noopener">GitHub</a>
+      </div>
+
+      <nav class="case-nav">
+        <a href="../pdf-pagination-engine/">← Prev: PDF Pagination Engine</a>
+        <a href="../moddable-hexmaps/">Next: Moddable Hexmaps →</a>
+      </nav>
+      <div class="related-writing" data-slugs="the-case-for-vanilla-js,building-open-source-game-engines"></div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-root"></div>
+<script src="../../js/sm-loader.js?v=1.0.23"></script>
+<script src="../../js/sm-chess-embed.js?v=1.0.23"></script>
+</body>
+</html>

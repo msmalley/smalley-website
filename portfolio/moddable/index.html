@@ -6,19 +6,19 @@
 <meta name="sm-base" content="/personal/smalley-website">
 <meta name="theme-color" content="#0B0F1A">
 <title>Moddable Games — Mark Smalley</title>
-<meta name="description" content="Open-source games studio. 4 games, 2 engines (70-variant chess + hex maps), 9 mods using AI-augmented engineering.">
+<meta name="description" content="Open-source games studio. Chess engine evolved into consumer game SDK powering 2 games. 70 variants, renderer hooks, AI with opening books.">
 <meta property="og:title" content="Moddable Games — Mark Smalley">
-<meta property="og:description" content="Open-source games studio. 4 games, 2 engines (70-variant chess + hex maps), 9 mods using AI-augmented engineering.">
+<meta property="og:description" content="Open-source games studio. Chess engine evolved into consumer game SDK powering 2 games. 70 variants, renderer hooks, AI with opening books.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://smalley.my/portfolio/moddable/">
 <meta property="og:site_name" content="Mark Smalley">
-<meta property="og:image" content="https://smalley.my/img/og/portfolio-moddable.jpg?v=1.0.22">
+<meta property="og:image" content="https://smalley.my/img/og/portfolio-moddable.jpg?v=1.0.23">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Moddable Games — Mark Smalley">
-<meta name="twitter:description" content="Open-source games studio. 4 games, 2 engines (70-variant chess + hex maps), 9 mods using AI-augmented engineering.">
-<meta name="twitter:image" content="https://smalley.my/img/og/portfolio-moddable.jpg?v=1.0.22">
-<link rel="stylesheet" href="../../css/_sm.css?v=1.0.22">
-<link rel="stylesheet" href="../../css/case-study.css?v=1.0.22">
+<meta name="twitter:description" content="Open-source games studio. Chess engine evolved into consumer game SDK powering 2 games. 70 variants, renderer hooks, AI with opening books.">
+<meta name="twitter:image" content="https://smalley.my/img/og/portfolio-moddable.jpg?v=1.0.23">
+<link rel="stylesheet" href="../../css/_sm.css?v=1.0.23">
+<link rel="stylesheet" href="../../css/case-study.css?v=1.0.23">
 </head>
 <body>
 <div id="nav-root"></div>
@@ -45,12 +45,12 @@
 
       <h2>What shipped</h2>
       <ul>
-        <li><strong>Dungeon Chess</strong> — asymmetric skirmish game with custom AI opponent (dungeon.moddable.games)</li>
-        <li><strong>Moddable Chess Engine</strong> — 70 playable variants, multi-depth AI with opening books and variant-aware evaluation, postMessage embed API, tiered plugin architecture (chess.moddable.games)</li>
+        <li><strong>Moddable Chess Engine (v0.7.0)</strong> — evolved from a 70-variant chess app into a <strong>consumer game framework</strong> with reusable game controller, renderer extension hooks, replay API, unit templates, and terrain predicates. Powers two games from the same core (chess.moddable.games)</li>
+        <li><strong>Dungeon Chess</strong> — asymmetric skirmish game running entirely on MCE as a game subsystem. Custom renderer hooks, faction-based AI, XP-budgeted drafting — all built on top of the chess engine's consumer SDK (dungeon.moddable.games)</li>
         <li><strong>Moddable Hexmaps</strong> — seeded procedural map generator with JSON export and URL param API (hex.moddable.games)</li>
         <li><strong>Nukes, Mongo, Endless Skies</strong> — tabletop games with digital tools and rulebooks</li>
         <li><strong>PDF Pagination Engine</strong> — custom document assembly producing 190+ page rulebook libraries with orphan prevention</li>
-        <li><strong>Developer documentation</strong> — tiered guides (Build a Variant, Crazyhouse, Poison Chess), full API reference, opening book docs, embed APIs</li>
+        <li><strong>Developer documentation</strong> — tiered guides (Build a Variant, Crazyhouse, Poison Chess), consumer integration guide (Building Dungeon Chess), full API reference</li>
         <li><strong>Multi-audience presentation system</strong> — 7 audience variants from one master deck</li>
       </ul>
 
@@ -68,11 +68,11 @@
       </div>
 
       <h2>Why it matters</h2>
-      <p>Demonstrates the ability to <strong>ship production-quality software at unprecedented velocity</strong> using AI tooling. Every project is MIT-licensed, publicly accessible, with proper documentation, version control, and deployment pipelines. The chess engine alone has a full developer guide enabling community contributions without engine knowledge.</p>
+      <p>Demonstrates the ability to <strong>ship production-quality software at unprecedented velocity</strong> and then <strong>evolve it into framework-level architecture</strong>. The chess engine didn't stay as a standalone app — it became a consumer SDK that powers a completely different game (Dungeon Chess) through renderer hooks, game controllers, and unit templates. Every project is MIT-licensed, publicly accessible, with proper documentation, version control, and deployment pipelines.</p>
 
       <div class="case-outcome">
         <div class="case-outcome-label">Result</div>
-        <div class="case-outcome-text">4 games, 2 open-source engines (70-variant chess + hex maps), 9 mods, 190+ page documentation pipeline — all in 16 days</div>
+        <div class="case-outcome-text">4 games, 2 open-source engines (chess SDK now powering 2 games + hex maps), 9 mods — shipped in 16 days, evolved into consumer game framework</div>
       </div>
 
       <div class="case-tech">
@@ -101,8 +101,8 @@
 </section>
 
 <div id="footer-root"></div>
-<script src="../../js/sm-loader.js?v=1.0.22"></script>
-<script src="../../js/sm-chess-embed.js?v=1.0.22"></script>
-<script src="../../js/sm-hex-embed.js?v=1.0.22"></script>
+<script src="../../js/sm-loader.js?v=1.0.23"></script>
+<script src="../../js/sm-chess-embed.js?v=1.0.23"></script>
+<script src="../../js/sm-hex-embed.js?v=1.0.23"></script>
 </body>
 </html>

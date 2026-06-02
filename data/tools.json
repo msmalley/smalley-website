@@ -17,14 +17,14 @@
   {
     "slug": "moddable-chess-engine",
     "title": "Moddable Chess Engine",
-    "tagline": "70 variants. AI with opening books. Embed API. Plugin system.",
-    "description": "A modular chess engine supporting 70 playable variants on boards from 4x8 to 12x8. Zero dependencies, pure JavaScript. Multi-depth AI with iterative deepening, transposition tables, quiescence search, opening books, and variant-aware evaluation. PostMessage embed API. Tiered plugin architecture (Tier 1–3) with developer guides.",
+    "tagline": "70 variants. Consumer game SDK. AI with opening books. Plugin system.",
+    "description": "A modular chess engine and consumer game framework supporting 70 playable variants on boards from 4x8 to 12x8. Zero dependencies, pure JavaScript. Multi-depth AI with opening books and variant-aware evaluation. Consumer SDK (v0.7.0): createGameController(), createReplay(), renderer extension hooks (tilePainter, pieceProvider), unit templates, and terrain predicates. Dungeon Chess runs entirely on MCE as a game subsystem — proving the framework architecture.",
     "stats": [
       { "value": "70", "label": "playable variants" },
-      { "value": "0", "label": "dependencies" },
-      { "value": "2000+", "label": "documented variants" }
+      { "value": "2", "label": "games powered" },
+      { "value": "0", "label": "dependencies" }
     ],
-    "tech": ["JavaScript", "SVG", "Web Worker AI", "Plugin architecture"],
+    "tech": ["JavaScript", "SVG", "Web Worker AI", "Consumer SDK"],
     "repo": "https://github.com/Moddable-Games/moddable-chess",
     "demo": "https://chess.moddable.games",
     "accent": "violet",

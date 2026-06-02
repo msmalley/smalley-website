@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mark Smalley — CTO / Head of Engineering</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Mono:wght@400;500&family=Fraunces:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../cv_a_cto.css?v=1.0.22">
+<link rel="stylesheet" href="../cv_a_cto.css?v=1.0.23">
 </head>
 <body>
 <div class="page">
@@ -79,11 +79,11 @@
         <div><span class="job-title">CEO &amp; Founder <em class="job-active">(active)</em></span><span class="job-company">Moddable Limited — United Kingdom</span></div>
         <span class="job-dates">2025 – present</span>
       </div>
-      <div class="job-summary">Open-source games studio using AI-augmented engineering workflows to ship at startup speed. Four games, two open-source engines, and a tools platform — all live and public within 16 days.</div>
+      <div class="job-summary">Open-source games studio using AI-augmented engineering workflows. Evolved a 70-variant chess engine into a consumer game framework (v0.7.0) — now powering two games from the same core via renderer hooks, game controller, and unit template APIs.</div>
       <ul>
-        <li>Built two open-source game engines (70-variant chess engine with AI + hex map framework) with developer docs, embed APIs, and procedural generation systems</li>
-        <li>Engineered a multi-depth AI system with Web Worker threading, iterative deepening, transposition tables, quiescence search, opening books, and variant-specific evaluators across 70 chess variants</li>
-        <li>Engineered a custom PDF pagination system — element-level height calculation, orphan prevention, minimum page-fill enforcement, and multi-section document assembly producing 190+ page rulebook libraries</li>
+        <li>Architected MCE's consumer SDK: createGameController(), createReplay(), renderer extensions (tilePainter, pieceProvider), unit templates, terrain predicates — enabling non-chess games to run on the engine without forks</li>
+        <li>Built Dungeon Chess entirely on MCE's consumer APIs — asymmetric skirmish game with 4 factions, custom rendering, and AI. Proves the framework architecture at production scale</li>
+        <li>Engineered multi-depth AI with Web Worker threading, iterative deepening, transposition tables, quiescence search, opening books (26 variants), and variant-specific evaluators</li>
         <li>Adopted LLM-driven development as core methodology — using AI pair programming to achieve solo-founder velocity across 10+ concurrent repositories</li>
       </ul>
     </div>

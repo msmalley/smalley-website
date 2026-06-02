@@ -54,12 +54,12 @@
   },
   {
     "title": "Moddable Chess Engine",
-    "tagline": "70 variants, AI with opening books, embed API, plugin system",
+    "tagline": "Consumer game SDK — 70 variants, renderer hooks, controller API, AI with opening books",
     "role": "Creator",
-    "description": "Modular chess engine with 70 playable variants, multi-depth AI with opening books and variant-aware evaluation, postMessage embed API, and a tiered plugin architecture (Tier 1–3) with developer guides enabling community contributions.",
+    "description": "Modular chess engine and consumer game framework (v0.7.0). 70 playable variants, multi-depth AI with opening books and variant-aware evaluation, postMessage embed API, tiered plugin architecture. Consumer SDK: createGameController(), createReplay(), renderer extensions (tilePainter, pieceProvider), unit templates, terrain predicates. Dungeon Chess runs entirely on MCE as a game subsystem.",
     "stats": [
       { "value": "70", "label": "variants" },
-      { "value": "0", "label": "dependencies" }
+      { "value": "2", "label": "games powered" }
     ],
     "repo": "https://github.com/Moddable-Games/moddable-chess",
     "demo": "https://chess.moddable.games",

@@ -12,14 +12,14 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://smalley.my/thoughts/building-open-source-game-engines/">
 <meta property="og:site_name" content="Mark Smalley">
-<meta property="og:image" content="https://smalley.my/img/og/thoughts-game-engines.jpg?v=1.0.22">
+<meta property="og:image" content="https://smalley.my/img/og/thoughts-game-engines.jpg?v=1.0.23">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Building Two Open-Source Game Engines in Six Months (With AI) — Mark Smalley">
 <meta name="twitter:description" content="What happens when you point LLM-driven development at the problem of building modular, embeddable game engines from scratch?">
-<meta name="twitter:image" content="https://smalley.my/img/og/thoughts-game-engines.jpg?v=1.0.22">
-<link rel="stylesheet" href="../../css/_sm.css?v=1.0.22">
-<link rel="stylesheet" href="../../css/thoughts.css?v=1.0.22">
-<link rel="stylesheet" href="../../css/pages.css?v=1.0.22">
+<meta name="twitter:image" content="https://smalley.my/img/og/thoughts-game-engines.jpg?v=1.0.23">
+<link rel="stylesheet" href="../../css/_sm.css?v=1.0.23">
+<link rel="stylesheet" href="../../css/thoughts.css?v=1.0.23">
+<link rel="stylesheet" href="../../css/pages.css?v=1.0.23">
 </head>
 <body>
 <div id="nav-root"></div>
@@ -44,20 +44,22 @@
 
       <img src="../../img/tools/chess-hyper.png" alt="Moddable Chess — Hyper Chess variant">
 
-      <h2>The Chess Engine: 70 Variants, Zero Dependencies</h2>
+      <h2>The Chess Engine: From 70 Variants to Consumer Game SDK</h2>
 
-      <p>The Moddable Chess Engine supports 70 playable variants on boards from 4x8 to 12x8. It has a multi-depth AI with Web Worker threading, iterative deepening, transposition tables, quiescence search, opening books, and variant-aware evaluation. It runs entirely client-side — pure JavaScript, no build step, no dependencies. You can embed it with a single iframe tag.</p>
+      <p>The Moddable Chess Engine started as a variant-first chess app — 70 playable variants on boards from 4x8 to 12x8, multi-depth AI with Web Worker threading, opening books, and variant-aware evaluation. Pure JavaScript, no dependencies, embeddable with a single iframe tag.</p>
 
-      <p>But the interesting part isn't what it does — it's how it's designed to be extended. Every variant is a self-contained plugin file. The engine exposes a tiered hook system (Tier 1: rule overrides, Tier 2: engine extensions, Tier 3: effects, mutations, and action moves). Multiple developer guides walk through each complexity level — from basic rule variants to Crazyhouse-style piece drops to Poison Chess effects.</p>
+      <p>But the interesting evolution happened next. The engine grew a consumer SDK (v0.7.0) — renderer extension hooks, a reusable game controller, replay API, unit templates, and terrain predicates. These aren't chess-specific. They're the primitives for building any turn-based game on top of MCE's move engine and AI.</p>
 
-      <p>This is a DevRel problem as much as an engineering one. The question isn't "can I make the engine support more variants?" — it's "can I make the extension interface so clear that a community member could add one without asking me?" That meant investing heavily in documentation, tiered examples, and a plugin architecture that fails loudly when you get the interface wrong.</p>
+      <p>The proof is Dungeon Chess — an asymmetric skirmish game with 4 fantasy factions, dungeon terrain, water hazards, and XP-budgeted unit drafting. It runs entirely on MCE's consumer APIs. Custom <code>tilePainter</code> renders dungeon walls. Custom <code>pieceProvider</code> renders fantasy units. The game controller handles multi-faction turns. Zero engine forks. The chess engine became a game framework.</p>
+
+      <p>This is a DevRel problem as much as an engineering one. The question evolved from "can someone add a variant without understanding the engine?" to "can someone build a completely different game without forking?" That meant investing in consumer-facing APIs, integration guides, and architecture that separates rendering, rules, and game loop.</p>
 
       <ul>
         <li><strong>70 playable variants</strong> — from Atomic Chess to Medusa Chess</li>
-        <li><strong>PostMessage embed API</strong> — control variants and themes without iframe reload</li>
-        <li><strong>Tiered plugin system</strong> — Tier 1/2/3 variants with <code>registerVariant()</code></li>
-        <li><strong>AI with opening books</strong> — Web Worker search, variant-specific evaluators, multiple difficulty levels</li>
-        <li><strong>Developer guides</strong> — Build a Variant, Crazyhouse (Tier 3), Poison Chess (effects)</li>
+        <li><strong>Consumer SDK (v0.7.0)</strong> — createGameController(), createReplay(), renderer hooks, unit templates</li>
+        <li><strong>2 games powered</strong> — chess variants + Dungeon Chess on the same core</li>
+        <li><strong>AI with opening books</strong> — Web Worker search, 26 variant-specific books, multiple difficulty levels</li>
+        <li><strong>Developer guides</strong> — Build a Variant, Crazyhouse, Poison Chess, Building Dungeon Chess (consumer integration)</li>
       </ul>
 
       <img src="../../img/tools/hexmaps-hexed.png" alt="Moddable Hexmaps — procedural hex generation">
@@ -112,6 +114,6 @@
 </section>
 
 <div id="footer-root"></div>
-<script src="../../js/sm-loader.js?v=1.0.22"></script>
+<script src="../../js/sm-loader.js?v=1.0.23"></script>
 </body>
 </html>

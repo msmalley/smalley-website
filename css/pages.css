@@ -64,8 +64,23 @@
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: 1fr;
   gap: 20px;
+}
+@media (min-width: 640px) {
+  .project-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 960px) {
+  .project-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.project-grid .project-card:last-child {
+  grid-column: 1 / -1;
+}
+.project-grid .project-card:last-child .project-card-title,
+.project-grid .project-card:last-child .project-card-desc,
+.project-grid .project-card:last-child .project-card-outcome,
+.project-grid .project-card:last-child .project-card-role {
+  text-wrap: wrap !important;
 }
 .project-card {
   display: block;

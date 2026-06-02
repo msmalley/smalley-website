@@ -39,19 +39,6 @@
     "links": { "live": "https://cokeeps.com" }
   },
   {
-    "slug": "moddable",
-    "title": "Moddable Games",
-    "role": "CEO & Founder",
-    "company": "Moddable Limited",
-    "year": "2025",
-    "accent": "violet",
-    "tagline": "Open-source games studio using AI-augmented engineering",
-    "summary": "Shipped four games, two open-source engines, nine mods, and a developer tools platform in 16 days — then evolved the chess engine into a consumer game framework (v0.7.0) with reusable controller, renderer extensions, and replay APIs. Dungeon Chess now runs entirely on MCE as a game subsystem. Built using LLM-driven development workflows.",
-    "outcome": "4 games, 2 engines (chess SDK powering 2 games), 9 mods — shipped in 16 days, evolved into framework",
-    "tech": ["JavaScript", "Canvas", "AI/LLM", "Puppeteer", "GitHub Pages"],
-    "links": { "live": "https://moddable.games" }
-  },
-  {
     "slug": "oviato",
     "title": "Oviato",
     "role": "Co-founder & Chief Blockchain Officer",
@@ -89,5 +76,18 @@
     "outcome": "First SC Malaysia sandbox company, incubated 5+ ventures, advised national regulators",
     "tech": ["Bitcoin", "Ethereum", "Regulatory Compliance", "Digital Custody", "Node.js", "Solidity"],
     "links": { "live": "https://r1.my" }
+  },
+  {
+    "slug": "moddable",
+    "title": "Moddable Games",
+    "role": "CEO & Founder",
+    "company": "Moddable Limited",
+    "year": "2025",
+    "accent": "violet",
+    "tagline": "Open-source games studio using AI-augmented engineering",
+    "summary": "Shipped four games, two open-source engines, nine mods, and a developer tools platform in 16 days — then evolved the chess engine into a consumer game framework (v0.7.0) with reusable controller, renderer extensions, and replay APIs. Dungeon Chess now runs entirely on MCE as a game subsystem. Built using LLM-driven development workflows.",
+    "outcome": "4 games, 2 engines (chess SDK powering 2 games), 9 mods — shipped in 16 days, evolved into framework",
+    "tech": ["JavaScript", "Canvas", "AI/LLM", "Puppeteer", "GitHub Pages"],
+    "links": { "live": "https://moddable.games" }
   }
 ]

@@ -1,10 +1,10 @@
-.process-hero {
+.workflow-hero {
   padding: 140px 0 60px;
   border-bottom: 1px solid var(--sm-border);
   position: relative;
   overflow: hidden;
 }
-.process-hero::before {
+.workflow-hero::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -13,7 +13,7 @@
     radial-gradient(ellipse 50% 60% at 75% 60%, rgba(99, 102, 241, 0.06) 0%, transparent 70%);
   pointer-events: none;
 }
-.process-hero::after {
+.workflow-hero::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -24,7 +24,7 @@
   mix-blend-mode: overlay;
   pointer-events: none;
 }
-.process-hero h1 {
+.workflow-hero h1 {
   font-family: var(--f-display);
   font-weight: 700;
   font-size: clamp(36px, 6vw, 64px);
@@ -32,21 +32,21 @@
   line-height: 1;
   margin-bottom: 16px;
 }
-.process-hero-tagline {
+.workflow-hero-tagline {
   font-size: 16px;
   color: var(--sm-muted);
   line-height: 1.7;
 }
 
-.process-numbers,
-.process-what,
-.process-how,
-.process-philosophy,
-.process-evidence {
+.workflow-numbers,
+.workflow-what,
+.workflow-how,
+.workflow-philosophy,
+.workflow-evidence {
   padding: 80px 0;
   border-bottom: 1px solid var(--sm-border);
 }
-.process-intro {
+.workflow-intro {
   font-size: 16px;
   color: var(--sm-muted);
   max-width: 640px;
@@ -232,11 +232,11 @@ a.eco-card {
   color: var(--sm-teal-glow);
 }
 
-.process-cta {
+.workflow-cta {
   padding: 80px 0;
 }
 
-.process-demo {
+.workflow-demo {
   padding: 80px 0;
   border-bottom: 1px solid var(--sm-border);
 }
@@ -314,16 +314,16 @@ a.eco-card {
 }
 
 @media (max-width: 768px) {
-  .process-hero,
-  .process-numbers,
-  .process-what,
-  .process-how,
-  .process-philosophy,
-  .process-demo,
-  .process-evidence { padding: 48px 0; }
-  .process-hero { padding-top: 100px; text-align: center; }
-  .process-hero-tagline { margin: 0 auto; }
-  .process-intro { text-align: center; margin: 0 auto 32px; }
+  .workflow-hero,
+  .workflow-numbers,
+  .workflow-what,
+  .workflow-how,
+  .workflow-philosophy,
+  .workflow-demo,
+  .workflow-evidence { padding: 48px 0; }
+  .workflow-hero { padding-top: 100px; text-align: center; }
+  .workflow-hero-tagline { margin: 0 auto; }
+  .workflow-intro { text-align: center; margin: 0 auto 32px; }
   .numbers-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .number-value { font-size: 32px; }
   .ecosystem-grid { grid-template-columns: 1fr; }

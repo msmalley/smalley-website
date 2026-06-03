@@ -159,13 +159,6 @@ document.addEventListener('DOMContentLoaded', function() {
       count++;
     }
 
-    var cols = 3;
-    var gridWidth = grid.offsetWidth;
-    if (gridWidth < 640) cols = 1;
-    else if (gridWidth < 960) cols = 2;
-
-    var remainder = cols > 1 ? (count % cols) : 0;
-
     for (var i = 0; i < cards.length; i++) {
       var item = cards[i];
 
@@ -181,12 +174,6 @@ document.addEventListener('DOMContentLoaded', function() {
       card.className = 'explore-card';
       if (item.url) card.href = item.url;
 
-      if (remainder === 1 && i === cards.length - 1) {
-        card.style.gridColumn = 'span ' + cols;
-      } else if (remainder === 2 && cols === 3 && i === cards.length - 2) {
-        card.style.gridColumn = 'span 2';
-      }
-
       card.innerHTML =
         '<div class="explore-card-type" data-accent="' + item.accent + '">' + item.type + '</div>' +
         '<div class="explore-card-title">' + title + '</div>' +
@@ -195,6 +182,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
       grid.appendChild(card);
     }
+
+    SM.fillLastRow(grid, '.explore-card');
 
     emptyMsg.className = 'explore-empty' + (count === 0 ? ' visible' : '');
   }

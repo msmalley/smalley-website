@@ -13,7 +13,9 @@
     ? '/MODDABLE/moddable-hexmaps/generate/'
     : 'https://hex.moddable.games/generate/';
 
-  var BG = '0B0F1A';
+  function getBG() {
+    return document.documentElement.getAttribute('data-theme') === 'light' ? 'F8F9FC' : '0B0F1A';
+  }
 
   containers.forEach(function(container) {
     var currentGameIdx = 0;
@@ -137,7 +139,8 @@
       var existing = container.querySelector('iframe');
       if (existing) existing.remove();
 
-      var src = BASE + '?game=' + game.key + '&boardonly=1&bg=' + BG + '&style=' + style + '&random=1';
+      var bg = getBG();
+      var src = BASE + '?game=' + game.key + '&boardonly=1&mode=edit&bg=' + bg + '&style=' + style + '&random=1';
       if (game.layouts) {
         src += '&layout=' + (currentLayout || game.defaultLayout);
       } else {
@@ -154,7 +157,7 @@
       iframe.style.border = 'none';
       iframe.style.borderRadius = '8px';
       iframe.style.display = 'block';
-      iframe.style.background = '#' + BG;
+      iframe.style.background = '#' + bg;
 
       container.appendChild(iframe);
       updateDesc();
@@ -163,5 +166,15 @@
     buildStyleSelect();
     buildSizeSelect();
     buildIframe();
+
+    new MutationObserver(function() {
+      var bg = getBG();
+      if (iframe) {
+        iframe.style.background = '#' + bg;
+        if (iframe.contentWindow) {
+          iframe.contentWindow.postMessage({ type: 'hexmap:setBg', bg: bg }, '*');
+        }
+      }
+    }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
   });
 })();

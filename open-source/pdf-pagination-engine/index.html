@@ -41,8 +41,8 @@
   <div class="container">
     <div class="case-content">
       <h2>The Problem</h2>
-      <p>CSS page-break rules are a blunt instrument. <code>break-inside: avoid</code> works for simple cases but fails catastrophically when you need to paginate complex, multi-section documents — rulebooks with variant-specific content blocks, tables that span multiple pages, headings that must stay grouped with their following content, and appendices that need distinct formatting.</p>
-      <p>Every existing approach I tried — wkhtmltopdf with CSS, Puppeteer with <code>@page</code> rules, even commercial PDF libraries — produced documents with orphaned headings, awkward page breaks mid-paragraph, and inconsistent spacing. The fundamental issue: they make pagination decisions without measuring actual rendered content.</p>
+      <p>CSS page-break rules are a blunt instrument. <code>break-inside: avoid</code> works for simple cases but fails catastrophically when you need to paginate complex, multi-section documents: rulebooks with variant-specific content blocks, tables that span multiple pages, headings that must stay grouped with their following content, and appendices that need distinct formatting.</p>
+      <p>Every existing approach I tried (wkhtmltopdf with CSS, Puppeteer with <code>@page</code> rules, even commercial PDF libraries) produced documents with orphaned headings, awkward page breaks mid-paragraph, and inconsistent spacing. The fundamental issue: they make pagination decisions without measuring actual rendered content.</p>
 
       <h2>The Approach</h2>
       <p>The engine works by <strong>measuring before deciding</strong>. It renders content into a hidden DOM container at exact print dimensions, measures every element's actual height (including margins, padding, and line-wrapping effects), then assembles pages by packing elements into fixed-height frames with explicit rules about what can and cannot be separated.</p>
@@ -63,7 +63,7 @@
       <p>The result is deterministic. Same input always produces same pagination. No manual page-break annotations needed in the source content.</p>
 
       <h2>Results</h2>
-      <p>The engine now produces the complete Moddable Chess rulebook library — 70 variant rulebooks assembled from structured game data. Each rulebook includes cover art, rules sections, piece movement diagrams, setup instructions, and an appendix. Zero orphaned elements across 190+ pages of output.</p>
+      <p>The engine now produces the complete Moddable Chess rulebook library: 70 variant rulebooks assembled from structured game data. Each rulebook includes cover art, rules sections, piece movement diagrams, setup instructions, and an appendix. Zero orphaned elements across 190+ pages of output.</p>
 
       <div class="case-outcome">
         <div class="case-outcome-label">Result</div>
@@ -86,6 +86,7 @@
         <a href="../">← All Open Source</a>
         <a href="../moddable-chess-engine/">Next: Moddable Chess Engine →</a>
       </nav>
+      <div class="related-writing" data-slugs="16-days-one-ecosystem"></div>
     </div>
   </div>
 </section>

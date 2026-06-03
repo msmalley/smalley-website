@@ -33,7 +33,9 @@
     ? '/MODDABLE/moddable-chess/play/'
     : 'https://chess.moddable.games/play/';
 
-  var BG = '0B0F1A';
+  function getBG() {
+    return document.documentElement.getAttribute('data-theme') === 'light' ? 'F8F9FC' : '0B0F1A';
+  }
 
   containers.forEach(function(container) {
     var currentIdx = 0;
@@ -108,7 +110,8 @@
       var v = VARIANTS[currentIdx];
       var t = THEMES[currentThemeIdx];
       iframe = document.createElement('iframe');
-      iframe.src = BASE + '?variant=' + v.key + '&embed=1&boardonly=1&mode=solo&theme=' + t.key + '&bg=' + BG + '&radius=8px';
+      var bg = getBG();
+      iframe.src = BASE + '?variant=' + v.key + '&embed=1&boardonly=1&mode=solo&theme=' + t.key + '&bg=' + bg + '&radius=8px';
       iframe.setAttribute('scrolling', 'no');
       iframe.setAttribute('loading', 'lazy');
       iframe.style.aspectRatio = '1 / 1';
@@ -116,7 +119,7 @@
       iframe.style.border = 'none';
       iframe.style.borderRadius = '8px';
       iframe.style.display = 'block';
-      iframe.style.background = '#' + BG;
+      iframe.style.background = '#' + bg;
       container.appendChild(iframe);
       descEl.textContent = v.desc;
     }
@@ -137,5 +140,15 @@
     }
 
     buildIframe();
+
+    new MutationObserver(function() {
+      var bg = getBG();
+      if (iframe) {
+        iframe.style.background = '#' + bg;
+        if (iframe.contentWindow) {
+          iframe.contentWindow.postMessage({ type: 'chess:setBg', bg: bg }, '*');
+        }
+      }
+    }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
   });
 })();

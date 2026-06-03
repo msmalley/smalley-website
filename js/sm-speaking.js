@@ -50,4 +50,6 @@ SM.getData('speaking').then(function(talks) {
     );
     grid.appendChild(card);
   }
+
+  SM.fillLastRow(grid, '.speaking-card');
 });

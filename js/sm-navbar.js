@@ -5,12 +5,11 @@
   var links = [
     { label: 'Portfolio', href: '/portfolio/' },
     { label: 'CVs', href: '/cvs/' },
-    { label: 'How I Build', shortLabel: 'How', href: '/process/' },
+    { label: 'Workflow', href: '/workflow/' },
     { label: 'RegTech', href: '/regtech/' },
     { label: 'Speaking', href: '/speaking/' },
     { label: 'Open Source', shortLabel: 'Open', href: '/open-source/' },
     { label: 'Thoughts', href: '/thoughts/' },
-    { label: 'Timeline', href: '/timeline/' },
     { label: 'Explore', href: '/explore/' },
   ];
 

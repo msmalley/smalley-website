@@ -41,11 +41,11 @@
   <div class="container">
     <div class="case-content">
       <h2>The Problem</h2>
-      <p>Blockchain custody environments need a way to verify public keys without relying on centralised key servers. PGP keyservers suffer from spam, lack of authentication, and no clear ownership verification. In regulated environments — particularly digital asset custody — you need to prove that a key belongs to an organisation with the same certainty that an SSL certificate proves domain ownership.</p>
+      <p>Blockchain custody environments need a way to verify public keys without relying on centralised key servers. PGP keyservers suffer from spam, lack of authentication, and no clear ownership verification. In regulated environments (particularly digital asset custody) you need to prove that a key belongs to an organisation with the same certainty that an SSL certificate proves domain ownership.</p>
 
       <h2>The Insight</h2>
       <p>DNS already solves this problem for other domains. SPF records prove email sending authority. DKIM records publish email signing keys. DMARC policies dictate enforcement. The infrastructure for broadcasting machine-readable key material via DNS TXT records is battle-tested, globally distributed, and already trusted by regulated institutions.</p>
-      <p>DN-Key applies the same pattern to cryptographic public keys: publish your Bitcoin, Ethereum, or arbitrary public keys as DNS TXT records on a domain you control. Verification becomes a DNS lookup — no custom infrastructure, no trust in third-party keyservers, no registration required.</p>
+      <p>DN-Key applies the same pattern to cryptographic public keys: publish your Bitcoin, Ethereum, or arbitrary public keys as DNS TXT records on a domain you control. Verification becomes a DNS lookup. No custom infrastructure, no trust in third-party keyservers, no registration required.</p>
 
       <h2>How It Works</h2>
       <ul>
@@ -56,13 +56,13 @@
       </ul>
 
       <h2>Design Decisions</h2>
-      <p>The protocol deliberately mirrors email authentication standards (SPF/DKIM) so that existing DNS management tools, compliance workflows, and audit procedures work without modification. Regulated custodians already have DNS management processes audited by compliance teams — DN-Key slots into that existing workflow rather than introducing new infrastructure that needs separate audit.</p>
-      <p>The format is intentionally simple — a single TXT record with key-value pairs. No custom DNS record types (which require registrar support), no complex encoding, no dependencies beyond standard DNS resolution.</p>
+      <p>The protocol deliberately mirrors email authentication standards (SPF/DKIM) so that existing DNS management tools, compliance workflows, and audit procedures work without modification. Regulated custodians already have DNS management processes audited by compliance teams. DN-Key slots into that existing workflow rather than introducing new infrastructure that needs separate audit.</p>
+      <p>The format is intentionally simple: a single TXT record with key-value pairs. No custom DNS record types (which require registrar support), no complex encoding, no dependencies beyond standard DNS resolution.</p>
 
       <h2>Adoption</h2>
       <p>DN-Key was adopted by ATA Plus ECF (a member of the <a href="../blockchain-embassy/">Blockchain Embassy</a> consortium) for their custody infrastructure, proving the concept in a regulated Malaysian financial services context.</p>
-      <p>The protocol was subsequently <strong>cited by name in the Securities Commission Malaysia's official capital markets blueprint</strong> during <a href="../../portfolio/project-castor/">Project Castor</a> (2018) — used for multi-signature redeem scripts, deterministic key creation, and enforcement of pre-approved multi-signature accounts. This represents a national regulator formally incorporating an independently authored protocol into its capital markets architecture.</p>
-      <p>DN-Key informed later work on <a href="../../portfolio/cokeeps/">CoKeeps</a> — Malaysia's first approved Digital Asset Custodian — where key management and proof of custody were central regulatory requirements. In 2025, the protocol was reused in <a href="../../portfolio/oviato/">Oviato</a>'s chain-agnostic identity layer for passkey-native wallets, and made Nostr NIP-05 compatible — proving forward-compatibility with protocols that didn't exist when DN-Key was written in 2016.</p>
+      <p>The protocol was subsequently <strong>cited by name in the Securities Commission Malaysia's official capital markets blueprint</strong> during <a href="../../portfolio/project-castor/">Project Castor</a> (2018), used for multi-signature redeem scripts, deterministic key creation, and enforcement of pre-approved multi-signature accounts. This represents a national regulator formally incorporating an independently authored protocol into its capital markets architecture.</p>
+      <p>DN-Key informed later work on <a href="../../portfolio/cokeeps/">CoKeeps</a> (Malaysia's first approved Digital Asset Custodian) where key management and proof of custody were central regulatory requirements. In 2025, the protocol was reused in <a href="../../portfolio/oviato/">Oviato</a>'s chain-agnostic identity layer for passkey-native wallets, and made Nostr NIP-05 compatible, proving forward-compatibility with protocols that didn't exist when DN-Key was written in 2016.</p>
 
       <div class="case-outcome">
         <div class="case-outcome-label">Result</div>
@@ -80,6 +80,7 @@
         <a href="../everstore/">← Prev: Everstore Protocol</a>
         <a href="../blockchain-embassy/">Next: Blockchain Embassy →</a>
       </nav>
+      <div class="related-writing" data-slugs="protocol-design-lessons"></div>
     </div>
   </div>
 </section>

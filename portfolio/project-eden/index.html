@@ -43,7 +43,7 @@
       <h2>The Question</h2>
       <p>What if crypto wallets didn't need passwords or seed phrases at all?</p>
       <p>Every existing wallet solution forces users to either trust a custodian (and accept the counterparty risk of an FTX-style collapse) or manage their own keys (and accept the UX burden of seed phrases, hardware devices, and the permanent risk of loss). The industry had accepted this as a fundamental tradeoff.</p>
-      <p>Project Eden was a weekend hackathon to test whether <strong>WebAuthN and PassKeys</strong> — the same technology that lets you log into websites with your fingerprint — could generate and manage cryptographic keys suitable for blockchain transactions. Not a wrapper around existing keys. Not a custodial abstraction. Actual non-custodial wallets where the passkey <em>is</em> the private key material.</p>
+      <p>Project Eden was a weekend hackathon to test whether <strong>WebAuthN and PassKeys</strong> (the same technology that lets you log into websites with your fingerprint) could generate and manage cryptographic keys suitable for blockchain transactions. Not a wrapper around existing keys. Not a custodial abstraction. Actual non-custodial wallets where the passkey <em>is</em> the private key material.</p>
 
       <h2>The Prototype</h2>
       <p>Over a weekend, I built a working proof-of-concept demonstrating:</p>
@@ -56,12 +56,12 @@
       </ul>
 
       <h2>Why It Works</h2>
-      <p>The insight is that WebAuthN's credential creation ceremony already generates a P-256 or Ed25519 keypair bound to a specific origin. With the right derivation path, this can produce keys compatible with blockchain signature schemes. The user never sees a seed phrase because there isn't one — the key lives in the device's secure enclave, protected by biometrics, and synced via the platform's existing passkey infrastructure.</p>
-      <p>This isn't custodial — no server ever holds the key. It isn't traditional self-custody either — there's no seed phrase to lose. It's a third category: <strong>platform-secured self-custody</strong>, where the security model is the device manufacturer's secure enclave rather than the user's ability to remember 24 words.</p>
+      <p>The insight is that WebAuthN's credential creation ceremony already generates a P-256 or Ed25519 keypair bound to a specific origin. With the right derivation path, this can produce keys compatible with blockchain signature schemes. The user never sees a seed phrase because there isn't one. The key lives in the device's secure enclave, protected by biometrics, and synced via the platform's existing passkey infrastructure.</p>
+      <p>This isn't custodial. No server ever holds the key. It isn't traditional self-custody either. There's no seed phrase to lose. It's a third category: <strong>platform-secured self-custody</strong>, where the security model is the device manufacturer's secure enclave rather than the user's ability to remember 24 words.</p>
 
       <h2>What Happened Next</h2>
-      <p>The prototype was functional enough to demonstrate the viability of the approach. I co-founded <a href="../oviato/">Oviato</a> to turn this proof-of-concept into production infrastructure — passkey-native wallet-as-a-service APIs for third-party builders. The technical demonstration and pivot narrative directly secured <strong>DraperVC investment</strong>.</p>
-      <p>Project Eden proved that the hardest problem in crypto UX — key management — had a solution hiding in plain sight in the Web Authentication standard. Oviato is packaging that solution for the industry.</p>
+      <p>The prototype was functional enough to demonstrate the viability of the approach. I co-founded <a href="../oviato/">Oviato</a> to turn this proof-of-concept into production infrastructure: passkey-native wallet-as-a-service APIs for third-party builders. The technical demonstration and pivot narrative directly secured <strong>DraperVC investment</strong>.</p>
+      <p>Project Eden proved that the hardest problem in crypto UX (key management) had a solution hiding in plain sight in the Web Authentication standard. Oviato is packaging that solution for the industry.</p>
 
       <div class="case-outcome">
         <div class="case-outcome-label">Result</div>

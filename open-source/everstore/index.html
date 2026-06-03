@@ -41,15 +41,15 @@
   <div class="container">
     <div class="case-content">
       <h2>The Constraint</h2>
-      <p>In 2016, Bitcoin's OP_RETURN output allowed roughly 38 bytes of usable payload per transaction. Prior to Segregated Witness and Taproot, that was the ceiling for arbitrary data storage on a UTXO chain. Most developers looked at 38 bytes and concluded you couldn't build anything meaningful. The question Everstore asked was different: what if the 38 bytes aren't the database — they're the schema?</p>
+      <p>In 2016, Bitcoin's OP_RETURN output allowed roughly 38 bytes of usable payload per transaction. Prior to Segregated Witness and Taproot, that was the ceiling for arbitrary data storage on a UTXO chain. Most developers looked at 38 bytes and concluded you couldn't build anything meaningful. The question Everstore asked was different: what if the 38 bytes aren't the database, but the schema?</p>
 
       <h2>The Insight</h2>
-      <p>Everstore maps a complete relational database engine onto BIP32 hierarchical deterministic key derivation. Each branch of the key tree has a defined purpose — a node map: Meta (route 1), Schema-Tree (route 2), Index-Tree (route 3), Record-Tree (route 4), Accumulation-Tree (route 5), Public-Tree (route 6). Each route derives a unique blockchain address. A path like <code>2 | 6032 | 38</code> means Schema-Tree → datastore #6032 → field #38.</p>
-      <p>Data lives in the OP_RETURN of transactions sent <em>from</em> those derived addresses. The latest transaction from a node represents the current value. Previous transactions form an immutable audit trail. Reading is a lookup of the most recent output from a known address. Writing is sending a new transaction from that address with updated OP_RETURN data. Anyone with the master public key can independently derive all addresses and read all public data — only writing requires the private keys.</p>
-      <p>The result: full CRUD operations, up to 999 million datastores each with 999 million fields, unlimited records, three encryption levels (public, secure, private), indexed lookups, relationships, and pseudo-delete via hashbang commands — entirely on UTXO blockchains. Smart contract functionality before smart contracts and EVM were even a thing.</p>
+      <p>Everstore maps a complete relational database engine onto BIP32 hierarchical deterministic key derivation. Each branch of the key tree has a defined purpose, a node map: Meta (route 1), Schema-Tree (route 2), Index-Tree (route 3), Record-Tree (route 4), Accumulation-Tree (route 5), Public-Tree (route 6). Each route derives a unique blockchain address. A path like <code>2 | 6032 | 38</code> means Schema-Tree → datastore #6032 → field #38.</p>
+      <p>Data lives in the OP_RETURN of transactions sent <em>from</em> those derived addresses. The latest transaction from a node represents the current value. Previous transactions form an immutable audit trail. Reading is a lookup of the most recent output from a known address. Writing is sending a new transaction from that address with updated OP_RETURN data. Anyone with the master public key can independently derive all addresses and read all public data. Only writing requires the private keys.</p>
+      <p>The result: full CRUD operations, up to 999 million datastores each with 999 million fields, unlimited records, three encryption levels (public, secure, private), indexed lookups, relationships, and pseudo-delete via hashbang commands. All entirely on UTXO blockchains. Smart contract functionality before smart contracts and EVM were even a thing.</p>
 
       <h2>Origin</h2>
-      <p>Everstore emerged from a 2015 hackathon organised by DBS Bank in Singapore, where teams needed to store structured data beyond Bitcoin's OP_RETURN limits. The constraint forced a design that's actually superior to "put everything on-chain" approaches — minimal chain footprint, flexible auxiliary storage, and deterministic addressing that doesn't depend on any single storage provider.</p>
+      <p>Everstore emerged from a 2015 hackathon organised by DBS Bank in Singapore, where teams needed to store structured data beyond Bitcoin's OP_RETURN limits. The constraint forced a design that's actually superior to "put everything on-chain" approaches: minimal chain footprint, flexible auxiliary storage, and deterministic addressing that doesn't depend on any single storage provider.</p>
 
       <h2>Design Philosophy</h2>
       <ul>
@@ -61,7 +61,7 @@
       </ul>
 
       <h2>First Deployment</h2>
-      <p>BlockAuth was Everstore's first public deployment — a decentralised identity protocol that stored identity claims using Everstore's structured on-chain schema. The identity concept was sound but premature; consumer key management in 2016 made the UX impossible. Nine years later, <a href="../../portfolio/oviato/">Oviato</a> solved the same problem using passkeys — proving the architecture was right, but the platform needed to catch up.</p>
+      <p>BlockAuth was Everstore's first public deployment, a decentralised identity protocol that stored identity claims using Everstore's structured on-chain schema. The identity concept was sound but premature; consumer key management in 2016 made the UX impossible. Nine years later, <a href="../../portfolio/oviato/">Oviato</a> solved the same problem using passkeys, proving the architecture was right, but the platform needed to catch up.</p>
 
       <div class="case-outcome">
         <div class="case-outcome-label">Result</div>
@@ -80,6 +80,7 @@
         <a href="../ordit-sdk/">← Prev: Ordit SDK</a>
         <a href="../dn-key-protocol/">Next: DN-Key Protocol →</a>
       </nav>
+      <div class="related-writing" data-slugs="protocol-design-lessons"></div>
     </div>
   </div>
 </section>

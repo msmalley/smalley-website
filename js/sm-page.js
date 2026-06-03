@@ -6,8 +6,7 @@
     portfolio: renderPortfolio,
     cvs: renderCvs,
     speaking: renderSpeaking,
-    opensource: renderOpenSource,
-    timeline: renderTimeline
+    opensource: renderOpenSource
   };
 
   if (renderers[page]) renderers[page]();
@@ -29,6 +28,7 @@
         );
         grid.appendChild(card);
       }
+      SM.fillLastRow(grid, '.project-card');
       SM.observe();
     });
   }
@@ -94,32 +94,9 @@
         );
         grid.appendChild(card);
       }
+      SM.fillLastRow(grid, '.project-card');
       SM.observe();
     });
   }
 
-  function renderTimeline() {
-    SM.getData('timeline').then(function(entries) {
-      var list = document.querySelector('.timeline-list');
-      if (!list) return;
-      for (var i = 0; i < entries.length; i++) {
-        var e = entries[i];
-        var highlights = SM.el('ul', { class: 'timeline-highlights' });
-        for (var h = 0; h < e.highlights.length; h++) {
-          highlights.appendChild(SM.el('li', null, e.highlights[h]));
-        }
-        var tag = e.link ? 'a' : 'li';
-        var attrs = { class: 'timeline-item reveal', 'data-accent': e.accent };
-        if (e.link) attrs.href = SM.url(e.link);
-        var item = SM.el(tag, attrs,
-          SM.el('div', { class: 'timeline-year' }, e.year),
-          SM.el('div', { class: 'timeline-title' }, e.title),
-          SM.el('div', { class: 'timeline-company' }, e.company + (e.location ? ' — ' + e.location : '')),
-          highlights
-        );
-        list.appendChild(item);
-      }
-      SM.observe();
-    });
-  }
 })();

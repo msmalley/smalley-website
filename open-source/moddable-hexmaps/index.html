@@ -41,7 +41,7 @@
   <div class="container">
     <div class="case-content">
       <h2>The Problem</h2>
-      <p>Board game designers need hex maps. Designing them manually is tedious — dozens or hundreds of hexes, each with terrain assignments, each needing visual consistency. Sharing maps means exporting images or proprietary file formats. Collaborating means sending files back and forth. There was no tool where a map could be a URL.</p>
+      <p>Board game designers need hex maps. Designing them manually is tedious. Dozens or hundreds of hexes, each with terrain assignments, each needing visual consistency. Sharing maps means exporting images or proprietary file formats. Collaborating means sending files back and forth. There was no tool where a map could be a URL.</p>
 
       <h2>Architecture</h2>
       <p>The framework treats hex maps as deterministic functions of their parameters. A seed string plus a configuration (ring count, theme, orientation) always produces the same map. This makes maps shareable as URLs, reproducible across devices, and embeddable without hosting.</p>
@@ -71,7 +71,7 @@
       </ul>
 
       <h2>Use Cases</h2>
-      <p>The framework currently supports four games in the Moddable Games ecosystem — Nukes (area control), Talisman (adventure), Twilight Imperium (4X strategy), and Colony (resource management with 7 Seafarers-style layouts including fog, ports, and gold terrain). Each uses the same hex engine with different terrain definitions, generation rules, and visual themes.</p>
+      <p>The framework currently supports four games in the Moddable Games ecosystem: Nukes (area control), Talisman (adventure), Twilight Imperium (4X strategy), and Colony (resource management with 7 Seafarers-style layouts including fog, ports, and gold terrain). Each uses the same hex engine with different terrain definitions, generation rules, and visual themes.</p>
       <p>Because maps are URLs, game sessions can be set up by sharing a link. Tournament organisers can publish map seeds in advance. Players can create custom maps and export them as JSON, PNG, PDF, or annotated SVG for inclusion in community map packs or print-ready rulebooks.</p>
 
       <div class="case-outcome">
@@ -96,6 +96,7 @@
         <a href="../moddable-chess-engine/">← Prev: Moddable Chess Engine</a>
         <a href="../ordit-sdk/">Next: Ordit SDK →</a>
       </nav>
+      <div class="related-writing" data-slugs="16-days-one-ecosystem"></div>
     </div>
   </div>
 </section>

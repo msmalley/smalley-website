@@ -23,7 +23,7 @@
       ),
       SM.el('div', { class: 'sm-footer-col' },
         SM.el('div', { class: 'sm-footer-label' }, 'Hiring?'),
-        SM.el('a', { href: SM.url('/process/') }, 'CTO'),
+        SM.el('a', { href: SM.url('/workflow/') }, 'CTO'),
         SM.el('a', { href: SM.url('/regtech/') }, 'RegTech'),
         SM.el('a', { href: SM.url('/speaking/') }, 'DevRel')
       )

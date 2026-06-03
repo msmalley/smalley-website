@@ -64,5 +64,19 @@ window.SM = (() => {
     return dataCache[name];
   }
 
-  return { VERSION, BASE, url, T, F, el, getData };
+  function fillLastRow(grid, selector) {
+    var cols = 3;
+    var w = grid.offsetWidth;
+    if (w < 640) cols = 1;
+    else if (w < 960) cols = 2;
+    var cards = grid.querySelectorAll(selector);
+    var remainder = cols > 1 ? (cards.length % cols) : 0;
+    if (remainder === 1) {
+      cards[cards.length - 1].style.gridColumn = 'span ' + cols;
+    } else if (remainder === 2 && cols === 3) {
+      cards[cards.length - 2].style.gridColumn = 'span 2';
+    }
+  }
+
+  return { VERSION, BASE, url, T, F, el, getData, fillLastRow };
 })();

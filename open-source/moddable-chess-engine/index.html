@@ -41,7 +41,7 @@
   <div class="container">
     <div class="case-content">
       <h2>The Problem</h2>
-      <p>Existing chess libraries — Chessboard.js, chess.js, Lichess components — are designed for standard chess. If you want Atomic Chess, Racing Kings, or any variant with non-standard rules, you're forking entire codebases and fighting architectures that assume one set of rules. There was no engine that treated chess variants as a first-class extension point — and certainly nothing you could build an entirely different game on top of.</p>
+      <p>Existing chess libraries (Chessboard.js, chess.js, Lichess components) are designed for standard chess. If you want Atomic Chess, Racing Kings, or any variant with non-standard rules, you're forking entire codebases and fighting architectures that assume one set of rules. There was no engine that treated chess variants as a first-class extension point. And certainly nothing you could build an entirely different game on top of.</p>
 
       <h2>Architecture</h2>
       <p>The engine separates concerns into layers that can be independently replaced or extended by consumers:</p>
@@ -63,14 +63,14 @@
         <li><strong>Terrain predicates</strong> — generic system replacing hardcoded game-specific checks</li>
         <li><strong>Effect lifecycle hooks</strong> — before/after move callbacks for game-specific logic</li>
       </ul>
-      <p><strong>Proof:</strong> <a href="https://dungeon.moddable.games" target="_blank" rel="noopener">Dungeon Chess</a> — an asymmetric skirmish game with 4 factions, dungeon terrain, and XP-budgeted drafting — runs entirely on MCE's consumer SDK. Custom tilePainter renders dungeon walls and water; custom pieceProvider renders fantasy units; the game controller handles multi-faction turn cycling. Zero engine forks.</p>
+      <p><strong>Proof:</strong> <a href="https://dungeon.moddable.games" target="_blank" rel="noopener">Dungeon Chess</a> is an asymmetric skirmish game with 4 factions, dungeon terrain, and XP-budgeted drafting. It runs entirely on MCE's consumer SDK. Custom tilePainter renders dungeon walls and water; custom pieceProvider renders fantasy units; the game controller handles multi-faction turn cycling. Zero engine forks.</p>
 
       <h2>The Developer Experience</h2>
-      <p>This is a DevRel problem as much as an engineering one. The question isn't "can the engine support more variants?" — it's "can someone add one without understanding the engine internals?"</p>
+      <p>This is a DevRel problem as much as an engineering one. The question isn't "can the engine support more variants?" but "can someone add one without understanding the engine internals?"</p>
       <p>Tiered developer guides walk through increasing complexity: "Build a Variant" (Tier 1 basics), Crazyhouse (Tier 3 hooks and piece drops), and Poison Chess (beforeMove effects). The plugin interface fails loudly with clear error messages when the contract is violated. Example variants ship as reference implementations at every tier.</p>
 
       <h2>Try It</h2>
-      <p>Play against the AI below. Switch variants to see how the same engine handles completely different rule sets — from exploding pieces to fog of war to racing your king.</p>
+      <p>Play against the AI below. Switch variants to see how the same engine handles completely different rule sets, from exploding pieces to fog of war to racing your king.</p>
       <div class="demo-embed" id="chess-demo"></div>
       <p class="demo-caption">Live embed — variant switcher controls the iframe URL, background matched, no scrolling</p>
 
@@ -84,7 +84,7 @@
       </ul>
 
       <h2>PostMessage API</h2>
-      <p>Once embedded, control the engine at runtime without rebuilding the iframe — switch variants, themes, difficulty, or start new games via <code>postMessage</code>:</p>
+      <p>Once embedded, control the engine at runtime without rebuilding the iframe. Switch variants, themes, difficulty, or start new games via <code>postMessage</code>:</p>
       <ul>
         <li><code>chess:setVariant</code> — switch to any variant instantly</li>
         <li><code>chess:setTheme</code> — change visual theme</li>
@@ -115,7 +115,7 @@
         <a href="../pdf-pagination-engine/">← Prev: PDF Pagination Engine</a>
         <a href="../moddable-hexmaps/">Next: Moddable Hexmaps →</a>
       </nav>
-      <div class="related-writing" data-slugs="the-case-for-vanilla-js,building-open-source-game-engines"></div>
+      <div class="related-writing" data-slugs="the-case-for-vanilla-js,16-days-one-ecosystem"></div>
     </div>
   </div>
 </section>

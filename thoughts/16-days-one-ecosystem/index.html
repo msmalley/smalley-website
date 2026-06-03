@@ -5,17 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="sm-base" content="/personal/smalley-website">
 <meta name="theme-color" content="#0B0F1A">
-<title>Building Two Open-Source Game Engines in Six Months (With AI) — Mark Smalley</title>
-<meta name="description" content="What happens when you point LLM-driven development at the problem of building modular, embeddable game engines from scratch?">
-<meta property="og:title" content="Building Two Open-Source Game Engines in Six Months (With AI) — Mark Smalley">
-<meta property="og:description" content="What happens when you point LLM-driven development at the problem of building modular, embeddable game engines from scratch?">
+<title>16 Days, One Ecosystem — Mark Smalley</title>
+<meta name="description" content="Four games, two engines, nine mods, and a documentation pipeline. How architecture decisions made it possible to ship an entire ecosystem in 16 days.">
+<meta property="og:title" content="16 Days, One Ecosystem — Mark Smalley">
+<meta property="og:description" content="Four games, two engines, nine mods, and a documentation pipeline. How architecture decisions made it possible to ship an entire ecosystem in 16 days.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://smalley.my/thoughts/building-open-source-game-engines/">
+<meta property="og:url" content="https://smalley.my/thoughts/16-days-one-ecosystem/">
 <meta property="og:site_name" content="Mark Smalley">
 <meta property="og:image" content="https://smalley.my/img/og/thoughts-game-engines.jpg?v=1.0.24">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Building Two Open-Source Game Engines in Six Months (With AI) — Mark Smalley">
-<meta name="twitter:description" content="What happens when you point LLM-driven development at the problem of building modular, embeddable game engines from scratch?">
+<meta name="twitter:title" content="16 Days, One Ecosystem — Mark Smalley">
+<meta name="twitter:description" content="Four games, two engines, nine mods, and a documentation pipeline. How architecture decisions made it possible to ship an entire ecosystem in 16 days.">
 <meta name="twitter:image" content="https://smalley.my/img/og/thoughts-game-engines.jpg?v=1.0.24">
 <link rel="stylesheet" href="../../css/_sm.css?v=1.0.24">
 <link rel="stylesheet" href="../../css/thoughts.css?v=1.0.24">
@@ -27,7 +27,7 @@
 <section class="page-hero">
   <div class="container">
     <div class="eyebrow">Thoughts</div>
-    <h1>Building Two Open-Source Game Engines in Six Months (With AI)</h1>
+    <h1>16 Days, One Ecosystem</h1>
   </div>
 </section>
 
@@ -36,9 +36,9 @@
     <div class="article-content">
       <div class="article-date">29 May 2025</div>
 
-      <p>Have you ever tried to embed a chess game on a website? If you have, you probably reached for one of the established libraries — Chessboard.js, chess.js, Lichess's board component. They work. But what if you wanted <strong>Atomic Chess</strong>? Or <strong>Racing Kings</strong>? Or a variant where pieces can clone themselves? Suddenly you're forking entire codebases and fighting against architectures designed for one game.</p>
+      <p>Have you ever tried to embed a chess game on a website? If you have, you probably reached for one of the established libraries: Chessboard.js, chess.js, Lichess's board component. They work. But what if you wanted <strong>Atomic Chess</strong>? Or <strong>Racing Kings</strong>? Or a variant where pieces can clone themselves? Suddenly you're forking entire codebases and fighting against architectures designed for one game.</p>
 
-      <p>That frustration is what led me to build <a href="../../open-source/moddable-chess-engine/"><strong>Moddable Chess Engine</strong></a> — a modular engine that treats variants as first-class citizens. And once I had the architecture patterns right, the same thinking produced <a href="../../open-source/moddable-hexmaps/"><strong>Moddable Hexmaps</strong></a> — a framework where any hex-based board game can be generated, edited, and shared with a URL.</p>
+      <p>That frustration is what led me to build <a href="../../open-source/moddable-chess-engine/"><strong>Moddable Chess Engine</strong></a>, a modular engine that treats variants as first-class citizens. And once I had the architecture patterns right, the same thinking produced <a href="../../open-source/moddable-hexmaps/"><strong>Moddable Hexmaps</strong></a>, a framework where any hex-based board game can be generated, edited, and shared with a URL.</p>
 
       <p>Both shipped to production in 16 days. Both are MIT-licensed. And both were built almost entirely using AI-augmented engineering workflows.</p>
 
@@ -46,11 +46,11 @@
 
       <h2>The Chess Engine: From 70 Variants to Consumer Game SDK</h2>
 
-      <p>The Moddable Chess Engine started as a variant-first chess app — 70 playable variants on boards from 4x8 to 12x8, multi-depth AI with Web Worker threading, opening books, and variant-aware evaluation. Pure JavaScript, no dependencies, embeddable with a single iframe tag.</p>
+      <p>The Moddable Chess Engine started as a variant-first chess app: 70 playable variants on boards from 4x8 to 12x8, multi-depth AI with Web Worker threading, opening books, and variant-aware evaluation. Pure JavaScript, no dependencies, embeddable with a single iframe tag.</p>
 
-      <p>But the interesting evolution happened next. The engine grew a consumer SDK (v0.7.1) — renderer extension hooks, a reusable game controller, replay API, unit templates, terrain predicates, and effect lifecycle hooks. These aren't chess-specific. They're the primitives for building any turn-based game on top of MCE's move engine and AI.</p>
+      <p>But the interesting evolution happened next. The engine grew a consumer SDK (v0.7.1): renderer extension hooks, a reusable game controller, replay API, unit templates, terrain predicates, and effect lifecycle hooks. These aren't chess-specific. They're the primitives for building any turn-based game on top of MCE's move engine and AI.</p>
 
-      <p>The proof is Dungeon Chess — an asymmetric skirmish game with 4 fantasy factions, dungeon terrain, water hazards, and XP-budgeted unit drafting. It runs entirely on MCE's consumer APIs. Custom <code>tilePainter</code> renders dungeon walls. Custom <code>pieceProvider</code> renders fantasy units. The game controller handles multi-faction turns. Zero engine forks. The chess engine became a game framework.</p>
+      <p>The proof is Dungeon Chess, an asymmetric skirmish game with 4 fantasy factions, dungeon terrain, water hazards, and XP-budgeted unit drafting. It runs entirely on MCE's consumer APIs. Custom <code>tilePainter</code> renders dungeon walls. Custom <code>pieceProvider</code> renders fantasy units. The game controller handles multi-faction turns. Zero engine forks. The chess engine became a game framework.</p>
 
       <p>This is a DevRel problem as much as an engineering one. The question evolved from "can someone add a variant without understanding the engine?" to "can someone build a completely different game without forking?" That meant investing in consumer-facing APIs, integration guides, and architecture that separates rendering, rules, and game loop.</p>
 
@@ -68,7 +68,7 @@
 
       <p>Moddable Hexmaps solves a different problem: board game designers need maps, but designing them manually is tedious and sharing them is friction-heavy. What if every map had a URL? And what if that URL could be deterministically regenerated from a seed string?</p>
 
-      <p>The framework generates hex grids via Canvas — flat-top or pointy-top, at any ring count. It uses seeded RNG so the same seed always produces the same map. Multiple terrain palettes support different games (Nukes gets volcanic landscapes, Talisman gets fantasy biomes). Maps export to JSON. Maps import from JSON. Maps embed in iframes. Everything is controlled via URL parameters.</p>
+      <p>The framework generates hex grids via Canvas (flat-top or pointy-top, at any ring count). It uses seeded RNG so the same seed always produces the same map. Multiple terrain palettes support different games (Nukes gets volcanic landscapes, Talisman gets fantasy biomes). Maps export to JSON. Maps import from JSON. Maps embed in iframes. Everything is controlled via URL parameters.</p>
 
       <p>This means sharing a map is sharing a URL. Reproducibility is guaranteed by the seed. And because everything renders client-side, there's no server cost regardless of how many maps people generate.</p>
 
@@ -80,13 +80,13 @@
         <li><strong>JSON export/import</strong> — save, share, and reload board states</li>
       </ul>
 
-      <h2>The AI-Augmented Part</h2>
+      <h2>The Architecture That Made It Possible</h2>
 
-      <p>Both engines were built using LLM-driven development as the core methodology. Not "AI wrote my code" — but AI as a pair programmer operating at the architecture level. Designing hook systems, catching edge cases across 70 variants, writing documentation that developers can actually follow, identifying which abstractions pay for themselves and which are premature.</p>
+      <p>The reason this shipped in 16 days isn't velocity alone. It's that every architectural decision compounds. The variant plugin interface means adding a new chess variant is a single file. The seeded RNG means sharing a map is sharing a URL. The renderer hook system means Dungeon Chess didn't fork the engine. The postMessage API means any embed is controllable at runtime without rebuilding the iframe.</p>
 
-      <p>The velocity difference is real. A solo founder shouldn't be able to ship two engines, four games, nine mods, a tools platform, and a 190-page rulebook pipeline in 16 days. But when your pair programmer has read every programming book ever written and never gets tired, the bottleneck shifts from "can I build this?" to "should I build this?"</p>
+      <p>Each decision removes future work. A plugin system that requires a fork isn't a plugin system. An embed that requires redeployment to change isn't embeddable. A game framework that can only make chess isn't a framework. The 16-day timeline is a consequence of getting these decisions right early, not of typing faster.</p>
 
-      <p>That's the actual lesson. The engines are the proof that the methodology works. The methodology is the thing worth talking about.</p>
+      <p>The full ecosystem: four games (Nukes, Mongo, Endless Skies, Dungeon Chess), two engines (chess + hexmaps), nine mods, a 190-page rulebook pipeline, investor presentations, and a documentation site. All MIT-licensed, all statically hosted, all zero dependencies.</p>
 
       <h2>Try Them</h2>
 

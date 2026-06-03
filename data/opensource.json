@@ -5,7 +5,7 @@
     "tagline": "Consumer game SDK — 70 variants, renderer hooks, controller API, AI with opening books",
     "role": "Creator",
     "category": "engine",
-    "description": "Modular chess engine and consumer game framework (v0.7.1). 70 playable variants, multi-depth AI with opening books for 26 variants and variant-aware evaluation, postMessage embed API, tiered plugin architecture. Consumer SDK: createGameController(), createReplay(), renderer extensions (tilePainter, pieceProvider), unit templates, terrain predicates, effect lifecycle hooks. Dungeon Chess runs entirely on MCE as a game subsystem.",
+    "description": "Consumer game framework (v0.7.1). 70 chess variants plus a reusable SDK that powers non-chess games. Multi-depth AI with opening books, postMessage embed API, tiered plugin architecture. Dungeon Chess runs entirely on MCE without engine forks.",
     "stats": [
       { "value": "70", "label": "variants" },
       { "value": "2", "label": "games powered" }
@@ -22,7 +22,7 @@
     "tagline": "Seeded procedural hex maps with 4 render styles and PNG/PDF/SVG export",
     "role": "Creator",
     "category": "engine",
-    "description": "Hex map framework (v0.5.1) with seeded procedural generation, 4 render styles (artistic, classic, kenney, realistic), URL parameter API, PNG/PDF/SVG export, hex metadata system, and iframe embed support. Powers 4 games in the Moddable ecosystem with 7 Colony layouts.",
+    "description": "Hex map framework (v0.5.1) with seeded procedural generation, 4 render styles, PNG/PDF/SVG export, hex metadata, and URL parameter API. Powers 4 games with 7 Colony layouts.",
     "stats": [
       { "value": "4", "label": "render styles" },
       { "value": "∞", "label": "seeded maps" }
@@ -39,7 +39,7 @@
     "tagline": "Intelligent document pagination with orphan prevention",
     "role": "Creator",
     "category": "engine",
-    "description": "A JavaScript-native pagination system that measures actual rendered element heights, groups headings with their content atomically, enforces minimum page-fill (30%), and assembles multi-section documents (cover, content, appendix, back-cover). No wkhtmltopdf. No fragile CSS workarounds. Pure DOM measurement.",
+    "description": "Pagination system that measures rendered element heights, groups headings atomically, enforces page-fill minimums, and assembles multi-section documents. Pure DOM measurement, no wkhtmltopdf.",
     "stats": [
       { "value": "190+", "label": "pages assembled" },
       { "value": "0", "label": "orphaned elements" },
@@ -86,7 +86,7 @@
     "tagline": "Structured database functionality on UTXO blockchains (pre-EVM)",
     "role": "Author",
     "category": "protocol",
-    "description": "Complete relational database engine mapped onto BIP32 key derivation — CRUD operations, 999M datastores, indexed lookups, three encryption tiers, immutable audit trails. All data on-chain. Published 2016, before Ethereum made programmable blockchains mainstream.",
+    "description": "Complete relational database engine mapped onto BIP32 key derivation. CRUD, indexed lookups, three encryption tiers, immutable audit trails. All on-chain, published 2016 before EVM existed.",
     "stats": [
       { "value": "25 pages", "label": "whitepaper" },
       { "value": "2016", "label": "published" }

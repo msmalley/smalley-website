@@ -6,16 +6,16 @@
 <meta name="sm-base" content="/personal/smalley-website">
 <meta name="theme-color" content="#0B0F1A">
 <title>Moddable Hexmaps — Mark Smalley</title>
-<meta name="description" content="Hex map framework with seeded procedural generation, multiple render styles, and full URL parameter API for embedding.">
+<meta name="description" content="Hex map framework with seeded procedural generation, 4 render styles, PNG/PDF/SVG export, and full URL parameter API for embedding.">
 <meta property="og:title" content="Moddable Hexmaps — Mark Smalley">
-<meta property="og:description" content="Hex map framework with seeded procedural generation, multiple render styles, and full URL parameter API for embedding.">
+<meta property="og:description" content="Hex map framework with seeded procedural generation, 4 render styles, PNG/PDF/SVG export, and full URL parameter API for embedding.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://smalley.my/open-source/moddable-hexmaps/">
 <meta property="og:site_name" content="Mark Smalley">
 <meta property="og:image" content="https://smalley.my/img/og/tools-hexmaps.jpg?v=1.0.24">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Moddable Hexmaps — Mark Smalley">
-<meta name="twitter:description" content="Hex map framework with seeded procedural generation, multiple render styles, and full URL parameter API for embedding.">
+<meta name="twitter:description" content="Hex map framework with seeded procedural generation, 4 render styles, PNG/PDF/SVG export, and full URL parameter API for embedding.">
 <meta name="twitter:image" content="https://smalley.my/img/og/tools-hexmaps.jpg?v=1.0.24">
 <link rel="stylesheet" href="../../css/_sm.css?v=1.0.24">
 <link rel="stylesheet" href="../../css/case-study.css?v=1.0.24">
@@ -28,11 +28,11 @@
   <div class="container">
     <div class="case-hero-eyebrow" data-accent="violet">Moddable Games · 2025</div>
     <h1>Moddable Hexmaps</h1>
-    <div class="case-hero-tagline">Seeded procedural hex maps with JSON export</div>
+    <div class="case-hero-tagline">Seeded procedural hex maps with PNG/PDF/SVG export and 4 render styles</div>
     <div class="case-meta">
       <div class="case-meta-item"><span class="case-meta-label">Maps possible</span><span class="case-meta-value">∞ (seeded)</span></div>
       <div class="case-meta-item"><span class="case-meta-label">Games supported</span><span class="case-meta-value">4</span></div>
-      <div class="case-meta-item"><span class="case-meta-label">Render styles</span><span class="case-meta-value">3</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">Render styles</span><span class="case-meta-value">4</span></div>
     </div>
 </div>
 </section>
@@ -47,10 +47,13 @@
       <p>The framework treats hex maps as deterministic functions of their parameters. A seed string plus a configuration (ring count, theme, orientation) always produces the same map. This makes maps shareable as URLs, reproducible across devices, and embeddable without hosting.</p>
       <ul>
         <li><strong>Seeded RNG</strong> — same seed always produces the same terrain distribution. Share a map by sharing its URL</li>
-        <li><strong>Canvas rendering</strong> — flat-top or pointy-top orientation, configurable ring count, three distinct visual styles</li>
+        <li><strong>Canvas rendering</strong> — flat-top or pointy-top orientation, configurable ring count, four distinct visual styles (artistic, classic, kenney, realistic)</li>
         <li><strong>Theme system</strong> — each game has its own terrain palette (volcanic for Nukes, fantasy biomes for Talisman, space for Twilight Imperium, colonial for Colony)</li>
         <li><strong>Click-to-edit</strong> — override any hex's terrain after generation for manual refinement</li>
         <li><strong>JSON export/import</strong> — full board state serialisation for saving and restoring edited maps</li>
+        <li><strong>PNG/PDF export</strong> — 2x resolution PNG downloads and A4 page PDF export for print-ready maps</li>
+        <li><strong>SVG export</strong> — serialised SVG with annotations (highlights, tokens, arrows, legends) via postMessage API</li>
+        <li><strong>Hex metadata</strong> — game-config-driven descriptions with hover info per hex (e.g. all 55 Talisman terrain types with names and action text)</li>
       </ul>
 
       <h2>Try It</h2>
@@ -68,17 +71,18 @@
       </ul>
 
       <h2>Use Cases</h2>
-      <p>The framework currently supports four games in the Moddable Games ecosystem — Nukes (area control), Talisman (adventure), Twilight Imperium (4X strategy), and Colony (resource management). Each uses the same hex engine with different terrain definitions, generation rules, and visual themes.</p>
-      <p>Because maps are URLs, game sessions can be set up by sharing a link. Tournament organisers can publish map seeds in advance. Players can create custom maps and export them as JSON for inclusion in community map packs.</p>
+      <p>The framework currently supports four games in the Moddable Games ecosystem — Nukes (area control), Talisman (adventure), Twilight Imperium (4X strategy), and Colony (resource management with 7 Seafarers-style layouts including fog, ports, and gold terrain). Each uses the same hex engine with different terrain definitions, generation rules, and visual themes.</p>
+      <p>Because maps are URLs, game sessions can be set up by sharing a link. Tournament organisers can publish map seeds in advance. Players can create custom maps and export them as JSON, PNG, PDF, or annotated SVG for inclusion in community map packs or print-ready rulebooks.</p>
 
       <div class="case-outcome">
         <div class="case-outcome-label">Result</div>
-        <div class="case-outcome-text">Infinite reproducible maps, 4 game themes, shareable via URL</div>
+        <div class="case-outcome-text">Infinite reproducible maps, 4 game themes, 4 render styles, PNG/PDF/SVG export, shareable via URL</div>
       </div>
 
       <div class="case-tech">
         <a class="pill" href="../../explore/?tag=JavaScript">JavaScript</a>
         <a class="pill" href="../../explore/?tag=Canvas">Canvas</a>
+        <a class="pill" href="../../explore/?tag=SVG">SVG</a>
         <a class="pill" href="../../explore/?tag=Seeded RNG">Seeded RNG</a>
         <a class="pill" href="../../explore/?tag=URL param API">URL param API</a>
       </div>

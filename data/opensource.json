@@ -5,7 +5,7 @@
     "tagline": "Consumer game SDK — 70 variants, renderer hooks, controller API, AI with opening books",
     "role": "Creator",
     "category": "engine",
-    "description": "Modular chess engine and consumer game framework (v0.7.0). 70 playable variants, multi-depth AI with opening books and variant-aware evaluation, postMessage embed API, tiered plugin architecture. Consumer SDK: createGameController(), createReplay(), renderer extensions (tilePainter, pieceProvider), unit templates, terrain predicates. Dungeon Chess runs entirely on MCE as a game subsystem.",
+    "description": "Modular chess engine and consumer game framework (v0.7.1). 70 playable variants, multi-depth AI with opening books for 26 variants and variant-aware evaluation, postMessage embed API, tiered plugin architecture. Consumer SDK: createGameController(), createReplay(), renderer extensions (tilePainter, pieceProvider), unit templates, terrain predicates, effect lifecycle hooks. Dungeon Chess runs entirely on MCE as a game subsystem.",
     "stats": [
       { "value": "70", "label": "variants" },
       { "value": "2", "label": "games powered" }
@@ -19,15 +19,15 @@
   {
     "slug": "moddable-hexmaps",
     "title": "Moddable Hexmaps",
-    "tagline": "Seeded procedural hex maps with JSON export",
+    "tagline": "Seeded procedural hex maps with 4 render styles and PNG/PDF/SVG export",
     "role": "Creator",
     "category": "engine",
-    "description": "Hex map framework with seeded procedural generation, multiple render styles, URL parameter API, JSON export/import, and iframe embed support. Powers 4 games in the Moddable ecosystem.",
+    "description": "Hex map framework (v0.5.1) with seeded procedural generation, 4 render styles (artistic, classic, kenney, realistic), URL parameter API, PNG/PDF/SVG export, hex metadata system, and iframe embed support. Powers 4 games in the Moddable ecosystem with 7 Colony layouts.",
     "stats": [
-      { "value": "4", "label": "games supported" },
+      { "value": "4", "label": "render styles" },
       { "value": "∞", "label": "seeded maps" }
     ],
-    "tech": ["JavaScript", "Canvas", "Seeded RNG", "URL param API"],
+    "tech": ["JavaScript", "Canvas", "SVG", "Seeded RNG", "URL param API"],
     "repo": "https://github.com/Moddable-Games/moddable-hexmaps",
     "demo": "https://hex.moddable.games",
     "accent": "violet",

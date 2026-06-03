@@ -85,8 +85,8 @@
     "year": "2025",
     "accent": "violet",
     "tagline": "Open-source games studio using AI-augmented engineering",
-    "summary": "Shipped four games, two open-source engines, nine mods, and a developer tools platform in 16 days — then evolved the chess engine into a consumer game framework (v0.7.0) with reusable controller, renderer extensions, and replay APIs. Dungeon Chess now runs entirely on MCE as a game subsystem. Built using LLM-driven development workflows.",
-    "outcome": "4 games, 2 engines (chess SDK powering 2 games), 9 mods — shipped in 16 days, evolved into framework",
+    "summary": "Shipped four games, two open-source engines, nine mods, and a developer tools platform in 16 days — then evolved the chess engine into a consumer game framework (v0.7.1) with reusable controller, renderer extensions, unit templates, and replay APIs. Hexmaps grew to 4 render styles with PNG/PDF/SVG export. Dungeon Chess runs entirely on MCE as a game subsystem. Built using LLM-driven development workflows.",
+    "outcome": "4 games, 2 engines (chess SDK v0.7.1, hexmaps v0.5.1), 9 mods — shipped in 16 days, evolved into framework",
     "tech": ["JavaScript", "Canvas", "AI/LLM", "Puppeteer", "GitHub Pages"],
     "links": { "live": "https://moddable.games" }
   }

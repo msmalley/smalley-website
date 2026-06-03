@@ -48,7 +48,7 @@
 
       <p>The Moddable Chess Engine started as a variant-first chess app — 70 playable variants on boards from 4x8 to 12x8, multi-depth AI with Web Worker threading, opening books, and variant-aware evaluation. Pure JavaScript, no dependencies, embeddable with a single iframe tag.</p>
 
-      <p>But the interesting evolution happened next. The engine grew a consumer SDK (v0.7.0) — renderer extension hooks, a reusable game controller, replay API, unit templates, and terrain predicates. These aren't chess-specific. They're the primitives for building any turn-based game on top of MCE's move engine and AI.</p>
+      <p>But the interesting evolution happened next. The engine grew a consumer SDK (v0.7.1) — renderer extension hooks, a reusable game controller, replay API, unit templates, terrain predicates, and effect lifecycle hooks. These aren't chess-specific. They're the primitives for building any turn-based game on top of MCE's move engine and AI.</p>
 
       <p>The proof is Dungeon Chess — an asymmetric skirmish game with 4 fantasy factions, dungeon terrain, water hazards, and XP-budgeted unit drafting. It runs entirely on MCE's consumer APIs. Custom <code>tilePainter</code> renders dungeon walls. Custom <code>pieceProvider</code> renders fantasy units. The game controller handles multi-faction turns. Zero engine forks. The chess engine became a game framework.</p>
 
@@ -56,7 +56,7 @@
 
       <ul>
         <li><strong>70 playable variants</strong> — from Atomic Chess to Medusa Chess</li>
-        <li><strong>Consumer SDK (v0.7.0)</strong> — createGameController(), createReplay(), renderer hooks, unit templates</li>
+        <li><strong>Consumer SDK (v0.7.1)</strong> — createGameController(), createReplay(), renderer hooks, unit templates, effect lifecycle hooks</li>
         <li><strong>2 games powered</strong> — chess variants + Dungeon Chess on the same core</li>
         <li><strong>AI with opening books</strong> — Web Worker search, 26 variant-specific books, multiple difficulty levels</li>
         <li><strong>Developer guides</strong> — Build a Variant, Crazyhouse, Poison Chess, Building Dungeon Chess (consumer integration)</li>

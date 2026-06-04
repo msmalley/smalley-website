@@ -26,6 +26,9 @@ SM.getData('thoughts').then(function(posts) {
     featuredEl.href = SM.url('/thoughts/' + f.slug + '/');
     featuredTitle.textContent = f.title;
     featuredExcerpt.textContent = f.excerpt;
+    var fParts = f.date.split('-');
+    var fDateStr = fParts[2] + '.' + fParts[1];
+    document.getElementById('featured-number').textContent = fDateStr;
     var meta = f.date;
     if (f.readingTime) meta += ' · ' + f.readingTime;
     featuredMeta.textContent = meta;
@@ -39,6 +42,8 @@ SM.getData('thoughts').then(function(posts) {
   var startIdx = featuredEl ? 1 : 0;
   for (var i = startIdx; i < posts.length; i++) {
     var p = posts[i];
+    var parts = p.date.split('-');
+    var dateShort = parts[2] + '.' + parts[1];
     var meta = p.date;
     if (p.readingTime) meta += ' · ' + p.readingTime;
     var tags = null;
@@ -49,7 +54,7 @@ SM.getData('thoughts').then(function(posts) {
       }
     }
     var card = SM.el('a', { class: 'thought-card', href: SM.url('/thoughts/' + p.slug + '/') },
-      SM.el('div', { class: 'thought-card-number' }, '0' + (i + 1)),
+      SM.el('div', { class: 'thought-card-date-big' }, dateShort),
       SM.el('div', { class: 'thought-card-body' },
         SM.el('div', { class: 'thought-card-date' }, meta),
         SM.el('div', { class: 'thought-card-title' }, p.title),

@@ -342,6 +342,8 @@
   .tools-grid { grid-template-columns: 1fr; }
   .oss-grid { grid-template-columns: 1fr; }
   .speaking-grid { grid-template-columns: 1fr; }
+  .speaking-card { text-align: center; }
+  .speaking-card-tags { justify-content: center; }
   .talk-item { grid-template-columns: 1fr; gap: 4px; }
   .tool-stats { gap: 20px; flex-wrap: wrap; }
 }

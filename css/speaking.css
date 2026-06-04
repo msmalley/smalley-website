@@ -200,6 +200,8 @@
   .numbers-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .number-value { font-size: 32px; }
   .credentials-grid { grid-template-columns: 1fr; }
+  .credential-card { text-align: center; }
+  .credential-icon { margin: 0 auto 16px; }
   .evidence-grid { grid-template-columns: 1fr; }
-  .milestone { grid-template-columns: 1fr; gap: 4px; }
+  .milestone { grid-template-columns: 1fr; gap: 4px; text-align: center; }
 }

@@ -170,5 +170,8 @@
   .credentials-grid { grid-template-columns: 1fr; }
   .bridge-grid { grid-template-columns: 1fr; }
   .bridge-content > p { text-align: center; margin: 0 auto 32px; }
-  .milestone { grid-template-columns: 1fr; gap: 4px; }
+  .milestone { grid-template-columns: 1fr; gap: 4px; text-align: center; }
+  .credential-card { text-align: center; }
+  .credential-icon { margin: 0 auto 16px; }
+  .bridge-col-title { text-align: center; }
 }

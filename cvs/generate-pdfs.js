@@ -3,9 +3,9 @@ const path = require('path');
 const fs = require('fs');
 
 const cvs = [
-  { file: 'cv_a_cto.html', pdf: 'Mark-Smalley-CV-CTO.pdf', screenshot: 'cv_a_cto.png' },
-  { file: 'cv_b_regtech.html', pdf: 'Mark-Smalley-CV-RegTech.pdf', screenshot: 'cv_b_regtech.png' },
-  { file: 'cv_c_devrel.html', pdf: 'Mark-Smalley-CV-DevRel.pdf', screenshot: 'cv_c_devrel.png' },
+  { file: 'cv_cto.html', pdf: 'Mark-Smalley-CV-CTO.pdf', screenshot: 'cv_cto.png' },
+  { file: 'cv_regtech.html', pdf: 'Mark-Smalley-CV-RegTech.pdf', screenshot: 'cv_regtech.png' },
+  { file: 'cv_devrel.html', pdf: 'Mark-Smalley-CV-DevRel.pdf', screenshot: 'cv_devrel.png' },
 ];
 
 const htmlDir = path.resolve(__dirname, 'html');

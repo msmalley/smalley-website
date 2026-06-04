@@ -373,6 +373,7 @@
   .article-sidebar {
     position: static;
     padding: 0 0 40px;
+    text-align: center;
   }
 }
 .article-date {

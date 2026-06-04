@@ -291,6 +291,8 @@ img { max-width: 100%; height: auto; display: block; }
   display: flex;
   gap: 12px;
   margin-top: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .cta-box {

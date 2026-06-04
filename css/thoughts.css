@@ -71,6 +71,9 @@
   justify-content: center;
   min-width: 72px;
   align-self: center;
+  padding-right: 32px;
+  margin-right: 32px;
+  border-right: 1px solid var(--sm-border);
 }
 .featured-number .date-month {
   font-family: var(--f-mono);
@@ -208,6 +211,9 @@
   justify-content: center;
   min-width: 56px;
   align-self: center;
+  padding-right: 24px;
+  margin-right: 24px;
+  border-right: 1px solid var(--sm-border);
 }
 .thought-card-date-big .date-month {
   font-family: var(--f-mono);

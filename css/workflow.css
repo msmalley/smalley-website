@@ -327,9 +327,12 @@ a.eco-card {
   .numbers-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .number-value { font-size: 32px; }
   .ecosystem-grid { grid-template-columns: 1fr; }
+  .eco-card { text-align: center; }
+  .eco-icon { margin: 0 auto 16px; }
   .principles-grid { grid-template-columns: 1fr; }
+  .principle { text-align: center; }
   .evidence-grid { grid-template-columns: 1fr; }
-  .workflow-step { flex-direction: column; gap: 8px; }
+  .workflow-step { flex-direction: column; gap: 8px; text-align: center; align-items: center; }
   .step-number { font-size: 24px; }
   .demo-embed-row { grid-template-columns: 1fr; }
 }

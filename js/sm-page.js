@@ -5,8 +5,7 @@
   var renderers = {
     portfolio: renderPortfolio,
     cvs: renderCvs,
-    speaking: renderSpeaking,
-    opensource: renderOpenSource
+    speaking: renderSpeaking
   };
 
   if (renderers[page]) renderers[page]();
@@ -56,45 +55,6 @@
         );
         list.appendChild(item);
       }
-      SM.observe();
-    });
-  }
-
-  function renderOpenSource() {
-    SM.getData('opensource').then(function(items) {
-      var grid = document.querySelector('.oss-grid');
-      if (!grid) return;
-      for (var i = 0; i < items.length; i++) {
-        var o = items[i];
-        var status = o.status || 'production';
-        var stats = SM.el('div', { class: 'tool-card-stats' });
-        if (o.stats) {
-          for (var s = 0; s < o.stats.length; s++) {
-            stats.appendChild(SM.el('span', { class: 'tool-card-stat', 'data-accent': o.accent }, o.stats[s].value + ' ' + o.stats[s].label));
-          }
-        }
-        var href = o.slug ? SM.url('/open-source/' + o.slug + '/') : (o.demo || o.repo || null);
-        var tag = href ? 'a' : 'div';
-        var attrs = { class: 'project-card reveal' };
-        if (href) {
-          attrs.href = href;
-          if (!o.slug) { attrs.target = '_blank'; attrs.rel = 'noopener'; }
-        }
-        var card = SM.el(tag, attrs,
-          SM.el('div', { class: 'card' },
-            SM.el('div', { class: 'oss-card-header' },
-              SM.el('div', { class: 'project-card-eyebrow', 'data-accent': o.accent }, o.role),
-              SM.el('span', { class: 'oss-badge oss-badge-' + status }, status)
-            ),
-            SM.el('div', { class: 'project-card-title' }, o.title),
-            SM.el('div', { class: 'project-card-desc' }, o.tagline),
-            SM.el('div', { class: 'project-card-desc' }, o.description),
-            stats
-          )
-        );
-        grid.appendChild(card);
-      }
-      SM.fillLastRow(grid, '.project-card');
       SM.observe();
     });
   }

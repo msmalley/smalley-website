@@ -101,7 +101,9 @@ h1, h2, h3, h4, h5, h6,
 .evidence-label,
 .demo-caption,
 .intro-text p,
-.intro-text-second {
+.intro-text-second,
+.portfolio-hero-tagline,
+.portfolio-intro {
   text-wrap: balance;
 }
 

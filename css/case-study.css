@@ -124,9 +124,18 @@
     inset: 0;
   }
   .case-hero[data-bg] .container { text-align: center; }
+  .case-hero:not([data-bg]) { text-align: center; }
   .case-meta { justify-content: center; }
   .case-content { padding: 40px 0; }
+  .case-sidebar { text-align: center; }
+  .case-sidebar .pill { margin: 0 3px 6px; }
+  .case-tech { justify-content: center; }
+  .case-links { justify-content: center; }
+  .case-outcome { text-align: center; }
+  .case-nav { justify-content: center; gap: 24px; }
   .demo-embed-row { grid-template-columns: 1fr; }
+  .demo-controls { justify-content: center; }
+  .demo-caption { text-align: center; }
 }
 .case-hero-eyebrow {
   font-family: var(--f-mono);
@@ -262,6 +271,7 @@
   color: var(--sm-muted);
   line-height: 1.8;
   margin-bottom: 16px;
+  text-align: justify;
 }
 .case-content strong { color: var(--sm-text); }
 .case-content ul {

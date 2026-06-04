@@ -58,6 +58,7 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 - Renamed CV files: removed a/b/c prefix (cv_cto, cv_regtech, cv_devrel)
 - Tightened print styles so all CVs fit cleanly on 2 pages
 - Updated README structure to reflect current site pages
+- Speaking page: made "Content That Travels" intro text full-width single line
 
 #### 2026-06-01
 - New article: "Four Protocols, Nine Years, One Design Philosophy" — Everstore, DN-Key, SADO, Oviato design lessons

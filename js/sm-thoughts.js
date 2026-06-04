@@ -21,14 +21,16 @@ SM.getData('thoughts').then(function(posts) {
     }
   }
 
+  var months = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+
   if (featuredEl && posts.length > 0) {
     var f = posts[0];
     featuredEl.href = SM.url('/thoughts/' + f.slug + '/');
     featuredTitle.textContent = f.title;
     featuredExcerpt.textContent = f.excerpt;
     var fParts = f.date.split('-');
-    var fDateStr = fParts[2] + '.' + fParts[1];
-    document.getElementById('featured-number').textContent = fDateStr;
+    var featNumEl = document.getElementById('featured-number');
+    featNumEl.innerHTML = '<span class="date-month">' + months[parseInt(fParts[1], 10) - 1] + '</span><span class="date-year">' + fParts[0] + '</span>';
     var meta = f.date;
     if (f.readingTime) meta += ' · ' + f.readingTime;
     featuredMeta.textContent = meta;
@@ -43,7 +45,6 @@ SM.getData('thoughts').then(function(posts) {
   for (var i = startIdx; i < posts.length; i++) {
     var p = posts[i];
     var parts = p.date.split('-');
-    var dateShort = parts[2] + '.' + parts[1];
     var meta = p.date;
     if (p.readingTime) meta += ' · ' + p.readingTime;
     var tags = null;
@@ -53,8 +54,12 @@ SM.getData('thoughts').then(function(posts) {
         tags.appendChild(SM.el('span', { class: 'pill' }, p.tags[t]));
       }
     }
+    var dateBlock = SM.el('div', { class: 'thought-card-date-big' },
+      SM.el('span', { class: 'date-month' }, months[parseInt(parts[1], 10) - 1]),
+      SM.el('span', { class: 'date-year' }, parts[0])
+    );
     var card = SM.el('a', { class: 'thought-card', href: SM.url('/thoughts/' + p.slug + '/') },
-      SM.el('div', { class: 'thought-card-date-big' }, dateShort),
+      dateBlock,
       SM.el('div', { class: 'thought-card-body' },
         SM.el('div', { class: 'thought-card-date' }, meta),
         SM.el('div', { class: 'thought-card-title' }, p.title),

@@ -65,14 +65,25 @@
   box-shadow: 0 12px 40px rgba(139, 92, 246, 0.08);
 }
 .featured-number {
-  font-family: var(--f-mono);
-  font-weight: 500;
-  font-size: 36px;
-  color: var(--sm-violet-glow);
-  opacity: 0.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-width: 72px;
-  line-height: 1;
-  letter-spacing: -1px;
+  padding-top: 4px;
+}
+.featured-number .date-month {
+  font-family: var(--f-mono);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--sm-violet-glow);
+  letter-spacing: 2px;
+}
+.featured-number .date-year {
+  font-family: var(--f-mono);
+  font-weight: 400;
+  font-size: 22px;
+  color: var(--sm-faint);
+  letter-spacing: -0.5px;
 }
 .featured-body {
   flex: 1;
@@ -190,12 +201,24 @@
 }
 .thought-card:hover { background: var(--sm-surface-alt); }
 .thought-card-date-big {
-  font-family: var(--f-mono);
-  font-weight: 500;
-  font-size: 22px;
-  color: var(--sm-faint);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-width: 56px;
-  line-height: 1.3;
+  padding-top: 4px;
+}
+.thought-card-date-big .date-month {
+  font-family: var(--f-mono);
+  font-weight: 600;
+  font-size: 11px;
+  color: var(--sm-violet-glow);
+  letter-spacing: 1.5px;
+}
+.thought-card-date-big .date-year {
+  font-family: var(--f-mono);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--sm-faint);
   letter-spacing: -0.5px;
 }
 .thought-card-body {
@@ -249,9 +272,9 @@
   .thoughts-featured,
   .thoughts-archive { padding: 48px 0; }
   .featured-article { flex-direction: column; gap: 16px; padding: 28px; }
-  .featured-number { font-size: 28px; }
+  .featured-number .date-year { font-size: 18px; }
   .thought-card { flex-direction: column; gap: 8px; }
-  .thought-card-date-big { font-size: 18px; }
+  .thought-card-date-big .date-year { font-size: 14px; }
 }
 
 /* ── Thoughts Grid (legacy compat) ── */

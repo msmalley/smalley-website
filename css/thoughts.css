@@ -376,6 +376,7 @@
     text-align: center;
   }
   .article-sidebar .share-btns { justify-content: center; }
+  .article-sidebar .article-tags { justify-content: center; }
   .article-sidebar .pill { margin: 0 3px 6px; }
 }
 .article-date {

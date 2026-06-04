@@ -64,13 +64,24 @@
 
       <p>Both sides have merit. The market has spoken. People will pay significant fees to inscribe data on Bitcoin. Whether that's a feature or a bug depends on whether you believe Bitcoin's purpose is narrowly financial or broadly computational.</p>
 
+      <hr>
+
       <h2>The Cardinal Sin</h2>
 
       <p>So what's the actual cardinal sin? It's not inscriptions. It's not the indexing dependency. It's the <strong>conflation of protocol-level guarantees with application-level assumptions</strong>.</p>
 
       <p>When someone says "this sat is rare" or "this inscription is permanent," they're making claims that Bitcoin's protocol doesn't make. The rarity is defined by an indexer's interpretation. The permanence depends on nodes continuing to store witness data (which they're allowed to prune). The value depends on consensus among ordinal participants, a social layer, not a technical one.</p>
 
-      <p>That doesn't make ordinals worthless. It makes them honest about what they are: <strong>an application-layer market operating on Bitcoin's data availability guarantees, not its consensus guarantees</strong>. The sin is when that distinction gets lost in the marketing.</p>
+      <p>That doesn't make ordinals worthless. It makes them honest about what they are: an application-layer market operating on Bitcoin's data availability guarantees, not its consensus guarantees. The layers stack like this:</p>
+
+      <ul>
+        <li><strong>Consensus layer</strong> — Bitcoin protocol, verified by every node, trustless</li>
+        <li><strong>Data availability layer</strong> — witness data, stored by full nodes, prunable</li>
+        <li><strong>Indexing layer</strong> — ordinal numbering, tracked by specialised nodes, no consensus mechanism</li>
+        <li><strong>Market layer</strong> — value assigned by participants, social agreement only</li>
+      </ul>
+
+      <p>The sin is when that distinction gets lost in the marketing.</p>
 
       <p>I've built on this layer. I co-authored the <a href="../../portfolio/sado-protocol/">SADO Protocol</a> for trustless ordinal trading, built <a href="../../portfolio/ordzaar/">Ordzaar</a>'s initial marketplace, contributed to the <a href="../../open-source/ordit-sdk/">Ordit indexer</a>. I believe the technology works. I just think we should be precise about <em>what exactly</em> is being guaranteed, and by whom.</p>
 

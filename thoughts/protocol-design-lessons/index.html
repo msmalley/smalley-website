@@ -46,7 +46,15 @@
 
       <p>Everstore emerged from a 2015 hackathon organised by <a href="../../speaking/blockchain-for-developers/">DBS Bank in Singapore</a>. Teams needed to store structured data on Bitcoin, and Bitcoin's OP_RETURN gave them roughly 38 bytes after protocol overhead. Most people looked at that ceiling and concluded you couldn't build anything useful. I asked a different question: what if the 38 bytes aren't the database, but the <em>schema</em>?</p>
 
-      <p>Everstore maps a complete relational database engine onto BIP32 key derivation. Each branch of the key tree has a defined role, a node map: Meta, Schema-Tree, Index-Tree, Record-Tree, Accumulation-Tree, Public-Tree. A route like <code>2 | 6032 | 38</code> means Schema-Tree → datastore #6032 → field #38. Each route derives a unique blockchain address. Data lives in the OP_RETURN of transactions sent from those addresses. The latest transaction equals current value, previous transactions form an immutable audit trail. Anyone with the master public key can derive all addresses and read all public data. Only writing requires private keys.</p>
+      <p>Everstore maps a complete relational database engine onto BIP32 key derivation. Each branch of the key tree has a defined role, a node map: Meta, Schema-Tree, Index-Tree, Record-Tree, Accumulation-Tree, Public-Tree. Each route derives a unique blockchain address. Data lives in the OP_RETURN of transactions sent from those addresses. The latest transaction equals current value, previous transactions form an immutable audit trail.</p>
+
+      <pre><code>Route: 2 | 6032 | 38
+       ↳ Schema-Tree → datastore #6032 → field #38
+       ↳ derives unique blockchain address
+       ↳ OP_RETURN = current value
+       ↳ tx history = immutable audit trail</code></pre>
+
+      <p>Anyone with the master public key can derive all addresses and read all public data. Only writing requires private keys.</p>
 
       <p>The result: full CRUD operations, 999 million datastores, 999 million fields per store, unlimited records, three encryption tiers, indexed lookups, relationships, and pseudo-delete via hashbang commands. All entirely on UTXO blockchains. All data on-chain. No external storage. No auxiliary servers. The blockchain is the database. Blockchain-agnostic, tested on Bitcoin and Dogecoin, works on anything with OP_RETURN and BIP32.</p>
 
@@ -54,9 +62,15 @@
 
       <p>The lesson: <strong>constraints aren't limitations. They're architecture.</strong> The 38-byte ceiling forced a design where HD derivation does double duty: schema and addressing in one mechanism. No external dependencies, no auxiliary storage to maintain, no trust in anything beyond the chain. If I'd had unlimited on-chain space, I'd have designed something worse. Something that didn't need to be this clever.</p>
 
+      <hr>
+
       <h2>DN-Key (2016): Borrow Trust, Don't Invent It</h2>
 
-      <p><a href="../../open-source/dn-key-protocol/">DN-Key</a> is absurdly simple. Publish your cryptographic public keys as DNS TXT records: <code>_dnkey.example.com TXT "v=DNKEY1; k=bitcoin; p=xpub..."</code>. Verification is a DNS lookup. That's it. That's the entire protocol.</p>
+      <p><a href="../../open-source/dn-key-protocol/">DN-Key</a> is absurdly simple. Publish your cryptographic public keys as DNS TXT records. Verification is a DNS lookup. That's it. That's the entire protocol.</p>
+
+      <pre><code>_dnkey.example.com TXT "v=DNKEY1; k=bitcoin; p=xpub6CUGRUo..."
+_dnkey.example.com TXT "v=DNKEY1; k=ethereum; p=0x742d35Cc..."
+_dnkey.example.com TXT "v=DNKEY1; k=nostr; p=npub1xyz..."</code></pre>
 
       <p>The insight was that DNS already solves the trust problem for everything else. SPF proves email sending authority. DKIM publishes signing keys. SSL certificates prove domain ownership. The infrastructure for broadcasting machine-readable key material is globally distributed, battle-tested across billions of lookups per day, and already trusted by compliance teams at regulated institutions. The audit procedures are written. The management tools exist. The trust model is established.</p>
 
@@ -70,6 +84,8 @@
 
       <p>But DN-Key's real vindication came nine years later.</p>
 
+      <hr>
+
       <h2>SADO (2023): Minimal Chain Footprint, Maximum Utility</h2>
 
       <p>By 2023, Bitcoin Ordinals had created a marketplace problem: people wanted to trade inscribed satoshis, but every existing solution required custodial escrow or centralised order books. The ecosystem needed a trustless trading mechanism open enough that competing marketplaces could all use it.</p>
@@ -81,6 +97,8 @@
       <p><a href="../../portfolio/ordzaar/">Ordzaar</a> adopted SADO because it was the only option that didn't require trust. Not because we pitched them. Not because of a partnership. Because when you design a protocol with zero trust assumptions, adoption becomes a technical decision rather than a business negotiation. We built developer tooling around SADO (the <a href="../../open-source/ordit-sdk/">Ordit SDK</a> for indexing and parsing), but the tooling isn't the protocol. Protocols without developer experience don't get adopted, but DX without a sound protocol is just a nice API over a bad foundation.</p>
 
       <p>The lesson: <strong>minimise what touches the chain.</strong> Every byte on-chain is permanent, expensive, and inflexible. PSBTs as the primitive means the protocol is just Bitcoin transactions with a specific structure. No custom opcodes, no chain upgrades, no new consensus rules. The chain stays dumb. The intelligence lives in how you structure what's already there.</p>
+
+      <hr>
 
       <h2>Oviato (2025): Sometimes You're Early, Not Wrong</h2>
 

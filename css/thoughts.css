@@ -1,6 +1,118 @@
-.thoughts-grid {
-  display: grid;
-  grid-template-columns: 1fr;
+/* ── Thoughts Index ── */
+.thoughts-hero {
+  padding: 140px 0 60px;
+  border-bottom: 1px solid var(--sm-border);
+  position: relative;
+  overflow: hidden;
+}
+.thoughts-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 70% at 20% 50%, rgba(139, 92, 246, 0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 50% at 80% 30%, rgba(168, 85, 247, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.thoughts-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.2;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+.thoughts-hero h1 {
+  font-family: var(--f-display);
+  font-weight: 700;
+  font-size: clamp(36px, 6vw, 64px);
+  letter-spacing: -3px;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+.thoughts-hero-tagline {
+  font-size: 16px;
+  color: var(--sm-muted);
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+.thoughts-featured,
+.thoughts-archive {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--sm-border);
+}
+
+/* ── Featured Article ── */
+.featured-article {
+  display: flex;
+  gap: 32px;
+  text-decoration: none;
+  color: inherit;
+  background: var(--sm-surface);
+  border: 1px solid var(--sm-border);
+  border-radius: 16px;
+  padding: 40px;
+  margin-top: 24px;
+  transition: border-color 0.3s, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s;
+}
+.featured-article:hover {
+  border-color: rgba(139, 92, 246, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(139, 92, 246, 0.08);
+}
+.featured-number {
+  font-family: var(--f-display);
+  font-weight: 800;
+  font-size: 48px;
+  color: var(--sm-violet-glow);
+  opacity: 0.4;
+  min-width: 64px;
+  line-height: 1;
+}
+.featured-body {
+  flex: 1;
+  min-width: 0;
+}
+.featured-meta {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  color: var(--sm-faint);
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+.featured-title {
+  font-family: var(--f-heading);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--sm-text);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+.featured-excerpt {
+  font-size: 15px;
+  color: var(--sm-muted);
+  line-height: 1.7;
+  max-width: 560px;
+}
+.featured-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 16px;
+}
+.featured-tags .pill {
+  font-size: 10px;
+  padding: 2px 8px;
+}
+
+/* ── Archive List ── */
+.thoughts-list {
+  display: flex;
+  flex-direction: column;
   gap: 1px;
   background: var(--sm-border);
   border: 1px solid var(--sm-border);
@@ -8,18 +120,31 @@
   overflow: hidden;
 }
 .thought-card {
-  display: block;
+  display: flex;
+  gap: 24px;
   text-decoration: none;
   background: var(--sm-surface);
   padding: 28px 32px;
   transition: background 0.2s;
 }
 .thought-card:hover { background: var(--sm-surface-alt); }
+.thought-card-number {
+  font-family: var(--f-display);
+  font-weight: 800;
+  font-size: 28px;
+  color: var(--sm-faint);
+  min-width: 40px;
+  line-height: 1.2;
+}
+.thought-card-body {
+  flex: 1;
+  min-width: 0;
+}
 .thought-card-date {
   font-family: var(--f-mono);
   font-size: 11px;
   color: var(--sm-faint);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 .thought-card-title {
   font-family: var(--f-heading);
@@ -42,6 +167,28 @@
 .thought-card-tags .pill {
   font-size: 10px;
   padding: 2px 8px;
+}
+
+@media (max-width: 768px) {
+  .thoughts-hero { padding: 100px 0 40px; text-align: center; }
+  .thoughts-hero-tagline { margin: 0 auto; }
+  .thoughts-featured,
+  .thoughts-archive { padding: 48px 0; }
+  .featured-article { flex-direction: column; gap: 16px; padding: 28px; }
+  .featured-number { font-size: 32px; }
+  .thought-card { flex-direction: column; gap: 8px; }
+  .thought-card-number { font-size: 20px; }
+}
+
+/* ── Thoughts Grid (legacy compat) ── */
+.thoughts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: var(--sm-border);
+  border: 1px solid var(--sm-border);
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .article-content {

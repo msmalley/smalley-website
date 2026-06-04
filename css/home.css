@@ -215,4 +215,5 @@
   .live-value { font-size: 22px; }
   .featured-section { padding: 48px 0; }
   .featured-grid { grid-template-columns: 1fr; }
+  .featured-card { text-align: center; }
 }

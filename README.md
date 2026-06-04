@@ -10,9 +10,10 @@ Personal portfolio and CV site for Mark Smalley — engineering leader, protocol
 ├── portfolio/          Case studies (Ordzaar, CoKeeps, Neuroware, etc.)
 ├── thoughts/           Blog/writing section
 ├── speaking/           Speaking engagements and media
-├── timeline/           Career timeline
-├── tools/              Developer tools showcase
-├── open-source/        Open source contributions
+├── workflow/           AI-augmented engineering methodology and live demos
+├── regtech/            Regulatory credentials and advisory track record
+├── explore/            Filterable content grid by tech tag
+├── open-source/        Open source contributions and protocol pages
 ├── css/                Stylesheets (_sm.css base + page-specific)
 ├── js/                 JavaScript (SM framework: loader, core, navbar, footer, animations)
 ├── data/               JSON data files driving all pages
@@ -43,6 +44,17 @@ Propagates to all `?v=` query strings in HTML, `sm-loader.js`, and `sm-core.js`.
 GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 
 ## Changelog
+
+#### 2026-06-04
+- Resolved issue #17: renamed css/process.css to css/workflow.css with all class names updated
+- Renamed OG images: process.jpg to workflow.jpg, thoughts-game-engines.jpg to thoughts-16-days.jpg
+- Removed dead timeline code: data/timeline.json, timeline OG image, timeline CSS from pages.css
+- CV Tier 1 improvements across all three variants (CTO, RegTech, DevRel)
+- CTO CV: Moddable reframed as AI-augmented engineering methodology, bullets tightened to impact-first
+- RegTech CV: executive summary trimmed to 3 sentences, Moddable reframed as algorithmic decision systems, regulatory framework bridge added
+- DevRel CV: SlideShare line updated with verified metrics (21 presentations, 59K+ views, 31.5K on "Introducing Bitcoin")
+- Added hyperlinks to verifiable claims across all CVs (SADO, DN-Key, Everstore, TEDx)
+- Updated README structure to reflect current site pages
 
 #### 2026-06-01
 - New article: "Four Protocols, Nine Years, One Design Philosophy" — Everstore, DN-Key, SADO, Oviato design lessons

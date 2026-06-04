@@ -51,10 +51,9 @@
   function buildArticleSidebar(article) {
     var container = article.parentElement;
     var tags = article.querySelector('.article-tags');
-    var back = article.querySelector('.article-back');
     var related = article.querySelector('.related-writing');
 
-    if (!tags && !back) return;
+    if (!tags) return;
 
     container.classList.add('article-layout');
 
@@ -77,10 +76,6 @@
 
     if (related) {
       sidebar.appendChild(related);
-    }
-
-    if (back) {
-      sidebar.appendChild(back);
     }
 
     container.appendChild(sidebar);

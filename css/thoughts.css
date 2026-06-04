@@ -332,11 +332,6 @@
 .article-sidebar .pill {
   margin: 0 4px 6px 0;
 }
-.article-sidebar .article-back {
-  margin-top: 24px;
-  padding-top: 16px;
-  border-top: 1px solid var(--sm-border);
-}
 .share-btns {
   display: flex;
   gap: 6px;
@@ -521,11 +516,4 @@
   border-radius: 8px;
   border: 1px solid var(--sm-border);
   margin: 24px 0;
-}
-.article-back {
-  margin-top: 48px;
-  padding-top: 24px;
-  border-top: 1px solid var(--sm-border);
-  font-family: var(--f-mono);
-  font-size: 12px;
 }

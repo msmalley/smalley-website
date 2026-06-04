@@ -68,8 +68,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   min-width: 72px;
-  padding-top: 4px;
+  align-self: center;
 }
 .featured-number .date-month {
   font-family: var(--f-mono);
@@ -204,8 +205,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   min-width: 56px;
-  padding-top: 4px;
+  align-self: center;
 }
 .thought-card-date-big .date-month {
   font-family: var(--f-mono);

@@ -375,6 +375,8 @@
     padding: 0 0 40px;
     text-align: center;
   }
+  .article-sidebar .share-btns { justify-content: center; }
+  .article-sidebar .pill { margin: 0 3px 6px; }
 }
 .article-date {
   font-family: var(--f-mono);

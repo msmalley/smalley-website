@@ -1,24 +1,226 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-  <title>Mark Smalley — Thoughts</title>
-  <link>https://smalley.my/thoughts/</link>
-  <description>Writing on blockchain infrastructure, AI-augmented development, and building in public.</description>
+  <title>Mark Smalley</title>
+  <link>https://smalley.my/</link>
+  <description>Protocol design, AI-augmented engineering, and building in public.</description>
   <language>en</language>
   <atom:link href="https://smalley.my/feed.xml" rel="self" type="application/rss+xml"/>
   <item>
-    <title>Building Two Open-Source Game Engines in Six Months (With AI)</title>
-    <link>https://smalley.my/thoughts/building-open-source-game-engines/</link>
-    <guid>https://smalley.my/thoughts/building-open-source-game-engines/</guid>
-    <pubDate>Thu, 29 May 2025 00:00:00 +0000</pubDate>
-    <description>What happens when you point LLM-driven development at the problem of building modular, embeddable game engines from scratch? 64 chess variants and infinite hex maps later, here's what I learned.</description>
+    <title>Four Protocols, Nine Years, One Design Philosophy</title>
+    <link>https://smalley.my/thoughts/protocol-design-lessons/</link>
+    <guid>https://smalley.my/thoughts/protocol-design-lessons/</guid>
+    <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+    <category>Writing</category>
+    <description>From Everstore's 38-byte database to Oviato's passkey wallets — what I learned designing protocols that other people actually adopt.</description>
+  </item>
+  <item>
+    <title>What Regulators Actually Need from Blockchain Teams</title>
+    <link>https://smalley.my/thoughts/what-regulators-need/</link>
+    <guid>https://smalley.my/thoughts/what-regulators-need/</guid>
+    <pubDate>Sat, 30 May 2026 00:00:00 GMT</pubDate>
+    <category>Writing</category>
+    <description>After advising Malaysia's Securities Commission for 2 years and spending 5 years getting CoKeeps approved, here's what regulators care about — and it's not what most blockchain teams think.</description>
+  </item>
+  <item>
+    <title>The Case for Vanilla JS in 2026</title>
+    <link>https://smalley.my/thoughts/the-case-for-vanilla-js/</link>
+    <guid>https://smalley.my/thoughts/the-case-for-vanilla-js/</guid>
+    <pubDate>Fri, 29 May 2026 00:00:00 GMT</pubDate>
+    <category>Writing</category>
+    <description>Six production sites, a 70-variant chess engine with tiered plugin architecture, 169 JS modules — zero frameworks, zero build steps. The constraint isn't a limitation. It's the architecture.</description>
+  </item>
+  <item>
+    <title>16 Days, One Ecosystem</title>
+    <link>https://smalley.my/thoughts/16-days-one-ecosystem/</link>
+    <guid>https://smalley.my/thoughts/16-days-one-ecosystem/</guid>
+    <pubDate>Thu, 29 May 2025 00:00:00 GMT</pubDate>
+    <category>Writing</category>
+    <description>Four games, two engines, nine mods, and a documentation pipeline. How architecture decisions made it possible to ship an entire open-source ecosystem in 16 days.</description>
+  </item>
+  <item>
+    <title>Oviato</title>
+    <link>https://smalley.my/portfolio/oviato/</link>
+    <guid>https://smalley.my/portfolio/oviato/</guid>
+    <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
+    <category>Portfolio</category>
+    <description>Co-founded and led the technical pivot from consumer app to passkey-native wallet infrastructure. Built on a weekend hackathon prototype. The pivot secured DraperVC investment.</description>
+  </item>
+  <item>
+    <title>Moddable Games</title>
+    <link>https://smalley.my/portfolio/moddable/</link>
+    <guid>https://smalley.my/portfolio/moddable/</guid>
+    <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
+    <category>Portfolio</category>
+    <description>Open-source games studio shipped in 16 days using AI-augmented engineering. Two engines (chess + hexmaps), four games, and a consumer SDK that powers non-chess games without engine forks.</description>
+  </item>
+  <item>
+    <title>Moddable Chess Engine</title>
+    <link>https://smalley.my/open-source/moddable-chess-engine/</link>
+    <guid>https://smalley.my/open-source/moddable-chess-engine/</guid>
+    <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
+    <category>Open Source</category>
+    <description>Consumer game framework (v0.7.1). 70 chess variants plus a reusable SDK that powers non-chess games. Multi-depth AI with opening books, postMessage embed API, tiered plugin architecture. Dungeon Chess runs entirely on MCE without engine forks.</description>
+  </item>
+  <item>
+    <title>Moddable Hexmaps</title>
+    <link>https://smalley.my/open-source/moddable-hexmaps/</link>
+    <guid>https://smalley.my/open-source/moddable-hexmaps/</guid>
+    <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
+    <category>Open Source</category>
+    <description>Hex map framework (v0.5.1) with seeded procedural generation, 4 render styles, PNG/PDF/SVG export, hex metadata, and URL parameter API. Powers 4 games with 7 Colony layouts.</description>
+  </item>
+  <item>
+    <title>PDF Pagination Engine</title>
+    <link>https://smalley.my/open-source/pdf-pagination-engine/</link>
+    <guid>https://smalley.my/open-source/pdf-pagination-engine/</guid>
+    <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
+    <category>Open Source</category>
+    <description>Pagination system that measures rendered element heights, groups headings atomically, enforces page-fill minimums, and assembles multi-section documents. Pure DOM measurement, no wkhtmltopdf.</description>
+  </item>
+  <item>
+    <title>Ordit SDK</title>
+    <link>https://smalley.my/open-source/ordit-sdk/</link>
+    <guid>https://smalley.my/open-source/ordit-sdk/</guid>
+    <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
+    <category>Open Source</category>
+    <description>Indexer, parser, and API toolkit for Bitcoin Ordinals and Inscriptions. Multiple repos under the sadoprotocol organisation powering Ordzaar and third-party marketplaces.</description>
+  </item>
+  <item>
+    <title>Everstore Protocol</title>
+    <link>https://smalley.my/open-source/everstore/</link>
+    <guid>https://smalley.my/open-source/everstore/</guid>
+    <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
+    <category>Open Source</category>
+    <description>Complete relational database engine mapped onto BIP32 key derivation. CRUD, indexed lookups, three encryption tiers, immutable audit trails. All on-chain, published 2016 before EVM existed.</description>
+  </item>
+  <item>
+    <title>DN-Key Protocol</title>
+    <link>https://smalley.my/open-source/dn-key-protocol/</link>
+    <guid>https://smalley.my/open-source/dn-key-protocol/</guid>
+    <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
+    <category>Open Source</category>
+    <description>Key management standard using DNS TXT records to broadcast public keys. Adopted by ATA Plus ECF (2016), cited in SC Malaysia's capital markets blueprint (2018), reused in Oviato's chain-agnostic identity layer (2025).</description>
+  </item>
+  <item>
+    <title>Blockchain Embassy of Asia</title>
+    <link>https://smalley.my/open-source/blockchain-embassy/</link>
+    <guid>https://smalley.my/open-source/blockchain-embassy/</guid>
+    <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
+    <category>Open Source</category>
+    <description>ASEAN's first public blockchain consortium. Operated a private proof-of-authority EVM network with members from Maybank, RHB, Capital Bay, and ATA Plus.</description>
   </item>
   <item>
     <title>The Cardinal Sins of Bitcoin Ordinals</title>
     <link>https://smalley.my/thoughts/cardinal-sins-of-bitcoin-ordinals/</link>
     <guid>https://smalley.my/thoughts/cardinal-sins-of-bitcoin-ordinals/</guid>
-    <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
+    <pubDate>Fri, 15 Mar 2024 00:00:00 GMT</pubDate>
+    <category>Writing</category>
     <description>Did you know that although your wallet might say that you only have 0.00000001 Bitcoin, depending upon where that Bitcoin came from and what's attached, it could actually be worth millions of dollars?</description>
+  </item>
+  <item>
+    <title>Project Eden</title>
+    <link>https://smalley.my/portfolio/project-eden/</link>
+    <guid>https://smalley.my/portfolio/project-eden/</guid>
+    <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+    <category>Portfolio</category>
+    <description>Weekend hackathon prototype proving passkey-native crypto wallets without passwords or seed phrases. Evolved into Oviato.</description>
+  </item>
+  <item>
+    <title>Ordzaar</title>
+    <link>https://smalley.my/portfolio/ordzaar/</link>
+    <guid>https://smalley.my/portfolio/ordzaar/</guid>
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <category>Portfolio</category>
+    <description>Built the first prototype as sole developer. Fully decentralised, on-chain marketplace with no traditional database. Became CakeDefi's fifth business vertical, then spun out independently.</description>
+  </item>
+  <item>
+    <title>SADO Protocol</title>
+    <link>https://smalley.my/portfolio/sado-protocol/</link>
+    <guid>https://smalley.my/portfolio/sado-protocol/</guid>
+    <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+    <category>Portfolio</category>
+    <description>Co-authored decentralised trading protocol for Bitcoin Ordinals. Open-source SDK adopted by Ordzaar and third-party exchanges.</description>
+  </item>
+  <item>
+    <title>BloqVerse</title>
+    <link>https://smalley.my/portfolio/bloqverse/</link>
+    <guid>https://smalley.my/portfolio/bloqverse/</guid>
+    <pubDate>Tue, 01 Jan 2019 00:00:00 GMT</pubDate>
+    <category>Portfolio</category>
+    <description>On-chain multiplayer game platform built on 30+ interconnected Ethereum smart contracts. Emerged from research at the Blockchain Embassy.</description>
+  </item>
+  <item>
+    <title>CoKeeps</title>
+    <link>https://smalley.my/portfolio/cokeeps/</link>
+    <guid>https://smalley.my/portfolio/cokeeps/</guid>
+    <pubDate>Mon, 01 Jan 2018 00:00:00 GMT</pubDate>
+    <category>Portfolio</category>
+    <description>Co-founded and funded through R1. Five years from concept to regulatory approval. Designed compliance architecture, KYC/AML pipelines, and custody infrastructure.</description>
+  </item>
+  <item>
+    <title>Project Castor</title>
+    <link>https://smalley.my/portfolio/project-castor/</link>
+    <guid>https://smalley.my/portfolio/project-castor/</guid>
+    <pubDate>Mon, 01 Jan 2018 00:00:00 GMT</pubDate>
+    <category>Portfolio</category>
+    <description>Two-year blockchain advisory with Malaysia's Securities Commission, leading to the Digital Asset Custodian regulatory framework.</description>
+  </item>
+  <item>
+    <title>The Cost of Cash</title>
+    <link>https://smalley.my/speaking/the-cost-of-cash/</link>
+    <guid>https://smalley.my/speaking/the-cost-of-cash/</guid>
+    <pubDate>Sun, 01 Jan 2017 00:00:00 GMT</pubDate>
+    <category>Speaking</category>
+    <description>Demystifying Bitcoin and decentralised money for a mainstream audience. First formal public presentation at Sarawak's inaugural TEDx event, attended by government dignitaries.</description>
+  </item>
+  <item>
+    <title>Gold, Bitcoin, and Digital Sunnah Instruments</title>
+    <link>https://smalley.my/speaking/conferences/</link>
+    <guid>https://smalley.my/speaking/conferences/</guid>
+    <pubDate>Sun, 01 Jan 2017 00:00:00 GMT</pubDate>
+    <category>Speaking</category>
+    <description>Blockchain applications in Islamic Finance — addressing institutional audiences on digital asset frameworks.</description>
+  </item>
+  <item>
+    <title>Introduction to Blockchains / Unblocking the Mystery</title>
+    <link>https://smalley.my/speaking/bfm-radio/</link>
+    <guid>https://smalley.my/speaking/bfm-radio/</guid>
+    <pubDate>Fri, 01 Jan 2016 00:00:00 GMT</pubDate>
+    <category>Speaking</category>
+    <description>Two live radio appearances on Malaysia's English business radio explaining blockchain to mainstream business audiences.</description>
+  </item>
+  <item>
+    <title>Blockchain Infrastructure for Developers</title>
+    <link>https://smalley.my/speaking/blockchain-for-developers/</link>
+    <guid>https://smalley.my/speaking/blockchain-for-developers/</guid>
+    <pubDate>Fri, 01 Jan 2016 00:00:00 GMT</pubDate>
+    <category>Speaking</category>
+    <description>Developer and institutional audiences on blockchain infrastructure. Recorded talk demonstrating the BlockStrap SDK.</description>
+  </item>
+  <item>
+    <title>Neuroware</title>
+    <link>https://smalley.my/portfolio/neuroware/</link>
+    <guid>https://smalley.my/portfolio/neuroware/</guid>
+    <pubDate>Tue, 01 Jan 2013 00:00:00 GMT</pubDate>
+    <category>Portfolio</category>
+    <description>500 Startups Batch 9, launched at TechCrunch Disrupt London. Open-source blockchain wallet and SDK infrastructure handling 1M+ API requests. The only Malaysian company in Deloitte's Top 50 Global RegTech.</description>
+  </item>
+  <item>
+    <title>Introducing Bitcoin: The Mostly Visual Guide</title>
+    <link>https://smalley.my/speaking/webcamp-kl/</link>
+    <guid>https://smalley.my/speaking/webcamp-kl/</guid>
+    <pubDate>Tue, 01 Jan 2013 00:00:00 GMT</pubDate>
+    <category>Speaking</category>
+    <description>One of the earliest Bitcoin developer presentations in Southeast Asia. Multiple recorded sessions at WebCamp KL meetups.</description>
+  </item>
+  <item>
+    <title>R1</title>
+    <link>https://smalley.my/portfolio/r1/</link>
+    <guid>https://smalley.my/portfolio/r1/</guid>
+    <pubDate>Sun, 01 Jan 2012 00:00:00 GMT</pubDate>
+    <category>Portfolio</category>
+    <description>Holding and operating company behind Neuroware, CoKeeps, Blockchain Embassy, and more. First company in the SC Malaysia regulatory sandbox. Enterprise clients include DBS Bank and Baker Hostetler.</description>
   </item>
 </channel>
 </rss>

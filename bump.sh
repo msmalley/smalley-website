@@ -34,4 +34,7 @@ find . -name "sm-core.js" | while read -r file; do
   eval "$SED \"s/const VERSION = '[0-9]+\\.[0-9]+\\.[0-9]+'/const VERSION = '$NEW'/\" \"$file\""
 done
 
+# Regenerate feed.xml and sitemap.xml from data files
+node build/gen-feeds.js
+
 echo "Bumped $CURRENT → $NEW ($TYPE)"

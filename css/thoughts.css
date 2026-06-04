@@ -49,7 +49,7 @@
 /* ── Featured Article ── */
 .featured-article {
   display: flex;
-  gap: 32px;
+  gap: 0;
   text-decoration: none;
   color: inherit;
   background: var(--sm-surface);
@@ -71,8 +71,8 @@
   justify-content: center;
   min-width: 72px;
   align-self: center;
-  padding-right: 32px;
-  margin-right: 32px;
+  padding-right: 28px;
+  margin-right: 28px;
   border-right: 1px solid var(--sm-border);
 }
 .featured-number .date-month {
@@ -197,7 +197,7 @@
 }
 .thought-card {
   display: flex;
-  gap: 24px;
+  gap: 0;
   text-decoration: none;
   background: var(--sm-surface);
   padding: 28px 32px;
@@ -211,8 +211,8 @@
   justify-content: center;
   min-width: 56px;
   align-self: center;
-  padding-right: 24px;
-  margin-right: 24px;
+  padding-right: 20px;
+  margin-right: 20px;
   border-right: 1px solid var(--sm-border);
 }
 .thought-card-date-big .date-month {

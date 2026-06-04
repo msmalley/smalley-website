@@ -76,5 +76,53 @@
     "outcome": "2 engines, 4 games, 9 mods, consumer SDK. 16 days, solo founder.",
     "tech": ["JavaScript", "Canvas", "AI/LLM", "Puppeteer", "GitHub Pages"],
     "links": { "live": "https://moddable.games" }
+  },
+  {
+    "slug": "sado-protocol",
+    "title": "SADO Protocol",
+    "role": "Co-author",
+    "company": "CakeDefi / Open Source",
+    "year": "2023",
+    "accent": "teal",
+    "tagline": "Decentralised trading protocol for Bitcoin Ordinals",
+    "summary": "Co-authored decentralised trading protocol for Bitcoin Ordinals. Open-source SDK adopted by Ordzaar and third-party exchanges.",
+    "outcome": "Open standard adopted across the Ordinals ecosystem.",
+    "tech": ["Bitcoin", "PSBTs", "IPFS", "Ordinals", "Inscriptions", "Node.js"]
+  },
+  {
+    "slug": "project-castor",
+    "title": "Project Castor",
+    "role": "Technical Advisor",
+    "company": "Securities Commission Malaysia",
+    "year": "2018",
+    "accent": "gold",
+    "tagline": "SC Malaysia blockchain blueprint and custody framework",
+    "summary": "Two-year blockchain advisory with Malaysia's Securities Commission, leading to the Digital Asset Custodian regulatory framework.",
+    "outcome": "Directly informed national Digital Asset Custodian regulation.",
+    "tech": ["Ethereum", "Solidity", "ERC-20", "ERC-721", "KYC/AML", "Regulatory Compliance", "Dogecoin"]
+  },
+  {
+    "slug": "project-eden",
+    "title": "Project Eden",
+    "role": "Creator",
+    "company": "R1",
+    "year": "2024",
+    "accent": "teal",
+    "tagline": "Passkey-native crypto wallet prototype",
+    "summary": "Weekend hackathon prototype proving passkey-native crypto wallets without passwords or seed phrases. Evolved into Oviato.",
+    "outcome": "Weekend prototype that became Oviato (DraperVC-funded startup).",
+    "tech": ["WebAuthN", "PassKeys", "Schnorr Signatures", "MPC", "Bitcoin", "Ethereum", "Secure Enclave"]
+  },
+  {
+    "slug": "bloqverse",
+    "title": "BloqVerse",
+    "role": "Architect",
+    "company": "R1 / Blockchain Embassy",
+    "year": "2019",
+    "accent": "teal",
+    "tagline": "On-chain multiplayer game platform on Ethereum",
+    "summary": "On-chain multiplayer game platform built on 30+ interconnected Ethereum smart contracts. Emerged from research at the Blockchain Embassy.",
+    "outcome": "30+ smart contracts, fully serverless architecture with IPFS frontend.",
+    "tech": ["Solidity", "Ethereum", "IPFS", "Upgradeable Contracts", "ERC-20", "ERC-721", "Proof of Authority"]
   }
 ]

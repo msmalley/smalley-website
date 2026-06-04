@@ -393,6 +393,7 @@
   color: var(--sm-muted);
   line-height: 1.85;
   margin-bottom: 20px;
+  text-align: justify;
 }
 .article-content p strong { color: var(--sm-text); }
 .article-content a {

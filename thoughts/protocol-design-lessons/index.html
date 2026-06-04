@@ -38,13 +38,13 @@
 
       <p>In February 2016, I published an opinion piece arguing that the Bitcoin community was squandering the network's potential by treating it exclusively as a financial ledger. The block size wars were consuming all the oxygen (Core vs. Classic vs. Unlimited) while the more interesting question went unasked: what else can an immutable, distributed event store actually do?</p>
 
-      <p>That same month, I shipped the answer. Everstore was a protocol that delivered smart-contract-like database functionality on UTXO chains (fields, indexes, relationships) using nothing but 38 bytes of OP_RETURN and hierarchical deterministic key derivation. This was before Ethereum's EVM had made programmable blockchains mainstream. Before Segregated Witness. Before Taproot. I was building structured applications on Bitcoin when the consensus opinion was that Bitcoin couldn't do anything beyond payments.</p>
+      <p>That same month, I shipped the answer. <a href="../../open-source/everstore/">Everstore</a> was a protocol that delivered smart-contract-like database functionality on UTXO chains (fields, indexes, relationships) using nothing but 38 bytes of OP_RETURN and hierarchical deterministic key derivation. This was before Ethereum's EVM had made programmable blockchains mainstream. Before Segregated Witness. Before Taproot. I was building structured applications on Bitcoin when the consensus opinion was that Bitcoin couldn't do anything beyond payments.</p>
 
       <p>Nine years and three more protocols later, I can articulate something I was doing instinctively back then: <strong>design for constraints, borrow existing trust, keep the chain dumb, and accept that sometimes you're just early.</strong></p>
 
       <h2>Everstore (2016): Build on Hostile Constraints</h2>
 
-      <p>Everstore emerged from a 2015 hackathon organised by DBS Bank in Singapore. Teams needed to store structured data on Bitcoin, and Bitcoin's OP_RETURN gave them roughly 38 bytes after protocol overhead. Most people looked at that ceiling and concluded you couldn't build anything useful. I asked a different question: what if the 38 bytes aren't the database, but the <em>schema</em>?</p>
+      <p>Everstore emerged from a 2015 hackathon organised by <a href="../../speaking/blockchain-for-developers/">DBS Bank in Singapore</a>. Teams needed to store structured data on Bitcoin, and Bitcoin's OP_RETURN gave them roughly 38 bytes after protocol overhead. Most people looked at that ceiling and concluded you couldn't build anything useful. I asked a different question: what if the 38 bytes aren't the database, but the <em>schema</em>?</p>
 
       <p>Everstore maps a complete relational database engine onto BIP32 key derivation. Each branch of the key tree has a defined role, a node map: Meta, Schema-Tree, Index-Tree, Record-Tree, Accumulation-Tree, Public-Tree. A route like <code>2 | 6032 | 38</code> means Schema-Tree → datastore #6032 → field #38. Each route derives a unique blockchain address. Data lives in the OP_RETURN of transactions sent from those addresses. The latest transaction equals current value, previous transactions form an immutable audit trail. Anyone with the master public key can derive all addresses and read all public data. Only writing requires private keys.</p>
 
@@ -56,7 +56,7 @@
 
       <h2>DN-Key (2016): Borrow Trust, Don't Invent It</h2>
 
-      <p>DN-Key is absurdly simple. Publish your cryptographic public keys as DNS TXT records: <code>_dnkey.example.com TXT "v=DNKEY1; k=bitcoin; p=xpub..."</code>. Verification is a DNS lookup. That's it. That's the entire protocol.</p>
+      <p><a href="../../open-source/dn-key-protocol/">DN-Key</a> is absurdly simple. Publish your cryptographic public keys as DNS TXT records: <code>_dnkey.example.com TXT "v=DNKEY1; k=bitcoin; p=xpub..."</code>. Verification is a DNS lookup. That's it. That's the entire protocol.</p>
 
       <p>The insight was that DNS already solves the trust problem for everything else. SPF proves email sending authority. DKIM publishes signing keys. SSL certificates prove domain ownership. The infrastructure for broadcasting machine-readable key material is globally distributed, battle-tested across billions of lookups per day, and already trusted by compliance teams at regulated institutions. The audit procedures are written. The management tools exist. The trust model is established.</p>
 
@@ -64,7 +64,7 @@
 
       <p>ATA Plus ECF adopted DN-Key in 2016 for their custody infrastructure, a regulated Malaysian financial services context where "we built our own key server" would have added months to the compliance process. DN-Key slotted into existing DNS management workflows that were already audited.</p>
 
-      <p>Two years later, DN-Key was <strong>cited by name in the Securities Commission Malaysia's official capital markets blueprint</strong> during Project Castor. The SC's own document describes using DN-Key for multi-signature redeem scripts, deterministic key creation, and enforcement of pre-approved multi-signature accounts. A national regulator formally incorporating an independently authored protocol into their capital markets architecture, because the protocol was simple enough that compliance teams could understand it in one meeting.</p>
+      <p>Two years later, DN-Key was <strong>cited by name in the Securities Commission Malaysia's official capital markets blueprint</strong> during <a href="../../portfolio/project-castor/">Project Castor</a>. The SC's own document describes using DN-Key for multi-signature redeem scripts, deterministic key creation, and enforcement of pre-approved multi-signature accounts. A national regulator formally incorporating an independently authored protocol into their capital markets architecture, because the protocol was simple enough that compliance teams could understand it in one meeting.</p>
 
       <p>The lesson: <strong>the best protocol is one that borrows trust from systems people already believe in.</strong> DN-Key's entire value proposition is that it introduces nothing new. No custom infrastructure. No registration. No third-party trust. Just DNS TXT records. The same mechanism that's been proving domain authority since 1993.</p>
 
@@ -74,11 +74,11 @@
 
       <p>By 2023, Bitcoin Ordinals had created a marketplace problem: people wanted to trade inscribed satoshis, but every existing solution required custodial escrow or centralised order books. The ecosystem needed a trustless trading mechanism open enough that competing marketplaces could all use it.</p>
 
-      <p>SADO (Self-Authenticating Decentralised Orderbook) uses PSBTs (Partially Signed Bitcoin Transactions) as the core primitive. A seller creates a half-signed transaction offering their ordinal. A buyer completes and broadcasts it. No intermediary touches the assets. No server holds custody. The protocol is the transaction format itself.</p>
+      <p><a href="../../portfolio/sado-protocol/">SADO</a> (Self-Authenticating Decentralised Orderbook) uses PSBTs (Partially Signed Bitcoin Transactions) as the core primitive. A seller creates a half-signed transaction offering their ordinal. A buyer completes and broadcasts it. No intermediary touches the assets. No server holds custody. The protocol is the transaction format itself.</p>
 
       <p>The original design stored order data on IPFS with content identifiers published on-chain. But IPFS introduced reliability issues and pinning dependencies that contradicted the "no trusted third party" principle. We moved to leaner on-chain pointers: minimal data published directly in transactions, referencing off-chain order books that anyone can mirror.</p>
 
-      <p>Ordzaar adopted SADO because it was the only option that didn't require trust. Not because we pitched them. Not because of a partnership. Because when you design a protocol with zero trust assumptions, adoption becomes a technical decision rather than a business negotiation. We built developer tooling around SADO (the Ordit SDK for indexing and parsing), but the tooling isn't the protocol. Protocols without developer experience don't get adopted, but DX without a sound protocol is just a nice API over a bad foundation.</p>
+      <p><a href="../../portfolio/ordzaar/">Ordzaar</a> adopted SADO because it was the only option that didn't require trust. Not because we pitched them. Not because of a partnership. Because when you design a protocol with zero trust assumptions, adoption becomes a technical decision rather than a business negotiation. We built developer tooling around SADO (the <a href="../../open-source/ordit-sdk/">Ordit SDK</a> for indexing and parsing), but the tooling isn't the protocol. Protocols without developer experience don't get adopted, but DX without a sound protocol is just a nice API over a bad foundation.</p>
 
       <p>The lesson: <strong>minimise what touches the chain.</strong> Every byte on-chain is permanent, expensive, and inflexible. PSBTs as the primitive means the protocol is just Bitcoin transactions with a specific structure. No custom opcodes, no chain upgrades, no new consensus rules. The chain stays dumb. The intelligence lives in how you structure what's already there.</p>
 
@@ -88,7 +88,7 @@
 
       <p>Nine years later, WebAuthn and passkeys made that abstraction possible. Devices handle key management invisibly. Users authenticate with a fingerprint or face scan. The private key never leaves the secure enclave. The UX problem that killed BlockAuth simply evaporated. Not because someone solved it, but because the platform caught up.</p>
 
-      <p>Oviato's identity layer reuses DN-Key (the same protocol from 2016) for passkey-native, chain-agnostic identity. The domain proves organisational identity. The passkey proves user identity. One identity across Bitcoin, EVM, and Solana. No key duplication, no bridging, no intermediary. DN-Key was also made Nostr NIP-05 compatible, extending the same DNS-based verification to decentralised social identity.</p>
+      <p><a href="../../portfolio/oviato/">Oviato's</a> identity layer reuses DN-Key (the same protocol from 2016) for passkey-native, chain-agnostic identity. The domain proves organisational identity. The passkey proves user identity. One identity across Bitcoin, EVM, and Solana. No key duplication, no bridging, no intermediary. DN-Key was also made Nostr NIP-05 compatible, extending the same DNS-based verification to decentralised social identity.</p>
 
       <p>The gap between 2016's "publish a public key via DNS TXT record" and 2025's "one identity across every chain with passkey auth and agentic payments" is enormous. But the trust model is identical. Domain proves org. Device proves user. No intermediary. DN-Key required no modifications to work with passkeys, because it was designed to be simple enough that future systems could build on it without asking permission.</p>
 

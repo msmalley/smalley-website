@@ -523,14 +523,3 @@ a.pill:hover {
   .demo-embed-row { grid-template-columns: 1fr; }
 }
 
-.case-nav {
-  margin-top: 60px;
-  padding-top: 32px;
-  border-top: 1px solid var(--sm-border);
-  display: flex;
-  justify-content: space-between;
-}
-.case-nav a {
-  font-family: var(--f-mono);
-  font-size: 12px;
-}

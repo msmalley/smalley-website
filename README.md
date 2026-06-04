@@ -54,6 +54,9 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 - RegTech CV: executive summary trimmed to 3 sentences, Moddable reframed as algorithmic decision systems, regulatory framework bridge added
 - DevRel CV: SlideShare line updated with verified metrics (21 presentations, 59K+ views, 31.5K on "Introducing Bitcoin")
 - Added hyperlinks to verifiable claims across all CVs (SADO, DN-Key, Everstore, TEDx)
+- Added PDF download buttons alongside View CV links on all CTA callouts and CVs index page
+- Renamed CV files: removed a/b/c prefix (cv_cto, cv_regtech, cv_devrel)
+- Tightened print styles so all CVs fit cleanly on 2 pages
 - Updated README structure to reflect current site pages
 
 #### 2026-06-01

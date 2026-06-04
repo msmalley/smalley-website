@@ -61,6 +61,15 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 - Speaking page: made "Content That Travels" intro text full-width single line
 - Removed all em dashes from paragraph/content text across the site (replaced with colons, commas, full stops)
 - Removed dead .portfolio-intro CSS
+- Mobile alignment pass: centre-aligned all cards, tags, milestones, sidebars, and credentials at 768px across every page
+- Justified paragraphs on all sub-pages (case studies and thoughts articles)
+- Fixed demo controls (chess/hexmaps) stretching on mobile with flex-wrap
+- Added wrap-around prev/next navigation to thoughts articles (matching portfolio/open-source pattern)
+- Internal cross-links added to "Protocol Design Lessons" article (Everstore, DN-Key, SADO, Ordit, Oviato, Project Castor)
+- Replaced game logo images with actual tool screenshots in "16 Days" article
+- Added visual break (hr) between chess and hexmaps sections in "16 Days" article
+- Moved .case-nav to shared _sm.css; nav stacks vertically on mobile
+- Explore page heading updated to "Everything I've built and said"
 
 #### 2026-06-01
 - New article: "Four Protocols, Nine Years, One Design Philosophy" — Everstore, DN-Key, SADO, Oviato design lessons

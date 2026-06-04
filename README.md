@@ -59,6 +59,8 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 - Tightened print styles so all CVs fit cleanly on 2 pages
 - Updated README structure to reflect current site pages
 - Speaking page: made "Content That Travels" intro text full-width single line
+- Removed all em dashes from paragraph/content text across the site (replaced with colons, commas, full stops)
+- Removed dead .portfolio-intro CSS
 
 #### 2026-06-01
 - New article: "Four Protocols, Nine Years, One Design Philosophy" — Everstore, DN-Key, SADO, Oviato design lessons

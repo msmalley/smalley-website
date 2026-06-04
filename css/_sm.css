@@ -287,6 +287,12 @@ img { max-width: 100%; height: auto; display: block; }
   box-shadow: 0 4px 12px rgba(14, 116, 144, 0.1);
 }
 
+.card-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
 .cta-box {
   background: var(--sm-surface);
   border: 1px solid var(--sm-border);

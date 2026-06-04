@@ -109,6 +109,66 @@
   padding: 2px 8px;
 }
 
+/* ── Blog Layout ── */
+.thoughts-layout {
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  gap: 48px;
+  align-items: start;
+}
+.thoughts-main {
+  min-width: 0;
+}
+.thoughts-sidebar {
+  position: sticky;
+  top: 88px;
+  padding-top: 36px;
+}
+.sidebar-section {
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--sm-border);
+}
+.sidebar-section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.sidebar-label {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--sm-faint);
+  margin-bottom: 12px;
+}
+.sidebar-text {
+  font-size: 13px;
+  color: var(--sm-muted);
+  line-height: 1.7;
+}
+.sidebar-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.sidebar-tags .pill {
+  font-size: 10px;
+  padding: 2px 8px;
+  text-decoration: none;
+}
+.sidebar-link {
+  display: block;
+  font-family: var(--f-mono);
+  font-size: 12px;
+  color: var(--sm-muted);
+  text-decoration: none;
+  padding: 6px 0;
+  transition: color 0.2s;
+}
+.sidebar-link:hover {
+  color: var(--sm-violet-glow);
+}
+
 /* ── Archive List ── */
 .thoughts-list {
   display: flex;
@@ -169,6 +229,18 @@
   padding: 2px 8px;
 }
 
+@media (max-width: 960px) {
+  .thoughts-layout {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .thoughts-sidebar {
+    position: static;
+    padding-top: 40px;
+    margin-top: 40px;
+    border-top: 1px solid var(--sm-border);
+  }
+}
 @media (max-width: 768px) {
   .thoughts-hero { padding: 100px 0 40px; text-align: center; }
   .thoughts-hero-tagline { margin: 0 auto; }

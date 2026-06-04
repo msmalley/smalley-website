@@ -5,6 +5,21 @@ SM.getData('thoughts').then(function(posts) {
   var featuredExcerpt = document.getElementById('featured-excerpt');
   var featuredMeta = document.getElementById('featured-meta');
   var featuredTags = document.getElementById('featured-tags');
+  var sidebarTags = document.getElementById('sidebar-tags');
+
+  var allTags = {};
+  for (var i = 0; i < posts.length; i++) {
+    var tags = posts[i].tags || [];
+    for (var t = 0; t < tags.length; t++) {
+      allTags[tags[t]] = (allTags[tags[t]] || 0) + 1;
+    }
+  }
+  if (sidebarTags) {
+    var sorted = Object.keys(allTags).sort(function(a, b) { return allTags[b] - allTags[a]; });
+    for (var i = 0; i < sorted.length; i++) {
+      sidebarTags.appendChild(SM.el('a', { class: 'pill', href: SM.url('/explore/?tag=' + encodeURIComponent(sorted[i])) }, sorted[i]));
+    }
+  }
 
   if (featuredEl && posts.length > 0) {
     var f = posts[0];

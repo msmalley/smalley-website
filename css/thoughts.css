@@ -279,10 +279,17 @@
   .thoughts-hero-tagline { margin: 0 auto; }
   .thoughts-featured,
   .thoughts-archive { padding: 48px 0; }
-  .featured-article { flex-direction: column; gap: 16px; padding: 28px; }
+  .featured-article { flex-direction: column; gap: 16px; padding: 28px; text-align: center; align-items: center; }
+  .featured-number { border-right: none; padding-right: 0; margin-right: 0; }
   .featured-number .date-year { font-size: 18px; }
-  .thought-card { flex-direction: column; gap: 8px; }
+  .featured-tags { justify-content: center; }
+  .featured-excerpt { max-width: none; }
+  .thought-card { flex-direction: column; gap: 8px; text-align: center; align-items: center; }
+  .thought-card-date-big { border-right: none; padding-right: 0; margin-right: 0; }
   .thought-card-date-big .date-year { font-size: 14px; }
+  .thought-card-tags { justify-content: center; }
+  .thoughts-sidebar { text-align: center; }
+  .sidebar-tags { justify-content: center; }
 }
 
 /* ── Thoughts Grid (legacy compat) ── */

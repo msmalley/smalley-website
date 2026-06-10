@@ -26,7 +26,12 @@
     "year": 2017,
     "type": "conference",
     "description": "Blockchain applications in Islamic Finance — addressing institutional audiences on digital asset frameworks.",
-    "tags": ["Bitcoin", "Ethereum", "Regulatory Compliance", "KYC/AML"]
+    "tags": ["Bitcoin", "Ethereum", "Regulatory Compliance", "KYC/AML"],
+    "urls": [
+      "https://redmoneyevents.com/event/ifn1911/",
+      "https://redmoneyevents.com/event/ifn1716/",
+      "https://redmoneyevents.com/event/ifn1804/"
+    ]
   },
   {
     "slug": "conferences",
@@ -53,7 +58,11 @@
     "year": 2017,
     "type": "conference",
     "description": "Presenting on blockchain infrastructure for financial services at a regional FinTech leadership forum.",
-    "tags": ["Bitcoin", "Ethereum", "Regulatory Compliance"]
+    "tags": ["Bitcoin", "Ethereum", "Regulatory Compliance"],
+    "urls": [
+      "https://www.youtube.com/watch?v=5ut_Cs-L2BI",
+      "https://www.flickr.com/photos/finnovasia/page30"
+    ]
   },
   {
     "slug": "bfm-radio",
@@ -62,7 +71,11 @@
     "year": 2016,
     "type": "radio",
     "description": "Two live radio appearances on Malaysia's English business radio explaining blockchain to mainstream business audiences.",
-    "tags": ["Bitcoin", "Regulatory Compliance"]
+    "tags": ["Bitcoin", "Regulatory Compliance"],
+    "urls": [
+      "https://www.bfm.my/podcast/enterprise/tech-talk/ent-tt-blockchain-neuroware-mark-smalley",
+      "https://www.bfm.my/podcast/morning-run/the-breakfast-grille/bg-mark-smalley-neuroware-unblocking-the-mystery-of-blockchains"
+    ]
   },
   {
     "slug": "blockchain-for-developers",

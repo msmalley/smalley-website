@@ -23,7 +23,12 @@
     "summary": "Co-founded and funded through R1. Five years from concept to regulatory approval. Designed compliance architecture, KYC/AML pipelines, and custody infrastructure.",
     "outcome": "First company in Malaysia approved as a regulated Digital Asset Custodian.",
     "tech": ["KYC/AML", "Digital Custody", "Regulatory Compliance", "Node.js", "VueJS"],
-    "links": { "live": "https://cokeeps.com" }
+    "links": { "live": "https://cokeeps.com" },
+    "proofLinks": [
+      {"label": "The Edge Malaysia", "url": "https://theedgemalaysia.com/node/689670"},
+      {"label": "Mashable SEA", "url": "https://sea.mashable.com/life/28671/cokeeps-emerges-as-malaysias-pioneer-in-qualified-digital-asset-custodianship"},
+      {"label": "BFM Radio", "url": "https://www.bfm.my/podcast/enterprise/open-for-business/the-downfall-of-ftx-a-blessing-for-crypto-custodian-cokeeps"}
+    ]
   },
   {
     "slug": "oviato",
@@ -49,7 +54,13 @@
     "summary": "500 Startups Batch 9, launched at TechCrunch Disrupt London. Open-source blockchain wallet and SDK infrastructure handling 1M+ API requests. The only Malaysian company in Deloitte's Top 50 Global RegTech.",
     "outcome": "Deloitte Top 50 RegTech. $300K+ raised. TechCrunch Disrupt launch.",
     "tech": ["UTXO", "Solidity", "EthersJS", "BitcoinJS", "IPFS", "MongoDB", "Node.js"],
-    "links": { "live": "https://neuroware.io" }
+    "links": { "live": "https://neuroware.io" },
+    "proofLinks": [
+      {"label": "VentureBeat — Top 5", "url": "https://venturebeat.com/entrepreneur/5-startups-that-caught-our-eye-from-500-startups-batch-9/"},
+      {"label": "Digital News Asia", "url": "https://www.digitalnewsasia.com/sizzle-fizzle/neuroware-new-bit-on-the-blockchain"},
+      {"label": "Deloitte RegTech Directory", "url": "https://www.deloitte.com/lu/en/Industries/technology/analysis/regtech-companies-compliance.html"},
+      {"label": "FOSS Asia 2015 Speaker", "url": "https://2015.fossasia.org"}
+    ]
   },
   {
     "slug": "r1",
@@ -99,7 +110,12 @@
     "tagline": "SC Malaysia blockchain blueprint and custody framework",
     "summary": "Two-year blockchain advisory with Malaysia's Securities Commission, leading to the Digital Asset Custodian regulatory framework.",
     "outcome": "Directly informed national Digital Asset Custodian regulation.",
-    "tech": ["Ethereum", "Solidity", "ERC-20", "ERC-721", "KYC/AML", "Regulatory Compliance", "Dogecoin"]
+    "tech": ["Ethereum", "Solidity", "ERC-20", "ERC-721", "KYC/AML", "Regulatory Compliance", "Dogecoin"],
+    "proofLinks": [
+      {"label": "SC Malaysia Media Release", "url": "https://www.sc.com.my/resources/media/media-release/sc-continues-to-drive-digitisation-of-the-malaysian-capital-market"},
+      {"label": "Blueprint PDF", "url": "https://www.sc.com.my/api/documentms/download.ashx?id=a720347d-a637-4652-a393-14d96db91ef5"},
+      {"label": "FinTech News Malaysia", "url": "https://fintechnews.my/19193/blockchain/this-is-project-castor-securities-commission-malaysias-new-blockchain-blueprint/"}
+    ]
   },
   {
     "slug": "project-eden",

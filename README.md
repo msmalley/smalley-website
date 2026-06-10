@@ -46,6 +46,11 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 ## Changelog
 
 #### 2026-06-10
+- External proof links: verified and added 15+ third-party sources that name us (issue #18)
+- Portfolio pages (Neuroware, CoKeeps, Project Castor) now link to press coverage and official citations
+- Speaking pages (BFM Radio, Conferences) now link to episode pages and event listings
+- Added SC Malaysia media release (names Mark Smalley), Deloitte directory, VentureBeat, Digital News Asia, Mashable SEA, The Edge, FOSS Asia 2015 speaker listing, REDmoney events
+- Updated media.json, speaking.json, portfolio.json with verified URLs
 - Major cross-project sync: updated all Moddable content to reflect current state of sibling repos
 - Chess Engine: v0.7.1 → v0.9.1 (native ESM, MCP server, 7 AI-callable tools)
 - Hexmaps: v0.5.1 → v0.8.1 (Consumer SDK, 6 games, 6 MCP tools)

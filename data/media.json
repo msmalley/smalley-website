@@ -4,34 +4,69 @@
     "title": "Deloitte Top 50 Global RegTech Companies",
     "outlet": "Deloitte",
     "year": 2017,
-    "note": "Neuroware — only Malaysian company listed"
+    "note": "Neuroware — only Malaysian company listed",
+    "url": "https://www.deloitte.com/lu/en/Industries/technology/analysis/regtech-companies-compliance.html"
   },
   {
     "type": "recognition",
     "title": "Digerati50 — Malaysia's Top 50 Digital Leaders",
     "outlet": "Digital News Asia",
     "year": 2018,
-    "note": "Inaugural list alongside Catcha Group and Grab founders"
+    "note": "Inaugural list alongside Catcha Group and Grab founders",
+    "url": "https://www.digitalnewsasia.com/digital-economy/positive-energy-flows-digerati50-inaugural-meet-up"
   },
   {
     "type": "recognition",
     "title": "VentureBeat Top 5 — 500 Startups Batch 9 Demo Day",
     "outlet": "VentureBeat",
     "year": 2014,
-    "note": "5 startups that caught our eye"
+    "note": "5 startups that caught our eye",
+    "url": "https://venturebeat.com/entrepreneur/5-startups-that-caught-our-eye-from-500-startups-batch-9/"
   },
   {
     "type": "press",
     "title": "Securities Commission Malaysia Completes Blockchain Pilot Project",
     "outlet": "FinTech News Malaysia",
     "year": 2018,
-    "url": "https://fintechnews.my/19193/blockchain/this-is-project-castor-securities-commission-malaysias-new-blockchain-blueprint/"
+    "url": "https://fintechnews.my/19193/blockchain/this-is-project-castor-securities-commission-malaysias-new-blockchain-blueprint/",
+    "names": "Neuroware"
+  },
+  {
+    "type": "press",
+    "title": "SC Malaysia — Drives Digitisation of Capital Markets",
+    "outlet": "Securities Commission Malaysia",
+    "year": 2018,
+    "url": "https://www.sc.com.my/resources/media/media-release/sc-continues-to-drive-digitisation-of-the-malaysian-capital-market",
+    "names": "Mark Smalley, Neuroware"
   },
   {
     "type": "press",
     "title": "CoKeeps — First Regulated Digital Asset Custodian",
     "outlet": "The Edge Malaysia",
-    "year": 2023
+    "year": 2023,
+    "url": "https://theedgemalaysia.com/node/689670"
+  },
+  {
+    "type": "press",
+    "title": "CoKeeps Emerges as Malaysia's Pioneer in Digital Asset Custodianship",
+    "outlet": "Mashable SEA",
+    "year": 2023,
+    "url": "https://sea.mashable.com/life/28671/cokeeps-emerges-as-malaysias-pioneer-in-qualified-digital-asset-custodianship"
+  },
+  {
+    "type": "press",
+    "title": "The Downfall of FTX — A Blessing for Crypto Custodian CoKeeps",
+    "outlet": "BFM Radio Malaysia",
+    "year": 2022,
+    "url": "https://www.bfm.my/podcast/enterprise/open-for-business/the-downfall-of-ftx-a-blessing-for-crypto-custodian-cokeeps"
+  },
+  {
+    "type": "press",
+    "title": "Neuroware: A New Bit on the Blockchain",
+    "outlet": "Digital News Asia",
+    "year": 2014,
+    "url": "https://www.digitalnewsasia.com/sizzle-fizzle/neuroware-new-bit-on-the-blockchain",
+    "names": "Neuroware"
   },
   {
     "type": "publication",
@@ -41,10 +76,19 @@
   },
   {
     "type": "radio",
-    "title": "Introduction to Blockchains / Unblocking the Mystery",
+    "title": "Introduction to Blockchains",
     "outlet": "BFM Radio Malaysia",
     "year": 2016,
-    "note": "Two live appearances on Malaysia's English business radio"
+    "url": "https://www.bfm.my/podcast/enterprise/tech-talk/ent-tt-blockchain-neuroware-mark-smalley",
+    "names": "Mark Smalley, Neuroware"
+  },
+  {
+    "type": "radio",
+    "title": "Unblocking the Mystery of Blockchains",
+    "outlet": "BFM Radio Malaysia",
+    "year": 2016,
+    "url": "https://www.bfm.my/podcast/morning-run/the-breakfast-grille/bg-mark-smalley-neuroware-unblocking-the-mystery-of-blockchains",
+    "names": "Mark Smalley, Neuroware"
   },
   {
     "type": "press",

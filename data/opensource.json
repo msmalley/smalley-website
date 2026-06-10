@@ -2,15 +2,15 @@
   {
     "slug": "moddable-chess-engine",
     "title": "Moddable Chess Engine",
-    "tagline": "Consumer game SDK — 70 variants, renderer hooks, controller API, AI with opening books",
+    "tagline": "Consumer game SDK — 70 variants, MCP tools, ESM architecture, AI with opening books",
     "role": "Creator",
     "category": "engine",
-    "description": "Consumer game framework (v0.7.1). 70 chess variants plus a reusable SDK that powers non-chess games. Multi-depth AI with opening books, postMessage embed API, tiered plugin architecture. Dungeon Chess runs entirely on MCE without engine forks.",
+    "description": "Consumer game framework (v0.9.1). 70 chess variants plus a reusable SDK that powers non-chess games. Native ESM, MCP server with 7 AI-callable tools, multi-depth AI with opening books, postMessage embed API, tiered plugin architecture. Dungeon Chess runs entirely on MCE without engine forks.",
     "stats": [
       { "value": "70", "label": "variants" },
-      { "value": "2", "label": "games powered" }
+      { "value": "7", "label": "MCP tools" }
     ],
-    "tech": ["JavaScript", "SVG", "Web Worker AI", "Consumer SDK"],
+    "tech": ["JavaScript", "SVG", "Web Worker AI", "Consumer SDK", "MCP", "ESM"],
     "repo": "https://github.com/Moddable-Games/moddable-chess",
     "demo": "https://chess.moddable.games",
     "accent": "violet",
@@ -19,15 +19,15 @@
   {
     "slug": "moddable-hexmaps",
     "title": "Moddable Hexmaps",
-    "tagline": "Seeded procedural hex maps with 4 render styles and PNG/PDF/SVG export",
+    "tagline": "Seeded procedural hex maps — 6 games, Consumer SDK, MCP tools, PNG/PDF/SVG export",
     "role": "Creator",
     "category": "engine",
-    "description": "Hex map framework (v0.5.1) with seeded procedural generation, 4 render styles, PNG/PDF/SVG export, hex metadata, and URL parameter API. Powers 4 games with 7 Colony layouts.",
+    "description": "Hex map framework (v0.8.1) with seeded procedural generation, Consumer SDK (createMapController), 6 games, 4 render styles, PNG/PDF/SVG export, MCP tools, hex metadata, and URL parameter API.",
     "stats": [
-      { "value": "4", "label": "render styles" },
-      { "value": "∞", "label": "seeded maps" }
+      { "value": "6", "label": "games" },
+      { "value": "6", "label": "MCP tools" }
     ],
-    "tech": ["JavaScript", "Canvas", "SVG", "Seeded RNG", "URL param API"],
+    "tech": ["JavaScript", "Canvas", "SVG", "Consumer SDK", "MCP", "Seeded RNG"],
     "repo": "https://github.com/Moddable-Games/moddable-hexmaps",
     "demo": "https://hex.moddable.games",
     "accent": "violet",
@@ -43,7 +43,7 @@
     "stats": [
       { "value": "190+", "label": "pages assembled" },
       { "value": "0", "label": "orphaned elements" },
-      { "value": "70", "label": "variant PDFs generated" }
+      { "value": "100+", "label": "variant PDFs generated" }
     ],
     "tech": ["JavaScript", "Puppeteer", "DOM measurement", "pdfunite"],
     "repo": "https://github.com/Moddable-Games/moddable-rules",

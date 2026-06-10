@@ -45,6 +45,21 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 
 ## Changelog
 
+#### 2026-06-10
+- Major cross-project sync: updated all Moddable content to reflect current state of sibling repos
+- Chess Engine: v0.7.1 → v0.9.1 (native ESM, MCP server, 7 AI-callable tools)
+- Hexmaps: v0.5.1 → v0.8.1 (Consumer SDK, 6 games, 6 MCP tools)
+- Added tools.moddable.games / MCP server content across all relevant pages
+- Updated 16 Days article with MCP server section, Consumer SDK details, 6 games
+- Updated portfolio/moddable case study: 6 games, 15 MCP tools, Consumer SDKs, Developers section
+- Updated open-source/chess and open-source/hexmaps pages with current capabilities
+- Updated both CVs (CTO + DevRel) with MCP server, tools.moddable.games proof point, current versions
+- Fixed workflow page: old stats (64 variants, 4 hexmap games) → current (70 variants, 6 games, 15 MCP tools)
+- Fixed stale web.moddable.games URL on workflow page → moddable.games
+- Updated homepage chess variant count from 64 to 70
+- Updated PDF pagination engine: 64 → 100+ variant PDFs
+- Updated data/thoughts.json and data/opensource.json and data/portfolio.json with current stats
+
 #### 2026-06-04
 - Resolved issue #17: renamed css/process.css to css/workflow.css with all class names updated
 - Renamed OG images: process.jpg to workflow.jpg, thoughts-game-engines.jpg to thoughts-16-days.jpg

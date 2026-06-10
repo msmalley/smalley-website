@@ -27,9 +27,9 @@
     "slug": "16-days-one-ecosystem",
     "title": "16 Days, One Ecosystem",
     "date": "2025-05-29",
-    "readingTime": "6 min",
-    "tags": ["AI/LLM", "JavaScript", "Plugin architecture", "Canvas"],
-    "excerpt": "Four games, two engines, nine mods, and a documentation pipeline. How architecture decisions made it possible to ship an entire open-source ecosystem in 16 days."
+    "readingTime": "8 min",
+    "tags": ["AI/LLM", "JavaScript", "MCP", "Consumer SDK", "Plugin architecture", "Canvas"],
+    "excerpt": "Two engines, six games, 15 MCP tools, and a documentation pipeline. How architecture decisions made it possible to ship an entire open-source ecosystem in 16 days."
   },
   {
     "slug": "cardinal-sins-of-bitcoin-ordinals",

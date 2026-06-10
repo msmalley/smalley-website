@@ -6,19 +6,19 @@
 <meta name="sm-base" content="/personal/smalley-website">
 <meta name="theme-color" content="#0B0F1A">
 <title>Moddable Chess Engine — Mark Smalley</title>
-<meta name="description" content="Consumer game framework: 70 chess variants + SDK powering Dungeon Chess. Renderer hooks, game controller, AI with opening books, zero dependencies.">
+<meta name="description" content="Consumer game framework (v0.9.1): 70 chess variants, MCP tools, native ESM, AI with opening books. SDK powers Dungeon Chess without engine forks.">
 <meta property="og:title" content="Moddable Chess Engine — Mark Smalley">
-<meta property="og:description" content="Consumer game framework: 70 chess variants + SDK powering Dungeon Chess. Renderer hooks, game controller, AI with opening books, zero dependencies.">
+<meta property="og:description" content="Consumer game framework (v0.9.1): 70 chess variants, MCP tools, native ESM, AI with opening books. SDK powers Dungeon Chess without engine forks.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://smalley.my/open-source/moddable-chess-engine/">
 <meta property="og:site_name" content="Mark Smalley">
-<meta property="og:image" content="https://smalley.my/img/og/tools-chess.jpg?v=1.0.25">
+<meta property="og:image" content="https://smalley.my/img/og/tools-chess.jpg?v=1.0.26">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Moddable Chess Engine — Mark Smalley">
-<meta name="twitter:description" content="Consumer game framework: 70 chess variants + SDK powering Dungeon Chess. Renderer hooks, game controller, AI with opening books, zero dependencies.">
-<meta name="twitter:image" content="https://smalley.my/img/og/tools-chess.jpg?v=1.0.25">
-<link rel="stylesheet" href="../../css/_sm.css?v=1.0.25">
-<link rel="stylesheet" href="../../css/case-study.css?v=1.0.25">
+<meta name="twitter:description" content="Consumer game framework (v0.9.1): 70 chess variants, MCP tools, native ESM, AI with opening books. SDK powers Dungeon Chess without engine forks.">
+<meta name="twitter:image" content="https://smalley.my/img/og/tools-chess.jpg?v=1.0.26">
+<link rel="stylesheet" href="../../css/_sm.css?v=1.0.26">
+<link rel="stylesheet" href="../../css/case-study.css?v=1.0.26">
 </head>
 <body>
 <div id="nav-root"></div>
@@ -28,10 +28,10 @@
   <div class="container">
     <div class="case-hero-eyebrow" data-accent="violet">Moddable Games · 2025</div>
     <h1>Moddable Chess Engine</h1>
-    <div class="case-hero-tagline">Consumer game SDK. 70 variants. Renderer hooks. AI with opening books.</div>
+    <div class="case-hero-tagline">Consumer game SDK. 70 variants. 7 MCP tools. Native ESM. AI with opening books.</div>
     <div class="case-meta">
       <div class="case-meta-item"><span class="case-meta-label">Variants</span><span class="case-meta-value">70 playable</span></div>
-      <div class="case-meta-item"><span class="case-meta-label">Games powered</span><span class="case-meta-value">2</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">MCP tools</span><span class="case-meta-value">7</span></div>
       <div class="case-meta-item"><span class="case-meta-label">Dependencies</span><span class="case-meta-value">0</span></div>
     </div>
 </div>
@@ -53,8 +53,8 @@
         <li><strong>Plugin interface</strong> — tiered architecture (Tier 1: rule overrides, Tier 2: engine extensions, Tier 3: effects/mutations/action moves). Each variant is a single file calling <code>registerVariant()</code></li>
       </ul>
 
-      <h2>Consumer Game SDK (v0.7.1)</h2>
-      <p>The engine evolved beyond chess variants into a reusable game framework. Consumer APIs let other games use MCE's move engine, AI, and renderer without being chess:</p>
+      <h2>Consumer Game SDK (v0.9.1)</h2>
+      <p>The engine evolved beyond chess variants into a reusable game framework. Native ESM throughout (no build step, same source serves browser, Worker, and Node.js). Consumer APIs let other games use MCE's move engine, AI, and renderer without being chess:</p>
       <ul>
         <li><strong>createGameController()</strong> — reusable game loop with turn cycling, AI scheduling, and interaction hooks</li>
         <li><strong>createReplay()</strong> — move-by-move playback module for any game built on MCE</li>
@@ -64,6 +64,18 @@
         <li><strong>Effect lifecycle hooks</strong> — before/after move callbacks for game-specific logic</li>
       </ul>
       <p><strong>Proof:</strong> <a href="https://dungeon.moddable.games" target="_blank" rel="noopener">Dungeon Chess</a> is an asymmetric skirmish game with 4 factions, dungeon terrain, and XP-budgeted drafting. It runs entirely on MCE's consumer SDK. Custom tilePainter renders dungeon walls and water; custom pieceProvider renders fantasy units; the game controller handles multi-faction turn cycling. Zero engine forks.</p>
+
+      <h2>MCP Tools (AI-Callable)</h2>
+      <p>Seven chess tools exposed at <a href="https://tools.moddable.games" target="_blank" rel="noopener">tools.moddable.games</a> via MCP protocol, REST API, OpenAPI, and llms.txt. Any MCP-compatible AI agent can analyse positions, validate moves, generate puzzles, and probe opening books:</p>
+      <ul>
+        <li><strong>chess_list_variants</strong> — browse all 70 variants with rules and metadata</li>
+        <li><strong>chess_get_legal_moves</strong> — legal move generation for any position in any variant</li>
+        <li><strong>chess_analyze_position</strong> — AI evaluation with best-move analysis</li>
+        <li><strong>chess_validate_move</strong> — move legality checking with explanations</li>
+        <li><strong>chess_make_moves</strong> — apply move sequences and return resulting position</li>
+        <li><strong>chess_get_opening_book</strong> — probe variant-specific opening books</li>
+        <li><strong>chess_generate_puzzle</strong> — create mate-in-N puzzles for training</li>
+      </ul>
 
       <h2>The Developer Experience</h2>
       <p>This is a DevRel problem as much as an engineering one. The question isn't "can the engine support more variants?" but "can someone add one without understanding the engine internals?"</p>
@@ -95,7 +107,7 @@
 
       <div class="case-outcome">
         <div class="case-outcome-label">Result</div>
-        <div class="case-outcome-text">Consumer game framework powering 2 games: 70 chess variants + Dungeon Chess running on the same engine via renderer hooks and controller APIs</div>
+        <div class="case-outcome-text">Consumer game framework (v0.9.1) powering 2 games, exposing 7 MCP tools, native ESM with zero build step. 70 chess variants + Dungeon Chess running on the same engine via renderer hooks and controller APIs.</div>
       </div>
 
       <div class="case-tech">
@@ -103,6 +115,8 @@
         <a class="pill" href="../../explore/?tag=SVG">SVG</a>
         <a class="pill" href="../../explore/?tag=Web Worker AI">Web Worker AI</a>
         <a class="pill" href="../../explore/?tag=Consumer SDK">Consumer SDK</a>
+        <a class="pill" href="../../explore/?tag=MCP">MCP</a>
+        <a class="pill" href="../../explore/?tag=ESM">ESM</a>
         <a class="pill" href="../../explore/?tag=Plugin architecture">Plugin architecture</a>
       </div>
 
@@ -121,7 +135,7 @@
 </section>
 
 <div id="footer-root"></div>
-<script src="../../js/sm-loader.js?v=1.0.25"></script>
-<script src="../../js/sm-chess-embed.js?v=1.0.25"></script>
+<script src="../../js/sm-loader.js?v=1.0.26"></script>
+<script src="../../js/sm-chess-embed.js?v=1.0.26"></script>
 </body>
 </html>

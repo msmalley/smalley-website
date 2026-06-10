@@ -71,10 +71,10 @@
     "company": "Moddable Limited",
     "year": "2025",
     "accent": "violet",
-    "tagline": "Open-source games studio using AI-augmented engineering",
-    "summary": "Open-source games studio shipped in 16 days using AI-augmented engineering. Two engines (chess + hexmaps), four games, and a consumer SDK that powers non-chess games without engine forks.",
-    "outcome": "2 engines, 4 games, 9 mods, consumer SDK. 16 days, solo founder.",
-    "tech": ["JavaScript", "Canvas", "AI/LLM", "Puppeteer", "GitHub Pages"],
+    "tagline": "Open-source games studio with AI-callable MCP tools and Consumer SDKs",
+    "summary": "Open-source games studio shipped in 16 days using AI-augmented engineering. Two engines (chess v0.9.1 + hexmaps v0.8.1), six games, Consumer SDKs, and the first board game MCP server (15 AI-callable tools at tools.moddable.games). Native ESM, zero dependencies, zero build step.",
+    "outcome": "2 engines, 6 games, 15 MCP tools, 2 Consumer SDKs. 16 days to production, solo founder.",
+    "tech": ["JavaScript", "Canvas", "AI/LLM", "MCP", "Cloudflare Workers", "ESM", "GitHub Pages"],
     "links": { "live": "https://moddable.games" }
   },
   {

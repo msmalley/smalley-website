@@ -86,5 +86,19 @@
     "videoId": "FTkdMvxyQAQ",
     "description": "Developer and institutional audiences on blockchain infrastructure. Recorded talk demonstrating the BlockStrap SDK.",
     "tags": ["Bitcoin", "JavaScript", "Node.js", "UTXO"]
+  },
+  {
+    "slug": "conferences",
+    "title": "StartingBlock European Tour",
+    "event": "Bitcoin Embassy NL / 6 cities",
+    "year": 2015,
+    "type": "workshop",
+    "description": "Blockchain developer workshop materials authored for a 6-city European tour (Istanbul, Amsterdam, Barcelona, Prague, Berlin, London). Over 100 developer hack-pack USB drives distributed.",
+    "tags": ["Bitcoin", "JavaScript", "Node.js"],
+    "urls": [
+      "https://bitcoinembassy.nl/hva-blockchain-blockstrap-course-amsterdam-2015-06-26/",
+      "https://www.slideshare.net/slideshow/cbgtbt-part-1-workshop-introduction-primer/50370360",
+      "https://www.coingecko.com/learn/3-free-resources-to-learn-blockchain-technology"
+    ]
   }
 ]

@@ -1,6 +1,6 @@
 Mark Smalley
 
-Developer Relations · Technical Evangelist · Blockchain Protocol Builder
+Developer Relations (DevRel) · Technical Evangelist · Developer Advocacy
 
 // the rare DevRel who can write the protocol and explain it on a TED stage
 
@@ -131,19 +131,19 @@ Chief Technology Officer — Neuroware Inc — USA / Malaysia
 === Technical Stack ===
 
 Bitcoin
-UTXO scripting, Schnorr/Taproot, Ordinals, Inscriptions, Runes, BRC-20, BitcoinJS, SADO SDK
+UTXO scripting, Schnorr/Taproot, Ordinals, Inscriptions, Runes, BRC-20, BitcoinJS, SADO SDK, digital assets
 Ethereum
-Solidity, EthersJS, Web3.js, ERC-20, ERC-721, IPFS, smart contract design
+Solidity, EthersJS, Web3.js, ERC-20, ERC-721, IPFS, smart contract development, Ethereum Virtual Machine (EVM), DeFi
 Auth
-Passkeys, WebAuthN, FIDO2, DN-Key, cryptographic key management
+Passkeys, WebAuthN, FIDO2, DN-Key, cryptographic key management, wallet integration
 Backend
-Node.js, MongoDB, Neo4j, REST APIs, SDK design, open-source library development
+Node.js, TypeScript, JavaScript, MongoDB, Neo4j, REST APIs, SDK development, open-source project management
 Frontend
 React, Svelte, VueJS, Tailwind, ThreeJS, WebGL, Canvas, SVG
 AI
-LLM-augmented development workflows, AI game engines, procedural generation, prompt engineering
-Content
-Technical writing, whitepaper authorship, developer guides, live demos, workshop facilitation
+LLM-augmented development workflows, AI game engines, procedural generation, MCP (Model Context Protocol)
+Developer Experience
+Technical writing, API documentation, developer guides, SDK documentation, code samples, tutorial creation, workshop facilitation, hackathon organisation, conference presentations, community building
 
 === Selected Achievements ===
 

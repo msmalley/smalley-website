@@ -12,15 +12,15 @@ mark@smalley.my · +44 (0) 7526 860 262 · smalley.my · Nationality: British ·
 
 === Regulatory & Advisory Credentials ===
 
-• First company admitted to the Securities Commission Malaysia (SC) regulatory sandbox for digital assets
+• First company admitted to the Securities Commission Malaysia (SC) regulatory sandbox for digital assets and cryptocurrency
 
-• Active contributor to Malaysia's national Digital Asset regulatory roadmap — engaged directly with SC and Bank Negara Malaysia stakeholders
+• Active contributor to Malaysia's national Digital Asset regulatory roadmap — engaged directly with SC and Bank Negara Malaysia stakeholders on Anti-Money Laundering (AML) and Know Your Customer (KYC) frameworks
 
-• Advised on Project Castor — the Securities Commission's blockchain blueprint that established Digital Asset Custodian requirements in Malaysian capital markets
+• Advised on Project Castor — the Securities Commission's blockchain / Distributed Ledger Technology (DLT) blueprint that established Digital Asset Custodian requirements in Malaysian capital markets
 
 • Co-founded and funded CoKeeps — now Malaysia's largest Digital Asset Custodian by AUM — providing two years of product development capital and three years of operational funding through R1
 
-• Delivered blockchain and distributed ledger training and advisory to DBS Bank (Singapore) and Baker Hostetler (USA, 5-day intensive programme)
+• Delivered blockchain and distributed ledger training and advisory to DBS Bank (Singapore) and Baker Hostetler (USA, 5-day intensive programme) covering compliance strategy, transaction monitoring, and digital asset custody
 
 • Presented on regulatory dimensions of blockchain at the Islamic Finance News Forum (KL, 2017) and the Financial Crime Summit (2017)
 
@@ -105,17 +105,17 @@ Technical studio applying AI-augmented engineering to algorithmic decision syste
 === Domain Expertise ===
 
 Regulatory
-Digital asset regulation, sandbox engagement, SC Malaysia, KYC/AML framework design, custody compliance
+Digital asset regulation, regulatory sandbox, Know Your Customer (KYC), Anti-Money Laundering (AML), Customer Due Diligence (CDD), custody compliance, transaction monitoring, financial crime prevention
 Technical
-Blockchain protocol design, cryptographic infrastructure, passkeys/WebAuthN, smart contracts, AI-augmented workflows, algorithmic decision systems
+Blockchain / Distributed Ledger Technology (DLT), cryptographic infrastructure, smart contracts, passkeys/WebAuthN, AI-augmented workflows, on-chain risk analysis
 Advisory
-Institutional client delivery, FinTech strategy, whitepaper authorship, due diligence support, board-level briefing
+Institutional client delivery, stakeholder engagement, FinTech strategy, whitepaper authorship, due diligence support, regulatory advisory, policy development
 Sectors
-Digital asset custody, RegTech, Islamic Finance / FinTech, payments, identity, DeFi infrastructure
+Digital asset custody, RegTech, cryptocurrency compliance, Islamic Finance / FinTech, payments, identity, DeFi (Decentralized Finance), Virtual Asset Service Providers (VASPs)
 Geographies
-United Kingdom, Malaysia, Singapore, Southeast Asia: regulatory environments across all jurisdictions
-Framework Bridge
-Malaysian sandbox engagement model maps directly onto EU MiCA graduated framework, FCA digital asset sandbox, and PRA supervisory approach. Same regulatory lifecycle, different jurisdictions.
+United Kingdom, Malaysia, Singapore, Southeast Asia, EMEA: multi-jurisdictional regulatory experience
+Frameworks
+FCA (Financial Conduct Authority) digital asset framework, Markets in Crypto-Assets (MiCA), PRA supervisory approach, FATF recommendations, Travel Rule. Malaysian sandbox model maps onto EU MiCA graduated framework.
 
 === Speaking & Publications ===
 

@@ -1,6 +1,6 @@
 Mark Smalley
 
-CTO · Head of Engineering · Blockchain Protocol Architect
+Chief Technology Officer (CTO) · Head of Engineering · Blockchain Protocol Architect
 
 Available for the right opportunity · Open to employed roles, UK/Europe & remote globally
 
@@ -13,19 +13,19 @@ Personally built the Ordzaar prototype that became CakeDefi's fifth business ver
 === Core Technical Skills ===
 
 Bitcoin / UTXO
-UTXO scripting, Schnorr signatures, Taproot, Ordinals, Inscriptions, Runes, BRC-20, BitcoinJS
+UTXO scripting, Schnorr/Taproot, Ordinals, Inscriptions, Runes, BRC-20, BitcoinJS, digital assets
 Ethereum / EVM
-Solidity, EthersJS, Web3.js, ERC-20, ERC-721, IPFS, smart contract architecture
+Solidity, EthersJS, Web3.js, ERC-20, ERC-721, IPFS, smart contract development, DeFi
 Auth & Identity
-Passkeys, WebAuthN, FIDO2, cryptographic key management, DN-Key protocol
+Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems
 Backend
-Node.js, MongoDB, Neo4j, REST & SDK design, protocol specification, open-source libraries
+Node.js, TypeScript, JavaScript, MongoDB, Neo4j, REST APIs, SDK development, distributed systems
 Frontend
-React, Svelte, VueJS, Tailwind, ThreeJS, WebGL (full-stack delivery)
-AI & Tooling
-LLM-augmented engineering workflows, AI game opponents, procedural generation, prompt engineering
+React, Svelte, VueJS, Tailwind, ThreeJS, WebGL, full-stack delivery
+DevOps & AI
+Docker, CI/CD, Cloudflare Workers, LLM-augmented engineering, AI systems
 Leadership
-Hiring, team structure (P4→M3), roadmap ownership, moonshot team formation, VC due diligence
+Cross-functional team leadership, hiring, technical roadmap, stakeholder management, hands-on (P4→M3)
 
 === Work Experience ===
 

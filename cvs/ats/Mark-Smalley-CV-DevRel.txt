@@ -1,0 +1,180 @@
+Mark Smalley
+
+Developer Relations · Technical Evangelist · Blockchain Protocol Builder
+
+// the rare DevRel who can write the protocol and explain it on a TED stage
+
+Open to employed roles: UK/Europe & remote globally
+
+mark@smalley.my · smalley.my · github.com/msmalley · x.com/m_smalley · linkedin.com/in/msmalley
+
+=== Profile ===
+
+Developer advocate and technical evangelist with 15 years building on, and explaining, blockchain technology. One of Southeast Asia's earliest Bitcoin voices, with a track record of making complex cryptographic concepts accessible to developers, institutions, and the general public alike. Personally designed protocols now running in production (SADO, DN-Key), built open-source SDKs used across the Bitcoin Ordinals ecosystem, and currently shipping open-source game engines with full developer documentation and embed APIs. Spoken at TEDx, FinTech conferences, and developer meetups across Asia and Europe. Using AI-native engineering workflows to ship developer tooling at unprecedented pace. Looking for a DevRel or Technical Evangelist role at a Layer 1/2 protocol, developer tooling company, or infrastructure provider where both the code and the community matter.
+
+=== Public Content & Community ===
+
+Talks & Video
+
+• TEDx Sarawak (2017) — 'The Cost of Cash': demystifying Bitcoin and decentralised money for a mainstream audience — on YouTube
+
+• WebCamp KL — regular speaker from 2011; MongoDB CMS Battle (2011, YouTube, official WebCamp KL channel) and 'Introducing Bitcoin' (2013)
+
+• Neuroware / blockchain speaker (2016, YouTube) — developer and institutional audiences on blockchain infrastructure
+
+• Financial Crime Summit (2017), Finnovasia, MDEC FinTech Conference, Islamic Finance News Forum — regular regional speaker
+
+Written & Published
+
+• 'Unravelling Blockchain's Future' — bylined article in Islamic Finance News (IFN), 2017
+
+• 'My Life on the Blockchain' (LVLUPKL) — SlideShare, covering decentralised infrastructure evolution from 2013
+
+• 'Banking on the Future of Blockchains' — MDEC FinTech Conference deck, widely circulated on SlideShare
+
+• 21 technical presentations across two SlideShare profiles (2012–2018) with 59,000+ cumulative views. 'Introducing Bitcoin' (2013) alone reached 31,500+ views — among the earliest Bitcoin educational content in the region. slideshare.net/marksmalley1
+
+Open Source & Developer Community
+
+• Moddable Chess Engine (chess.moddable.games) — open-source game framework (v0.9.1): 70 chess variants, Consumer SDK (native ESM), 7 MCP tools, renderer hooks, game controller, replay API, and unit templates. Dungeon Chess runs entirely on MCE without engine forks. Tiered plugin system, developer guides, AI with opening books for 26 variants
+
+• Moddable Hexmaps (hex.moddable.games) — open-source hex map framework (v0.8.1): Consumer SDK (createMapController), 6 games, 4 render styles, seeded procedural generation, 6 MCP tools, PNG/PDF/SVG export, and URL param API
+
+• MCP Tools Server (tools.moddable.games) — first board game engine MCP server: 15 AI-callable tools, MCP + REST + OpenAPI + llms.txt, Cloudflare Worker on free tier. Connect with one command from Claude Desktop, Cursor, or VS Code
+
+• SADO Protocol (github.com/sadoprotocol) — co-authored open-source, self-authenticating decentralised order-book for Bitcoin Ordinals; adopted by Ordzaar and third-party exchanges
+
+• Ordit SDK — open-source indexer, parser, and API toolkit for Ordinals and Inscriptions; ~50K npm downloads, multiple repos under sadoprotocol org
+
+• DN-Key Protocol — authored decentralised key management via DNS TXT records; adopted by ATA Plus ECF (2016), cited in SC Malaysia's capital markets blueprint (2018), reused in Oviato's identity layer (2025)
+
+• Everstore Protocol — complete on-chain relational database via BIP32 key derivation: CRUD, encryption, indexing, audit trails (2016, pre-EVM; 25-page whitepaper); featured in Blockchain Finance
+
+• BackPress — core contributor to Automattic's BackPress framework (WordPress ecosystem)
+
+• Regular speaker at WebCamp KL from 2011 — one of Malaysia's earliest web and blockchain developer communities
+
+• Founded and operated the Blockchain Embassy of Asia — ASEAN's first public blockchain consortium
+
+=== Work Experience ===
+
+Chief Blockchain Officer — Oviato — United Kingdom
+
+(Feb 2025 – Mar 2026)
+
+Co-founded passkey-native wallet infrastructure startup. Built on Project Eden prototype (weekend hackathon → production). Contributed to the developer narrative and technical positioning that secured DraperVC investment.
+
+• Built internal cryptographic and passkey/WebAuthN framework — designed for developer-friendly integration by third-party wallet builders
+
+• Articulated complex infrastructure concepts clearly to non-technical investors and partners during the DraperVC fundraise
+
+• Designed prototypes demonstrating WebAuthN's viability for consumer-grade, non-custodial wallet UX
+
+CEO & Founder — Moddable Limited — United Kingdom
+
+(2025 – present)
+
+Open-source games studio shipping developer-facing engines, Consumer SDKs, MCP tools, and documentation, built entirely using AI-augmented engineering workflows. Deployed the first board game engine MCP server and a full Developers section with API docs, SDK demos, and integration examples.
+
+• Evolved Moddable Chess (v0.9.1) from a 70-variant chess engine into a consumer game SDK with native ESM, and built Dungeon Chess entirely on its consumer APIs (4 factions, custom rendering, AI) without engine forks
+
+• Published Moddable Hexmaps (v0.8.1) with Consumer SDK (createMapController), 6 games, 4 render styles, and 6 MCP tools. Built PDF pagination engine for 190+ page rulebook libraries
+
+• Deployed tools.moddable.games — first board game MCP server: 15 AI-callable tools across 2 engines, MCP + REST + OpenAPI + llms.txt. One-command connection from Claude Desktop, Cursor, VS Code
+
+• Wrote developer documentation spanning plugins (Build a Variant, Crazyhouse, Poison Chess), consumer integration (Dungeon Chess guide), full API reference, SDK demo page, and a Developers section with connection guides and build examples
+
+• Built the entire product suite using LLM-driven development at production scale: native ESM, zero build step, same source serves browser + Worker + Node.js
+
+Head of Engineering — CakeDefi — Singapore
+
+(Feb 2023 – Sep 2023)
+
+Sole developer of Ordzaar prototype; co-authored the SADO open protocol standard and its public SDK, a significant open-source contribution to the Bitcoin developer ecosystem.
+
+• Personally built the first Ordzaar prototype — became CakeDefi's fifth business vertical, spun out independently, raised US$500K, and was subsequently acquired
+
+• Co-authored SADO Protocol and led the open-source SDK release at github.com/sadoprotocol — making Ordinals tooling accessible to the developer community
+
+• Promoted from P4 Engineer to M3 Manager; deepened expertise in Schnorr, Taproot, Ordinals, Inscriptions, Runes
+
+CEO & Founder — R1 — Malaysia
+
+(2012 – 2025)
+
+Led Malaysia's foremost blockchain infrastructure practice, building products, educating developers and institutions, and shaping the regulatory environment for digital assets in Southeast Asia.
+
+• Authored all curriculum and materials for the StartingBlock Tour (2015) — blockchain developer workshops reaching ~1,000 attendees across 6 European cities in 8 days (Istanbul, Amsterdam, Barcelona, Prague, Berlin, London)
+
+• Ran infrastructure for the world's first bank-backed blockchain hackathon (DBS Bank Singapore) — 1M+ API requests processed; 7 of 15 teams built on our stack
+
+• Distributed 100+ developer 'hack-pack' USB drives pre-loaded with blockchain tooling across global workshop events
+
+• Authored technical whitepapers, protocol specifications (DN-Key, SADO), and developer documentation
+
+• Delivered training to DBS Bank (Singapore) and Baker Hostetler (USA, 5-day intensive engagement); contributed to Malaysia's Digital Asset regulatory roadmap
+
+Chief Technology Officer — Neuroware Inc — USA / Malaysia
+
+(2013 – 2018)
+
+500 Startups Batch 9 (US$300K+ seed sustaining 12 years of operation). Launched at TechCrunch Disrupt London. Built and promoted open-source wallet and SDK tooling. Featured on CoinDesk and BFM Radio. Team of 5 engineers.
+
+• Authored Everstore protocol (2016, 25-page whitepaper) — complete relational database engine on UTXO chains before EVM existed; emerged from DBS hackathon constraints, featured in Blockchain Finance
+
+• Built open-source blockchain wallet framework — the only one with themes and plugins, targeting mainstream developers rather than blockchain specialists
+
+• Two live BFM Radio appearances (2016) — Malaysia's English business radio — explaining blockchain to mainstream audiences
+
+• Core contributor to Automattic's BackPress framework — meaningful contribution to a major open-source ecosystem
+
+=== Technical Stack ===
+
+Bitcoin
+UTXO scripting, Schnorr/Taproot, Ordinals, Inscriptions, Runes, BRC-20, BitcoinJS, SADO SDK
+Ethereum
+Solidity, EthersJS, Web3.js, ERC-20, ERC-721, IPFS, smart contract design
+Auth
+Passkeys, WebAuthN, FIDO2, DN-Key, cryptographic key management
+Backend
+Node.js, MongoDB, Neo4j, REST APIs, SDK design, open-source library development
+Frontend
+React, Svelte, VueJS, Tailwind, ThreeJS, WebGL, Canvas, SVG
+AI
+LLM-augmented development workflows, AI game engines, procedural generation, prompt engineering
+Content
+Technical writing, whitepaper authorship, developer guides, live demos, workshop facilitation
+
+=== Selected Achievements ===
+
+• TEDx speaker (2017) — one of the earliest mainstream Bitcoin talks in Southeast Asia
+
+• StartingBlock 2015 — authored workshop curriculum reaching ~1,000 developers across 6 European cities in 8 days
+
+• Deloitte Top 50 Global RegTech & Digerati50
+
+• DraperVC investment at Oviato — technical work directly contributed to funding outcome
+
+• First Bitcoin talk at WebCamp KL (2013) — among the earliest blockchain developer presentations in Southeast Asia
+
+• 500 Startups Batch 9 and Antler Malaysia Batch 2
+
+=== Credentials ===
+
+Registered HRDF Trainer
+
+500 Startups Batch 9 · Antler Malaysia Batch 2
+
+Core contributor — Automattic BackPress (WordPress)
+
+Silver Duke of Edinburgh Award
+
+=== References ===
+
+Shafiu Hussain
+
+CEO, Oviato · shaf@oviato.com
+
+U-Zyn Chua
+
+Founder & CTO, Cake Group (Singapore) · chua@uzyn.com

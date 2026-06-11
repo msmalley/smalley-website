@@ -1,0 +1,160 @@
+Mark Smalley
+
+CTO · Head of Engineering · Blockchain Protocol Architect
+
+Available for the right opportunity · Open to employed roles, UK/Europe & remote globally
+
+mark@smalley.my · +44 (0) 7526 860 262 · smalley.my · github.com/msmalley · linkedin.com/in/msmalley
+
+=== Profile ===
+
+Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter.
+
+=== Core Technical Skills ===
+
+Bitcoin / UTXO
+UTXO scripting, Schnorr signatures, Taproot, Ordinals, Inscriptions, Runes, BRC-20, BitcoinJS
+Ethereum / EVM
+Solidity, EthersJS, Web3.js, ERC-20, ERC-721, IPFS, smart contract architecture
+Auth & Identity
+Passkeys, WebAuthN, FIDO2, cryptographic key management, DN-Key protocol
+Backend
+Node.js, MongoDB, Neo4j, REST & SDK design, protocol specification, open-source libraries
+Frontend
+React, Svelte, VueJS, Tailwind, ThreeJS, WebGL (full-stack delivery)
+AI & Tooling
+LLM-augmented engineering workflows, AI game opponents, procedural generation, prompt engineering
+Leadership
+Hiring, team structure (P4→M3), roadmap ownership, moonshot team formation, VC due diligence
+
+=== Work Experience ===
+
+Chief Blockchain Officer — Oviato — United Kingdom
+
+(Feb 2025 – Mar 2026)
+
+Co-founded and led the technical pivot from consumer app to passkey-native wallet infrastructure provider, building on prototype work from Project Eden (weekend hackathon → production architecture). The pivot secured DraperVC investment.
+
+• Secured DraperVC investment by producing passkey/WebAuthN prototypes that formed the core of the investor pitch and technical due diligence
+
+• Designed and built internal cryptographic framework underpinning the passkey wallet architecture
+
+• Led the technical narrative that pivoted the company from consumer app to B2B infrastructure provider
+
+CEO & Founder — Moddable Limited — United Kingdom
+
+(2025 – present)
+
+AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 15 AI-callable MCP tools, developer documentation) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams.
+
+• Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites: renderer hooks, game controller, replay API, unit templates, terrain predicates, native ESM (same source serves browser, Worker, and Node.js)
+
+• Proved the architecture by building a second product (Dungeon Chess) entirely on the framework's consumer APIs. Zero engine forks, zero special-casing. 4 factions, custom rendering, AI opponents
+
+• Built and deployed the first board game MCP server (tools.moddable.games): 15 AI-callable tools across 2 engines, Cloudflare Worker, MCP + REST + OpenAPI + llms.txt
+
+• Engineered multi-depth AI system: Web Worker threading, iterative deepening, transposition tables, quiescence search, opening books for 26 game variants, variant-specific evaluators
+
+• Shipped 535 commits across 10+ repositories in 16 days using LLM-augmented development. Demonstrates the methodology's viability for startup-speed delivery at architecture quality
+
+Head of Engineering — CakeDefi — Singapore
+
+(Feb 2023 – Sep 2023)
+
+Joined a 170-engineer company as P4 Engineer; promoted to M3 Manager within months. Tasked with designing novel Bitcoin meta-protocols, then given mandate to form and lead a new Moonshot team (grown from 1 to 10) whose first output became Cake's fifth business vertical.
+
+• Sole developer of the first working prototype for Ordzaar — Bitcoin's leading Ordinals marketplace. Spun out independently, raised US$500K, and was subsequently acquired
+
+• Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting
+
+• Deepened UTXO expertise across Schnorr signatures, Taproot, Ordinals, Inscriptions, and Runes
+
+• Co-authored the SADO Protocol — a decentralised, self-authenticating order-book standard for Bitcoin Ordinals — published as an open-source SDK now used across the ecosystem
+
+CEO & Founder — R1 — Malaysia
+
+(2012 – 2025)
+
+Founded and operated Malaysia's leading blockchain infrastructure and advisory firm for 13 years. Built and shipped production products across KYC, AML, digital custody, and wallet infrastructure while simultaneously shaping national regulatory policy.
+
+• First company admitted to the Securities Commission Malaysia regulatory sandbox
+
+• Contributed directly to Malaysia's Digital Asset regulatory roadmap alongside SC and central bank stakeholders
+
+• Co-founded and funded CoKeeps — now Malaysia's largest Digital Asset Custodian by AUM — providing five years of capital from R1
+
+• Designed and shipped multiple production systems: KYC/AML pipelines, blockchain wallets, learning management, and digital identity platforms — full-stack from protocol to UI
+
+• Authored DN-Key protocol for decentralised key management and SADO for ordinals order-book infrastructure
+
+• Enterprise clients included DBS Bank (Singapore) and Baker Hostetler (USA, 5-day training and advisory engagement)
+
+• Shareholder in CoKeeps and Sinegy following equity arrangements from advisory and build work
+
+Chief Technology Officer — Neuroware Inc — USA / Malaysia
+
+(2013 – 2018)
+
+500 Startups Batch 9 (US$300K+ seed sustaining 12 years of operation). Launched at TechCrunch Disrupt London. Blockchain infrastructure company providing compliance-grade tooling to licensed FinTech operators and regulators across Southeast Asia. Team of 5 engineers.
+
+• Ranked Top 5 by VentureBeat from 500 Startups Batch 9; the only Malaysian company in Deloitte's Top 50 Global RegTech
+
+• Authored Everstore protocol (25-page whitepaper) — complete relational database engine mapped onto BIP32 key derivation with CRUD, encryption tiers, and audit trails on UTXO chains, before Ethereum existed
+
+• Built open-source blockchain wallet and SDK infrastructure — powering the world's first bank-backed blockchain hackathon (DBS Bank Singapore), processing 1M+ API requests; 7 of 15 teams built on our stack
+
+• Developed 30+ Ethereum smart contracts for BloqVerse (~20 upgradeable, ~10 immutable) — fully serverless architecture with IPFS-served frontend and no traditional database
+
+• Core technical stack: UTXO scripting, Solidity, EthersJS, BitcoinJS, IPFS, MongoDB, Node.js
+
+=== Open Source & Protocol Contributions ===
+
+• SADO Protocol — co-authored self-authenticating, decentralised ordinals order-book; SDK at github.com/sadoprotocol, used in production by Ordzaar and third-party exchanges
+
+• DN-Key Protocol — decentralised key management via DNS TXT records; adopted by ATA Plus ECF, cited by name in SC Malaysia's capital markets blueprint, and reused in Oviato's chain-agnostic identity layer nine years later
+
+• Everstore Protocol — complete on-chain relational database via BIP32 key derivation: CRUD, encryption, indexing, audit trails (2016, pre-EVM; 25-page whitepaper)
+
+• Ordit SDK — indexer, parser, and API toolkit for Ordinals and Inscriptions; ~50K npm downloads (github.com/sadoprotocol/ordit)
+
+• BackPress — core contributor to Automattic's BackPress framework (WordPress ecosystem)
+
+• 20 public repositories at github.com/msmalley covering wallet infrastructure, protocol tooling, and blockchain SDKs
+
+=== Selected Achievements ===
+
+• DraperVC investment secured (Oviato, 2025) — technical work directly influenced funding decision
+
+• Accepted into 500 Startups Batch 9 and Antler Malaysia Batch 2
+
+• Ordzaar prototype — sole developer; became CakeDefi's fifth business vertical, spun out, raised US$500K, acquired
+
+• Deloitte Top 50 Global RegTech Companies (Neuroware, 2017)
+
+• TEDx Sarawak speaker (2017) — 'The Cost of Cash'
+
+• Digerati50 — Malaysia's top 50 digital leaders
+
+=== Education & Credentials ===
+
+Accepted — 500 Startups Batch 9
+
+Accepted — Antler Malaysia Batch 2
+
+Registered HRDF Trainer (Malaysia)
+
+Silver Duke of Edinburgh Award
+
+A-Level English — Open Uni, 1998–99
+
+GCSEs / O-Levels — 6 Bs & 1 A, 1990–95
+
+=== References ===
+
+Shafiu Hussain
+
+CEO, Oviato · shaf@oviato.com
+
+U-Zyn Chua
+
+Founder & CTO, Cake Group (Singapore) · chua@uzyn.com

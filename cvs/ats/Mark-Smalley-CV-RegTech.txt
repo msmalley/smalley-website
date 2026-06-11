@@ -1,0 +1,156 @@
+Mark Smalley
+
+Digital Assets · Regulatory Strategy · Blockchain Infrastructure
+
+Seeking senior roles at RegTech, FinTech, or legal/advisory firms · UK/Europe & remote
+
+mark@smalley.my · +44 (0) 7526 860 262 · smalley.my · Nationality: British · linkedin.com/in/msmalley
+
+=== Executive Summary ===
+
+15 years building compliance-grade blockchain infrastructure while simultaneously shaping the regulatory frameworks that govern it. First company in SC Malaysia's digital asset sandbox; co-founded what is now Malaysia's largest Digital Asset Custodian by AUM; delivered to DBS Bank and Baker Hostetler. UK-based since 2025, seeking senior RegTech/FinTech roles where regulatory fluency and production engineering intersect.
+
+=== Regulatory & Advisory Credentials ===
+
+• First company admitted to the Securities Commission Malaysia (SC) regulatory sandbox for digital assets
+
+• Active contributor to Malaysia's national Digital Asset regulatory roadmap — engaged directly with SC and Bank Negara Malaysia stakeholders
+
+• Advised on Project Castor — the Securities Commission's blockchain blueprint that established Digital Asset Custodian requirements in Malaysian capital markets
+
+• Co-founded and funded CoKeeps — now Malaysia's largest Digital Asset Custodian by AUM — providing two years of product development capital and three years of operational funding through R1
+
+• Delivered blockchain and distributed ledger training and advisory to DBS Bank (Singapore) and Baker Hostetler (USA, 5-day intensive programme)
+
+• Presented on regulatory dimensions of blockchain at the Islamic Finance News Forum (KL, 2017) and the Financial Crime Summit (2017)
+
+• Presented at MDEC FinTech Conference and Finnovasia — addressing institutional audiences on regulatory compliance and digital asset adoption
+
+• Registered HRDF Trainer — designed and delivered multi-day blockchain compliance workshops for financial institutions
+
+• Deloitte Top 50 Global RegTech Companies — Neuroware was the only Malaysian company listed (2017)
+
+=== Work Experience ===
+
+CEO & Founder — R1 — Malaysia
+
+(2012 – 2025)
+
+Founded and led Malaysia's foremost blockchain infrastructure and regulatory advisory practice for 13 years. R1 sat at the intersection of engineering, compliance, and policy, building production-grade digital asset systems for licensed operators while advising regulators on the frameworks that would govern them.
+
+• Established R1 as the first blockchain company to enter the SC Malaysia regulatory sandbox, engaging directly in the policy design process
+
+• Designed and shipped compliant KYC and AML pipeline infrastructure adopted by licensed digital asset operators
+
+• Co-founded, funded, and architected CoKeeps — now Malaysia's largest Digital Asset Custodian by AUM — investing two years of R1 capital into product development plus three operational years pending regulatory approval
+
+• Delivered enterprise advisory engagements to DBS Bank (Singapore) and Baker Hostetler (USA, 5-day intensive training and advisory programme) on blockchain compliance strategy
+
+• Authored DN-Key protocol — decentralised key management via DNS TXT records, cited by name in the SC Malaysia capital markets blueprint and adopted by ATA Plus ECF for regulated custody
+
+• Founded the Blockchain Embassy of Asia — Malaysia's first registered blockchain consortium with members from Maybank, RHB, Capital Bay, and ATA Plus
+
+• Advised on Project Castor (2018) — the SC Malaysia blockchain blueprint that introduced Digital Asset Custodian regulation into capital markets. Technical implementation progressed from Dogecoin (distributed key-value storage) to Ethereum (ERC-20/721 token standards with programmable compliance)
+
+• Built and maintained long-term relationships with Securities Commission Malaysia, central bank stakeholders, and regional FinTech bodies
+
+Chief Blockchain Officer — Oviato — United Kingdom
+
+(Feb 2025 – Mar 2026)
+
+Co-founded and led the technical pivot from consumer application to passkey-native identity and custody infrastructure, demonstrating how WebAuthN can meet institutional-grade security requirements. Secured DraperVC investment.
+
+• Designed cryptographic framework and passkey/WebAuthN architecture for next-generation non-custodial wallet infrastructure
+
+• Contributed to investor materials and technical due diligence process that resulted in DraperVC funding
+
+• Demonstrated how passkey-native infrastructure can meet institutional-grade security requirements without traditional custodial risk
+
+Head of Engineering — CakeDefi — Singapore
+
+(Feb 2023 – Sep 2023)
+
+Engaged to design new Bitcoin meta-protocols and lead an innovation team. Co-authored the open SADO Protocol standard, an open-source, auditable trading infrastructure for Bitcoin assets.
+
+• Co-authored SADO Protocol — open-source, self-authenticating decentralised order-book standard for Bitcoin Ordinals, with implications for compliant on-chain asset trading
+
+• Demonstrated how open protocol design can underpin transparent, auditable trading infrastructure on Bitcoin
+
+Chief Technology Officer — Neuroware Inc — USA / Malaysia
+
+(2013 – 2018)
+
+500 Startups-funded (Batch 9, US$300K+ seed sustaining 12 years of operation). Launched at TechCrunch Disrupt London. Blockchain compliance infrastructure for licensed FinTech operators and regulators across Southeast Asia. The only Malaysian company in Deloitte's Top 50 Global RegTech.
+
+• Authored Everstore protocol (2016) — complete on-chain relational database engine with encryption tiers and audit trails, proving programmable blockchain capabilities to institutional clients before EVM existed
+
+• Built blockchain infrastructure adopted by licensed financial institutions operating under regulatory oversight
+
+• Helped Maybank implement MongoDB for their PFM module — the first bank in Asia to adopt MongoDB for personal financial management
+
+• Engaged directly with regulators to demonstrate technical compliance with emerging distributed ledger frameworks
+
+• Provided infrastructure for the world's first bank-backed blockchain hackathon (DBS Bank Singapore); systems handled over 1 million API requests across the event
+
+CEO & Founder — Moddable Limited — United Kingdom
+
+(2025 – present)
+
+Technical studio applying AI-augmented engineering to algorithmic decision systems, pattern recognition engines, and automated risk-scoring architectures. Demonstrates continued production delivery using the same methodology applicable to compliance automation and regulatory tooling.
+
+• Designed and shipped multi-depth search algorithms (iterative deepening, transposition tables, pattern recognition) and procedural generation systems — architectures directly transferable to algorithmic compliance scoring and transaction monitoring
+
+• Built extensible plugin architecture and SDK platform with LLM-driven workflows, maintaining solo-founder velocity across 10+ concurrent repositories. Regulatory engagement model maps directly onto EU MiCA consultation process, FCA sandbox programmes, and PRA supervisory frameworks
+
+=== Domain Expertise ===
+
+Regulatory
+Digital asset regulation, sandbox engagement, SC Malaysia, KYC/AML framework design, custody compliance
+Technical
+Blockchain protocol design, cryptographic infrastructure, passkeys/WebAuthN, smart contracts, AI-augmented workflows, algorithmic decision systems
+Advisory
+Institutional client delivery, FinTech strategy, whitepaper authorship, due diligence support, board-level briefing
+Sectors
+Digital asset custody, RegTech, Islamic Finance / FinTech, payments, identity, DeFi infrastructure
+Geographies
+United Kingdom, Malaysia, Singapore, Southeast Asia: regulatory environments across all jurisdictions
+Framework Bridge
+Malaysian sandbox engagement model maps directly onto EU MiCA graduated framework, FCA digital asset sandbox, and PRA supervisory approach. Same regulatory lifecycle, different jurisdictions.
+
+=== Speaking & Publications ===
+
+• TEDx Sarawak (2017) — 'The Cost of Cash': blockchain, digital currency, and financial inclusion
+
+• Islamic Finance News Forum, Kuala Lumpur (2017) — gold, Bitcoin, and digital Sunnah instruments for Islamic Finance
+
+• Financial Crime Summit (2017) — blockchain applications in financial crime prevention and compliance
+
+• MDEC FinTech Conference — 'Banking on the Future of Blockchains': addressing institutional adoption
+
+• Finnovasia — regional FinTech leadership forum, presenting on blockchain infrastructure for financial services
+
+• Published: 'Unravelling Blockchain's Future' — IFN (Islamic Finance News), 2017
+
+=== Credentials & Recognition ===
+
+Deloitte Top 50 Global RegTech Companies
+
+Digerati50 — Malaysia's Top 50 Digital Leaders
+
+500 Startups Batch 9 — Top 5 by VentureBeat
+
+Antler Malaysia Batch 2
+
+Registered HRDF Trainer
+
+Silver Duke of Edinburgh Award
+
+=== References ===
+
+Shafiu Hussain
+
+CEO, Oviato · shaf@oviato.com
+
+U-Zyn Chua
+
+Founder & CTO, Cake Group (Singapore) · chua@uzyn.com

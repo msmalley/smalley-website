@@ -55,7 +55,7 @@
 
       <h2>Design Philosophy</h2>
       <ul>
-        <li><strong>Blockchain-agnostic</strong> — works on any UTXO chain with OP_RETURN and BIP32 support (Bitcoin, Dogecoin, tested on both)</li>
+        <li><strong>Blockchain-agnostic</strong> — works on any UTXO chain with OP_RETURN and BIP32 support (Bitcoin, Dogecoin, etc)</li>
         <li><strong>Everything on-chain</strong> — no auxiliary storage, no IPFS, no external dependencies. The blockchain IS the database</li>
         <li><strong>HD keys as dual-purpose</strong> — derivation paths define both the schema (what the data means) and the address (where to find it). Master public key = read access to all public data</li>
         <li><strong>Three encryption tiers</strong> — public (anyone can read), secure (node key holders), private (master key only) — using AES with key hash as secret</li>

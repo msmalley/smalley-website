@@ -7,8 +7,8 @@
     "year": "2023",
     "accent": "teal",
     "tagline": "Bitcoin's leading Ordinals marketplace",
-    "summary": "Built the first prototype as sole developer. Fully decentralised, on-chain marketplace with no traditional database. Became CakeDefi's fifth business vertical, then spun out independently.",
-    "outcome": "Sole prototype dev. Became CakeDefi's 5th vertical, then independent startup.",
+    "summary": "Built the first prototype as sole developer. Fully decentralised, on-chain marketplace with no traditional database. Became CakeDefi's fifth business vertical, spun out independently, raised US$500K, and was subsequently acquired.",
+    "outcome": "Sole prototype dev. Became CakeDefi's 5th vertical, raised US$500K independently, acquired.",
     "tech": ["Bitcoin", "Ordinals", "Taproot", "UTXO", "BitcoinJS", "IPFS", "SADO Protocol"],
     "links": { "live": "https://ordzaar.com" }
   },
@@ -19,9 +19,9 @@
     "company": "R1",
     "year": "2018–2023",
     "accent": "gold",
-    "tagline": "Malaysia's first regulated Digital Asset Custodian",
-    "summary": "Co-founded and funded through R1. Five years from concept to regulatory approval. Designed compliance architecture, KYC/AML pipelines, and custody infrastructure.",
-    "outcome": "First company in Malaysia approved as a regulated Digital Asset Custodian.",
+    "tagline": "Malaysia's first and now largest regulated Digital Asset Custodian",
+    "summary": "Co-founded and funded through R1. Five years from concept to regulatory approval. Designed compliance architecture, KYC/AML pipelines, and custody infrastructure. Now the largest Digital Asset Custodian in Malaysia by AUM.",
+    "outcome": "First regulated Digital Asset Custodian in Malaysia — now the largest by AUM.",
     "tech": ["KYC/AML", "Digital Custody", "Regulatory Compliance", "Node.js", "VueJS"],
     "links": { "live": "https://cokeeps.com" },
     "proofLinks": [

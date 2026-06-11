@@ -60,7 +60,7 @@
       <ul>
         <li><strong>createGameController()</strong> — reusable game loop with turn cycling, AI scheduling, and interaction hooks</li>
         <li><strong>createReplay()</strong> — move-by-move playback module for any game built on MCE</li>
-        <li><strong>Renderer extensions</strong> — tilePainter, pieceProvider, legalMoveRenderer, suppressHighlights, excludePiece for animation</li>
+        <li><strong>Renderer extensions</strong> — tilePainter, pieceProvider, legalMoveRenderer, suppressHighlights, excludePiece</li>
         <li><strong>Unit template system</strong> — config-driven piece registration for non-chess units</li>
         <li><strong>Terrain predicates</strong> — generic system replacing hardcoded game-specific checks</li>
         <li><strong>Effect lifecycle hooks</strong> — before/after move callbacks for game-specific logic</li>
@@ -81,7 +81,7 @@
 
       <h2>The Developer Experience</h2>
       <p>This is a DevRel problem as much as an engineering one. The question isn't "can the engine support more variants?" but "can someone add one without understanding the engine internals?"</p>
-      <p>Tiered developer guides walk through increasing complexity: "Build a Variant" (Tier 1 basics), Crazyhouse (Tier 3 hooks and piece drops), and Poison Chess (beforeMove effects). The plugin interface fails loudly with clear error messages when the contract is violated. Example variants ship as reference implementations at every tier.</p>
+      <p>Developer guides walk through increasing complexity: building a basic variant, then Crazyhouse (hooks and piece drops), then Poison Chess (beforeMove effects). The plugin interface fails loudly with clear error messages when the contract is violated. Example variants ship as reference implementations at every level.</p>
 
       <h2>Try It</h2>
       <p>Play against the AI below. Switch variants to see how the same engine handles completely different rule sets, from exploding pieces to fog of war to racing your king.</p>

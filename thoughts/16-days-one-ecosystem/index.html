@@ -42,7 +42,10 @@
 
       <p>That frustration is what started everything. Sixteen days later, the result was two game engines, six playable games, 15 AI-callable tools, Consumer SDKs, a 190-page rulebook pipeline, developer documentation, and a main site tying it all together. The <a href="../../open-source/moddable-chess-engine/"><strong>Moddable Chess Engine</strong></a> handles the turn-based logic. <a href="../../open-source/moddable-hexmaps/"><strong>Moddable Hexmaps</strong></a> handles procedural map generation. The <a href="https://tools.moddable.games" target="_blank" rel="noopener">MCP server</a> makes both engines callable by any AI agent. All MIT-licensed, all built using AI-augmented engineering workflows, all deployed to production in those 16 days.</p>
 
-      <img src="../../img/tools/chess-mce-hero.png" alt="Moddable Chess Engine showing Courier Chess variant on a 12x8 board">
+      <figure>
+        <a href="https://chess.moddable.games" target="_blank" rel="noopener"><img src="../../img/tools/chess-mce-hero.png" alt="Moddable Chess Engine showing Courier Chess variant on a 12x8 board"></a>
+        <figcaption>Play any of the 70 variants at <a href="https://chess.moddable.games" target="_blank" rel="noopener">chess.moddable.games</a></figcaption>
+      </figure>
 
       <h2>The Chess Engine</h2>
 
@@ -52,7 +55,10 @@
 
       <p>The proof is Dungeon Chess, an asymmetric skirmish game with 4 fantasy factions, dungeon terrain, water hazards, and XP-budgeted unit drafting. It runs entirely on the consumer APIs. Custom <code>tilePainter</code> renders dungeon walls. Custom <code>pieceProvider</code> renders fantasy units. The game controller handles multi-faction turns. Zero engine forks. The chess engine became a game framework.</p>
 
-      <img src="../../img/tools/dungeon-chess-board.png" alt="Dungeon Chess showing a 4-faction asymmetric skirmish on a dungeon-themed board">
+      <figure>
+        <a href="https://dungeon.moddable.games" target="_blank" rel="noopener"><img src="../../img/tools/dungeon-chess-board.png" alt="Dungeon Chess showing a 4-faction asymmetric skirmish on a dungeon-themed board"></a>
+        <figcaption>Dungeon Chess at <a href="https://dungeon.moddable.games" target="_blank" rel="noopener">dc.moddable.games</a></figcaption>
+      </figure>
 
       <hr>
 
@@ -60,7 +66,10 @@
 
       <p>Moddable Hexmaps solves a different problem: board game designers need maps, but designing them manually is tedious and sharing them is friction-heavy. The answer: seeded procedural generation. Same seed, same map, every time. Every map has a URL. Sharing a map is sharing that URL.</p>
 
-      <img src="../../img/tools/hexmaps-hero.png" alt="Moddable Hexmaps generator showing a procedural hex map with terrain tiles">
+      <figure>
+        <a href="https://hex.moddable.games" target="_blank" rel="noopener"><img src="../../img/tools/hexmaps-hero.png" alt="Moddable Hexmaps generator showing a procedural hex map with terrain tiles"></a>
+        <figcaption>Generate maps at <a href="https://hex.moddable.games" target="_blank" rel="noopener">hex.moddable.games</a></figcaption>
+      </figure>
 
       <p>The framework generates hex grids via Canvas (flat-top or pointy-top, at any ring count) for six game configurations: volcanic landscapes, 55-terrain fantasy worlds, galaxy layouts with wormholes and nebulae, faction-clustered biomes, and Seafarers-style island boards. Maps export to PNG, PDF, annotated SVG, and JSON. Everything renders client-side, so there's no server cost regardless of scale.</p>
 

@@ -523,3 +523,22 @@
   border: 1px solid var(--sm-border);
   margin: 24px 0;
 }
+.article-content figure {
+  margin: 32px 0;
+}
+.article-content figure img {
+  margin: 0 0 8px;
+}
+.article-content figcaption {
+  font-size: 0.85rem;
+  color: var(--sm-muted);
+  text-align: center;
+}
+.article-content figcaption a {
+  color: var(--sm-muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.article-content figcaption a:hover {
+  color: var(--sm-text);
+}

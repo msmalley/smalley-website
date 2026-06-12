@@ -25,7 +25,7 @@ Personal portfolio and CV site for Mark Smalley — engineering leader, protocol
 
 Static site — no build step. Runs on any local server (MAMP, Live Server, `python -m http.server`).
 
-The `sm-base` meta tag in each HTML file sets the path prefix for local development. On production (GitHub Pages with custom domain), the base is `/`.
+The JS framework auto-detects the base path from `location.pathname`. On production (GitHub Pages), it resolves to `/`. On local MAMP, it detects `/personal/smalley-website`.
 
 ## Versioning
 
@@ -44,6 +44,23 @@ Propagates to all `?v=` query strings in HTML, `sm-loader.js`, and `sm-core.js`.
 GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 
 ## Changelog
+
+#### 2026-06-12
+- Site is LIVE at https://smalley.my (GitHub Pages + Cloudflare DNS)
+- HTTPS enforced, SSL cert provisioned
+- Removed all But/And sentence-starters from thoughts pages (22 instances); global rule added
+- Rewrote 16-days-one-ecosystem: front-loaded scope, removed version numbers, tightened sections
+- Added inline proof links (SC media release, Blueprint PDF, CoKeeps) to thoughts pages
+- Added figures with figcaptions linking to live projects on all thought page images
+- Added Dungeon Chess screenshot, replaced Ordzaar hero with marketplace screenshot
+- Reduced hero canvas opacity for subtlety
+- Fixed sm-base meta tags (removed — broke production paths including RSS feed 404)
+- Fixed all favicon paths to absolute /favicon.ico
+- Added text-wrap: balance to all hero-tagline variants
+- Regenerated all OG images from build/gen-og.py; added unique CVs OG images
+- Added full OG/Twitter meta tags to individual CV pages
+- Created issues in Moddable repos for But/And cleanup (#106, #100, #56)
+- Various copy trims across protocol-design-lessons, what-regulators-need, vanilla-js, cardinal-sins
 
 #### 2026-06-10
 - External proof links: verified and added 15+ third-party sources that name us (issue #18)

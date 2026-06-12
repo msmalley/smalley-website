@@ -1,5 +1,5 @@
 (function() {
-  var V = '1.0.29';
+  var V = '1.0.30';
   var scripts = document.querySelectorAll('script[src*="sm-loader.js"]');
   var src = scripts[scripts.length - 1].getAttribute('src');
   var base = src.replace(/sm-loader\.js.*$/, '');
@@ -11,6 +11,7 @@
     document.write('<link rel="stylesheet" href="' + cssBase + styles[s] + '?v=' + V + '">');
   }
   var modules = [
+    'sm-analytics.js',
     'sm-core.js',
     'sm-theme.js',
     'sm-navbar.js',

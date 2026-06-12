@@ -40,7 +40,7 @@
 
       <p>Every framework is a bet. You're betting that the abstractions someone else chose will continue to serve your needs, that the community will maintain compatibility with your version, that the build toolchain won't break between now and when you need to ship a critical fix on a Sunday night. Sometimes that bet pays off, especially if you have all the time in the world to wait between shipping commits, but there's a different bet you can make. One where you own the entire surface area, where every abstraction exists because you chose it, and where the only dependency that can break your deployment is the browser itself.</p>
 
-      <p>I've spent the past 16 days shipping an entire software ecosystem without a single framework, build step, or external dependency. Six production sites. Two game engines. 169 JavaScript modules. 535 commits. The chess engine alone supports 70 playable variants with a multi-depth AI opponent. Every project deploys by pushing to main. Every project runs on any static file server on earth. And every project can be ported to any language, platform, or runtime without untangling someone else's opinions from my architecture.</p>
+      <p>I've spent the past 16 days shipping an entire software ecosystem without a single framework, build step, or external dependency. Six production sites. Two game engines. 169 JavaScript modules. 535 commits. The chess engine alone supports 70 playable variants with a multi-depth AI opponent. Every project deploys by pushing to main. Every project runs on any static file server on earth. Every project can be ported to any language, platform, or runtime without untangling someone else's opinions from my architecture.</p>
 
       <p>This is not an anti-framework position. It's a pro-portability, pro-ownership, pro-longevity position that happens to make frameworks unnecessary for a specific (and I'd argue common) class of work.</p>
 
@@ -85,7 +85,7 @@
   description: 'Classic FIDE chess. Checkmate the opponent\'s king to win.',
 });</code></pre>
 
-      <p>And here's the shape of something like Crazyhouse, a Tier 3 variant with piece drops, hand management, and board mutations:</p>
+      <p>Here's the shape of something like Crazyhouse, a Tier 3 variant with piece drops, hand management, and board mutations:</p>
 
       <pre><code>MCE.registerVariant('crazyhouse', {
   label: 'Crazyhouse',
@@ -124,7 +124,7 @@
 
       <p>This is not a blanket position. Frameworks earn their complexity when the problem demands it: large teams that need enforced conventions, applications with deeply nested interactive state, projects where the framework's opinion <em>is</em> the architecture you'd build anyway. If you're building a real-time collaborative editor, you want something managing the DOM diff for you. If you're building a design tool with undo/redo across a complex object graph, a state management library is worth its weight.</p>
 
-      <p>But most things on the web are not those things. Most things on the web are: fetch data, render it, let people interact with it. For that (which describes marketing sites, documentation, portfolios, content platforms, embeddable tools, and even reasonably complex game engines), a framework is overhead you pay for in build complexity, deployment friction, and architectural lock-in without receiving proportional value in return.</p>
+      <p>Most things on the web are not those things. Most things on the web are: fetch data, render it, let people interact with it. For that (which describes marketing sites, documentation, portfolios, content platforms, embeddable tools, and even reasonably complex game engines), a framework is overhead you pay for in build complexity, deployment friction, and architectural lock-in without receiving proportional value in return.</p>
 
       <h2>The Hiring Signal</h2>
 
@@ -144,7 +144,7 @@
 
       <p>When I look at the projects I've built (the ones that have lasted, the ones that survived company pivots and team changes and technology shifts), they all share one property. They're built on the platform, not on an abstraction over the platform. They own their entire surface area. They can be understood, ported, maintained, and extended by anyone who reads JavaScript. Not just anyone who reads React, or Vue, or whatever comes next.</p>
 
-      <p>The constraint isn't a limitation. It's the architecture. And the architecture is what ships.</p>
+      <p>The constraint isn't a limitation. It's the architecture, and the architecture is what ships.</p>
 
       <div class="article-tags">
         <a class="pill" href="../../explore/?tag=JavaScript">JavaScript</a>

@@ -40,70 +40,43 @@
 
       <p>Have you ever tried to embed a chess game on a website? If you have, you probably reached for one of the established libraries: Chessboard.js, chess.js, Lichess's board component. They work, but what if you wanted <strong>Atomic Chess</strong>? Or <strong>Racing Kings</strong>? Or a variant where pieces can clone themselves? Suddenly you're forking entire codebases and fighting against architectures designed for one game.</p>
 
-      <p>That frustration is what led me to build <a href="../../open-source/moddable-chess-engine/"><strong>Moddable Chess Engine</strong></a>, a modular engine that treats variants as first-class citizens. Once I had the architecture patterns right, it got me thinking about other problems I had, which ultimately led to the production of <a href="../../open-source/moddable-hexmaps/"><strong>Moddable Hexmaps</strong></a>, a framework where any hex-based board game can be generated, edited, and shared with a URL.</p>
-
-      <p>Both shipped to production in 16 days. Both are MIT-licensed. Both were built using AI-augmented engineering workflows. Both now expose their capabilities as AI-callable tools via the <a href="https://tools.moddable.games" target="_blank" rel="noopener">first board game MCP server</a>.</p>
+      <p>That frustration is what started everything. Sixteen days later, the result was two game engines, six playable games, 15 AI-callable tools, Consumer SDKs, a 190-page rulebook pipeline, developer documentation, and a main site tying it all together. The <a href="../../open-source/moddable-chess-engine/"><strong>Moddable Chess Engine</strong></a> handles the turn-based logic. <a href="../../open-source/moddable-hexmaps/"><strong>Moddable Hexmaps</strong></a> handles procedural map generation. The <a href="https://tools.moddable.games" target="_blank" rel="noopener">MCP server</a> makes both engines callable by any AI agent. All MIT-licensed, all built using AI-augmented engineering workflows, all deployed to production in those 16 days.</p>
 
       <img src="../../img/tools/chess-mce-hero.png" alt="Moddable Chess Engine showing Courier Chess variant on a 12x8 board">
 
-      <h2>The Chess Engine: From 70 Variants to Consumer Game SDK to MCP Server</h2>
+      <h2>The Chess Engine</h2>
 
-      <p>The Moddable Chess Engine started as a variant-first chess app: 70 playable variants on boards from 4x8 to 12x8, multi-depth AI with Web Worker threading, opening books, and variant-aware evaluation. Pure JavaScript, no dependencies, embeddable with a single iframe tag.</p>
+      <p>The Moddable Chess Engine plays 70 chess variants on boards from 4x8 to 12x8, with multi-depth AI, Web Worker threading, 26 variant-specific opening books, and 5 difficulty levels. Pure JavaScript, no dependencies, embeddable with a single iframe tag. Every variant is a single plugin file. Adding variant #71 takes minutes.</p>
 
-      <p>The first major evolution: the engine grew a consumer SDK (v0.9.1): renderer extension hooks, a reusable game controller, replay API, unit templates, terrain predicates, and effect lifecycle hooks. These aren't chess-specific. They're the primitives for building any turn-based game on top of MCE's move engine and AI. Native ESM throughout, no build step, same source files serve browser, Worker, and Node.js.</p>
+      <p>The engine also ships a Consumer SDK: renderer extension hooks, a reusable game controller, replay API, unit templates, terrain predicates, and effect lifecycle hooks. These aren't chess-specific. They're the primitives for building any turn-based game on top of the move engine and AI. Native ESM throughout, no build step, same source files serve browser, Worker, and Node.js.</p>
 
-      <p>The proof is Dungeon Chess, an asymmetric skirmish game with 4 fantasy factions, dungeon terrain, water hazards, and XP-budgeted unit drafting. It runs entirely on MCE's consumer APIs. Custom <code>tilePainter</code> renders dungeon walls. Custom <code>pieceProvider</code> renders fantasy units. The game controller handles multi-faction turns. Zero engine forks. The chess engine became a game framework.</p>
-
-      <p>The second evolution: the engine became AI-callable. Seven tools (list variants, analyse positions, validate moves, generate puzzles, probe opening books) are exposed via MCP protocol at <a href="https://tools.moddable.games" target="_blank" rel="noopener">tools.moddable.games</a>. Claude Desktop, Cursor, VS Code, and any MCP-compatible agent can connect with a single command. The same tools are available as a REST API for bots, dashboards, and integrations.</p>
-
-      <p>This is a DevRel problem as much as an engineering one. The question evolved from "can someone add a variant without understanding the engine?" to "can someone build a completely different game without forking?" to "can an AI agent use the engine without any human intermediary?" Each step meant investing in consumer-facing APIs, integration guides, and architecture that separates rendering, rules, and game loop.</p>
-
-      <ul>
-        <li><strong>70 playable variants</strong> — from Atomic Chess to Medusa Chess</li>
-        <li><strong>Consumer SDK (v0.9.1)</strong> — createGameController(), createReplay(), renderer hooks, unit templates, native ESM</li>
-        <li><strong>7 MCP tools</strong> — variant analysis, puzzle generation, position evaluation, opening books, move validation</li>
-        <li><strong>AI with opening books</strong> — Web Worker search, 26 variant-specific books, 5 difficulty levels</li>
-        <li><strong>Developer guides</strong> — Build a Variant, Crazyhouse, Poison Chess, Building Dungeon Chess (consumer integration)</li>
-      </ul>
+      <p>The proof is Dungeon Chess, an asymmetric skirmish game with 4 fantasy factions, dungeon terrain, water hazards, and XP-budgeted unit drafting. It runs entirely on the consumer APIs. Custom <code>tilePainter</code> renders dungeon walls. Custom <code>pieceProvider</code> renders fantasy units. The game controller handles multi-faction turns. Zero engine forks. The chess engine became a game framework.</p>
 
       <hr>
 
       <img src="../../img/tools/hexmaps-hero.png" alt="Moddable Hexmaps generator showing a procedural hex map with terrain tiles">
 
-      <h2>The Hex Map Framework: From Generator to Consumer SDK</h2>
+      <h2>The Hex Map Framework</h2>
 
-      <p>Moddable Hexmaps solves a different problem: board game designers need maps, but designing them manually is tedious and sharing them is friction-heavy. What if every map had a URL? And what if that URL could be deterministically regenerated from a seed string?</p>
+      <p>Moddable Hexmaps solves a different problem: board game designers need maps, but designing them manually is tedious and sharing them is friction-heavy. The answer: seeded procedural generation. Same seed, same map, every time. Every map has a URL. Sharing a map is sharing that URL.</p>
 
-      <p>The framework generates hex grids via Canvas (flat-top or pointy-top, at any ring count). It uses seeded RNG so the same seed always produces the same map. Six game configurations drive the generation: Nukes gets volcanic landscapes, Talisman gets 55 terrain types, Twilight Imperium gets 7 galaxy layouts, Colony gets Seafarers-style boards, Planet Mongo gets faction-clustered biomes, and Endless Skies gets 4X galaxy generation with wormholes and nebulae.</p>
+      <p>The framework generates hex grids via Canvas (flat-top or pointy-top, at any ring count) for six game configurations: volcanic landscapes, 55-terrain fantasy worlds, galaxy layouts with wormholes and nebulae, faction-clustered biomes, and Seafarers-style island boards. Maps export to PNG, PDF, annotated SVG, and JSON. Everything renders client-side, so there's no server cost regardless of scale.</p>
 
-      <p>Like the chess engine, hexmaps grew a Consumer SDK (v0.8.1). <code>HexApp.createMapController()</code> enables iframe-free embedding with render hooks, event system, and full programmatic control. Multiple instances on one page work independently. The same pure functions that render maps in the browser also power 6 AI-callable MCP tools at tools.moddable.games, letting agents generate and analyse hex maps without a UI.</p>
+      <p>Like the chess engine, hexmaps ships a Consumer SDK for iframe-free embedding with render hooks, event system, and full programmatic control. The same pure functions that render maps in the browser power 6 AI-callable MCP tools, letting agents generate and analyse hex maps without a UI.</p>
 
-      <p>Maps export to JSON, PNG (2x resolution), PDF (A4 centred), and annotated SVG (with highlights, tokens, arrows, legends). Everything is controlled via URL parameters. Sharing a map is sharing a URL. Because everything renders client-side, there's no server cost regardless of how many maps people generate.</p>
+      <h2>Why 16 Days Was Enough</h2>
 
-      <ul>
-        <li><strong>Seeded procedural generation</strong> — same seed = same map, always</li>
-        <li><strong>6 games supported</strong> — Nukes, Talisman Worlds, Twilight Imperium, Colony, Planet Mongo, Endless Skies</li>
-        <li><strong>Consumer SDK (v0.8.1)</strong> — createMapController(), render hooks, event system, iframe-free embedding</li>
-        <li><strong>6 MCP tools</strong> — generate maps, analyse terrain, export SVG, all AI-callable</li>
-        <li><strong>4 render styles</strong> — artistic, classic, kenney, realistic (per-game availability)</li>
-        <li><strong>Multi-format export</strong> — PNG, PDF, SVG with annotations, JSON state</li>
-      </ul>
-
-      <h2>The Architecture That Made It Possible</h2>
-
-      <p>The reason this shipped in 16 days isn't velocity alone. It's that every architectural decision compounds. The variant plugin interface means adding a new chess variant is a single file. The seeded RNG means sharing a map is sharing a URL. The renderer hook system means Dungeon Chess didn't fork the engine. The postMessage API means any embed is controllable at runtime without rebuilding the iframe. Native ESM means the same source files serve the browser, Cloudflare Workers, and Node.js without a bundler.</p>
+      <p>Every architectural decision compounds. The variant plugin interface means adding a new chess variant is a single file. The seeded RNG means sharing a map is sharing a URL. The renderer hook system means Dungeon Chess didn't fork the engine. The postMessage API means any embed is controllable at runtime without rebuilding the iframe. Native ESM means the same source files serve the browser, Cloudflare Workers, and Node.js without a bundler.</p>
 
       <p>Each decision removes future work. A plugin system that requires a fork isn't a plugin system. An embed that requires redeployment to change isn't embeddable. A game framework that can only make chess isn't a framework. An engine that needs a build step before an AI agent can use it isn't ready for the MCP world. The 16-day timeline is a consequence of getting these decisions right early, not of typing faster.</p>
 
-      <p>The full ecosystem: six games (Nukes, Mongo, Endless Skies, Dungeon Chess, Draughts, Go), two engines (chess v0.9.1 + hexmaps v0.8.1), a 190-page rulebook pipeline, 15 AI-callable MCP tools, Consumer SDKs for both engines, a developers section with API docs and examples, and the main site at moddable.games. All MIT-licensed, all statically hosted, all zero build-step dependencies.</p>
+      <h2>AI-Callable Game Engines</h2>
 
-      <h2>The MCP Server: AI-Callable Game Engines</h2>
-
-      <p>The most recent architectural leap: exposing both engines as AI-callable tools via the Model Context Protocol. A Cloudflare Worker at <a href="https://tools.moddable.games" target="_blank" rel="noopener">tools.moddable.games</a> serves 15 tools (7 chess, 6 hexmaps, 2 site-native) over MCP, REST, OpenAPI, and llms.txt. Any MCP-compatible agent (Claude Desktop, Cursor, VS Code) connects with one command:</p>
+      <p>A Cloudflare Worker at <a href="https://tools.moddable.games" target="_blank" rel="noopener">tools.moddable.games</a> serves 15 tools (7 chess, 6 hexmaps, 2 site-native) over MCP, REST, OpenAPI, and llms.txt. Any MCP-compatible agent connects with one command:</p>
 
       <pre><code class="language-bash">claude mcp add --transport http moddable-tools https://tools.moddable.games/mcp</code></pre>
 
-      <p>This is the first board game engine MCP server. The tools are stateless, the Worker runs on Cloudflare's free tier, and the same pure functions that power the browser games power the AI tools. No translation layer. No separate API. The architecture that made both engines embeddable also made them AI-callable for free.</p>
+      <p>The tools are stateless, the Worker runs on Cloudflare's free tier, and the same pure functions that power the browser games power the AI tools. No translation layer. No separate API. The architecture that made both engines embeddable also made them AI-callable for free.</p>
 
       <h2>Try Them</h2>
 

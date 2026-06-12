@@ -68,7 +68,7 @@
         n.y += n.vy;
       }
 
-      ctx.strokeStyle = 'rgba(14, 116, 144, 0.2)';
+      ctx.strokeStyle = 'rgba(14, 116, 144, 0.1)';
       ctx.lineWidth = 0.5;
 
       for (var i = 0; i < nodes.length; i++) {
@@ -76,7 +76,7 @@
         ctx.stroke();
       }
 
-      ctx.fillStyle = 'rgba(34, 211, 238, 0.4)';
+      ctx.fillStyle = 'rgba(34, 211, 238, 0.2)';
       for (var i = 0; i < nodes.length; i++) {
         ctx.beginPath();
         ctx.arc(nodes[i].x, nodes[i].y, 2, 0, Math.PI * 2);

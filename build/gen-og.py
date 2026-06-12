@@ -166,7 +166,7 @@ def generate_all():
     pages = [
         # Homepage
         ('og-default.png', 'violet', 'Mark Smalley',
-         'Engineering Leader · Protocol Architect · AI-Native Builder',
+         'Engineering Leader · Protocol Architect',
          'CTO, RegTech, and Developer Relations'),
         ('404.png', 'violet', '404',
          "You found the one page I didn't ship",

@@ -171,6 +171,18 @@ def generate_all():
         ('404.png', 'violet', '404',
          "You found the one page I didn't ship",
          "535 commits and this link still doesn't work"),
+        ('cvs.png', 'violet', 'CVs',
+         'Three Tailored CVs',
+         'CTO, RegTech, and Developer Relations'),
+        ('cvs-cto.png', 'violet', 'CV',
+         'CTO / Head of Engineering',
+         'Blockchain infrastructure, team leadership, protocol design'),
+        ('cvs-devrel.png', 'violet', 'CV',
+         'Developer Relations',
+         'Technical evangelism, developer education, community building'),
+        ('cvs-regtech.png', 'gold', 'CV',
+         'RegTech / FinTech',
+         'Regulatory compliance, digital custody, institutional blockchain'),
 
         # Portfolio pages
         ('portfolio.png', 'teal', 'Portfolio',

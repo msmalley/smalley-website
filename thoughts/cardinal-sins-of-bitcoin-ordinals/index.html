@@ -46,17 +46,17 @@
 
       <h2>Meta Protocols and Hidden Layers</h2>
 
-      <p>Bitcoin was designed as a ledger, a record of who owns what. But since 2023, a shadow-market has emerged operating on top of that ledger. Ordinals, Inscriptions, Runes, BRC-20: these are all <strong>meta protocols</strong>. They use Bitcoin as a data availability layer while layering new meaning onto the raw transaction data.</p>
+      <p>Bitcoin was designed as a ledger, a record of who owns what. Since 2023, a shadow-market has emerged operating on top of that ledger. Ordinals, Inscriptions, Runes, BRC-20: these are all <strong>meta protocols</strong>. They use Bitcoin as a data availability layer while layering new meaning onto the raw transaction data.</p>
 
       <p>The beauty is that none of this requires changes to Bitcoin itself. The consensus rules haven't changed. The nodes don't know or care about ordinal theory. The sat numbering exists only in the eyes of those who choose to index it.</p>
 
-      <p>And there's the first sin.</p>
+      <p>Therein lies the first sin.</p>
 
       <h2>The Indexing Problem</h2>
 
       <p>Ordinal theory requires <strong>indexing by non-core nodes</strong>. Bitcoin Core doesn't track individual satoshis through the UTXO graph. It doesn't know which sat is "special." To assign value to a specific sat, you need a separate indexer (ord, Ordit, or another tool) that traces the lineage of every satoshi from its coinbase origin through every subsequent transaction.</p>
 
-      <p>This creates a philosophical tension. Bitcoin's value proposition is trustless verification. Anyone running a node can verify the entire state of the network. But ordinal value exists <em>outside</em> that verification layer. You're trusting an indexer to correctly trace sat provenance. If two indexers disagree about which sat is which after a complex transaction, there's no consensus mechanism to resolve it.</p>
+      <p>This creates a philosophical tension. Bitcoin's value proposition is trustless verification. Anyone running a node can verify the entire state of the network. However, the value of ordinals exists <em>outside</em> that verification layer. You're trusting an indexer to correctly trace sat provenance. If two indexers disagree about which sat is which after a complex transaction, there's no consensus mechanism to resolve it.</p>
 
       <h2>Inscriptions: Luxury Canvas or Bloat?</h2>
 

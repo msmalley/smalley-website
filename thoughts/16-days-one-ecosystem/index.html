@@ -70,15 +70,11 @@
 
       <p>Every architectural decision compounds. The variant plugin interface means adding a new chess variant is a single file. The seeded RNG means sharing a map is sharing a URL. The renderer hook system means Dungeon Chess didn't fork the engine. The postMessage API means any embed is controllable at runtime without rebuilding the iframe. Native ESM means the same source files serve the browser, Cloudflare Workers, and Node.js without a bundler.</p>
 
-      <p>Each decision removes future work. The 16-day timeline is a consequence of getting these decisions right early, not of typing faster.</p>
-
-      <h2>AI-Callable Game Engines</h2>
-
-      <p>A Cloudflare Worker at <a href="https://tools.moddable.games" target="_blank" rel="noopener">tools.moddable.games</a> serves 15 tools (7 chess, 6 hexmaps, 2 site-native) over MCP, REST, OpenAPI, and llms.txt. Any MCP-compatible agent connects with one command:</p>
+      <p>Each decision removes future work. The 16-day timeline is a consequence of getting these decisions right early, not of typing faster. The architecture that made both engines embeddable also made them AI-callable for free: a Cloudflare Worker at <a href="https://tools.moddable.games" target="_blank" rel="noopener">tools.moddable.games</a> serves 15 tools (7 chess, 6 hexmaps, 2 site-native) over MCP, REST, OpenAPI, and llms.txt. Any MCP-compatible agent connects with one command:</p>
 
       <pre><code class="language-bash">claude mcp add --transport http moddable-tools https://tools.moddable.games/mcp</code></pre>
 
-      <p>The tools are stateless, the Worker runs on Cloudflare's free tier, and the same pure functions that power the browser games power the AI tools. No translation layer. No separate API. The architecture that made both engines embeddable also made them AI-callable for free.</p>
+      <p>The tools are stateless, the Worker runs on Cloudflare's free tier, and the same pure functions that power the browser games power the AI tools. No translation layer. No separate API.</p>
 
       <h2>Try Them</h2>
 

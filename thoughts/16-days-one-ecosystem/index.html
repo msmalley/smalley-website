@@ -84,6 +84,24 @@
 
       <p>The tools are stateless, the Worker runs on Cloudflare's free tier, and the same pure functions that power the browser games power the AI tools. No translation layer. No separate API.</p>
 
+      <h2>The Other 14 Days</h2>
+
+      <p>Sixteen days to ship. Fourteen more to make it professional. The ratio is the point.</p>
+
+      <p>AI-augmented engineering compresses the build phase dramatically. Two game engines, six games, 15 MCP tools, Consumer SDKs, a 190-page rulebook pipeline, developer documentation, and the site tying it all together. That happened in 16 days because the architecture decisions were right and the tooling was configured to let the AI operate at full speed.</p>
+
+      <p>The next 14 days were a different kind of work entirely. Not building, but <em>curating</em>. Reading every paragraph with the awareness that an AI will confidently write "But" at the start of 22 sentences across a site and never flag it as a pattern. Noticing that version numbers in prose add noise without adding information. Catching that an evolutionary framing ("first we built X, then it became Y") is the wrong narrative when the reader just wants to know what the thing <em>does</em>. Recognising that OG images referenced titles from three rewrites ago, that favicon paths resolve differently on localhost versus production, and that a removed meta tag was silently breaking RSS feeds for every visitor.</p>
+
+      <p>Each individually trivial. Collectively the difference between a portfolio piece and a side project.</p>
+
+      <p>The more interesting work was systemic. I don't fix things twice. Every correction becomes a rule, every rule gets encoded into the development environment, and that environment enforces consistency across every project I touch without me needing to remember. There are now 108 global rules governing how the AI operates across 10 active projects. When a new convention is introduced in one project, it propagates outward: issues are created in sibling repositories, cross-project memories are updated, and the next session in any project starts with an automated audit that checks compliance against the full rule set.</p>
+
+      <p>The workflow goes further than passive rules. Session triggers automate the relationship between me and the AI at the process level. Opening a session runs a compliance audit, checks open GitHub issues across all repositories, and auto-fixes anything with unambiguous instructions. Closing a session propagates patterns, updates shared memories, and creates issues for work that was discovered but not yet addressed. Between sessions, active loops monitor issue queues, verify deployments, and action items that don't require human judgement.</p>
+
+      <p>36 open issues across 4 repositories. Each one written with enough specificity that the AI can resolve it autonomously when the next session opens. The issues aren't a backlog. They're a queue for a system that processes them without being told to look.</p>
+
+      <p>This is what separates prompt engineering from engineering <em>with</em> AI. Prompt engineering is asking a model to write code. Engineering with AI is building the feedback loops, memory systems, and automation infrastructure that make the model's output compound across time and across projects. The 16-day build phase is impressive. The system that makes every subsequent build faster, more consistent, and less dependent on me remembering what was decided last Tuesday is the actual product.</p>
+
       <h2>Try Them</h2>
 
       <p>Both engines are live, MIT-licensed, and waiting for someone to build something weird with them.</p>

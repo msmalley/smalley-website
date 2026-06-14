@@ -57,6 +57,8 @@ AI-augmented engineering methodology applied to framework-level architecture. Bu
 
 • Shipped 535 commits across 10+ repositories in 16 days using LLM-augmented development. Demonstrates the methodology's viability for startup-speed delivery at architecture quality
 
+• Engineered autonomous CI pipeline: structured issue queue across 6 repositories with typed labels routing work through research and implementation agents on cloud infrastructure. Agents branch, build, and merge without a terminal open — I review the diff
+
 Head of Engineering — CakeDefi — Singapore
 
 (Feb 2023 – Sep 2023)

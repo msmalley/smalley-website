@@ -11,16 +11,16 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://smalley.my/thoughts/16-days-one-ecosystem/">
 <meta property="og:site_name" content="Mark Smalley">
-<meta property="og:image" content="https://smalley.my/img/og/thoughts-16-days.jpg?v=1.0.30">
+<meta property="og:image" content="https://smalley.my/img/og/thoughts-16-days.jpg?v=1.0.31">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="16 Days, One Ecosystem — Mark Smalley">
 <meta name="twitter:description" content="Two engines, six games, 15 MCP tools, and a documentation pipeline. How architecture decisions made it possible to ship an entire ecosystem in 16 days.">
-<meta name="twitter:image" content="https://smalley.my/img/og/thoughts-16-days.jpg?v=1.0.30">
+<meta name="twitter:image" content="https://smalley.my/img/og/thoughts-16-days.jpg?v=1.0.31">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="../../img/apple-touch-icon.png">
-<link rel="stylesheet" href="../../css/_sm.css?v=1.0.30">
-<link rel="stylesheet" href="../../css/thoughts.css?v=1.0.30">
-<link rel="stylesheet" href="../../css/pages.css?v=1.0.30">
+<link rel="stylesheet" href="../../css/_sm.css?v=1.0.31">
+<link rel="stylesheet" href="../../css/thoughts.css?v=1.0.31">
+<link rel="stylesheet" href="../../css/pages.css?v=1.0.31">
 </head>
 <body>
 <div id="nav-root"></div>
@@ -88,19 +88,19 @@
 
       <p>Sixteen days to ship. Fourteen more to make it professional. The ratio is the point.</p>
 
-      <p>AI-augmented engineering compresses the build phase dramatically. Two game engines, six games, 15 MCP tools, Consumer SDKs, a 190-page rulebook pipeline, developer documentation, and the site tying it all together. That happened in 16 days because the architecture decisions were right and the tooling was configured to let the AI operate at full speed.</p>
+      <p>AI-augmented engineering compresses the build phase dramatically. Two game engines, six games, 15 MCP tools, Consumer SDKs, a 190-page rulebook pipeline, developer documentation, and the main <a href="https://moddable.games" target="_blank" rel="noopener">moddable.games</a> website tying it all together — 16 days because the architecture was right and the tooling let the AI operate at full speed.</p>
 
-      <p>The next 14 days were a different kind of work entirely. Not building, but <em>curating</em>. Reading every paragraph with the awareness that an AI will confidently write "But" at the start of 22 sentences across a site and never flag it as a pattern. Noticing that version numbers in prose add noise without adding information. Catching that an evolutionary framing ("first we built X, then it became Y") is the wrong narrative when the reader just wants to know what the thing <em>does</em>. Recognising that OG images referenced titles from three rewrites ago, that favicon paths resolve differently on localhost versus production, and that a removed meta tag was silently breaking RSS feeds for every visitor.</p>
+      <p>The next 14 days were a different kind of work. Not building, but curating. Reading every paragraph knowing an AI will confidently start 22 sentences with "But" and never flag the pattern. Noticing that version numbers in prose add noise without adding information. Catching that an evolutionary framing is the wrong narrative when the reader just wants to know what the thing does. Recognising that OG images referenced titles from three rewrites ago, that favicon paths resolve differently on localhost versus production, that a removed meta tag was silently breaking RSS feeds.</p>
 
       <p>Each individually trivial. Collectively the difference between a portfolio piece and a side project.</p>
 
-      <p>The more interesting work was systemic. Every correction becomes a rule, every rule gets encoded into the development environment, and that environment enforces consistency across every project I touch without me needing to remember. There are now 108 global rules governing how the AI operates across 10 active projects. When a new convention is introduced in one project, it propagates outward: issues are created in sibling repositories, cross-project memories are updated, and the next session in any project starts with an automated audit that checks compliance against the full rule set.</p>
+      <p>The more interesting work was systemic. Every correction becomes a rule. Every rule gets encoded into the environment. That environment now governs every project without requiring me to remember what was decided last Tuesday. However, rules are passive.</p>
 
-      <p>The workflow goes further than passive rules. Session triggers automate the relationship between me and the AI at the process level. Opening a session runs a compliance audit, checks open GitHub issues across all repositories, and auto-fixes anything with unambiguous instructions. Closing a session propagates patterns, updates shared memories, and creates issues for work that was discovered but not yet addressed. Between sessions, active loops monitor issue queues, verify deployments, and action items that don't require human judgement.</p>
+      <p>The next step was process automation: a structured issue pipeline across six repositories, with labels that route work through research and implementation agents running on cloud infrastructure — no terminal open, no machine running. Issues aren't a backlog. They're a typed queue. Research agents investigate and scope. Implementation agents branch, build, and merge. I review the diff.</p>
 
-      <p>36 open issues across 4 repositories. Each one written with enough specificity that the AI can resolve it autonomously when the next session opens. The issues aren't a backlog. They're a queue for a system that processes them without being told to look.</p>
+      <p>This is what separates prompt engineering from engineering with AI. Prompt engineering is asking a model to write code. Engineering with AI is building the feedback loops and automation infrastructure that make the model's output compound across time and projects.</p>
 
-      <p>This is what separates prompt engineering from engineering <em>with</em> AI. Prompt engineering is asking a model to write code. Engineering with AI is building the feedback loops, memory systems, and automation infrastructure that make the model's output compound across time and projects. The 16-day build phase is impressive. The system that makes every subsequent build faster, more consistent, and less dependent on me remembering what was decided last Tuesday is the actual product.</p>
+      <p>The 16-day build is impressive. The system that makes every subsequent build faster, more consistent, and less dependent on me is the actual product.</p>
 
       <h2>Try Them</h2>
 
@@ -133,6 +133,6 @@
 </section>
 
 <div id="footer-root"></div>
-<script src="../../js/sm-loader.js?v=1.0.30"></script>
+<script src="../../js/sm-loader.js?v=1.0.31"></script>
 </body>
 </html>

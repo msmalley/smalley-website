@@ -45,6 +45,12 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 
 ## Changelog
 
+#### 2026-06-14
+- Rewrote "The Other 14 Days" section of 16-days post with cloud agent pipeline narrative
+- Added step 06 (Autonomous Pipeline) to workflow page
+- Added automation infrastructure bullet to CTO and DevRel CVs
+- Regenerated all CV PDFs and ATS text versions
+
 #### 2026-06-12
 - Site is LIVE at https://smalley.my (GitHub Pages + Cloudflare DNS)
 - HTTPS enforced, SSL cert provisioned

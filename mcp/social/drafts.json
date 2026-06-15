@@ -1,16 +1,114 @@
 {
-  "comeback_posts": {
-    "created": "2026-06-15",
-    "context": "Returning to public presence after years of private/NDA work. Different angles per platform.",
-    "twitter": {
-      "content": "Five years of building behind NDAs and client work. Now shipping in public again.\n\nChess engine, hexmap framework, Bitcoin ordinals SDK, and a few things still under wraps.\n\nsmalley.my if you're curious.",
-      "chars": 204,
-      "angle": "Builder community, what was shipped"
+  "pipeline_config": {
+    "cadence": "2-3 posts per week across platforms until employed or funded",
+    "platforms": {
+      "twitter": {
+        "audience": "builders, devs, crypto-native, AI/MCP community",
+        "tone": "technical, concise, show-don't-tell, builder voice",
+        "max_chars": 280,
+        "thread_ok": true
+      },
+      "linkedin": {
+        "audience": "hiring managers, investors, professional network, regtech/fintech",
+        "tone": "professional signal, availability, leadership framing",
+        "max_chars": 3000
+      },
+      "instagram": {
+        "audience": "visual/creative, game devs, broader reach",
+        "tone": "visual-first, behind-the-scenes, product showcase",
+        "status": "planned — awaiting API/MCP integration"
+      }
     },
-    "linkedin": {
-      "content": "After several years focused on consulting and private infrastructure builds, I'm returning to public output. I've launched smalley.my to surface the work: protocol design, open-source developer tooling, embedded game systems, and the engagements that shaped them.\n\nOpen to CTO and technical leadership conversations, particularly in crypto infrastructure, RegTech, or developer platforms. Remote preferred, open to hybrid in the right context.",
-      "chars": 443,
-      "angle": "Professional signal, availability for roles"
+    "content_triggers": [
+      "New release or version bump on any project (Moddable, smalley.my, social MCP, etc.)",
+      "New article or thoughts post published on smalley.my",
+      "Open-source milestone (external contributor, star threshold, new repo)",
+      "Speaking engagement confirmed or CFP submitted",
+      "Job application sent or interview milestone",
+      "Meaningful technical achievement across any project",
+      "CV update or new portfolio case study added"
+    ],
+    "workflow": "Claude appends drafts during sessions when content triggers fire. Mark reviews and approves before posting. Drafts accumulate across all projects — not just smalley-website sessions."
+  },
+  "drafts": [
+    {
+      "id": "comeback-twitter",
+      "created": "2026-06-15",
+      "status": "ready",
+      "trigger": "site launch + return to public presence",
+      "platforms": ["twitter"],
+      "content": "Five years of building behind NDAs and client work. Now shipping in public again.\n\nChess engine, hexmap framework, AI developer tooling, and a few things still under wraps.\n\nsmalley.my if you're curious.",
+      "chars": 196,
+      "angle": "Builder community, what was shipped",
+      "sequence": 1,
+      "notes": "First post after long silence. Must land before anything else."
+    },
+    {
+      "id": "comeback-linkedin",
+      "created": "2026-06-15",
+      "status": "ready",
+      "trigger": "site launch + return to public presence",
+      "platforms": ["linkedin"],
+      "content": "After several years focused on consulting and private infrastructure builds, I'm returning to public output. I've launched smalley.my to surface the work: protocol design, open-source developer tooling, embedded game systems, and the engagements that shaped them.\n\nMore to come. The pipeline is automated now. Will share the process soon.",
+      "chars": 341,
+      "angle": "Re-establish presence, tease autonomous content system",
+      "sequence": 1,
+      "notes": "First post after long silence. Must land before anything else. No ask, no role signal — just presence."
+    },
+    {
+      "id": "mcp-social-meta",
+      "created": "2026-06-15",
+      "status": "draft",
+      "trigger": "social MCP server shipped and working",
+      "platforms": ["twitter"],
+      "content": null,
+      "angle": "Built a tool that posts to Twitter and LinkedIn from the terminal via Claude. Meta demonstration of the thing itself.",
+      "sequence": 2,
+      "notes": "Write after comeback post lands. Can reference that the comeback post was sent via MCP."
+    },
+    {
+      "id": "16-days-sprint",
+      "created": "2026-06-15",
+      "status": "draft",
+      "trigger": "16-days article published on smalley.my",
+      "platforms": ["twitter", "linkedin"],
+      "content": null,
+      "angle": "Twitter: raw numbers and what was built. LinkedIn: methodology and what it proves about AI-augmented engineering leadership.",
+      "sequence": 3,
+      "notes": "Backdated trigger — article already live. Strong content for both audiences."
+    },
+    {
+      "id": "vanilla-js-crosspost",
+      "created": "2026-06-15",
+      "status": "draft",
+      "trigger": "vanilla JS article published on smalley.my",
+      "platforms": ["twitter"],
+      "content": null,
+      "angle": "Hot take / contrarian dev opinion. Framework fatigue resonates with builder audience.",
+      "sequence": 4,
+      "notes": "Backdated trigger — article already live. Consider cross-posting full article to dev.to and linking from tweet."
+    },
+    {
+      "id": "moddable-chess-release",
+      "created": "2026-06-15",
+      "status": "backlog",
+      "trigger": "next Moddable Chess Engine release",
+      "platforms": ["twitter", "linkedin"],
+      "content": null,
+      "angle": "Twitter: technical showcase, embed demo. LinkedIn: open-source leadership, SDK architecture.",
+      "sequence": null,
+      "notes": "Fires when next version ships. Include embed link or screenshot."
+    },
+    {
+      "id": "protocol-design-lessons",
+      "created": "2026-06-15",
+      "status": "draft",
+      "trigger": "protocol design article published on smalley.my",
+      "platforms": ["twitter", "linkedin"],
+      "content": null,
+      "angle": "Twitter: thread format, one lesson per tweet. LinkedIn: single post summarising key takeaway for protocol teams.",
+      "sequence": 5,
+      "notes": "Backdated trigger — article already live."
     }
-  }
+  ]
 }

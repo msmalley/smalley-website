@@ -35,58 +35,85 @@
       "id": "comeback-twitter",
       "created": "2026-06-15",
       "status": "ready",
-      "trigger": "site launch + return to public presence",
+      "trigger": "site launch + return to public presence + MCP pipeline demo",
       "platforms": ["twitter"],
-      "content": "Five years of building behind NDAs and client work. Now shipping in public again.\n\nChess engine, hexmap framework, AI developer tooling, and a few things still under wraps.\n\nsmalley.my if you're curious.",
-      "chars": 196,
-      "angle": "Builder community, what was shipped",
+      "content": "Five years of building behind NDAs and client work. Now shipping in public again.\n\nGame engines, developer tooling, protocol infrastructure, and an autonomous content pipeline integrated into the site, which, if you're reading this, clearly works.\n\nhttps://smalley.my",
+      "chars": 265,
+      "angle": "Builder community, comeback + pipeline proof",
       "sequence": 1,
-      "notes": "First post after long silence. Must land before anything else."
+      "notes": "First post after long silence. Combines comeback with MCP meta-demonstration. Must land before anything else."
     },
     {
       "id": "comeback-linkedin",
       "created": "2026-06-15",
       "status": "ready",
-      "trigger": "site launch + return to public presence",
+      "trigger": "site launch + return to public presence + MCP pipeline demo",
       "platforms": ["linkedin"],
-      "content": "After several years focused on consulting and private infrastructure builds, I'm returning to public output. I've launched smalley.my to surface the work: protocol design, open-source developer tooling, embedded game systems, and the engagements that shaped them.\n\nMore to come. The pipeline is automated now. Will share the process soon.",
-      "chars": 341,
-      "angle": "Re-establish presence, tease autonomous content system",
+      "content": "After several years focused on consulting and private infrastructure, I'm returning to public output. I've re-launched my personal site to surface my portfolio of game engines, protocol infrastructure, open-source developer tooling, and the stories behind the twelve years it took to build them.\n\nSo what's different this time? The site now drives an autonomous content pipeline, which, if you're reading this, clearly works. More on the process soon.\n\nhttps://smalley.my",
+      "chars": 466,
+      "angle": "Re-establish presence, pipeline proof, tease methodology follow-up",
       "sequence": 1,
-      "notes": "First post after long silence. Must land before anything else. No ask, no role signal — just presence."
+      "notes": "First post after long silence. Combines comeback with MCP meta-demonstration. No ask, no role signal — just presence and proof."
     },
     {
-      "id": "mcp-social-meta",
+      "id": "16-days-twitter",
       "created": "2026-06-15",
-      "status": "draft",
-      "trigger": "social MCP server shipped and working",
-      "platforms": ["twitter"],
-      "content": null,
-      "angle": "Built a tool that posts to Twitter and LinkedIn from the terminal via Claude. Meta demonstration of the thing itself.",
-      "sequence": 2,
-      "notes": "Write after comeback post lands. Can reference that the comeback post was sent via MCP."
-    },
-    {
-      "id": "16-days-sprint",
-      "created": "2026-06-15",
-      "status": "draft",
+      "status": "ready",
       "trigger": "16-days article published on smalley.my",
-      "platforms": ["twitter", "linkedin"],
-      "content": null,
-      "angle": "Twitter: raw numbers and what was built. LinkedIn: methodology and what it proves about AI-augmented engineering leadership.",
-      "sequence": 3,
-      "notes": "Backdated trigger — article already live. Strong content for both audiences."
+      "platforms": ["twitter"],
+      "content": "535 commits. 16 days. Two game engines, six games, 15 AI-callable tools, Consumer SDKs, a 190-page rulebook pipeline, and a documentation site. All shipped to production.\n\nHow architecture decisions made that possible — and what happened in the 14 days after. 🧵\n\n2/ The chess engine plays 70 variants on boards from 4x8 to 12x8. Every variant is a single plugin file. Adding variant #71 takes minutes. Pure JS, no dependencies, embeddable with one iframe tag.\n\n3/ The hex framework generates seeded procedural maps. Same seed, same map, every time. Sharing a map is sharing a URL. Six terrain systems, exports to PNG/PDF/SVG/JSON.\n\n4/ Both engines ship Consumer SDKs: render hooks, event systems, programmatic control. Dungeon Chess — an asymmetric 4-faction skirmish game — runs entirely on the chess engine's consumer APIs. Zero engine forks.\n\n5/ The same pure functions that power the browser games power 15 MCP tools on a Cloudflare Worker. Any AI agent connects with one command. No translation layer. No separate API.\n\n6/ 16 days to build. 14 more to make it professional. AI-augmented engineering compresses the build phase. The curation phase is where human judgment still dominates: catching sentence patterns, narrative framing, broken meta tags.\n\n7/ Every correction becomes a rule. Every rule gets encoded into the environment. That environment now governs every project. The content pipeline that sent this post runs on the same infrastructure.\n\nArchitecture decisions compound. The system that makes every subsequent build faster is the actual product.\n\nhttps://smalley.my/thoughts/16-days-one-ecosystem/",
+      "format": "thread",
+      "angle": "Raw numbers, architecture decisions, pipeline self-reference",
+      "sequence": 2,
+      "notes": "Follow-up to comeback posts. Unpacks the methodology. Each tweet is self-contained."
     },
     {
-      "id": "vanilla-js-crosspost",
+      "id": "16-days-linkedin",
       "created": "2026-06-15",
-      "status": "draft",
+      "status": "ready",
+      "trigger": "16-days article published on smalley.my",
+      "platforms": ["linkedin"],
+      "content": "Two game engines, six games, 15 AI-callable tools, Consumer SDKs, and a documentation site. Shipped to production in 16 days. Then 14 more to curate.\n\nThe 16-day build was possible because every architectural decision removes future work. Variant plugins mean adding a new game is one file. Seeded RNG means sharing a map is sharing a URL. Native ESM means the same source serves browsers, Workers, and Node. The embeddable architecture that made both engines iframe-ready also made them AI-callable for free.\n\nThe 14 days after were different. Not building, but curating. Reading every paragraph knowing an AI will confidently start 22 sentences with \"But\" and never flag the pattern. Catching stale OG images, broken RSS feeds, narrative framing that served the wrong reader. Each trivial. Collectively the difference between a portfolio piece and a side project.\n\nThen the systemic work: every correction becomes a rule, every rule gets encoded into the development environment. That environment now governs six repositories. Issues route through research and implementation agents on cloud infrastructure. The content pipeline that published this post is part of the same system.\n\nThis is what separates prompt engineering from engineering with AI. One is asking a model to write code. The other is building feedback loops that make output compound across time and projects.\n\nhttps://smalley.my/thoughts/16-days-one-ecosystem/",
+      "chars": 1448,
+      "angle": "Methodology, AI-augmented engineering leadership, pipeline self-reference",
+      "sequence": 2,
+      "notes": "Follow-up to comeback posts. Explains the process teased in the comeback. Positions engineering approach."
+    },
+    {
+      "id": "vanilla-js-twitter",
+      "created": "2026-06-15",
+      "status": "ready",
       "trigger": "vanilla JS article published on smalley.my",
       "platforms": ["twitter"],
-      "content": null,
-      "angle": "Hot take / contrarian dev opinion. Framework fatigue resonates with builder audience.",
+      "content": "Every framework is a bet that someone else's abstractions will keep serving you. I stopped making that bet.\n\nNo build step. No dependencies. No deployment ceremony. The source code is the deployment. The constraint forced better architecture than any framework would have given me.\n\nTry running `npm install` on a React project from 2016. Mine deploys by pushing to main, same as day one.\n\nhttps://smalley.my/thoughts/the-case-for-vanilla-js/",
+      "chars": 440,
+      "angle": "Contrarian stance, longevity argument, no repeated stats from 16-days thread",
+      "sequence": 3,
+      "notes": "Twitter only. The opinion plays to builders. LinkedIn audience less suited to framework hot takes. Consider dev.to cross-post of full article."
+    },
+    {
+      "id": "protocol-twitter",
+      "created": "2026-06-15",
+      "status": "ready",
+      "trigger": "protocol design article published on smalley.my",
+      "platforms": ["twitter"],
+      "content": "Four protocols. Nine years. One design philosophy.\n\nWhat I learned designing systems that other people actually adopted. 🧵\n\n2/ Everstore (2016): structured database functionality on Bitcoin using 38 bytes of OP_RETURN and HD key derivation. Before Ethereum's EVM. Before SegWit. Before Taproot.\n\nThe 38-byte ceiling forced the design. Constraints aren't limitations. They're architecture.\n\n3/ DN-Key (2016): publish your cryptographic public keys as DNS TXT records. Verification is a DNS lookup. That's it.\n\nBorrowed trust from infrastructure people already believed in. Adopted by regulated institutions because compliance teams understood it in one meeting.\n\n4/ SADO (2023): trustless Ordinals trading via PSBTs. No custody. No intermediary. The protocol is the transaction format itself.\n\nOrdzaar adopted it because it was the only option that didn't require trust. Adoption as a technical decision, not a business negotiation.\n\n5/ DN-Key was cited by name in the Securities Commission Malaysia's capital markets blueprint. Nine years later, the same protocol powers passkey-native identity across Bitcoin, EVM, and Solana via Oviato. No modifications required.\n\nIf the architecture is sound and the platform isn't ready, you're early, not wrong.\n\n6/ The thread: design for constraints. Borrow existing trust. Keep the chain dumb. Accept that timing matters.\n\nhttps://smalley.my/thoughts/protocol-design-lessons/",
+      "format": "thread",
+      "angle": "One lesson per protocol, constraint-driven design philosophy",
       "sequence": 4,
-      "notes": "Backdated trigger — article already live. Consider cross-posting full article to dev.to and linking from tweet."
+      "notes": "Backdated trigger — article already live. Strong crypto/protocol audience content."
+    },
+    {
+      "id": "protocol-linkedin",
+      "created": "2026-06-15",
+      "status": "ready",
+      "trigger": "protocol design article published on smalley.my",
+      "platforms": ["linkedin"],
+      "content": "Four protocols across nine years. One consistent design philosophy: borrow trust from systems people already believe in. Minimise what touches the chain. Let constraints force better architecture than unlimited resources ever would.\n\nIn 2016, I published DN-Key: publish cryptographic public keys as DNS TXT records. Verification is a lookup. That's it. Adopted by regulated custody providers because compliance teams could understand it in one meeting. Cited by name in the Securities Commission Malaysia's capital markets blueprint.\n\nNine years later, the same protocol powers passkey-native, chain-agnostic identity across Bitcoin, EVM, and Solana. No modifications. No upgrades. It was forward-compatible with systems that didn't exist when it was written.\n\nThe gap between \"too simple to be interesting\" and \"simple enough to survive nine years of platform evolution\" is where protocol design actually lives.\n\nhttps://smalley.my/thoughts/protocol-design-lessons/",
+      "chars": 780,
+      "angle": "DN-Key arc as institutional credibility signal, longevity of simple design",
+      "sequence": 4,
+      "notes": "LinkedIn gets DN-Key story specifically — regulator citation, institutional adoption, nine-year arc. Strongest signal for hiring managers."
     },
     {
       "id": "moddable-chess-release",
@@ -98,17 +125,6 @@
       "angle": "Twitter: technical showcase, embed demo. LinkedIn: open-source leadership, SDK architecture.",
       "sequence": null,
       "notes": "Fires when next version ships. Include embed link or screenshot."
-    },
-    {
-      "id": "protocol-design-lessons",
-      "created": "2026-06-15",
-      "status": "draft",
-      "trigger": "protocol design article published on smalley.my",
-      "platforms": ["twitter", "linkedin"],
-      "content": null,
-      "angle": "Twitter: thread format, one lesson per tweet. LinkedIn: single post summarising key takeaway for protocol teams.",
-      "sequence": 5,
-      "notes": "Backdated trigger — article already live."
     }
   ]
 }

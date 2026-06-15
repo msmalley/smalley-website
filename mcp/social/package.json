@@ -1,0 +1,17 @@
+{
+  "name": "@smalley/social-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Unified social media MCP server — post, search, and manage across X/Twitter and LinkedIn",
+  "type": "module",
+  "main": "server.js",
+  "bin": {
+    "social-mcp": "./server.js"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  }
+}

@@ -2,3 +2,8 @@
 .claude/
 CLAUDE.md
 node_modules/
+.env
+mcp/**/.env
+mcp/**/.env.*
+!mcp/**/.env.example
+mcp/**/node_modules/

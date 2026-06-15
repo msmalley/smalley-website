@@ -1,0 +1,16 @@
+{
+  "comeback_posts": {
+    "created": "2026-06-15",
+    "context": "Returning to public presence after years of private/NDA work. Different angles per platform.",
+    "twitter": {
+      "content": "Five years of building behind NDAs and client work. Now shipping in public again.\n\nChess engine, hexmap framework, Bitcoin ordinals SDK, and a few things still under wraps.\n\nsmalley.my if you're curious.",
+      "chars": 204,
+      "angle": "Builder community, what was shipped"
+    },
+    "linkedin": {
+      "content": "After several years focused on consulting and private infrastructure builds, I'm returning to public output. I've launched smalley.my to surface the work: protocol design, open-source developer tooling, embedded game systems, and the engagements that shaped them.\n\nOpen to CTO and technical leadership conversations, particularly in crypto infrastructure, RegTech, or developer platforms. Remote preferred, open to hybrid in the right context.",
+      "chars": 443,
+      "angle": "Professional signal, availability for roles"
+    }
+  }
+}

@@ -38,9 +38,9 @@
     <div class="article-content">
       <div class="article-date">29 May 2026</div>
 
-      <p>Have you ever tried to embed a chess game on a website? If you have, you probably reached for one of the established libraries: Chessboard.js, chess.js, Lichess's board component. They work, but what if you wanted <strong>Atomic Chess</strong>? Or <strong>Racing Kings</strong>? Or a variant where pieces can clone themselves? Suddenly you're forking entire codebases and fighting against architectures designed for one game.</p>
+      <p>If you've ever tried to embed a game of chess on a website, you probably not only had too much time on your hands, but likely reached for one of the established libraries such as Chessboard.js or Lichess's board component. They work, but what if you wanted to recreate <a href="https://chess.moddable.games/play/?variant=atomic" target="_blank" rel="noopener"><strong>Atomic Chess</strong></a>, where every time a piece is captured, the capturing piece and any pieces surrounding that piece are destroyed? Or even classics such as <a href="https://chess.moddable.games/play/?variant=grand" target="_blank" rel="noopener"><strong>Grand Chess</strong></a>, which simply require larger 10x10 boards. Perhaps you want to create a new variant where pieces can clone themselves or upgrade their abilities? Suddenly you're forking entire codebases and fighting against architectures designed for one game.</p>
 
-      <p>That frustration is what started everything. Sixteen days later, the result was two game engines, six playable games, 15 AI-callable tools, Consumer SDKs, a 190-page rulebook pipeline, developer documentation, and a main site tying it all together. The <a href="../../open-source/moddable-chess-engine/"><strong>Moddable Chess Engine</strong></a> handles the turn-based logic. <a href="../../open-source/moddable-hexmaps/"><strong>Moddable Hexmaps</strong></a> handles procedural map generation. The <a href="https://tools.moddable.games" target="_blank" rel="noopener">MCP server</a> makes both engines callable by any AI agent. All MIT-licensed, all built using AI-augmented engineering workflows, all deployed to production in those 16 days.</p>
+      <p>That frustration and a burning desire to take chess in a new direction is what started everything. Sixteen days later, the result was two game engines, six playable games, 15 AI-callable tools, Consumer SDKs, a 190-page rulebook pipeline, developer documentation, and <a href="https://moddable.games" target="_blank" rel="noopener">moddable.games</a> tying it all together. The <a href="../../open-source/moddable-chess-engine/"><strong>Moddable Chess Engine</strong></a> handles the turn-based logic. <a href="../../open-source/moddable-hexmaps/"><strong>Moddable Hexmaps</strong></a> handles procedural map generation. The <a href="https://tools.moddable.games" target="_blank" rel="noopener">MCP server</a> makes both callable by any agent. All MIT-licensed, all built using AI-augmented engineering workflows, and all deployed to production in those 16 days.</p>
 
       <figure>
         <a href="https://chess.moddable.games" target="_blank" rel="noopener"><img src="../../img/tools/chess-mce-hero.png" alt="Moddable Chess Engine showing Courier Chess variant on a 12x8 board"></a>
@@ -49,7 +49,7 @@
 
       <h2>The Chess Engine</h2>
 
-      <p>The Moddable Chess Engine plays 70 chess variants on boards from 4x8 to 12x8, with multi-depth AI, Web Worker threading, 26 variant-specific opening books, and 5 difficulty levels. Pure JavaScript, no dependencies, embeddable with a single iframe tag. Every variant is a single plugin file. Adding variant #71 takes minutes.</p>
+      <p>The Moddable Chess Engine plays 70 chess variants on boards of all different shapes and sizes, with multi-depth AI, Web Worker threading, 26 variant-specific opening books, and 5 difficulty levels. Pure JavaScript, no dependencies, embeddable with a single iframe tag. Every variant is a single plugin file that extends a shared core through a tiered plugin architecture. Adding variant #71 takes minutes because the architecture does the heavy lifting.</p>
 
       <p>The engine also ships a Consumer SDK: renderer extension hooks, a reusable game controller, replay API, unit templates, terrain predicates, and effect lifecycle hooks. These aren't chess-specific. They're the primitives for building any turn-based game on top of the move engine and AI. Native ESM throughout, no build step, same source files serve browser, Worker, and Node.js.</p>
 
@@ -73,7 +73,7 @@
 
       <p>The framework generates hex grids via Canvas (flat-top or pointy-top, at any ring count) for six game configurations: volcanic landscapes, 55-terrain fantasy worlds, galaxy layouts with wormholes and nebulae, faction-clustered biomes, and Seafarers-style island boards. Maps export to PNG, PDF, annotated SVG, and JSON. Everything renders client-side, so there's no server cost regardless of scale.</p>
 
-      <p>Like the chess engine, hexmaps ships a Consumer SDK for iframe-free embedding with render hooks, event system, and full programmatic control. The same pure functions that render maps in the browser power 6 AI-callable MCP tools, letting agents generate and analyse hex maps without a UI.</p>
+      <p>Like the chess engine, hexmaps ships a Consumer SDK for iframe-free embedding with render hooks, event systems, and full programmatic control. The same pure functions that render maps in the browser power 6 AI-callable MCP tools, letting agents generate and analyse hex maps without a UI.</p>
 
       <h2>Why 16 Days Was Enough</h2>
 
@@ -97,11 +97,11 @@
 
       <p>The more interesting work was systemic. Every correction becomes a rule. Every rule gets encoded into the environment. That environment now governs every project without requiring me to remember what was decided last Tuesday. However, rules are passive.</p>
 
-      <p>The next step was process automation: a structured issue pipeline across six repositories, with labels that route work through research and implementation agents running on cloud infrastructure — no terminal open, no machine running. Issues aren't a backlog. They're a typed queue. Research agents investigate and scope. Implementation agents branch, build, and merge. I review the diff.</p>
+      <p>The next step was process automation: a structured issue pipeline across six repositories, with labels that route work through research and implementation agents running on cloud infrastructure — no terminal open, no machine running. Issues aren't a backlog. They're a typed queue. Research agents investigate and scope. Implementation agents branch, build, and merge. I review the differences.</p>
 
       <p>This is what separates prompt engineering from engineering with AI. Prompt engineering is asking a model to write code. Engineering with AI is building the feedback loops and automation infrastructure that make the model's output compound across time and projects.</p>
 
-      <p>The 16-day build is impressive. The system that makes every subsequent build faster, more consistent, and less dependent on me is the actual product.</p>
+      <p>The 16-day build is impressive. The system that makes every subsequent build faster, more consistent, and less dependent on me is the result I went looking for.</p>
 
       <h2>Try Them</h2>
 

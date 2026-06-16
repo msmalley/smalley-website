@@ -1,5 +1,5 @@
 window.SM = (() => {
-  const VERSION = '1.0.31';
+  const VERSION = '1.0.32';
   const META_BASE = (document.querySelector('meta[name="sm-base"]') || {}).content;
   const BASE = META_BASE != null ? META_BASE
     : location.pathname.includes('/personal/smalley-website')
@@ -59,7 +59,7 @@ window.SM = (() => {
   var dataCache = {};
   function getData(name) {
     if (dataCache[name]) return dataCache[name];
-    dataCache[name] = fetch(url('/data/' + name + '.json'))
+    dataCache[name] = fetch(url('/data/' + name + '.json?v=' + VERSION))
       .then(function(r) { return r.json(); });
     return dataCache[name];
   }

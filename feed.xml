@@ -7,6 +7,14 @@
   <language>en</language>
   <atom:link href="https://smalley.my/feed.xml" rel="self" type="application/rss+xml"/>
   <item>
+    <title>16 Days, One Ecosystem</title>
+    <link>https://smalley.my/thoughts/16-days-one-ecosystem/</link>
+    <guid>https://smalley.my/thoughts/16-days-one-ecosystem/</guid>
+    <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
+    <category>Writing</category>
+    <description>Two engines, six games, 15 MCP tools, and a documentation pipeline. How architecture decisions made it possible to ship an entire open-source ecosystem in 16 days.</description>
+  </item>
+  <item>
     <title>Four Protocols, Nine Years, One Design Philosophy</title>
     <link>https://smalley.my/thoughts/protocol-design-lessons/</link>
     <guid>https://smalley.my/thoughts/protocol-design-lessons/</guid>
@@ -29,14 +37,6 @@
     <pubDate>Fri, 29 May 2026 00:00:00 GMT</pubDate>
     <category>Writing</category>
     <description>Six production sites, a 70-variant chess engine with tiered plugin architecture, 169 JS modules — zero frameworks, zero build steps. The constraint isn't a limitation. It's the architecture.</description>
-  </item>
-  <item>
-    <title>16 Days, One Ecosystem</title>
-    <link>https://smalley.my/thoughts/16-days-one-ecosystem/</link>
-    <guid>https://smalley.my/thoughts/16-days-one-ecosystem/</guid>
-    <pubDate>Fri, 29 May 2026 00:00:00 GMT</pubDate>
-    <category>Writing</category>
-    <description>Two engines, six games, 15 MCP tools, and a documentation pipeline. How architecture decisions made it possible to ship an entire open-source ecosystem in 16 days.</description>
   </item>
   <item>
     <title>Oviato</title>

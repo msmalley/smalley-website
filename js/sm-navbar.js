@@ -54,4 +54,13 @@
     }
     lastScroll = y;
   });
+
+  requestIdleCallback(function() {
+    for (var p = 0; p < links.length; p++) {
+      var prefetch = document.createElement('link');
+      prefetch.rel = 'prefetch';
+      prefetch.href = SM.url(links[p].href);
+      document.head.appendChild(prefetch);
+    }
+  });
 })();

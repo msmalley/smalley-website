@@ -9,6 +9,15 @@
 @font-face { font-family: 'JetBrains Mono'; src: url('../fonts/jetbrains-mono-400.woff2') format('woff2'); font-weight: 400; font-display: swap; }
 @font-face { font-family: 'JetBrains Mono'; src: url('../fonts/jetbrains-mono-500.woff2') format('woff2'); font-weight: 500; font-display: swap; }
 
+@view-transition {
+  navigation: auto;
+}
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+}
+
 :root {
   --sm-deep: #0B0F1A;
   --sm-surface: #141824;

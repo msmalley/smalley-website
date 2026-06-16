@@ -20,7 +20,8 @@
     'sm-parallax.js',
     'sm-related.js',
     'sm-sidebar.js',
-    'sm-codeblocks.js'
+    'sm-codeblocks.js',
+    'sm-transitions.js'
   ];
   for (var i = 0; i < modules.length; i++) {
     document.write('<script src="' + base + modules[i] + '?v=' + V + '"><\/script>');

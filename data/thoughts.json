@@ -5,7 +5,7 @@
     "date": "2026-06-12",
     "readingTime": "8 min",
     "tags": ["AI/LLM", "JavaScript", "MCP", "Consumer SDK", "Plugin architecture", "Canvas"],
-    "excerpt": "Two engines, six games, 15 MCP tools, and a documentation pipeline. How architecture decisions made it possible to ship an entire open-source ecosystem in 16 days."
+    "excerpt": "Two engines, six games, 16 MCP tools, and a documentation pipeline. How architecture decisions made it possible to ship an entire open-source ecosystem in 16 days."
   },
   {
     "slug": "protocol-design-lessons",

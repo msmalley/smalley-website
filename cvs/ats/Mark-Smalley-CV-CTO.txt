@@ -45,13 +45,13 @@ CEO & Founder — Moddable Limited — United Kingdom
 
 (2025 – present)
 
-AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 15 AI-callable MCP tools, developer documentation) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams.
+AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, developer documentation) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams.
 
 • Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites: renderer hooks, game controller, replay API, unit templates, terrain predicates, native ESM (same source serves browser, Worker, and Node.js)
 
 • Proved the architecture by building a second product (Dungeon Chess) entirely on the framework's consumer APIs. Zero engine forks, zero special-casing. 4 factions, custom rendering, AI opponents
 
-• Built and deployed the first board game MCP server (tools.moddable.games): 15 AI-callable tools across 2 engines, Cloudflare Worker, MCP + REST + OpenAPI + llms.txt
+• Built and deployed the first board game MCP server (tools.moddable.games): 16 AI-callable tools across 2 engines, Cloudflare Worker, MCP + REST + OpenAPI + llms.txt
 
 • Engineered multi-depth AI system: Web Worker threading, iterative deepening, transposition tables, quiescence search, opening books for 26 game variants, variant-specific evaluators
 

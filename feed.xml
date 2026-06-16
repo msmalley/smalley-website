@@ -12,7 +12,7 @@
     <guid>https://smalley.my/thoughts/16-days-one-ecosystem/</guid>
     <pubDate>Fri, 12 Jun 2026 00:00:00 GMT</pubDate>
     <category>Writing</category>
-    <description>Two engines, six games, 15 MCP tools, and a documentation pipeline. How architecture decisions made it possible to ship an entire open-source ecosystem in 16 days.</description>
+    <description>Two engines, six games, 16 MCP tools, and a documentation pipeline. How architecture decisions made it possible to ship an entire open-source ecosystem in 16 days.</description>
   </item>
   <item>
     <title>Four Protocols, Nine Years, One Design Philosophy</title>
@@ -52,7 +52,7 @@
     <guid>https://smalley.my/portfolio/moddable/</guid>
     <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
     <category>Portfolio</category>
-    <description>Open-source games studio shipped in 16 days using AI-augmented engineering. Two engines (chess v0.9.1 + hexmaps v0.8.1), six games, Consumer SDKs, and the first board game MCP server (15 AI-callable tools at tools.moddable.games). Native ESM, zero dependencies, zero build step.</description>
+    <description>Open-source games studio shipped in 16 days using AI-augmented engineering. Two engines (chess v0.9.1 + hexmaps v0.8.1), six games, Consumer SDKs, and the first board game MCP server (16 AI-callable tools at tools.moddable.games). Native ESM, zero dependencies, zero build step.</description>
   </item>
   <item>
     <title>Moddable Chess Engine</title>
@@ -60,7 +60,7 @@
     <guid>https://smalley.my/open-source/moddable-chess-engine/</guid>
     <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
     <category>Open Source</category>
-    <description>Consumer game framework (v0.9.1). 70 chess variants plus a reusable SDK that powers non-chess games. Native ESM, MCP server with 7 AI-callable tools, multi-depth AI with opening books, postMessage embed API, tiered plugin architecture. Dungeon Chess runs entirely on MCE without engine forks.</description>
+    <description>Consumer game framework (v0.9.1). 70 chess variants plus a reusable SDK that powers non-chess games. Native ESM, MCP server with 8 AI-callable tools, multi-depth AI with opening books, postMessage embed API, tiered plugin architecture. Dungeon Chess runs entirely on MCE without engine forks.</description>
   </item>
   <item>
     <title>Moddable Hexmaps</title>

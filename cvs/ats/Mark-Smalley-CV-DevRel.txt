@@ -36,11 +36,11 @@ Written & Published
 
 Open Source & Developer Community
 
-• Moddable Chess Engine (chess.moddable.games) — open-source game framework (v0.9.1): 70 chess variants, Consumer SDK (native ESM), 7 MCP tools, renderer hooks, game controller, replay API, and unit templates. Dungeon Chess runs entirely on MCE without engine forks. Tiered plugin system, developer guides, AI with opening books for 26 variants
+• Moddable Chess Engine (chess.moddable.games) — open-source game framework (v0.9.1): 70 chess variants, Consumer SDK (native ESM), 8 MCP tools, renderer hooks, game controller, replay API, and unit templates. Dungeon Chess runs entirely on MCE without engine forks. Tiered plugin system, developer guides, AI with opening books for 26 variants
 
 • Moddable Hexmaps (hex.moddable.games) — open-source hex map framework (v0.8.1): Consumer SDK (createMapController), 6 games, 4 render styles, seeded procedural generation, 6 MCP tools, PNG/PDF/SVG export, and URL param API
 
-• MCP Tools Server (tools.moddable.games) — first board game engine MCP server: 15 AI-callable tools, MCP + REST + OpenAPI + llms.txt, Cloudflare Worker on free tier. Connect with one command from Claude Desktop, Cursor, or VS Code
+• MCP Tools Server (tools.moddable.games) — first board game engine MCP server: 16 AI-callable tools, MCP + REST + OpenAPI + llms.txt, Cloudflare Worker on free tier. Connect with one command from Claude Desktop, Cursor, or VS Code
 
 • SADO Protocol (github.com/sadoprotocol) — co-authored open-source, self-authenticating decentralised order-book for Bitcoin Ordinals; adopted by Ordzaar and third-party exchanges
 
@@ -80,7 +80,7 @@ Open-source games studio shipping developer-facing engines, Consumer SDKs, MCP t
 
 • Published Moddable Hexmaps (v0.8.1) with Consumer SDK (createMapController), 6 games, 4 render styles, and 6 MCP tools. Built PDF pagination engine for 190+ page rulebook libraries
 
-• Deployed tools.moddable.games — first board game MCP server: 15 AI-callable tools across 2 engines, MCP + REST + OpenAPI + llms.txt. One-command connection from Claude Desktop, Cursor, VS Code
+• Deployed tools.moddable.games — first board game MCP server: 16 AI-callable tools across 2 engines, MCP + REST + OpenAPI + llms.txt. One-command connection from Claude Desktop, Cursor, VS Code
 
 • Wrote developer documentation spanning plugins (Build a Variant, Crazyhouse, Poison Chess), consumer integration (Dungeon Chess guide), full API reference, SDK demo page, and a Developers section with connection guides and build examples
 

@@ -30,10 +30,10 @@
   <div class="container">
     <div class="case-hero-eyebrow" data-accent="violet">Moddable Games · 2025</div>
     <h1>Moddable Chess Engine</h1>
-    <div class="case-hero-tagline">Consumer game SDK. 70 variants. 7 MCP tools. Native ESM. AI with opening books.</div>
+    <div class="case-hero-tagline">Consumer game SDK. 70 variants. 8 MCP tools. Native ESM. AI with opening books.</div>
     <div class="case-meta">
       <div class="case-meta-item"><span class="case-meta-label">Variants</span><span class="case-meta-value">70 playable</span></div>
-      <div class="case-meta-item"><span class="case-meta-label">MCP tools</span><span class="case-meta-value">7</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">MCP tools</span><span class="case-meta-value">8</span></div>
       <div class="case-meta-item"><span class="case-meta-label">Dependencies</span><span class="case-meta-value">0</span></div>
     </div>
 </div>
@@ -68,7 +68,7 @@
       <p><strong>Proof:</strong> <a href="https://dungeon.moddable.games" target="_blank" rel="noopener">Dungeon Chess</a> is an asymmetric skirmish game with 4 factions, dungeon terrain, and XP-budgeted drafting. It runs entirely on MCE's consumer SDK. Custom tilePainter renders dungeon walls and water; custom pieceProvider renders fantasy units; the game controller handles multi-faction turn cycling. Zero engine forks.</p>
 
       <h2>MCP Tools (AI-Callable)</h2>
-      <p>Seven chess tools exposed at <a href="https://tools.moddable.games" target="_blank" rel="noopener">tools.moddable.games</a> via MCP protocol, REST API, OpenAPI, and llms.txt. Any MCP-compatible AI agent can analyse positions, validate moves, generate puzzles, and probe opening books:</p>
+      <p>Eight chess tools exposed at <a href="https://tools.moddable.games" target="_blank" rel="noopener">tools.moddable.games</a> via MCP protocol, REST API, OpenAPI, and llms.txt. Any MCP-compatible AI agent can analyse positions, validate moves, render boards, generate puzzles, and probe opening books:</p>
       <ul>
         <li><strong>chess_list_variants</strong> — browse all 70 variants with rules and metadata</li>
         <li><strong>chess_get_legal_moves</strong> — legal move generation for any position in any variant</li>
@@ -77,6 +77,7 @@
         <li><strong>chess_make_moves</strong> — apply move sequences and return resulting position</li>
         <li><strong>chess_get_opening_book</strong> — probe variant-specific opening books</li>
         <li><strong>chess_generate_puzzle</strong> — create mate-in-N puzzles for training</li>
+        <li><strong>chess_render_svg</strong> — render any position as a self-contained SVG image</li>
       </ul>
 
       <h2>The Developer Experience</h2>
@@ -109,7 +110,7 @@
 
       <div class="case-outcome">
         <div class="case-outcome-label">Result</div>
-        <div class="case-outcome-text">Consumer game framework (v0.9.1) powering 2 games, exposing 7 MCP tools, native ESM with zero build step. 70 chess variants + Dungeon Chess running on the same engine via renderer hooks and controller APIs.</div>
+        <div class="case-outcome-text">Consumer game framework (v0.9.1) powering 2 games, exposing 8 MCP tools, native ESM with zero build step. 70 chess variants + Dungeon Chess running on the same engine via renderer hooks and controller APIs.</div>
       </div>
 
       <div class="case-tech">

@@ -6,16 +6,16 @@
 <meta name="theme-color" content="#0B0F1A">
 <style>html{background:#0B0F1A}body{opacity:0;transition:opacity .15s ease}</style>
 <title>16 Days, One Ecosystem — Mark Smalley</title>
-<meta name="description" content="Two engines, six games, 15 MCP tools, and a documentation pipeline. How architecture decisions made it possible to ship an entire ecosystem in 16 days.">
+<meta name="description" content="Two engines, six games, 16 MCP tools, and a documentation pipeline. How architecture decisions made it possible to ship an entire ecosystem in 16 days.">
 <meta property="og:title" content="16 Days, One Ecosystem — Mark Smalley">
-<meta property="og:description" content="Two engines, six games, 15 MCP tools, and a documentation pipeline. How architecture decisions made it possible to ship an entire ecosystem in 16 days.">
+<meta property="og:description" content="Two engines, six games, 16 MCP tools, and a documentation pipeline. How architecture decisions made it possible to ship an entire ecosystem in 16 days.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://smalley.my/thoughts/16-days-one-ecosystem/">
 <meta property="og:site_name" content="Mark Smalley">
 <meta property="og:image" content="https://smalley.my/img/og/thoughts-16-days.jpg?v=1.0.32">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="16 Days, One Ecosystem — Mark Smalley">
-<meta name="twitter:description" content="Two engines, six games, 15 MCP tools, and a documentation pipeline. How architecture decisions made it possible to ship an entire ecosystem in 16 days.">
+<meta name="twitter:description" content="Two engines, six games, 16 MCP tools, and a documentation pipeline. How architecture decisions made it possible to ship an entire ecosystem in 16 days.">
 <meta name="twitter:image" content="https://smalley.my/img/og/thoughts-16-days.jpg?v=1.0.32">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="../../img/apple-touch-icon.png">
@@ -40,7 +40,7 @@
 
       <p>If you've ever tried to embed a game of chess on a website, you probably not only had too much time on your hands, but likely reached for one of the established libraries such as Chessboard.js or Lichess's board component. They work, but what if you wanted to recreate <a href="https://chess.moddable.games/play/?variant=atomic" target="_blank" rel="noopener"><strong>Atomic Chess</strong></a>, where every time a piece is captured, the capturing piece and any pieces surrounding that piece are destroyed? Or even classics such as <a href="https://chess.moddable.games/play/?variant=grand" target="_blank" rel="noopener"><strong>Grand Chess</strong></a>, which simply require larger 10x10 boards. Perhaps you want to create a new variant where pieces can clone themselves or upgrade their abilities? Suddenly you're forking entire codebases and fighting against architectures designed for one game.</p>
 
-      <p>That frustration and a burning desire to take chess in a new direction is what started everything. Sixteen days later, the result was two game engines, six playable games, 15 AI-callable tools, Consumer SDKs, a 190-page rulebook pipeline, developer documentation, and <a href="https://moddable.games" target="_blank" rel="noopener">moddable.games</a> tying it all together. The <a href="../../open-source/moddable-chess-engine/"><strong>Moddable Chess Engine</strong></a> handles the turn-based logic. <a href="../../open-source/moddable-hexmaps/"><strong>Moddable Hexmaps</strong></a> handles procedural map generation. The <a href="https://tools.moddable.games" target="_blank" rel="noopener">MCP server</a> makes both callable by any agent. All MIT-licensed, all built using AI-augmented engineering workflows, and all deployed to production in those 16 days.</p>
+      <p>That frustration and a burning desire to take chess in a new direction is what started everything. Sixteen days later, the result was two game engines, six playable games, 16 AI-callable tools, Consumer SDKs, a 190-page rulebook pipeline, developer documentation, and <a href="https://moddable.games" target="_blank" rel="noopener">moddable.games</a> tying it all together. The <a href="../../open-source/moddable-chess-engine/"><strong>Moddable Chess Engine</strong></a> handles the turn-based logic. <a href="../../open-source/moddable-hexmaps/"><strong>Moddable Hexmaps</strong></a> handles procedural map generation. The <a href="https://tools.moddable.games" target="_blank" rel="noopener">MCP server</a> makes both callable by any agent. All MIT-licensed, all built using AI-augmented engineering workflows, and all deployed to production in those 16 days.</p>
 
       <figure>
         <a href="https://chess.moddable.games" target="_blank" rel="noopener"><img src="../../img/tools/chess-mce-hero.png" alt="Moddable Chess Engine showing Courier Chess variant on a 12x8 board"></a>
@@ -79,7 +79,7 @@
 
       <p>Every architectural decision compounds. The variant plugin interface means adding a new chess variant is a single file. The seeded RNG means sharing a map is sharing a URL. The renderer hook system means Dungeon Chess didn't fork the engine. The postMessage API means any embed is controllable at runtime without rebuilding the iframe. Native ESM means the same source files serve the browser, Cloudflare Workers, and Node.js without a bundler.</p>
 
-      <p>Each decision removes future work. The 16-day timeline is a consequence of getting these decisions right early, not of typing faster. The architecture that made both engines embeddable also made them AI-callable for free: a Cloudflare Worker at <a href="https://tools.moddable.games" target="_blank" rel="noopener">tools.moddable.games</a> serves 15 tools over MCP, REST, OpenAPI, and llms.txt. Any MCP-compatible agent connects with one command:</p>
+      <p>Each decision removes future work. The 16-day timeline is a consequence of getting these decisions right early, not of typing faster. The architecture that made both engines embeddable also made them AI-callable for free: a Cloudflare Worker at <a href="https://tools.moddable.games" target="_blank" rel="noopener">tools.moddable.games</a> serves 16 tools over MCP, REST, OpenAPI, and llms.txt. Any MCP-compatible agent connects with one command:</p>
 
       <pre><code class="language-bash">claude mcp add --transport http moddable-tools https://tools.moddable.games/mcp</code></pre>
 
@@ -89,7 +89,7 @@
 
       <p>Sixteen days to ship. Fourteen more to make it professional. The ratio is the point.</p>
 
-      <p>AI-augmented engineering compresses the build phase dramatically. Two game engines, six games, 15 MCP tools, Consumer SDKs, a 190-page rulebook pipeline, developer documentation, and the main <a href="https://moddable.games" target="_blank" rel="noopener">moddable.games</a> website tying it all together — 16 days because the architecture was right and the tooling let the AI operate at full speed.</p>
+      <p>AI-augmented engineering compresses the build phase dramatically. Two game engines, six games, 16 MCP tools, Consumer SDKs, a 190-page rulebook pipeline, developer documentation, and the main <a href="https://moddable.games" target="_blank" rel="noopener">moddable.games</a> website tying it all together — 16 days because the architecture was right and the tooling let the AI operate at full speed.</p>
 
       <p>The next 14 days were a different kind of work. Not building, but curating. Reading every paragraph knowing an AI will confidently start 22 sentences with "But" and never flag the pattern. Noticing that version numbers in prose add noise without adding information. Catching that an evolutionary framing is the wrong narrative when the reader just wants to know what the thing does. Recognising that OG images referenced titles from three rewrites ago, that favicon paths resolve differently on localhost versus production, that a removed meta tag was silently breaking RSS feeds.</p>
 
@@ -111,7 +111,7 @@
         <li><a href="https://moddable.games" target="_blank" rel="noopener">moddable.games</a> — the full ecosystem: engines, games, tools, developer docs</li>
         <li><a href="https://chess.moddable.games" target="_blank" rel="noopener">chess.moddable.games</a> — play any of the 70 variants right now</li>
         <li><a href="https://hex.moddable.games" target="_blank" rel="noopener">hex.moddable.games</a> — generate a map, grab the seed, share the URL</li>
-        <li><a href="https://tools.moddable.games" target="_blank" rel="noopener">tools.moddable.games</a> — connect your AI agent to 15 game tools</li>
+        <li><a href="https://tools.moddable.games" target="_blank" rel="noopener">tools.moddable.games</a> — connect your AI agent to 16 game tools</li>
         <li><a href="https://github.com/Moddable-Games" target="_blank" rel="noopener">github.com/Moddable-Games</a> — everything is open source</li>
       </ul>
 

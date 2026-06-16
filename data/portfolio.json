@@ -83,8 +83,8 @@
     "year": "2025",
     "accent": "violet",
     "tagline": "Open-source games studio with AI-callable MCP tools and Consumer SDKs",
-    "summary": "Open-source games studio shipped in 16 days using AI-augmented engineering. Two engines (chess v0.9.1 + hexmaps v0.8.1), six games, Consumer SDKs, and the first board game MCP server (15 AI-callable tools at tools.moddable.games). Native ESM, zero dependencies, zero build step.",
-    "outcome": "2 engines, 6 games, 15 MCP tools, 2 Consumer SDKs. 16 days to production, solo founder.",
+    "summary": "Open-source games studio shipped in 16 days using AI-augmented engineering. Two engines (chess v0.9.1 + hexmaps v0.8.1), six games, Consumer SDKs, and the first board game MCP server (16 AI-callable tools at tools.moddable.games). Native ESM, zero dependencies, zero build step.",
+    "outcome": "2 engines, 6 games, 16 MCP tools, 2 Consumer SDKs. 16 days to production, solo founder.",
     "tech": ["JavaScript", "Canvas", "AI/LLM", "MCP", "Cloudflare Workers", "ESM", "GitHub Pages"],
     "links": { "live": "https://moddable.games" }
   },

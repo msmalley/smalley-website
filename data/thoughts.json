@@ -1,5 +1,13 @@
 [
   {
+    "slug": "16-days-one-ecosystem",
+    "title": "16 Days, One Ecosystem",
+    "date": "2026-06-12",
+    "readingTime": "8 min",
+    "tags": ["AI/LLM", "JavaScript", "MCP", "Consumer SDK", "Plugin architecture", "Canvas"],
+    "excerpt": "Two engines, six games, 15 MCP tools, and a documentation pipeline. How architecture decisions made it possible to ship an entire open-source ecosystem in 16 days."
+  },
+  {
     "slug": "protocol-design-lessons",
     "title": "Four Protocols, Nine Years, One Design Philosophy",
     "date": "2026-06-01",
@@ -22,14 +30,6 @@
     "readingTime": "12 min",
     "tags": ["JavaScript", "Architecture", "Plugin architecture", "GitHub Pages"],
     "excerpt": "Six production sites, a 70-variant chess engine with tiered plugin architecture, 169 JS modules — zero frameworks, zero build steps. The constraint isn't a limitation. It's the architecture."
-  },
-  {
-    "slug": "16-days-one-ecosystem",
-    "title": "16 Days, One Ecosystem",
-    "date": "2026-05-29",
-    "readingTime": "8 min",
-    "tags": ["AI/LLM", "JavaScript", "MCP", "Consumer SDK", "Plugin architecture", "Canvas"],
-    "excerpt": "Two engines, six games, 15 MCP tools, and a documentation pipeline. How architecture decisions made it possible to ship an entire open-source ecosystem in 16 days."
   },
   {
     "slug": "cardinal-sins-of-bitcoin-ordinals",

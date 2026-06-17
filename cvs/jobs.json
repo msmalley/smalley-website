@@ -33,5 +33,52 @@
       "ghosted"
     ]
   },
-  "jobs": []
+  "jobs": [
+    {
+      "id": "alemx-head-of-engineering-mqibkfp4",
+      "added": "2026-06-17",
+      "status": "matched",
+      "company": "Alemx",
+      "role": "Head of Engineering",
+      "location": "Remote",
+      "variant": "cto",
+      "score": 42,
+      "requirements_found": 13,
+      "matched": 6,
+      "gaps": [
+        "Shipping experience in fintech, payments, or a similarly regulated environment",
+        "Strong operational discipline: processes, metrics, delivery predictability",
+        "Fluent English (written and spoken); Russian is a welcome bonus but not required",
+        "Experience passing SOC 2, PCI DSS, or similar audits",
+        "Experience with mobile-first products built on React Native",
+        "Experience with distributed / remote teams across different time zones",
+        "Ownership mindset: you take a problem and drive it to completion rather than handing it off"
+      ],
+      "proof_points": [
+        {
+          "requirement": "Experience leading teams of 5–15 engineers in a product company",
+          "evidence": "Founded Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, stakeholder reporting"
+        },
+        {
+          "requirement": "Communication: able to explain technical decisions to non-technical stakeholders (investors, legal, compliance)",
+          "evidence": "First company admitted to Securities Commission Malaysia regulatory sandbox"
+        },
+        {
+          "requirement": "Low ego: comfortable operating within an already-established architecture rather than rewriting it to match your preferences",
+          "evidence": "Designed and built internal cryptographic framework underpinning passkey wallet architecture"
+        },
+        {
+          "requirement": "+ years in engineering, including 3+ years in a management role (Engineering Manager / Head of Engineering / VP)",
+          "evidence": "Decentralised key management via DNS TXT records. Adopted by ATA Plus ECF, cited in SC Malaysia capital markets blueprint, reused in Oviato 9 years later"
+        },
+        {
+          "requirement": "Readiness to operate in an early-stage startup: hands-on, no corporate comfort, multiple context switches per day",
+          "evidence": "Accepted into 500 Startups Batch 9 and Antler Malaysia Batch 2"
+        }
+      ],
+      "source_url": "https://crypto.jobs/jobs/head-of-engineering-at-alemx",
+      "cover_letter": null,
+      "notes": ""
+    }
+  ]
 }

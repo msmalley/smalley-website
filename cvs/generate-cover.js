@@ -80,12 +80,14 @@ async function generate(matchFile) {
   return { html: htmlOut, pdf: pdfOut };
 }
 
-const arg = process.argv[2];
-if (arg) {
-  generate(arg).catch(err => {
-    console.error(err);
-    process.exit(1);
-  });
+if (require.main === module) {
+  const arg = process.argv[2];
+  if (arg) {
+    generate(arg).catch(err => {
+      console.error(err);
+      process.exit(1);
+    });
+  }
 }
 
 module.exports = { generate, fillTemplate };

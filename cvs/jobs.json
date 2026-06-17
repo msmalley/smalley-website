@@ -1,0 +1,37 @@
+{
+  "config": {
+    "searches": [
+      {
+        "keywords": "CTO blockchain",
+        "location": "Remote",
+        "variant": "cto"
+      },
+      {
+        "keywords": "Head of Engineering crypto web3",
+        "location": "London",
+        "variant": "cto"
+      },
+      {
+        "keywords": "Developer Relations blockchain",
+        "location": "Remote",
+        "variant": "devrel"
+      },
+      {
+        "keywords": "RegTech compliance engineer",
+        "location": "UK",
+        "variant": "regtech"
+      }
+    ],
+    "statuses": [
+      "new",
+      "matched",
+      "reviewing",
+      "approved",
+      "applied",
+      "interview",
+      "rejected",
+      "ghosted"
+    ]
+  },
+  "jobs": []
+}

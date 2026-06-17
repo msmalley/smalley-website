@@ -353,7 +353,7 @@ export async function postTweet(content, replyToId = null) {
   return cookiePostTweet(content, replyToId);
 }
 
-export async function postThread(tweets) {
+export async function postThread(tweets, replyToId = null) {
   if (!Array.isArray(tweets) || tweets.length === 0) {
     throw new Error('Thread must contain at least one tweet.');
   }
@@ -365,7 +365,7 @@ export async function postThread(tweets) {
   }
 
   const results = [];
-  let previousId = null;
+  let previousId = replyToId;
 
   for (const tweet of tweets) {
     const result = await postTweet(tweet, previousId);

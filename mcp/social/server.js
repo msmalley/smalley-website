@@ -18,7 +18,7 @@ const server = new Server(
 const TOOLS = [
   {
     name: 'social_post',
-    description: 'Post content to X/Twitter or LinkedIn. Returns the URL of the published post.',
+    description: 'Post content to X/Twitter or LinkedIn. Returns the URL of the published post. Use reply_to to reply to an existing tweet.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -30,6 +30,10 @@ const TOOLS = [
         content: {
           type: 'string',
           description: 'The post content. Twitter: max 280 chars. LinkedIn: max 3000 chars.'
+        },
+        reply_to: {
+          type: 'string',
+          description: 'Tweet ID to reply to (Twitter only). Makes this post a reply in that thread.'
         }
       },
       required: ['platform', 'content']
@@ -37,7 +41,7 @@ const TOOLS = [
   },
   {
     name: 'social_thread',
-    description: 'Post a thread (multiple connected posts) to X/Twitter. Each item becomes one tweet in a reply chain.',
+    description: 'Post a thread (multiple connected posts) to X/Twitter. Each item becomes one tweet in a reply chain. Use reply_to to attach the thread as replies to an existing tweet.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -45,6 +49,10 @@ const TOOLS = [
           type: 'array',
           items: { type: 'string' },
           description: 'Array of tweet texts. Each must be <= 280 chars. Posted as a reply chain.'
+        },
+        reply_to: {
+          type: 'string',
+          description: 'Tweet ID to reply to. The first tweet in the array will be a reply to this ID, and subsequent tweets chain from there.'
         }
       },
       required: ['tweets']
@@ -143,7 +151,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
     switch (name) {
       case 'social_post':
         if (args.platform === 'twitter') {
-          result = await postTweet(args.content);
+          result = await postTweet(args.content, args.reply_to || null);
         } else if (args.platform === 'linkedin') {
           result = await postLinkedIn(args.content);
         } else {
@@ -152,7 +160,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         break;
 
       case 'social_thread':
-        result = await postThread(args.tweets);
+        result = await postThread(args.tweets, args.reply_to || null);
         break;
 
       case 'social_search_jobs':

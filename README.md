@@ -49,7 +49,7 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 #### 2026-06-15
 - Added social MCP server (mcp/social/) — unified Twitter + LinkedIn posting, search, threads, delete
 - Twitter supports both official API and cookie-based auth; LinkedIn uses OAuth2 with local token generator
-- Content pipeline established: cross-project triggers auto-generate drafts in mcp/social/drafts.json
+- Content pipeline established: cross-project triggers auto-generate drafts in mcp/social/pipeline.json
 - Created issue #23 tracking content cadence and platform expansion
 
 #### 2026-06-14

@@ -234,11 +234,21 @@ function matchProofPoints(requirements, profile, variant) {
 
 function scoreMatch(matches, gaps, totalRequirements) {
   if (totalRequirements === 0) return 50;
-  const matchRatio = matches.length / totalRequirements;
+
+  // Cap denominator: if parser found 30+ "requirements", many are noise.
+  // Real JDs have 5-15 actual requirements. Use the lower of actual count or 15.
+  const effectiveDenominator = Math.min(totalRequirements, 15);
+  const matchRatio = Math.min(matches.length / effectiveDenominator, 1.0);
+
   const avgStrength = matches.length > 0
     ? matches.reduce((sum, m) => sum + Math.min(m.score, 20), 0) / matches.length / 20
     : 0;
-  return Math.round((matchRatio * 70) + (avgStrength * 30));
+
+  // Bonus for absolute match count (5+ strong matches is a good sign regardless of total)
+  const countBonus = Math.min(matches.length * 3, 15);
+
+  const raw = (matchRatio * 55) + (avgStrength * 30) + countBonus;
+  return Math.round(Math.min(raw, 100));
 }
 
 function matchJob(jobDescription, options = {}) {
@@ -247,8 +257,14 @@ function matchJob(jobDescription, options = {}) {
   const metadata = options.metadata || extractMetadata(jobDescription);
   const variant = options.variant || detectVariant(requirements);
 
-  const { matches, gaps } = matchProofPoints(requirements, profile, variant);
-  const score = scoreMatch(matches, gaps, requirements.length);
+  const { matches, gaps: rawGaps } = matchProofPoints(requirements, profile, variant);
+  const score = scoreMatch(matches, rawGaps, requirements.length);
+
+  // Filter gaps: only show substantive requirements (not headers, not fluff)
+  const gaps = rawGaps.filter(g =>
+    g.length > 25 && g.length < 200 &&
+    !g.match(/^(Leadership|Strategy|About|Tasks|Responsibilities|Communication|Security)/i)
+  ).slice(0, 8);
 
   const topProofs = matches.slice(0, 5).map(m => ({
     requirement: m.requirement,

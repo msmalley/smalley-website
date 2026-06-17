@@ -4,7 +4,8 @@
   "availability": {
     "status": "available",
     "text": "Open to CTO, RegTech, and DevRel roles",
-    "regions": ["UK", "Europe", "Remote globally"]
+    "regions": ["UK", "Europe", "Remote globally"],
+    "based": "United Kingdom (since 2025)"
   },
   "contact": {
     "email": "mark@smalley.my",
@@ -13,5 +14,226 @@
     "linkedin": "msmalley",
     "twitter": "m_smalley",
     "website": "smalley.my"
-  }
+  },
+  "target_audiences": {
+    "cto": {
+      "title": "CTO / Head of Engineering",
+      "targets": "Pre-seed to Series B crypto/web3 companies",
+      "signals": ["team scale", "shipped products", "fundraising impact", "protocol depth", "startup operator"]
+    },
+    "regtech": {
+      "title": "Senior RegTech / Compliance Tech",
+      "targets": "RegTech companies, FinTech compliance platforms, digital asset legal/advisory",
+      "signals": ["regulatory engagement", "compliance systems", "institutional trust", "policy contribution"]
+    },
+    "devrel": {
+      "title": "Developer Relations / Advocacy",
+      "targets": "L1/L2 protocols, dev tooling companies, infrastructure providers",
+      "signals": ["public content", "SDK authorship", "developer community", "speaking", "open source adoption"]
+    }
+  },
+  "skills": {
+    "bitcoin_utxo": ["UTXO scripting", "Schnorr/Taproot", "Ordinals", "Inscriptions", "Runes", "BRC-20", "BitcoinJS", "digital assets"],
+    "ethereum_evm": ["Solidity", "EthersJS", "Web3.js", "ERC-20", "ERC-721", "IPFS", "smart contracts", "DeFi"],
+    "auth_identity": ["Passkeys", "WebAuthN", "FIDO2", "cryptographic key management", "custody systems"],
+    "backend": ["Node.js", "TypeScript", "JavaScript", "MongoDB", "Neo4j", "REST APIs", "SDK development", "distributed systems"],
+    "frontend": ["React", "Svelte", "VueJS", "Tailwind", "ThreeJS", "WebGL", "full-stack delivery"],
+    "devops_ai": ["Docker", "CI/CD", "Cloudflare Workers", "LLM-augmented engineering", "MCP servers", "AI agent pipelines"],
+    "leadership": ["Cross-functional team leadership", "hiring", "technical roadmap", "stakeholder management", "P4→M3 progression"]
+  },
+  "work_history": [
+    {
+      "id": "oviato",
+      "title": "Chief Blockchain Officer",
+      "company": "Oviato",
+      "location": "United Kingdom",
+      "dates": "Feb 2025 – Mar 2026",
+      "summary": "Co-founded and led the technical pivot from consumer app to passkey-native wallet infrastructure provider, building on prototype work from Project Eden. The pivot secured DraperVC investment.",
+      "proof_points": [
+        "Secured DraperVC investment — technical work directly influenced funding decision",
+        "Designed and built internal cryptographic framework underpinning passkey wallet architecture",
+        "Led the technical narrative that pivoted company from consumer app to B2B infrastructure provider"
+      ],
+      "tech": ["Passkeys", "WebAuthN", "FIDO2", "Node.js", "cryptographic key management"],
+      "team_size": null,
+      "outcome": "DraperVC funded; pivot from consumer → B2B infrastructure"
+    },
+    {
+      "id": "moddable",
+      "title": "CEO & Founder",
+      "company": "Moddable Limited",
+      "location": "United Kingdom",
+      "dates": "2025 – present",
+      "active": true,
+      "summary": "AI-augmented engineering methodology applied to framework-level architecture. Complete open-source product ecosystem at solo-founder velocity.",
+      "proof_points": [
+        "Extensible plugin architecture: two engines, Consumer SDKs, 16 AI-callable MCP tools, developer docs",
+        "Built second product (Dungeon Chess) entirely on framework's consumer APIs — zero engine forks",
+        "First board game MCP server: 16 tools, Cloudflare Worker, MCP + REST + OpenAPI + llms.txt",
+        "535 commits across 10+ repositories in 16 days",
+        "Autonomous CI pipeline: structured issue queue, research and implementation agents on cloud infrastructure"
+      ],
+      "tech": ["JavaScript", "ESM", "Cloudflare Workers", "MCP", "Web Workers", "AI agents"],
+      "team_size": 1,
+      "outcome": "Two production game engines, 70+ chess variants, 16 MCP tools, full documentation site"
+    },
+    {
+      "id": "cakedefi",
+      "title": "Head of Engineering",
+      "company": "CakeDefi",
+      "location": "Singapore",
+      "dates": "Feb 2023 – Sep 2023",
+      "summary": "Joined 170-engineer company as P4 Engineer; promoted to M3 Manager. Designed novel Bitcoin meta-protocols, formed and led Moonshot team whose first output became Cake's fifth business vertical.",
+      "proof_points": [
+        "Sole developer of Ordzaar prototype — became fifth business vertical, spun out, raised US$500K, acquired",
+        "Founded Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, stakeholder reporting",
+        "Co-authored SADO Protocol — decentralised ordinals order-book, open-source SDK used across ecosystem"
+      ],
+      "tech": ["Bitcoin", "Ordinals", "Schnorr", "Taproot", "SADO", "PSBTs"],
+      "team_size": 10,
+      "outcome": "Ordzaar spun out, raised US$500K, acquired"
+    },
+    {
+      "id": "r1",
+      "title": "CEO & Founder",
+      "company": "R1",
+      "location": "Malaysia",
+      "dates": "2012 – 2025",
+      "summary": "Malaysia's leading blockchain infrastructure and advisory firm for 13 years. Production products across KYC, AML, digital custody, and wallet infrastructure while shaping national regulatory policy.",
+      "proof_points": [
+        "First company admitted to Securities Commission Malaysia regulatory sandbox",
+        "Contributed directly to Malaysia's Digital Asset regulatory roadmap alongside SC and central bank",
+        "Co-founded and funded CoKeeps — now Malaysia's largest Digital Asset Custodian by AUM",
+        "Authored DN-Key protocol: adopted by ATA Plus ECF, cited in SC Malaysia capital markets blueprint",
+        "Enterprise clients: DBS Bank (Singapore), Baker Hostetler (USA, 5-day training engagement)",
+        "Shareholder in CoKeeps and Sinegy following equity arrangements"
+      ],
+      "tech": ["Node.js", "MongoDB", "Bitcoin", "Ethereum", "KYC/AML", "custody", "identity"],
+      "team_size": null,
+      "outcome": "13-year operation on $300K seed; regulatory sandbox; CoKeeps largest DAC by AUM"
+    },
+    {
+      "id": "neuroware",
+      "title": "Chief Technology Officer",
+      "company": "Neuroware Inc",
+      "location": "USA / Malaysia",
+      "dates": "2013 – 2018",
+      "summary": "500 Startups Batch 9. Launched at TechCrunch Disrupt London. Blockchain infrastructure for licensed FinTech operators and regulators across Southeast Asia.",
+      "proof_points": [
+        "Ranked Top 5 by VentureBeat from 500 Startups Batch 9",
+        "Only Malaysian company in Deloitte's Top 50 Global RegTech",
+        "Authored Everstore protocol (25-page whitepaper) — relational database on BIP32 key derivation, pre-EVM",
+        "Built SDK powering world's first bank-backed blockchain hackathon (DBS Bank Singapore) — 1M+ API requests, 7/15 teams used our stack",
+        "30+ Ethereum smart contracts for BloqVerse (~20 upgradeable, ~10 immutable), fully serverless architecture",
+        "$300K seed sustaining 12 years of operation — capital efficiency"
+      ],
+      "tech": ["UTXO scripting", "Solidity", "EthersJS", "BitcoinJS", "IPFS", "MongoDB", "Node.js"],
+      "team_size": 5,
+      "outcome": "Deloitte Top 50 RegTech; 500 Startups; $300K → 12 years"
+    }
+  ],
+  "protocols": [
+    {
+      "id": "sado",
+      "name": "SADO Protocol",
+      "year": 2023,
+      "description": "Self-authenticating, decentralised ordinals order-book via PSBTs",
+      "adoption": "Used in production by Ordzaar and third-party exchanges",
+      "repo": "github.com/sadoprotocol",
+      "relevance": ["cto", "devrel"]
+    },
+    {
+      "id": "dn-key",
+      "name": "DN-Key Protocol",
+      "year": 2016,
+      "description": "Decentralised key management via DNS TXT records",
+      "adoption": "Adopted by ATA Plus ECF, cited in SC Malaysia capital markets blueprint, reused in Oviato 9 years later",
+      "repo": null,
+      "relevance": ["cto", "regtech", "devrel"]
+    },
+    {
+      "id": "everstore",
+      "name": "Everstore Protocol",
+      "year": 2016,
+      "description": "Complete on-chain relational database via BIP32 key derivation: CRUD, encryption, indexing, audit trails",
+      "adoption": "25-page whitepaper, pre-EVM",
+      "repo": null,
+      "relevance": ["cto", "devrel"]
+    },
+    {
+      "id": "ordit",
+      "name": "Ordit SDK",
+      "year": 2023,
+      "description": "Indexer, parser, and API toolkit for Ordinals and Inscriptions",
+      "adoption": "~50K npm downloads, 3 packages, production status",
+      "repo": "github.com/sadoprotocol/ordit",
+      "relevance": ["cto", "devrel"]
+    }
+  ],
+  "achievements": [
+    "DraperVC investment secured (Oviato, 2025) — technical work directly influenced funding decision",
+    "Ordzaar prototype → CakeDefi's fifth business vertical → spun out → raised US$500K → acquired",
+    "First company admitted to Securities Commission Malaysia regulatory sandbox",
+    "Deloitte Top 50 Global RegTech Companies (Neuroware, 2017)",
+    "VentureBeat Top 5 from 500 Startups Batch 9",
+    "Accepted into 500 Startups Batch 9 and Antler Malaysia Batch 2",
+    "TEDx Sarawak speaker (2017) — 'The Cost of Cash'",
+    "Digerati50 — Malaysia's top 50 digital leaders",
+    "DN-Key cited by name in SC Malaysia capital markets blueprint",
+    "DBS Bank hackathon — world's first bank-backed blockchain hackathon, 1M+ API requests"
+  ],
+  "credentials": [
+    "500 Startups Batch 9 (accepted)",
+    "Antler Malaysia Batch 2 (accepted, declined)",
+    "Registered HRDF Trainer (Malaysia)",
+    "Silver Duke of Edinburgh Award",
+    "A-Level English — Open Uni, 1998–99",
+    "GCSEs / O-Levels — 6 Bs & 1 A, 1990–95"
+  ],
+  "references": [
+    {
+      "name": "Shafiu Hussain",
+      "role": "CEO, Oviato",
+      "contact": "shaf@oviato.com",
+      "relationship": "Co-founded Oviato, direct collaborator on pivot and fundraise",
+      "best_for": ["cto", "devrel"]
+    },
+    {
+      "name": "U-Zyn Chua",
+      "role": "Founder & CTO, Cake Group (Singapore)",
+      "contact": "chua@uzyn.com",
+      "relationship": "Hired Mark at CakeDefi, oversaw Moonshot team formation",
+      "best_for": ["cto"]
+    }
+  ],
+  "metrics": {
+    "slideshare_views": "59,000+",
+    "slideshare_presentations": 21,
+    "ordit_npm_downloads": "~50,000",
+    "commits_16_days": 535,
+    "chess_variants": 70,
+    "mcp_tools": 16,
+    "years_blockchain": 15,
+    "r1_seed_funding": "$300K",
+    "r1_years_sustained": 12,
+    "cakedefi_company_engineers": 170,
+    "moonshot_team_grown": "1 → 10",
+    "ordzaar_funding_raised": "US$500K",
+    "dbs_hackathon_api_requests": "1M+",
+    "smart_contracts_built": "30+"
+  },
+  "speaking": [
+    {"title": "The Cost of Cash", "event": "TEDx Sarawak", "year": 2017, "type": "keynote", "video": true},
+    {"title": "Introducing Bitcoin: The Mostly Visual Guide", "event": "WebCamp KL", "year": 2013, "type": "talk", "views": 31500},
+    {"title": "Blockchain in Financial Crime Prevention", "event": "ASIFMA/Thomson Reuters", "year": 2017, "type": "conference"},
+    {"title": "Banking on the Future of Blockchains", "event": "Innovation Series", "year": 2017, "type": "conference"},
+    {"title": "StartingBlock European Tour", "event": "6 cities, ~1000 attendees", "year": 2015, "type": "workshop"}
+  ],
+  "media_recognition": [
+    {"title": "Deloitte Top 50 Global RegTech", "year": 2017, "type": "recognition"},
+    {"title": "Digerati50 — Malaysia's Top 50 Digital Leaders", "year": 2018, "type": "recognition"},
+    {"title": "VentureBeat Top 5 — 500 Startups Batch 9", "year": 2014, "type": "recognition"},
+    {"title": "CoinDesk — quotes Mark Smalley as CTO", "year": 2017, "type": "press"},
+    {"title": "Securities Commission Malaysia Completes Blockchain Pilot Project", "year": 2018, "type": "press"}
+  ]
 }

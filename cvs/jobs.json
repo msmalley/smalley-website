@@ -1,27 +1,64 @@
 {
   "config": {
     "searches": [
-      {
-        "keywords": "CTO blockchain",
-        "location": "Remote",
-        "variant": "cto"
-      },
-      {
-        "keywords": "Head of Engineering crypto web3",
-        "location": "London",
-        "variant": "cto"
-      },
-      {
-        "keywords": "Developer Relations blockchain",
-        "location": "Remote",
-        "variant": "devrel"
-      },
-      {
-        "keywords": "RegTech compliance engineer",
-        "location": "UK",
-        "variant": "regtech"
-      }
+      {"keywords": "CTO blockchain", "location": "United Kingdom", "variant": "cto"},
+      {"keywords": "CTO crypto web3", "location": "United Kingdom", "variant": "cto"},
+      {"keywords": "CTO fintech", "location": "United Kingdom", "variant": "cto"},
+      {"keywords": "CTO digital assets", "location": "United Kingdom", "variant": "cto"},
+      {"keywords": "Head of Engineering blockchain", "location": "United Kingdom", "variant": "cto"},
+      {"keywords": "Head of Engineering fintech", "location": "United Kingdom", "variant": "cto"},
+      {"keywords": "VP Engineering crypto", "location": "United Kingdom", "variant": "cto"},
+      {"keywords": "VP Engineering fintech", "location": "United Kingdom", "variant": "cto"},
+      {"keywords": "Engineering Director blockchain", "location": "United Kingdom", "variant": "cto"},
+      {"keywords": "Engineering Director fintech", "location": "United Kingdom", "variant": "cto"},
+      {"keywords": "Technical Director crypto", "location": "United Kingdom", "variant": "cto"},
+      {"keywords": "Head of Innovation blockchain", "location": "United Kingdom", "variant": "cto"},
+      {"keywords": "Head of R&D fintech", "location": "United Kingdom", "variant": "cto"},
+      {"keywords": "Blockchain Architect", "location": "United Kingdom", "variant": "cto"},
+      {"keywords": "Head of AI engineering", "location": "United Kingdom", "variant": "cto"},
+      {"keywords": "CTO startup", "location": "Leeds", "variant": "cto"},
+      {"keywords": "Head of Engineering", "location": "Leeds", "variant": "cto"},
+      {"keywords": "CTO", "location": "Bradford", "variant": "cto"},
+      {"keywords": "Head of Engineering", "location": "Bradford", "variant": "cto"},
+      {"keywords": "CTO", "location": "Wakefield", "variant": "cto"},
+      {"keywords": "Engineering Director", "location": "Leeds", "variant": "cto"},
+      {"keywords": "VP Engineering", "location": "Leeds", "variant": "cto"},
+      {"keywords": "CTO", "location": "Huddersfield", "variant": "cto"},
+      {"keywords": "Head of Engineering", "location": "Manchester", "variant": "cto"},
+      {"keywords": "CTO fintech", "location": "Manchester", "variant": "cto"},
+      {"keywords": "CTO blockchain", "location": "Manchester", "variant": "cto"},
+      {"keywords": "Developer Relations blockchain", "location": "United Kingdom", "variant": "devrel"},
+      {"keywords": "Developer Relations crypto web3", "location": "United Kingdom", "variant": "devrel"},
+      {"keywords": "Developer Advocate blockchain", "location": "United Kingdom", "variant": "devrel"},
+      {"keywords": "Developer Advocate web3", "location": "United Kingdom", "variant": "devrel"},
+      {"keywords": "Developer Experience crypto", "location": "United Kingdom", "variant": "devrel"},
+      {"keywords": "Head of Developer Relations", "location": "United Kingdom", "variant": "devrel"},
+      {"keywords": "Technical Evangelist blockchain", "location": "United Kingdom", "variant": "devrel"},
+      {"keywords": "SDK Engineer blockchain", "location": "United Kingdom", "variant": "devrel"},
+      {"keywords": "RegTech compliance engineer", "location": "United Kingdom", "variant": "regtech"},
+      {"keywords": "Head of Compliance fintech", "location": "United Kingdom", "variant": "regtech"},
+      {"keywords": "compliance technology blockchain", "location": "United Kingdom", "variant": "regtech"},
+      {"keywords": "digital asset compliance", "location": "United Kingdom", "variant": "regtech"},
+      {"keywords": "AML KYC engineer", "location": "United Kingdom", "variant": "regtech"},
+      {"keywords": "Head of Engineering compliance", "location": "United Kingdom", "variant": "regtech"}
     ],
+    "search_config": {
+      "paginate": true,
+      "pages_per_search": 4,
+      "results_per_page": 25,
+      "delay_between_requests_ms": 4000,
+      "locations_geoIds": {
+        "united_kingdom": "101165590",
+        "london": "102257491",
+        "leeds": "104007954",
+        "manchester": "100694774",
+        "bradford": "103370392",
+        "sheffield": "104835504",
+        "york": "104661180"
+      },
+      "last_full_sweep": null,
+      "dedup_key": "title|company"
+    },
     "statuses": [
       "new",
       "matched",

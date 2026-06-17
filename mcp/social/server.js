@@ -9,7 +9,7 @@ import {
 } from '@modelcontextprotocol/sdk/types.js';
 import { postTweet, postThread, searchTweets, deleteTweet } from './providers/twitter.js';
 import { postLinkedIn, deletePost as deleteLinkedIn, searchJobs, getProfile } from './providers/linkedin.js';
-import { searchLinkedInJobs } from './providers/linkedin-jobs.js';
+import { searchLinkedInJobs, fetchLinkedInJobDescription } from './providers/linkedin-jobs.js';
 import { searchCryptoJobs } from './providers/job-boards.js';
 
 const server = new Server(
@@ -152,6 +152,20 @@ const TOOLS = [
       },
       required: ['platform', 'post_id']
     }
+  },
+  {
+    name: 'social_job_detail',
+    description: 'Fetch the full job description for a LinkedIn job by its numeric ID (from search results). Returns title, company, location, and full description text.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        job_id: {
+          type: 'string',
+          description: 'LinkedIn job numeric ID (from search results job_id field or URL)'
+        }
+      },
+      required: ['job_id']
+    }
   }
 ];
 
@@ -238,6 +252,10 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         } else {
           throw new Error(`Unsupported platform: ${args.platform}`);
         }
+        break;
+
+      case 'social_job_detail':
+        result = await fetchLinkedInJobDescription(args.job_id);
         break;
 
       default:

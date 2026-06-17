@@ -80,7 +80,9 @@ function parseJobCards(html) {
     if (!title || !company) return;
 
     const url = linkEl.attr('href') || '';
-    const jobIdMatch = url.match(/\/jobs\/view\/(\d+)/);
+    const jobIdMatch = url.match(/(\d{8,})/) || url.match(/\/jobs\/view\/(\d+)/);
+    const entityUrn = $el.attr('data-entity-urn') || '';
+    const urnIdMatch = entityUrn.match(/(\d+)$/);
 
     jobs.push({
       title,
@@ -89,11 +91,49 @@ function parseJobCards(html) {
       posted: dateEl.attr('datetime') || dateEl.text().trim(),
       salary: salaryEl.text().trim() || null,
       url: url.split('?')[0],
-      job_id: jobIdMatch ? jobIdMatch[1] : null
+      job_id: (urnIdMatch ? urnIdMatch[1] : null) || (jobIdMatch ? jobIdMatch[1] : null)
     });
   });
 
   return jobs;
+}
+
+export async function fetchLinkedInJobDescription(jobId) {
+  const url = `https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/${jobId}`;
+
+  const response = await fetch(url, {
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+      'Accept': 'text/html',
+      'Accept-Language': 'en-US,en;q=0.9'
+    }
+  });
+
+  if (response.status === 999) {
+    throw new Error('LinkedIn rate limited (HTTP 999). Wait 30-60 seconds before retrying.');
+  }
+
+  if (!response.ok) {
+    throw new Error(`LinkedIn job detail error: ${response.status}`);
+  }
+
+  const html = await response.text();
+  const $ = load(html);
+
+  const title = $('h2.top-card-layout__title').text().trim() ||
+                $('h1').first().text().trim();
+  const company = $('a.topcard__org-name-link').text().trim() ||
+                  $('span.topcard__flavor').first().text().trim();
+  const location = $('span.topcard__flavor--bullet').text().trim();
+  const description = $('div.description__text, div.show-more-less-html__markup').text().trim();
+
+  return {
+    title,
+    company,
+    location,
+    description,
+    url: `https://www.linkedin.com/jobs/view/${jobId}/`
+  };
 }
 
 export async function searchLinkedInJobs(options) {

@@ -23,15 +23,30 @@ function detectVariant(requirements) {
   return sorted[0][1] > 0 ? sorted[0][0] : 'cto';
 }
 
+function normalizeJobText(text) {
+  let normalized = text
+    .replace(/([a-z])([A-Z])/g, '$1\n$2')
+    .replace(/(Requirements|Qualifications|What you|Must have|Nice to have|Responsibilities|About the role|About you|Skills|Experience)/gi, '\n$1')
+    .replace(/(Benefits|Perks|We offer|How to apply|About us|Why join|Salary|Compensation)/gi, '\n$1')
+    .replace(/([.!?])\s+([A-Z])/g, '$1\n$2')
+    .replace(/•/g, '\n- ')
+    .replace(/•/g, '\n- ')
+    .replace(/(\d+)\+?\s*years/gi, '\n$&');
+
+  return normalized.split('\n').map(l => l.trim()).filter(Boolean);
+}
+
 function extractRequirements(jobDescription) {
-  const lines = jobDescription.split('\n').map(l => l.trim()).filter(Boolean);
+  const lines = normalizeJobText(jobDescription);
   const requirements = [];
   let inRequirements = false;
 
   const startHeaders = ['requirement', 'what you', 'must have', 'qualif', 'experience needed',
-    'skills', 'looking for', 'ideal candidate', 'nice to have', 'desired', 'what we need'];
+    'skills', 'looking for', 'ideal candidate', 'nice to have', 'desired', 'what we need',
+    'about you', 'you will need', 'you should have', 'key skills'];
   const endHeaders = ['benefit', 'we offer', 'perks', 'about us', 'how to apply',
-    'why join', 'what we provide', 'our culture', 'salary', 'compensation'];
+    'why join', 'what we provide', 'our culture', 'salary', 'compensation',
+    'what we offer', 'join us'];
 
   for (const line of lines) {
     const lower = line.toLowerCase();
@@ -47,6 +62,8 @@ function extractRequirements(jobDescription) {
     if (inRequirements && (line.startsWith('-') || line.startsWith('•') || line.startsWith('*') || /^\d+[\.\)]/.test(line))) {
       const cleaned = line.replace(/^[-•*\d.)\s]+/, '').trim();
       if (cleaned.length > 10) requirements.push(cleaned);
+    } else if (inRequirements && line.length > 20 && line.length < 200) {
+      requirements.push(line);
     }
   }
 
@@ -56,6 +73,14 @@ function extractRequirements(jobDescription) {
         requirements.push(line.replace(/^[-•*\s]+/, '').trim());
       }
     }
+  }
+
+  if (requirements.length === 0) {
+    const fullText = jobDescription.toLowerCase();
+    const yearMatches = fullText.match(/\d+\+?\s*years[^.]+/g) || [];
+    const expMatches = fullText.match(/experience (?:in|with)[^.]+/g) || [];
+    const skillMatches = fullText.match(/(?:proficien|strong|deep|proven|expert)[^.]+/g) || [];
+    requirements.push(...yearMatches.slice(0, 5), ...expMatches.slice(0, 5), ...skillMatches.slice(0, 5));
   }
 
   return requirements;

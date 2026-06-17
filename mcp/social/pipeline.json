@@ -28,7 +28,11 @@
       "Meaningful technical achievement across any project",
       "CV update or new portfolio case study added"
     ],
-    "workflow": "Claude appends posts (status: draft) during sessions when content triggers fire. Mark reviews and approves before posting. Posts track their full lifecycle: draft → ready → posted (with URL, date, and future metrics)."
+    "workflow": "Claude appends posts (status: draft) during sessions when content triggers fire. Mark reviews and approves before posting. Posts track their full lifecycle: draft → ready → posted (with URL, date, and future metrics).",
+    "post_types": {
+      "post": "Original top-level post or thread",
+      "reply": "Reply to an existing post. Uses parent field to resolve tweet ID. Parent can be a pipeline post ID (resolved to that post's URL/tweet ID) or a raw tweet ID for external tweets."
+    }
   },
   "posts": [
     {
@@ -44,6 +48,19 @@
       "angle": "Builder community, comeback + pipeline proof",
       "sequence": 1,
       "notes": "First post after long silence. Combines comeback with MCP meta-demonstration. Must land before anything else."
+    },
+    {
+      "id": "comeback-twitter-reply",
+      "created": "2026-06-17",
+      "status": "ready",
+      "type": "reply",
+      "parent": "comeback-twitter",
+      "trigger": "pipeline self-demonstration",
+      "platforms": ["twitter"],
+      "content": "This reply was posted by the same pipeline, which has a dedicated MCP server wired into the development environment. Drafts accumulate as work ships across projects. I review, respond, and generate comments when required.",
+      "chars": 228,
+      "angle": "Meta-proof that the pipeline works for replies too",
+      "notes": "Tests reply_to feature. Blocked by daily rate limit — retry after 2026-06-18. If this posts successfully, reply_to is confirmed working ahead of the thread posts."
     },
     {
       "id": "comeback-linkedin",

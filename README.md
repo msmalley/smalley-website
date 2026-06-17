@@ -14,7 +14,7 @@ Personal portfolio and CV site for Mark Smalley — engineering leader, protocol
 ├── regtech/            Regulatory credentials and advisory track record
 ├── explore/            Filterable content grid by tech tag
 ├── open-source/        Open source contributions and protocol pages
-├── mcp/social/         Social media MCP server (Twitter + LinkedIn posting, search, delete)
+├── mcp/social/         Social + jobs MCP server (Twitter, LinkedIn, job search, posting)
 ├── css/                Stylesheets (_sm.css base + page-specific)
 ├── js/                 JavaScript (SM framework: loader, core, navbar, footer, animations)
 ├── data/               JSON data files driving all pages
@@ -45,6 +45,15 @@ Propagates to all `?v=` query strings in HTML, `sm-loader.js`, and `sm-core.js`.
 GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 
 ## Changelog
+
+#### 2026-06-17
+- Built job application engine (cvs/): master profile.json, job matcher, cover letter templates, pipeline CLI
+- Added multi-source job search to MCP: LinkedIn Guest API (no auth) + crypto.jobs RSS
+- Added social_job_detail tool for fetching full LinkedIn job descriptions by ID
+- Reply-to threading support on social_post and social_thread tools
+- Migrated drafts.json → pipeline.json with full post lifecycle tracking
+- Comeback posts published (Twitter + LinkedIn); reply queued pending rate limit reset
+- Created issue #24 (MCP expansion: additional job sources, email IMAP/SMTP)
 
 #### 2026-06-15
 - Added social MCP server (mcp/social/) — unified Twitter + LinkedIn posting, search, threads, delete

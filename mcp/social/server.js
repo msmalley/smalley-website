@@ -9,6 +9,8 @@ import {
 } from '@modelcontextprotocol/sdk/types.js';
 import { postTweet, postThread, searchTweets, deleteTweet } from './providers/twitter.js';
 import { postLinkedIn, deletePost as deleteLinkedIn, searchJobs, getProfile } from './providers/linkedin.js';
+import { searchLinkedInJobs } from './providers/linkedin-jobs.js';
+import { searchCryptoJobs } from './providers/job-boards.js';
 
 const server = new Server(
   { name: 'social-mcp', version: '0.1.0' },
@@ -60,22 +62,37 @@ const TOOLS = [
   },
   {
     name: 'social_search_jobs',
-    description: 'Search LinkedIn job listings by keywords, location, and filters.',
+    description: 'Search job listings across multiple sources: LinkedIn (public guest API), crypto.jobs (RSS), or LinkedIn API (limited). Returns job titles, companies, locations, and links.',
     inputSchema: {
       type: 'object',
       properties: {
         keywords: {
           type: 'string',
-          description: 'Job search keywords (e.g. "CTO blockchain")'
+          description: 'Job search keywords (e.g. "CTO blockchain", "DevRel crypto")'
         },
         location: {
           type: 'string',
-          description: 'Location filter (e.g. "London", "Remote")'
+          description: 'Location filter (e.g. "London", "Remote", "UK")'
         },
         posted_within: {
           type: 'string',
           enum: ['24h', '7d', '30d'],
           description: 'Time filter for when job was posted'
+        },
+        source: {
+          type: 'string',
+          enum: ['linkedin', 'crypto.jobs', 'all'],
+          description: 'Which source to search. Default: all (searches LinkedIn guest API + crypto.jobs RSS)'
+        },
+        workplace: {
+          type: 'string',
+          enum: ['remote', 'hybrid', 'onsite'],
+          description: 'Workplace type filter (LinkedIn only)'
+        },
+        experience: {
+          type: 'string',
+          enum: ['director', 'executive'],
+          description: 'Experience level filter (LinkedIn only)'
         }
       },
       required: ['keywords']
@@ -163,9 +180,43 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         result = await postThread(args.tweets, args.reply_to || null);
         break;
 
-      case 'social_search_jobs':
-        result = await searchJobs(args.keywords, args.location, args.posted_within);
+      case 'social_search_jobs': {
+        const source = args.source || 'all';
+        const results = { sources: [], total: 0, jobs: [] };
+
+        if (source === 'linkedin' || source === 'all') {
+          try {
+            const li = await searchLinkedInJobs({
+              keywords: args.keywords,
+              location: args.location,
+              posted_within: args.posted_within,
+              workplace: args.workplace,
+              experience: args.experience
+            });
+            results.sources.push('linkedin_guest_api');
+            results.jobs.push(...li.jobs.map(j => ({ ...j, source: 'linkedin' })));
+          } catch (e) {
+            results.sources.push(`linkedin_guest_api (error: ${e.message})`);
+          }
+        }
+
+        if (source === 'crypto.jobs' || source === 'all') {
+          try {
+            const cj = await searchCryptoJobs({
+              keywords: args.keywords,
+              location: args.location
+            });
+            results.sources.push('crypto_jobs_rss');
+            results.jobs.push(...cj.jobs);
+          } catch (e) {
+            results.sources.push(`crypto_jobs_rss (error: ${e.message})`);
+          }
+        }
+
+        results.total = results.jobs.length;
+        result = results;
         break;
+      }
 
       case 'social_search_posts':
         if (args.platform === 'twitter') {

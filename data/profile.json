@@ -106,9 +106,11 @@
         "Co-founded and funded CoKeeps — now Malaysia's largest Digital Asset Custodian by AUM",
         "Authored DN-Key protocol: adopted by ATA Plus ECF, cited in SC Malaysia capital markets blueprint",
         "Enterprise clients: DBS Bank (Singapore), Baker Hostetler (USA, 5-day training engagement)",
+        "Shipped production KYC/AML pipelines and digital custody systems in a regulated fintech environment",
+        "Managed distributed teams across Malaysia, Singapore, and international clients for 13 years",
         "Shareholder in CoKeeps and Sinegy following equity arrangements"
       ],
-      "tech": ["Node.js", "MongoDB", "Bitcoin", "Ethereum", "KYC/AML", "custody", "identity"],
+      "tech": ["Node.js", "MongoDB", "Bitcoin", "Ethereum", "KYC/AML", "custody", "identity", "compliance"],
       "team_size": null,
       "outcome": "13-year operation on $300K seed; regulatory sandbox; CoKeeps largest DAC by AUM"
     },
@@ -125,9 +127,11 @@
         "Authored Everstore protocol (25-page whitepaper) — relational database on BIP32 key derivation, pre-EVM",
         "Built SDK powering world's first bank-backed blockchain hackathon (DBS Bank Singapore) — 1M+ API requests, 7/15 teams used our stack",
         "30+ Ethereum smart contracts for BloqVerse (~20 upgradeable, ~10 immutable), fully serverless architecture",
-        "$300K seed sustaining 12 years of operation — capital efficiency"
+        "$300K seed sustaining 12 years of operation — capital efficiency",
+        "Delivered compliance-grade financial infrastructure to licensed FinTech operators across Southeast Asia",
+        "Established CI/CD pipelines, sprint processes, and delivery metrics across a 5-engineer team"
       ],
-      "tech": ["UTXO scripting", "Solidity", "EthersJS", "BitcoinJS", "IPFS", "MongoDB", "Node.js"],
+      "tech": ["UTXO scripting", "Solidity", "EthersJS", "BitcoinJS", "IPFS", "MongoDB", "Node.js", "fintech"],
       "team_size": 5,
       "outcome": "Deloitte Top 50 RegTech; 500 Startups; $300K → 12 years"
     }

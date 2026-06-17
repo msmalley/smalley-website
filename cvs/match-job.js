@@ -117,18 +117,26 @@ function extractMetadata(jobDescription) {
 }
 
 const KEYWORD_EXPANSIONS = {
-  'blockchain': ['bitcoin', 'ethereum', 'utxo', 'ordinals', 'taproot', 'protocol', 'web3', 'crypto'],
-  'production': ['shipped', 'built', 'deployed', 'launched', 'live', 'production'],
-  'team': ['engineers', 'hiring', 'managed', 'led', 'founded', 'cross-functional', 'moonshot'],
-  'leadership': ['cto', 'head of', 'led', 'managed', 'founded', 'director', 'vp'],
+  'blockchain': ['bitcoin', 'ethereum', 'utxo', 'ordinals', 'taproot', 'protocol', 'web3', 'crypto', 'digital asset'],
+  'production': ['shipped', 'built', 'deployed', 'launched', 'live', 'production', 'shipping'],
+  'team': ['engineers', 'hiring', 'managed', 'led', 'founded', 'cross-functional', 'moonshot', 'onboarding'],
+  'leadership': ['cto', 'head of', 'led', 'managed', 'founded', 'director', 'vp', 'engineering leader'],
   'sdk': ['toolkit', 'api', 'library', 'npm', 'package', 'developer tooling', 'consumer sdk'],
-  'startup': ['seed', 'series', '500 startups', 'antler', 'founder', 'co-founded'],
-  'fundrais': ['draper', 'investment', 'raised', 'seed', 'series', '$500k', '$300k', 'investor'],
+  'startup': ['seed', 'series', '500 startups', 'antler', 'founder', 'co-founded', 'early-stage'],
+  'fundrais': ['draper', 'investment', 'raised', 'seed', 'series', '$500k', '$300k', 'investor', 'pitch'],
   'protocol': ['sado', 'dn-key', 'everstore', 'ordit', 'bip32', 'psbt'],
-  'architecture': ['extensible', 'plugin', 'framework', 'designed', 'infrastructure', 'system'],
-  'open source': ['github', 'repository', 'npm', 'contributor', 'backpress'],
-  'compliance': ['kyc', 'aml', 'regulatory', 'sandbox', 'securities commission'],
+  'architecture': ['extensible', 'plugin', 'framework', 'designed', 'infrastructure', 'system', 'scalable'],
+  'open source': ['github', 'repository', 'npm', 'contributor', 'backpress', 'open-source'],
+  'compliance': ['kyc', 'aml', 'regulatory', 'sandbox', 'securities commission', 'soc 2', 'pci'],
   'devrel': ['documentation', 'developer', 'community', 'advocacy', 'speaking', 'content'],
+  'fintech': ['payment', 'financial', 'banking', 'custody', 'digital asset', 'kyc', 'aml', 'regulated'],
+  'regulated': ['compliance', 'regulatory', 'sandbox', 'securities', 'kyc', 'aml', 'audit', 'soc'],
+  'remote': ['distributed', 'async', 'global', 'multiple countries', 'cross-timezone'],
+  'distributed': ['remote', 'global', 'multiple countries', 'malaysia', 'singapore', 'uk'],
+  'delivery': ['shipped', 'commits', 'deployed', 'launched', 'production', 'ci/cd', 'sprint'],
+  'security': ['cryptographic', 'custody', 'passkey', 'webauthn', 'key management', 'audit'],
+  'investor': ['draper', 'raised', 'seed', 'pitch', 'due diligence', 'funding'],
+  'management': ['hiring', 'onboarding', 'sprint', 'roadmap', 'stakeholder', 'performance'],
 };
 
 function expandKeywords(text) {

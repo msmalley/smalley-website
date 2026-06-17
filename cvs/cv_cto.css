@@ -282,39 +282,39 @@ body {
     width: 210mm;
     max-width: 210mm;
   }
-  .header { padding: 40px 0 14px; }
+  .header { padding: 44px 0 18px; }
   .header-inner { max-width: 100%; padding: 0 48px; }
-  .header h1 { font-size: 32px; letter-spacing: -1px; }
-  .header .headline { font-size: 12px; margin-top: 4px; }
-  .header .availability { font-size: 10.5px; margin-top: 3px; }
-  .contact-bar { padding: 8px 0; }
-  .contact-bar-inner { max-width: 100%; padding: 0 48px; gap: 4px 12px; flex-wrap: nowrap; font-size: 9.5px; }
-  .body { padding: 24px 48px 36px; max-width: 100%; }
-  .section { margin-bottom: 14px; }
-  .section-title { margin-bottom: 5px; padding-bottom: 3px; font-size: 8.5px; letter-spacing: 2px; }
-  .profile p { font-size: 10.5px; line-height: 1.5; max-width: 100%; }
-  .job { break-inside: avoid; margin-bottom: 6px; padding-bottom: 6px; }
-  .job-header { margin-bottom: 2px; }
-  .job-title { font-size: 12.5px; }
-  .job-company { font-size: 11px; }
-  .job-dates { font-size: 9.5px; padding: 1px 6px; }
-  .job-summary { margin-bottom: 2px; font-size: 10px; line-height: 1.4; }
-  .job ul li { margin-bottom: 1px; font-size: 10.5px; line-height: 1.4; padding-left: 12px; }
-  .job ul li::before { top: 0.42em; border-top-width: 2.5px; border-bottom-width: 2.5px; border-left-width: 4px; }
-  .oss ul li::before { top: 0.42em; border-top-width: 2.5px; border-bottom-width: 2.5px; border-left-width: 4px; }
-  .achievements ul li::before { top: 0.42em; border-top-width: 2.5px; border-bottom-width: 2.5px; border-left-width: 4px; }
-  .skills-grid { break-inside: avoid; gap: 2px 12px; grid-template-columns: 120px 1fr; }
-  .skill-value { text-wrap: auto; font-size: 10.5px; line-height: 1.4; padding: 1px 0 1px 8px; }
-  .skill-label { font-size: 10.5px; }
-  .oss ul li { font-size: 10.5px; line-height: 1.4; margin-bottom: 1px; padding-left: 12px; }
-  .oss code { font-size: 9.5px; }
-  .achievements ul { gap: 3px 20px; }
-  .achievements ul li { font-size: 11px; line-height: 1.4; padding-left: 12px; }
-  .creds-grid { gap: 2px 20px; }
-  .cred-item { font-size: 11px; padding: 2px 0; }
-  .refs { gap: 8px 24px; }
-  .ref-name { font-size: 11.5px; }
-  .ref-detail { font-size: 10px; }
+  .header h1 { font-size: 34px; letter-spacing: -1px; }
+  .header .headline { font-size: 13px; margin-top: 6px; }
+  .header .availability { font-size: 11px; margin-top: 4px; }
+  .contact-bar { padding: 10px 0; }
+  .contact-bar-inner { max-width: 100%; padding: 0 48px; gap: 4px 14px; flex-wrap: nowrap; font-size: 10px; }
+  .body { padding: 32px 48px 48px; max-width: 100%; }
+  .section { margin-bottom: 24px; }
+  .section-title { margin-bottom: 10px; padding-bottom: 5px; font-size: 9px; letter-spacing: 2px; break-after: avoid; }
+  .profile p { font-size: 11.5px; line-height: 1.6; max-width: 100%; }
+  .job { break-inside: avoid; margin-bottom: 16px; padding-bottom: 16px; }
+  .job-header { margin-bottom: 4px; }
+  .job-title { font-size: 13.5px; }
+  .job-company { font-size: 11.5px; }
+  .job-dates { font-size: 10px; padding: 2px 7px; }
+  .job-summary { margin-bottom: 6px; font-size: 11px; line-height: 1.55; }
+  .job ul li { margin-bottom: 3px; font-size: 11.5px; line-height: 1.5; padding-left: 14px; }
+  .job ul li::before { top: 0.46em; border-top-width: 2.5px; border-bottom-width: 2.5px; border-left-width: 4px; }
+  .oss ul li::before { top: 0.46em; border-top-width: 2.5px; border-bottom-width: 2.5px; border-left-width: 4px; }
+  .achievements ul li::before { top: 0.46em; border-top-width: 2.5px; border-bottom-width: 2.5px; border-left-width: 4px; }
+  .skills-grid { break-inside: avoid; gap: 6px 16px; grid-template-columns: 120px 1fr; }
+  .skill-value { text-wrap: auto; font-size: 11.5px; line-height: 1.5; padding: 2px 0 2px 10px; }
+  .skill-label { font-size: 11.5px; }
+  .oss ul li { font-size: 11.5px; line-height: 1.5; margin-bottom: 4px; padding-left: 14px; }
+  .oss code { font-size: 10px; }
+  .achievements ul { gap: 6px 24px; }
+  .achievements ul li { font-size: 11.5px; line-height: 1.5; padding-left: 14px; }
+  .creds-grid { gap: 4px 24px; }
+  .cred-item { font-size: 11.5px; padding: 4px 0; }
+  .refs { gap: 12px 36px; }
+  .ref-name { font-size: 12.5px; }
+  .ref-detail { font-size: 10.5px; }
   .achievements { break-inside: avoid; }
   .creds-grid { break-inside: avoid; }
   .refs { break-inside: avoid; }

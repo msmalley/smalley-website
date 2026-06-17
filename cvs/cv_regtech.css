@@ -304,7 +304,7 @@ body {
   margin-top: 2px;
 }
 
-@page { margin: 36px 0; size: A4; }
+@page { margin: 48px 0; size: A4; }
 @page :first { margin-top: 0; }
 @media print {
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -318,37 +318,37 @@ body {
     width: 210mm;
     max-width: 210mm;
   }
-  .header { padding: 36px 0 12px; }
+  .header { padding: 40px 0 16px; }
   .header-inner { max-width: 100%; padding: 0 48px; }
-  .header h1 { font-size: 30px; }
-  .header .headline { font-size: 11px; margin-bottom: 2px; }
-  .header .availability { font-size: 9.5px; }
-  .header-top { margin-bottom: 6px; }
-  .header-rule { margin-top: 6px; }
-  .contact-bar { padding: 6px 0; }
-  .contact-bar-inner { max-width: 100%; padding: 0 48px; font-size: 9px; flex-wrap: nowrap; }
-  .body { padding: 24px 48px 36px; max-width: 100%; }
-  .section { margin-bottom: 14px; }
-  .section-title { font-size: 11px; margin-bottom: 4px; padding-bottom: 2px; }
-  .summary p { font-size: 10px; line-height: 1.45; padding: 2px 0 2px 10px; }
-  .reg-list li { font-size: 10px; line-height: 1.35; margin-bottom: 1px; padding-left: 12px; }
-  .job { break-inside: avoid; margin-bottom: 6px; padding-bottom: 6px; padding-left: 12px; margin-left: 4px; }
-  .job::before { left: -5px; top: 7px; width: 6px; height: 6px; border-width: 1.5px; }
-  .reg-list li::before, .job ul li::before, .speaking-list li::before { top: 0.4em; }
-  .job-title { font-size: 12px; }
-  .job-company { font-size: 10px; }
-  .job-dates { font-size: 9px; }
-  .job-summary { font-size: 10px; line-height: 1.4; margin-bottom: 2px; }
-  .job ul li { font-size: 10.5px; line-height: 1.4; margin-bottom: 1px; }
-  .domain-grid { break-inside: avoid; gap: 2px 10px; grid-template-columns: 110px 1fr; }
-  .domain-label { font-size: 10px; }
-  .domain-value { font-size: 10px; line-height: 1.35; padding: 1px 0 1px 8px; }
-  .speaking-list li { font-size: 10px; line-height: 1.35; margin-bottom: 1px; }
-  .creds-grid { gap: 1px 14px; }
-  .cred-item { font-size: 10px; padding: 1px 0; }
-  .refs { gap: 4px 16px; }
-  .ref-name { font-size: 10.5px; }
-  .ref-detail { font-size: 8.5px; }
+  .header h1 { font-size: 34px; }
+  .header .headline { font-size: 12.5px; margin-bottom: 4px; }
+  .header .availability { font-size: 10.5px; }
+  .header-top { margin-bottom: 10px; }
+  .header-rule { margin-top: 10px; }
+  .contact-bar { padding: 9px 0; }
+  .contact-bar-inner { max-width: 100%; padding: 0 48px; font-size: 10px; flex-wrap: nowrap; }
+  .body { padding: 28px 48px 40px; max-width: 100%; }
+  .section { margin-bottom: 18px; }
+  .section-title { font-size: 12px; margin-bottom: 6px; padding-bottom: 3px; break-after: avoid; }
+  .summary p { font-size: 11px; line-height: 1.5; padding: 4px 0 4px 12px; }
+  .reg-list li { font-size: 11px; line-height: 1.45; margin-bottom: 3px; padding-left: 14px; }
+  .job { break-inside: avoid; margin-bottom: 12px; padding-bottom: 12px; padding-left: 14px; margin-left: 4px; }
+  .job::before { left: -5px; top: 8px; width: 7px; height: 7px; border-width: 1.5px; }
+  .reg-list li::before, .job ul li::before, .speaking-list li::before { top: 0.43em; }
+  .job-title { font-size: 12.5px; }
+  .job-company { font-size: 10.5px; }
+  .job-dates { font-size: 9.5px; padding: 2px 7px; }
+  .job-summary { font-size: 10.5px; line-height: 1.45; margin-bottom: 4px; }
+  .job ul li { font-size: 11px; line-height: 1.45; margin-bottom: 2px; }
+  .domain-grid { break-inside: avoid; gap: 4px 12px; grid-template-columns: 110px 1fr; }
+  .domain-label { font-size: 10.5px; }
+  .domain-value { font-size: 10.5px; line-height: 1.4; padding: 2px 0 2px 8px; }
+  .speaking-list li { font-size: 11px; line-height: 1.45; margin-bottom: 3px; }
+  .creds-grid { gap: 4px 20px; }
+  .cred-item { font-size: 11px; padding: 3px 0; }
+  .refs { gap: 10px 32px; }
+  .ref-name { font-size: 12px; }
+  .ref-detail { font-size: 9.5px; }
   p { orphans: 3; widows: 3; }
   li { text-wrap: auto; }
 }

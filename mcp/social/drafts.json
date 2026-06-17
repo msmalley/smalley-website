@@ -49,8 +49,8 @@
       "status": "ready",
       "trigger": "site launch + return to public presence + MCP pipeline demo",
       "platforms": ["linkedin"],
-      "content": "After several years focused on consulting and private infrastructure, I'm returning to public output. I've re-launched my personal site to surface my portfolio of game engines, protocol infrastructure, open-source developer tooling, and the stories behind the twelve years it took to build them.\n\nSo what's different this time? The site now drives an autonomous content pipeline, which, if you're reading this, clearly works. More on the process soon.\n\nhttps://smalley.my",
-      "chars": 466,
+      "content": "After several years focused on consulting and private infrastructure, I'm returning to public output. I've re-launched my personal site to surface my portfolio of game engines, protocol infrastructure, open-source developer tooling, and the stories behind the fifteen years it took to build them.\n\nSo what's different this time? The site now drives an autonomous content pipeline, which, if you're reading this, clearly works. More on the process soon.\n\nhttps://smalley.my",
+      "chars": 469,
       "angle": "Re-establish presence, pipeline proof, tease methodology follow-up",
       "sequence": 1,
       "notes": "First post after long silence. Combines comeback with MCP meta-demonstration. No ask, no role signal — just presence and proof."

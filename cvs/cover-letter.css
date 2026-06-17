@@ -1,0 +1,186 @@
+:root {
+  --navy:   #1B2A4A;
+  --teal:   #0E7490;
+  --teal-l: #CFFAFE;
+  --slate:  #334155;
+  --muted:  #64748B;
+  --rule:   #E2E8F0;
+  --bg:     #F8FAFC;
+  --white:  #FFFFFF;
+  --text:   #1E293B;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-wrap: pretty;
+}
+
+.page {
+  max-width: 100%;
+  margin: 0;
+  background: var(--white);
+  padding: 0;
+  overflow: hidden;
+}
+
+/* ── Header ── */
+.header {
+  background: var(--navy);
+  padding: 36px 0 28px;
+}
+.header-inner {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 72px;
+}
+.header h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--white);
+  letter-spacing: -1px;
+  line-height: 1.1;
+}
+.header .headline {
+  font-size: 14px;
+  color: var(--teal-l);
+  font-weight: 500;
+  margin-top: 6px;
+}
+
+/* ── Contact bar ── */
+.contact-bar {
+  background: #0F1D32;
+  padding: 10px 0;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: #94A3B8;
+}
+.contact-bar-inner {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 72px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 6px 12px;
+}
+.contact-bar a, .contact-bar span { color: #CBD5E1; text-decoration: none; }
+.contact-bar .sep { color: #475569; }
+
+/* ── Body ── */
+.body {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 40px 72px 48px;
+}
+
+/* ── Addressee block ── */
+.addressee {
+  margin-bottom: 28px;
+  font-size: 13px;
+  color: var(--slate);
+  line-height: 1.7;
+}
+.addressee .date {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.addressee .company-name {
+  font-weight: 600;
+  color: var(--navy);
+}
+.addressee .role-title {
+  color: var(--teal);
+  font-weight: 500;
+}
+
+/* ── Letter sections ── */
+.letter-section {
+  margin-bottom: 24px;
+}
+.letter-section p {
+  font-size: 13.5px;
+  color: var(--slate);
+  line-height: 1.8;
+  text-align: justify;
+  text-wrap: pretty;
+}
+
+/* ── Proof points list ── */
+.proof-points {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+.proof-points li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 13px;
+  color: var(--slate);
+  margin-bottom: 8px;
+  line-height: 1.7;
+}
+.proof-points li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.54em;
+  width: 0;
+  height: 0;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-left: 4.5px solid var(--teal);
+}
+.proof-points .requirement {
+  font-weight: 600;
+  color: var(--navy);
+}
+.proof-points .evidence {
+  color: var(--slate);
+}
+
+/* ── Closing ── */
+.closing {
+  margin-top: 32px;
+  font-size: 13.5px;
+  color: var(--slate);
+  line-height: 1.8;
+}
+.closing .sign-off {
+  margin-top: 24px;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+/* ── Print ── */
+@page { margin: 48px 0; size: A4; }
+@page :first { margin-top: 0; }
+@media print {
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { background: white; margin: 0; padding: 0; width: 210mm; }
+  .page { margin: 0; box-shadow: none; width: 210mm; max-width: 210mm; }
+  .header { padding: 32px 0 20px; }
+  .header-inner { max-width: 100%; padding: 0 48px; }
+  .header h1 { font-size: 28px; }
+  .header .headline { font-size: 12px; }
+  .contact-bar { padding: 8px 0; }
+  .contact-bar-inner { max-width: 100%; padding: 0 48px; font-size: 9.5px; }
+  .body { padding: 32px 48px 40px; max-width: 100%; }
+  .addressee { margin-bottom: 20px; font-size: 11.5px; }
+  .addressee .date { font-size: 10px; margin-bottom: 8px; }
+  .letter-section p { font-size: 11.5px; line-height: 1.65; }
+  .letter-section { margin-bottom: 16px; }
+  .proof-points li { font-size: 11.5px; line-height: 1.55; margin-bottom: 5px; padding-left: 14px; }
+  .proof-points li::before { top: 0.46em; border-top-width: 2.5px; border-bottom-width: 2.5px; border-left-width: 4px; }
+  .closing { margin-top: 24px; font-size: 11.5px; line-height: 1.65; }
+  .closing .sign-off { margin-top: 16px; }
+}

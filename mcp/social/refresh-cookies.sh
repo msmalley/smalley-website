@@ -81,6 +81,19 @@ if [ "$PLATFORM" = "all" ] || [ "$PLATFORM" = "linkedin" ]; then
     echo "  bcookie:    ${#BCOOKIE} chars"
     UPDATED=1
   fi
+
+  # Extract reaction queryId from Firefox browsing history
+  PLACES_DB="$FIREFOX_PROFILE/places.sqlite"
+  if [ -f "$PLACES_DB" ]; then
+    TMP_PLACES="/tmp/social-places-$$.sqlite"
+    cp "$PLACES_DB" "$TMP_PLACES"
+    REACT_QID=$(sqlite3 "$TMP_PLACES" "SELECT url FROM moz_places WHERE url LIKE '%voyagerSocialDashReactions%' ORDER BY last_visit_date DESC LIMIT 1;" 2>/dev/null | grep -oE 'voyagerSocialDashReactions\.[a-f0-9]+')
+    rm -f "$TMP_PLACES"
+    if [ -n "$REACT_QID" ]; then
+      update_env "LINKEDIN_REACT_QUERY_ID" "$REACT_QID"
+      echo "  react qid:  $REACT_QID"
+    fi
+  fi
   echo ""
 fi
 

@@ -66,21 +66,30 @@ async function getPersonUrn() {
   return `urn:li:person:${data.sub}`;
 }
 
-export async function postLinkedIn(content) {
+export async function postLinkedIn(content, linkUrl = null) {
   if (content.length > 3000) {
     throw new Error(`LinkedIn post exceeds 3000 characters (${content.length}).`);
   }
 
   const authorUrn = await getPersonUrn();
 
+  const shareContent = {
+    shareCommentary: { text: content },
+    shareMediaCategory: linkUrl ? 'ARTICLE' : 'NONE'
+  };
+
+  if (linkUrl) {
+    shareContent.media = [{
+      status: 'READY',
+      originalUrl: linkUrl
+    }];
+  }
+
   const body = {
     author: authorUrn,
     lifecycleState: 'PUBLISHED',
     specificContent: {
-      'com.linkedin.ugc.ShareContent': {
-        shareCommentary: { text: content },
-        shareMediaCategory: 'NONE'
-      }
+      'com.linkedin.ugc.ShareContent': shareContent
     },
     visibility: {
       'com.linkedin.ugc.MemberNetworkVisibility': 'PUBLIC'

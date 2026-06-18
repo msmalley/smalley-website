@@ -12,6 +12,7 @@ import { postLinkedIn, commentOnPost, deletePost as deleteLinkedIn, searchJobs, 
 import { getPostInsights, reactToContent, verifySession as verifyLinkedInSession } from './providers/linkedin-voyager.js';
 import { searchLinkedInJobs, fetchLinkedInJobDescription } from './providers/linkedin-jobs.js';
 import { searchCryptoJobs } from './providers/job-boards.js';
+import { listInbox, searchMessages, readMessage, archiveMessages, trashMessages, replyToMessage, sendEmail } from './providers/email.js';
 
 const server = new Server(
   { name: 'social-mcp', version: '0.1.0' },
@@ -222,6 +223,180 @@ const TOOLS = [
       },
       required: ['activity_urn', 'text']
     }
+  },
+  {
+    name: 'email_inbox',
+    description: 'List messages in Gmail inbox. Returns sender, subject, date, read/unread status, and UID for each message.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        account: {
+          type: 'string',
+          description: 'Email address or domain hint (e.g. "smalley.my"). Omit for default account.'
+        },
+        limit: {
+          type: 'number',
+          description: 'Max messages to return (default 20)'
+        },
+        unread_only: {
+          type: 'boolean',
+          description: 'Only show unread messages (default false)'
+        }
+      }
+    }
+  },
+  {
+    name: 'email_search',
+    description: 'Search emails by sender, subject, date, or text content.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        account: {
+          type: 'string',
+          description: 'Email address or domain hint. Omit for default account.'
+        },
+        from: {
+          type: 'string',
+          description: 'Filter by sender address or name'
+        },
+        subject: {
+          type: 'string',
+          description: 'Filter by subject text'
+        },
+        text: {
+          type: 'string',
+          description: 'Search message body text'
+        },
+        since: {
+          type: 'string',
+          description: 'Messages after this date (YYYY-MM-DD)'
+        },
+        before: {
+          type: 'string',
+          description: 'Messages before this date (YYYY-MM-DD)'
+        },
+        unread_only: {
+          type: 'boolean',
+          description: 'Only unread messages'
+        },
+        folder: {
+          type: 'string',
+          description: 'IMAP folder to search (default: INBOX)'
+        },
+        limit: {
+          type: 'number',
+          description: 'Max results (default 20)'
+        }
+      }
+    }
+  },
+  {
+    name: 'email_read',
+    description: 'Read the full content of an email by UID. Returns body text, attachments list, and threading headers.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        account: {
+          type: 'string',
+          description: 'Email address or domain hint. Omit for default account.'
+        },
+        uid: {
+          type: 'number',
+          description: 'Message UID (from email_inbox or email_search results)'
+        }
+      },
+      required: ['uid']
+    }
+  },
+  {
+    name: 'email_archive',
+    description: 'Archive messages (move from Inbox to All Mail). Messages remain searchable but leave the inbox.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        account: {
+          type: 'string',
+          description: 'Email address or domain hint. Omit for default account.'
+        },
+        uids: {
+          type: 'array',
+          items: { type: 'number' },
+          description: 'Array of message UIDs to archive'
+        }
+      },
+      required: ['uids']
+    }
+  },
+  {
+    name: 'email_trash',
+    description: 'Move messages to Trash (auto-deleted after 30 days).',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        account: {
+          type: 'string',
+          description: 'Email address or domain hint. Omit for default account.'
+        },
+        uids: {
+          type: 'array',
+          items: { type: 'number' },
+          description: 'Array of message UIDs to trash'
+        }
+      },
+      required: ['uids']
+    }
+  },
+  {
+    name: 'email_reply',
+    description: 'Reply to an email by UID. Preserves threading (In-Reply-To, References headers).',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        account: {
+          type: 'string',
+          description: 'Email address or domain hint. Omit for default account.'
+        },
+        uid: {
+          type: 'number',
+          description: 'UID of the message to reply to'
+        },
+        body: {
+          type: 'string',
+          description: 'Reply body text'
+        },
+        reply_all: {
+          type: 'boolean',
+          description: 'Reply to all recipients (default false)'
+        }
+      },
+      required: ['uid', 'body']
+    }
+  },
+  {
+    name: 'email_send',
+    description: 'Send a new email.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        account: {
+          type: 'string',
+          description: 'Email address or domain hint. Omit for default account.'
+        },
+        to: {
+          type: 'string',
+          description: 'Recipient email address'
+        },
+        subject: {
+          type: 'string',
+          description: 'Email subject'
+        },
+        body: {
+          type: 'string',
+          description: 'Email body text'
+        }
+      },
+      required: ['to', 'subject', 'body']
+    }
   }
 ];
 
@@ -324,6 +499,43 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 
       case 'social_comment':
         result = await commentOnPost(args.activity_urn, args.text, args.parent_comment || null);
+        break;
+
+      case 'email_inbox':
+        result = await listInbox(args.account, args.limit || 20, args.unread_only || false);
+        break;
+
+      case 'email_search':
+        result = await searchMessages(args.account, {
+          from: args.from,
+          subject: args.subject,
+          text: args.text,
+          since: args.since,
+          before: args.before,
+          unread_only: args.unread_only,
+          folder: args.folder,
+          limit: args.limit
+        });
+        break;
+
+      case 'email_read':
+        result = await readMessage(args.account, args.uid);
+        break;
+
+      case 'email_archive':
+        result = await archiveMessages(args.account, args.uids);
+        break;
+
+      case 'email_trash':
+        result = await trashMessages(args.account, args.uids);
+        break;
+
+      case 'email_reply':
+        result = await replyToMessage(args.account, args.uid, args.body, args.reply_all || false);
+        break;
+
+      case 'email_send':
+        result = await sendEmail(args.account, args.to, args.subject, args.body);
         break;
 
       default:

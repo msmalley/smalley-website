@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
-    "cheerio": "^1.2.0"
+    "cheerio": "^1.2.0",
+    "imapflow": "^1.4.1",
+    "nodemailer": "^9.0.1"
   }
 }

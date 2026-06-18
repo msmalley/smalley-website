@@ -71,9 +71,11 @@
         "Built second product (Dungeon Chess) entirely on framework's consumer APIs — zero engine forks",
         "First board game MCP server: 16 tools, Cloudflare Worker, MCP + REST + OpenAPI + llms.txt",
         "535 commits across 10+ repositories in 16 days",
-        "Autonomous CI pipeline: structured issue queue, research and implementation agents on cloud infrastructure"
+        "Autonomous CI pipeline: structured issue queue, research and implementation agents on cloud infrastructure",
+        "Full API design: REST, OpenAPI spec, llms.txt, consumer SDK interfaces",
+        "AI-augmented engineering methodology: LLM-driven development, automated code review, rule-based quality systems"
       ],
-      "tech": ["JavaScript", "ESM", "Cloudflare Workers", "MCP", "Web Workers", "AI agents"],
+      "tech": ["JavaScript", "ESM", "Cloudflare Workers", "MCP", "Web Workers", "AI agents", "REST API", "OpenAPI"],
       "team_size": 1,
       "outcome": "Two production game engines, 70+ chess variants, 16 MCP tools, full documentation site"
     },
@@ -87,9 +89,11 @@
       "proof_points": [
         "Sole developer of Ordzaar prototype — became fifth business vertical, spun out, raised US$500K, acquired",
         "Founded Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, stakeholder reporting",
-        "Co-authored SADO Protocol — decentralised ordinals order-book, open-source SDK used across ecosystem"
+        "Co-authored SADO Protocol — decentralised ordinals order-book, open-source SDK used across ecosystem",
+        "Promoted P4 → M3 within 170-engineer company in under 4 months",
+        "Mentored engineers on Bitcoin protocol internals and system design patterns"
       ],
-      "tech": ["Bitcoin", "Ordinals", "Schnorr", "Taproot", "SADO", "PSBTs"],
+      "tech": ["Bitcoin", "Ordinals", "Schnorr", "Taproot", "SADO", "PSBTs", "TypeScript", "Node.js"],
       "team_size": 10,
       "outcome": "Ordzaar spun out, raised US$500K, acquired"
     },
@@ -108,9 +112,11 @@
         "Enterprise clients: DBS Bank (Singapore), Baker Hostetler (USA, 5-day training engagement)",
         "Shipped production KYC/AML pipelines and digital custody systems in a regulated fintech environment",
         "Managed distributed teams across Malaysia, Singapore, and international clients for 13 years",
-        "Shareholder in CoKeeps and Sinegy following equity arrangements"
+        "Shareholder in CoKeeps and Sinegy following equity arrangements",
+        "Architecture and system design: microservices, event-driven systems, REST APIs at scale",
+        "Agile delivery: sprint planning, roadmap ownership, stakeholder reporting across 13 years"
       ],
-      "tech": ["Node.js", "MongoDB", "Bitcoin", "Ethereum", "KYC/AML", "custody", "identity", "compliance"],
+      "tech": ["Node.js", "MongoDB", "Bitcoin", "Ethereum", "KYC/AML", "custody", "identity", "compliance", "REST API", "Docker"],
       "team_size": null,
       "outcome": "13-year operation on $300K seed; regulatory sandbox; CoKeeps largest DAC by AUM"
     },
@@ -129,9 +135,11 @@
         "30+ Ethereum smart contracts for BloqVerse (~20 upgradeable, ~10 immutable), fully serverless architecture",
         "$300K seed sustaining 12 years of operation — capital efficiency",
         "Delivered compliance-grade financial infrastructure to licensed FinTech operators across Southeast Asia",
-        "Established CI/CD pipelines, sprint processes, and delivery metrics across a 5-engineer team"
+        "Established CI/CD pipelines, sprint processes, and delivery metrics across a 5-engineer team",
+        "Full-stack product ownership: frontend, backend, database, DevOps, deployment pipelines",
+        "Smart contract development: Solidity, upgradeable patterns, gas optimisation, security auditing"
       ],
-      "tech": ["UTXO scripting", "Solidity", "EthersJS", "BitcoinJS", "IPFS", "MongoDB", "Node.js", "fintech"],
+      "tech": ["UTXO scripting", "Solidity", "EthersJS", "BitcoinJS", "IPFS", "MongoDB", "Node.js", "fintech", "CI/CD", "Docker", "smart contracts"],
       "team_size": 5,
       "outcome": "Deloitte Top 50 RegTech; 500 Startups; $300K → 12 years"
     }

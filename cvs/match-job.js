@@ -26,12 +26,13 @@ function detectVariant(requirements) {
 function normalizeJobText(text) {
   let normalized = text
     .replace(/([a-z])([A-Z])/g, '$1\n$2')
-    .replace(/(Requirements|Qualifications|What you|Must have|Nice to have|Responsibilities|About the role|About you|Skills|Experience)/gi, '\n$1')
-    .replace(/(Benefits|Perks|We offer|How to apply|About us|Why join|Salary|Compensation)/gi, '\n$1')
+    .replace(/(Requirements|Qualifications|What you|Must have|Nice to have|Responsibilities|About the role|About you|Skills|Experience|What we('re| are) looking for|You will|You('ll| will) bring|Essential|Desirable)/gi, '\n$1')
+    .replace(/(Benefits|Perks|We offer|How to apply|About us|Why join|Salary|Compensation|What we offer|Our culture|Equal opportunity|Diversity)/gi, '\n$1')
     .replace(/([.!?])\s+([A-Z])/g, '$1\n$2')
-    .replace(/•/g, '\n- ')
-    .replace(/•/g, '\n- ')
-    .replace(/(\d+)\+?\s*years/gi, '\n$&');
+    .replace(/[•●○◦▪▸►]/g, '\n- ')
+    .replace(/\s{2,}/g, '\n')
+    .replace(/(\d+)\+?\s*years/gi, '\n$&')
+    .replace(/;\s*/g, '\n');
 
   return normalized.split('\n').map(l => l.trim()).filter(Boolean);
 }
@@ -75,12 +76,17 @@ function extractRequirements(jobDescription) {
     }
   }
 
-  if (requirements.length === 0) {
+  if (requirements.length < 3) {
     const fullText = jobDescription.toLowerCase();
-    const yearMatches = fullText.match(/\d+\+?\s*years[^.]+/g) || [];
-    const expMatches = fullText.match(/experience (?:in|with)[^.]+/g) || [];
-    const skillMatches = fullText.match(/(?:proficien|strong|deep|proven|expert)[^.]+/g) || [];
-    requirements.push(...yearMatches.slice(0, 5), ...expMatches.slice(0, 5), ...skillMatches.slice(0, 5));
+    const yearMatches = fullText.match(/\d+\+?\s*years[^.;]+/g) || [];
+    const expMatches = fullText.match(/experience (?:in|with|of|building|leading|managing|developing)[^.;]+/g) || [];
+    const skillMatches = fullText.match(/(?:proficien|strong|deep|proven|expert|solid|demonstrat|hands-on)[^.;]+/g) || [];
+    const knowledgeMatches = fullText.match(/(?:knowledge of|familiar|understanding of)[^.;]+/g) || [];
+    const abilityMatches = fullText.match(/(?:ability to|capable of|track record)[^.;]+/g) || [];
+    const existing = new Set(requirements.map(r => r.toLowerCase()));
+    const extras = [...yearMatches, ...expMatches, ...skillMatches, ...knowledgeMatches, ...abilityMatches]
+      .filter(m => m.length > 15 && m.length < 200 && !existing.has(m.trim()));
+    requirements.push(...extras.slice(0, 10));
   }
 
   return requirements;
@@ -142,26 +148,40 @@ function extractMetadata(jobDescription) {
 }
 
 const KEYWORD_EXPANSIONS = {
-  'blockchain': ['bitcoin', 'ethereum', 'utxo', 'ordinals', 'taproot', 'protocol', 'web3', 'crypto', 'digital asset'],
-  'production': ['shipped', 'built', 'deployed', 'launched', 'live', 'production', 'shipping'],
-  'team': ['engineers', 'hiring', 'managed', 'led', 'founded', 'cross-functional', 'moonshot', 'onboarding'],
-  'leadership': ['cto', 'head of', 'led', 'managed', 'founded', 'director', 'vp', 'engineering leader'],
-  'sdk': ['toolkit', 'api', 'library', 'npm', 'package', 'developer tooling', 'consumer sdk'],
-  'startup': ['seed', 'series', '500 startups', 'antler', 'founder', 'co-founded', 'early-stage'],
+  'blockchain': ['bitcoin', 'ethereum', 'utxo', 'ordinals', 'taproot', 'protocol', 'web3', 'crypto', 'digital asset', 'defi', 'l1', 'l2'],
+  'bitcoin': ['utxo', 'ordinals', 'taproot', 'psbt', 'schnorr', 'inscription', 'brc-20', 'runes', 'bitcoinjs'],
+  'ethereum': ['solidity', 'evm', 'erc-20', 'erc-721', 'smart contract', 'ethersjs', 'web3.js', 'defi'],
+  'production': ['shipped', 'built', 'deployed', 'launched', 'live', 'production', 'shipping', 'released'],
+  'team': ['engineers', 'hiring', 'managed', 'led', 'founded', 'cross-functional', 'moonshot', 'onboarding', 'mentoring'],
+  'leadership': ['cto', 'head of', 'led', 'managed', 'founded', 'director', 'vp', 'engineering leader', 'tech lead'],
+  'sdk': ['toolkit', 'api', 'library', 'npm', 'package', 'developer tooling', 'consumer sdk', 'developer experience'],
+  'startup': ['seed', 'series', '500 startups', 'antler', 'founder', 'co-founded', 'early-stage', 'pre-seed', 'mvp'],
   'fundrais': ['draper', 'investment', 'raised', 'seed', 'series', '$500k', '$300k', 'investor', 'pitch'],
-  'protocol': ['sado', 'dn-key', 'everstore', 'ordit', 'bip32', 'psbt'],
-  'architecture': ['extensible', 'plugin', 'framework', 'designed', 'infrastructure', 'system', 'scalable'],
-  'open source': ['github', 'repository', 'npm', 'contributor', 'backpress', 'open-source'],
-  'compliance': ['kyc', 'aml', 'regulatory', 'sandbox', 'securities commission', 'soc 2', 'pci'],
-  'devrel': ['documentation', 'developer', 'community', 'advocacy', 'speaking', 'content'],
-  'fintech': ['payment', 'financial', 'banking', 'custody', 'digital asset', 'kyc', 'aml', 'regulated'],
-  'regulated': ['compliance', 'regulatory', 'sandbox', 'securities', 'kyc', 'aml', 'audit', 'soc'],
+  'protocol': ['sado', 'dn-key', 'everstore', 'ordit', 'bip32', 'psbt', 'specification', 'standard', 'rfc'],
+  'architecture': ['extensible', 'plugin', 'framework', 'designed', 'infrastructure', 'system', 'scalable', 'microservices', 'modular'],
+  'open source': ['github', 'repository', 'npm', 'contributor', 'backpress', 'open-source', 'oss', 'community'],
+  'compliance': ['kyc', 'aml', 'regulatory', 'sandbox', 'securities commission', 'soc 2', 'pci', 'fca', 'mica'],
+  'devrel': ['documentation', 'developer', 'community', 'advocacy', 'speaking', 'content', 'tutorial', 'workshop'],
+  'fintech': ['payment', 'financial', 'banking', 'custody', 'digital asset', 'kyc', 'aml', 'regulated', 'neobank'],
+  'regulated': ['compliance', 'regulatory', 'sandbox', 'securities', 'kyc', 'aml', 'audit', 'soc', 'licensed'],
   'remote': ['distributed', 'async', 'global', 'multiple countries', 'cross-timezone'],
   'distributed': ['remote', 'global', 'multiple countries', 'malaysia', 'singapore', 'uk'],
-  'delivery': ['shipped', 'commits', 'deployed', 'launched', 'production', 'ci/cd', 'sprint'],
-  'security': ['cryptographic', 'custody', 'passkey', 'webauthn', 'key management', 'audit'],
+  'delivery': ['shipped', 'commits', 'deployed', 'launched', 'production', 'ci/cd', 'sprint', 'agile'],
+  'security': ['cryptographic', 'custody', 'passkey', 'webauthn', 'key management', 'audit', 'encryption'],
   'investor': ['draper', 'raised', 'seed', 'pitch', 'due diligence', 'funding'],
-  'management': ['hiring', 'onboarding', 'sprint', 'roadmap', 'stakeholder', 'performance'],
+  'management': ['hiring', 'onboarding', 'sprint', 'roadmap', 'stakeholder', 'performance', 'okr'],
+  'ai': ['llm', 'machine learning', 'ml', 'mcp', 'agent', 'ai-augmented', 'automation', 'generative'],
+  'node': ['javascript', 'typescript', 'express', 'esm', 'npm', 'backend', 'server-side'],
+  'javascript': ['typescript', 'node', 'react', 'vue', 'frontend', 'full-stack', 'esm'],
+  'typescript': ['javascript', 'node', 'typed', 'frontend', 'full-stack'],
+  'full-stack': ['frontend', 'backend', 'node', 'react', 'api', 'database', 'end-to-end'],
+  'cloud': ['aws', 'cloudflare', 'docker', 'kubernetes', 'infrastructure', 'serverless', 'workers'],
+  'identity': ['passkey', 'webauthn', 'authentication', 'oauth', 'sso', 'key management', 'did'],
+  'gaming': ['game engine', 'game development', 'multiplayer', 'esm', 'plugin', 'modding'],
+  'content': ['writing', 'blog', 'documentation', 'tutorial', 'video', 'speaking', 'thought leadership'],
+  'strategy': ['roadmap', 'vision', 'planning', 'stakeholder', 'board', 'investor', 'growth'],
+  'custody': ['wallet', 'key management', 'hsm', 'multi-sig', 'cold storage', 'digital asset'],
+  'defi': ['dex', 'amm', 'yield', 'staking', 'liquidity', 'smart contract', 'protocol'],
 };
 
 function expandKeywords(text) {
@@ -233,7 +253,7 @@ function matchProofPoints(requirements, profile, variant) {
 }
 
 function scoreMatch(matches, gaps, totalRequirements) {
-  if (totalRequirements === 0) return 50;
+  if (totalRequirements === 0) return 0;
 
   // Cap denominator: if parser found 30+ "requirements", many are noise.
   // Real JDs have 5-15 actual requirements. Use the lower of actual count or 15.

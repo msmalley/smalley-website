@@ -8,7 +8,8 @@ import {
   ListToolsRequestSchema
 } from '@modelcontextprotocol/sdk/types.js';
 import { postTweet, postThread, searchTweets, deleteTweet } from './providers/twitter.js';
-import { postLinkedIn, deletePost as deleteLinkedIn, searchJobs, getProfile } from './providers/linkedin.js';
+import { postLinkedIn, commentOnPost, deletePost as deleteLinkedIn, searchJobs, getProfile } from './providers/linkedin.js';
+import { getPostInsights, reactToContent, verifySession as verifyLinkedInSession } from './providers/linkedin-voyager.js';
 import { searchLinkedInJobs, fetchLinkedInJobDescription } from './providers/linkedin-jobs.js';
 import { searchCryptoJobs } from './providers/job-boards.js';
 
@@ -166,6 +167,61 @@ const TOOLS = [
       },
       required: ['job_id']
     }
+  },
+  {
+    name: 'social_insights',
+    description: 'Get engagement metrics (likes, comments, shares, reactions) for a LinkedIn post. Uses Voyager API with cookie auth. Pass a post URL, share URN, or activity URN.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        post_id: {
+          type: 'string',
+          description: 'LinkedIn post identifier: URL (linkedin.com/feed/update/urn:li:share:123), share URN (urn:li:share:123), or activity URN (urn:li:activity:123)'
+        }
+      },
+      required: ['post_id']
+    }
+  },
+  {
+    name: 'social_react',
+    description: 'React (like, celebrate, love, etc.) to a LinkedIn post or comment. Uses Voyager API.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        target_urn: {
+          type: 'string',
+          description: 'URN of the post or comment to react to. Post: urn:li:activity:123 or urn:li:share:123. Comment: urn:li:comment:(activity:123,456)'
+        },
+        reaction: {
+          type: 'string',
+          enum: ['LIKE', 'PRAISE', 'INTEREST', 'CURIOSITY', 'EMPATHY'],
+          description: 'Reaction type. LIKE=👍, PRAISE=🙌, INTEREST=🤔, CURIOSITY=🔥, EMPATHY=❤️. Default: LIKE'
+        }
+      },
+      required: ['target_urn']
+    }
+  },
+  {
+    name: 'social_comment',
+    description: 'Comment on a LinkedIn post, or reply to a specific comment. Uses the official OAuth API.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        activity_urn: {
+          type: 'string',
+          description: 'The activity URN of the post to comment on (urn:li:activity:123)'
+        },
+        text: {
+          type: 'string',
+          description: 'Comment text (max 1250 chars)'
+        },
+        parent_comment: {
+          type: 'string',
+          description: 'Optional: URN of the comment to reply to (urn:li:comment:(activity:123,456)). Omit to comment directly on the post.'
+        }
+      },
+      required: ['activity_urn', 'text']
+    }
   }
 ];
 
@@ -256,6 +312,18 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 
       case 'social_job_detail':
         result = await fetchLinkedInJobDescription(args.job_id);
+        break;
+
+      case 'social_insights':
+        result = await getPostInsights(args.post_id);
+        break;
+
+      case 'social_react':
+        result = await reactToContent(args.target_urn, args.reaction || 'LIKE');
+        break;
+
+      case 'social_comment':
+        result = await commentOnPost(args.activity_urn, args.text, args.parent_comment || null);
         break;
 
       default:

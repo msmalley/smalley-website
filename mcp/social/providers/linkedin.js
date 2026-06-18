@@ -97,6 +97,40 @@ export async function postLinkedIn(content) {
   };
 }
 
+export async function commentOnPost(activityUrn, text, parentCommentUrn = null) {
+  if (text.length > 1250) {
+    throw new Error(`LinkedIn comment exceeds 1250 characters (${text.length}).`);
+  }
+
+  const authorUrn = await getPersonUrn();
+
+  const body = {
+    actor: authorUrn,
+    message: { text }
+  };
+
+  if (parentCommentUrn) {
+    // LinkedIn requires format: urn:li:comment:(urn:li:activity:123,commentId)
+    // Normalise from shorthand format if needed
+    if (parentCommentUrn.includes('activity:') && !parentCommentUrn.includes('urn:li:activity:')) {
+      parentCommentUrn = parentCommentUrn.replace('activity:', 'urn:li:activity:');
+    }
+    body.parentComment = parentCommentUrn;
+  }
+
+  const encoded = encodeURIComponent(activityUrn);
+  const result = await linkedinRequest('POST', `${API_BASE}/socialActions/${encoded}/comments`, body);
+
+  return {
+    success: true,
+    id: result.id,
+    urn: result.$URN || null,
+    activityUrn,
+    parentComment: parentCommentUrn || null,
+    text
+  };
+}
+
 export async function searchJobs(keywords, location, postedWithin) {
   const params = new URLSearchParams({ keywords });
 

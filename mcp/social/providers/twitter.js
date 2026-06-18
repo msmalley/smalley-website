@@ -211,7 +211,7 @@ const FIELD_TOGGLES = {
   withDisallowedReplyControls: false
 };
 
-async function cookiePostTweet(content, replyToId = null) {
+async function cookiePostTweet(content, replyToId = null, attempt = 1) {
   const variables = {
     tweet_text: content,
     dark_request: false,
@@ -262,10 +262,21 @@ async function cookiePostTweet(content, replyToId = null) {
   const result = data?.data?.create_tweet?.tweet_results?.result;
   const tweetId = result?.rest_id;
 
+  if (!tweetId) {
+    if (attempt < 3) {
+      await new Promise(r => setTimeout(r, 2000 * attempt));
+      return cookiePostTweet(content, replyToId, attempt + 1);
+    }
+    throw new Error(
+      'Tweet silently dropped by Twitter (no ID returned after 3 attempts). ' +
+      'This usually means rate limiting or anti-spam filtering. Try again later.'
+    );
+  }
+
   return {
     success: true,
     id: tweetId,
-    url: tweetId ? `https://x.com/m_smalley/status/${tweetId}` : null,
+    url: `https://x.com/m_smalley/status/${tweetId}`,
     content,
     method: 'cookie'
   };
@@ -367,11 +378,14 @@ export async function postThread(tweets, replyToId = null) {
   const results = [];
   let previousId = replyToId;
 
-  for (const tweet of tweets) {
-    const result = await postTweet(tweet, previousId);
+  for (let i = 0; i < tweets.length; i++) {
+    const result = await postTweet(tweets[i], previousId);
+    if (!result.id) {
+      throw new Error(`Thread broken at tweet ${i + 1}: no ID returned. ${results.length} tweets posted before failure.`);
+    }
     results.push(result);
     previousId = result.id;
-    if (previousId) await new Promise(r => setTimeout(r, 1000));
+    if (i < tweets.length - 1) await new Promise(r => setTimeout(r, 1500));
   }
 
   return {

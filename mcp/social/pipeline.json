@@ -52,7 +52,8 @@
     {
       "id": "comeback-twitter-reply",
       "created": "2026-06-17",
-      "status": "ready",
+      "status": "posted",
+      "posted": "2026-06-18",
       "type": "reply",
       "parent": "comeback-twitter",
       "trigger": "pipeline self-demonstration",
@@ -60,7 +61,7 @@
       "content": "This reply was posted by the same pipeline, which has a dedicated MCP server wired into the development environment. Drafts accumulate as work ships across projects. I review, respond, and generate comments when required.",
       "chars": 228,
       "angle": "Meta-proof that the pipeline works for replies too",
-      "notes": "Tests reply_to feature. Blocked by daily rate limit — retry after 2026-06-18. If this posts successfully, reply_to is confirmed working ahead of the thread posts."
+      "notes": "Reply-to confirmed working. Posted as reply to tweet 2067236318627680743."
     },
     {
       "id": "comeback-linkedin",

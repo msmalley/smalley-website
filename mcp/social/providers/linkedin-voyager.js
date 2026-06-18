@@ -110,6 +110,9 @@ async function voyagerMutation(path, body) {
   return response;
 }
 
+const REACT_QUERY_ID = process.env.LINKEDIN_REACT_QUERY_ID ||
+  'voyagerSocialDashReactions.b731222600772fd42464c0fe19bd722b';
+
 export async function reactToContent(targetUrn, reactionType = 'LIKE') {
   const validReactions = ['LIKE', 'PRAISE', 'INTEREST', 'CURIOSITY', 'EMPATHY'];
   if (!validReactions.includes(reactionType)) {
@@ -117,10 +120,10 @@ export async function reactToContent(targetUrn, reactionType = 'LIKE') {
   }
 
   const response = await voyagerMutation(
-    '/graphql?action=execute&queryId=voyagerSocialDashReactions.b731222600772fd42464c0fe19bd722b',
+    `/graphql?action=execute&queryId=${REACT_QUERY_ID}`,
     {
       includeWebMetadata: true,
-      queryId: 'voyagerSocialDashReactions.b731222600772fd42464c0fe19bd722b',
+      queryId: REACT_QUERY_ID,
       variables: {
         threadUrn: targetUrn,
         entity: { reactionType }
@@ -141,6 +144,15 @@ export async function reactToContent(targetUrn, reactionType = 'LIKE') {
     }
     const error = data?.value?.errors?.[0]?.message;
     if (error) throw new Error(error);
+  }
+
+  if (response.status === 404) {
+    throw new Error(
+      'Reaction queryId has rotated (LinkedIn deploys new hashes periodically).\n' +
+      'To fix: like any post/comment in Firefox → DevTools → Network → filter "graphql" →\n' +
+      'find the request with "voyagerSocialDashReactions" → copy the queryId value →\n' +
+      'set LINKEDIN_REACT_QUERY_ID in .env'
+    );
   }
 
   if (response.status === 409) {

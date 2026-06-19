@@ -319,6 +319,10 @@ const TOOLS = [
         uid: {
           type: 'number',
           description: 'Message UID (from email_inbox or email_search results)'
+        },
+        folder: {
+          type: 'string',
+          description: 'IMAP folder to read from (default: INBOX). Use "[Gmail]/Trash" for deleted messages, "[Gmail]/All Mail" for all.'
         }
       },
       required: ['uid']
@@ -535,7 +539,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         break;
 
       case 'email_read':
-        result = await readMessage(args.account, args.uid);
+        result = await readMessage(args.account, args.uid, args.folder || 'INBOX');
         break;
 
       case 'email_archive':

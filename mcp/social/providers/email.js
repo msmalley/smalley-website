@@ -164,16 +164,16 @@ export async function searchMessages(accountHint, criteria = {}) {
   }
 }
 
-export async function readMessage(accountHint, uid) {
+export async function readMessage(accountHint, uid, folder = 'INBOX') {
   const account = resolveAccount(accountHint);
   const client = await connect(account);
 
   try {
-    await client.mailboxOpen('INBOX');
+    await client.mailboxOpen(folder);
 
     const rawSource = await client.download(uid.toString(), undefined, { uid: true });
     if (!rawSource?.content) {
-      throw new Error(`Message UID ${uid} not found in INBOX`);
+      throw new Error(`Message UID ${uid} not found in ${folder}`);
     }
 
     const parsed = await simpleParser(rawSource.content);

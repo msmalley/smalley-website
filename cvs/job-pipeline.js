@@ -155,11 +155,31 @@ switch (command) {
     updateStatus(arg, process.argv[4]);
     break;
   }
+  case 'enrich': {
+    const { classifyAll, fetchAndEnrich, summary } = require('./enrich-jobs.js');
+    const subcommand = arg || 'classify';
+    if (subcommand === 'classify') {
+      classifyAll(process.argv[4] === '--force');
+      const stats = summary();
+      console.log(JSON.stringify(stats, null, 2));
+    } else if (subcommand === 'fetch') {
+      classifyAll();
+      fetchAndEnrich({ limit: parseInt(process.argv[4]) || 20 }).catch(e => { console.error(e); process.exit(1); });
+    } else if (subcommand === 'emails') {
+      const { findByEmail } = require('./enrich-jobs.js');
+      const jobs = findByEmail();
+      for (const j of jobs) {
+        console.log(`${j.company} - ${j.role} (${j.score}) → ${j.channel.contact_email}`);
+      }
+    }
+    break;
+  }
   default:
     console.log(`Job Pipeline — Usage:
   node job-pipeline.js add <jd-file.txt> [source-url]   Add and match a job
   node job-pipeline.js cover <job-id>                   Generate cover letter
   node job-pipeline.js list [status|variant]            List tracked jobs
   node job-pipeline.js status <job-id> <new-status>    Update job status
+  node job-pipeline.js enrich [classify|fetch|emails]   Enrich jobs with channel data
 `);
 }

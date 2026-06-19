@@ -12,6 +12,7 @@ import { postLinkedIn, commentOnPost, deletePost as deleteLinkedIn, searchJobs, 
 import { getPostInsights, reactToContent, verifySession as verifyLinkedInSession } from './providers/linkedin-voyager.js';
 import { searchLinkedInJobs, fetchLinkedInJobDescription } from './providers/linkedin-jobs.js';
 import { searchCryptoJobs } from './providers/job-boards.js';
+import { searchWeb3Career } from './providers/web3-career.js';
 import { listInbox, searchMessages, readMessage, archiveMessages, trashMessages, replyToMessage, sendEmail } from './providers/email.js';
 
 const server = new Server(
@@ -80,7 +81,7 @@ const TOOLS = [
   },
   {
     name: 'social_search_jobs',
-    description: 'Search job listings across multiple sources: LinkedIn (public guest API), crypto.jobs (RSS), or LinkedIn API (limited). Returns job titles, companies, locations, and links.',
+    description: 'Search job listings across multiple sources: LinkedIn (public guest API), crypto.jobs (RSS), web3.career (API). Returns job titles, companies, locations, and links.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -99,8 +100,8 @@ const TOOLS = [
         },
         source: {
           type: 'string',
-          enum: ['linkedin', 'crypto.jobs', 'all'],
-          description: 'Which source to search. Default: all (searches LinkedIn guest API + crypto.jobs RSS)'
+          enum: ['linkedin', 'crypto.jobs', 'web3.career', 'all'],
+          description: 'Which source to search. Default: all (searches LinkedIn guest API + crypto.jobs RSS + web3.career API)'
         },
         workplace: {
           type: 'string',
@@ -394,7 +395,7 @@ const TOOLS = [
   },
   {
     name: 'email_send',
-    description: 'Send a new email.',
+    description: 'Send a new email. Supports file attachments (PDFs, etc) via absolute file paths.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -413,6 +414,11 @@ const TOOLS = [
         body: {
           type: 'string',
           description: 'Email body text'
+        },
+        attachments: {
+          type: 'array',
+          items: { type: 'string' },
+          description: 'Array of absolute file paths to attach (e.g. ["/path/to/cv.pdf"])'
         }
       },
       required: ['to', 'subject', 'body']
@@ -475,6 +481,20 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
             results.jobs.push(...cj.jobs);
           } catch (e) {
             results.sources.push(`crypto_jobs_rss (error: ${e.message})`);
+          }
+        }
+
+        if (source === 'web3.career' || source === 'all') {
+          try {
+            const w3 = await searchWeb3Career({
+              keywords: args.keywords,
+              location: args.location,
+              remote: args.workplace === 'remote'
+            });
+            results.sources.push('web3_career_api');
+            results.jobs.push(...w3.jobs);
+          } catch (e) {
+            results.sources.push(`web3_career_api (error: ${e.message})`);
           }
         }
 
@@ -555,7 +575,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         break;
 
       case 'email_send':
-        result = await sendEmail(args.account, args.to, args.subject, args.body);
+        result = await sendEmail(args.account, args.to, args.subject, args.body, args.attachments || null);
         break;
 
       default:

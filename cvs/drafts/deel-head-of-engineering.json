@@ -1,0 +1,17 @@
+{
+  "target": {
+    "company": "Deel",
+    "role": "Head of Engineering (FinTech Platform)",
+    "contact_email": "recruiting@deel.com",
+    "contact_type": "generic",
+    "contact_name": null,
+    "source_url": "https://www.linkedin.com/jobs/view/head-of-engineering-fintech-at-deel-4399109246",
+    "cv_variant": "cto",
+    "cv_pdf": "/Applications/MAMP/htdocs/personal/smalley-website/cvs/dist/Mark-Smalley-CV-CTO.pdf"
+  },
+  "send_from": "mark@smalley.my",
+  "subject": "Head of Engineering (FinTech Platform) — Mark Smalley",
+  "status": "draft",
+  "created": "2026-06-19",
+  "body": "Dear Hiring Team,\n\nI am writing to express my interest in the Head of Engineering (FinTech Platform) role at Deel. Having built regulated financial infrastructure across multiple jurisdictions for 15 years, the scope of this position aligns directly with my experience and where I want to be working next.\n\nI have spent my career building exactly what this role describes: payment systems, custody and ledger architectures, and compliance-grade platforms. The difference is I have done it across blockchain rails, which means every system I have built has required the same guarantees you are targeting (idempotency, auditability, multi-currency, reconciliation) with fewer safety nets.\n\nSpecific evidence mapped to your requirements:\n\n- Payments & ledger infrastructure in regulated environments — Built production KYC/AML pipelines, digital custody systems, and wallet architectures for licensed FinTech operators. First company admitted to Securities Commission Malaysia's regulatory sandbox. Contributed directly to national Digital Asset regulatory roadmap alongside the central bank.\n\n- Node.js / TypeScript at scale — 15 years building backend systems in this stack. Authored the Ordit SDK (~50K npm downloads), SADO Protocol (decentralised order-book via PSBTs), and production REST APIs handling 1M+ requests during DBS Bank's blockchain hackathon.\n\n- Scaling engineering teams — Joined CakeDefi (170 engineers) as IC, promoted to M3 manager within 4 months. Founded and grew Moonshot team (1 to 10 engineers) whose first output became a standalone business vertical, spun out, raised US$500K, and was acquired.\n\n- Multi-currency / cross-border financial flows — Operated across Malaysia, Singapore, UK, and international clients for 13 years. Built systems handling multi-currency wallet flows, FX, and cross-border compliance.\n\n- AI-first engineering — Currently building production AI agent pipelines, MCP server infrastructure (16 tools), and LLM-augmented development workflows. This is not theoretical; it is how I ship daily.\n\n- IPO-readiness / institutional rigour — Co-founded CoKeeps (now Malaysia's largest Digital Asset Custodian by AUM). Sustained a 12-year operation on $300K seed capital. Built systems audited by regulators.\n\nYour JD describes building regulated, scalable, auditable financial systems at global scale while preparing for IPO. I have done this at smaller scale across multiple ventures and jurisdictions. What I bring is the rare combination of deep fintech engineering, regulatory credibility, and the ability to operate at the intersection of engineering, compliance, and product that this role demands.\n\nI am based in the UK, available immediately, and open to remote or hybrid arrangements. I have attached my CV for your consideration and would welcome the opportunity to discuss how my experience maps to your needs.\n\nKind regards,\nMark Smalley"
+}

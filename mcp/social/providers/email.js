@@ -289,7 +289,7 @@ export async function replyToMessage(accountHint, uid, body, replyAll = false) {
   };
 }
 
-export async function sendEmail(accountHint, to, subject, body) {
+export async function sendEmail(accountHint, to, subject, body, attachments) {
   const account = resolveAccount(accountHint);
 
   const transporter = createTransport({
@@ -302,18 +302,30 @@ export async function sendEmail(accountHint, to, subject, body) {
     }
   });
 
-  const result = await transporter.sendMail({
+  const mailOptions = {
     from: account.address,
     to,
     subject,
     text: withSignature(body)
-  });
+  };
+
+  if (attachments && attachments.length > 0) {
+    const { readFileSync } = await import('fs');
+    const { basename } = await import('path');
+    mailOptions.attachments = attachments.map(filePath => ({
+      filename: basename(filePath),
+      content: readFileSync(filePath)
+    }));
+  }
+
+  const result = await transporter.sendMail(mailOptions);
 
   return {
     success: true,
     account: account.address,
     to,
     subject,
-    messageId: result.messageId
+    messageId: result.messageId,
+    attachments: attachments ? attachments.length : 0
   };
 }

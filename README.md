@@ -46,6 +46,16 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 
 ## Changelog
 
+#### 2026-06-19
+- First job application sent via automated pipeline (Deel Head of Engineering, email-direct with CTO CV attached)
+- Email attachment support added to MCP email_send tool (nodemailer + file paths)
+- web3.career job search provider added (3 sources now: LinkedIn Guest API, crypto.jobs, web3.career)
+- Job enrichment engine: channel classification, email detection, freshness scoring (cvs/enrich-jobs.js)
+- Search result ingestion tool for bulk import (cvs/ingest-search-results.js)
+- Cover letter draft system: structured JSON in cvs/drafts/ with target metadata and status tracking
+- Pipeline status tracking: new → ready → applied with dates and cover letter references
+- Portal form-fill automation planned (issue #25) for non-email applications
+
 #### 2026-06-17
 - Built job application engine (cvs/): master profile.json, job matcher, cover letter templates, pipeline CLI
 - Added multi-source job search to MCP: LinkedIn Guest API (no auth) + crypto.jobs RSS

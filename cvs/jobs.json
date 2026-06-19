@@ -1450,8 +1450,7 @@
     {
       "id": "verda-ai-developer-advocate-mqifo8q4",
       "added": "2026-06-17",
-      "status": "applied",
-      "applied_date": "2026-06-19",
+      "status": "ready",
       "company": "Verda",
       "role": "AI Developer Advocate",
       "location": "London, England, United Kingdom",
@@ -1493,7 +1492,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/ai-developer-advocate-at-verda-4426968768",
       "cover_letter": "cvs/drafts/verda-ai-developer-advocate.json",
-      "notes": "Draft ready. Apply via portal: https://jobs.verda.com/jobs/7903387-ai-developer-advocate",
+      "notes": "Cover letter drafted. PRIORITY: Apply via portal next session. URL: https://jobs.verda.com/jobs/7903387-ai-developer-advocate",
       "channel": {
         "source": "linkedin",
         "method": "company_direct",

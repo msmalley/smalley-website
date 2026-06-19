@@ -52,7 +52,7 @@
     <guid>https://smalley.my/portfolio/moddable/</guid>
     <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
     <category>Portfolio</category>
-    <description>Open-source games studio shipped in 16 days using AI-augmented engineering. Two engines (chess v0.9.1 + hexmaps v0.8.1), six games, Consumer SDKs, and the first board game MCP server (16 AI-callable tools at tools.moddable.games). Native ESM, zero dependencies, zero build step.</description>
+    <description>Open-source games studio shipped in 16 days using AI-augmented engineering. Two engines (chess v0.9.7 + hexmaps v1.0.0), 20 game families, Consumer SDKs, and the first board game MCP server (16 AI-callable tools at tools.moddable.games). Autonomous agent pipeline (Researcher + Builder routines) manages multi-repo production across 6 product repos. Native ESM, zero dependencies, zero build step.</description>
   </item>
   <item>
     <title>Moddable Chess Engine</title>
@@ -60,7 +60,7 @@
     <guid>https://smalley.my/open-source/moddable-chess-engine/</guid>
     <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
     <category>Open Source</category>
-    <description>Consumer game framework (v0.9.1). 70 chess variants plus a reusable SDK that powers non-chess games. Native ESM, MCP server with 8 AI-callable tools, multi-depth AI with opening books, postMessage embed API, tiered plugin architecture. Dungeon Chess runs entirely on MCE without engine forks.</description>
+    <description>Consumer game framework (v0.9.7). 71 chess variants plus a reusable SDK that powers non-chess games. Native ESM, MCP server with 8 AI-callable tools, multi-depth AI with opening books, postMessage embed API, tiered plugin architecture. Dungeon Chess runs entirely on MCE without engine forks.</description>
   </item>
   <item>
     <title>Moddable Hexmaps</title>
@@ -68,7 +68,7 @@
     <guid>https://smalley.my/open-source/moddable-hexmaps/</guid>
     <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
     <category>Open Source</category>
-    <description>Hex map framework (v0.8.1) with seeded procedural generation, Consumer SDK (createMapController), 6 games, 4 render styles, PNG/PDF/SVG export, MCP tools, hex metadata, and URL parameter API.</description>
+    <description>Hex map framework (v1.0.0) with seeded procedural generation, Consumer SDK (createMapController), 6 games, 4 render styles, PNG/PDF/SVG export, MCP tools, hex metadata, and URL parameter API.</description>
   </item>
   <item>
     <title>PDF Pagination Engine</title>
@@ -76,7 +76,7 @@
     <guid>https://smalley.my/open-source/pdf-pagination-engine/</guid>
     <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
     <category>Open Source</category>
-    <description>Pagination system that measures rendered element heights, groups headings atomically, enforces page-fill minimums, and assembles multi-section documents. Pure DOM measurement, no wkhtmltopdf.</description>
+    <description>Pagination system that measures rendered element heights, groups headings atomically, enforces page-fill minimums, and assembles multi-section documents. Powers 20 game families with 155 rule files producing 1000+ indexed pages. Pure DOM measurement, no wkhtmltopdf.</description>
   </item>
   <item>
     <title>Ordit SDK</title>

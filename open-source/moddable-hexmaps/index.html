@@ -6,21 +6,21 @@
 <meta name="theme-color" content="#0B0F1A">
 <style>html{background:#0B0F1A}body{opacity:0;transition:opacity .15s ease}</style>
 <title>Moddable Hexmaps — Mark Smalley</title>
-<meta name="description" content="Hex map framework (v0.8.1): 6 games, Consumer SDK, 6 MCP tools, seeded procedural generation, PNG/PDF/SVG export, and URL parameter API.">
+<meta name="description" content="Hex map framework (v1.0.0): 6 games, Consumer SDK, 6 MCP tools, seeded procedural generation, PNG/PDF/SVG export, and URL parameter API.">
 <meta property="og:title" content="Moddable Hexmaps — Mark Smalley">
-<meta property="og:description" content="Hex map framework (v0.8.1): 6 games, Consumer SDK, 6 MCP tools, seeded procedural generation, PNG/PDF/SVG export, and URL parameter API.">
+<meta property="og:description" content="Hex map framework (v1.0.0): 6 games, Consumer SDK, 6 MCP tools, seeded procedural generation, PNG/PDF/SVG export, and URL parameter API.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://smalley.my/open-source/moddable-hexmaps/">
 <meta property="og:site_name" content="Mark Smalley">
-<meta property="og:image" content="https://smalley.my/img/og/tools-hexmaps.jpg?v=1.0.33">
+<meta property="og:image" content="https://smalley.my/img/og/tools-hexmaps.jpg?v=1.0.34">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Moddable Hexmaps — Mark Smalley">
-<meta name="twitter:description" content="Hex map framework (v0.8.1): 6 games, Consumer SDK, 6 MCP tools, seeded procedural generation, PNG/PDF/SVG export, and URL parameter API.">
-<meta name="twitter:image" content="https://smalley.my/img/og/tools-hexmaps.jpg?v=1.0.33">
+<meta name="twitter:description" content="Hex map framework (v1.0.0): 6 games, Consumer SDK, 6 MCP tools, seeded procedural generation, PNG/PDF/SVG export, and URL parameter API.">
+<meta name="twitter:image" content="https://smalley.my/img/og/tools-hexmaps.jpg?v=1.0.34">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="../../img/apple-touch-icon.png">
-<link rel="stylesheet" href="../../css/_sm.css?v=1.0.33">
-<link rel="stylesheet" href="../../css/case-study.css?v=1.0.33">
+<link rel="stylesheet" href="../../css/_sm.css?v=1.0.34">
+<link rel="stylesheet" href="../../css/case-study.css?v=1.0.34">
 </head>
 <body>
 <div id="nav-root"></div>
@@ -48,7 +48,7 @@
       <h2>Architecture</h2>
       <p>The framework treats hex maps as deterministic functions of their parameters. A seed string plus a configuration (ring count, game, orientation) always produces the same map. This makes maps shareable as URLs, reproducible across devices, and embeddable without hosting. Native ESM throughout with a Consumer SDK for iframe-free embedding.</p>
       <ul>
-        <li><strong>Consumer SDK (v0.8.1)</strong> — <code>HexApp.createMapController(container, opts)</code> for iframe-free embedding with render hooks, event system, and programmatic control. Multiple instances per page.</li>
+        <li><strong>Consumer SDK (v1.0.0)</strong> — <code>HexApp.createMapController(container, opts)</code> for iframe-free embedding with render hooks, event system, and programmatic control. Multiple instances per page.</li>
         <li><strong>Seeded RNG</strong> — same seed always produces the same terrain distribution. Share a map by sharing its URL</li>
         <li><strong>6 games</strong> — Nukes (volcanic), Talisman Worlds (55 terrain types), Twilight Imperium (7 galaxy layouts), Colony (Seafarers-style), Planet Mongo (faction biomes), Endless Skies (4X galaxy with wormholes)</li>
         <li><strong>Canvas rendering</strong> — flat-top or pointy-top orientation, configurable ring count, four distinct visual styles (artistic, classic, kenney, realistic)</li>
@@ -78,7 +78,7 @@
 
       <div class="case-outcome">
         <div class="case-outcome-label">Result</div>
-        <div class="case-outcome-text">Consumer SDK (v0.8.1) powering 6 games with 6 MCP tools. Infinite reproducible maps, 4 render styles, multi-format export, AI-callable, shareable via URL.</div>
+        <div class="case-outcome-text">Consumer SDK (v1.0.0) powering 6 games with 6 MCP tools. Infinite reproducible maps, 4 render styles, multi-format export, AI-callable, shareable via URL.</div>
       </div>
 
       <div class="case-tech">
@@ -105,7 +105,7 @@
 </section>
 
 <div id="footer-root"></div>
-<script src="../../js/sm-loader.js?v=1.0.33"></script>
-<script src="../../js/sm-hex-embed.js?v=1.0.33"></script>
+<script src="../../js/sm-loader.js?v=1.0.34"></script>
+<script src="../../js/sm-hex-embed.js?v=1.0.34"></script>
 </body>
 </html>

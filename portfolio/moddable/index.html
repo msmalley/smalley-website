@@ -6,21 +6,21 @@
 <meta name="theme-color" content="#0B0F1A">
 <style>html{background:#0B0F1A}body{opacity:0;transition:opacity .15s ease}</style>
 <title>Moddable Games — Mark Smalley</title>
-<meta name="description" content="Open-source games studio with AI-callable MCP tools and Consumer SDKs. 2 engines, 6 games, 16 MCP tools. First board game MCP server.">
+<meta name="description" content="Open-source games studio with AI-callable MCP tools, Consumer SDKs, and autonomous agent pipeline. 2 engines, 20 games, 16 MCP tools.">
 <meta property="og:title" content="Moddable Games — Mark Smalley">
-<meta property="og:description" content="Open-source games studio with AI-callable MCP tools and Consumer SDKs. 2 engines, 6 games, 16 MCP tools. First board game MCP server.">
+<meta property="og:description" content="Open-source games studio with AI-callable MCP tools, Consumer SDKs, and autonomous agent pipeline. 2 engines, 20 games, 16 MCP tools.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://smalley.my/portfolio/moddable/">
 <meta property="og:site_name" content="Mark Smalley">
-<meta property="og:image" content="https://smalley.my/img/og/portfolio-moddable.jpg?v=1.0.33">
+<meta property="og:image" content="https://smalley.my/img/og/portfolio-moddable.jpg?v=1.0.34">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Moddable Games — Mark Smalley">
-<meta name="twitter:description" content="Open-source games studio with AI-callable MCP tools and Consumer SDKs. 2 engines, 6 games, 16 MCP tools. First board game MCP server.">
-<meta name="twitter:image" content="https://smalley.my/img/og/portfolio-moddable.jpg?v=1.0.33">
+<meta name="twitter:description" content="Open-source games studio with AI-callable MCP tools, Consumer SDKs, and autonomous agent pipeline. 2 engines, 20 games, 16 MCP tools.">
+<meta name="twitter:image" content="https://smalley.my/img/og/portfolio-moddable.jpg?v=1.0.34">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="../../img/apple-touch-icon.png">
-<link rel="stylesheet" href="../../css/_sm.css?v=1.0.33">
-<link rel="stylesheet" href="../../css/case-study.css?v=1.0.33">
+<link rel="stylesheet" href="../../css/_sm.css?v=1.0.34">
+<link rel="stylesheet" href="../../css/case-study.css?v=1.0.34">
 </head>
 <body>
 <div id="nav-root"></div>
@@ -33,7 +33,7 @@
     <div class="case-hero-tagline">Open-source games studio with AI-callable MCP tools and Consumer SDKs</div>
     <div class="case-meta">
       <div class="case-meta-item"><span class="case-meta-label">Role</span><span class="case-meta-value">CEO &amp; Founder</span></div>
-      <div class="case-meta-item"><span class="case-meta-label">Shipped</span><span class="case-meta-value">6 games, 2 engines, 16 MCP tools</span></div>
+      <div class="case-meta-item"><span class="case-meta-label">Shipped</span><span class="case-meta-value">20 games, 2 engines, 16 MCP tools</span></div>
       <div class="case-meta-item"><span class="case-meta-label">Timeframe</span><span class="case-meta-value">16 days</span></div>
 </div>
   </div>
@@ -47,12 +47,13 @@
 
       <h2>What shipped</h2>
       <ul>
-        <li><strong>Moddable Chess Engine (v0.9.1)</strong> — evolved from a 70-variant chess app into a <strong>consumer game framework</strong> with native ESM, reusable game controller, renderer extension hooks, replay API, unit templates, terrain predicates, and effect lifecycle hooks. Powers two games from the same core (<a href="https://chess.moddable.games" target="_blank" rel="noopener">chess.moddable.games</a>)</li>
+        <li><strong>Moddable Chess Engine (v0.9.7)</strong> — evolved from a 71-variant chess app into a <strong>consumer game framework</strong> with native ESM, reusable game controller, renderer extension hooks, replay API, unit templates, terrain predicates, and effect lifecycle hooks. Powers two games from the same core (<a href="https://chess.moddable.games" target="_blank" rel="noopener">chess.moddable.games</a>)</li>
         <li><strong>Dungeon Chess</strong> — asymmetric skirmish game running entirely on MCE as a game subsystem. Custom renderer hooks, faction-based AI, XP-budgeted drafting, all without engine forks (<a href="https://dungeon.moddable.games" target="_blank" rel="noopener">dungeon.moddable.games</a>)</li>
-        <li><strong>Moddable Hexmaps (v0.8.1)</strong> — Consumer SDK with seeded procedural generation, 6 games, 4 render styles, PNG/PDF/SVG export, hex metadata system, and URL param API (<a href="https://hex.moddable.games" target="_blank" rel="noopener">hex.moddable.games</a>)</li>
+        <li><strong>Moddable Hexmaps (v1.0.0)</strong> — Consumer SDK with seeded procedural generation, 6 games, 4 render styles, PNG/PDF/SVG export, hex metadata system, and URL param API (<a href="https://hex.moddable.games" target="_blank" rel="noopener">hex.moddable.games</a>)</li>
         <li><strong>MCP Tools Server</strong> — 16 AI-callable tools (8 chess, 6 hexmaps, 2 site-native) via MCP protocol, REST API, OpenAPI, and llms.txt. First board game engine MCP server. Cloudflare Worker on free tier (<a href="https://tools.moddable.games" target="_blank" rel="noopener">tools.moddable.games</a>)</li>
-        <li><strong>Nukes, Mongo, Endless Skies, Draughts, Go</strong> — tabletop games with digital tools, rulebooks, and variant systems</li>
-        <li><strong>PDF Pagination Engine</strong> — custom document assembly producing 190+ page rulebooks with orphan control</li>
+        <li><strong>20 game families</strong> — originals (Nukes, Mongo, Endless Skies, Dungeon Chess) plus classics (Draughts, Go, Halma, Pachisi, Backgammon, Morris, and more), each with digital tools, rulebooks, and variant systems</li>
+        <li><strong>PDF Pagination Engine</strong> — custom document assembly producing 1000+ indexed rulebook pages across 155 variants with orphan control</li>
+        <li><strong>Autonomous Agent Pipeline</strong> — Researcher and Builder routines operating on cloud infrastructure, managing a 6-repo production pipeline via label-triggered coordination. Research agents investigate rules sources; Builder agents branch, implement, and merge. Issues route through without a terminal open</li>
         <li><strong>Developer documentation</strong> — tiered guides, consumer integration guide, full API reference, SDK demo page, Developers section with examples</li>
       </ul>
 
@@ -74,7 +75,7 @@
 
       <div class="case-outcome">
         <div class="case-outcome-label">Result</div>
-        <div class="case-outcome-text">6 games, 2 engines (v0.9.1 + v0.8.1), 16 MCP tools, 2 Consumer SDKs, Developers section. Shipped in 16 days, evolved into AI-callable game framework ecosystem.</div>
+        <div class="case-outcome-text">20 game families, 2 engines (v0.9.7 + v1.0.0), 16 MCP tools, 2 Consumer SDKs, autonomous agent pipeline. Shipped in 16 days, evolved into an AI-orchestrated multi-repo production ecosystem.</div>
       </div>
 
       <div class="case-tech">
@@ -106,8 +107,8 @@
 </section>
 
 <div id="footer-root"></div>
-<script src="../../js/sm-loader.js?v=1.0.33"></script>
-<script src="../../js/sm-chess-embed.js?v=1.0.33"></script>
-<script src="../../js/sm-hex-embed.js?v=1.0.33"></script>
+<script src="../../js/sm-loader.js?v=1.0.34"></script>
+<script src="../../js/sm-chess-embed.js?v=1.0.34"></script>
+<script src="../../js/sm-hex-embed.js?v=1.0.34"></script>
 </body>
 </html>

@@ -2,13 +2,13 @@
   {
     "slug": "moddable-chess-engine",
     "title": "Moddable Chess Engine",
-    "tagline": "Consumer game SDK — 70 variants, MCP tools, ESM architecture, AI with opening books",
+    "tagline": "Consumer game SDK — 71 variants, MCP tools, ESM architecture, AI with opening books",
     "role": "Creator",
     "category": "engine",
-    "description": "Consumer game framework (v0.9.1). 70 chess variants plus a reusable SDK that powers non-chess games. Native ESM, MCP server with 8 AI-callable tools, multi-depth AI with opening books, postMessage embed API, tiered plugin architecture. Dungeon Chess runs entirely on MCE without engine forks.",
+    "description": "Consumer game framework (v0.9.7). 71 chess variants plus a reusable SDK that powers non-chess games. Native ESM, MCP server with 8 AI-callable tools, multi-depth AI with opening books, postMessage embed API, tiered plugin architecture. Dungeon Chess runs entirely on MCE without engine forks.",
     "stats": [
-      { "value": "70", "label": "variants" },
-      { "value": "7", "label": "MCP tools" }
+      { "value": "71", "label": "variants" },
+      { "value": "8", "label": "MCP tools" }
     ],
     "tech": ["JavaScript", "SVG", "Web Worker AI", "Consumer SDK", "MCP", "ESM"],
     "repo": "https://github.com/Moddable-Games/moddable-chess",
@@ -22,7 +22,7 @@
     "tagline": "Seeded procedural hex maps — 6 games, Consumer SDK, MCP tools, PNG/PDF/SVG export",
     "role": "Creator",
     "category": "engine",
-    "description": "Hex map framework (v0.8.1) with seeded procedural generation, Consumer SDK (createMapController), 6 games, 4 render styles, PNG/PDF/SVG export, MCP tools, hex metadata, and URL parameter API.",
+    "description": "Hex map framework (v1.0.0) with seeded procedural generation, Consumer SDK (createMapController), 6 games, 4 render styles, PNG/PDF/SVG export, MCP tools, hex metadata, and URL parameter API.",
     "stats": [
       { "value": "6", "label": "games" },
       { "value": "6", "label": "MCP tools" }
@@ -39,11 +39,11 @@
     "tagline": "Intelligent document pagination with orphan prevention",
     "role": "Creator",
     "category": "engine",
-    "description": "Pagination system that measures rendered element heights, groups headings atomically, enforces page-fill minimums, and assembles multi-section documents. Pure DOM measurement, no wkhtmltopdf.",
+    "description": "Pagination system that measures rendered element heights, groups headings atomically, enforces page-fill minimums, and assembles multi-section documents. Powers 20 game families with 155 rule files producing 1000+ indexed pages. Pure DOM measurement, no wkhtmltopdf.",
     "stats": [
-      { "value": "190+", "label": "pages assembled" },
+      { "value": "1000+", "label": "pages assembled" },
       { "value": "0", "label": "orphaned elements" },
-      { "value": "100+", "label": "variant PDFs generated" }
+      { "value": "155", "label": "variant PDFs generated" }
     ],
     "tech": ["JavaScript", "Puppeteer", "DOM measurement", "pdfunite"],
     "repo": "https://github.com/Moddable-Games/moddable-rules",

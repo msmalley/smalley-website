@@ -85,6 +85,11 @@
       "angle": "Re-establish presence, pipeline proof, tease methodology follow-up",
       "sequence": 1,
       "metrics": { "likes": 18, "comments": 7, "shares": 0, "impressions": 598, "reactions": { "LIKE": 14, "EMPATHY": 3, "PRAISE": 1 }, "commentsList": [{"author": "Harinder Singh", "text": "Put a chatbot on your CV bro 😂 I can show you how I do mine if you wanna see "}, {"author": "Ruben Tan", "text": "Didn't know you did game engines. Awesome!"}, {"author": "Daniel Yap", "text": "Are you back in the UK now? "}, {"author": "Daniel Yap", "text": "Mark Smalley Kiera and Kyra (did I get that right) must be very grown up now. "}, {"author": "richard abas", "text": "Bon voyage "}, {"author": "Mark Smalley", "text": "Touché — who do you think is replying right now?"}], "last_checked": "2026-06-19T17:00:00Z" },
+      "pending_replies": [
+        { "author": "Ruben Tan", "text": "Didn't know you did game engines. Awesome!", "suggested": "Thanks Ruben! Yeah built two — a chess variant engine (70 variants) and a hex map framework. Both ship SDKs and are AI-callable via MCP. The portfolio has the full story: smalley.my/portfolio/moddable" },
+        { "author": "Daniel Yap", "text": "Are you back in the UK now?", "suggested": "Yeah moved back last year — based in Yorkshire now. Still working with the same crowd remotely though." },
+        { "author": "richard abas", "text": "Bon voyage", "suggested": null }
+      ],
       "notes": "First post after long silence. Combines comeback with MCP meta-demonstration. No ask, no role signal — just presence and proof."
     },
     {

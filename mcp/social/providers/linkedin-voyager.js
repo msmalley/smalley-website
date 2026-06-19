@@ -197,8 +197,12 @@ export async function getPostInsights(postIdentifier) {
   );
 
   const included = data?.included || [];
+  const hasActivityCounts = included.some(i =>
+    i.$type === 'com.linkedin.voyager.feed.shared.SocialActivityCounts' &&
+    i.urn?.startsWith('urn:li:activity:')
+  );
 
-  if (!included.length) {
+  if (!hasActivityCounts) {
     const activityUrn = `urn:li:activity:${id}`;
     const retryData = await voyagerRequest(
       `/feed/updatesV2?q=backendUrnOrNss&urnOrNss=${encodeURIComponent(activityUrn)}&commentsCount=20&likesCount=20`
@@ -214,7 +218,8 @@ function parseResponse(data) {
 
   const activityCounts = included.find(i =>
     i.$type === 'com.linkedin.voyager.feed.shared.SocialActivityCounts' &&
-    i.urn?.startsWith('urn:li:activity:')
+    i.urn?.startsWith('urn:li:activity:') &&
+    !i.urn?.includes('comment')
   );
 
   if (!activityCounts) {
@@ -242,6 +247,7 @@ function parseResponse(data) {
     likes: activityCounts.numLikes || 0,
     comments: activityCounts.numComments || 0,
     shares: activityCounts.numShares || 0,
+    impressions: activityCounts.numImpressions || null,
     reactions: Object.keys(reactions).length > 0 ? reactions : undefined,
     commentsList: commentsList.length > 0 ? commentsList : undefined,
     activityUrn: activityCounts.urn

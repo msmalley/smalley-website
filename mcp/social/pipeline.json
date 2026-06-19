@@ -84,7 +84,7 @@
       "chars": 469,
       "angle": "Re-establish presence, pipeline proof, tease methodology follow-up",
       "sequence": 1,
-      "metrics": { "likes": 18, "comments": 7, "shares": 0, "reactions": { "LIKE": 14, "EMPATHY": 3, "PRAISE": 1 } },
+      "metrics": { "likes": 18, "comments": 7, "shares": 0, "impressions": 598, "reactions": { "LIKE": 14, "EMPATHY": 3, "PRAISE": 1 }, "commentsList": [{"author": "Harinder Singh", "text": "Put a chatbot on your CV bro 😂 I can show you how I do mine if you wanna see "}, {"author": "Ruben Tan", "text": "Didn't know you did game engines. Awesome!"}, {"author": "Daniel Yap", "text": "Are you back in the UK now? "}, {"author": "Daniel Yap", "text": "Mark Smalley Kiera and Kyra (did I get that right) must be very grown up now. "}, {"author": "richard abas", "text": "Bon voyage "}, {"author": "Mark Smalley", "text": "Touché — who do you think is replying right now?"}], "last_checked": "2026-06-19T17:00:00Z" },
       "notes": "First post after long silence. Combines comeback with MCP meta-demonstration. No ask, no role signal — just presence and proof."
     },
     {
@@ -123,6 +123,7 @@
       "chars": 1458,
       "angle": "Methodology, AI-augmented engineering leadership, pipeline self-reference",
       "sequence": 2,
+      "metrics": { "likes": 1, "comments": 0, "shares": 0, "impressions": 159, "reactions": { "LIKE": 1 }, "commentsList": [], "last_checked": "2026-06-19T17:00:00Z" },
       "notes": "Follow-up to comeback posts. Explains the process teased in the comeback. Positions engineering approach."
     },
     {

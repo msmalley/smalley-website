@@ -14,6 +14,12 @@ import { searchLinkedInJobs, fetchLinkedInJobDescription } from './providers/lin
 import { searchCryptoJobs } from './providers/job-boards.js';
 import { searchWeb3Career } from './providers/web3-career.js';
 import { listInbox, searchMessages, readMessage, archiveMessages, trashMessages, replyToMessage, sendEmail } from './providers/email.js';
+import { readFileSync, writeFileSync } from 'fs';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const PIPELINE_PATH = join(__dirname, 'pipeline.json');
 
 const server = new Server(
   { name: 'social-mcp', version: '0.1.0' },
@@ -188,7 +194,7 @@ const TOOLS = [
   },
   {
     name: 'social_insights',
-    description: 'Get engagement metrics (likes, comments, shares, reactions) for a LinkedIn post. Uses Voyager API with cookie auth. Pass a post URL, share URN, or activity URN.',
+    description: 'Get engagement metrics for a LinkedIn post with delta tracking. Returns current totals AND what changed since last check (new reactions, new comments with authors, impression growth). Auto-updates baseline in pipeline.json.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -529,9 +535,59 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         result = await fetchLinkedInJobDescription(args.job_id);
         break;
 
-      case 'social_insights':
-        result = await getPostInsights(args.post_id);
+      case 'social_insights': {
+        const current = await getPostInsights(args.post_id);
+
+        let pipeline;
+        try { pipeline = JSON.parse(readFileSync(PIPELINE_PATH, 'utf8')); } catch { pipeline = null; }
+
+        let delta = null;
+        if (pipeline?.posts) {
+          const inputId = args.post_id.match(/\d{10,}/)?.[0];
+          const activityId = current.activityUrn?.match(/\d{10,}/)?.[0];
+          const post = pipeline.posts.find(p => {
+            const pId = p.platform_id?.match(/\d{10,}/)?.[0];
+            return pId && (pId === inputId || pId === activityId);
+          });
+
+          if (post?.metrics) {
+            const prev = post.metrics;
+            const prevCommentAuthors = (prev.commentsList || []).map(c => c.author + ':' + c.text);
+            const newComments = (current.commentsList || []).filter(c =>
+              !prevCommentAuthors.includes(c.author + ':' + c.text)
+            );
+
+            delta = {
+              new_reactions: (current.likes || 0) - (prev.likes || 0),
+              new_comments: (current.comments || 0) - (prev.comments || 0),
+              new_shares: (current.shares || 0) - (prev.shares || 0),
+              impression_growth: current.impressions && prev.impressions
+                ? current.impressions - prev.impressions : null,
+              new_comment_authors: newComments.map(c => ({
+                author: c.author,
+                subtitle: c.subtitle,
+                text: c.text
+              }))
+            };
+          }
+
+          if (post) {
+            post.metrics = {
+              likes: current.likes,
+              comments: current.comments,
+              shares: current.shares,
+              impressions: current.impressions || null,
+              reactions: current.reactions || null,
+              commentsList: current.commentsList || [],
+              last_checked: new Date().toISOString()
+            };
+            try { writeFileSync(PIPELINE_PATH, JSON.stringify(pipeline, null, 2)); } catch {}
+          }
+        }
+
+        result = { ...current, delta };
         break;
+      }
 
       case 'social_react':
         result = await reactToContent(args.target_urn, args.reaction || 'LIKE');

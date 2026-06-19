@@ -1,3 +1,5 @@
+import { warmUrlPreview, voyagerPost } from './linkedin-voyager.js';
+
 const API_BASE = 'https://api.linkedin.com/v2';
 const RESTLI_BASE = 'https://api.linkedin.com/rest';
 
@@ -18,7 +20,7 @@ function getCredentials() {
   return { accessToken };
 }
 
-async function linkedinRequest(method, url, body = null) {
+async function linkedinRequest(method, url, body = null, extraHeaders = {}) {
   const { accessToken } = getCredentials();
 
   const options = {
@@ -27,7 +29,8 @@ async function linkedinRequest(method, url, body = null) {
       'Authorization': `Bearer ${accessToken}`,
       'Content-Type': 'application/json',
       'X-Restli-Protocol-Version': '2.0.0',
-      'LinkedIn-Version': '202405'
+      'LinkedIn-Version': '202405',
+      ...extraHeaders
     }
   };
 
@@ -71,38 +74,59 @@ export async function postLinkedIn(content, linkUrl = null) {
     throw new Error(`LinkedIn post exceeds 3000 characters (${content.length}).`);
   }
 
-  const authorUrn = await getPersonUrn();
+  const articleUrl = linkUrl
+    ? (typeof linkUrl === 'string' ? linkUrl : linkUrl.url)
+    : null;
 
-  const shareContent = {
-    shareCommentary: { text: content },
-    shareMediaCategory: linkUrl ? 'ARTICLE' : 'NONE'
-  };
-
-  if (linkUrl) {
-    shareContent.media = [{
-      status: 'READY',
-      originalUrl: linkUrl
-    }];
+  if (articleUrl) {
+    try {
+      const result = await voyagerPost(content, articleUrl);
+      return result;
+    } catch (err) {
+      if (err.message.includes('session expired') || err.message.includes('CSRF')) {
+        throw new Error(
+          `LinkedIn Voyager session expired (needed for OG card rendering).\n` +
+          `Run ./refresh-cookies.sh linkedin to fix.\n` +
+          `Original error: ${err.message}`
+        );
+      }
+      if (err.message.includes('not configured')) {
+        throw new Error(
+          `LinkedIn Voyager cookies not configured (needed for OG card rendering).\n` +
+          `Run ./refresh-cookies.sh linkedin to set up.\n` +
+          `Without Voyager, posts with links will NOT show preview cards.`
+        );
+      }
+    }
   }
+
+  const authorUrn = await getPersonUrn();
 
   const body = {
     author: authorUrn,
-    lifecycleState: 'PUBLISHED',
-    specificContent: {
-      'com.linkedin.ugc.ShareContent': shareContent
+    commentary: content,
+    visibility: 'PUBLIC',
+    distribution: {
+      feedDistribution: 'MAIN_FEED',
+      targetEntities: [],
+      thirdPartyDistributionChannels: []
     },
-    visibility: {
-      'com.linkedin.ugc.MemberNetworkVisibility': 'PUBLIC'
-    }
+    lifecycleState: 'PUBLISHED'
   };
 
-  const result = await linkedinRequest('POST', `${API_BASE}/ugcPosts`, body);
+  if (articleUrl) {
+    body.content = { article: { source: articleUrl } };
+  }
+
+  const result = await linkedinRequest('POST', 'https://api.linkedin.com/rest/posts', body);
 
   return {
     success: true,
     id: result.id,
-    url: `https://www.linkedin.com/feed/update/${result.id}/`,
-    content
+    url: result.id ? `https://www.linkedin.com/feed/update/${result.id}/` : null,
+    content,
+    method: 'rest-api',
+    warning: articleUrl ? 'Posted via REST API fallback — OG preview card will NOT render. Voyager cookies needed for cards.' : undefined
   };
 }
 

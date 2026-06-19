@@ -38,6 +38,22 @@ const TOOLS = [
         reply_to: {
           type: 'string',
           description: 'Tweet ID to reply to (Twitter only). Makes this post a reply in that thread.'
+        },
+        link_url: {
+          oneOf: [
+            { type: 'string' },
+            {
+              type: 'object',
+              properties: {
+                url: { type: 'string', description: 'The article URL' },
+                title: { type: 'string', description: 'Card title (avoids relying on crawler)' },
+                description: { type: 'string', description: 'Card description' },
+                thumbnail: { type: 'string', description: 'Thumbnail image URL (must be accessible)' }
+              },
+              required: ['url']
+            }
+          ],
+          description: 'URL or {url, title, description, thumbnail} for link preview card (LinkedIn only).'
         }
       },
       required: ['platform', 'content']
@@ -415,7 +431,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         if (args.platform === 'twitter') {
           result = await postTweet(args.content, args.reply_to || null);
         } else if (args.platform === 'linkedin') {
-          result = await postLinkedIn(args.content);
+          result = await postLinkedIn(args.content, args.link_url || null);
         } else {
           throw new Error(`Unsupported platform: ${args.platform}`);
         }

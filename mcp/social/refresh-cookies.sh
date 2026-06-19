@@ -103,6 +103,10 @@ if [ "$PLATFORM" = "all" ] || [ "$PLATFORM" = "twitter" ]; then
 
   AUTH_TOKEN=$(sqlite3 "$TMP_DB" "SELECT value FROM moz_cookies WHERE (host LIKE '%x.com' OR host LIKE '%twitter.com') AND name='auth_token' ORDER BY expiry DESC LIMIT 1;")
   CT0=$(sqlite3 "$TMP_DB" "SELECT value FROM moz_cookies WHERE (host LIKE '%x.com' OR host LIKE '%twitter.com') AND name='ct0' ORDER BY expiry DESC LIMIT 1;")
+  TWID=$(sqlite3 "$TMP_DB" "SELECT value FROM moz_cookies WHERE (host LIKE '%x.com' OR host LIKE '%twitter.com') AND name='twid' ORDER BY expiry DESC LIMIT 1;")
+  GUEST_ID=$(sqlite3 "$TMP_DB" "SELECT value FROM moz_cookies WHERE (host LIKE '%x.com' OR host LIKE '%twitter.com') AND name='guest_id' ORDER BY expiry DESC LIMIT 1;")
+  PERSONALIZATION_ID=$(sqlite3 "$TMP_DB" "SELECT value FROM moz_cookies WHERE (host LIKE '%x.com' OR host LIKE '%twitter.com') AND name='personalization_id' ORDER BY expiry DESC LIMIT 1;")
+  CF_CLEARANCE=$(sqlite3 "$TMP_DB" "SELECT value FROM moz_cookies WHERE (host LIKE '%x.com' OR host LIKE '%twitter.com') AND name='cf_clearance' ORDER BY expiry DESC LIMIT 1;")
 
   TW_MISSING=""
   [ -z "$AUTH_TOKEN" ] && TW_MISSING="$TW_MISSING auth_token"
@@ -115,8 +119,15 @@ if [ "$PLATFORM" = "all" ] || [ "$PLATFORM" = "twitter" ]; then
   else
     update_env "TWITTER_AUTH_TOKEN" "$AUTH_TOKEN"
     update_env "TWITTER_CSRF_TOKEN" "$CT0"
-    echo "  auth_token: ${#AUTH_TOKEN} chars"
-    echo "  ct0:        ${#CT0} chars"
+    [ -n "$TWID" ] && update_env "TWITTER_TWID" "$TWID"
+    [ -n "$GUEST_ID" ] && update_env "TWITTER_GUEST_ID" "$GUEST_ID"
+    [ -n "$PERSONALIZATION_ID" ] && update_env "TWITTER_PERSONALIZATION_ID" "$PERSONALIZATION_ID"
+    [ -n "$CF_CLEARANCE" ] && update_env "TWITTER_CF_CLEARANCE" "$CF_CLEARANCE"
+    echo "  auth_token:    ${#AUTH_TOKEN} chars"
+    echo "  ct0:           ${#CT0} chars"
+    [ -n "$TWID" ] && echo "  twid:          ${#TWID} chars"
+    [ -n "$GUEST_ID" ] && echo "  guest_id:      ${#GUEST_ID} chars"
+    [ -n "$CF_CLEARANCE" ] && echo "  cf_clearance:  ${#CF_CLEARANCE} chars"
     UPDATED=1
   fi
   echo ""

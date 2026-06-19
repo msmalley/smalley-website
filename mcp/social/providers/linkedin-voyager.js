@@ -113,6 +113,15 @@ async function voyagerMutation(path, body) {
 const REACT_QUERY_ID = process.env.LINKEDIN_REACT_QUERY_ID ||
   'voyagerSocialDashReactions.b731222600772fd42464c0fe19bd722b';
 
+const URL_PREVIEW_QUERY_ID = 'voyagerContentcreationDashUpdateUrlPreview.8bcffc41bebe79cade03f6e7740ca941';
+
+export async function warmUrlPreview(url) {
+  const encoded = encodeURIComponent(url);
+  const path = `/graphql?variables=(url:${encoded})&queryId=${URL_PREVIEW_QUERY_ID}`;
+  const result = await voyagerRequest(path);
+  return result;
+}
+
 export async function reactToContent(targetUrn, reactionType = 'LIKE') {
   const validReactions = ['LIKE', 'PRAISE', 'INTEREST', 'CURIOSITY', 'EMPATHY'];
   if (!validReactions.includes(reactionType)) {
@@ -245,5 +254,83 @@ export async function verifySession() {
     authenticated: true,
     name: `${data?.localizedFirstName || ''} ${data?.localizedLastName || ''}`.trim() || data?.data?.localizedFirstName || 'OK',
     entityUrn: data?.entityUrn || data?.data?.entityUrn || null
+  };
+}
+
+const SHARE_QUERY_ID = process.env.LINKEDIN_SHARE_QUERY_ID ||
+  'voyagerContentcreationDashShares.279996efa5064c01775d5aff003d9377';
+
+export async function voyagerPost(content, linkUrl = null) {
+  let mediaUrn = null;
+
+  if (linkUrl) {
+    const previewData = await warmUrlPreview(linkUrl);
+    mediaUrn = previewData?.included?.[0]?.metadata?.shareMediaUrn ||
+      previewData?.included?.[0]?.metadata?.backendUrn || null;
+
+    if (!mediaUrn) {
+      throw new Error(
+        `URL preview warm succeeded but no article URN returned for: ${linkUrl}\n` +
+        `LinkedIn may not be able to crawl this URL. Check OG tags are accessible.`
+      );
+    }
+  }
+
+  const post = {
+    allowedCommentersScope: 'ALL',
+    commentary: {
+      attributesV2: [],
+      text: content
+    },
+    intendedShareLifeCycleState: 'PUBLISHED',
+    origin: 'FEED',
+    visibilityDataUnion: {
+      visibilityType: 'ANYONE'
+    }
+  };
+
+  if (mediaUrn) {
+    post.media = {
+      category: 'URN_REFERENCE',
+      mediaUrn: mediaUrn,
+      originalUrl: null
+    };
+  }
+
+  const body = {
+    includeWebMetadata: true,
+    queryId: SHARE_QUERY_ID,
+    variables: { post }
+  };
+
+  const response = await voyagerMutation(
+    `/graphql?action=execute&queryId=${SHARE_QUERY_ID}`,
+    body
+  );
+
+  if (response.status === 404) {
+    throw new Error(
+      'Share queryId has rotated (LinkedIn deploys new hashes periodically).\n' +
+      'To fix: post anything in Firefox → DevTools → Network → filter "graphql" →\n' +
+      'find the request with "voyagerContentcreationDashShares" → copy the queryId value →\n' +
+      'set LINKEDIN_SHARE_QUERY_ID in .env'
+    );
+  }
+
+  if (!response.ok) {
+    const text = await response.text();
+    throw new Error(`Voyager post failed (${response.status}): ${text.substring(0, 300)}`);
+  }
+
+  const data = await response.json();
+  const shareUrn = data?.value?.data?.createContentcreationDashShares?.urn ||
+    data?.data?.data?.createContentcreationDashShares?.urn;
+
+  return {
+    success: true,
+    id: shareUrn,
+    url: shareUrn ? `https://www.linkedin.com/feed/update/${shareUrn}/` : null,
+    content,
+    method: 'voyager'
   };
 }

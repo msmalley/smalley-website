@@ -239,9 +239,6 @@ export async function trashMessages(accountHint, uids) {
   }
 }
 
-function withSignature(body) {
-  return `${body}\n\nKind regards,\n\nMark Smalley\nhttps://smalley.my`;
-}
 
 export async function replyToMessage(accountHint, uid, body, replyAll = false) {
   const account = resolveAccount(accountHint);
@@ -276,7 +273,7 @@ export async function replyToMessage(accountHint, uid, body, replyAll = false) {
     from: account.address,
     to,
     subject,
-    text: withSignature(body),
+    text: body,
     headers
   });
 
@@ -306,7 +303,7 @@ export async function sendEmail(accountHint, to, subject, body, attachments) {
     from: account.address,
     to,
     subject,
-    text: withSignature(body)
+    text: body
   };
 
   if (attachments && attachments.length > 0) {

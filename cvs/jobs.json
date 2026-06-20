@@ -553,7 +553,7 @@
         "linkedin_job_id": null,
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "visit_and_apply",
@@ -614,7 +614,7 @@
         "linkedin_job_id": "4416467019",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -663,7 +663,7 @@
         "linkedin_job_id": "4427202854",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -725,7 +725,7 @@
         "linkedin_job_id": "4427332685",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -787,7 +787,7 @@
         "linkedin_job_id": "4426302955",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -849,7 +849,7 @@
         "linkedin_job_id": "4424904932",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -903,12 +903,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/founding-engineer-cto-%C2%A3140k-%2B-equity-at-zatar-ai-at-jack-jill-4428466131",
+        "apply_url": "https://www.linkedin.com/jobs/view/founding-engineer-cto-%C2%A3140k-%2B-equity-at-zatar-ai-at-jack-jill-4428466131",
         "contact_email": null,
         "linkedin_job_id": "4428466131",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -965,12 +965,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/director-of-engineering-digital-assets-at-clearbank-4419490984",
+        "apply_url": "https://www.linkedin.com/jobs/view/director-of-engineering-digital-assets-at-clearbank-4419490984",
         "contact_email": null,
         "linkedin_job_id": "4419490984",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -1024,12 +1024,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/technical-lead-cto-%2B-equity-at-fortalis-at-jack-jill-4428712216",
+        "apply_url": "https://www.linkedin.com/jobs/view/technical-lead-cto-%2B-equity-at-fortalis-at-jack-jill-4428712216",
         "contact_email": null,
         "linkedin_job_id": "4428712216",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -1087,15 +1087,15 @@
       "channel": {
         "source": "linkedin",
         "method": "email_direct",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-engineering-fintech-at-deel-4399109246",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-engineering-fintech-at-deel-4399109246",
         "contact_email": "recruiting@deel.com",
         "linkedin_job_id": "4399109246",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
-        "action": "send_application_email",
+        "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
       }
@@ -1124,12 +1124,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-ai-software-engineering-future-cto-at-stax-deep-tech-talent-4422418169",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-ai-software-engineering-future-cto-at-stax-deep-tech-talent-4422418169",
         "contact_email": null,
         "linkedin_job_id": "4422418169",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -1186,12 +1186,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/application-support-engineer-%E2%80%94-blockchain-security-ai-automation-at-crypto-com-4419619049",
+        "apply_url": "https://www.linkedin.com/jobs/view/application-support-engineer-%E2%80%94-blockchain-security-ai-automation-at-crypto-com-4419619049",
         "contact_email": null,
         "linkedin_job_id": "4419619049",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -1248,12 +1248,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/ai-agents-solutions-architect-compliance-at-kraken-4388569635",
+        "apply_url": "https://www.linkedin.com/jobs/view/ai-agents-solutions-architect-compliance-at-kraken-4388569635",
         "contact_email": null,
         "linkedin_job_id": "4388569635",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -1310,12 +1310,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/founding-engineer-technical-lead-at-coburg-banks-4428720070",
+        "apply_url": "https://www.linkedin.com/jobs/view/founding-engineer-technical-lead-at-coburg-banks-4428720070",
         "contact_email": null,
         "linkedin_job_id": "4428720070",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -1372,12 +1372,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/founding-ai-developer-relations-at-veed-4404086766",
+        "apply_url": "https://www.linkedin.com/jobs/view/founding-ai-developer-relations-at-veed-4404086766",
         "contact_email": null,
         "linkedin_job_id": "4404086766",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -1434,12 +1434,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/director-of-data-engineering-ai-ml-at-burns-sheehan-4421802500",
+        "apply_url": "https://www.linkedin.com/jobs/view/director-of-data-engineering-ai-ml-at-burns-sheehan-4421802500",
         "contact_email": null,
         "linkedin_job_id": "4421802500",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -1495,17 +1495,17 @@
       "notes": "Cover letter drafted. PRIORITY: Apply via portal next session. URL: https://jobs.verda.com/jobs/7903387-ai-developer-advocate",
       "channel": {
         "source": "linkedin",
-        "method": "company_direct",
-        "apply_url": "https://jobs.verda.com/jobs/7903387-ai-developer-advocate",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/ai-developer-advocate-at-verda-4426968768",
         "contact_email": null,
         "linkedin_job_id": "4426968768",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
-        "action": "apply_on_company_site",
-        "notes": "Apply via Verda careers portal only. No email, no Easy Apply. GPU/PyTorch listed as competency but role is DevRel-craft focused.",
+        "action": "check_easy_apply",
+        "notes": null,
         "_fetched": true
       }
     },
@@ -1544,12 +1544,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-compliance-platform-omnis-investments-at-the-openwork-partnership-4405661543",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-compliance-platform-omnis-investments-at-the-openwork-partnership-4405661543",
         "contact_email": null,
         "linkedin_job_id": "4405661543",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -1606,12 +1606,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/crypto-product-compliance-lead-at-robinhood-4424837232",
+        "apply_url": "https://www.linkedin.com/jobs/view/crypto-product-compliance-lead-at-robinhood-4424837232",
         "contact_email": null,
         "linkedin_job_id": "4424837232",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -1662,12 +1662,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/deputy-chief-technology-officer-at-stealth-4421559653",
+        "apply_url": "https://www.linkedin.com/jobs/view/deputy-chief-technology-officer-at-stealth-4421559653",
         "contact_email": null,
         "linkedin_job_id": "4421559653",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -1724,12 +1724,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/business-analyst-dlt-blockchain-at-capgemini-4416629421",
+        "apply_url": "https://www.linkedin.com/jobs/view/business-analyst-dlt-blockchain-at-capgemini-4416629421",
         "contact_email": null,
         "linkedin_job_id": "4416629421",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -1786,12 +1786,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/cto-at-arrows-4424703705",
+        "apply_url": "https://www.linkedin.com/jobs/view/cto-at-arrows-4424703705",
         "contact_email": null,
         "linkedin_job_id": "4424703705",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -1827,12 +1827,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/chief-technology-officer-at-sanderson-4426757379",
+        "apply_url": "https://www.linkedin.com/jobs/view/chief-technology-officer-at-sanderson-4426757379",
         "contact_email": null,
         "linkedin_job_id": "4426757379",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -1888,12 +1888,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/chief-technology-officer-at-explore-group-4423630239",
+        "apply_url": "https://www.linkedin.com/jobs/view/chief-technology-officer-at-explore-group-4423630239",
         "contact_email": null,
         "linkedin_job_id": "4423630239",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -1950,12 +1950,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/chief-technology-officer-at-computappoint-4424904932",
+        "apply_url": "https://www.linkedin.com/jobs/view/chief-technology-officer-at-computappoint-4424904932",
         "contact_email": null,
         "linkedin_job_id": "4424904932",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -1986,12 +1986,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/chief-technology-officer-at-datahead-4419613354",
+        "apply_url": "https://www.linkedin.com/jobs/view/chief-technology-officer-at-datahead-4419613354",
         "contact_email": null,
         "linkedin_job_id": "4419613354",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -2048,12 +2048,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/chief-technology-officer-at-nextech-group-limited-4420454146",
+        "apply_url": "https://www.linkedin.com/jobs/view/chief-technology-officer-at-nextech-group-limited-4420454146",
         "contact_email": null,
         "linkedin_job_id": "4420454146",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -2102,12 +2102,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/chief-technology-officer-at-trg-recruitment-4426837963",
+        "apply_url": "https://www.linkedin.com/jobs/view/chief-technology-officer-at-trg-recruitment-4426837963",
         "contact_email": null,
         "linkedin_job_id": "4426837963",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -2164,12 +2164,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/chief-technology-officer-at-hamilton-barnes-%F0%9F%8C%B3-4426405681",
+        "apply_url": "https://www.linkedin.com/jobs/view/chief-technology-officer-at-hamilton-barnes-%F0%9F%8C%B3-4426405681",
         "contact_email": null,
         "linkedin_job_id": "4426405681",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -2226,12 +2226,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/chief-technology-officer-at-kaidon-ai-4429521497",
+        "apply_url": "https://www.linkedin.com/jobs/view/chief-technology-officer-at-kaidon-ai-4429521497",
         "contact_email": null,
         "linkedin_job_id": "4429521497",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -2288,16 +2288,16 @@
       "channel": {
         "source": "linkedin",
         "method": "email_direct",
-        "apply_url": "https://uk.linkedin.com/jobs/view/chief-technology-officer-national-security-safety-energy-at-atos-4374266812",
+        "apply_url": "https://www.linkedin.com/jobs/view/chief-technology-officer-national-security-safety-energy-at-atos-4374266812",
         "contact_email": "UK-Recruitment-Support@atos.net",
         "linkedin_job_id": "4374266812",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
-        "action": null,
-        "notes": "Requires UK SC clearance. National security role, not suitable.",
+        "action": "check_easy_apply",
+        "notes": null,
         "_fetched": true
       }
     },
@@ -2350,12 +2350,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/cto-co-founder-early-stage-engineer-llms-go-and-react-at-growthstage-4408235544",
+        "apply_url": "https://www.linkedin.com/jobs/view/cto-co-founder-early-stage-engineer-llms-go-and-react-at-growthstage-4408235544",
         "contact_email": null,
         "linkedin_job_id": "4408235544",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -2412,12 +2412,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/chief-technology-officer-at-recann-4419163054",
+        "apply_url": "https://www.linkedin.com/jobs/view/chief-technology-officer-at-recann-4419163054",
         "contact_email": null,
         "linkedin_job_id": "4419163054",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -2479,7 +2479,7 @@
         "linkedin_job_id": "4426692974",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -2536,12 +2536,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/developer-relations-p2p-100%25-remote-at-tether-io-4379016185",
+        "apply_url": "https://www.linkedin.com/jobs/view/developer-relations-p2p-100%25-remote-at-tether-io-4379016185",
         "contact_email": null,
         "linkedin_job_id": "4379016185",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -2603,7 +2603,7 @@
         "linkedin_job_id": "4369978726",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -2665,7 +2665,7 @@
         "linkedin_job_id": "4424793705",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -2722,12 +2722,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/vp-of-engineering-remote-at-crystal-intelligence-4415755070",
+        "apply_url": "https://www.linkedin.com/jobs/view/vp-of-engineering-remote-at-crystal-intelligence-4415755070",
         "contact_email": null,
         "linkedin_job_id": "4415755070",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -2784,12 +2784,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-engineering-at-moneybox-4424806153",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-moneybox-4424806153",
         "contact_email": null,
         "linkedin_job_id": "4424806153",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -2846,12 +2846,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-engineering-at-hackajob-4427258452",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-hackajob-4427258452",
         "contact_email": null,
         "linkedin_job_id": "4427258452",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -2907,12 +2907,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-engineering-at-signify-technology-4422012219",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-signify-technology-4422012219",
         "contact_email": null,
         "linkedin_job_id": "4422012219",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -2939,12 +2939,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-engineering-at-g-digital-4420975745",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-g-digital-4420975745",
         "contact_email": null,
         "linkedin_job_id": "4420975745",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -3001,12 +3001,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-engineering-at-canopius-group-4421875583",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-canopius-group-4421875583",
         "contact_email": null,
         "linkedin_job_id": "4421875583",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -3063,15 +3063,15 @@
       "channel": {
         "source": "linkedin",
         "method": "email_direct",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-engineering-at-drc-search-4413454467",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-drc-search-4413454467",
         "contact_email": "2133toby@drc-search.com",
         "linkedin_job_id": "4413454467",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
-        "action": "send_application_email",
+        "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
       }
@@ -3125,12 +3125,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-engineering-at-identify-solutions-4418753938",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-identify-solutions-4418753938",
         "contact_email": null,
         "linkedin_job_id": "4418753938",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -3187,12 +3187,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-engineering-at-jobgether-4428089040",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-jobgether-4428089040",
         "contact_email": null,
         "linkedin_job_id": "4428089040",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -3249,12 +3249,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-engineering-at-lightdash-4345705836",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-lightdash-4345705836",
         "contact_email": null,
         "linkedin_job_id": "4345705836",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -3311,12 +3311,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-engineering-at-xapien-4417940864",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-xapien-4417940864",
         "contact_email": null,
         "linkedin_job_id": "4417940864",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -3373,12 +3373,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-engineering-at-specsavers-4429521383",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-specsavers-4429521383",
         "contact_email": null,
         "linkedin_job_id": "4429521383",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -3429,12 +3429,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/198508-head-of-engineering-at-harnham-4425471595",
+        "apply_url": "https://www.linkedin.com/jobs/view/198508-head-of-engineering-at-harnham-4425471595",
         "contact_email": null,
         "linkedin_job_id": "4425471595",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -3491,12 +3491,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-engineering-at-the-national-college-4425302117",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-the-national-college-4425302117",
         "contact_email": null,
         "linkedin_job_id": "4425302117",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -3553,12 +3553,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-engineering-options-at-keyrock-4404465728",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-engineering-options-at-keyrock-4404465728",
         "contact_email": null,
         "linkedin_job_id": "4404465728",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -3614,16 +3614,16 @@
       "notes": "Full match. Title: 28, JD: 62. Keywords: VP Engineering startup",
       "channel": {
         "source": "linkedin",
-        "method": "easy_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-engineering-defence-start-up-london-at-oho-group-4426649329",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-engineering-defence-start-up-london-at-oho-group-4426649329",
         "contact_email": null,
         "linkedin_job_id": "4426649329",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
-        "action": "use_easy_apply",
+        "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
       }
@@ -3677,12 +3677,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-engineering-at-few-far-4406871579",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-few-far-4406871579",
         "contact_email": null,
         "linkedin_job_id": "4406871579",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -3721,12 +3721,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-engineering-at-ohme-4428708790",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-ohme-4428708790",
         "contact_email": null,
         "linkedin_job_id": "4428708790",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -3783,12 +3783,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-engineering-at-monex-europe-4414925120",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-monex-europe-4414925120",
         "contact_email": null,
         "linkedin_job_id": "4414925120",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -3845,12 +3845,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-engineering-at-ecosurety-4419695118",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-ecosurety-4419695118",
         "contact_email": null,
         "linkedin_job_id": "4419695118",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -3907,12 +3907,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-engineering-it-at-dertour-uk-4429904157",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-engineering-it-at-dertour-uk-4429904157",
         "contact_email": null,
         "linkedin_job_id": "4429904157",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -3969,12 +3969,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-engineering-at-ultra-pcs-4427345281",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-ultra-pcs-4427345281",
         "contact_email": null,
         "linkedin_job_id": "4427345281",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -4031,12 +4031,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-engineering-at-ultra-electronics-group-4427364317",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-ultra-electronics-group-4427364317",
         "contact_email": null,
         "linkedin_job_id": "4427364317",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -4093,15 +4093,15 @@
       "channel": {
         "source": "linkedin",
         "method": "email_direct",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-engineering-at-element-materials-technology-4403427191",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-element-materials-technology-4403427191",
         "contact_email": "Recruitment@element.com",
         "linkedin_job_id": "4403427191",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
-        "action": "send_application_email",
+        "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
       }
@@ -4155,12 +4155,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-engineering-at-deep-sea-electronics-ltd-4403720275",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-deep-sea-electronics-ltd-4403720275",
         "contact_email": null,
         "linkedin_job_id": "4403720275",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -4217,12 +4217,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-engineering-risk-management-bbc-at-emcor-uk-4420197707",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-engineering-risk-management-bbc-at-emcor-uk-4420197707",
         "contact_email": null,
         "linkedin_job_id": "4420197707",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -4275,16 +4275,16 @@
       "notes": "Full match. Title: 28, JD: 49. Keywords: VP Engineering remote",
       "channel": {
         "source": "linkedin",
-        "method": "easy_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/lead-engineer-head-of-engineering-at-nixor-4423107726",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/lead-engineer-head-of-engineering-at-nixor-4423107726",
         "contact_email": null,
         "linkedin_job_id": "4423107726",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
-        "action": "use_easy_apply",
+        "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
       }
@@ -4338,12 +4338,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-engineering-productivity-experience-at-alphasense-4391554290",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-engineering-productivity-experience-at-alphasense-4391554290",
         "contact_email": null,
         "linkedin_job_id": "4391554290",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -4397,16 +4397,16 @@
       "notes": "Full match. Title: 28, JD: 53. Keywords: Head of Engineering compliance",
       "channel": {
         "source": "linkedin",
-        "method": "easy_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-engineering-projects-at-leonardo-4427565138",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-engineering-projects-at-leonardo-4427565138",
         "contact_email": null,
         "linkedin_job_id": "4427565138",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
-        "action": "use_easy_apply",
+        "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
       }
@@ -4454,12 +4454,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-engineering-innovation-sustainability-maritime-transport-at-james-fisher-and-sons-plc-4417841516",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-engineering-innovation-sustainability-maritime-transport-at-james-fisher-and-sons-plc-4417841516",
         "contact_email": null,
         "linkedin_job_id": "4417841516",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -4486,12 +4486,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-engineering-%E2%80%93-structural-at-brannigans-4420411054",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-engineering-%E2%80%93-structural-at-brannigans-4420411054",
         "contact_email": null,
         "linkedin_job_id": "4420411054",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -4548,12 +4548,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/engineering-director-uk-hybrid-%2B-remote-multiple-roles-at-cleo-4272105891",
+        "apply_url": "https://www.linkedin.com/jobs/view/engineering-director-uk-hybrid-%2B-remote-multiple-roles-at-cleo-4272105891",
         "contact_email": null,
         "linkedin_job_id": "4272105891",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -4610,12 +4610,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/product-solutions-architect-%E2%80%93-portfolio-management-trading-compliance-at-simcorp-4419860538",
+        "apply_url": "https://www.linkedin.com/jobs/view/product-solutions-architect-%E2%80%93-portfolio-management-trading-compliance-at-simcorp-4419860538",
         "contact_email": null,
         "linkedin_job_id": "4419860538",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -4672,12 +4672,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/founding-devrel-lead-at-kraken-4423984553",
+        "apply_url": "https://www.linkedin.com/jobs/view/founding-devrel-lead-at-kraken-4423984553",
         "contact_email": null,
         "linkedin_job_id": "4423984553",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -4734,12 +4734,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/director-of-developer-relations-at-ripple-4357691463",
+        "apply_url": "https://www.linkedin.com/jobs/view/director-of-developer-relations-at-ripple-4357691463",
         "contact_email": null,
         "linkedin_job_id": "4357691463",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -4796,12 +4796,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/developer-relations-engineer-at-nscale-4405256854",
+        "apply_url": "https://www.linkedin.com/jobs/view/developer-relations-engineer-at-nscale-4405256854",
         "contact_email": null,
         "linkedin_job_id": "4405256854",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -4858,12 +4858,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/developer-relations-engineer-at-tailscale-4412805962",
+        "apply_url": "https://www.linkedin.com/jobs/view/developer-relations-engineer-at-tailscale-4412805962",
         "contact_email": null,
         "linkedin_job_id": "4412805962",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -4920,12 +4920,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/developer-relations-manager-artificial-intelligence-at-nvidia-4395473461",
+        "apply_url": "https://www.linkedin.com/jobs/view/developer-relations-manager-artificial-intelligence-at-nvidia-4395473461",
         "contact_email": null,
         "linkedin_job_id": "4395473461",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -4982,12 +4982,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/senior-developer-relations-manager-%E2%80%93-capital-markets-at-nvidia-4405067163",
+        "apply_url": "https://www.linkedin.com/jobs/view/senior-developer-relations-manager-%E2%80%93-capital-markets-at-nvidia-4405067163",
         "contact_email": null,
         "linkedin_job_id": "4405067163",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -5044,12 +5044,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/vp-of-engineering-navigation-at-mapbox-4412416237",
+        "apply_url": "https://www.linkedin.com/jobs/view/vp-of-engineering-navigation-at-mapbox-4412416237",
         "contact_email": null,
         "linkedin_job_id": "4412416237",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -5106,12 +5106,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/vp-engineering-at-rowden-4418103594",
+        "apply_url": "https://www.linkedin.com/jobs/view/vp-engineering-at-rowden-4418103594",
         "contact_email": null,
         "linkedin_job_id": "4418103594",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -5168,12 +5168,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/vp-of-engineering-at-eir-business-talent-4424369356",
+        "apply_url": "https://www.linkedin.com/jobs/view/vp-of-engineering-at-eir-business-talent-4424369356",
         "contact_email": null,
         "linkedin_job_id": "4424369356",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -5228,12 +5228,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/staff-engineer-ai-a16z-remote-at-vero-4416639327",
+        "apply_url": "https://www.linkedin.com/jobs/view/staff-engineer-ai-a16z-remote-at-vero-4416639327",
         "contact_email": null,
         "linkedin_job_id": "4416639327",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -5290,12 +5290,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/vice-president-of-engineering-at-albert-bow-4427342809",
+        "apply_url": "https://www.linkedin.com/jobs/view/vice-president-of-engineering-at-albert-bow-4427342809",
         "contact_email": null,
         "linkedin_job_id": "4427342809",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -5352,16 +5352,16 @@
       "channel": {
         "source": "linkedin",
         "method": "email_direct",
-        "apply_url": "https://uk.linkedin.com/jobs/view/vice-president-of-engineering-at-viva-tech-talent-4418140651",
+        "apply_url": "https://www.linkedin.com/jobs/view/vice-president-of-engineering-at-viva-tech-talent-4418140651",
         "contact_email": "orla@vivatechtalent.com",
         "linkedin_job_id": "4418140651",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
-        "action": "cold_outreach",
-        "notes": "Belfast role not viable, but recruiter contact (orla@vivatechtalent.com) useful for other opportunities",
+        "action": "check_easy_apply",
+        "notes": null,
         "_fetched": true
       }
     },
@@ -5419,7 +5419,7 @@
         "linkedin_job_id": "4417959343",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -5476,12 +5476,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/director-of-engineering-payments-at-clearbank-4422963238",
+        "apply_url": "https://www.linkedin.com/jobs/view/director-of-engineering-payments-at-clearbank-4422963238",
         "contact_email": null,
         "linkedin_job_id": "4422963238",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -5538,12 +5538,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/engineering-director-global-treasury-and-payment-network-relocate-to-singapore-at-airwallex-4246062783",
+        "apply_url": "https://www.linkedin.com/jobs/view/engineering-director-global-treasury-and-payment-network-relocate-to-singapore-at-airwallex-4246062783",
         "contact_email": null,
         "linkedin_job_id": "4246062783",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -5583,12 +5583,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/director-of-engineering-at-numi-4426078548",
+        "apply_url": "https://www.linkedin.com/jobs/view/director-of-engineering-at-numi-4426078548",
         "contact_email": null,
         "linkedin_job_id": "4426078548",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -5624,12 +5624,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/director-of-engineering-at-identify-solutions-4419601994",
+        "apply_url": "https://www.linkedin.com/jobs/view/director-of-engineering-at-identify-solutions-4419601994",
         "contact_email": null,
         "linkedin_job_id": "4419601994",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -5682,12 +5682,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/director-of-engineering-at-wheely-4419297841",
+        "apply_url": "https://www.linkedin.com/jobs/view/director-of-engineering-at-wheely-4419297841",
         "contact_email": null,
         "linkedin_job_id": "4419297841",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -5744,12 +5744,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/director-of-engineering-digital-products-at-ford-credit-4420985185",
+        "apply_url": "https://www.linkedin.com/jobs/view/director-of-engineering-digital-products-at-ford-credit-4420985185",
         "contact_email": null,
         "linkedin_job_id": "4420985185",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -5790,12 +5790,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/group-engineering-director-at-oleo-international-4428858809",
+        "apply_url": "https://www.linkedin.com/jobs/view/group-engineering-director-at-oleo-international-4428858809",
         "contact_email": null,
         "linkedin_job_id": "4428858809",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -5852,12 +5852,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/platform-software-engineering-director-at-hackajob-4423987617",
+        "apply_url": "https://www.linkedin.com/jobs/view/platform-software-engineering-director-at-hackajob-4423987617",
         "contact_email": null,
         "linkedin_job_id": "4423987617",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -5914,12 +5914,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/platform-software-engineering-director-at-totalmobile-ltd-4424231462",
+        "apply_url": "https://www.linkedin.com/jobs/view/platform-software-engineering-director-at-totalmobile-ltd-4424231462",
         "contact_email": null,
         "linkedin_job_id": "4424231462",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -5976,12 +5976,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/associate-director-civil-engineering-aviation-at-tetra-tech-europe-4425842410",
+        "apply_url": "https://www.linkedin.com/jobs/view/associate-director-civil-engineering-aviation-at-tetra-tech-europe-4425842410",
         "contact_email": null,
         "linkedin_job_id": "4425842410",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -6043,7 +6043,7 @@
         "linkedin_job_id": "4427909520",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -6105,7 +6105,7 @@
         "linkedin_job_id": "4425418195",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -6167,7 +6167,7 @@
         "linkedin_job_id": "4426982583",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -6229,7 +6229,7 @@
         "linkedin_job_id": "4401504975",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -6291,7 +6291,7 @@
         "linkedin_job_id": "4420673083",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -6352,12 +6352,12 @@
         "contact_email": "talent@pantheon.io",
         "linkedin_job_id": "4427329947",
         "freshness": {
-          "status": "expired",
-          "days_old": 2,
+          "status": "fresh",
+          "days_old": 3,
           "added": "2026-06-17"
         },
-        "action": "send_speculative_email",
-        "notes": "LinkedIn listing closed but direct email available - worth a speculative application",
+        "action": "check_easy_apply",
+        "notes": null,
         "_fetched": true
       }
     },
@@ -6415,7 +6415,7 @@
         "linkedin_job_id": "4391861486",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -6477,7 +6477,7 @@
         "linkedin_job_id": "4422016886",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -6521,7 +6521,7 @@
         "linkedin_job_id": "4421209886",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -6578,12 +6578,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/director-of-engineering-at-aj-bell-4423145295",
+        "apply_url": "https://www.linkedin.com/jobs/view/director-of-engineering-at-aj-bell-4423145295",
         "contact_email": null,
         "linkedin_job_id": "4423145295",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -6640,12 +6640,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/engineering-director-emea-at-anord-mardix-4418579858",
+        "apply_url": "https://www.linkedin.com/jobs/view/engineering-director-emea-at-anord-mardix-4418579858",
         "contact_email": null,
         "linkedin_job_id": "4418579858",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -6702,12 +6702,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/director-of-engineering-at-hackajob-4426978502",
+        "apply_url": "https://www.linkedin.com/jobs/view/director-of-engineering-at-hackajob-4426978502",
         "contact_email": null,
         "linkedin_job_id": "4426978502",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -6745,12 +6745,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/engineering-director-at-united-living-group-4387263797",
+        "apply_url": "https://www.linkedin.com/jobs/view/engineering-director-at-united-living-group-4387263797",
         "contact_email": null,
         "linkedin_job_id": "4387263797",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -6806,16 +6806,16 @@
       "notes": "Full match. Title: 24, JD: 41. Keywords: Engineering Director",
       "channel": {
         "source": "linkedin",
-        "method": "easy_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/director-of-engineering-at-inspired-4426099195",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/director-of-engineering-at-inspired-4426099195",
         "contact_email": null,
         "linkedin_job_id": "4426099195",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
-        "action": "use_easy_apply",
+        "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
       }
@@ -6869,12 +6869,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/director-of-engineering-at-primer-4421864484",
+        "apply_url": "https://www.linkedin.com/jobs/view/director-of-engineering-at-primer-4421864484",
         "contact_email": null,
         "linkedin_job_id": "4421864484",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -6931,12 +6931,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/engineering-director-security-at-monzo-4413878450",
+        "apply_url": "https://www.linkedin.com/jobs/view/engineering-director-security-at-monzo-4413878450",
         "contact_email": null,
         "linkedin_job_id": "4413878450",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -6993,15 +6993,15 @@
       "channel": {
         "source": "linkedin",
         "method": "email_direct",
-        "apply_url": "https://uk.linkedin.com/jobs/view/engineering-director-at-arbor-education-4429942486",
+        "apply_url": "https://www.linkedin.com/jobs/view/engineering-director-at-arbor-education-4429942486",
         "contact_email": "careers@arbor-education.com",
         "linkedin_job_id": "4429942486",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
-        "action": "send_application_email",
+        "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
       }
@@ -7055,12 +7055,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/developer-advocate-at-paddle-4388458356",
+        "apply_url": "https://www.linkedin.com/jobs/view/developer-advocate-at-paddle-4388458356",
         "contact_email": null,
         "linkedin_job_id": "4388458356",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -7117,12 +7117,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/developer-advocate-at-jfrog-4424097654",
+        "apply_url": "https://www.linkedin.com/jobs/view/developer-advocate-at-jfrog-4424097654",
         "contact_email": null,
         "linkedin_job_id": "4424097654",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -7179,12 +7179,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/developer-advocate-at-tessl-4426503985",
+        "apply_url": "https://www.linkedin.com/jobs/view/developer-advocate-at-tessl-4426503985",
         "contact_email": null,
         "linkedin_job_id": "4426503985",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -7232,12 +7232,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/director-of-engineering-london-site-lead-at-waymo-4402759228",
+        "apply_url": "https://www.linkedin.com/jobs/view/director-of-engineering-london-site-lead-at-waymo-4402759228",
         "contact_email": null,
         "linkedin_job_id": "4402759228",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -7294,12 +7294,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/director-of-engineering-at-iss-facility-services-uk-4419876841",
+        "apply_url": "https://www.linkedin.com/jobs/view/director-of-engineering-at-iss-facility-services-uk-4419876841",
         "contact_email": null,
         "linkedin_job_id": "4419876841",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -7356,12 +7356,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/director-of-fire-engineering-at-orange-appointments-ltd-4418746736",
+        "apply_url": "https://www.linkedin.com/jobs/view/director-of-fire-engineering-at-orange-appointments-ltd-4418746736",
         "contact_email": null,
         "linkedin_job_id": "4418746736",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -7418,12 +7418,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/director-of-engineering-at-liberty-it-4427927411",
+        "apply_url": "https://www.linkedin.com/jobs/view/director-of-engineering-at-liberty-it-4427927411",
         "contact_email": null,
         "linkedin_job_id": "4427927411",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -7480,12 +7480,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/regional-director-fire-engineering-at-aecom-4426152033",
+        "apply_url": "https://www.linkedin.com/jobs/view/regional-director-fire-engineering-at-aecom-4426152033",
         "contact_email": null,
         "linkedin_job_id": "4426152033",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -7542,12 +7542,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/director-of-engineering-at-addition-4419011854",
+        "apply_url": "https://www.linkedin.com/jobs/view/director-of-engineering-at-addition-4419011854",
         "contact_email": null,
         "linkedin_job_id": "4419011854",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -7604,12 +7604,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/director-of-engineering-customer-data-foundation-at-the-lego-group-4427349863",
+        "apply_url": "https://www.linkedin.com/jobs/view/director-of-engineering-customer-data-foundation-at-the-lego-group-4427349863",
         "contact_email": null,
         "linkedin_job_id": "4427349863",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -7666,12 +7666,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/site-engineering-director-at-ds-smith-4362029065",
+        "apply_url": "https://www.linkedin.com/jobs/view/site-engineering-director-at-ds-smith-4362029065",
         "contact_email": null,
         "linkedin_job_id": "4362029065",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -7728,12 +7728,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/director-software-engineering-at-cirium-4424561946",
+        "apply_url": "https://www.linkedin.com/jobs/view/director-software-engineering-at-cirium-4424561946",
         "contact_email": null,
         "linkedin_job_id": "4424561946",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -7790,12 +7790,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/engineering-director-specialty-travel-at-navan-4411837114",
+        "apply_url": "https://www.linkedin.com/jobs/view/engineering-director-specialty-travel-at-navan-4411837114",
         "contact_email": null,
         "linkedin_job_id": "4411837114",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -7852,12 +7852,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/senior-engineering-manager-compliance-at-malt-4409375237",
+        "apply_url": "https://www.linkedin.com/jobs/view/senior-engineering-manager-compliance-at-malt-4409375237",
         "contact_email": null,
         "linkedin_job_id": "4409375237",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -7914,12 +7914,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/associate-director-%E2%80%93-ai-systems-architect-at-kubrick-group-4422794939",
+        "apply_url": "https://www.linkedin.com/jobs/view/associate-director-%E2%80%93-ai-systems-architect-at-kubrick-group-4422794939",
         "contact_email": null,
         "linkedin_job_id": "4422794939",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -7976,12 +7976,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/founding-engineer-at-share-4419890035",
+        "apply_url": "https://www.linkedin.com/jobs/view/founding-engineer-at-share-4419890035",
         "contact_email": null,
         "linkedin_job_id": "4419890035",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -8034,12 +8034,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/founding-engineer-at-neulinx-4417076865",
+        "apply_url": "https://www.linkedin.com/jobs/view/founding-engineer-at-neulinx-4417076865",
         "contact_email": null,
         "linkedin_job_id": "4417076865",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -8096,12 +8096,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/founding-engineer-at-healf-4428864220",
+        "apply_url": "https://www.linkedin.com/jobs/view/founding-engineer-at-healf-4428864220",
         "contact_email": null,
         "linkedin_job_id": "4428864220",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -8158,16 +8158,16 @@
       "channel": {
         "source": "linkedin",
         "method": "email_direct",
-        "apply_url": "https://uk.linkedin.com/jobs/view/founding-engineer-at-higher-ai-recruitment-4399345045",
+        "apply_url": "https://www.linkedin.com/jobs/view/founding-engineer-at-higher-ai-recruitment-4399345045",
         "contact_email": "kelly@highersearch.co",
         "linkedin_job_id": "4399345045",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
-        "action": "cold_outreach",
-        "notes": "This specific role requires Python, but recruiter (kelly@highersearch.co) places AI/eng roles - worth intro",
+        "action": "check_easy_apply",
+        "notes": null,
         "_fetched": true
       }
     },
@@ -8216,12 +8216,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/founding-engineer-stealth-seed-%C2%A3140-000-%2B-equity-at-limitless-4417498817",
+        "apply_url": "https://www.linkedin.com/jobs/view/founding-engineer-stealth-seed-%C2%A3140-000-%2B-equity-at-limitless-4417498817",
         "contact_email": null,
         "linkedin_job_id": "4417498817",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -8278,12 +8278,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/founding-engineer-product-at-station-f-4428419196",
+        "apply_url": "https://www.linkedin.com/jobs/view/founding-engineer-product-at-station-f-4428419196",
         "contact_email": null,
         "linkedin_job_id": "4428419196",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -8340,12 +8340,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/founding-engineer-at-greenworkx-4430100265",
+        "apply_url": "https://www.linkedin.com/jobs/view/founding-engineer-at-greenworkx-4430100265",
         "contact_email": null,
         "linkedin_job_id": "4430100265",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -8402,12 +8402,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/technical-director-pump-centre-at-arcadis-4400840177",
+        "apply_url": "https://www.linkedin.com/jobs/view/technical-director-pump-centre-at-arcadis-4400840177",
         "contact_email": null,
         "linkedin_job_id": "4400840177",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -8464,12 +8464,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/associate-technical-director-%E2%80%93-design-and-construction-safety-at-arcadis-4351014891",
+        "apply_url": "https://www.linkedin.com/jobs/view/associate-technical-director-%E2%80%93-design-and-construction-safety-at-arcadis-4351014891",
         "contact_email": null,
         "linkedin_job_id": "4351014891",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -8526,12 +8526,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/asset-management-technical-director-at-arcadis-4411989860",
+        "apply_url": "https://www.linkedin.com/jobs/view/asset-management-technical-director-at-arcadis-4411989860",
         "contact_email": null,
         "linkedin_job_id": "4411989860",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -8567,12 +8567,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/technical-director-liveable-places-at-wsp-in-the-uk-ireland-4377105115",
+        "apply_url": "https://www.linkedin.com/jobs/view/technical-director-liveable-places-at-wsp-in-the-uk-ireland-4377105115",
         "contact_email": null,
         "linkedin_job_id": "4377105115",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -8629,12 +8629,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/technical-director-roads-at-wsp-in-the-uk-ireland-4418170085",
+        "apply_url": "https://www.linkedin.com/jobs/view/technical-director-roads-at-wsp-in-the-uk-ireland-4418170085",
         "contact_email": null,
         "linkedin_job_id": "4418170085",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -8691,12 +8691,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/associate-director-technical-director-policy-regulation-and-markets-energy-at-wsp-in-the-uk-ireland-4418170083",
+        "apply_url": "https://www.linkedin.com/jobs/view/associate-director-technical-director-policy-regulation-and-markets-energy-at-wsp-in-the-uk-ireland-4418170083",
         "contact_email": null,
         "linkedin_job_id": "4418170083",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -8753,12 +8753,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/technical-director-hydrology-lead-at-wsp-in-the-uk-ireland-4405279675",
+        "apply_url": "https://www.linkedin.com/jobs/view/technical-director-hydrology-lead-at-wsp-in-the-uk-ireland-4405279675",
         "contact_email": null,
         "linkedin_job_id": "4405279675",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -8815,12 +8815,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/development-planning-technical-director-director-development-at-wsp-in-the-uk-ireland-4368398222",
+        "apply_url": "https://www.linkedin.com/jobs/view/development-planning-technical-director-director-development-at-wsp-in-the-uk-ireland-4368398222",
         "contact_email": null,
         "linkedin_job_id": "4368398222",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -8873,12 +8873,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/technical-director-infrastructure-planning-at-wsp-in-the-uk-ireland-4410547924",
+        "apply_url": "https://www.linkedin.com/jobs/view/technical-director-infrastructure-planning-at-wsp-in-the-uk-ireland-4410547924",
         "contact_email": null,
         "linkedin_job_id": "4410547924",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -8935,12 +8935,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/technical-director-eia-water-at-wsp-in-the-uk-ireland-4379270387",
+        "apply_url": "https://www.linkedin.com/jobs/view/technical-director-eia-water-at-wsp-in-the-uk-ireland-4379270387",
         "contact_email": null,
         "linkedin_job_id": "4379270387",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -8993,12 +8993,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/technical-director-town-planning-infrastructure-planning-at-wsp-in-the-uk-ireland-4414566766",
+        "apply_url": "https://www.linkedin.com/jobs/view/technical-director-town-planning-infrastructure-planning-at-wsp-in-the-uk-ireland-4414566766",
         "contact_email": null,
         "linkedin_job_id": "4414566766",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -9053,12 +9053,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/technical-director-strategic-environmental-assessment-water-at-wsp-in-the-uk-ireland-4377875295",
+        "apply_url": "https://www.linkedin.com/jobs/view/technical-director-strategic-environmental-assessment-water-at-wsp-in-the-uk-ireland-4377875295",
         "contact_email": null,
         "linkedin_job_id": "4377875295",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -9115,12 +9115,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/technical-director-structures-energy-at-wsp-in-the-uk-ireland-4398032378",
+        "apply_url": "https://www.linkedin.com/jobs/view/technical-director-structures-energy-at-wsp-in-the-uk-ireland-4398032378",
         "contact_email": null,
         "linkedin_job_id": "4398032378",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -9177,12 +9177,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/technical-director-%E2%80%93-coastal-engineering-at-ramboll-4416949340",
+        "apply_url": "https://www.linkedin.com/jobs/view/technical-director-%E2%80%93-coastal-engineering-at-ramboll-4416949340",
         "contact_email": null,
         "linkedin_job_id": "4416949340",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -9239,12 +9239,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/group-technical-director-at-mm-flowers-4418164266",
+        "apply_url": "https://www.linkedin.com/jobs/view/group-technical-director-at-mm-flowers-4418164266",
         "contact_email": null,
         "linkedin_job_id": "4418164266",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -9301,12 +9301,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/technical-director-acoustics-and-vibration-at-slr-consulting-4415064618",
+        "apply_url": "https://www.linkedin.com/jobs/view/technical-director-acoustics-and-vibration-at-slr-consulting-4415064618",
         "contact_email": null,
         "linkedin_job_id": "4415064618",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -9363,12 +9363,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/associate-technical-director-asset-management-water-amp8-at-arcadis-4380275458",
+        "apply_url": "https://www.linkedin.com/jobs/view/associate-technical-director-asset-management-water-amp8-at-arcadis-4380275458",
         "contact_email": null,
         "linkedin_job_id": "4380275458",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -9425,12 +9425,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/blockchain-smart-contract-security-vice-president-at-state-street-4422458041",
+        "apply_url": "https://www.linkedin.com/jobs/view/blockchain-smart-contract-security-vice-president-at-state-street-4422458041",
         "contact_email": null,
         "linkedin_job_id": "4422458041",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -9487,12 +9487,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-platform-engineering-at-socode-recruitment-4415370294",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-platform-engineering-at-socode-recruitment-4415370294",
         "contact_email": null,
         "linkedin_job_id": "4415370294",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -9549,12 +9549,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-platform-engineering-automation-gammalabs-at-gamma-4426405695",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-platform-engineering-automation-gammalabs-at-gamma-4426405695",
         "contact_email": null,
         "linkedin_job_id": "4426405695",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -9611,12 +9611,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-product-security-%E2%80%93-ciso-function-bpl-at-barclays-4422750577",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-product-security-%E2%80%93-ciso-function-bpl-at-barclays-4422750577",
         "contact_email": null,
         "linkedin_job_id": "4422750577",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -9673,12 +9673,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-head-of-developer-platform-engineering-cloud-platform-at-intelix-ai-4410826134",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-head-of-developer-platform-engineering-cloud-platform-at-intelix-ai-4410826134",
         "contact_email": null,
         "linkedin_job_id": "4410826134",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -9733,12 +9733,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-product-vp-level-at-aj-exec-4418091576",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-product-vp-level-at-aj-exec-4418091576",
         "contact_email": null,
         "linkedin_job_id": "4418091576",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -9795,12 +9795,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/senior-software-engineer-blockchain-at-1inch-4416585067",
+        "apply_url": "https://www.linkedin.com/jobs/view/senior-software-engineer-blockchain-at-1inch-4416585067",
         "contact_email": null,
         "linkedin_job_id": "4416585067",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -9857,12 +9857,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/talent-pool-software-engineer-blockchain-web3-at-1inch-4419066183",
+        "apply_url": "https://www.linkedin.com/jobs/view/talent-pool-software-engineer-blockchain-web3-at-1inch-4419066183",
         "contact_email": null,
         "linkedin_job_id": "4419066183",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -9919,12 +9919,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/senior-lead-engineer-post-trade-blockchain-at-lseg-4371311645",
+        "apply_url": "https://www.linkedin.com/jobs/view/senior-lead-engineer-post-trade-blockchain-at-lseg-4371311645",
         "contact_email": null,
         "linkedin_job_id": "4371311645",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -9974,12 +9974,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-product-engineering-at-burns-sheehan-4420432878",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-product-engineering-at-burns-sheehan-4420432878",
         "contact_email": null,
         "linkedin_job_id": "4420432878",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -10036,12 +10036,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/uk-head-of-clinical-product%E2%80%94-hybrid-%C2%A385k-%C2%A3150k-yr-inc-equity-at-aios-4414236313",
+        "apply_url": "https://www.linkedin.com/jobs/view/uk-head-of-clinical-product%E2%80%94-hybrid-%C2%A385k-%C2%A3150k-yr-inc-equity-at-aios-4414236313",
         "contact_email": null,
         "linkedin_job_id": "4414236313",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -10090,12 +10090,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-product-engineering-at-humara-4417743832",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-product-engineering-at-humara-4417743832",
         "contact_email": null,
         "linkedin_job_id": "4417743832",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -10152,12 +10152,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/group-head-of-product-and-technology-at-nord-anglia-education-4424416962",
+        "apply_url": "https://www.linkedin.com/jobs/view/group-head-of-product-and-technology-at-nord-anglia-education-4424416962",
         "contact_email": null,
         "linkedin_job_id": "4424416962",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -10214,12 +10214,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-institutional-product-at-smart-bricks-4423519856",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-institutional-product-at-smart-bricks-4423519856",
         "contact_email": null,
         "linkedin_job_id": "4423519856",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -10276,12 +10276,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-product-at-jd-sports-fashion-4419811940",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-product-at-jd-sports-fashion-4419811940",
         "contact_email": null,
         "linkedin_job_id": "4419811940",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -10332,12 +10332,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/group-head-of-digital-product-at-blackfinch-group-4422025403",
+        "apply_url": "https://www.linkedin.com/jobs/view/group-head-of-digital-product-at-blackfinch-group-4422025403",
         "contact_email": null,
         "linkedin_job_id": "4422025403",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -10394,12 +10394,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-product-fraud-at-revolut-4296081636",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-product-fraud-at-revolut-4296081636",
         "contact_email": null,
         "linkedin_job_id": "4296081636",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -10456,12 +10456,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-product-data-at-selfridges-4421849461",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-product-data-at-selfridges-4421849461",
         "contact_email": null,
         "linkedin_job_id": "4421849461",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -10515,12 +10515,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-product-payments-at-cleo-4429908193",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-product-payments-at-cleo-4429908193",
         "contact_email": null,
         "linkedin_job_id": "4429908193",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -10576,12 +10576,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-product-ftc-maternity-cover-at-lumon-4416896498",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-product-ftc-maternity-cover-at-lumon-4416896498",
         "contact_email": null,
         "linkedin_job_id": "4416896498",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -10638,12 +10638,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-product-at-tomia-4426304458",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-product-at-tomia-4426304458",
         "contact_email": null,
         "linkedin_job_id": "4426304458",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -10700,12 +10700,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-product-gtm-at-paymentology-4423504178",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-product-gtm-at-paymentology-4423504178",
         "contact_email": null,
         "linkedin_job_id": "4423504178",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -10762,12 +10762,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-product-development-public-markets-at-aviva-investors-4414705634",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-product-development-public-markets-at-aviva-investors-4414705634",
         "contact_email": null,
         "linkedin_job_id": "4414705634",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -10817,12 +10817,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-product-agentic-offerings-at-commercetools-4429248183",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-product-agentic-offerings-at-commercetools-4429248183",
         "contact_email": null,
         "linkedin_job_id": "4429248183",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -10872,12 +10872,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-product-%E2%80%93-agentic-offerings-at-commercetools-4429525887",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-product-%E2%80%93-agentic-offerings-at-commercetools-4429525887",
         "contact_email": null,
         "linkedin_job_id": "4429525887",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -10934,15 +10934,15 @@
       "channel": {
         "source": "linkedin",
         "method": "email_direct",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-natural-product-development-at-keracol-4424714731",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-natural-product-development-at-keracol-4424714731",
         "contact_email": "r.s.blackburn@keracol.co.uk",
         "linkedin_job_id": "4424714731",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
-        "action": "send_application_email",
+        "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
       }
@@ -10996,12 +10996,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-product-at-intelligent-people-4419276991",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-product-at-intelligent-people-4419276991",
         "contact_email": null,
         "linkedin_job_id": "4419276991",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -11057,16 +11057,16 @@
       "notes": "Full match. Title: 20, JD: 76. Keywords: Developer Advocate blockchain",
       "channel": {
         "source": "linkedin",
-        "method": "easy_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/solutions-engineer-crypto-blockchain-at-iopa-solutions-4424222076",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/solutions-engineer-crypto-blockchain-at-iopa-solutions-4424222076",
         "contact_email": null,
         "linkedin_job_id": "4424222076",
         "freshness": {
-          "status": "expired",
-          "days_old": 2,
+          "status": "fresh",
+          "days_old": 3,
           "added": "2026-06-17"
         },
-        "action": "use_easy_apply",
+        "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
       }
@@ -11120,12 +11120,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-research-platform-engineering-at-orbis-group-4428898050",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-research-platform-engineering-at-orbis-group-4428898050",
         "contact_email": null,
         "linkedin_job_id": "4428898050",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -11182,12 +11182,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-product-regulatory-finance-at-wolt-4382476310",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-product-regulatory-finance-at-wolt-4382476310",
         "contact_email": null,
         "linkedin_job_id": "4382476310",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -11244,12 +11244,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-ai-compliance-cx-at-revolut-4382446514",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-ai-compliance-cx-at-revolut-4382446514",
         "contact_email": null,
         "linkedin_job_id": "4382446514",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -11306,12 +11306,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/ai-transformation-lead-compliance-vn2586-at-marex-4425682350",
+        "apply_url": "https://www.linkedin.com/jobs/view/ai-transformation-lead-compliance-vn2586-at-marex-4425682350",
         "contact_email": null,
         "linkedin_job_id": "4425682350",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -11368,12 +11368,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/data-and-ai-governance-technical-lead-at-res-4427696633",
+        "apply_url": "https://www.linkedin.com/jobs/view/data-and-ai-governance-technical-lead-at-res-4427696633",
         "contact_email": null,
         "linkedin_job_id": "4427696633",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -11430,12 +11430,12 @@
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
-        "apply_url": "https://uk.linkedin.com/jobs/view/head-of-ai-compliance-cx-at-hackajob-4419156627",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-ai-compliance-cx-at-hackajob-4419156627",
         "contact_email": null,
         "linkedin_job_id": "4419156627",
         "freshness": {
           "status": "fresh",
-          "days_old": 2,
+          "days_old": 3,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -11463,7 +11463,7 @@
         "linkedin_job_id": "4422407624",
         "freshness": {
           "status": "fresh",
-          "days_old": 0,
+          "days_old": 1,
           "added": "2026-06-19"
         },
         "action": "check_easy_apply",
@@ -11491,7 +11491,7 @@
         "linkedin_job_id": "4423500853",
         "freshness": {
           "status": "fresh",
-          "days_old": 0,
+          "days_old": 1,
           "added": "2026-06-19"
         },
         "action": "check_easy_apply",
@@ -11519,7 +11519,7 @@
         "linkedin_job_id": "4429001899",
         "freshness": {
           "status": "fresh",
-          "days_old": 0,
+          "days_old": 1,
           "added": "2026-06-19"
         },
         "action": "check_easy_apply",
@@ -11547,13 +11547,117 @@
         "linkedin_job_id": "4430430246",
         "freshness": {
           "status": "fresh",
-          "days_old": 0,
+          "days_old": 1,
           "added": "2026-06-19"
         },
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
       }
+    },
+    {
+      "id": "ripple-senior-manager-software-eng-mqlxqnxw",
+      "added": "2026-06-20",
+      "status": "new",
+      "company": "Ripple",
+      "role": "Senior Manager, Software Engineering",
+      "location": "London, England, United Kingdom",
+      "variant": "cto",
+      "url": "https://www.linkedin.com/jobs/view/4417198243/",
+      "channel": {
+        "source": "unknown",
+        "method": null,
+        "apply_url": null,
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-06-20"
+        },
+        "action": null,
+        "notes": null,
+        "_fetched": true
+      },
+      "score": 59
+    },
+    {
+      "id": "bullish-lead-engineer-custody-mqlxqnxw",
+      "added": "2026-06-20",
+      "status": "new",
+      "company": "Bullish",
+      "role": "Lead Engineer, Custody Engineering (Tokenization)",
+      "location": "London Area, United Kingdom",
+      "variant": "cto",
+      "url": "https://www.linkedin.com/jobs/view/4429217037/",
+      "channel": {
+        "source": "unknown",
+        "method": null,
+        "apply_url": null,
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-06-20"
+        },
+        "action": null,
+        "notes": null,
+        "_fetched": true
+      },
+      "score": 66
+    },
+    {
+      "id": "amex-vp-onchain-products-mqlxqnxw",
+      "added": "2026-06-20",
+      "status": "new",
+      "company": "American Express",
+      "role": "Vice President, Onchain Products",
+      "location": "London, England, United Kingdom",
+      "variant": "cto",
+      "url": "https://www.linkedin.com/jobs/view/4429351312/",
+      "channel": {
+        "source": "unknown",
+        "method": null,
+        "apply_url": null,
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-06-20"
+        },
+        "action": null,
+        "notes": null,
+        "_fetched": true
+      },
+      "score": 56
+    },
+    {
+      "id": "kraken-ai-agents-architect-finance-mqlxqnxw",
+      "added": "2026-06-20",
+      "status": "new",
+      "company": "Kraken",
+      "role": "AI Agents Solutions Architect - Finance",
+      "location": "London, England, United Kingdom",
+      "variant": "cto",
+      "url": "https://www.linkedin.com/jobs/view/4390706698/",
+      "channel": {
+        "source": "unknown",
+        "method": null,
+        "apply_url": null,
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-06-20"
+        },
+        "action": null,
+        "notes": null,
+        "_fetched": true
+      },
+      "score": 64
     }
   ]
 }

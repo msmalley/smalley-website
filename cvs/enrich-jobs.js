@@ -371,6 +371,8 @@ async function checkLiveness(options = {}) {
   return { active, closed };
 }
 
+if (require.main === module) {
+
 const command = process.argv[2];
 
 switch (command) {
@@ -458,6 +460,8 @@ switch (command) {
   node enrich-jobs.js emails             List jobs with contact emails
   node enrich-jobs.js actionable [min]   List actionable jobs by score (default min: 50)
 `);
+}
+
 }
 
 module.exports = { classifyAll, fetchAndEnrich, summary, findByEmail, findActionable, enrichFromDescription };

@@ -16,7 +16,7 @@
       "instagram": {
         "audience": "visual/creative, game devs, broader reach",
         "tone": "visual-first, behind-the-scenes, product showcase",
-        "status": "planned \u2014 awaiting API/MCP integration"
+        "status": "planned — awaiting API/MCP integration"
       }
     },
     "content_triggers": [
@@ -28,7 +28,7 @@
       "Meaningful technical achievement across any project",
       "CV update or new portfolio case study added"
     ],
-    "workflow": "Claude appends posts (status: draft) during sessions when content triggers fire. Mark reviews and approves before posting. Posts track their full lifecycle: draft \u2192 ready \u2192 posted (with URL, date, and future metrics).",
+    "workflow": "Claude appends posts (status: draft) during sessions when content triggers fire. Mark reviews and approves before posting. Posts track their full lifecycle: draft → ready → posted (with URL, date, and future metrics).",
     "post_types": {
       "post": "Original top-level post or thread",
       "reply": "Reply to an existing post. Uses parent field to resolve tweet ID. Parent can be a pipeline post ID (resolved to that post's URL/tweet ID) or a raw tweet ID for external tweets."
@@ -100,9 +100,9 @@
       "sequence": 1,
       "metrics": {
         "likes": 18,
-        "comments": 7,
+        "comments": 10,
         "shares": 0,
-        "impressions": 613,
+        "impressions": 642,
         "reactions": {
           "LIKE": 14,
           "EMPATHY": 3,
@@ -112,9 +112,16 @@
           {
             "author": "Mark Smalley",
             "subtitle": "FinTech Enthusiast & Technology Evangelist",
-            "text": "Touch\u00e9 \u2014 who do you think is replying right now?",
+            "text": "Touché — who do you think is replying right now?",
             "created": 1781783837869,
             "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473013369512411136%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473343078305792000%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473013369512411136%2Curn%3Ali%3Aactivity%3A7473002063375990784%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287473343078305792000%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
+          },
+          {
+            "author": "Mark Smalley",
+            "subtitle": "FinTech Enthusiast & Technology Evangelist",
+            "text": "Yeah, back in West Yorkshire since last year. Still adjusting to the weather after nearly 30 years in Malaysia.",
+            "created": 1781935031759,
+            "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473009376979759105%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473977231443259392%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473009376979759105%2Curn%3Ali%3Aactivity%3A7473002063375990784%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287473977231443259392%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
           },
           {
             "author": "richard abas",
@@ -126,7 +133,7 @@
           {
             "author": "Harinder Singh",
             "subtitle": "Growth/GTM Lead | I build and deploy monetizable GTM & funnel systems | Founder, MIMR Growth Lab",
-            "text": "Put a chatbot on your CV bro \ud83d\ude02 I can show you how I do mine if you wanna see ",
+            "text": "Put a chatbot on your CV bro 😂 I can show you how I do mine if you wanna see ",
             "created": 1781705229167,
             "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473013369512411136%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473013369512411136%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
           },
@@ -138,9 +145,23 @@
             "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473254607591374849%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473254607591374849%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
           },
           {
+            "author": "Mark Smalley",
+            "subtitle": "FinTech Enthusiast & Technology Evangelist",
+            "text": "One for chess variants and one for hex-based strategy. Have a look: https://moddable.games/engines/ — the architecture ended up being more interesting than the games themselves and both have interesting roadmaps ahead of them.",
+            "created": 1781935030812,
+            "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473254607591374849%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473977227475488768%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473254607591374849%2Curn%3Ali%3Aactivity%3A7473002063375990784%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287473977227475488768%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
+          },
+          {
+            "author": "richard abas",
+            "subtitle": "founder, geotude.com",
+            "text": "welcome home",
+            "created": 1781965664959,
+            "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473568425811025920%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7474105716400783360%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473568425811025920%2Curn%3Ali%3Aactivity%3A7473002063375990784%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287474105716400783360%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
+          },
+          {
             "author": "Daniel Yap",
             "subtitle": "Founder and COO - ProxifAI",
-            "text": "Mark Smalley\u00a0Kiera and Kyra (did I get that right) must be very grown up now. ",
+            "text": "Mark Smalley Kiera and Kyra (did I get that right) must be very grown up now. ",
             "created": 1781785463880,
             "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473009376979759105%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473349898289971200%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473009376979759105%2Curn%3Ali%3Aactivity%3A7473002063375990784%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287473349898289971200%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
           },
@@ -152,10 +173,10 @@
             "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473009376979759105%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473009376979759105%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
           }
         ],
-        "last_checked": "2026-06-20T05:42:07.430Z"
+        "last_checked": "2026-06-20T17:16:54.338Z"
       },
       "pending_replies": [],
-      "notes": "First post after long silence. Combines comeback with MCP meta-demonstration. No ask, no role signal \u2014 just presence and proof."
+      "notes": "First post after long silence. Combines comeback with MCP meta-demonstration. No ask, no role signal — just presence and proof."
     },
     {
       "id": "16-days-twitter",
@@ -167,7 +188,7 @@
       "platforms": [
         "twitter"
       ],
-      "content": "535 commits. 16 days. Two game engines, twenty games, 16 AI-callable tools, Consumer SDKs, and a documentation site. All shipped to production.\n\nHow architecture decisions made that possible. \ud83e\uddf5\n\n2/ The chess engine plays 70 variants. Every variant is a single plugin file. The hex framework generates seeded procedural maps \u2014 same seed, same map, every time. Both ship Consumer SDKs. Dungeon Chess runs entirely on the chess engine's APIs. Zero engine forks.\n\n3/ The same pure functions that power the browser games power 16 MCP tools on a Cloudflare Worker. Any AI agent connects with one command. No translation layer. No separate API. The embeddable architecture made them AI-callable for free.\n\n4/ 16 days to build. 14 more to make it professional. Every correction becomes a rule. Every rule gets encoded into the environment. That environment now governs every project. The content pipeline that sent this post runs on the same infrastructure.\n\n5/ Architecture decisions compound. The system that makes every subsequent build faster is the actual product worth talking about ...\n\nhttps://smalley.my/thoughts/16-days-one-ecosystem/",
+      "content": "535 commits. 16 days. Two game engines, twenty games, 16 AI-callable tools, Consumer SDKs, and a documentation site. All shipped to production.\n\nHow architecture decisions made that possible. 🧵\n\n2/ The chess engine plays 70 variants. Every variant is a single plugin file. The hex framework generates seeded procedural maps — same seed, same map, every time. Both ship Consumer SDKs. Dungeon Chess runs entirely on the chess engine's APIs. Zero engine forks.\n\n3/ The same pure functions that power the browser games power 16 MCP tools on a Cloudflare Worker. Any AI agent connects with one command. No translation layer. No separate API. The embeddable architecture made them AI-callable for free.\n\n4/ 16 days to build. 14 more to make it professional. Every correction becomes a rule. Every rule gets encoded into the environment. That environment now governs every project. The content pipeline that sent this post runs on the same infrastructure.\n\n5/ Architecture decisions compound. The system that makes every subsequent build faster is the actual product worth talking about ...\n\nhttps://smalley.my/thoughts/16-days-one-ecosystem/",
       "format": "thread",
       "angle": "Raw numbers, architecture decisions, pipeline self-reference",
       "sequence": 2,
@@ -232,12 +253,12 @@
         "likes": 2,
         "comments": 0,
         "shares": 0,
-        "impressions": 210,
+        "impressions": 242,
         "reactions": {
           "LIKE": 2
         },
         "commentsList": [],
-        "last_checked": "2026-06-20T05:46:07.102Z"
+        "last_checked": "2026-06-20T17:16:55.527Z"
       },
       "notes": "Follow-up to comeback posts. Explains the process teased in the comeback. Positions engineering approach."
     },
@@ -263,11 +284,11 @@
       "platforms": [
         "twitter"
       ],
-      "content": "Four protocols. Nine years. One design philosophy.\n\nWhat I learned designing systems that other people actually adopted. \ud83e\uddf5\n\n2/ Everstore (2016): structured database functionality on Bitcoin using 38 bytes of OP_RETURN and HD key derivation. Before Ethereum's EVM. Before SegWit. Before Taproot.\n\nThe 38-byte ceiling forced the design. Constraints aren't limitations. They're architecture.\n\n3/ DN-Key (2016): publish your cryptographic public keys as DNS TXT records. Verification is a DNS lookup. That's it.\n\nBorrowed trust from infrastructure people already believed in. Adopted by regulated institutions because compliance teams understood it in one meeting.\n\n4/ SADO (2023): trustless Ordinals trading via PSBTs. No custody. No intermediary. The protocol is the transaction format itself.\n\nOrdzaar adopted it because it was the only option that didn't require trust. Adoption as a technical decision, not a business negotiation.\n\n5/ DN-Key was cited by name in the Securities Commission Malaysia's capital markets blueprint. Nine years later, the same protocol powers passkey-native identity across Bitcoin, EVM, and Solana via Oviato. No modifications required.\n\nIf the architecture is sound and the platform isn't ready, you're early, not wrong.\n\n6/ The thread: design for constraints. Borrow existing trust. Keep the chain dumb. Accept that timing matters.\n\nhttps://smalley.my/thoughts/protocol-design-lessons/",
+      "content": "Four protocols. Nine years. One design philosophy.\n\nWhat I learned designing systems that other people actually adopted. 🧵\n\n2/ Everstore (2016): structured database functionality on Bitcoin using 38 bytes of OP_RETURN and HD key derivation. Before Ethereum's EVM. Before SegWit. Before Taproot.\n\nThe 38-byte ceiling forced the design. Constraints aren't limitations. They're architecture.\n\n3/ DN-Key (2016): publish your cryptographic public keys as DNS TXT records. Verification is a DNS lookup. That's it.\n\nBorrowed trust from infrastructure people already believed in. Adopted by regulated institutions because compliance teams understood it in one meeting.\n\n4/ SADO (2023): trustless Ordinals trading via PSBTs. No custody. No intermediary. The protocol is the transaction format itself.\n\nOrdzaar adopted it because it was the only option that didn't require trust. Adoption as a technical decision, not a business negotiation.\n\n5/ DN-Key was cited by name in the Securities Commission Malaysia's capital markets blueprint. Nine years later, the same protocol powers passkey-native identity across Bitcoin, EVM, and Solana via Oviato. No modifications required.\n\nIf the architecture is sound and the platform isn't ready, you're early, not wrong.\n\n6/ The thread: design for constraints. Borrow existing trust. Keep the chain dumb. Accept that timing matters.\n\nhttps://smalley.my/thoughts/protocol-design-lessons/",
       "format": "thread",
       "angle": "One lesson per protocol, constraint-driven design philosophy",
       "sequence": 4,
-      "notes": "Backdated trigger \u2014 article already live. Strong crypto/protocol audience content."
+      "notes": "Backdated trigger — article already live. Strong crypto/protocol audience content."
     },
     {
       "id": "protocol-linkedin",
@@ -281,7 +302,7 @@
       "chars": 780,
       "angle": "DN-Key arc as institutional credibility signal, longevity of simple design",
       "sequence": 4,
-      "notes": "LinkedIn gets DN-Key story specifically \u2014 regulator citation, institutional adoption, nine-year arc. Strongest signal for hiring managers."
+      "notes": "LinkedIn gets DN-Key story specifically — regulator citation, institutional adoption, nine-year arc. Strongest signal for hiring managers."
     },
     {
       "id": "moddable-chess-release",

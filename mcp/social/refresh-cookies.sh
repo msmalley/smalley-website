@@ -60,25 +60,48 @@ if [ "$PLATFORM" = "all" ] || [ "$PLATFORM" = "linkedin" ]; then
   BCOOKIE=$(echo "$BCOOKIE" | sed 's/^"//;s/"$//')
   LIDC=$(echo "$LIDC" | sed 's/^"//;s/"$//')
 
+  # JSESSIONID is a session-only cookie (no expiry) so Firefox stores it in
+  # memory, not cookies.sqlite. If li_at exists, fetch JSESSIONID via curl.
+  if [ -z "$JSESSIONID" ] && [ -n "$LI_AT" ]; then
+    echo "  JSESSIONID not in cookie DB (session-only), fetching via li_at..."
+    JSESSIONID=$(curl -sI -b "li_at=$LI_AT" "https://www.linkedin.com/voyager/api/me" 2>/dev/null \
+      | grep -i 'set-cookie.*JSESSIONID' \
+      | sed 's/.*JSESSIONID=//;s/;.*//' \
+      | sed 's/^"//;s/"$//;s/^ajax://')
+    if [ -z "$JSESSIONID" ]; then
+      # Fallback: extract from response headers of a simple page load
+      JSESSIONID=$(curl -sI -b "li_at=$LI_AT" -L "https://www.linkedin.com/feed/" 2>/dev/null \
+        | grep -i 'set-cookie.*JSESSIONID' \
+        | sed 's/.*JSESSIONID=//;s/;.*//' \
+        | sed 's/^"//;s/"$//;s/^ajax://')
+    fi
+    [ -n "$JSESSIONID" ] && echo "  JSESSIONID fetched successfully"
+  fi
+
   LI_MISSING=""
   [ -z "$LI_AT" ] && LI_MISSING="$LI_MISSING li_at"
   [ -z "$JSESSIONID" ] && LI_MISSING="$LI_MISSING JSESSIONID"
   [ -z "$LIDC" ] && LI_MISSING="$LI_MISSING lidc"
   [ -z "$BCOOKIE" ] && LI_MISSING="$LI_MISSING bcookie"
 
-  if [ -n "$LI_MISSING" ]; then
-    echo "  Missing:$LI_MISSING"
+  # lidc and bcookie are optional for Voyager — only li_at + JSESSIONID are required
+  if [ -z "$LI_AT" ]; then
+    echo "  Missing: li_at"
     echo "  → Log into linkedin.com in Firefox first"
+    FAILED=1
+  elif [ -z "$JSESSIONID" ]; then
+    echo "  Missing: JSESSIONID (could not fetch)"
+    echo "  → Try visiting linkedin.com/feed/ in Firefox, then retry"
     FAILED=1
   else
     update_env "LINKEDIN_LI_AT" "$LI_AT"
     update_env "LINKEDIN_JSESSIONID" "$JSESSIONID"
-    update_env "LINKEDIN_LIDC" "$LIDC"
-    update_env "LINKEDIN_BCOOKIE" "$BCOOKIE"
+    [ -n "$LIDC" ] && update_env "LINKEDIN_LIDC" "$LIDC"
+    [ -n "$BCOOKIE" ] && update_env "LINKEDIN_BCOOKIE" "$BCOOKIE"
     echo "  li_at:      ${#LI_AT} chars"
     echo "  JSESSIONID: $JSESSIONID"
-    echo "  lidc:       ${#LIDC} chars"
-    echo "  bcookie:    ${#BCOOKIE} chars"
+    [ -n "$LIDC" ] && echo "  lidc:       ${#LIDC} chars"
+    [ -n "$BCOOKIE" ] && echo "  bcookie:    ${#BCOOKIE} chars"
     UPDATED=1
   fi
 

@@ -503,7 +503,7 @@
     {
       "id": "alemx-head-of-engineering-mqibkfp4",
       "added": "2026-06-17",
-      "status": "matched",
+      "status": "rejected",
       "company": "Alemx",
       "role": "Head of Engineering",
       "location": "Remote",
@@ -544,7 +544,7 @@
       ],
       "source_url": "https://crypto.jobs/jobs/head-of-engineering-at-alemx",
       "cover_letter": null,
-      "notes": "",
+      "notes": " [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "crypto.jobs",
         "method": "direct_url",
@@ -563,7 +563,7 @@
     {
       "id": "symphony-symphony-cto-cloud9-mqidx835",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Symphony",
       "role": "Symphony CTO Cloud9",
       "location": "Remote, UK",
@@ -605,7 +605,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/4416467019/",
       "cover_letter": null,
-      "notes": "Re-scored with full JD match",
+      "notes": "Not found on LinkedIn. Likely expired or delisted.",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -625,7 +625,7 @@
     {
       "id": "ewor-ewor-fintech-cto-mqidx86k",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "EWOR",
       "role": "EWOR Fintech CTO",
       "location": "UK",
@@ -654,7 +654,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/4427202854/",
       "cover_letter": null,
-      "notes": "Re-scored with full JD match",
+      "notes": "Re-scored with full JD match [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -674,7 +674,7 @@
     {
       "id": "bifrost-studios-bifrost-studios-gm-mqidx89y",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Bifrost Studios",
       "role": "Bifrost Studios GM",
       "location": "UK",
@@ -716,7 +716,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/4427332685/",
       "cover_letter": null,
-      "notes": "Re-scored with full JD match",
+      "notes": "Re-scored with full JD match [Rejected: wrong industry, wrong function, or unviable]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -736,7 +736,7 @@
     {
       "id": "sanderson-king-sanderson-king-cto-mqidx8de",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Sanderson King",
       "role": "Sanderson King CTO",
       "location": "UK",
@@ -778,7 +778,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/4426302955/",
       "cover_letter": null,
-      "notes": "Re-scored with full JD match",
+      "notes": "Re-scored with full JD match [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -800,8 +800,8 @@
       "added": "2026-06-17",
       "status": "new",
       "company": "Computappoint",
-      "role": "Computappoint CTO",
-      "location": "UK",
+      "role": "Chief Technology Officer",
+      "location": "London Area, United Kingdom",
       "variant": "cto",
       "score": 79,
       "requirements_found": 32,
@@ -855,12 +855,14 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "linkedin_job_id": "4424904932",
+      "url": "https://www.linkedin.com/jobs/view/4424904932"
     },
     {
       "id": "jack-jill-founding-engineer-cto-140k-equ-mqifnmdw",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Jack & Jill",
       "role": "Founding Engineer / CTO (£140k + Equity) at ZATAR AI",
       "location": "London, England, United Kingdom",
@@ -899,7 +901,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/founding-engineer-cto-%C2%A3140k-%2B-equity-at-zatar-ai-at-jack-jill-4428466131",
       "cover_letter": null,
-      "notes": "Full match. Title: 60, JD: 52. Keywords: Head of AI engineering",
+      "notes": "Full match. Title: 60, JD: 52. Keywords: Head of AI engineering [Closed: not found on LinkedIn search, likely expired]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -976,12 +978,14 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "linkedin_job_id": "4419490984",
+      "url": "https://www.linkedin.com/jobs/view/4419490984"
     },
     {
       "id": "jack-jill-technical-lead-cto-equity-at-f-mqifnqph",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Jack & Jill",
       "role": "Technical Lead/CTO (+ Equity) at Fortalis",
       "location": "London, England, United Kingdom",
@@ -1020,7 +1024,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/technical-lead-cto-%2B-equity-at-fortalis-at-jack-jill-4428712216",
       "cover_letter": null,
-      "notes": "Full match. Title: 42, JD: 52. Keywords: CTO startup",
+      "notes": "Full match. Title: 42, JD: 52. Keywords: CTO startup [Rejected: wrong industry, wrong function, or unviable]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -1103,7 +1107,7 @@
     {
       "id": "stax-deep-tech-talent-head-of-ai-softwar-mqifnv9y",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Stax - Deep Tech Talent",
       "role": "Head of AI & Software Engineering (Future CTO)",
       "location": "United Kingdom",
@@ -1120,7 +1124,7 @@
       "proof_points": [],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-ai-software-engineering-future-cto-at-stax-deep-tech-talent-4422418169",
       "cover_letter": null,
-      "notes": "Full match. Title: 38, JD: 0. Keywords: Head of Engineering startup",
+      "notes": "Full match. Title: 38, JD: 0. Keywords: Head of Engineering startup [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -1202,7 +1206,7 @@
     {
       "id": "kraken-ai-agents-solutions-architect-com-mqifnzpr",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Kraken",
       "role": "AI Agents Solutions Architect - Compliance",
       "location": "London, England, United Kingdom",
@@ -1244,7 +1248,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/ai-agents-solutions-architect-compliance-at-kraken-4388569635",
       "cover_letter": null,
-      "notes": "Full match. Title: 35, JD: 81. Keywords: compliance technology blockchain",
+      "notes": "Not found on LinkedIn UK. Only US HR variant exists.",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -1321,12 +1325,14 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "linkedin_job_id": "4428720070",
+      "url": "https://www.linkedin.com/jobs/view/4428720070"
     },
     {
       "id": "veed-founding-ai-developer-relations-mqifo49a",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "VEED",
       "role": "(Founding) AI Developer Relations",
       "location": "London Area, United Kingdom",
@@ -1368,7 +1374,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/founding-ai-developer-relations-at-veed-4404086766",
       "cover_letter": null,
-      "notes": "Full match. Title: 34, JD: 61. Keywords: Head of Developer Relations",
+      "notes": "Full match. Title: 34, JD: 61. Keywords: Head of Developer Relations [Closed: not found on LinkedIn search, likely expired]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -1388,7 +1394,7 @@
     {
       "id": "burns-sheehan-director-of-data-engineeri-mqifo6hr",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Burns Sheehan",
       "role": "Director of Data Engineering (AI/ML)",
       "location": "Manchester Area, United Kingdom",
@@ -1430,7 +1436,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/director-of-data-engineering-ai-ml-at-burns-sheehan-4421802500",
       "cover_letter": null,
-      "notes": "Full match. Title: 32, JD: 68. Keywords: Head of Engineering fintech",
+      "notes": "Full match. Title: 32, JD: 68. Keywords: Head of Engineering fintech [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -1512,7 +1518,7 @@
     {
       "id": "the-openwork-partnership-head-of-complia-mqifoavc",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "The Openwork Partnership",
       "role": "Head of Compliance (Platform) - Omnis Investments",
       "location": "London, England, United Kingdom",
@@ -1540,7 +1546,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-compliance-platform-omnis-investments-at-the-openwork-partnership-4405661543",
       "cover_letter": null,
-      "notes": "Full match. Title: 32, JD: 34. Keywords: Head of Compliance fintech",
+      "notes": "Full match. Title: 32, JD: 34. Keywords: Head of Compliance fintech [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -1617,12 +1623,14 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "linkedin_job_id": "4424837232",
+      "url": "https://www.linkedin.com/jobs/view/4424837232"
     },
     {
       "id": "stealth-deputy-chief-technology-officer-mqifofav",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Stealth",
       "role": "Deputy Chief Technology Officer",
       "location": "Greater London, England, United Kingdom",
@@ -1658,7 +1666,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/deputy-chief-technology-officer-at-stealth-4421559653",
       "cover_letter": null,
-      "notes": "Full match. Title: 30, JD: 70. Keywords: CTO blockchain",
+      "notes": "Full match. Title: 30, JD: 70. Keywords: CTO blockchain [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -1740,7 +1748,7 @@
     {
       "id": "arrows-cto-mqifojny",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Arrows",
       "role": "CTO",
       "location": "London, England, United Kingdom",
@@ -1782,7 +1790,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/cto-at-arrows-4424703705",
       "cover_letter": null,
-      "notes": "Full match. Title: 30, JD: 79. Keywords: CTO fintech",
+      "notes": "Full match. Title: 30, JD: 79. Keywords: CTO fintech [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -1802,7 +1810,7 @@
     {
       "id": "sanderson-chief-technology-officer-mqifolwq",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Sanderson",
       "role": "Chief Technology Officer",
       "location": "Manchester Area, United Kingdom",
@@ -1823,7 +1831,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/chief-technology-officer-at-sanderson-4426757379",
       "cover_letter": null,
-      "notes": "Full match. Title: 30, JD: 18. Keywords: CTO digital assets",
+      "notes": "Full match. Title: 30, JD: 18. Keywords: CTO digital assets [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -1899,12 +1907,14 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "linkedin_job_id": "4423630239",
+      "url": "https://www.linkedin.com/jobs/view/4423630239"
     },
     {
       "id": "computappoint-chief-technology-officer-mqifoqg8",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Computappoint",
       "role": "Chief Technology Officer",
       "location": "London Area, United Kingdom",
@@ -1946,7 +1956,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/chief-technology-officer-at-computappoint-4424904932",
       "cover_letter": null,
-      "notes": "Full match. Title: 30, JD: 79. Keywords: CTO digital assets",
+      "notes": "Full match. Title: 30, JD: 79. Keywords: CTO digital assets [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -1966,7 +1976,7 @@
     {
       "id": "datahead-chief-technology-officer-mqifosp4",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "DATAHEAD",
       "role": "Chief Technology Officer",
       "location": "London Area, United Kingdom",
@@ -1982,7 +1992,7 @@
       "proof_points": [],
       "source_url": "https://www.linkedin.com/jobs/view/chief-technology-officer-at-datahead-4419613354",
       "cover_letter": null,
-      "notes": "Full match. Title: 30, JD: 0. Keywords: CTO digital assets",
+      "notes": "Full match. Title: 30, JD: 0. Keywords: CTO digital assets [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -2059,12 +2069,14 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "linkedin_job_id": "4420454146",
+      "url": "https://www.linkedin.com/jobs/view/4420454146"
     },
     {
       "id": "trg-recruitment-chief-technology-officer-mqifox4q",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "trg.recruitment",
       "role": "Chief Technology Officer",
       "location": "United Kingdom",
@@ -2098,7 +2110,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/chief-technology-officer-at-trg-recruitment-4426837963",
       "cover_letter": null,
-      "notes": "Full match. Title: 30, JD: 52. Keywords: CTO digital assets",
+      "notes": "Full match. Title: 30, JD: 52. Keywords: CTO digital assets [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -2118,7 +2130,7 @@
     {
       "id": "hamilton-barnes-chief-technology-officer-mqifozbh",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Hamilton Barnes 🌳",
       "role": "Chief Technology Officer",
       "location": "London Area, United Kingdom",
@@ -2160,7 +2172,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/chief-technology-officer-at-hamilton-barnes-%F0%9F%8C%B3-4426405681",
       "cover_letter": null,
-      "notes": "Full match. Title: 30, JD: 75. Keywords: CTO digital assets",
+      "notes": "Full match. Title: 30, JD: 75. Keywords: CTO digital assets [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -2180,7 +2192,7 @@
     {
       "id": "kaidon-ai-chief-technology-officer-mqifp1lw",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Kaidon.ai",
       "role": "Chief Technology Officer",
       "location": "Greater Bristol Area, United Kingdom",
@@ -2222,7 +2234,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/chief-technology-officer-at-kaidon-ai-4429521497",
       "cover_letter": null,
-      "notes": "Full match. Title: 30, JD: 65. Keywords: CTO digital assets",
+      "notes": "Full match. Title: 30, JD: 65. Keywords: CTO digital assets [Closed: not found on LinkedIn search, likely expired]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -2304,7 +2316,7 @@
     {
       "id": "growthstage-cto-co-founder-early-stage-e-mqifp61n",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "GrowthStage",
       "role": "CTO // Co-Founder // Early Stage Engineer (LLMs, Go and React)",
       "location": "London Area, United Kingdom",
@@ -2346,7 +2358,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/cto-co-founder-early-stage-engineer-llms-go-and-react-at-growthstage-4408235544",
       "cover_letter": null,
-      "notes": "Full match. Title: 30, JD: 78. Keywords: CTO startup",
+      "notes": "Full match. Title: 30, JD: 78. Keywords: CTO startup [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -2423,12 +2435,14 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "linkedin_job_id": "4419163054",
+      "url": "https://www.linkedin.com/jobs/view/4419163054"
     },
     {
       "id": "alvarez-marsal-director-pepi-technology--mqifpajs",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Alvarez & Marsal",
       "role": "Director, PEPI - Technology Services CTO Domain",
       "location": "Chicago, IL",
@@ -2470,7 +2484,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/director-pepi-technology-services-cto-domain-at-alvarez-marsal-4426692974",
       "cover_letter": null,
-      "notes": "Full match. Title: 30, JD: 78. Keywords: CTO",
+      "notes": "Full match. Title: 30, JD: 78. Keywords: CTO [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -2490,7 +2504,7 @@
     {
       "id": "tether-io-developer-relations-p2p-100-re-mqifpcs9",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Tether.io",
       "role": "Developer Relations P2P (100% remote)",
       "location": "United Kingdom",
@@ -2532,7 +2546,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/developer-relations-p2p-100%25-remote-at-tether-io-4379016185",
       "cover_letter": null,
-      "notes": "Full match. Title: 29, JD: 80. Keywords: Developer Relations blockchain",
+      "notes": "Not found on LinkedIn UK search. Likely expired or US-only.",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -2614,7 +2628,7 @@
     {
       "id": "caterpillar-inc-principal-digital-archit-mqifphbo",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Caterpillar Inc.",
       "role": "Principal Digital Architect (Autonomy)",
       "location": "Chicago, IL",
@@ -2656,7 +2670,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/principal-digital-architect-autonomy-at-caterpillar-inc-4424793705",
       "cover_letter": null,
-      "notes": "Full match. Title: 29, JD: 79. Keywords: CTO",
+      "notes": "Full match. Title: 29, JD: 79. Keywords: CTO [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -2676,7 +2690,7 @@
     {
       "id": "crystal-intelligence-vp-of-engineering-r-mqifpjj2",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Crystal Intelligence",
       "role": "VP of Engineering (Remote)",
       "location": "London, England, United Kingdom",
@@ -2718,7 +2732,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/vp-of-engineering-remote-at-crystal-intelligence-4415755070",
       "cover_letter": null,
-      "notes": "Full match. Title: 28, JD: 80. Keywords: CTO blockchain",
+      "notes": "US-only (NY/Austin/SF/Miami). Not UK.",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -2738,7 +2752,7 @@
     {
       "id": "moneybox-head-of-engineering-mqifpls7",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Moneybox",
       "role": "Head of Engineering",
       "location": "Harrow, England, United Kingdom",
@@ -2780,7 +2794,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-moneybox-4424806153",
       "cover_letter": null,
-      "notes": "Full match. Title: 28, JD: 79. Keywords: CTO fintech",
+      "notes": "Full match. Title: 28, JD: 79. Keywords: CTO fintech [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -2800,7 +2814,7 @@
     {
       "id": "hackajob-head-of-engineering-mqifpo00",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "hackajob",
       "role": "Head of Engineering",
       "location": "London, England, United Kingdom",
@@ -2842,7 +2856,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-hackajob-4427258452",
       "cover_letter": null,
-      "notes": "Full match. Title: 28, JD: 80. Keywords: Head of Engineering fintech",
+      "notes": "Aggregator platform - redirects to external portal. Cannot apply via LinkedIn.",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -2862,7 +2876,7 @@
     {
       "id": "signify-technology-head-of-engineering-mqifpq78",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Signify Technology",
       "role": "Head of Engineering",
       "location": "London, England, United Kingdom",
@@ -2903,7 +2917,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-signify-technology-4422012219",
       "cover_letter": null,
-      "notes": "Full match. Title: 28, JD: 54. Keywords: Head of Engineering fintech",
+      "notes": "Full match. Title: 28, JD: 54. Keywords: Head of Engineering fintech [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -2923,7 +2937,7 @@
     {
       "id": "g-digital-head-of-engineering-mqifpsec",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "G.Digital",
       "role": "Head of Engineering",
       "location": "Leeds, England, United Kingdom",
@@ -2935,7 +2949,7 @@
       "proof_points": [],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-g-digital-4420975745",
       "cover_letter": null,
-      "notes": "Full match. Title: 28, JD: 0. Keywords: Head of Engineering fintech",
+      "notes": "Full match. Title: 28, JD: 0. Keywords: Head of Engineering fintech [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -2955,7 +2969,7 @@
     {
       "id": "canopius-group-head-of-engineering-mqifpuly",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Canopius Group",
       "role": "Head of Engineering",
       "location": "Manchester, England, United Kingdom",
@@ -2997,7 +3011,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-canopius-group-4421875583",
       "cover_letter": null,
-      "notes": "Full match. Title: 28, JD: 75. Keywords: Head of Engineering fintech",
+      "notes": "Full match. Title: 28, JD: 75. Keywords: Head of Engineering fintech [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -3079,7 +3093,7 @@
     {
       "id": "identify-solutions-head-of-engineering-mqifpz5b",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Identify Solutions",
       "role": "Head of Engineering",
       "location": "London Area, United Kingdom",
@@ -3121,7 +3135,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-identify-solutions-4418753938",
       "cover_letter": null,
-      "notes": "Full match. Title: 28, JD: 78. Keywords: Head of Engineering startup",
+      "notes": "Full match. Title: 28, JD: 78. Keywords: Head of Engineering startup [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -3198,12 +3212,14 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "linkedin_job_id": "4428089040",
+      "url": "https://www.linkedin.com/jobs/view/4428089040"
     },
     {
       "id": "lightdash-head-of-engineering-mqifq3hy",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Lightdash",
       "role": "Head of Engineering",
       "location": "London Area, United Kingdom",
@@ -3245,7 +3261,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-lightdash-4345705836",
       "cover_letter": null,
-      "notes": "Full match. Title: 28, JD: 78. Keywords: Head of Engineering startup",
+      "notes": "Full match. Title: 28, JD: 78. Keywords: Head of Engineering startup [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -3265,7 +3281,7 @@
     {
       "id": "xapien-head-of-engineering-mqifq5qo",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Xapien",
       "role": "Head of Engineering",
       "location": "London Area, United Kingdom",
@@ -3307,7 +3323,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-xapien-4417940864",
       "cover_letter": null,
-      "notes": "Full match. Title: 28, JD: 78. Keywords: Head of Engineering startup",
+      "notes": "Full match. Title: 28, JD: 78. Keywords: Head of Engineering startup [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -3327,7 +3343,7 @@
     {
       "id": "specsavers-head-of-engineering-mqifq7x0",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Specsavers",
       "role": "Head of Engineering",
       "location": "United Kingdom",
@@ -3369,7 +3385,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-specsavers-4429521383",
       "cover_letter": null,
-      "notes": "Full match. Title: 28, JD: 74. Keywords: Head of Engineering startup",
+      "notes": "Full match. Title: 28, JD: 74. Keywords: Head of Engineering startup [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -3389,7 +3405,7 @@
     {
       "id": "harnham-198508-head-of-engineering-mqifqa47",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Harnham",
       "role": "(198508) Head of Engineering",
       "location": "London Area, United Kingdom",
@@ -3425,7 +3441,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/198508-head-of-engineering-at-harnham-4425471595",
       "cover_letter": null,
-      "notes": "Full match. Title: 28, JD: 70. Keywords: Head of Engineering startup",
+      "notes": "Full match. Title: 28, JD: 70. Keywords: Head of Engineering startup [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -3445,7 +3461,7 @@
     {
       "id": "the-national-college-head-of-engineering-mqifqcbe",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "The National College",
       "role": "Head of Engineering",
       "location": "Sheffield, England, United Kingdom",
@@ -3487,7 +3503,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-the-national-college-4425302117",
       "cover_letter": null,
-      "notes": "Full match. Title: 28, JD: 78. Keywords: Head of Engineering startup",
+      "notes": "Full match. Title: 28, JD: 78. Keywords: Head of Engineering startup [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -3507,7 +3523,7 @@
     {
       "id": "keyrock-head-of-engineering-options-mqifqeh1",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Keyrock",
       "role": "Head of Engineering - Options",
       "location": "City Of London, England, United Kingdom",
@@ -3549,7 +3565,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-engineering-options-at-keyrock-4404465728",
       "cover_letter": null,
-      "notes": "Full match. Title: 28, JD: 77. Keywords: Head of Engineering startup",
+      "notes": "Full match. Title: 28, JD: 77. Keywords: Head of Engineering startup [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -3569,7 +3585,7 @@
     {
       "id": "oho-group-head-of-engineering-defence-st-mqifqgoo",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Oho Group",
       "role": "Head of Engineering | Defence Start-Up | London",
       "location": "London Area, United Kingdom",
@@ -3611,7 +3627,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-engineering-defence-start-up-london-at-oho-group-4426649329",
       "cover_letter": null,
-      "notes": "Full match. Title: 28, JD: 62. Keywords: VP Engineering startup",
+      "notes": "Full match. Title: 28, JD: 62. Keywords: VP Engineering startup [Rejected: wrong industry, wrong function, or unviable]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -3631,7 +3647,7 @@
     {
       "id": "few-far-head-of-engineering-mqifqivt",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Few&Far",
       "role": "Head of Engineering",
       "location": "Greater London, England, United Kingdom",
@@ -3673,7 +3689,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-few-far-4406871579",
       "cover_letter": null,
-      "notes": "Full match. Title: 28, JD: 54. Keywords: VP Engineering startup",
+      "notes": "Full match. Title: 28, JD: 54. Keywords: VP Engineering startup [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -3693,7 +3709,7 @@
     {
       "id": "ohme-head-of-engineering-mqifql3w",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Ohme",
       "role": "Head of Engineering",
       "location": "London Area, United Kingdom",
@@ -3717,7 +3733,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-ohme-4428708790",
       "cover_letter": null,
-      "notes": "Full match. Title: 28, JD: 41. Keywords: VP Engineering startup",
+      "notes": "Full match. Title: 28, JD: 41. Keywords: VP Engineering startup [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -3794,12 +3810,14 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "linkedin_job_id": "4414925120",
+      "url": "https://www.linkedin.com/jobs/view/4414925120"
     },
     {
       "id": "ecosurety-head-of-engineering-mqifqpjz",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Ecosurety",
       "role": "Head of Engineering",
       "location": "City Of Bristol, England, United Kingdom",
@@ -3841,7 +3859,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-ecosurety-4419695118",
       "cover_letter": null,
-      "notes": "Full match. Title: 28, JD: 78. Keywords: Head of Platform engineering",
+      "notes": "Full match. Title: 28, JD: 78. Keywords: Head of Platform engineering [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -3861,7 +3879,7 @@
     {
       "id": "dertour-uk-head-of-engineering-it-mqifqrr7",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "DERTOUR UK",
       "role": "Head of Engineering - IT",
       "location": "Dorking, England, United Kingdom",
@@ -3903,7 +3921,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-engineering-it-at-dertour-uk-4429904157",
       "cover_letter": null,
-      "notes": "Full match. Title: 28, JD: 78. Keywords: Head of Platform engineering",
+      "notes": "Full match. Title: 28, JD: 78. Keywords: Head of Platform engineering [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -3923,7 +3941,7 @@
     {
       "id": "ultra-pcs-head-of-engineering-mqifqu3f",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Ultra PCS",
       "role": "Head of Engineering",
       "location": "Cheltenham, England, United Kingdom",
@@ -3965,7 +3983,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-ultra-pcs-4427345281",
       "cover_letter": null,
-      "notes": "Full match. Title: 28, JD: 59. Keywords: Head of Product Engineering",
+      "notes": "Full match. Title: 28, JD: 59. Keywords: Head of Product Engineering [Rejected: wrong industry, wrong function, or unviable]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -3985,7 +4003,7 @@
     {
       "id": "ultra-electronics-group-head-of-engineer-mqifqwb2",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Ultra Electronics Group",
       "role": "Head of Engineering",
       "location": "Cheltenham, England, United Kingdom",
@@ -4027,7 +4045,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-ultra-electronics-group-4427364317",
       "cover_letter": null,
-      "notes": "Full match. Title: 28, JD: 59. Keywords: Head of Product Engineering",
+      "notes": "Full match. Title: 28, JD: 59. Keywords: Head of Product Engineering [Rejected: wrong industry, wrong function, or unviable]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -4109,7 +4127,7 @@
     {
       "id": "deep-sea-electronics-ltd-head-of-enginee-mqifr0nb",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Deep Sea Electronics Ltd",
       "role": "Head of Engineering",
       "location": "Mansfield, England, United Kingdom",
@@ -4151,7 +4169,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-deep-sea-electronics-ltd-4403720275",
       "cover_letter": null,
-      "notes": "Full match. Title: 28, JD: 61. Keywords: Engineering Director",
+      "notes": "Full match. Title: 28, JD: 61. Keywords: Engineering Director [Rejected: wrong industry, wrong function, or unviable]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -4171,7 +4189,7 @@
     {
       "id": "emcor-uk-head-of-engineering-risk-manage-mqifr2w4",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "EMCOR UK",
       "role": "Head of Engineering & Risk Management - BBC",
       "location": "Manchester, England, United Kingdom",
@@ -4213,7 +4231,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-engineering-risk-management-bbc-at-emcor-uk-4420197707",
       "cover_letter": null,
-      "notes": "Full match. Title: 28, JD: 79. Keywords: Engineering Director",
+      "notes": "Full match. Title: 28, JD: 79. Keywords: Engineering Director [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -4233,7 +4251,7 @@
     {
       "id": "nixor-lead-engineer-head-of-engineering--mqifr566",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Nixor",
       "role": "Lead Engineer (Head of Engineering)",
       "location": "United Kingdom",
@@ -4272,7 +4290,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/lead-engineer-head-of-engineering-at-nixor-4423107726",
       "cover_letter": null,
-      "notes": "Full match. Title: 28, JD: 49. Keywords: VP Engineering remote",
+      "notes": "Full match. Title: 28, JD: 49. Keywords: VP Engineering remote [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -4292,7 +4310,7 @@
     {
       "id": "alphasense-head-of-engineering-productiv-mqifr7dy",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "AlphaSense",
       "role": "Head of Engineering Productivity & Experience",
       "location": "United Kingdom",
@@ -4334,7 +4352,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-engineering-productivity-experience-at-alphasense-4391554290",
       "cover_letter": null,
-      "notes": "Full match. Title: 28, JD: 79. Keywords: Head of Developer Experience",
+      "notes": "Full match. Title: 28, JD: 79. Keywords: Head of Developer Experience [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -4354,7 +4372,7 @@
     {
       "id": "leonardo-head-of-engineering-projects-mqifr9od",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Leonardo",
       "role": "Head of Engineering Projects",
       "location": "Lincoln, England, United Kingdom",
@@ -4394,7 +4412,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-engineering-projects-at-leonardo-4427565138",
       "cover_letter": null,
-      "notes": "Full match. Title: 28, JD: 53. Keywords: Head of Engineering compliance",
+      "notes": "Full match. Title: 28, JD: 53. Keywords: Head of Engineering compliance [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -4414,7 +4432,7 @@
     {
       "id": "james-fisher-and-sons-plc-head-of-engine-mqifrbxs",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "James Fisher and Sons plc",
       "role": "Head of Engineering, Innovation & Sustainability, Maritime Transport",
       "location": "Barrow-In-Furness, England, United Kingdom",
@@ -4450,7 +4468,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-engineering-innovation-sustainability-maritime-transport-at-james-fisher-and-sons-plc-4417841516",
       "cover_letter": null,
-      "notes": "Full match. Title: 28, JD: 44. Keywords: Head of Engineering compliance",
+      "notes": "Full match. Title: 28, JD: 44. Keywords: Head of Engineering compliance [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -4470,7 +4488,7 @@
     {
       "id": "brannigans-head-of-engineering-structura-mqifre68",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Brannigans",
       "role": "Head of Engineering – Structural",
       "location": "Canterbury, England, United Kingdom",
@@ -4482,7 +4500,7 @@
       "proof_points": [],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-engineering-%E2%80%93-structural-at-brannigans-4420411054",
       "cover_letter": null,
-      "notes": "Full match. Title: 28, JD: 0. Keywords: Head of Engineering compliance",
+      "notes": "Full match. Title: 28, JD: 0. Keywords: Head of Engineering compliance [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -4502,7 +4520,7 @@
     {
       "id": "cleo-engineering-director-uk-hybrid-remo-mqifrge6",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Cleo",
       "role": "Engineering Director | UK (hybrid + remote) | Multiple roles",
       "location": "London Area, United Kingdom",
@@ -4544,7 +4562,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/engineering-director-uk-hybrid-%2B-remote-multiple-roles-at-cleo-4272105891",
       "cover_letter": null,
-      "notes": "Full match. Title: 27, JD: 79. Keywords: VP Engineering fintech",
+      "notes": "Full match. Title: 27, JD: 79. Keywords: VP Engineering fintech [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -4564,7 +4582,7 @@
     {
       "id": "simcorp-product-solutions-architect-port-mqifrimj",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "SimCorp",
       "role": "Product Solutions Architect – Portfolio Management, Trading & Compliance",
       "location": "London Area, United Kingdom",
@@ -4606,7 +4624,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/product-solutions-architect-%E2%80%93-portfolio-management-trading-compliance-at-simcorp-4419860538",
       "cover_letter": null,
-      "notes": "Full match. Title: 27, JD: 79. Keywords: crypto compliance officer",
+      "notes": "Full match. Title: 27, JD: 79. Keywords: crypto compliance officer [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -4626,7 +4644,7 @@
     {
       "id": "kraken-founding-devrel-lead-mqifrkxd",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Kraken",
       "role": "Founding DevRel Lead",
       "location": "London, England, United Kingdom",
@@ -4668,7 +4686,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/founding-devrel-lead-at-kraken-4423984553",
       "cover_letter": null,
-      "notes": "Full match. Title: 26, JD: 79. Keywords: CTO blockchain",
+      "notes": "Full match. Title: 26, JD: 79. Keywords: CTO blockchain [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -4688,7 +4706,7 @@
     {
       "id": "ripple-director-of-developer-relations-mqifrn4v",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Ripple",
       "role": "Director of Developer Relations",
       "location": "London, England, United Kingdom",
@@ -4730,7 +4748,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/director-of-developer-relations-at-ripple-4357691463",
       "cover_letter": null,
-      "notes": "Full match. Title: 26, JD: 82. Keywords: CTO blockchain",
+      "notes": "US-only (San Francisco / New York). Not UK.",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -4750,7 +4768,7 @@
     {
       "id": "nscale-developer-relations-engineer-mqifrpbn",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Nscale",
       "role": "Developer Relations Engineer",
       "location": "London, England, United Kingdom",
@@ -4792,7 +4810,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/developer-relations-engineer-at-nscale-4405256854",
       "cover_letter": null,
-      "notes": "Full match. Title: 26, JD: 78. Keywords: Developer Relations blockchain",
+      "notes": "Full match. Title: 26, JD: 78. Keywords: Developer Relations blockchain [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -4812,7 +4830,7 @@
     {
       "id": "tailscale-developer-relations-engineer-mqifrrik",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Tailscale",
       "role": "Developer Relations Engineer",
       "location": "United Kingdom",
@@ -4854,7 +4872,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/developer-relations-engineer-at-tailscale-4412805962",
       "cover_letter": null,
-      "notes": "Full match. Title: 26, JD: 79. Keywords: Developer Relations blockchain",
+      "notes": "Full match. Title: 26, JD: 79. Keywords: Developer Relations blockchain [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -4874,7 +4892,7 @@
     {
       "id": "nvidia-developer-relations-manager-artif-mqifrtr0",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "NVIDIA",
       "role": "Developer Relations Manager - Artificial Intelligence",
       "location": "United Kingdom",
@@ -4916,7 +4934,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/developer-relations-manager-artificial-intelligence-at-nvidia-4395473461",
       "cover_letter": null,
-      "notes": "Full match. Title: 26, JD: 67. Keywords: Head of Developer Relations",
+      "notes": "Full match. Title: 26, JD: 67. Keywords: Head of Developer Relations [Closed: not found on LinkedIn search, likely expired]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -4936,7 +4954,7 @@
     {
       "id": "nvidia-senior-developer-relations-manage-mqifrvyn",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "NVIDIA",
       "role": "Senior Developer Relations Manager – Capital Markets",
       "location": "United Kingdom",
@@ -4978,7 +4996,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/senior-developer-relations-manager-%E2%80%93-capital-markets-at-nvidia-4405067163",
       "cover_letter": null,
-      "notes": "Full match. Title: 26, JD: 47. Keywords: Head of Developer Relations",
+      "notes": "Full match. Title: 26, JD: 47. Keywords: Head of Developer Relations [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -4998,7 +5016,7 @@
     {
       "id": "mapbox-vp-of-engineering-navigation-mqifry6j",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Mapbox",
       "role": "VP of Engineering, Navigation",
       "location": "London, England, United Kingdom",
@@ -5040,7 +5058,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/vp-of-engineering-navigation-at-mapbox-4412416237",
       "cover_letter": null,
-      "notes": "Full match. Title: 25, JD: 72. Keywords: VP Engineering startup",
+      "notes": "Full match. Title: 25, JD: 72. Keywords: VP Engineering startup [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -5060,7 +5078,7 @@
     {
       "id": "rowden-vp-engineering-mqifs0el",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Rowden",
       "role": "VP Engineering",
       "location": "Bristol, England, United Kingdom",
@@ -5102,7 +5120,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/vp-engineering-at-rowden-4418103594",
       "cover_letter": null,
-      "notes": "Full match. Title: 25, JD: 73. Keywords: VP Engineering startup",
+      "notes": "Full match. Title: 25, JD: 73. Keywords: VP Engineering startup [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -5122,7 +5140,7 @@
     {
       "id": "eir-business-talent-vp-of-engineering-mqifs2nj",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "eir business talent",
       "role": "VP of Engineering",
       "location": "United Kingdom",
@@ -5164,7 +5182,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/vp-of-engineering-at-eir-business-talent-4424369356",
       "cover_letter": null,
-      "notes": "Full match. Title: 25, JD: 80. Keywords: VP Engineering remote",
+      "notes": "Full match. Title: 25, JD: 80. Keywords: VP Engineering remote [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -5184,7 +5202,7 @@
     {
       "id": "vero-staff-engineer-ai-a16z-remote-mqifs4v1",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Vero",
       "role": "Staff Engineer | AI | a16z | Remote",
       "location": "London Area, United Kingdom",
@@ -5224,7 +5242,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/staff-engineer-ai-a16z-remote-at-vero-4416639327",
       "cover_letter": null,
-      "notes": "Full match. Title: 25, JD: 52. Keywords: CTO startup",
+      "notes": "Full match. Title: 25, JD: 52. Keywords: CTO startup [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -5244,7 +5262,7 @@
     {
       "id": "albert-bow-vice-president-of-engineering-mqifs738",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Albert Bow",
       "role": "Vice President of Engineering",
       "location": "London Area, United Kingdom",
@@ -5286,7 +5304,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/vice-president-of-engineering-at-albert-bow-4427342809",
       "cover_letter": null,
-      "notes": "Full match. Title: 25, JD: 73. Keywords: VP Engineering startup",
+      "notes": "Full match. Title: 25, JD: 73. Keywords: VP Engineering startup [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -5368,7 +5386,7 @@
     {
       "id": "okta-vice-president-engineering-authenti-mqifsblw",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Okta",
       "role": "Vice President, Engineering - Authentication",
       "location": "Chicago, IL",
@@ -5410,7 +5428,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/vice-president-engineering-authentication-at-okta-4417959343",
       "cover_letter": null,
-      "notes": "Full match. Title: 25, JD: 80. Keywords: Head of Engineering",
+      "notes": "Full match. Title: 25, JD: 80. Keywords: Head of Engineering [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -5430,7 +5448,7 @@
     {
       "id": "clearbank-director-of-engineering-paymen-mqifsdwg",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "ClearBank",
       "role": "Director of Engineering - Payments",
       "location": "London, England, United Kingdom",
@@ -5472,7 +5490,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/director-of-engineering-payments-at-clearbank-4422963238",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 79. Keywords: Head of Engineering blockchain",
+      "notes": "Full match. Title: 24, JD: 79. Keywords: Head of Engineering blockchain [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -5492,7 +5510,7 @@
     {
       "id": "airwallex-engineering-director-global-tr-mqifsg71",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Airwallex",
       "role": "Engineering Director, Global Treasury and Payment Network (Relocate to Singapore)",
       "location": "London, England, United Kingdom",
@@ -5534,7 +5552,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/engineering-director-global-treasury-and-payment-network-relocate-to-singapore-at-airwallex-4246062783",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 79. Keywords: Head of Engineering fintech",
+      "notes": "Full match. Title: 24, JD: 79. Keywords: Head of Engineering fintech [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -5554,7 +5572,7 @@
     {
       "id": "numi-director-of-engineering-mqifsih7",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "numi",
       "role": "Director of Engineering",
       "location": "London Area, United Kingdom",
@@ -5579,7 +5597,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/director-of-engineering-at-numi-4426078548",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 39. Keywords: Head of Engineering fintech",
+      "notes": "Full match. Title: 24, JD: 39. Keywords: Head of Engineering fintech [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -5599,7 +5617,7 @@
     {
       "id": "identify-solutions-director-of-engineeri-mqifskr8",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Identify Solutions",
       "role": "Director of Engineering",
       "location": "London Area, United Kingdom",
@@ -5620,7 +5638,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/director-of-engineering-at-identify-solutions-4419601994",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 75. Keywords: Head of Engineering startup",
+      "notes": "Full match. Title: 24, JD: 75. Keywords: Head of Engineering startup [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -5640,7 +5658,7 @@
     {
       "id": "wheely-director-of-engineering-mqifsmzl",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Wheely",
       "role": "Director of Engineering",
       "location": "London Area, United Kingdom",
@@ -5678,7 +5696,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/director-of-engineering-at-wheely-4419297841",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 39. Keywords: Head of Engineering startup",
+      "notes": "Full match. Title: 24, JD: 39. Keywords: Head of Engineering startup [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -5698,7 +5716,7 @@
     {
       "id": "ford-credit-director-of-engineering-digi-mqifsp97",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Ford Credit",
       "role": "Director of Engineering - Digital Products",
       "location": "Dunton, England, United Kingdom",
@@ -5740,7 +5758,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/director-of-engineering-digital-products-at-ford-credit-4420985185",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 80. Keywords: Technical Director fintech",
+      "notes": "Full match. Title: 24, JD: 80. Keywords: Technical Director fintech [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -5760,7 +5778,7 @@
     {
       "id": "oleo-international-group-engineering-dir-mqifsrik",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Oleo International",
       "role": "Group Engineering Director",
       "location": "Coventry, England, United Kingdom",
@@ -5786,7 +5804,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/group-engineering-director-at-oleo-international-4428858809",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 35. Keywords: Head of Product Engineering",
+      "notes": "Full match. Title: 24, JD: 35. Keywords: Head of Product Engineering [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -5806,7 +5824,7 @@
     {
       "id": "hackajob-platform-software-engineering-d-mqifstrd",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "hackajob",
       "role": "Platform Software Engineering Director",
       "location": "United Kingdom",
@@ -5848,7 +5866,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/platform-software-engineering-director-at-hackajob-4423987617",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 78. Keywords: Head of Product Engineering",
+      "notes": "Aggregator platform - redirects to external portal. Cannot apply via LinkedIn.",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -5868,7 +5886,7 @@
     {
       "id": "totalmobile-ltd-platform-software-engine-mqifsvzc",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Totalmobile Ltd",
       "role": "Platform Software Engineering Director",
       "location": "United Kingdom",
@@ -5910,7 +5928,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/platform-software-engineering-director-at-totalmobile-ltd-4424231462",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 78. Keywords: Head of Product Engineering",
+      "notes": "Full match. Title: 24, JD: 78. Keywords: Head of Product Engineering [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -5930,7 +5948,7 @@
     {
       "id": "tetra-tech-europe-associate-director-civ-mqifsybh",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Tetra Tech Europe",
       "role": "Associate Director Civil Engineering Aviation",
       "location": "Leeds, England, United Kingdom",
@@ -5972,7 +5990,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/associate-director-civil-engineering-aviation-at-tetra-tech-europe-4425842410",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 78. Keywords: Engineering Director",
+      "notes": "Full match. Title: 24, JD: 78. Keywords: Engineering Director [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -5992,7 +6010,7 @@
     {
       "id": "biomesense-director-of-engineering-mqift0ic",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "BiomeSense",
       "role": "Director of Engineering",
       "location": "Chicago, IL",
@@ -6034,7 +6052,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/director-of-engineering-at-biomesense-4427909520",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 78. Keywords: Head of Engineering",
+      "notes": "Full match. Title: 24, JD: 78. Keywords: Head of Engineering [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -6054,7 +6072,7 @@
     {
       "id": "hoffer-plastics-director-of-engineering-mqift2s5",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Hoffer Plastics",
       "role": "Director of Engineering",
       "location": "South Elgin, IL",
@@ -6096,7 +6114,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/director-of-engineering-at-hoffer-plastics-4425418195",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 64. Keywords: Head of Engineering",
+      "notes": "Full match. Title: 24, JD: 64. Keywords: Head of Engineering [Rejected: wrong industry, wrong function, or unviable]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -6116,7 +6134,7 @@
     {
       "id": "thales-defense-security-inc-engineering--mqift4xg",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Thales Defense & Security, Inc.",
       "role": "Engineering Director",
       "location": "Aurora, IL",
@@ -6158,7 +6176,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/engineering-director-at-thales-defense-security-inc-4426982583",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 65. Keywords: Head of Engineering",
+      "notes": "Full match. Title: 24, JD: 65. Keywords: Head of Engineering [Rejected: wrong industry, wrong function, or unviable]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -6178,7 +6196,7 @@
     {
       "id": "crate-barrel-director-engineering-infras-mqift75n",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Crate & Barrel",
       "role": "Director, Engineering Infrastructure",
       "location": "Northbrook, IL",
@@ -6220,7 +6238,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/director-engineering-infrastructure-at-crate-barrel-4401504975",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 79. Keywords: Head of Engineering",
+      "notes": "Full match. Title: 24, JD: 79. Keywords: Head of Engineering [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -6240,7 +6258,7 @@
     {
       "id": "solina-director-of-engineering-mqift9ch",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Solina",
       "role": "Director Of Engineering",
       "location": "Bolingbrook, IL",
@@ -6282,7 +6300,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/director-of-engineering-at-solina-4420673083",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 76. Keywords: Head of Engineering",
+      "notes": "Full match. Title: 24, JD: 76. Keywords: Head of Engineering [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -6364,7 +6382,7 @@
     {
       "id": "scribd-inc-director-growth-engineering-mqiftdu7",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Scribd, Inc.",
       "role": "Director, Growth Engineering",
       "location": "Chicago, IL",
@@ -6406,7 +6424,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/director-growth-engineering-at-scribd-inc-4391861486",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 79. Keywords: Head of Engineering",
+      "notes": "Full match. Title: 24, JD: 79. Keywords: Head of Engineering [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -6426,7 +6444,7 @@
     {
       "id": "iaa-director-data-engineering-and-data-s-mqiftg1c",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "IAA",
       "role": "Director, Data Engineering and Data Science Engineering",
       "location": "Westchester, IL",
@@ -6468,7 +6486,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/director-data-engineering-and-data-science-engineering-at-iaa-4422016886",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 79. Keywords: Head of Engineering",
+      "notes": "Full match. Title: 24, JD: 79. Keywords: Head of Engineering [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -6488,7 +6506,7 @@
     {
       "id": "alpaca-director-of-engineering-trading-mqifti8h",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Alpaca",
       "role": "Director of Engineering, Trading",
       "location": "Chicago, IL",
@@ -6512,7 +6530,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/director-of-engineering-trading-at-alpaca-4421209886",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 44. Keywords: CTO",
+      "notes": "Full match. Title: 24, JD: 44. Keywords: CTO [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -6532,7 +6550,7 @@
     {
       "id": "aj-bell-director-of-engineering-mqiftkns",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "AJ Bell",
       "role": "Director of Engineering",
       "location": "Manchester, England, United Kingdom",
@@ -6574,7 +6592,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/director-of-engineering-at-aj-bell-4423145295",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 79. Keywords: Head of Engineering",
+      "notes": "Full match. Title: 24, JD: 79. Keywords: Head of Engineering [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -6594,7 +6612,7 @@
     {
       "id": "anord-mardix-engineering-director-emea-mqiftmxw",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Anord Mardix",
       "role": "Engineering Director - EMEA",
       "location": "Blackburn, England, United Kingdom",
@@ -6636,7 +6654,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/engineering-director-emea-at-anord-mardix-4418579858",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 64. Keywords: Head of Engineering",
+      "notes": "Full match. Title: 24, JD: 64. Keywords: Head of Engineering [Rejected: wrong industry, wrong function, or unviable]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -6656,7 +6674,7 @@
     {
       "id": "hackajob-director-of-engineering-mqiftpdc",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "hackajob",
       "role": "Director of Engineering",
       "location": "Manchester, England, United Kingdom",
@@ -6698,7 +6716,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/director-of-engineering-at-hackajob-4426978502",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 61. Keywords: Head of Engineering",
+      "notes": "Aggregator platform - redirects to external portal. Cannot apply via LinkedIn.",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -6718,7 +6736,7 @@
     {
       "id": "united-living-group-engineering-director-mqiftrlu",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "United Living Group",
       "role": "Engineering Director",
       "location": "Warrington, England, United Kingdom",
@@ -6741,7 +6759,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/engineering-director-at-united-living-group-4387263797",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 18. Keywords: Head of Engineering",
+      "notes": "Full match. Title: 24, JD: 18. Keywords: Head of Engineering [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -6761,7 +6779,7 @@
     {
       "id": "inspired-director-of-engineering-mqifttyx",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Inspired",
       "role": "Director of Engineering",
       "location": "United Kingdom",
@@ -6803,7 +6821,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/director-of-engineering-at-inspired-4426099195",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 41. Keywords: Engineering Director",
+      "notes": "Full match. Title: 24, JD: 41. Keywords: Engineering Director [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -6823,7 +6841,7 @@
     {
       "id": "primer-director-of-engineering-mqiftw67",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Primer",
       "role": "Director of Engineering",
       "location": "United Kingdom",
@@ -6865,7 +6883,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/director-of-engineering-at-primer-4421864484",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 70. Keywords: VP Engineering remote",
+      "notes": "Full match. Title: 24, JD: 70. Keywords: VP Engineering remote [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -6885,7 +6903,7 @@
     {
       "id": "monzo-engineering-director-security-mqiftyc4",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Monzo",
       "role": "Engineering Director, Security",
       "location": "London, England, United Kingdom",
@@ -6927,7 +6945,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/engineering-director-security-at-monzo-4413878450",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 72. Keywords: VP Engineering remote",
+      "notes": "Full match. Title: 24, JD: 72. Keywords: VP Engineering remote [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -7009,7 +7027,7 @@
     {
       "id": "paddle-developer-advocate-mqifu2p5",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Paddle",
       "role": "Developer Advocate",
       "location": "London, England, United Kingdom",
@@ -7051,7 +7069,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/developer-advocate-at-paddle-4388458356",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 42. Keywords: Developer Relations blockchain",
+      "notes": "Full match. Title: 24, JD: 42. Keywords: Developer Relations blockchain [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -7071,7 +7089,7 @@
     {
       "id": "jfrog-developer-advocate-mqifu4xt",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "JFrog",
       "role": "Developer Advocate",
       "location": "London, England, United Kingdom",
@@ -7113,7 +7131,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/developer-advocate-at-jfrog-4424097654",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 80. Keywords: Developer Relations blockchain",
+      "notes": "Full match. Title: 24, JD: 80. Keywords: Developer Relations blockchain [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -7133,7 +7151,7 @@
     {
       "id": "tessl-developer-advocate-mqifu75v",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Tessl",
       "role": "Developer Advocate",
       "location": "United Kingdom",
@@ -7175,7 +7193,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/developer-advocate-at-tessl-4426503985",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 78. Keywords: Developer Relations blockchain",
+      "notes": "Full match. Title: 24, JD: 78. Keywords: Developer Relations blockchain [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -7195,7 +7213,7 @@
     {
       "id": "waymo-director-of-engineering-london-sit-mqifu9cb",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Waymo",
       "role": "Director of Engineering, London Site Lead",
       "location": "London, England, United Kingdom",
@@ -7228,7 +7246,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/director-of-engineering-london-site-lead-at-waymo-4402759228",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 34. Keywords: Head of Engineering compliance",
+      "notes": "Full match. Title: 24, JD: 34. Keywords: Head of Engineering compliance [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -7248,7 +7266,7 @@
     {
       "id": "iss-facility-services-uk-director-of-eng-mqifubkt",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "ISS Facility Services UK",
       "role": "Director of Engineering",
       "location": "England, United Kingdom",
@@ -7290,7 +7308,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/director-of-engineering-at-iss-facility-services-uk-4419876841",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 47. Keywords: Head of Engineering compliance",
+      "notes": "Full match. Title: 24, JD: 47. Keywords: Head of Engineering compliance [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -7310,7 +7328,7 @@
     {
       "id": "orange-appointments-ltd-director-of-fire-mqifudvw",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Orange Appointments Ltd",
       "role": "Director of Fire Engineering",
       "location": "Scotland, United Kingdom",
@@ -7352,7 +7370,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/director-of-fire-engineering-at-orange-appointments-ltd-4418746736",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 52. Keywords: Head of Engineering compliance",
+      "notes": "Full match. Title: 24, JD: 52. Keywords: Head of Engineering compliance [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -7372,7 +7390,7 @@
     {
       "id": "liberty-it-director-of-engineering-mqifug44",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Liberty IT",
       "role": "Director of Engineering",
       "location": "Belfast, Northern Ireland, United Kingdom",
@@ -7414,7 +7432,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/director-of-engineering-at-liberty-it-4427927411",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 78. Keywords: Head of Engineering compliance",
+      "notes": "Full match. Title: 24, JD: 78. Keywords: Head of Engineering compliance [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -7434,7 +7452,7 @@
     {
       "id": "aecom-regional-director-fire-engineering-mqifuiff",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "AECOM",
       "role": "Regional Director - Fire Engineering",
       "location": "London, England, United Kingdom",
@@ -7476,7 +7494,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/regional-director-fire-engineering-at-aecom-4426152033",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 78. Keywords: Head of Engineering compliance",
+      "notes": "Full match. Title: 24, JD: 78. Keywords: Head of Engineering compliance [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -7553,12 +7571,14 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "linkedin_job_id": "4419011854",
+      "url": "https://www.linkedin.com/jobs/view/4419011854"
     },
     {
       "id": "the-lego-group-director-of-engineering-c-mqifumvx",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "the LEGO Group",
       "role": "Director of Engineering, Customer Data Foundation",
       "location": "London, England, United Kingdom",
@@ -7600,7 +7620,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/director-of-engineering-customer-data-foundation-at-the-lego-group-4427349863",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 71. Keywords: Head of Engineering compliance",
+      "notes": "Full match. Title: 24, JD: 71. Keywords: Head of Engineering compliance [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -7620,7 +7640,7 @@
     {
       "id": "ds-smith-site-engineering-director-mqifup6c",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "DS Smith",
       "role": "Site Engineering Director",
       "location": "Sittingbourne, England, United Kingdom",
@@ -7662,7 +7682,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/site-engineering-director-at-ds-smith-4362029065",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 79. Keywords: Head of Engineering compliance",
+      "notes": "Full match. Title: 24, JD: 79. Keywords: Head of Engineering compliance [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -7682,7 +7702,7 @@
     {
       "id": "cirium-director-software-engineering-mqifure2",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Cirium",
       "role": "Director Software Engineering",
       "location": "Southampton, England, United Kingdom",
@@ -7724,7 +7744,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/director-software-engineering-at-cirium-4424561946",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 53. Keywords: Head of Engineering compliance",
+      "notes": "Full match. Title: 24, JD: 53. Keywords: Head of Engineering compliance [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -7744,7 +7764,7 @@
     {
       "id": "navan-engineering-director-specialty-tra-mqifutly",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Navan",
       "role": "Engineering Director, Specialty Travel",
       "location": "London, England, United Kingdom",
@@ -7786,7 +7806,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/engineering-director-specialty-travel-at-navan-4411837114",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 54. Keywords: Head of Engineering compliance",
+      "notes": "Full match. Title: 24, JD: 54. Keywords: Head of Engineering compliance [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -7806,7 +7826,7 @@
     {
       "id": "malt-senior-engineering-manager-complian-mqifuvww",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Malt",
       "role": "Senior Engineering Manager - Compliance",
       "location": "London, England, United Kingdom",
@@ -7848,7 +7868,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/senior-engineering-manager-compliance-at-malt-4409375237",
       "cover_letter": null,
-      "notes": "Full match. Title: 24, JD: 80. Keywords: compliance technology lead",
+      "notes": "Full match. Title: 24, JD: 80. Keywords: compliance technology lead [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -7925,12 +7945,14 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "linkedin_job_id": "4422794939",
+      "url": "https://www.linkedin.com/jobs/view/4422794939"
     },
     {
       "id": "share-founding-engineer-mqifv0dp",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Share",
       "role": "Founding Engineer",
       "location": "London, England, United Kingdom",
@@ -7972,7 +7994,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/founding-engineer-at-share-4419890035",
       "cover_letter": null,
-      "notes": "Full match. Title: 22, JD: 75. Keywords: CTO fintech",
+      "notes": "Full match. Title: 22, JD: 75. Keywords: CTO fintech [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -7992,7 +8014,7 @@
     {
       "id": "neulinx-founding-engineer-mqifv2rg",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Neulinx",
       "role": "Founding Engineer",
       "location": "London Area, United Kingdom",
@@ -8030,7 +8052,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/founding-engineer-at-neulinx-4417076865",
       "cover_letter": null,
-      "notes": "Full match. Title: 22, JD: 36. Keywords: CTO startup",
+      "notes": "Full match. Title: 22, JD: 36. Keywords: CTO startup [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -8050,7 +8072,7 @@
     {
       "id": "healf-founding-engineer-mqifv550",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Healf",
       "role": "Founding Engineer",
       "location": "London, England, United Kingdom",
@@ -8092,7 +8114,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/founding-engineer-at-healf-4428864220",
       "cover_letter": null,
-      "notes": "Full match. Title: 22, JD: 77. Keywords: CTO startup",
+      "notes": "Full match. Title: 22, JD: 77. Keywords: CTO startup [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -8174,7 +8196,7 @@
     {
       "id": "limitless-founding-engineer-stealth-seed-mqifv9l6",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "limitless",
       "role": "Founding Engineer - Stealth Seed - £140,000 + Equity",
       "location": "London Area, United Kingdom",
@@ -8212,7 +8234,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/founding-engineer-stealth-seed-%C2%A3140-000-%2B-equity-at-limitless-4417498817",
       "cover_letter": null,
-      "notes": "Full match. Title: 22, JD: 64. Keywords: CTO startup",
+      "notes": "Full match. Title: 22, JD: 64. Keywords: CTO startup [Closed: not found on LinkedIn search, likely expired]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -8232,7 +8254,7 @@
     {
       "id": "station-f-founding-engineer-product-mqifvbuf",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "STATION F",
       "role": "FOUNDING ENGINEER - PRODUCT",
       "location": "Harrow, England, United Kingdom",
@@ -8274,7 +8296,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/founding-engineer-product-at-station-f-4428419196",
       "cover_letter": null,
-      "notes": "Full match. Title: 22, JD: 48. Keywords: CTO startup",
+      "notes": "Full match. Title: 22, JD: 48. Keywords: CTO startup [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -8294,7 +8316,7 @@
     {
       "id": "greenworkx-founding-engineer-mqifve57",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Greenworkx",
       "role": "Founding Engineer",
       "location": "Greater London, England, United Kingdom",
@@ -8336,7 +8358,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/founding-engineer-at-greenworkx-4430100265",
       "cover_letter": null,
-      "notes": "Full match. Title: 22, JD: 49. Keywords: CTO startup",
+      "notes": "Full match. Title: 22, JD: 49. Keywords: CTO startup [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -8356,7 +8378,7 @@
     {
       "id": "arcadis-technical-director-pump-centre-mqifvgd6",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Arcadis",
       "role": "Technical Director - Pump Centre",
       "location": "Leeds, England, United Kingdom",
@@ -8398,7 +8420,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/technical-director-pump-centre-at-arcadis-4400840177",
       "cover_letter": null,
-      "notes": "Full match. Title: 22, JD: 48. Keywords: Head of Engineering",
+      "notes": "Full match. Title: 22, JD: 48. Keywords: Head of Engineering [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -8418,7 +8440,7 @@
     {
       "id": "arcadis-associate-technical-director-des-mqifvinl",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Arcadis",
       "role": "Associate Technical Director – Design and Construction Safety",
       "location": "Leeds, England, United Kingdom",
@@ -8460,7 +8482,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/associate-technical-director-%E2%80%93-design-and-construction-safety-at-arcadis-4351014891",
       "cover_letter": null,
-      "notes": "Full match. Title: 22, JD: 78. Keywords: Engineering Director",
+      "notes": "Full match. Title: 22, JD: 78. Keywords: Engineering Director [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -8480,7 +8502,7 @@
     {
       "id": "arcadis-asset-management-technical-direc-mqifvkxw",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Arcadis",
       "role": "Asset Management Technical Director",
       "location": "York, England, United Kingdom",
@@ -8522,7 +8544,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/asset-management-technical-director-at-arcadis-4411989860",
       "cover_letter": null,
-      "notes": "Full match. Title: 22, JD: 69. Keywords: Engineering Director",
+      "notes": "Full match. Title: 22, JD: 69. Keywords: Engineering Director [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -8542,7 +8564,7 @@
     {
       "id": "wsp-in-the-uk-ireland-technical-director-mqifvn5t",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "WSP in the UK & Ireland",
       "role": "Technical Director - Liveable Places",
       "location": "Leeds, England, United Kingdom",
@@ -8563,7 +8585,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/technical-director-liveable-places-at-wsp-in-the-uk-ireland-4377105115",
       "cover_letter": null,
-      "notes": "Full match. Title: 22, JD: 23. Keywords: Engineering Director",
+      "notes": "Full match. Title: 22, JD: 23. Keywords: Engineering Director [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -8583,7 +8605,7 @@
     {
       "id": "wsp-in-the-uk-ireland-technical-director-mqifvpn5",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "WSP in the UK & Ireland",
       "role": "Technical Director (Roads)",
       "location": "Leeds, England, United Kingdom",
@@ -8625,7 +8647,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/technical-director-roads-at-wsp-in-the-uk-ireland-4418170085",
       "cover_letter": null,
-      "notes": "Full match. Title: 22, JD: 78. Keywords: Technical Director",
+      "notes": "Full match. Title: 22, JD: 78. Keywords: Technical Director [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -8645,7 +8667,7 @@
     {
       "id": "wsp-in-the-uk-ireland-associate-director-mqifvrw2",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "WSP in the UK & Ireland",
       "role": "Associate Director / Technical Director - Policy, Regulation and Markets (Energy)",
       "location": "Leeds, England, United Kingdom",
@@ -8687,7 +8709,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/associate-director-technical-director-policy-regulation-and-markets-energy-at-wsp-in-the-uk-ireland-4418170083",
       "cover_letter": null,
-      "notes": "Full match. Title: 22, JD: 56. Keywords: Technical Director",
+      "notes": "Full match. Title: 22, JD: 56. Keywords: Technical Director [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -8707,7 +8729,7 @@
     {
       "id": "wsp-in-the-uk-ireland-technical-director-mqifvu33",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "WSP in the UK & Ireland",
       "role": "Technical Director - Hydrology Lead",
       "location": "Leeds, England, United Kingdom",
@@ -8749,7 +8771,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/technical-director-hydrology-lead-at-wsp-in-the-uk-ireland-4405279675",
       "cover_letter": null,
-      "notes": "Full match. Title: 22, JD: 76. Keywords: Technical Director",
+      "notes": "Full match. Title: 22, JD: 76. Keywords: Technical Director [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -8769,7 +8791,7 @@
     {
       "id": "wsp-in-the-uk-ireland-development-planni-mqifvwbh",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "WSP in the UK & Ireland",
       "role": "Development Planning Technical Director/Director (Development)",
       "location": "Leeds, England, United Kingdom",
@@ -8811,7 +8833,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/development-planning-technical-director-director-development-at-wsp-in-the-uk-ireland-4368398222",
       "cover_letter": null,
-      "notes": "Full match. Title: 22, JD: 53. Keywords: Technical Director",
+      "notes": "Full match. Title: 22, JD: 53. Keywords: Technical Director [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -8831,7 +8853,7 @@
     {
       "id": "wsp-in-the-uk-ireland-technical-director-mqifvyiq",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "WSP in the UK & Ireland",
       "role": "Technical Director (Infrastructure Planning)",
       "location": "Leeds, England, United Kingdom",
@@ -8869,7 +8891,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/technical-director-infrastructure-planning-at-wsp-in-the-uk-ireland-4410547924",
       "cover_letter": null,
-      "notes": "Full match. Title: 22, JD: 36. Keywords: Technical Director",
+      "notes": "Full match. Title: 22, JD: 36. Keywords: Technical Director [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -8889,7 +8911,7 @@
     {
       "id": "wsp-in-the-uk-ireland-technical-director-mqifw0om",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "WSP in the UK & Ireland",
       "role": "Technical Director (EIA/Water)",
       "location": "Leeds, England, United Kingdom",
@@ -8931,7 +8953,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/technical-director-eia-water-at-wsp-in-the-uk-ireland-4379270387",
       "cover_letter": null,
-      "notes": "Full match. Title: 22, JD: 63. Keywords: Technical Director",
+      "notes": "Full match. Title: 22, JD: 63. Keywords: Technical Director [Rejected: wrong industry, wrong function, or unviable]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -8951,7 +8973,7 @@
     {
       "id": "wsp-in-the-uk-ireland-technical-director-mqifw2uu",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "WSP in the UK & Ireland",
       "role": "Technical Director Town Planning (Infrastructure Planning)",
       "location": "Leeds, England, United Kingdom",
@@ -8989,7 +9011,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/technical-director-town-planning-infrastructure-planning-at-wsp-in-the-uk-ireland-4414566766",
       "cover_letter": null,
-      "notes": "Full match. Title: 22, JD: 36. Keywords: Technical Director",
+      "notes": "Full match. Title: 22, JD: 36. Keywords: Technical Director [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -9009,7 +9031,7 @@
     {
       "id": "wsp-in-the-uk-ireland-technical-director-mqifw50v",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "WSP in the UK & Ireland",
       "role": "Technical Director (Strategic Environmental Assessment/Water)",
       "location": "Leeds, England, United Kingdom",
@@ -9049,7 +9071,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/technical-director-strategic-environmental-assessment-water-at-wsp-in-the-uk-ireland-4377875295",
       "cover_letter": null,
-      "notes": "Full match. Title: 22, JD: 68. Keywords: Technical Director",
+      "notes": "Full match. Title: 22, JD: 68. Keywords: Technical Director [Rejected: wrong industry, wrong function, or unviable]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -9069,7 +9091,7 @@
     {
       "id": "wsp-in-the-uk-ireland-technical-director-mqifw77m",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "WSP in the UK & Ireland",
       "role": "Technical Director - Structures Energy",
       "location": "Leeds, England, United Kingdom",
@@ -9111,7 +9133,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/technical-director-structures-energy-at-wsp-in-the-uk-ireland-4398032378",
       "cover_letter": null,
-      "notes": "Full match. Title: 22, JD: 49. Keywords: Technical Director",
+      "notes": "Full match. Title: 22, JD: 49. Keywords: Technical Director [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -9131,7 +9153,7 @@
     {
       "id": "ramboll-technical-director-coastal-engin-mqifw9fr",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Ramboll",
       "role": "Technical Director – Coastal Engineering",
       "location": "Chester, England, United Kingdom",
@@ -9173,7 +9195,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/technical-director-%E2%80%93-coastal-engineering-at-ramboll-4416949340",
       "cover_letter": null,
-      "notes": "Full match. Title: 22, JD: 67. Keywords: Engineering Director",
+      "notes": "Full match. Title: 22, JD: 67. Keywords: Engineering Director [Rejected: wrong industry, wrong function, or unviable]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -9193,7 +9215,7 @@
     {
       "id": "mm-flowers-group-technical-director-mqifwbmn",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "MM Flowers",
       "role": "Group Technical Director",
       "location": "Alconbury, England, United Kingdom",
@@ -9235,7 +9257,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/group-technical-director-at-mm-flowers-4418164266",
       "cover_letter": null,
-      "notes": "Full match. Title: 22, JD: 49. Keywords: Head of Engineering compliance",
+      "notes": "Full match. Title: 22, JD: 49. Keywords: Head of Engineering compliance [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -9255,7 +9277,7 @@
     {
       "id": "slr-consulting-technical-director-acoust-mqifwdv3",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "SLR Consulting",
       "role": "Technical Director - Acoustics and Vibration",
       "location": "Edinburgh, Scotland, United Kingdom",
@@ -9297,7 +9319,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/technical-director-acoustics-and-vibration-at-slr-consulting-4415064618",
       "cover_letter": null,
-      "notes": "Full match. Title: 22, JD: 58. Keywords: Head of Engineering compliance",
+      "notes": "Full match. Title: 22, JD: 58. Keywords: Head of Engineering compliance [Rejected: wrong industry, wrong function, or unviable]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -9317,7 +9339,7 @@
     {
       "id": "arcadis-associate-technical-director-ass-mqifwg4z",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Arcadis",
       "role": "Associate Technical Director - Asset Management (Water AMP8)",
       "location": "London, England, United Kingdom",
@@ -9359,7 +9381,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/associate-technical-director-asset-management-water-amp8-at-arcadis-4380275458",
       "cover_letter": null,
-      "notes": "Full match. Title: 22, JD: 79. Keywords: Head of Engineering compliance",
+      "notes": "Full match. Title: 22, JD: 79. Keywords: Head of Engineering compliance [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -9436,12 +9458,14 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "linkedin_job_id": "4422458041",
+      "url": "https://www.linkedin.com/jobs/view/4422458041"
     },
     {
       "id": "socode-recruitment-head-of-platform-engi-mqifwkkk",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "SoCode Recruitment",
       "role": "Head of Platform Engineering",
       "location": "Cambridge, England, United Kingdom",
@@ -9483,7 +9507,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-platform-engineering-at-socode-recruitment-4415370294",
       "cover_letter": null,
-      "notes": "Full match. Title: 20, JD: 72. Keywords: Head of Engineering fintech",
+      "notes": "Full match. Title: 20, JD: 72. Keywords: Head of Engineering fintech [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -9503,7 +9527,7 @@
     {
       "id": "gamma-head-of-platform-engineering-autom-mqifwmsl",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Gamma",
       "role": "Head of Platform Engineering & Automation - GammaLabs",
       "location": "Manchester, England, United Kingdom",
@@ -9545,7 +9569,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-platform-engineering-automation-gammalabs-at-gamma-4426405695",
       "cover_letter": null,
-      "notes": "Full match. Title: 20, JD: 48. Keywords: Head of Engineering fintech",
+      "notes": "Full match. Title: 20, JD: 48. Keywords: Head of Engineering fintech [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -9565,7 +9589,7 @@
     {
       "id": "barclays-head-of-product-security-ciso-f-mqifwp0k",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Barclays",
       "role": "Head of Product Security – CISO function - BPL",
       "location": "London, England, United Kingdom",
@@ -9607,7 +9631,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-product-security-%E2%80%93-ciso-function-bpl-at-barclays-4422750577",
       "cover_letter": null,
-      "notes": "Full match. Title: 20, JD: 78. Keywords: Technical Director fintech",
+      "notes": "Full match. Title: 20, JD: 78. Keywords: Technical Director fintech [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -9627,7 +9651,7 @@
     {
       "id": "intelix-ai-head-of-head-of-developer-pla-mqifwrab",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Intelix.AI",
       "role": "Head of Head of Developer Platform Engineering & Cloud Platform",
       "location": "London Area, United Kingdom",
@@ -9669,7 +9693,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-head-of-developer-platform-engineering-cloud-platform-at-intelix-ai-4410826134",
       "cover_letter": null,
-      "notes": "Full match. Title: 20, JD: 79. Keywords: Head of Platform engineering",
+      "notes": "Full match. Title: 20, JD: 79. Keywords: Head of Platform engineering [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -9689,7 +9713,7 @@
     {
       "id": "aj-exec-head-of-product-vp-level--mqifwtja",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "AJ | EXEC",
       "role": "Head of Product (VP Level)",
       "location": "United Kingdom",
@@ -9729,7 +9753,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-product-vp-level-at-aj-exec-4418091576",
       "cover_letter": null,
-      "notes": "Full match. Title: 20, JD: 79. Keywords: Head of Platform engineering",
+      "notes": "Full match. Title: 20, JD: 79. Keywords: Head of Platform engineering [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -9749,7 +9773,7 @@
     {
       "id": "1inch-senior-software-engineer-blockchai-mqifwvpy",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "1inch",
       "role": "Senior Software Engineer, Blockchain",
       "location": "London Area, United Kingdom",
@@ -9791,7 +9815,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/senior-software-engineer-blockchain-at-1inch-4416585067",
       "cover_letter": null,
-      "notes": "Full match. Title: 20, JD: 80. Keywords: Staff Engineer blockchain",
+      "notes": "Full match. Title: 20, JD: 80. Keywords: Staff Engineer blockchain [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -9811,7 +9835,7 @@
     {
       "id": "1inch-talent-pool-software-engineer-bloc-mqifwy23",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "1inch",
       "role": "Talent Pool - Software Engineer, Blockchain / Web3",
       "location": "London Area, United Kingdom",
@@ -9853,7 +9877,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/talent-pool-software-engineer-blockchain-web3-at-1inch-4419066183",
       "cover_letter": null,
-      "notes": "Full match. Title: 20, JD: 80. Keywords: Staff Engineer blockchain",
+      "notes": "Full match. Title: 20, JD: 80. Keywords: Staff Engineer blockchain [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -9873,7 +9897,7 @@
     {
       "id": "lseg-senior-lead-engineer-post-trade-blo-mqifx0c1",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "LSEG",
       "role": "Senior Lead Engineer, Post Trade (Blockchain)",
       "location": "London, England, United Kingdom",
@@ -9915,7 +9939,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/senior-lead-engineer-post-trade-blockchain-at-lseg-4371311645",
       "cover_letter": null,
-      "notes": "Full match. Title: 20, JD: 81. Keywords: Staff Engineer blockchain",
+      "notes": "Full match. Title: 20, JD: 81. Keywords: Staff Engineer blockchain [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -9935,7 +9959,7 @@
     {
       "id": "burns-sheehan-head-of-product-engineerin-mqifx2ki",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Burns Sheehan",
       "role": "Head of Product & Engineering",
       "location": "Brighton, England, United Kingdom",
@@ -9970,7 +9994,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-product-engineering-at-burns-sheehan-4420432878",
       "cover_letter": null,
-      "notes": "Full match. Title: 20, JD: 44. Keywords: Head of AI engineering",
+      "notes": "Full match. Title: 20, JD: 44. Keywords: Head of AI engineering [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -9990,7 +10014,7 @@
     {
       "id": "aios-uk-head-of-clinical-product-hybrid--mqifx4sy",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "AIOS",
       "role": "UK Head of Clinical Product— Hybrid, £85k-£150k/yr inc equity",
       "location": "England, United Kingdom",
@@ -10032,7 +10056,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/uk-head-of-clinical-product%E2%80%94-hybrid-%C2%A385k-%C2%A3150k-yr-inc-equity-at-aios-4414236313",
       "cover_letter": null,
-      "notes": "Full match. Title: 20, JD: 79. Keywords: Head of Protocol",
+      "notes": "Full match. Title: 20, JD: 79. Keywords: Head of Protocol [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -10052,7 +10076,7 @@
     {
       "id": "humara-head-of-product-engineering-mqifx6z4",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Humara",
       "role": "Head of Product & Engineering",
       "location": "Brighton, England, United Kingdom",
@@ -10086,7 +10110,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-product-engineering-at-humara-4417743832",
       "cover_letter": null,
-      "notes": "Full match. Title: 20, JD: 51. Keywords: Head of Product Engineering",
+      "notes": "Full match. Title: 20, JD: 51. Keywords: Head of Product Engineering [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -10106,7 +10130,7 @@
     {
       "id": "nord-anglia-education-group-head-of-prod-mqifx98e",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Nord Anglia Education",
       "role": "Group Head of Product and Technology",
       "location": "London, England, United Kingdom",
@@ -10148,7 +10172,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/group-head-of-product-and-technology-at-nord-anglia-education-4424416962",
       "cover_letter": null,
-      "notes": "Full match. Title: 20, JD: 43. Keywords: Head of Product Engineering",
+      "notes": "Full match. Title: 20, JD: 43. Keywords: Head of Product Engineering [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -10168,7 +10192,7 @@
     {
       "id": "smart-bricks-head-of-institutional-produ-mqifxbio",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Smart Bricks",
       "role": "Head of Institutional Product",
       "location": "London, England, United Kingdom",
@@ -10210,7 +10234,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-institutional-product-at-smart-bricks-4423519856",
       "cover_letter": null,
-      "notes": "Full match. Title: 20, JD: 78. Keywords: Head of Product Engineering",
+      "notes": "Full match. Title: 20, JD: 78. Keywords: Head of Product Engineering [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -10230,7 +10254,7 @@
     {
       "id": "jd-sports-fashion-head-of-product-mqifxdvv",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "JD Sports Fashion",
       "role": "Head of Product",
       "location": "Bury, England, United Kingdom",
@@ -10272,7 +10296,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-product-at-jd-sports-fashion-4419811940",
       "cover_letter": null,
-      "notes": "Full match. Title: 20, JD: 57. Keywords: Head of Product Engineering",
+      "notes": "Full match. Title: 20, JD: 57. Keywords: Head of Product Engineering [Rejected: wrong industry, wrong function, or unviable]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -10292,7 +10316,7 @@
     {
       "id": "blackfinch-group-group-head-of-digital-p-mqifxg5i",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Blackfinch Group",
       "role": "Group Head of Digital Product",
       "location": "Elkstone, England, United Kingdom",
@@ -10328,7 +10352,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/group-head-of-digital-product-at-blackfinch-group-4422025403",
       "cover_letter": null,
-      "notes": "Full match. Title: 20, JD: 69. Keywords: Head of Product Engineering",
+      "notes": "Full match. Title: 20, JD: 69. Keywords: Head of Product Engineering [Closed: not found on LinkedIn search, likely expired]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -10348,7 +10372,7 @@
     {
       "id": "revolut-head-of-product-fraud--mqifxibz",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Revolut",
       "role": "Head of Product (Fraud)",
       "location": "United Kingdom",
@@ -10390,7 +10414,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-product-fraud-at-revolut-4296081636",
       "cover_letter": null,
-      "notes": "Full match. Title: 20, JD: 80. Keywords: Head of Product Engineering",
+      "notes": "Full match. Title: 20, JD: 80. Keywords: Head of Product Engineering [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -10410,7 +10434,7 @@
     {
       "id": "selfridges-head-of-product-data-mqifxkip",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Selfridges",
       "role": "Head of Product & Data",
       "location": "London, England, United Kingdom",
@@ -10452,7 +10476,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-product-data-at-selfridges-4421849461",
       "cover_letter": null,
-      "notes": "Full match. Title: 20, JD: 68. Keywords: Head of Product Engineering",
+      "notes": "Full match. Title: 20, JD: 68. Keywords: Head of Product Engineering [Rejected: wrong industry, wrong function, or unviable]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -10472,7 +10496,7 @@
     {
       "id": "cleo-head-of-product-payments-mqifxmpj",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Cleo",
       "role": "Head of Product - Payments",
       "location": "London Area, United Kingdom",
@@ -10511,7 +10535,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-product-payments-at-cleo-4429908193",
       "cover_letter": null,
-      "notes": "Full match. Title: 20, JD: 60. Keywords: Head of Product Engineering",
+      "notes": "Full match. Title: 20, JD: 60. Keywords: Head of Product Engineering [Rejected: wrong industry, wrong function, or unviable]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -10531,7 +10555,7 @@
     {
       "id": "lumon-head-of-product-ftc-maternity-cove-mqifxp1g",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Lumon",
       "role": "Head of Product - FTC (Maternity Cover)",
       "location": "London Area, United Kingdom",
@@ -10572,7 +10596,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-product-ftc-maternity-cover-at-lumon-4416896498",
       "cover_letter": null,
-      "notes": "Full match. Title: 20, JD: 74. Keywords: Head of Product Engineering",
+      "notes": "Full match. Title: 20, JD: 74. Keywords: Head of Product Engineering [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -10592,7 +10616,7 @@
     {
       "id": "tomia-head-of-product-mqifxrby",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "TOMIA",
       "role": "Head of Product",
       "location": "Wales, United Kingdom",
@@ -10634,7 +10658,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-product-at-tomia-4426304458",
       "cover_letter": null,
-      "notes": "Full match. Title: 20, JD: 71. Keywords: Head of Product Engineering",
+      "notes": "Full match. Title: 20, JD: 71. Keywords: Head of Product Engineering [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -10654,7 +10678,7 @@
     {
       "id": "paymentology-head-of-product-gtm-mqifxtju",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Paymentology",
       "role": "Head of Product GTM",
       "location": "London, England, United Kingdom",
@@ -10696,7 +10720,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-product-gtm-at-paymentology-4423504178",
       "cover_letter": null,
-      "notes": "Full match. Title: 20, JD: 78. Keywords: Head of Product Engineering",
+      "notes": "Full match. Title: 20, JD: 78. Keywords: Head of Product Engineering [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -10716,7 +10740,7 @@
     {
       "id": "aviva-investors-head-of-product-developm-mqifxvua",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Aviva Investors",
       "role": "Head of Product Development - Public Markets",
       "location": "London, England, United Kingdom",
@@ -10758,7 +10782,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-product-development-public-markets-at-aviva-investors-4414705634",
       "cover_letter": null,
-      "notes": "Full match. Title: 20, JD: 42. Keywords: Head of Product Engineering",
+      "notes": "Full match. Title: 20, JD: 42. Keywords: Head of Product Engineering [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -10778,7 +10802,7 @@
     {
       "id": "commercetools-head-of-product-agentic-of-mqifxy73",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "commercetools",
       "role": "Head of Product - Agentic Offerings",
       "location": "London Area, United Kingdom",
@@ -10813,7 +10837,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-product-agentic-offerings-at-commercetools-4429248183",
       "cover_letter": null,
-      "notes": "Full match. Title: 20, JD: 73. Keywords: Head of Product Engineering",
+      "notes": "Full match. Title: 20, JD: 73. Keywords: Head of Product Engineering [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -10833,7 +10857,7 @@
     {
       "id": "commercetools-head-of-product-agentic-of-mqify0fz",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "commercetools",
       "role": "Head of Product – Agentic Offerings",
       "location": "London, England, United Kingdom",
@@ -10868,7 +10892,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-product-%E2%80%93-agentic-offerings-at-commercetools-4429525887",
       "cover_letter": null,
-      "notes": "Full match. Title: 20, JD: 73. Keywords: Head of Product Engineering",
+      "notes": "Full match. Title: 20, JD: 73. Keywords: Head of Product Engineering [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -10950,7 +10974,7 @@
     {
       "id": "intelligent-people-head-of-product-mqify4vw",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Intelligent People",
       "role": "Head of Product",
       "location": "United Kingdom",
@@ -10992,7 +11016,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-product-at-intelligent-people-4419276991",
       "cover_letter": null,
-      "notes": "Full match. Title: 20, JD: 80. Keywords: VP Engineering remote",
+      "notes": "Full match. Title: 20, JD: 80. Keywords: VP Engineering remote [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -11074,7 +11098,7 @@
     {
       "id": "orbis-group-head-of-research-platform-en-mqify9b2",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Orbis Group",
       "role": "Head of Research Platform Engineering",
       "location": "London Area, United Kingdom",
@@ -11116,7 +11140,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-research-platform-engineering-at-orbis-group-4428898050",
       "cover_letter": null,
-      "notes": "Full match. Title: 20, JD: 79. Keywords: Head of Engineering compliance",
+      "notes": "Full match. Title: 20, JD: 79. Keywords: Head of Engineering compliance [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -11136,7 +11160,7 @@
     {
       "id": "wolt-head-of-product-regulatory-finance-mqifybii",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Wolt",
       "role": "Head of Product, Regulatory Finance",
       "location": "London, England, United Kingdom",
@@ -11178,7 +11202,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-product-regulatory-finance-at-wolt-4382476310",
       "cover_letter": null,
-      "notes": "Full match. Title: 20, JD: 80. Keywords: Head of RegTech",
+      "notes": "Full match. Title: 20, JD: 80. Keywords: Head of RegTech [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -11198,7 +11222,7 @@
     {
       "id": "revolut-head-of-ai-compliance-cx--mqifydre",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "Revolut",
       "role": "Head of AI Compliance (CX)",
       "location": "United Kingdom",
@@ -11240,7 +11264,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-ai-compliance-cx-at-revolut-4382446514",
       "cover_letter": null,
-      "notes": "Full match. Title: 20, JD: 80. Keywords: Head of Compliance fintech",
+      "notes": "Full match. Title: 20, JD: 80. Keywords: Head of Compliance fintech [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -11260,7 +11284,7 @@
     {
       "id": "marex-ai-transformation-lead-compliance--mqifyfzc",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Marex",
       "role": "AI Transformation Lead - Compliance (VN2586)",
       "location": "London, England, United Kingdom",
@@ -11302,7 +11326,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/ai-transformation-lead-compliance-vn2586-at-marex-4425682350",
       "cover_letter": null,
-      "notes": "Full match. Title: 20, JD: 51. Keywords: compliance technology lead",
+      "notes": "Full match. Title: 20, JD: 51. Keywords: compliance technology lead [Auto-rejected: score below 50, not worth pursuing]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -11322,7 +11346,7 @@
     {
       "id": "res-data-and-ai-governance-technical-lea-mqifyi7a",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "RES",
       "role": "Data and AI Governance Technical Lead",
       "location": "Kings Langley, England, United Kingdom",
@@ -11364,7 +11388,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/data-and-ai-governance-technical-lead-at-res-4427696633",
       "cover_letter": null,
-      "notes": "Full match. Title: 20, JD: 78. Keywords: compliance technology lead",
+      "notes": "Full match. Title: 20, JD: 78. Keywords: compliance technology lead [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -11384,7 +11408,7 @@
     {
       "id": "hackajob-head-of-ai-compliance-cx--mqifykh0",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "closed",
       "company": "hackajob",
       "role": "Head of AI Compliance (CX)",
       "location": "United Kingdom",
@@ -11426,7 +11450,7 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/head-of-ai-compliance-cx-at-hackajob-4419156627",
       "cover_letter": null,
-      "notes": "Full match. Title: 20, JD: 80. Keywords: compliance technology lead",
+      "notes": "Aggregator platform - redirects to external portal. Cannot apply via LinkedIn.",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -11452,9 +11476,9 @@
       "source_url": "https://www.linkedin.com/jobs/view/4422407624/",
       "linkedin_job_id": "4422407624",
       "date_found": "2026-06-19",
-      "status": "discovered",
+      "status": "new",
       "cv_variant": "cto",
-      "notes": "Accelerator cohort. Agentic web = directly relevant (MCP, autonomous pipelines). Check if embryonic is established. Could be investment path for Moddable or EIR-type role.",
+      "notes": "Venture studio co-founding. Cybersecurity focus not gaming. MCP knowledge relevant but wrong domain. Equity-only.",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -11469,7 +11493,10 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "score": 55,
+      "role": "Founder // Cybersecurity for Agentic Web (Cohort V)",
+      "url": "https://www.linkedin.com/jobs/view/4422407624"
     },
     {
       "id": "career-moves-interim-cto",
@@ -11480,9 +11507,9 @@
       "source_url": "https://www.linkedin.com/jobs/view/4423500853/",
       "linkedin_job_id": "4423500853",
       "date_found": "2026-06-19",
-      "status": "discovered",
+      "status": "new",
       "cv_variant": "cto",
-      "notes": "B Corp recruiter. Interim CTO. Professional agency.",
+      "notes": "Non-profit, fractional, fully remote. Azure-heavy. Governance/compliance focus. Decent fit for RegTech variant.",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -11497,7 +11524,10 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "score": 65,
+      "role": "Interim CTO (2-3 days/week, 6mth FTC)",
+      "url": "https://www.linkedin.com/jobs/view/4423500853"
     },
     {
       "id": "symplicare-ai-founding-cto",
@@ -11508,9 +11538,9 @@
       "source_url": "https://www.linkedin.com/jobs/view/4429001899/",
       "linkedin_job_id": "4429001899",
       "date_found": "2026-06-19",
-      "status": "discovered",
+      "status": "rejected",
       "cv_variant": "cto",
-      "notes": "AI/health founding CTO. High experience match per LinkedIn.",
+      "notes": "Equity-only, no salary. Healthcare domain. 70 applicants. Not worth pursuing without income.",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -11525,7 +11555,9 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "score": 45,
+      "role": "Founding CTO - SympliCare AI (Healthcare)"
     },
     {
       "id": "general-intelligence-cto",
@@ -11536,9 +11568,9 @@
       "source_url": "https://www.linkedin.com/jobs/view/4430430246/",
       "linkedin_job_id": "4430430246",
       "date_found": "2026-06-19",
-      "status": "discovered",
+      "status": "rejected",
       "cv_variant": "cto",
-      "notes": "General Intelligence Holdings. Name sounds speculative but high experience match. Worth investigating.",
+      "notes": "One-man-show, no funding, equity-only. Not a real employer.",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -11553,12 +11585,14 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "score": 20,
+      "role": "CTO - General Intelligence Holdings (AI Accountancy)"
     },
     {
       "id": "ripple-senior-manager-software-eng-mqlxqnxw",
       "added": "2026-06-20",
-      "status": "new",
+      "status": "rejected",
       "company": "Ripple",
       "role": "Senior Manager, Software Engineering",
       "location": "London, England, United Kingdom",
@@ -11579,12 +11613,13 @@
         "notes": null,
         "_fetched": true
       },
-      "score": 59
+      "score": 59,
+      "notes": " [Rejected: wrong industry, wrong function, or unviable]"
     },
     {
       "id": "bullish-lead-engineer-custody-mqlxqnxw",
       "added": "2026-06-20",
-      "status": "new",
+      "status": "closed",
       "company": "Bullish",
       "role": "Lead Engineer, Custody Engineering (Tokenization)",
       "location": "London Area, United Kingdom",
@@ -11605,7 +11640,8 @@
         "notes": null,
         "_fetched": true
       },
-      "score": 66
+      "score": 66,
+      "notes": " [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]"
     },
     {
       "id": "amex-vp-onchain-products-mqlxqnxw",
@@ -11615,7 +11651,7 @@
       "role": "Vice President, Onchain Products",
       "location": "London, England, United Kingdom",
       "variant": "cto",
-      "url": "https://www.linkedin.com/jobs/view/4429351312/",
+      "url": "https://www.linkedin.com/jobs/view/4429351312",
       "channel": {
         "source": "unknown",
         "method": null,
@@ -11631,12 +11667,13 @@
         "notes": null,
         "_fetched": true
       },
-      "score": 56
+      "score": 56,
+      "linkedin_job_id": "4429351312"
     },
     {
       "id": "kraken-ai-agents-architect-finance-mqlxqnxw",
       "added": "2026-06-20",
-      "status": "new",
+      "status": "closed",
       "company": "Kraken",
       "role": "AI Agents Solutions Architect - Finance",
       "location": "London, England, United Kingdom",
@@ -11657,7 +11694,8 @@
         "notes": null,
         "_fetched": true
       },
-      "score": 64
+      "score": 64,
+      "notes": " [Auto-closed: no linkedin_job_id, no discovery date, cannot verify still live]"
     },
     {
       "id": "ably-developer-relations-manager-mqmpgx6k",
@@ -11721,7 +11759,688 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "url": "https://www.linkedin.com/jobs/view/4429320217"
+    },
+    {
+      "company": "Ethos",
+      "role": "AI Training - IT Leadership (/hr, part-time)",
+      "location": "United Kingdom (Remote)",
+      "url": "https://www.linkedin.com/jobs/view/it-director-head-of-engineering-%24100-hr-up-to-%242-000-week-at-ethos-4400011390",
+      "linkedin_job_id": "4400011390",
+      "source": "linkedin",
+      "status": "new",
+      "discovered": "2026-06-22",
+      "variant": "cto",
+      "notes": "Ethos expert network. AI model training on IT leadership tasks. Flexible 5-20hr/wk remote. Good supplementary income but not a role.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "unknown",
+          "days_old": null
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      },
+      "score": 60
+    },
+    {
+      "company": "LSEG",
+      "role": "AI Engineering Enablement Director",
+      "location": "City Of London, England, United Kingdom",
+      "url": "https://www.linkedin.com/jobs/view/ai-engineering-enablement-director-at-lseg-4402730169",
+      "linkedin_job_id": "4402730169",
+      "source": "linkedin",
+      "status": "new",
+      "discovered": "2026-06-22",
+      "variant": "cto",
+      "notes": "LSEG. Governance/enablement focus not hands-on building. 149 applicants. Very corporate. Needs Python/LangChain. Weak culture fit.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "unknown",
+          "days_old": null
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      },
+      "score": 58
+    },
+    {
+      "company": "Proplead.io",
+      "role": "Co-Founder & CTO (AI-Native) - Proplead.io",
+      "location": "United Kingdom",
+      "url": "https://www.linkedin.com/jobs/view/4431105088",
+      "linkedin_job_id": "4431105088",
+      "source": "linkedin",
+      "status": "rejected",
+      "discovered": "2026-06-22",
+      "variant": "cto",
+      "notes": "Requires fluent Spanish (non-negotiable). Equity-only. Spain-focused real estate CRM. Hard reject on language.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "unknown",
+          "days_old": null
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      },
+      "score": 30
+    },
+    {
+      "company": "Mindalter",
+      "role": "Head of Generative AI - Mindalter",
+      "location": "London Area, United Kingdom",
+      "url": "https://www.linkedin.com/jobs/view/4416268592",
+      "linkedin_job_id": "4416268592",
+      "source": "linkedin",
+      "status": "rejected",
+      "discovered": "2026-06-22",
+      "variant": "cto",
+      "notes": "AI influencer content studio. ComfyUI/LoRA/video pipelines. Completely different domain. Not a fit.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "unknown",
+          "days_old": null
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      },
+      "score": 25
+    },
+    {
+      "company": "Burton Recruitment Limited",
+      "role": "Chief Technology & AI Officer (Business Coaching)",
+      "location": "United Kingdom",
+      "url": "https://www.linkedin.com/jobs/view/4430963455",
+      "linkedin_job_id": "4430963455",
+      "source": "linkedin",
+      "status": "applied",
+      "discovered": "2026-06-22",
+      "variant": "cto",
+      "notes": "Easy Apply submitted via LinkedIn. Screening questions answered. Contact: Clarinda Rayner.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "unknown",
+          "days_old": null
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      },
+      "score": 74,
+      "applied_date": "2026-06-22"
+    },
+    {
+      "company": "WUNDERTALENT",
+      "role": "VP of Technology (Consultancy, £250K)",
+      "location": "London Area, United Kingdom",
+      "url": "https://www.linkedin.com/jobs/view/4427821831",
+      "linkedin_job_id": "4427821831",
+      "source": "linkedin",
+      "status": "rejected",
+      "discovered": "2026-06-22",
+      "variant": "cto",
+      "notes": "Requires 15-20 years IN consultancies specifically. Product/in-house background explicitly excluded. CS degree required. 3 days London office.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "unknown",
+          "days_old": null
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      },
+      "score": 40
+    },
+    {
+      "company": "Government Commercial Agency",
+      "role": "Head of AI Impact - Government Commercial Agency",
+      "location": "Liverpool",
+      "url": "https://www.linkedin.com/jobs/view/4426300559",
+      "linkedin_job_id": "4426300559",
+      "source": "linkedin",
+      "status": "rejected",
+      "discovered": "2026-06-22",
+      "variant": "cto",
+      "notes": "Civil service £72-80K. AI governance/assurance. Liverpool. Closing TODAY (22/06). Too late + salary low + governance-heavy not builder. [Rejected: wrong industry, wrong function, or unviable]",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "unknown",
+          "days_old": null
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      },
+      "score": 52
+    },
+    {
+      "id": "iinvest-founding-vp-of-engineering-(cto-track)",
+      "added": "2026-06-27",
+      "status": "scored",
+      "company": "iinvest",
+      "role": "Founding VP of Engineering (CTO Track)",
+      "location": "United Kingdom",
+      "variant": "cto",
+      "score": 72,
+      "url": "https://www.linkedin.com/jobs/view/4433474294",
+      "linkedin_job_id": "4433474294",
+      "notes": "Fintech startup, £68k + equity, CTO track. Early-stage.",
+      "channel": {
+        "source": "unknown",
+        "method": null,
+        "apply_url": null,
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-06-27"
+        },
+        "action": null,
+        "notes": null
+      },
+      "email": null
+    },
+    {
+      "id": "fortalis-technical-lead-cto-(+-equity)",
+      "added": "2026-06-27",
+      "status": "scored",
+      "company": "Fortalis",
+      "role": "Technical Lead/CTO (+ Equity)",
+      "location": "London",
+      "variant": "cto",
+      "score": 55,
+      "url": "https://www.linkedin.com/jobs/view/4433469360",
+      "linkedin_job_id": "4433469360",
+      "notes": "Startup CTO role with equity. Need to check industry.",
+      "channel": {
+        "source": "unknown",
+        "method": null,
+        "apply_url": null,
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-06-27"
+        },
+        "action": null,
+        "notes": null
+      },
+      "email": null
+    },
+    {
+      "id": "sanderson-king-chief-technology-officer",
+      "added": "2026-06-27",
+      "status": "scored",
+      "company": "Sanderson King",
+      "role": "Chief Technology Officer",
+      "location": "London",
+      "variant": "cto",
+      "score": 50,
+      "url": "https://www.linkedin.com/jobs/view/4433086155",
+      "linkedin_job_id": "4433086155",
+      "notes": "Recruiter posting. Industry TBC.",
+      "channel": {
+        "source": "unknown",
+        "method": null,
+        "apply_url": null,
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-06-27"
+        },
+        "action": null,
+        "notes": null
+      },
+      "email": null
+    },
+    {
+      "id": "bny-director-product-and-innovation---tokeni",
+      "added": "2026-06-27",
+      "status": "scored",
+      "company": "BNY",
+      "role": "Director, Product and Innovation - Tokenisation",
+      "location": "London",
+      "variant": "cto",
+      "score": 82,
+      "url": "https://www.linkedin.com/jobs/view/4414972986",
+      "linkedin_job_id": "4414972986",
+      "notes": "Digital assets / tokenisation at major bank. Strong blockchain fit.",
+      "channel": {
+        "source": "unknown",
+        "method": null,
+        "apply_url": null,
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-06-27"
+        },
+        "action": null,
+        "notes": null
+      },
+      "email": null
+    },
+    {
+      "id": "lseg-director-engineering-di&f",
+      "added": "2026-06-27",
+      "status": "scored",
+      "company": "LSEG",
+      "role": "Director, Engineering DI&F",
+      "location": "London",
+      "variant": "cto",
+      "score": 65,
+      "url": "https://www.linkedin.com/jobs/view/4415090834",
+      "linkedin_job_id": "4415090834",
+      "notes": "London Stock Exchange Group. Fintech infrastructure.",
+      "channel": {
+        "source": "unknown",
+        "method": null,
+        "apply_url": null,
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-06-27"
+        },
+        "action": null,
+        "notes": null
+      },
+      "email": null
+    },
+    {
+      "id": "kraken-data-platform-engineering-manager",
+      "added": "2026-06-27",
+      "status": "scored",
+      "company": "Kraken",
+      "role": "Data Platform Engineering Manager",
+      "location": "London",
+      "variant": "cto",
+      "score": 58,
+      "url": "https://www.linkedin.com/jobs/view/4405344328",
+      "linkedin_job_id": "4405344328",
+      "notes": "Major crypto exchange. Manager level may be below target seniority.",
+      "channel": {
+        "source": "unknown",
+        "method": null,
+        "apply_url": null,
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-06-27"
+        },
+        "action": null,
+        "notes": null
+      },
+      "email": null
+    },
+    {
+      "id": "qognitive-director-of-engineering",
+      "added": "2026-06-27",
+      "status": "scored",
+      "company": "Qognitive",
+      "role": "Director of Engineering",
+      "location": "England, UK",
+      "variant": "cto",
+      "score": 55,
+      "url": "https://www.linkedin.com/jobs/view/4430658433",
+      "linkedin_job_id": "4430658433",
+      "notes": "Quantum computing / AI company. Director level.",
+      "channel": {
+        "source": "unknown",
+        "method": null,
+        "apply_url": null,
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-06-27"
+        },
+        "action": null,
+        "notes": null
+      },
+      "email": null
+    },
+    {
+      "id": "model-ml-head-of-platform-engineering",
+      "added": "2026-06-27",
+      "status": "scored",
+      "company": "Model ML",
+      "role": "Head of Platform Engineering",
+      "location": "London",
+      "variant": "cto",
+      "score": 70,
+      "url": "https://www.linkedin.com/jobs/view/4433459733",
+      "linkedin_job_id": "4433459733",
+      "notes": "AI/ML startup. £225k + equity. High comp.",
+      "channel": {
+        "source": "unknown",
+        "method": null,
+        "apply_url": null,
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-06-27"
+        },
+        "action": null,
+        "notes": null
+      },
+      "email": null
+    },
+    {
+      "id": "mufg-director-head-of-digital-engineering-ser",
+      "added": "2026-06-27",
+      "status": "scored",
+      "company": "MUFG",
+      "role": "Director, Head of Digital Engineering Service Portfolio",
+      "location": "London",
+      "variant": "cto",
+      "score": 62,
+      "url": "https://www.linkedin.com/jobs/view/4414748287",
+      "linkedin_job_id": "4414748287",
+      "notes": "Major bank, digital engineering leadership.",
+      "channel": {
+        "source": "unknown",
+        "method": null,
+        "apply_url": null,
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-06-27"
+        },
+        "action": null,
+        "notes": null
+      },
+      "email": null
+    },
+    {
+      "id": "azets-compliance-design-lead",
+      "added": "2026-06-27",
+      "status": "scored",
+      "company": "Azets",
+      "role": "Compliance Design Lead",
+      "location": "United Kingdom",
+      "variant": "regtech",
+      "score": 68,
+      "url": "https://www.linkedin.com/jobs/view/4394643720",
+      "linkedin_job_id": "4394643720",
+      "notes": "Compliance + tech integration. Direct regtech fit.",
+      "channel": {
+        "source": "unknown",
+        "method": null,
+        "apply_url": null,
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-06-27"
+        },
+        "action": null,
+        "notes": null
+      },
+      "email": null
+    },
+    {
+      "id": "mufg-vp-financial-crime-intelligence-&-analyt",
+      "added": "2026-06-27",
+      "status": "scored",
+      "company": "MUFG",
+      "role": "VP Financial Crime Intelligence & Analytics Lead",
+      "location": "London",
+      "variant": "regtech",
+      "score": 72,
+      "url": "https://www.linkedin.com/jobs/view/4414735369",
+      "linkedin_job_id": "4414735369",
+      "notes": "Transaction monitoring & sanctions screening. Compliance tech.",
+      "channel": {
+        "source": "unknown",
+        "method": null,
+        "apply_url": null,
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-06-27"
+        },
+        "action": null,
+        "notes": null
+      },
+      "email": null
+    },
+    {
+      "id": "trg-chief-technology-officer",
+      "added": "2026-06-27",
+      "status": "scored",
+      "company": "trg.",
+      "role": "Chief Technology Officer",
+      "location": "United Kingdom",
+      "variant": "cto",
+      "score": 55,
+      "url": "https://www.linkedin.com/jobs/view/4426837963",
+      "linkedin_job_id": "4426837963",
+      "notes": "Recruiter. Industry TBC.",
+      "channel": {
+        "source": "unknown",
+        "method": null,
+        "apply_url": null,
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-06-27"
+        },
+        "action": null,
+        "notes": null
+      },
+      "email": null
+    },
+    {
+      "id": "governr-chief-technology-officer",
+      "added": "2026-06-27",
+      "status": "scored",
+      "company": "governr",
+      "role": "Chief Technology Officer",
+      "location": "London",
+      "variant": "cto",
+      "score": 72,
+      "url": "https://www.linkedin.com/jobs/view/4410210715",
+      "linkedin_job_id": "4410210715",
+      "notes": "GovTech/compliance platform. High experience match flagged by LinkedIn.",
+      "channel": {
+        "source": "unknown",
+        "method": null,
+        "apply_url": null,
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-06-27"
+        },
+        "action": null,
+        "notes": null
+      },
+      "email": null
+    },
+    {
+      "id": "product-partners-chief-technology-officer",
+      "added": "2026-06-27",
+      "status": "scored",
+      "company": "Product Partners",
+      "role": "Chief Technology Officer",
+      "location": "London",
+      "variant": "cto",
+      "score": 50,
+      "url": "https://www.linkedin.com/jobs/view/4416637061",
+      "linkedin_job_id": "4416637061",
+      "notes": "Product consultancy. High skills match.",
+      "channel": {
+        "source": "unknown",
+        "method": null,
+        "apply_url": null,
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-06-27"
+        },
+        "action": null,
+        "notes": null
+      },
+      "email": null
+    },
+    {
+      "id": "oho-group-founding-cto---stealth-ai-start-up",
+      "added": "2026-06-27",
+      "status": "scored",
+      "company": "Oho Group",
+      "role": "Founding CTO - Stealth AI Start-Up",
+      "location": "London",
+      "variant": "cto",
+      "score": 60,
+      "url": "https://www.linkedin.com/jobs/view/4430374534",
+      "linkedin_job_id": "4430374534",
+      "notes": "Stealth AI startup via recruiter.",
+      "channel": {
+        "source": "unknown",
+        "method": null,
+        "apply_url": null,
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-06-27"
+        },
+        "action": null,
+        "notes": null
+      },
+      "email": null
+    },
+    {
+      "id": "overstory-chief-technology-officer",
+      "added": "2026-06-27",
+      "status": "scored",
+      "company": "Overstory",
+      "role": "Chief Technology Officer",
+      "location": "United Kingdom",
+      "variant": "cto",
+      "score": 55,
+      "url": "https://www.linkedin.com/jobs/view/4377882825",
+      "linkedin_job_id": "4377882825",
+      "notes": "Climate tech. Remote-first.",
+      "channel": {
+        "source": "unknown",
+        "method": null,
+        "apply_url": null,
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-06-27"
+        },
+        "action": null,
+        "notes": null
+      },
+      "email": null
+    },
+    {
+      "id": "miraxis-ai-chief-technology-officer",
+      "added": "2026-06-27",
+      "status": "scored",
+      "company": "Miraxis AI",
+      "role": "Chief Technology Officer",
+      "location": "England",
+      "variant": "cto",
+      "score": 58,
+      "url": "https://www.linkedin.com/jobs/view/4420147536",
+      "linkedin_job_id": "4420147536",
+      "notes": "AI company. CTO role.",
+      "channel": {
+        "source": "unknown",
+        "method": null,
+        "apply_url": null,
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-06-27"
+        },
+        "action": null,
+        "notes": null
+      },
+      "email": null
+    },
+    {
+      "id": "symphony-chief-technology-officer-cloud9",
+      "added": "2026-06-27",
+      "status": "scored",
+      "company": "Symphony",
+      "role": "Chief Technology Officer, Cloud9",
+      "location": "London",
+      "variant": "cto",
+      "score": 68,
+      "url": "https://www.linkedin.com/jobs/view/4416467019",
+      "linkedin_job_id": "4416467019",
+      "notes": "Financial comms platform. Fintech adjacent.",
+      "channel": {
+        "source": "unknown",
+        "method": null,
+        "apply_url": null,
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-06-27"
+        },
+        "action": null,
+        "notes": null
+      },
+      "email": null
     }
   ]
 }

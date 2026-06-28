@@ -54,7 +54,11 @@
       "metrics": {
         "likes": 1,
         "retweets": 0,
-        "replies": 1
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 137,
+        "last_checked": "2026-06-28T14:08:39.691Z"
       },
       "notes": "First post after long silence. Combines comeback with MCP meta-demonstration. Must land before anything else."
     },
@@ -78,7 +82,11 @@
       "metrics": {
         "likes": 0,
         "retweets": 0,
-        "replies": 0
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 19,
+        "last_checked": "2026-06-28T14:08:39.877Z"
       },
       "notes": "Reply-to confirmed working. Posted as reply to tweet 2067236318627680743."
     },
@@ -99,26 +107,26 @@
       "angle": "Re-establish presence, pipeline proof, tease methodology follow-up",
       "sequence": 1,
       "metrics": {
-        "likes": 18,
+        "likes": 20,
         "comments": 10,
         "shares": 0,
-        "impressions": 642,
+        "impressions": 713,
         "reactions": {
-          "LIKE": 14,
+          "LIKE": 15,
           "EMPATHY": 3,
-          "PRAISE": 1
+          "PRAISE": 2
         },
         "commentsList": [
           {
             "author": "Mark Smalley",
-            "subtitle": "FinTech Enthusiast & Technology Evangelist",
+            "subtitle": "Engineering Leader | AI Platforms, Digital Assets, Developer Tools",
             "text": "Touché — who do you think is replying right now?",
             "created": 1781783837869,
             "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473013369512411136%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473343078305792000%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473013369512411136%2Curn%3Ali%3Aactivity%3A7473002063375990784%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287473343078305792000%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
           },
           {
             "author": "Mark Smalley",
-            "subtitle": "FinTech Enthusiast & Technology Evangelist",
+            "subtitle": "Engineering Leader | AI Platforms, Digital Assets, Developer Tools",
             "text": "Yeah, back in West Yorkshire since last year. Still adjusting to the weather after nearly 30 years in Malaysia.",
             "created": 1781935031759,
             "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473009376979759105%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473977231443259392%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473009376979759105%2Curn%3Ali%3Aactivity%3A7473002063375990784%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287473977231443259392%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
@@ -146,7 +154,7 @@
           },
           {
             "author": "Mark Smalley",
-            "subtitle": "FinTech Enthusiast & Technology Evangelist",
+            "subtitle": "Engineering Leader | AI Platforms, Digital Assets, Developer Tools",
             "text": "One for chess variants and one for hex-based strategy. Have a look: https://moddable.games/engines/ — the architecture ended up being more interesting than the games themselves and both have interesting roadmaps ahead of them.",
             "created": 1781935030812,
             "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473254607591374849%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473977227475488768%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473254607591374849%2Curn%3Ali%3Aactivity%3A7473002063375990784%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287473977227475488768%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
@@ -173,10 +181,87 @@
             "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473009376979759105%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473009376979759105%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
           }
         ],
-        "last_checked": "2026-06-20T17:16:54.338Z"
+        "last_checked": "2026-06-28T08:21:33.329Z"
       },
       "pending_replies": [],
-      "notes": "First post after long silence. Combines comeback with MCP meta-demonstration. No ask, no role signal — just presence and proof."
+      "notes": "First post after long silence. Combines comeback with MCP meta-demonstration. No ask, no role signal — just presence and proof.",
+      "metrics_linkedin": {
+        "likes": 20,
+        "comments": 10,
+        "shares": 0,
+        "impressions": 725,
+        "reactions": {
+          "LIKE": 15,
+          "EMPATHY": 3,
+          "PRAISE": 2
+        },
+        "commentsList": [
+          {
+            "author": "Mark Smalley",
+            "subtitle": "Engineering Leader | AI Platforms, Digital Assets, Developer Tools",
+            "text": "Touché — who do you think is replying right now?",
+            "created": 1781783837869,
+            "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473013369512411136%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473343078305792000%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473013369512411136%2Curn%3Ali%3Aactivity%3A7473002063375990784%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287473343078305792000%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
+          },
+          {
+            "author": "Mark Smalley",
+            "subtitle": "Engineering Leader | AI Platforms, Digital Assets, Developer Tools",
+            "text": "Yeah, back in West Yorkshire since last year. Still adjusting to the weather after nearly 30 years in Malaysia.",
+            "created": 1781935031759,
+            "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473009376979759105%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473977231443259392%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473009376979759105%2Curn%3Ali%3Aactivity%3A7473002063375990784%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287473977231443259392%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
+          },
+          {
+            "author": "richard abas",
+            "subtitle": "founder, geotude.com",
+            "text": "Bon voyage ",
+            "created": 1781837564901,
+            "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473568425811025920%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473568425811025920%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
+          },
+          {
+            "author": "Harinder Singh",
+            "subtitle": "Growth/GTM Lead | I build and deploy monetizable GTM & funnel systems | Founder, MIMR Growth Lab",
+            "text": "Put a chatbot on your CV bro 😂 I can show you how I do mine if you wanna see ",
+            "created": 1781705229167,
+            "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473013369512411136%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473013369512411136%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
+          },
+          {
+            "author": "Ruben Tan",
+            "subtitle": "Solutions Architect | Fintech, Blockchain",
+            "text": "Didn't know you did game engines. Awesome!",
+            "created": 1781762744807,
+            "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473254607591374849%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473254607591374849%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
+          },
+          {
+            "author": "Mark Smalley",
+            "subtitle": "Engineering Leader | AI Platforms, Digital Assets, Developer Tools",
+            "text": "One for chess variants and one for hex-based strategy. Have a look: https://moddable.games/engines/ — the architecture ended up being more interesting than the games themselves and both have interesting roadmaps ahead of them.",
+            "created": 1781935030812,
+            "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473254607591374849%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473977227475488768%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473254607591374849%2Curn%3Ali%3Aactivity%3A7473002063375990784%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287473977227475488768%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
+          },
+          {
+            "author": "richard abas",
+            "subtitle": "founder, geotude.com",
+            "text": "welcome home",
+            "created": 1781965664959,
+            "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473568425811025920%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7474105716400783360%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473568425811025920%2Curn%3Ali%3Aactivity%3A7473002063375990784%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287474105716400783360%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
+          },
+          {
+            "author": "Daniel Yap",
+            "subtitle": "Founder and COO - ProxifAI",
+            "text": "Mark Smalley Kiera and Kyra (did I get that right) must be very grown up now. ",
+            "created": 1781785463880,
+            "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473009376979759105%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473349898289971200%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473009376979759105%2Curn%3Ali%3Aactivity%3A7473002063375990784%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287473349898289971200%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
+          },
+          {
+            "author": "Daniel Yap",
+            "subtitle": "Founder and COO - ProxifAI",
+            "text": "Are you back in the UK now? ",
+            "created": 1781704277273,
+            "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473009376979759105%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473009376979759105%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
+          }
+        ],
+        "last_checked": "2026-06-28T14:08:40.559Z"
+      }
     },
     {
       "id": "16-days-twitter",
@@ -231,7 +316,16 @@
           "posted_at": "2026-06-19T13:56:24Z",
           "by": "mark"
         }
-      ]
+      ],
+      "metrics": {
+        "likes": 1,
+        "retweets": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 66,
+        "last_checked": "2026-06-28T14:08:40.767Z"
+      }
     },
     {
       "id": "16-days-linkedin",
@@ -253,14 +347,33 @@
         "likes": 2,
         "comments": 0,
         "shares": 0,
-        "impressions": 242,
+        "impressions": 781,
         "reactions": {
           "LIKE": 2
         },
         "commentsList": [],
-        "last_checked": "2026-06-20T17:16:55.527Z"
+        "last_checked": "2026-06-28T08:21:33.938Z"
       },
-      "notes": "Follow-up to comeback posts. Explains the process teased in the comeback. Positions engineering approach."
+      "notes": "Follow-up to comeback posts. Explains the process teased in the comeback. Positions engineering approach.",
+      "metrics_linkedin": {
+        "likes": 2,
+        "comments": 1,
+        "shares": 0,
+        "impressions": 800,
+        "reactions": {
+          "LIKE": 2
+        },
+        "commentsList": [
+          {
+            "author": "Mark Smalley",
+            "subtitle": "Engineering Leader | AI Platforms, Digital Assets, Developer Tools",
+            "text": "It's been nine days since the last post. The infrastructure I built in 16 days is now the primary contributor to the ecosystem it supports.\n\nNew game variants are being researched, verified against historical rulesets, and published without manual intervention. The same architecture behind the chess engines and hexmaps also drives a content pipeline, a job application engine, engagement tracking, and email integration. One development environment for shipping code and also reaching the people it's built for.\n\nArchitecture decisions compound. The system that made 16 days possible now ships work while I sleep.\n\nhttps://smalley.my/workflow/",
+            "created": 1782636699840,
+            "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473696853268725761?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473696853268725761%2C7476920240686424064%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287476920240686424064%2Curn%3Ali%3Aactivity%3A7473696853268725761%29"
+          }
+        ],
+        "last_checked": "2026-06-28T14:08:41.466Z"
+      }
     },
     {
       "id": "vanilla-js-twitter",

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0B0F1A">
+<meta name="robots" content="noindex, nofollow">
+<style>html{background:#0B0F1A}body{opacity:0;transition:opacity .15s ease}</style>
+<title>Chess Variants That Defeated Conventional AI Logic — Mark Smalley</title>
+<meta name="description" content="What happens when you ask AI to generate puzzles for 76 different chess rule systems. Three categories of challenge that broke every assumption.">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../../img/apple-touch-icon.png">
+<link rel="stylesheet" href="../../css/_sm.css?v=1.0.35">
+<link rel="stylesheet" href="../../css/thoughts.css?v=1.0.35">
+<link rel="stylesheet" href="../../css/pages.css?v=1.0.35">
+</head>
+<body>
+<div id="nav-root"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Thoughts</div>
+    <h1>Chess Variants That Defeated Conventional AI Logic</h1>
+  </div>
+</section>
+
+<section class="page-content">
+  <div class="container">
+    <div class="article-content">
+      <div class="article-date">22 June 2026 · 8 min read</div>
+
+      <p>Standard chess puzzle generation is a solved problem. The Lichess database contains over 6 million puzzles sourced from real games. The formula is simple: find a position with exactly one correct move, verify computationally, publish. Engines like Stockfish make the verification trivial.</p>
+
+      <p>Every single one of those 6 million puzzles is standard chess. Lichess supports variant play (Atomic, Crazyhouse, Antichess, and others) but offers zero variant-specific puzzles. No other platform does either. The formula that generates millions of standard puzzles does not transfer.</p>
+
+      <p>"Find the move that exploits THIS variant's unique mechanic" requires an engine that understands 76 different win conditions, move filters, and game mechanics, then identifies positions with exactly one correct answer. During development of the <a href="https://chess.moddable.games" target="_blank" rel="noopener">Moddable Chess Engine</a>, several variant families broke every assumption the puzzle generator was built on.</p>
+
+      <h2>When Losing is Winning</h2>
+
+      <p>Every chess algorithm ever written optimises for material advantage. More pieces is better. Protect your king. Capture theirs. The entire field of computer chess, from minimax to neural networks, encodes this axiom.</p>
+
+      <p>Antichess, Suicide Chess, and Giveaway Chess invert it completely. You win by having zero pieces. The objective is to lose everything as fast as possible. Captures are mandatory: if you can take, you must take.</p>
+
+      <p>The puzzle generator checks "does this move lead to a win?" For standard chess, that means checkmate or decisive material advantage. For antichess, the win condition fires when it's your turn and you have no legal moves because you have no pieces left. The critical moment happens AFTER the opponent captures your last piece. A depth-1 search from the solver's perspective can never see this.</p>
+
+      <p>The fix required flipping perspective entirely. The puzzle becomes: "You have one piece left. Move it to a square where the opponent is forced to capture it." Because captures are mandatory (the variant's <code>moveFilter</code> enforces this), if only one square puts your piece in a mandatory-capture position, that's the unique solution. This required depth-2 search with the variant's move filter to verify that ALL opponent responses lead to the solver winning.</p>
+
+      <pre><code class="language-javascript">// Antichess moveFilter: captures are mandatory
+moveFilter: (moves, state) => {
+  const captures = moves.filter(m => m.captured);
+  return captures.length > 0 ? captures : moves;
+}</code></pre>
+
+      <p>Every optimisation the AI learned for standard chess was actively working against it here. Material evaluation, king safety, positional heuristics: all negative signals in a game where the goal is self-destruction.</p>
+
+      <h2>Codrus: Sacrifice Your Own King</h2>
+
+      <p>In standard chess, the king must never be captured. Every move is validated against this constraint. Check detection, castling rules, and the entire endgame theory revolve around king preservation.</p>
+
+      <p>In Codrus, you win when your king is captured. The king can move freely into danger (<code>noCheck: true</code> in the variant config). There are no checks, no checkmate, no castling restrictions. Your king is a sacrifice waiting to happen.</p>
+
+      <pre><code class="language-javascript">// Codrus variant config
+{
+  noCheck: true,
+  winCondition: 'kingCaptured',
+  winFor: 'self'  // you win when YOUR king is taken
+}</code></pre>
+
+      <p>The problem: captures are not mandatory in Codrus (unlike Antichess). The opponent does not have to take your king even if it walks directly into danger. You cannot force someone to capture a piece when capture is voluntary.</p>
+
+      <p>No depth-1 or depth-2 search from the solver's perspective works. Moving your king into danger is easy. Guaranteeing the opponent will take it is impossible within the puzzle format.</p>
+
+      <p>The fix came from working backwards. During full game simulations, kings get captured 98% of the time because leaving an undefended king on the board is almost always the best tactical decision for the capturing side. The generator plays complete games, finds positions just before a king capture occurs, and checks: "Was there exactly one piece that could capture the king?" If yes, that's a valid puzzle from the capturing side's perspective. The puzzle is reframed as "find the capture" rather than "find the sacrifice."</p>
+
+      <p>The variant where you cannot force a win because your opponent has to cooperate. Yet games end naturally almost every time.</p>
+
+      <h2>The Information Paradox</h2>
+
+      <p>The first two categories merely invert axioms. The evaluation function points the wrong way, or the win condition contradicts expectations. These are solvable by adjusting the search direction.</p>
+
+      <p>Four variants in the puzzle pool are fundamentally paradoxical. Not hard to generate puzzles for. Logically impossible.</p>
+
+      <table>
+        <thead>
+          <tr><th>Variant</th><th>Core mechanic</th><th>Paradox</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Fog of War</td><td>You only see squares your pieces can reach</td><td>Showing the full board removes the defining mechanic</td></tr>
+          <tr><td>Dark Chess</td><td>You cannot see opponent's pieces</td><td>Full-board display contradicts the game's premise</td></tr>
+          <tr><td>Dice Chess</td><td>Dice determines which piece type you can move</td><td>A puzzle assumes free choice. Dice removes that</td></tr>
+          <tr><td>Einstein Chess</td><td>Dice determines piece mutation on capture</td><td>The puzzle ignores the random element entirely</td></tr>
+        </tbody>
+      </table>
+
+      <p>The contradiction is structural:</p>
+
+      <blockquote>
+        <p>A puzzle requires complete information to be solvable.<br>
+        These variants are defined by incomplete information.<br>
+        You cannot create a faithful puzzle for these variants.</p>
+      </blockquote>
+
+      <h3>Three possible resolutions</h3>
+
+      <p><strong>Strip the mechanic.</strong> Show the full board. The result is technically solvable but is no longer a Fog of War puzzle. It is a "capture the king" puzzle on a standard board. The variant's identity is erased.</p>
+
+      <p><strong>Preserve the mechanic.</strong> Show only what the player would see. The puzzle becomes unsolvable because you lack information needed to find the answer. You would have to guess which hidden squares contain pieces.</p>
+
+      <p><strong>Redefine "puzzle."</strong> Frame it as a probabilistic challenge: "Given what you can see, what move maximises your expected win probability?" This is no longer a puzzle with a single correct answer. It is a decision theory problem.</p>
+
+      <h3>Would infinite compute solve it?</h3>
+
+      <p>For hidden information variants (Fog of War, Dark Chess): no. The paradox is structural, not computational. No amount of processing power resolves "you need to see X to solve it, but not seeing X is the game." You could compute optimal play under uncertainty (minimax with information sets, like poker AI), but the result is not a puzzle. It is a strategy recommendation. The format does not support it.</p>
+
+      <p>For randomness variants (Dice Chess, Einstein Chess): partially. You could present the puzzle as "IF the dice shows knight, what's the winning move?" This adds a conditional premise that makes it solvable. You are now solving a different game, one where the dice result is known, which again removes the mechanic that defines the variant.</p>
+
+      <h3>The philosophical bottom line</h3>
+
+      <p>Some game mechanics exist in a space that is orthogonal to the puzzle format. Puzzles are a subset of deterministic, complete-information games. Asking "what is the Fog of War puzzle?" is like asking "what does purple taste like?" The question maps concepts across incompatible domains.</p>
+
+      <p>The AI failed here not because it lacked capability, but because it naively applied a template (puzzle generation) to domains where that template is logically incoherent. A human game designer would have said "you cannot puzzle-ify fog" immediately. The AI had to generate the puzzles, serve them, observe the contradiction in production (the rendered SVG shows no fog), and then reason about why the output was wrong.</p>
+
+      <h2>What This Taught Us</h2>
+
+      <p>Three lessons emerged from building puzzle generation across 76 variants:</p>
+
+      <p><strong>Axioms are invisible until you violate them.</strong> "More material is good" is not written anywhere in a chess engine's architecture. It is assumed by every layer simultaneously: the evaluation function, the search heuristics, the move ordering, the pruning decisions. You only discover the axiom when a variant contradicts it and the entire stack produces nonsense.</p>
+
+      <p><strong>Not every problem is the problem it looks like.</strong> Codrus looks like a puzzle generation problem. It is actually a game simulation problem with a puzzle extraction step at the end. Reframing the approach matters more than improving the algorithm.</p>
+
+      <p><strong>Some problems are not problems at all.</strong> The information paradox variants were not bugs in the generator. They were category errors in the task definition. Recognising "this task is incoherent" is a valid engineering output. The correct action was removing those variants from the puzzle pool, not building a more sophisticated generator.</p>
+
+      <p>The Moddable Chess Engine now generates over 1,000 puzzles across 66 of its 76 supported variants, each with validated solutions. Four variants were removed from the pool entirely. Not because the engine could not handle them, but because the concept of a puzzle does not apply to them.</p>
+
+      <p>Six million standard puzzles exist because the formula is universal. Variant puzzles require solving the formula from scratch for each ruleset. That is why nobody else has built them. Sometimes the most important thing an engineering system can learn is where the universal formula ends and the per-variant work begins.</p>
+
+      <div class="article-tags">
+        <a class="pill" href="../../explore/?tag=AI/LLM">AI/LLM</a>
+        <a class="pill" href="../../explore/?tag=Chess">Chess</a>
+        <a class="pill" href="../../explore/?tag=Game design">Game design</a>
+        <a class="pill" href="../../explore/?tag=Plugin architecture">Plugin architecture</a>
+        <a class="pill" href="../../explore/?tag=JavaScript">JavaScript</a>
+        <a class="pill" href="../../explore/?tag=MCP">MCP</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div id="footer-root"></div>
+<script src="../../js/sm-loader.js?v=1.0.35"></script>
+</body>
+</html>

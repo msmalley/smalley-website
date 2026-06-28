@@ -7,7 +7,10 @@ mcp/**/.env
 mcp/**/.env.*
 !mcp/**/.env.example
 mcp/**/node_modules/
+mcp/**/credentials/
 cvs/.tmp-*
 cvs/jobs-discovery.json
 cvs/jobs-discovery-history.json
 cvs/jobs-scored.json
+dashboard/
+.wrangler/

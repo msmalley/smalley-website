@@ -35,8 +35,10 @@ cp "$COOKIE_DB" "$TMP_DB"
 update_env() {
   local key="$1"
   local value="$2"
+  local escaped_value
+  escaped_value=$(printf '%s\n' "$value" | sed 's/[&/\]/\\&/g')
   if grep -q "^${key}=" "$ENV_FILE"; then
-    sed -i '' "s|^${key}=.*|${key}=${value}|" "$ENV_FILE"
+    sed -i '' "s|^${key}=.*|${key}=${escaped_value}|" "$ENV_FILE"
   else
     echo "${key}=${value}" >> "$ENV_FILE"
   fi
@@ -61,21 +63,15 @@ if [ "$PLATFORM" = "all" ] || [ "$PLATFORM" = "linkedin" ]; then
   LIDC=$(echo "$LIDC" | sed 's/^"//;s/"$//')
 
   # JSESSIONID is a session-only cookie (no expiry) so Firefox stores it in
-  # memory, not cookies.sqlite. If li_at exists, fetch JSESSIONID via curl.
+  # memory, not cookies.sqlite. Prompt for manual paste from DevTools.
   if [ -z "$JSESSIONID" ] && [ -n "$LI_AT" ]; then
-    echo "  JSESSIONID not in cookie DB (session-only), fetching via li_at..."
-    JSESSIONID=$(curl -sI -b "li_at=$LI_AT" "https://www.linkedin.com/voyager/api/me" 2>/dev/null \
-      | grep -i 'set-cookie.*JSESSIONID' \
-      | sed 's/.*JSESSIONID=//;s/;.*//' \
-      | sed 's/^"//;s/"$//;s/^ajax://')
-    if [ -z "$JSESSIONID" ]; then
-      # Fallback: extract from response headers of a simple page load
-      JSESSIONID=$(curl -sI -b "li_at=$LI_AT" -L "https://www.linkedin.com/feed/" 2>/dev/null \
-        | grep -i 'set-cookie.*JSESSIONID' \
-        | sed 's/.*JSESSIONID=//;s/;.*//' \
-        | sed 's/^"//;s/"$//;s/^ajax://')
-    fi
-    [ -n "$JSESSIONID" ] && echo "  JSESSIONID fetched successfully"
+    echo "  JSESSIONID not in cookie DB (session-only)."
+    echo "  → Open Firefox DevTools → Storage → Cookies → linkedin.com"
+    echo "  → Copy the JSESSIONID value (e.g. ajax:1234567890123456789)"
+    printf "  Paste JSESSIONID: "
+    read -r JSESSIONID
+    JSESSIONID=$(echo "$JSESSIONID" | sed 's/^"//;s/"$//;s/^ajax://')
+    [ -n "$JSESSIONID" ] && echo "  JSESSIONID set successfully"
   fi
 
   LI_MISSING=""

@@ -12,7 +12,8 @@ const GRAPHQL_BASE = 'https://x.com/i/api/graphql';
 const QUERY_IDS = {
   CreateTweet: 'DQIp0b4mKIciCAZ3bfrwAA',
   SearchTimeline: 'yIphfmxUO-hddQHKIOk9tA',
-  DeleteTweet: 'nxpZCY2K-I6QoFHAHeojFQ'
+  DeleteTweet: 'nxpZCY2K-I6QoFHAHeojFQ',
+  TweetResultByRestId: 'sCU6ckfHY0CyJ4HFjPhjtg'
 };
 
 // Detect which auth method is available
@@ -507,6 +508,53 @@ export async function searchTweets(query, count = 10) {
     return officialSearchTweets(query, count);
   }
   return cookieSearchTweets(query, count);
+}
+
+export async function getTweetById(tweetId) {
+  const variables = { tweetId, withCommunity: false, includePromotedContent: false, withVoice: false };
+  const params = new URLSearchParams({
+    variables: JSON.stringify(variables),
+    features: JSON.stringify(TWEET_FEATURES),
+    fieldToggles: JSON.stringify(FIELD_TOGGLES)
+  });
+
+  const response = await fetch(
+    `${GRAPHQL_BASE}/${QUERY_IDS.TweetResultByRestId}/TweetResultByRestId?${params}`,
+    { headers: getCookieHeaders() }
+  );
+
+  const text = await response.text();
+  if (!response.ok) {
+    if (response.status === 401 || response.status === 403) {
+      throw new Error('Twitter auth failed. Cookie tokens have likely expired.');
+    }
+    throw new Error(`Twitter API error (${response.status}): ${text.slice(0, 300)}`);
+  }
+
+  let data;
+  try { data = JSON.parse(text); } catch {
+    throw new Error('Twitter returned non-JSON response. Auth token likely expired.');
+  }
+
+  const tweet = data?.data?.tweetResult?.result;
+  if (!tweet) {
+    throw new Error(`Tweet ${tweetId} not found or unavailable.`);
+  }
+
+  const legacy = tweet.legacy || {};
+  return {
+    id: tweet.rest_id,
+    text: legacy.full_text,
+    created_at: legacy.created_at,
+    metrics: {
+      likes: legacy.favorite_count || 0,
+      retweets: legacy.retweet_count || 0,
+      replies: legacy.reply_count || 0,
+      quotes: legacy.quote_count || 0,
+      bookmarks: legacy.bookmark_count || 0,
+      views: parseInt(tweet.views?.count) || null
+    }
+  };
 }
 
 export async function deleteTweet(tweetId) {

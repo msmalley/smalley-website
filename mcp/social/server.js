@@ -7,7 +7,7 @@ import {
   CallToolRequestSchema,
   ListToolsRequestSchema
 } from '@modelcontextprotocol/sdk/types.js';
-import { postTweet, postThread, searchTweets, deleteTweet } from './providers/twitter.js';
+import { postTweet, postThread, searchTweets, deleteTweet, getTweetById } from './providers/twitter.js';
 import { postLinkedIn, commentOnPost, deletePost as deleteLinkedIn, searchJobs, getProfile } from './providers/linkedin.js';
 import { getPostInsights, reactToContent, verifySession as verifyLinkedInSession } from './providers/linkedin-voyager.js';
 import { searchLinkedInJobs, fetchLinkedInJobDescription } from './providers/linkedin-jobs.js';
@@ -194,16 +194,29 @@ const TOOLS = [
   },
   {
     name: 'social_insights',
-    description: 'Get engagement metrics for a LinkedIn post with delta tracking. Returns current totals AND what changed since last check (new reactions, new comments with authors, impression growth). Auto-updates baseline in pipeline.json.',
+    description: 'Get engagement metrics for a post with delta tracking. Supports LinkedIn (share/activity URN or URL) and Twitter (tweet ID or x.com URL). Returns current totals AND what changed since last check. Auto-updates baseline in pipeline.json.',
     inputSchema: {
       type: 'object',
       properties: {
         post_id: {
           type: 'string',
-          description: 'LinkedIn post identifier: URL (linkedin.com/feed/update/urn:li:share:123), share URN (urn:li:share:123), or activity URN (urn:li:activity:123)'
+          description: 'Post identifier. LinkedIn: URL, share URN, or activity URN. Twitter: tweet ID or x.com/status URL.'
+        },
+        platform: {
+          type: 'string',
+          enum: ['linkedin', 'twitter'],
+          description: 'Platform (auto-detected from post_id if omitted)'
         }
       },
       required: ['post_id']
+    }
+  },
+  {
+    name: 'social_insights_all',
+    description: 'Refresh engagement metrics for ALL tracked posts in pipeline.json. Returns a summary table with current stats and deltas since last check for every posted item (Twitter + LinkedIn).',
+    inputSchema: {
+      type: 'object',
+      properties: {}
     }
   },
   {
@@ -536,7 +549,23 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         break;
 
       case 'social_insights': {
-        const current = await getPostInsights(args.post_id);
+        const isTwitter = args.platform === 'twitter' ||
+          args.post_id.includes('x.com') ||
+          args.post_id.includes('twitter.com') ||
+          /^\d{15,}$/.test(args.post_id);
+
+        let current;
+        let platformKey;
+
+        if (isTwitter) {
+          const tweetId = args.post_id.match(/(\d{15,})/)?.[1];
+          if (!tweetId) throw new Error('Could not extract tweet ID from: ' + args.post_id);
+          current = await getTweetById(tweetId);
+          platformKey = 'twitter';
+        } else {
+          current = await getPostInsights(args.post_id);
+          platformKey = 'linkedin';
+        }
 
         let pipeline;
         try { pipeline = JSON.parse(readFileSync(PIPELINE_PATH, 'utf8')); } catch { pipeline = null; }
@@ -544,48 +573,131 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         let delta = null;
         if (pipeline?.posts) {
           const inputId = args.post_id.match(/\d{10,}/)?.[0];
-          const activityId = current.activityUrn?.match(/\d{10,}/)?.[0];
+          const activityId = current.activityUrn?.match(/\d{10,}/)?.[0] || inputId;
           const post = pipeline.posts.find(p => {
-            const pId = p.platform_id?.match(/\d{10,}/)?.[0];
-            return pId && (pId === inputId || pId === activityId);
+            const pId = (typeof p.platform_id === 'string' ? p.platform_id : '')
+              .match(/\d{10,}/)?.[0];
+            const urlId = (p.url || '').match(/\d{10,}/)?.[0];
+            return (pId && (pId === inputId || pId === activityId)) ||
+                   (urlId && (urlId === inputId || urlId === activityId));
           });
 
           if (post?.metrics) {
-            const prev = post.metrics;
-            const prevCommentAuthors = (prev.commentsList || []).map(c => c.author + ':' + c.text);
-            const newComments = (current.commentsList || []).filter(c =>
-              !prevCommentAuthors.includes(c.author + ':' + c.text)
-            );
-
-            delta = {
-              new_reactions: (current.likes || 0) - (prev.likes || 0),
-              new_comments: (current.comments || 0) - (prev.comments || 0),
-              new_shares: (current.shares || 0) - (prev.shares || 0),
-              impression_growth: current.impressions && prev.impressions
-                ? current.impressions - prev.impressions : null,
-              new_comment_authors: newComments.map(c => ({
-                author: c.author,
-                subtitle: c.subtitle,
-                text: c.text
-              }))
-            };
+            const prev = platformKey === 'twitter' ? post.metrics : post.metrics;
+            if (platformKey === 'twitter') {
+              delta = {
+                new_likes: (current.metrics.likes || 0) - (prev.likes || 0),
+                new_retweets: (current.metrics.retweets || 0) - (prev.retweets || 0),
+                new_replies: (current.metrics.replies || 0) - (prev.replies || 0),
+                new_views: current.metrics.views && prev.views
+                  ? current.metrics.views - prev.views : null
+              };
+            } else {
+              const prevCommentAuthors = (prev.commentsList || []).map(c => c.author + ':' + c.text);
+              const newComments = (current.commentsList || []).filter(c =>
+                !prevCommentAuthors.includes(c.author + ':' + c.text)
+              );
+              delta = {
+                new_reactions: (current.likes || 0) - (prev.likes || 0),
+                new_comments: (current.comments || 0) - (prev.comments || 0),
+                new_shares: (current.shares || 0) - (prev.shares || 0),
+                impression_growth: current.impressions && prev.impressions
+                  ? current.impressions - prev.impressions : null,
+                new_comment_authors: newComments.map(c => ({
+                  author: c.author,
+                  subtitle: c.subtitle,
+                  text: c.text
+                }))
+              };
+            }
           }
 
           if (post) {
-            post.metrics = {
-              likes: current.likes,
-              comments: current.comments,
-              shares: current.shares,
-              impressions: current.impressions || null,
-              reactions: current.reactions || null,
-              commentsList: current.commentsList || [],
-              last_checked: new Date().toISOString()
-            };
+            if (platformKey === 'twitter') {
+              post.metrics = {
+                ...current.metrics,
+                last_checked: new Date().toISOString()
+              };
+            } else {
+              post.metrics = {
+                likes: current.likes,
+                comments: current.comments,
+                shares: current.shares,
+                impressions: current.impressions || null,
+                reactions: current.reactions || null,
+                commentsList: current.commentsList || [],
+                last_checked: new Date().toISOString()
+              };
+            }
             try { writeFileSync(PIPELINE_PATH, JSON.stringify(pipeline, null, 2)); } catch {}
           }
         }
 
         result = { ...current, delta };
+        break;
+      }
+
+      case 'social_insights_all': {
+        let pipeline;
+        try { pipeline = JSON.parse(readFileSync(PIPELINE_PATH, 'utf8')); } catch {
+          throw new Error('Could not read pipeline.json');
+        }
+
+        const posted = (pipeline.posts || []).filter(p => p.status === 'posted');
+        const results = [];
+
+        for (const post of posted) {
+          const platforms = post.platforms || [];
+          const prev = post.metrics || {};
+
+          if (platforms.includes('twitter') && post.url?.includes('x.com')) {
+            const tweetId = post.url.match(/(\d{15,})/)?.[1] || (typeof post.platform_id === 'string' ? post.platform_id : null);
+            if (tweetId) {
+              try {
+                const tw = await getTweetById(tweetId);
+                const delta = {
+                  new_likes: (tw.metrics.likes || 0) - (prev.likes || 0),
+                  new_retweets: (tw.metrics.retweets || 0) - (prev.retweets || 0),
+                  new_replies: (tw.metrics.replies || 0) - (prev.replies || 0),
+                  new_views: tw.metrics.views && prev.views ? tw.metrics.views - prev.views : null
+                };
+                post.metrics = { ...tw.metrics, last_checked: new Date().toISOString() };
+                results.push({ platform: 'twitter', id: tweetId, content: (post.content || '').slice(0, 80), ...tw.metrics, delta });
+              } catch (e) {
+                results.push({ platform: 'twitter', id: tweetId, error: e.message });
+              }
+            }
+          }
+
+          if (platforms.includes('linkedin')) {
+            const pidStr = typeof post.platform_id === 'string' ? post.platform_id : '';
+            const liUrn = pidStr.includes('urn:li:') ? pidStr : null;
+            const liId = liUrn || post.url?.match(/(urn:li:(?:share|activity):\d+)/)?.[1];
+            if (liId) {
+              try {
+                const li = await getPostInsights(liId);
+                const prevLi = post.metrics_linkedin || {};
+                const delta = {
+                  new_reactions: (li.likes || 0) - (prevLi.likes || 0),
+                  new_comments: (li.comments || 0) - (prevLi.comments || 0),
+                  impression_growth: li.impressions && prevLi.impressions ? li.impressions - prevLi.impressions : null
+                };
+                post.metrics_linkedin = {
+                  likes: li.likes, comments: li.comments, shares: li.shares,
+                  impressions: li.impressions, reactions: li.reactions,
+                  commentsList: li.commentsList || [],
+                  last_checked: new Date().toISOString()
+                };
+                results.push({ platform: 'linkedin', id: liId, content: (post.content || '').slice(0, 80), likes: li.likes, comments: li.comments, impressions: li.impressions, delta });
+              } catch (e) {
+                results.push({ platform: 'linkedin', id: liId, error: e.message });
+              }
+            }
+          }
+        }
+
+        try { writeFileSync(PIPELINE_PATH, JSON.stringify(pipeline, null, 2)); } catch {}
+        result = { posts_checked: results.length, results };
         break;
       }
 

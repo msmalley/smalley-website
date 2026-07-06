@@ -1,5 +1,14 @@
 [
   {
+    "slug": "building-the-machine-that-builds-your-career",
+    "title": "Building the Machine That Builds Your Career",
+    "date": "2026-07-06",
+    "readingTime": "8 min",
+    "tags": ["AI/LLM", "Job Search", "Product Design", "Scoring Systems", "Engineering Journal"],
+    "excerpt": "What happens when getting a job requires building a system that helps people get jobs. A real-time engineering journal from inside the paradox.",
+    "draft": true
+  },
+  {
     "slug": "16-days-one-ecosystem",
     "title": "16 Days, One Ecosystem",
     "date": "2026-06-12",

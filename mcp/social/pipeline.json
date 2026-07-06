@@ -60,7 +60,13 @@
         "views": 137,
         "last_checked": "2026-06-28T14:08:39.691Z"
       },
-      "notes": "First post after long silence. Combines comeback with MCP meta-demonstration. Must land before anything else."
+      "notes": "First post after long silence. Combines comeback with MCP meta-demonstration. Must land before anything else.",
+      "metrics_twitter": {
+        "impressions": 137,
+        "likes": 1,
+        "comments": 1,
+        "shares": 0
+      }
     },
     {
       "id": "comeback-twitter-reply",
@@ -88,7 +94,13 @@
         "views": 19,
         "last_checked": "2026-06-28T14:08:39.877Z"
       },
-      "notes": "Reply-to confirmed working. Posted as reply to tweet 2067236318627680743."
+      "notes": "Reply-to confirmed working. Posted as reply to tweet 2067236318627680743.",
+      "metrics_twitter": {
+        "impressions": 19,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0
+      }
     },
     {
       "id": "comeback-linkedin",
@@ -186,10 +198,10 @@
       "pending_replies": [],
       "notes": "First post after long silence. Combines comeback with MCP meta-demonstration. No ask, no role signal — just presence and proof.",
       "metrics_linkedin": {
+        "impressions": 757,
         "likes": 20,
         "comments": 10,
         "shares": 0,
-        "impressions": 725,
         "reactions": {
           "LIKE": 15,
           "EMPATHY": 3,
@@ -259,8 +271,11 @@
             "created": 1781704277273,
             "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473009376979759105%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473009376979759105%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
           }
-        ],
-        "last_checked": "2026-06-28T14:08:40.559Z"
+        ]
+      },
+      "deltas": {
+        "impressions": 0,
+        "likes": 0
       }
     },
     {
@@ -325,6 +340,12 @@
         "bookmarks": 0,
         "views": 66,
         "last_checked": "2026-06-28T14:08:40.767Z"
+      },
+      "metrics_twitter": {
+        "impressions": 66,
+        "likes": 1,
+        "comments": 1,
+        "shares": 0
       }
     },
     {
@@ -356,10 +377,10 @@
       },
       "notes": "Follow-up to comeback posts. Explains the process teased in the comeback. Positions engineering approach.",
       "metrics_linkedin": {
+        "impressions": 826,
         "likes": 2,
         "comments": 1,
         "shares": 0,
-        "impressions": 800,
         "reactions": {
           "LIKE": 2
         },
@@ -371,8 +392,11 @@
             "created": 1782636699840,
             "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473696853268725761?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473696853268725761%2C7476920240686424064%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287476920240686424064%2Curn%3Ali%3Aactivity%3A7473696853268725761%29"
           }
-        ],
-        "last_checked": "2026-06-28T14:08:41.466Z"
+        ]
+      },
+      "deltas": {
+        "impressions": 0,
+        "likes": 0
       }
     },
     {

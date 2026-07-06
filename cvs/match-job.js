@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { getProofPoints } = require('./parse-cv-proofs');
 
 const profilePath = path.resolve(__dirname, '../data/profile.json');
 
@@ -197,20 +198,12 @@ function expandKeywords(text) {
   return expanded;
 }
 
-function matchProofPoints(requirements, profile, variant) {
-  const allProofs = [];
 
-  for (const job of profile.work_history) {
-    for (const point of job.proof_points) {
-      allProofs.push({ source: `${job.company} (${job.title})`, text: point, tech: job.tech || [] });
-    }
-  }
-  for (const proto of profile.protocols) {
-    allProofs.push({ source: proto.name, text: `${proto.description}. ${proto.adoption}`, tech: [] });
-  }
-  for (const ach of profile.achievements) {
-    allProofs.push({ source: 'Achievement', text: ach, tech: [] });
-  }
+function matchProofPoints(requirements, profile, variant) {
+  // Load proof points directly from the CV HTML for this variant.
+  // Each CV tells the same career story differently — CTO emphasises leadership,
+  // DevRel emphasises community/content, RegTech emphasises compliance.
+  const cvProofs = getProofPoints(variant);
 
   const matches = [];
   const unmatchedReqs = [];
@@ -222,21 +215,19 @@ function matchProofPoints(requirements, profile, variant) {
     let bestMatch = null;
     let bestScore = 0;
 
-    for (let i = 0; i < allProofs.length; i++) {
+    for (let i = 0; i < cvProofs.length; i++) {
       if (usedProofs.has(i)) continue;
-      const proof = allProofs[i];
+      const proof = cvProofs[i];
       const proofLower = proof.text.toLowerCase();
-      const techLower = proof.tech.map(t => t.toLowerCase()).join(' ');
-      const proofFull = proofLower + ' ' + techLower;
       let score = 0;
 
       for (const keyword of reqKeywords) {
-        if (proofFull.includes(keyword)) score += 2;
+        if (proofLower.includes(keyword)) score += 2;
       }
 
       if (score > bestScore) {
         bestScore = score;
-        bestMatch = { ...proof, index: i };
+        bestMatch = { text: proof.text, source: proof.source, index: i };
       }
     }
 
@@ -275,31 +266,55 @@ function matchJob(jobDescription, options = {}) {
   const profile = loadProfile();
   const requirements = options.requirements || extractRequirements(jobDescription);
   const metadata = options.metadata || extractMetadata(jobDescription);
-  const variant = options.variant || detectVariant(requirements);
+  const bestVariant = options.variant || detectVariant(requirements);
 
-  const { matches, gaps: rawGaps } = matchProofPoints(requirements, profile, variant);
-  const score = scoreMatch(matches, rawGaps, requirements.length);
+  // Score against all three CVs
+  const scores = {};
+  const variants = ['cto', 'regtech', 'devrel'];
+  let bestScore = 0;
+  let bestResult = null;
 
-  // Filter gaps: only show substantive requirements (not headers, not fluff)
-  const gaps = rawGaps.filter(g =>
-    g.length > 25 && g.length < 200 &&
-    !g.match(/^(Leadership|Strategy|About|Tasks|Responsibilities|Communication|Security)/i)
-  ).slice(0, 8);
+  for (const v of variants) {
+    const { matches, gaps: rawGaps } = matchProofPoints(requirements, profile, v);
+    const score = scoreMatch(matches, rawGaps, requirements.length);
+    scores[v] = score;
 
-  const topProofs = matches.slice(0, 5).map(m => ({
-    requirement: m.requirement,
-    evidence: m.evidence
-  }));
+    if (v === bestVariant) {
+      const gaps = rawGaps.filter(g =>
+        g.length > 25 && g.length < 200 &&
+        !g.match(/^(Leadership|Strategy|About|Tasks|Responsibilities|Communication|Security)/i)
+      ).slice(0, 8);
+      const topProofs = matches.slice(0, 5).map(m => ({
+        requirement: m.requirement,
+        evidence: m.evidence
+      }));
+      bestResult = { matches, gaps, topProofs };
+    }
+
+    if (score > bestScore) bestScore = score;
+  }
+
+  // Use the detected variant's detailed results for gaps/proofs
+  const { gaps, topProofs } = bestResult;
+
+  // Confidence based on data quality: how much evidence the score is built on
+  const MIN_REQS_FOR_CONFIDENCE = 5;
+  let confidence;
+  if (requirements.length >= 8 && bestResult.matches.length >= 4) confidence = 'high';
+  else if (requirements.length >= MIN_REQS_FOR_CONFIDENCE) confidence = 'medium';
+  else confidence = 'low';
 
   return {
     company: metadata.company || 'Unknown Company',
     role: metadata.role || 'Unknown Role',
     location: metadata.location || '',
-    variant,
-    score,
+    variant: bestVariant,
+    score: scores[bestVariant],
+    scores,
+    confidence,
     date: new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }),
     requirements_found: requirements.length,
-    matched: matches.length,
+    matched: bestResult.matches.length,
     gaps,
     proof_points: topProofs,
     opening: '',

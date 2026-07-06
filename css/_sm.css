@@ -400,6 +400,13 @@ img { max-width: 100%; height: auto; display: block; }
   .case-nav { flex-direction: column; align-items: center; gap: 12px; }
 }
 
+.number-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+}
 .number-card {
   background: var(--sm-surface);
   border: 1px solid var(--sm-border);

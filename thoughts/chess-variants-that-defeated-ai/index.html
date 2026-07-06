@@ -55,7 +55,29 @@ moveFilter: (moves, state) => {
 
       <div class="chess-puzzle-embed" data-variant="antichess" data-caption="Try it: find the move that forces your opponent to capture your last piece."></div>
 
-      <h2>Codrus: Sacrifice Your Own King</h2>
+      <h2>Omnicide: Forced Wins Without Forced Captures</h2>
+
+      <p>Omnicide shares the same goal as Antichess (lose all your pieces to win) but removes the one constraint that made puzzle generation possible: captures are not mandatory. The opponent can choose to ignore your last piece entirely.</p>
+
+      <p>This seems to make forced-win puzzles impossible. If the opponent does not have to capture you, how can you force them to?</p>
+
+      <p>The answer is endgame geometry. In extreme late-game positions, the solver has one piece and moves it to the unique square where ALL of the opponent's legal moves happen to capture it. Not because captures are mandatory, but because the board geometry leaves no alternative. Every opponent piece is constrained by the board edges, by blocking pieces, or by its own movement rules, such that every legal destination coincides with the solver's piece.</p>
+
+      <pre><code class="language-javascript">// Omnicide: same goal as antichess, different constraint
+{
+  noCheck: true,
+  // NO moveFilter — captures are voluntary
+  winCondition: (g) => {
+    // You win when it's your turn and you have zero pieces
+    if (!hasPieces(g, g.turn)) return g.turn + ' wins';
+  }
+}</code></pre>
+
+      <p>The generator plays thousands of random games deep into endgame positions, testing each for this geometric constraint. It takes hundreds of games to find one valid puzzle, compared to antichess which finds forced wins in under 30. The rarity is the point: forced outcomes in voluntary-capture systems depend entirely on board topology, not game rules.</p>
+
+      <div class="chess-puzzle-embed" data-variant="omnicide" data-caption="Try it: move your last piece to the only square where every opponent response captures it."></div>
+
+      <h2>Codrus: When Forcing is Impossible</h2>
 
       <p>In standard chess, the king must never be captured. Every move is validated against this constraint. Check detection, castling rules, and the entire endgame theory revolve around king preservation.</p>
 
@@ -68,18 +90,19 @@ moveFilter: (moves, state) => {
   winFor: 'self'  // you win when YOUR king is taken
 }</code></pre>
 
-      <p>The problem: captures are not mandatory in Codrus (unlike Antichess). The opponent does not have to take your king even if it walks directly into danger. You cannot force someone to capture a piece when capture is voluntary.</p>
+      <p>Unlike Omnicide, the geometric-force approach fails here almost entirely. The king is the target, and kings can move in eight directions. After the solver exposes their king, the opponent has dozens of non-capturing moves available. Constraining ALL opponent moves to a single capture square requires positions so artificial they never arise in real play.</p>
 
-      <p>No depth-1 or depth-2 search from the solver's perspective works. Moving your king into danger is easy. Guaranteeing the opponent will take it is impossible within the puzzle format.</p>
+      <p>This forced a fundamental change in puzzle format. Antichess and Omnicide puzzles guarantee the outcome: "Find the move where you WILL win." Codrus puzzles cannot guarantee anything. The puzzle must shift from deterministic to tactical: "Find the only move that creates the opportunity to win."</p>
 
-      <p>The fix came from working backwards. During full game simulations, kings get captured 98% of the time because leaving an undefended king on the board is almost always the best tactical decision for the capturing side. The generator plays complete games, finds positions just before a king capture occurs, and checks: "Was there exactly one piece that could capture the king?" If yes, that's a valid puzzle from the capturing side's perspective. The puzzle is reframed as "find the capture" rather than "find the sacrifice." The variant where you cannot force a win because your opponent has to cooperate. Yet games end naturally almost every time.</p>
+      <p>The generator searches for positions where exactly one of the solver's moves exposes their king to capture. Many other moves are available, but only one puts the king where the opponent CAN take it. The puzzle is not "find the forced win" but "find the sacrifice." The opponent might refuse it. In practice they almost never do, because leaving an undefended king alive in Codrus is strategically disastrous for the non-capturing side. The puzzle teaches the mechanism even though it cannot guarantee the result.</p>
 
+      <p>This is the real insight: "forced win" is not a universal puzzle format. The mandatory-capture spectrum determines what kind of puzzle is even possible. Antichess (all captures mandatory) produces deterministic depth-2 puzzles. Omnicide (no mandatory captures) produces deterministic puzzles through geometric constraint. Codrus (no mandatory captures, king as target) breaks determinism entirely and requires a different definition of what a "correct answer" means.</p>
 
-      <div class="chess-puzzle-embed" data-variant="codrus" data-caption="Try it: find the one capture that takes the opponent's king."></div>
+      <div class="chess-puzzle-embed" data-variant="codrus" data-caption="Try it: find the only move that exposes your king to sacrifice."></div>
 
       <h2>The Information Paradox</h2>
 
-      <p>The first two categories merely invert axioms. The evaluation function points the wrong way, or the win condition contradicts what the search expects. These are solvable by adjusting the direction of the search algorithm.</p>
+      <p>The lose-to-win variants merely invert axioms. The evaluation function points the wrong way, or the win condition contradicts what the search expects. These are solvable by adapting the search algorithm, the puzzle format, or both.</p>
 
       <p>Four variants in the puzzle pool are fundamentally paradoxical. They are not hard to generate puzzles for in the technical sense. They are logically impossible to puzzle-ify at all.</p>
 
@@ -124,7 +147,7 @@ moveFilter: (moves, state) => {
 
       <h2>What This Taught Us</h2>
 
-      <div class="reveal" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 40px; text-align: center;">
+      <div class="reveal number-grid">
         <div class="number-card"><div class="number-value" data-accent="teal">1,000+</div><div class="number-label">Puzzles generated</div></div>
         <div class="number-card"><div class="number-value" data-accent="violet">66</div><div class="number-label">Variants with puzzles</div></div>
         <div class="number-card"><div class="number-value" data-accent="gold">4</div><div class="number-label">Removed (paradoxical)</div></div>
@@ -134,7 +157,7 @@ moveFilter: (moves, state) => {
 
       <p><strong>Axioms are invisible until you violate them.</strong> The assumption that "more material is good" is not written anywhere in a chess engine's architecture explicitly. It is assumed by every layer at once: the evaluation function, the search heuristics, the move ordering, and the pruning decisions all encode it implicitly. You only discover the axiom exists when a variant contradicts it and the entire stack produces nonsense output.</p>
 
-      <p><strong>Not every problem is the problem it appears to be.</strong> Codrus looks like a puzzle generation problem on the surface. It is actually a game simulation problem with a puzzle extraction step applied at the end of the process. Reframing the approach correctly matters far more than improving the algorithm within the wrong frame.</p>
+      <p><strong>"Forced win" is not a universal format.</strong> The mandatory-capture spectrum determines what kind of puzzle is even possible for a given variant. Antichess (mandatory captures) produces deterministic forced-win puzzles. Omnicide (voluntary captures) produces forced wins only through rare geometric constraint. Codrus breaks determinism entirely and requires redefining "correct answer" as "correct opportunity." The puzzle format itself has to adapt to the variant's mechanics, not the other way around.</p>
 
       <p><strong>Some problems are not problems at all.</strong> The information paradox variants were not bugs in the generator that could be fixed with more engineering effort. They were category errors in the task definition itself. Recognising "this task is incoherent as specified" is a valid and important engineering output. The correct action was removing those variants from the puzzle pool entirely, not building an ever more sophisticated generator to produce output that cannot logically exist.</p>
 

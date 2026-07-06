@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0B0F1A">
+<meta name="robots" content="noindex, nofollow">
+<style>html{background:#0B0F1A}body{opacity:0;transition:opacity .15s ease}</style>
+<title>Building the Machine That Builds Your Career — Mark Smalley</title>
+<meta name="description" content="What happens when getting a job requires building a system that helps people get jobs. A real-time engineering journal from inside the paradox.">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../../img/apple-touch-icon.png">
+<link rel="stylesheet" href="../../css/_sm.css?v=1.0.35">
+<link rel="stylesheet" href="../../css/thoughts.css?v=1.0.35">
+<link rel="stylesheet" href="../../css/pages.css?v=1.0.35">
+</head>
+<body>
+<div id="nav-root"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Thoughts</div>
+    <h1>Building the Machine That Builds Your Career</h1>
+  </div>
+</section>
+
+<section class="page-content">
+  <div class="container">
+    <div class="article-content">
+      <div class="article-date">6 July 2026 · Engineering journal (ongoing)</div>
+
+      <p>I need a job. The fastest way to get one is to apply to everything that moves. The problem is that I also know what a good job-matching system looks like, and none of the existing ones are it. So instead of sending 200 generic applications, I'm building the system that tells me exactly which roles match which version of my experience, which CV to send, and how confident the recommendation is.</p>
+
+      <p>This creates an obvious paradox: every hour spent improving the system is an hour not spent applying through it. The system gets better while the bank account gets worse. At some point the investment pays off in higher-quality applications with lower effort per submission. The question is whether that crossover happens before the money runs out.</p>
+
+      <p>This article documents the engineering decisions in real time. Each section represents a problem encountered, diagnosed, and solved. The system is live, the code is production, and the job search is real.</p>
+
+      <h2>The Scoring Problem</h2>
+
+      <p>Most job boards give you a binary: "match" or "no match." LinkedIn's algorithm is a black box. The few platforms that show a score give you one number with no explanation of what drove it or how to improve your chances.</p>
+
+      <p>The first version of my scorer was simple: extract requirements from a job description, match them against a pool of proof points from my career history, calculate a percentage. It worked well enough to rank 500+ jobs and surface the top 10% worth applying to.</p>
+
+      <p>Then I added three CVs.</p>
+
+      <h2>The Three-CV Problem</h2>
+
+      <p>I have three distinct CVs targeting three different role types: CTO/Head of Engineering, RegTech/Compliance, and Developer Relations. The same career, told three different ways. The CTO version leads with "founded Moonshot team, scaled 1 to 10 engineers, secured DraperVC investment." The DevRel version leads with "TEDx speaker, 59K SlideShare views, SDK documentation, hackathon infrastructure." The RegTech version leads with "first company in SC Malaysia regulatory sandbox, built KYC/AML pipelines, Deloitte Top 50 Global RegTech."</p>
+
+      <p>The first tri-score implementation scored each job three times using the same proof pool with keyword-based multipliers. CTO keywords ("led", "managed", "founded") boosted proof points when scoring for the CTO variant. DevRel keywords ("documentation", "community", "speaking") boosted for DevRel. The theory was sound. The results were not.</p>
+
+      <h2>Nine Identical Scores</h2>
+
+      <p>Nine jobs returned identical scores across all three CVs. A "Senior Smart Contract Engineer" scored 85/85/85. A "Senior Technical Product Manager" scored 80/80/80. These are not generic roles. A smart contract engineer should score differently on a CTO CV (architecture, system design) versus a DevRel CV (SDK documentation, developer education). The fact that they didn't meant the system was fundamentally broken.</p>
+
+      <p>The diagnosis took longer than the fix. The keyword multiplier approach failed because neutral technical language ("5+ years Solidity", "smart contract auditing", "deploy to mainnet") doesn't contain CTO keywords, DevRel keywords, OR RegTech keywords. When no multiplier fires, all three variants score identically against the same proof pool.</p>
+
+      <p>The system was treating three CVs as one CV with three colour filters.</p>
+
+      <h2>The Architectural Fix</h2>
+
+      <p>The correct model is obvious in hindsight: each CV IS its own proof pool. The CTO CV emphasises leadership decisions. The DevRel CV emphasises community output. The RegTech CV emphasises regulatory credentials. They contain different bullet points from the same career history, written with different audiences in mind.</p>
+
+      <p>The fix: parse each CV's HTML directly and extract its bullet points as that variant's proof points. When scoring for CTO, match against what the CTO CV actually says. When scoring for DevRel, match against what the DevRel CV says. No keywords needed. The differentiation is structural.</p>
+
+      <p>Results after the rewrite:</p>
+
+      <ul>
+        <li>Average score spread across variants: 10.8 points (was near zero for problematic cases)</li>
+        <li>54 jobs with 21+ point spread (clear single-variant winners)</li>
+        <li>DevRel role test: CTO 53, RegTech 35, DevRel 75 (40-point spread)</li>
+        <li>CTO role test: CTO 88, RegTech 76, DevRel 73 (15-point spread)</li>
+        <li>Generic backend role: CTO 76, RegTech 70, DevRel 73 (6-point spread, correctly narrow)</li>
+      </ul>
+
+      <p>The narrow spreads are as informative as the wide ones. A generic backend engineering role genuinely fits all three CVs comparably. A 6-point spread tells you: send whichever CV you prefer, the match quality won't differ meaningfully.</p>
+
+      <h2>The Confidence Problem</h2>
+
+      <p>Of those nine originally-identical jobs, all had one thing in common: no job description. When a job listing has only a title and company name, the scorer extracts 2-3 "requirements" from that minimal text, matches them against proof points, and produces a number that looks like a score but carries no information.</p>
+
+      <p>A score built on 2 data points is not the same thing as a score built on 12. The system now reports confidence alongside the score: high (8+ requirements, 4+ matches), medium (5+ requirements), or low (fewer than 5). Low-confidence scores are flagged in the dashboard and sorted below high-confidence leads at the same score level.</p>
+
+      <p>This is more useful than suppressing them entirely. A low-confidence 85 still tells you "this role's title and skills are highly aligned" even if you can't yet confirm the full description matches. It becomes a signal to fetch the full JD and re-score, not a signal to apply blindly.</p>
+
+      <h2>The Product Insight</h2>
+
+      <p>Here's what makes this more than a personal tool: the architecture generalises immediately. A future user uploads one CV. The system parses their proof points from the document directly. No manual tagging, no keyword configuration, no profile form to fill out. The quality of scoring scales with the quality of their CV writing. A user with 3 targeted CVs (like me) gets 3 scores. A user with 1 gets 1. The engine is the same.</p>
+
+      <p>The scoring quality creates a natural incentive: write a better CV, get better match accuracy. This is the opposite of most job platforms where the algorithm is opaque and the user has no lever to pull except "apply to more things."</p>
+
+      <h2>What's Next</h2>
+
+      <p>This section will grow as the system evolves. Open problems as of today:</p>
+
+      <ul>
+        <li>59 jobs have no stored requirements. They need JD fetching from source URLs before scoring is meaningful.</li>
+        <li>The enrichment pipeline runs on ingestion only. Stale jobs need periodic re-scoring as CVs evolve.</li>
+        <li>Cover letter generation currently uses the primary variant only. It should reference the specific proof points that matched, creating a provable connection between the JD and the CV.</li>
+        <li>The dashboard shows leads but doesn't yet track application outcomes (response rate, interview conversion, time-to-response by channel). That feedback loop closes the system.</li>
+      </ul>
+
+      <p>Every one of these is a product feature being built to solve my immediate problem. The paradox resolves when the system starts generating applications faster than I could manually, with higher match quality. At that point, the time investment inverts: the system applies while I build the next feature.</p>
+
+      <div class="article-divider"></div>
+
+      <p><em>This article is updated as the system evolves. Each section represents a real engineering decision made during an active job search. The code is live at the time of writing.</em></p>
+
+    </div>
+  </div>
+</section>
+
+<div id="footer-root"></div>
+<script src="../../js/sm-loader.js?v=1.0.35"></script>
+</body>
+</html>

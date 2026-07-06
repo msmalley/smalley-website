@@ -1,4 +1,5 @@
-SM.getData('thoughts').then(function(posts) {
+SM.getData('thoughts').then(function(allPosts) {
+  var posts = allPosts.filter(function(p) { return !p.draft; });
   var list = document.getElementById('thoughts-list');
   var featuredEl = document.getElementById('featured-article');
   var featuredTitle = document.getElementById('featured-title');

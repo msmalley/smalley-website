@@ -7,15 +7,57 @@
 
   function render(data) {
     renderMeta(data._meta);
+    renderAlerts(data);
     renderIndicators(data.indicators);
     if (data.employment) renderEmployment(data.employment);
     if (data.social) renderSocial(data.social);
     if (data.analytics) renderAnalytics(data.analytics);
     if (data.agents) renderAgents(data.agents);
     if (data.github) renderGitHub(data.github);
-    if (data.cloudflare) renderCloudflare(data.cloudflare);
+    if (data.cloudflare) renderCloudflare(data.cloudflare, data.analytics);
     if (data.ecosystem) renderEcosystem(data.ecosystem);
     if (data.investment) renderInvestment(data.investment);
+  }
+
+  function renderAlerts(data) {
+    var alerts = data.alerts || [];
+    if (!alerts.length) return;
+
+    var container = document.querySelector('.dashboard-hero');
+    var alertsEl = SM.el('div', { class: 'dashboard-alerts' });
+
+    for (var i = 0; i < alerts.length; i++) {
+      var a = alerts[i];
+      var icon = a.level === 'critical' ? '!!!' : a.level === 'warning' ? '!!' : 'i';
+
+      var bannerChildren = [
+        SM.el('div', { class: 'alert-icon' }, icon),
+        SM.el('div', { class: 'alert-body' },
+          SM.el('div', { class: 'alert-title' }, a.title),
+          SM.el('div', { class: 'alert-detail' }, a.detail)
+        )
+      ];
+
+      if (a.cta) {
+        var ctaEl;
+        if (a.cta.action === 'link') {
+          ctaEl = SM.el('a', { class: 'alert-cta', href: a.cta.url, target: '_blank', rel: 'noopener' }, a.cta.label);
+        } else if (a.cta.action === 'bash') {
+          ctaEl = SM.el('div', { class: 'alert-cta alert-cta-code' },
+            SM.el('span', { class: 'alert-cta-label' }, a.cta.label + ':'),
+            SM.el('code', {}, a.cta.command)
+          );
+        } else {
+          ctaEl = SM.el('div', { class: 'alert-cta alert-cta-prompt' }, a.cta.command);
+        }
+        bannerChildren.push(ctaEl);
+      }
+
+      alertsEl.appendChild(SM.el('div', { class: 'alert-banner', 'data-level': a.level, 'data-category': a.category },
+        ...bannerChildren
+      ));
+    }
+    container.parentNode.insertBefore(alertsEl, container.nextSibling);
   }
 
   function renderMeta(meta) {
@@ -162,24 +204,149 @@
     el.appendChild(grid);
 
     if (emp.top_leads && emp.top_leads.length) {
-      var leadsPanel = SM.el('div', { class: 'dashboard-panel', style: { marginTop: '24px' } },
-        SM.el('div', { class: 'dashboard-panel-title' }, 'Top Actionable Leads')
-      );
-      for (var i = 0; i < emp.top_leads.length; i++) {
-        var lead = emp.top_leads[i];
-        var cardAttrs = { class: 'lead-card' };
-        if (lead.url) {
-          cardAttrs = { class: 'lead-card lead-card-link', href: lead.url, target: '_blank', rel: 'noopener' };
+      var leadsPanel = SM.el('div', { class: 'dashboard-panel', style: { marginTop: '24px' } });
+      var leadsHeader = SM.el('div', { style: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px', flexWrap: 'wrap', gap: '8px' } });
+      leadsHeader.appendChild(SM.el('div', { class: 'dashboard-panel-title', style: { marginBottom: '0' } }, 'Actionable Leads (' + emp.top_leads.length + ')'));
+      var controlsRow = SM.el('div', { style: { display: 'flex', gap: '6px', alignItems: 'center' } });
+      var filterBar = SM.el('div', { style: { display: 'flex', gap: '4px' } });
+      var filters = [
+        { key: 'all', label: 'All', color: 'var(--sm-text)' },
+        { key: 'cto', label: 'CTO', color: 'var(--sm-teal-glow)' },
+        { key: 'regtech', label: 'REG', color: 'var(--sm-gold-glow)' },
+        { key: 'devrel', label: 'DEV', color: 'var(--sm-violet-glow)' }
+      ];
+      var searchInput = SM.el('input', { type: 'text', placeholder: 'Search role or company...', style: {
+        fontFamily: 'var(--f-body)', fontSize: '12px', padding: '5px 10px',
+        borderRadius: '4px', border: '1px solid var(--sm-border)',
+        background: 'var(--sm-surface-alt)', color: 'var(--sm-text)',
+        width: '160px', outline: 'none'
+      } });
+      var leadsContainer = SM.el('div');
+      var activeFilter = 'all';
+      var searchQuery = '';
+      var DEFAULT_SHOW = 10;
+
+      function renderFilterButtons() {
+        var btns = filterBar.querySelectorAll('button');
+        for (var bi = 0; bi < btns.length; bi++) {
+          var isActive = btns[bi].dataset.filter === activeFilter;
+          btns[bi].style.background = isActive ? 'var(--sm-surface-alt)' : 'transparent';
+          btns[bi].style.borderWidth = isActive ? '2px' : '1px';
         }
-        var tag = lead.url ? 'a' : 'div';
-        leadsPanel.appendChild(SM.el(tag, cardAttrs,
-          SM.el('div', { class: 'lead-info' },
-            SM.el('div', { class: 'lead-role' }, lead.role),
-            SM.el('div', { class: 'lead-company' }, lead.company + ' · ' + (lead.variant || '') + (lead.days_old != null ? ' · ' + lead.days_old + 'd ago' : ''))
-          ),
-          SM.el('div', { class: 'lead-score' }, String(lead.score))
-        ));
       }
+
+      function renderLeadCards() {
+        leadsContainer.innerHTML = '';
+        var leads = emp.top_leads.slice();
+        if (activeFilter !== 'all') {
+          leads = leads.filter(function(l) { return l.scores; });
+          leads.sort(function(a, b) {
+            return (b.scores[activeFilter] || 0) - (a.scores[activeFilter] || 0);
+          });
+        }
+        if (searchQuery) {
+          var q = searchQuery.toLowerCase();
+          leads = leads.filter(function(l) {
+            return (l.role || '').toLowerCase().includes(q) || (l.company || '').toLowerCase().includes(q);
+          });
+        }
+        var showCount = (searchQuery || activeFilter !== 'all') ? leads.length : Math.min(leads.length, DEFAULT_SHOW);
+        for (var li = 0; li < showCount; li++) {
+          var lead = leads[li];
+          var cardAttrs = { class: 'lead-card' };
+          if (lead.url) {
+            cardAttrs = { class: 'lead-card lead-card-link', href: lead.url, target: '_blank', rel: 'noopener' };
+          }
+          var ltag = lead.url ? 'a' : 'div';
+          var scoreEls = SM.el('div', { style: { display: 'flex', alignItems: 'center', gap: '6px' } });
+          if (lead.scores) {
+            var cvs = [
+              { key: 'cto', label: 'CTO', color: 'var(--sm-teal-glow)' },
+              { key: 'regtech', label: 'REG', color: 'var(--sm-gold-glow)' },
+              { key: 'devrel', label: 'DEV', color: 'var(--sm-violet-glow)' }
+            ];
+            var displayScore;
+            if (activeFilter !== 'all') {
+              displayScore = lead.scores[activeFilter] || 0;
+            } else {
+              displayScore = Math.round((lead.scores.cto + lead.scores.regtech + lead.scores.devrel) / 3);
+            }
+            scoreEls.appendChild(SM.el('span', { style: { fontFamily: 'var(--f-mono)', fontSize: '14px', fontWeight: '700', color: 'var(--sm-text)', marginRight: '4px' } }, String(displayScore)));
+            for (var ci = 0; ci < cvs.length; ci++) {
+              var cv = cvs[ci];
+              var s = lead.scores[cv.key] || 0;
+              var isHighlighted = activeFilter !== 'all' ? cv.key === activeFilter : cv.key === lead.variant;
+              scoreEls.appendChild(SM.el('span', { title: cv.label + ': ' + s, style: {
+                fontFamily: 'var(--f-mono)', fontSize: '10px', fontWeight: '600',
+                padding: '2px 6px', borderRadius: '4px', lineHeight: '1',
+                background: isHighlighted ? cv.color : 'transparent',
+                color: isHighlighted ? 'var(--sm-deep)' : cv.color,
+                border: isHighlighted ? 'none' : '1px solid ' + cv.color,
+                opacity: s >= 60 ? '1' : '0.4'
+              } }, cv.label + ' ' + s));
+            }
+          } else {
+            scoreEls.appendChild(SM.el('div', { class: 'lead-score' }, String(lead.score)));
+          }
+          var infoEl = SM.el('div', { class: 'lead-info' },
+            SM.el('div', { class: 'lead-role' }, lead.role),
+            SM.el('div', { class: 'lead-company' }, lead.company + (lead.days_old != null ? ' · ' + lead.days_old + 'd ago' : ''))
+          );
+          if (lead.confidence === 'low') {
+            infoEl.appendChild(SM.el('span', { style: {
+              fontFamily: 'var(--f-mono)', fontSize: '9px', fontWeight: '600',
+              color: 'var(--sm-gold-glow)', background: 'rgba(245, 158, 11, 0.1)',
+              padding: '1px 5px', borderRadius: '3px', marginTop: '2px', display: 'inline-block'
+            } }, 'LOW DATA'));
+          }
+          leadsContainer.appendChild(SM.el(ltag, cardAttrs, infoEl, scoreEls));
+        }
+        if (showCount < leads.length) {
+          var showMore = SM.el('button', { style: {
+            fontFamily: 'var(--f-body)', fontSize: '12px', color: 'var(--sm-teal-glow)',
+            background: 'none', border: 'none', cursor: 'pointer', padding: '12px 0',
+            width: '100%', textAlign: 'center'
+          } }, 'Show all ' + leads.length + ' leads');
+          showMore.addEventListener('click', function() {
+            DEFAULT_SHOW = 999;
+            renderLeadCards();
+          });
+          leadsContainer.appendChild(showMore);
+        }
+        if (!leads.length) {
+          leadsContainer.appendChild(SM.el('div', { style: { fontFamily: 'var(--f-body)', fontSize: '13px', color: 'var(--sm-muted)', padding: '16px 0' } }, 'No matching leads'));
+        }
+      }
+
+      for (var fi = 0; fi < filters.length; fi++) {
+        (function(f) {
+          var btn = SM.el('button', { 'data-filter': f.key, style: {
+            fontFamily: 'var(--f-mono)', fontSize: '11px', fontWeight: '600',
+            padding: '4px 10px', borderRadius: '4px', cursor: 'pointer',
+            border: '1px solid ' + f.color,
+            background: f.key === 'all' ? 'var(--sm-surface-alt)' : 'transparent',
+            color: f.color, transition: 'background 0.2s, border-width 0.1s'
+          } }, f.label);
+          btn.addEventListener('click', function() {
+            activeFilter = f.key;
+            renderFilterButtons();
+            renderLeadCards();
+          });
+          filterBar.appendChild(btn);
+        })(filters[fi]);
+      }
+
+      searchInput.addEventListener('input', function() {
+        searchQuery = this.value;
+        renderLeadCards();
+      });
+
+      controlsRow.appendChild(filterBar);
+      controlsRow.appendChild(searchInput);
+      leadsHeader.appendChild(controlsRow);
+      leadsPanel.appendChild(leadsHeader);
+      leadsPanel.appendChild(leadsContainer);
+      renderLeadCards();
       el.appendChild(leadsPanel);
     }
   }
@@ -334,6 +501,24 @@
         table
       ));
     }
+
+    // Events breakdown (custom interactions)
+    var eventsGrid = SM.el('div', { class: 'dashboard-grid-2', style: { marginTop: '24px' } });
+    for (var s = 0; s < sites.length; s++) {
+      var key = sites[s][0], label = sites[s][1];
+      var site = analytics[key];
+      if (!site || !site.events_30d || !site.events_30d.length) continue;
+      var evMax = site.events_30d[0].count;
+      var evItems = site.events_30d.slice(0, 10).map(function(e) {
+        var accent = e.event.includes('game') ? 'violet' : e.event.includes('tool') || e.event.includes('dice') || e.event.includes('hex') ? 'teal' : 'gold';
+        return { label: e.event, value: e.count, accent: accent };
+      });
+      eventsGrid.appendChild(SM.el('div', { class: 'dashboard-panel' },
+        SM.el('div', { class: 'dashboard-panel-title' }, label + ' — Interactions (30d)'),
+        barChart(evItems, evMax)
+      ));
+    }
+    el.appendChild(eventsGrid);
   }
 
   function renderAgents(agents) {
@@ -438,6 +623,41 @@
     }
 
     el.appendChild(grid);
+
+    if (eco.convergence) {
+      var c = eco.convergence;
+      var convGrid = SM.el('div', { class: 'dashboard-grid-2', style: { marginTop: '24px' } });
+      convGrid.appendChild(statPanel('Unified Engine — Convergence', [
+        { label: 'Engine plugins', value: String(c.engine_plugins) + ' / ' + c.target_total + ' (' + c.pct + '%)' },
+        { label: 'Rules families', value: String(c.rules_families) + ' to support' },
+        { label: 'Chess variants', value: String(c.chess_variants) + ' to port' },
+        { label: 'Hex games', value: String(c.hex_games) + ' to port' },
+        { label: 'Commits this week', value: String(c.commits_this_week) },
+        { label: 'Commits this month', value: String(c.commits_this_month) }
+      ]));
+      var barMax = Math.max(c.rules_families, c.chess_variants, c.hex_games);
+      var barItems = [
+        { label: 'rules (' + c.rules_families + ')', value: c.rules_families, accent: 'gold' },
+        { label: 'chess (' + c.chess_variants + ')', value: c.chess_variants, accent: 'teal' },
+        { label: 'hex (' + c.hex_games + ')', value: c.hex_games, accent: 'violet' },
+        { label: 'plugins (' + c.engine_plugins + ')', value: c.engine_plugins, accent: 'muted' }
+      ];
+      var rightPanel = SM.el('div', { class: 'dashboard-panel' },
+        SM.el('div', { class: 'dashboard-panel-title' }, 'Target vs Engine Plugins'),
+        barChart(barItems, barMax)
+      );
+      var phase = SM.el('div', { class: 'stat-row', style: { borderBottom: 'none', paddingTop: '16px' } },
+        SM.el('span', { class: 'stat-label' }, 'Current phase'),
+        SM.el('span', { class: 'stat-value', style: { color: 'var(--sm-gold-glow)', fontSize: '12px' } }, 'Board Studio')
+      );
+      rightPanel.appendChild(phase);
+      var note = SM.el('div', { style: { fontFamily: 'var(--f-body)', fontSize: '11px', color: 'var(--sm-muted)', marginTop: '8px', lineHeight: '1.5' } },
+        'Gap will grow as moddable-rules expands. Playable games begin after board generation is complete.'
+      );
+      rightPanel.appendChild(note);
+      convGrid.appendChild(rightPanel);
+      el.appendChild(convGrid);
+    }
   }
 
   function renderGitHub(gh) {
@@ -491,7 +711,7 @@
     }
   }
 
-  function renderCloudflare(cf) {
+  function renderCloudflare(cf, analytics) {
     var el = document.getElementById('cloudflare-content');
     if (cf.error) {
       el.appendChild(SM.el('p', { style: { color: 'var(--sm-muted)' } }, 'Error: ' + cf.error));
@@ -519,6 +739,25 @@
       ));
     }
     el.appendChild(grid);
+
+    // MCP Tool usage from GA4 events (moddable-tools Worker serves these)
+    var mgEvents = analytics && analytics.moddable_games && analytics.moddable_games.events_30d;
+    if (mgEvents && mgEvents.length) {
+      var toolEvents = mgEvents.filter(function(e) {
+        return e.event === 'tool_call' || e.event.includes('game_') || e.event.includes('puzzle') || e.event.includes('hex_') || e.event.includes('dice_') || e.event.includes('deck_') || e.event.includes('faction') || e.event.includes('pdf_') || e.event.includes('file_');
+      });
+      if (toolEvents.length) {
+        var teMax = toolEvents[0].count;
+        var teItems = toolEvents.map(function(e) {
+          var accent = e.event.includes('game') ? 'violet' : e.event.includes('tool') ? 'teal' : 'gold';
+          return { label: e.event, value: e.count, accent: accent };
+        });
+        el.appendChild(SM.el('div', { class: 'dashboard-panel', style: { marginTop: '24px' } },
+          SM.el('div', { class: 'dashboard-panel-title' }, 'Tool & Game Events via GA4 (30d)'),
+          barChart(teItems, teMax)
+        ));
+      }
+    }
   }
 
   function renderInvestment(inv) {

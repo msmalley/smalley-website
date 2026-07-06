@@ -47,19 +47,28 @@ function ingest(searchResults) {
     }
 
     const id = generateId(c.company || 'unknown', c.title || 'unknown');
+
+    // Score immediately if description available from API (web3.career, etc)
+    let scored = null;
+    if (c.description && c.description.length > 50) {
+      scored = matchJob(c.description);
+    }
+
     const job = {
       id,
       added: new Date().toISOString().split('T')[0],
-      status: 'discovered',
+      status: scored ? (scored.score >= 50 ? 'new' : 'low_match') : 'discovered',
       company: c.company || '',
       role: c.title || '',
       location: c.location || '',
-      variant: null,
-      score: null,
-      requirements_found: null,
-      matched: null,
-      gaps: [],
-      proof_points: [],
+      variant: scored ? scored.variant : null,
+      score: scored ? scored.score : null,
+      scores: scored ? scored.scores : null,
+      confidence: scored ? scored.confidence : null,
+      requirements_found: scored ? scored.requirements_found : null,
+      matched: scored ? scored.matched : null,
+      gaps: scored ? scored.gaps : [],
+      proof_points: scored ? scored.proof_points : [],
       source_url: (c.url || '').replace(/^(https?:\/\/)uk\.linkedin\.com/, '$1www.linkedin.com'),
       source: c.source || 'unknown',
       linkedin_job_id: c.job_id || null,
@@ -123,6 +132,8 @@ async function fetchAndScore(newIds) {
       if (description && description.length > 50) {
         const result = matchJob(description);
         job.score = result.score;
+        job.scores = result.scores;
+        job.confidence = result.confidence;
         job.variant = result.variant;
         job.requirements_found = result.requirements_found;
         job.matched = result.matched;
@@ -130,7 +141,7 @@ async function fetchAndScore(newIds) {
         job.proof_points = result.proof_points;
         job.status = result.score >= 50 ? 'new' : 'low_match';
         scored++;
-        console.log(`  [${result.score}] ${job.company} - ${job.role} (${result.variant})`);
+        console.log(`  [${result.score}] ${job.company} - ${job.role} (${result.variant}, ${result.confidence})`);
       }
 
       if (job.channel) job.channel._fetched = true;

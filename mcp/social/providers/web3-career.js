@@ -43,18 +43,32 @@ export async function searchWeb3Career(options = {}) {
   }
 
   const data = await response.json();
-  let jobs = Array.isArray(data) ? data : (data.jobs || []);
+  let raw = Array.isArray(data) ? data : (data.jobs || []);
+  // API returns [infoString, infoString, [actual jobs array]]
+  if (raw.length && Array.isArray(raw[raw.length - 1])) {
+    raw = raw[raw.length - 1];
+  } else {
+    raw = raw.filter(item => typeof item === 'object' && item !== null);
+  }
+  let jobs = raw;
 
-  jobs = jobs.map(j => ({
-    title: j.title || '',
-    company: j.company || j.company_name || '',
-    location: j.location || '',
-    salary: j.salary || j.compensation || null,
-    posted: j.published_at || j.created_at || '',
-    url: j.apply_url || j.url || '',
-    skills: j.tags ? j.tags.join(', ') : (j.skills || ''),
-    source: 'web3.career'
-  }));
+  jobs = jobs.map(j => {
+    const descHtml = j.description || '';
+    const descText = descHtml.replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ').replace(/&#\d+;/g, '').replace(/&[a-z]+;/g, '').replace(/\s+/g, ' ').trim();
+    return {
+      title: j.title || '',
+      company: j.company || j.company_name || '',
+      location: j.location || '',
+      salary: j.salary || j.compensation || null,
+      salary_min: j.salary_min_value || j.estimated_min_salary || null,
+      salary_max: j.salary_max_value || j.estimated_max_salary || null,
+      posted: j.date || j.published_at || j.created_at || '',
+      url: j.apply_url || j.url || '',
+      skills: j.tags ? j.tags.join(', ') : (j.skills || ''),
+      description: descText.length > 50 ? descText : null,
+      source: 'web3.career'
+    };
+  });
 
   if (options.keywords) {
     const keywords = options.keywords.toLowerCase().split(/\s+/);

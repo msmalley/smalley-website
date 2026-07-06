@@ -31,6 +31,8 @@ function addJob(jobDescription, options = {}) {
     location: match.location,
     variant: match.variant,
     score: match.score,
+    scores: match.scores,
+    confidence: match.confidence,
     requirements_found: match.requirements_found,
     matched: match.matched,
     gaps: match.gaps,

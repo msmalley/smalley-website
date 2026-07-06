@@ -205,60 +205,208 @@
 
     if (emp.top_leads && emp.top_leads.length) {
       var leadsPanel = SM.el('div', { class: 'dashboard-panel', style: { marginTop: '24px' } });
-      var leadsHeader = SM.el('div', { style: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px', flexWrap: 'wrap', gap: '8px' } });
-      leadsHeader.appendChild(SM.el('div', { class: 'dashboard-panel-title', style: { marginBottom: '0' } }, 'Actionable Leads (' + emp.top_leads.length + ')'));
-      var controlsRow = SM.el('div', { style: { display: 'flex', gap: '6px', alignItems: 'center' } });
-      var filterBar = SM.el('div', { style: { display: 'flex', gap: '4px' } });
+      var leadsHeader = SM.el('div', { style: { marginBottom: '14px' } });
+
+      // Title row: title + count on left, search on right
+      var leadsTitleRow = SM.el('div', { style: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' } });
+      var leadsTitleLeft = SM.el('div', { style: { display: 'flex', alignItems: 'baseline', gap: '8px' } });
+      var leadsTitle = SM.el('div', { class: 'dashboard-panel-title', style: { marginBottom: '0' } }, 'Actionable Leads');
+      var leadsCount = SM.el('span', { style: { fontFamily: 'var(--f-mono)', fontSize: '11px', color: 'var(--sm-muted)' } }, String(emp.top_leads.length) + ' total');
+      leadsTitleLeft.appendChild(leadsTitle);
+      leadsTitleLeft.appendChild(leadsCount);
+      leadsTitleRow.appendChild(leadsTitleLeft);
+
+      // Two-column filter grid to use full width
+      var controlsGrid = SM.el('div', { style: { display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6px 16px', padding: '10px 14px', background: 'var(--sm-surface)', borderRadius: '8px', border: '1px solid var(--sm-border)' } });
+
+      function makeFilterRow(label, bar) {
+        var row = SM.el('div', { style: { display: 'flex', alignItems: 'center', gap: '8px' } });
+        row.appendChild(SM.el('span', { style: { fontFamily: 'var(--f-mono)', fontSize: '9px', fontWeight: '700', color: 'var(--sm-muted)', textTransform: 'uppercase', letterSpacing: '0.5px', minWidth: '52px' } }, label));
+        row.appendChild(bar);
+        return row;
+      }
+      function makeButtonGroup() {
+        return SM.el('div', { style: { display: 'flex', gap: '3px', flexWrap: 'wrap', alignItems: 'center' } });
+      }
+
+      var filterBar = makeButtonGroup();
       var filters = [
         { key: 'all', label: 'All', color: 'var(--sm-text)' },
         { key: 'cto', label: 'CTO', color: 'var(--sm-teal-glow)' },
         { key: 'regtech', label: 'REG', color: 'var(--sm-gold-glow)' },
         { key: 'devrel', label: 'DEV', color: 'var(--sm-violet-glow)' }
       ];
+      var locationBar = makeButtonGroup();
+      var locationFilters = [
+        { key: 'any', label: 'Any' },
+        { key: 'remote', label: 'Remote' },
+        { key: 'uk', label: 'UK' },
+        { key: 'other', label: 'Other' }
+      ];
+      var confidenceBar = makeButtonGroup();
+      var confidenceFilters = [
+        { key: 'any', label: 'Any' },
+        { key: 'high', label: 'High' },
+        { key: 'medium', label: 'Med' },
+        { key: 'low', label: 'Low' }
+      ];
+      var freshnessBar = makeButtonGroup();
+      var freshnessFilters = [
+        { key: 'any', label: 'Any' },
+        { key: 'fresh', label: '< 7d' },
+        { key: 'aging', label: '7-14d' },
+        { key: 'stale', label: '> 14d' },
+        { key: 'unknown', label: 'No date' }
+      ];
+      var channelBar = makeButtonGroup();
+      var channelFilters = [
+        { key: 'any', label: 'Any' },
+        { key: 'linkedin_apply', label: 'LI Apply' },
+        { key: 'direct_url', label: 'Direct' },
+        { key: 'unknown', label: 'Unknown' }
+      ];
+      var sortBar = makeButtonGroup();
+      var sortOptions = [
+        { key: 'best', label: 'Best Score' },
+        { key: 'avg', label: 'Avg Score' },
+        { key: 'spread', label: 'Spread' },
+        { key: 'age', label: 'Age' }
+      ];
+      var orderBar = makeButtonGroup();
+      var orderOptions = [
+        { key: 'desc', label: '↓ Desc' },
+        { key: 'asc', label: '↑ Asc' }
+      ];
       var searchInput = SM.el('input', { type: 'text', placeholder: 'Search role or company...', style: {
-        fontFamily: 'var(--f-body)', fontSize: '12px', padding: '5px 10px',
-        borderRadius: '4px', border: '1px solid var(--sm-border)',
-        background: 'var(--sm-surface-alt)', color: 'var(--sm-text)',
-        width: '160px', outline: 'none'
+        fontFamily: 'var(--f-body)', fontSize: '12px', padding: '6px 12px',
+        borderRadius: '6px', border: '1px solid var(--sm-border)',
+        background: 'var(--sm-surface)', color: 'var(--sm-text)',
+        width: '200px', outline: 'none'
       } });
+      function classifyLocation(loc) {
+        if (!loc) return 'other';
+        var l = loc.toLowerCase();
+        if (l.includes('remote') || l.includes('global') || l.includes('distributed')) return 'remote';
+        if (l.includes('uk') || l.includes('united kingdom') || l.includes('london') || l.includes('manchester') || l.includes('england') || l.includes('yorkshire') || l.includes('scotland') || l.includes('wales') || l.includes('emea')) return 'uk';
+        return 'other';
+      }
+      function classifyFreshness(daysOld) {
+        if (daysOld == null) return 'unknown';
+        if (daysOld <= 7) return 'fresh';
+        if (daysOld <= 14) return 'aging';
+        return 'stale';
+      }
       var leadsContainer = SM.el('div');
       var activeFilter = 'all';
+      var activeConfidence = 'any';
+      var activeLocation = 'any';
+      var activeFreshness = 'any';
+      var activeChannel = 'any';
+      var activeSort = 'best';
+      var activeOrder = 'desc';
       var searchQuery = '';
       var DEFAULT_SHOW = 10;
 
+      function getSpread(l) {
+        if (!l.scores) return 0;
+        return Math.max(l.scores.cto, l.scores.regtech, l.scores.devrel) - Math.min(l.scores.cto, l.scores.regtech, l.scores.devrel);
+      }
+
       function renderFilterButtons() {
-        var btns = filterBar.querySelectorAll('button');
-        for (var bi = 0; bi < btns.length; bi++) {
-          var isActive = btns[bi].dataset.filter === activeFilter;
-          btns[bi].style.background = isActive ? 'var(--sm-surface-alt)' : 'transparent';
-          btns[bi].style.borderWidth = isActive ? '2px' : '1px';
-        }
+        controlsGrid.querySelectorAll('button[data-group]').forEach(function(btn) {
+          var group = btn.dataset.group;
+          var val = btn.dataset.val;
+          var active = false;
+          if (group === 'variant') active = val === activeFilter;
+          else if (group === 'confidence') active = val === activeConfidence;
+          else if (group === 'location') active = val === activeLocation;
+          else if (group === 'freshness') active = val === activeFreshness;
+          else if (group === 'channel') active = val === activeChannel;
+          else if (group === 'sort') active = val === activeSort;
+          else if (group === 'order') active = val === activeOrder;
+          if (active) {
+            btn.style.background = 'var(--sm-surface-alt)';
+            btn.style.borderColor = btn.style.color;
+            btn.style.fontWeight = '700';
+          } else {
+            btn.style.background = 'transparent';
+            btn.style.borderColor = 'var(--sm-border)';
+            btn.style.color = 'var(--sm-muted)';
+            btn.style.fontWeight = '500';
+          }
+        });
+        // Re-apply variant colours for CV row
+        filterBar.querySelectorAll('button').forEach(function(btn) {
+          var val = btn.dataset.val;
+          var colors = { all: 'var(--sm-text)', cto: 'var(--sm-teal-glow)', regtech: 'var(--sm-gold-glow)', devrel: 'var(--sm-violet-glow)' };
+          if (val === activeFilter) {
+            btn.style.color = colors[val] || 'var(--sm-text)';
+            btn.style.borderColor = colors[val] || 'var(--sm-text)';
+          }
+        });
+        // Re-apply sort colour
+        sortBar.querySelectorAll('button').forEach(function(btn) {
+          if (btn.dataset.val === activeSort) {
+            btn.style.color = 'var(--sm-teal)';
+            btn.style.borderColor = 'var(--sm-teal)';
+          }
+        });
       }
 
       function renderLeadCards() {
         leadsContainer.innerHTML = '';
         var leads = emp.top_leads.slice();
+        if (activeConfidence !== 'any') {
+          leads = leads.filter(function(l) { return l.confidence === activeConfidence; });
+        }
+        if (activeLocation !== 'any') {
+          leads = leads.filter(function(l) { return classifyLocation(l.location) === activeLocation; });
+        }
+        if (activeFreshness !== 'any') {
+          leads = leads.filter(function(l) { return classifyFreshness(l.days_old) === activeFreshness; });
+        }
+        if (activeChannel !== 'any') {
+          leads = leads.filter(function(l) { return (l.channel_method || 'unknown') === activeChannel; });
+        }
         if (activeFilter !== 'all') {
           leads = leads.filter(function(l) { return l.scores; });
-          leads.sort(function(a, b) {
-            return (b.scores[activeFilter] || 0) - (a.scores[activeFilter] || 0);
-          });
         }
+        leads.sort(function(a, b) {
+          var dir = activeOrder === 'asc' ? -1 : 1;
+          var diff = 0;
+          if (activeSort === 'age') {
+            diff = (b.days_old || 0) - (a.days_old || 0);
+          } else if (activeSort === 'spread') {
+            diff = getSpread(b) - getSpread(a);
+          } else if (activeSort === 'avg') {
+            var avgA = a.scores ? Math.round((a.scores.cto + a.scores.regtech + a.scores.devrel) / 3) : (a.score || 0);
+            var avgB = b.scores ? Math.round((b.scores.cto + b.scores.regtech + b.scores.devrel) / 3) : (b.score || 0);
+            diff = avgB - avgA;
+          } else if (activeFilter !== 'all') {
+            diff = (b.scores[activeFilter] || 0) - (a.scores[activeFilter] || 0);
+          } else {
+            var bestA = a.score || (a.scores ? Math.max(a.scores.cto, a.scores.regtech, a.scores.devrel) : 0);
+            var bestB = b.score || (b.scores ? Math.max(b.scores.cto, b.scores.regtech, b.scores.devrel) : 0);
+            diff = bestB - bestA;
+          }
+          return diff * dir;
+        });
         if (searchQuery) {
           var q = searchQuery.toLowerCase();
           leads = leads.filter(function(l) {
-            return (l.role || '').toLowerCase().includes(q) || (l.company || '').toLowerCase().includes(q);
+            return (l.role || '').toLowerCase().includes(q) || (l.company || '').toLowerCase().includes(q) || (l.title || '').toLowerCase().includes(q);
           });
         }
-        var showCount = (searchQuery || activeFilter !== 'all') ? leads.length : Math.min(leads.length, DEFAULT_SHOW);
+        updateLeadsCount(leads.length);
+
+        var showCount = (searchQuery || activeFilter !== 'all' || activeConfidence !== 'any' || activeLocation !== 'any') ? leads.length : Math.min(leads.length, DEFAULT_SHOW);
         for (var li = 0; li < showCount; li++) {
           var lead = leads[li];
+
+          var cardWrapper = SM.el('div', { style: { marginBottom: '4px' } });
           var cardAttrs = { class: 'lead-card' };
-          if (lead.url) {
-            cardAttrs = { class: 'lead-card lead-card-link', href: lead.url, target: '_blank', rel: 'noopener' };
-          }
-          var ltag = lead.url ? 'a' : 'div';
-          var scoreEls = SM.el('div', { style: { display: 'flex', alignItems: 'center', gap: '6px' } });
+
+          var scoreEls = SM.el('div', { style: { display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap' } });
           if (lead.scores) {
             var cvs = [
               { key: 'cto', label: 'CTO', color: 'var(--sm-teal-glow)' },
@@ -266,12 +414,16 @@
               { key: 'devrel', label: 'DEV', color: 'var(--sm-violet-glow)' }
             ];
             var displayScore;
+            var avgScore = Math.round((lead.scores.cto + lead.scores.regtech + lead.scores.devrel) / 3);
             if (activeFilter !== 'all') {
               displayScore = lead.scores[activeFilter] || 0;
             } else {
-              displayScore = Math.round((lead.scores.cto + lead.scores.regtech + lead.scores.devrel) / 3);
+              displayScore = lead.score || Math.max(lead.scores.cto, lead.scores.regtech, lead.scores.devrel);
             }
-            scoreEls.appendChild(SM.el('span', { style: { fontFamily: 'var(--f-mono)', fontSize: '14px', fontWeight: '700', color: 'var(--sm-text)', marginRight: '4px' } }, String(displayScore)));
+            var spread = getSpread(lead);
+            scoreEls.appendChild(SM.el('span', { style: { fontFamily: 'var(--f-mono)', fontSize: '14px', fontWeight: '700', color: 'var(--sm-text)', marginRight: '2px' } }, String(displayScore)));
+            scoreEls.appendChild(SM.el('span', { title: 'Average across all 3 CVs', style: { fontFamily: 'var(--f-mono)', fontSize: '10px', color: 'var(--sm-muted)', marginRight: '4px' } }, 'avg ' + avgScore));
+            scoreEls.appendChild(SM.el('span', { title: 'Spread (max - min variant)', style: { fontFamily: 'var(--f-mono)', fontSize: '10px', color: spread >= 30 ? 'var(--sm-teal-glow)' : spread >= 15 ? 'var(--sm-gold-glow)' : 'var(--sm-muted)', marginRight: '6px' } }, 'Δ' + spread));
             for (var ci = 0; ci < cvs.length; ci++) {
               var cv = cvs[ci];
               var s = lead.scores[cv.key] || 0;
@@ -288,18 +440,76 @@
           } else {
             scoreEls.appendChild(SM.el('div', { class: 'lead-score' }, String(lead.score)));
           }
+
+          // Freshness colour: green < 7d, yellow 7-14d, red > 14d
+          var freshColor = 'var(--sm-teal-glow)';
+          if (lead.days_old > 14) freshColor = 'var(--sm-gold-glow)';
+          if (lead.days_old > 21) freshColor = '#ef4444';
+          var daysLabel = lead.days_old != null ? lead.days_old + 'd' : '';
+
+          // Channel badge
+          var channelLabel = '';
+          var channelColor = 'var(--sm-muted)';
+          if (lead.channel_method === 'linkedin_apply') { channelLabel = 'LI Apply'; channelColor = '#0a66c2'; }
+          else if (lead.channel_method === 'direct_url') { channelLabel = 'Direct'; channelColor = 'var(--sm-teal-glow)'; }
+          else if (lead.channel_method === 'email') { channelLabel = 'Email'; channelColor = 'var(--sm-violet-glow)'; }
+          else { channelLabel = 'Unknown'; }
+
+          var locStr = lead.location ? lead.location : '';
+          var metaParts = [lead.company];
+          if (locStr) metaParts.push(locStr);
+
           var infoEl = SM.el('div', { class: 'lead-info' },
             SM.el('div', { class: 'lead-role' }, lead.role),
-            SM.el('div', { class: 'lead-company' }, lead.company + (lead.days_old != null ? ' · ' + lead.days_old + 'd ago' : ''))
+            SM.el('div', { class: 'lead-company' }, metaParts.join(' · '))
           );
-          if (lead.confidence === 'low') {
-            infoEl.appendChild(SM.el('span', { style: {
-              fontFamily: 'var(--f-mono)', fontSize: '9px', fontWeight: '600',
-              color: 'var(--sm-gold-glow)', background: 'rgba(245, 158, 11, 0.1)',
-              padding: '1px 5px', borderRadius: '3px', marginTop: '2px', display: 'inline-block'
-            } }, 'LOW DATA'));
+
+          // Badges row: freshness, channel, confidence
+          var badges = SM.el('div', { style: { display: 'flex', gap: '4px', marginTop: '3px', flexWrap: 'wrap' } });
+          if (daysLabel) {
+            badges.appendChild(SM.el('span', { style: { fontFamily: 'var(--f-mono)', fontSize: '9px', fontWeight: '600', color: freshColor, background: 'rgba(255,255,255,0.05)', padding: '1px 5px', borderRadius: '3px' } }, daysLabel));
           }
-          leadsContainer.appendChild(SM.el(ltag, cardAttrs, infoEl, scoreEls));
+          badges.appendChild(SM.el('span', { style: { fontFamily: 'var(--f-mono)', fontSize: '9px', fontWeight: '600', color: channelColor, background: 'rgba(255,255,255,0.05)', padding: '1px 5px', borderRadius: '3px' } }, channelLabel));
+          if (lead.confidence && lead.confidence !== 'high') {
+            var confColor = lead.confidence === 'low' ? 'var(--sm-gold-glow)' : 'var(--sm-muted)';
+            badges.appendChild(SM.el('span', { style: { fontFamily: 'var(--f-mono)', fontSize: '9px', fontWeight: '600', color: confColor, background: 'rgba(255,255,255,0.05)', padding: '1px 5px', borderRadius: '3px' } }, lead.confidence.toUpperCase()));
+          }
+          infoEl.appendChild(badges);
+
+          var cardEl = SM.el('div', cardAttrs, infoEl, scoreEls);
+
+          var detailEl = SM.el('div', { style: { display: 'none', padding: '10px 14px', background: 'var(--sm-surface)', borderRadius: '0 0 6px 6px', border: '1px solid var(--sm-border)', borderTop: 'none' } });
+          if (lead.proof_points && lead.proof_points.length) {
+            detailEl.appendChild(SM.el('div', { style: { fontFamily: 'var(--f-mono)', fontSize: '10px', fontWeight: '700', color: 'var(--sm-teal-glow)', marginBottom: '4px' } }, 'WHY THIS SCORE'));
+            for (var pi = 0; pi < lead.proof_points.length; pi++) {
+              var pp = lead.proof_points[pi];
+              var ppEl = SM.el('div', { style: { marginBottom: '6px', paddingLeft: '8px', borderLeft: '2px solid var(--sm-teal)', fontSize: '11px', fontFamily: 'var(--f-body)' } });
+              ppEl.appendChild(SM.el('div', { style: { color: 'var(--sm-text)', fontWeight: '500' } }, pp.requirement ? pp.requirement.slice(0, 80) : ''));
+              ppEl.appendChild(SM.el('div', { style: { color: 'var(--sm-muted)', fontSize: '10px', marginTop: '2px' } }, pp.evidence ? pp.evidence.slice(0, 120) + '...' : ''));
+              detailEl.appendChild(ppEl);
+            }
+          }
+          if (lead.gaps && lead.gaps.length) {
+            detailEl.appendChild(SM.el('div', { style: { fontFamily: 'var(--f-mono)', fontSize: '10px', fontWeight: '700', color: 'var(--sm-gold-glow)', marginTop: '8px', marginBottom: '4px' } }, 'GAPS'));
+            for (var gi = 0; gi < lead.gaps.length; gi++) {
+              detailEl.appendChild(SM.el('div', { style: { fontSize: '11px', fontFamily: 'var(--f-body)', color: 'var(--sm-muted)', paddingLeft: '8px', borderLeft: '2px solid var(--sm-gold)', marginBottom: '3px' } }, lead.gaps[gi].slice(0, 100)));
+            }
+          }
+          if (lead.url) {
+            detailEl.appendChild(SM.el('a', { href: lead.url, target: '_blank', rel: 'noopener', style: { fontFamily: 'var(--f-mono)', fontSize: '10px', color: 'var(--sm-teal-glow)', display: 'inline-block', marginTop: '6px' } }, 'Open listing →'));
+          }
+
+          // Toggle detail on click
+          (function(card, detail) {
+            card.addEventListener('click', function(e) {
+              if (e.target.tagName === 'A') return;
+              detail.style.display = detail.style.display === 'none' ? 'block' : 'none';
+            });
+          })(cardEl, detailEl);
+
+          cardWrapper.appendChild(cardEl);
+          cardWrapper.appendChild(detailEl);
+          leadsContainer.appendChild(cardWrapper);
         }
         if (showCount < leads.length) {
           var showMore = SM.el('button', { style: {
@@ -318,32 +528,73 @@
         }
       }
 
-      for (var fi = 0; fi < filters.length; fi++) {
-        (function(f) {
-          var btn = SM.el('button', { 'data-filter': f.key, style: {
-            fontFamily: 'var(--f-mono)', fontSize: '11px', fontWeight: '600',
-            padding: '4px 10px', borderRadius: '4px', cursor: 'pointer',
-            border: '1px solid ' + f.color,
-            background: f.key === 'all' ? 'var(--sm-surface-alt)' : 'transparent',
-            color: f.color, transition: 'background 0.2s, border-width 0.1s'
-          } }, f.label);
-          btn.addEventListener('click', function() {
-            activeFilter = f.key;
-            renderFilterButtons();
-            renderLeadCards();
-          });
-          filterBar.appendChild(btn);
-        })(filters[fi]);
+      // Build all button groups with unified approach
+      function addButtons(bar, items, group, defaultKey, color) {
+        for (var i = 0; i < items.length; i++) {
+          (function(item) {
+            var btnColor = item.color || color || 'var(--sm-muted)';
+            var isDefault = item.key === defaultKey;
+            var btn = SM.el('button', { 'data-group': group, 'data-val': item.key, style: {
+              fontFamily: 'var(--f-mono)', fontSize: '10px', fontWeight: '500',
+              padding: '2px 7px', borderRadius: '3px', cursor: 'pointer',
+              border: '1px solid ' + (isDefault ? btnColor : 'var(--sm-border)'),
+              background: isDefault ? 'var(--sm-surface-alt)' : 'transparent',
+              color: isDefault ? btnColor : 'var(--sm-muted)',
+              transition: 'all 0.15s', lineHeight: '1.4'
+            } }, item.label);
+            btn.addEventListener('click', function() {
+              if (group === 'variant') activeFilter = item.key;
+              else if (group === 'confidence') activeConfidence = item.key;
+              else if (group === 'location') activeLocation = item.key;
+              else if (group === 'freshness') activeFreshness = item.key;
+              else if (group === 'channel') activeChannel = item.key;
+              else if (group === 'sort') activeSort = item.key;
+              else if (group === 'order') activeOrder = item.key;
+              renderFilterButtons();
+              renderLeadCards();
+            });
+            bar.appendChild(btn);
+          })(items[i]);
+        }
       }
+
+      addButtons(filterBar, filters, 'variant', 'all');
+      addButtons(confidenceBar, confidenceFilters, 'confidence', 'any');
+      addButtons(locationBar, locationFilters, 'location', 'any');
+      addButtons(freshnessBar, freshnessFilters, 'freshness', 'any');
+      addButtons(channelBar, channelFilters, 'channel', 'any');
+      addButtons(sortBar, sortOptions, 'sort', 'best', 'var(--sm-teal)');
+      addButtons(orderBar, orderOptions, 'order', 'desc', 'var(--sm-teal)');
 
       searchInput.addEventListener('input', function() {
         searchQuery = this.value;
         renderLeadCards();
       });
 
-      controlsRow.appendChild(filterBar);
-      controlsRow.appendChild(searchInput);
-      leadsHeader.appendChild(controlsRow);
+      // Search goes in title row (right side)
+      leadsTitleRow.appendChild(searchInput);
+      leadsHeader.appendChild(leadsTitleRow);
+
+      // Assemble 2-column filter grid
+      // Column 1: CV, Location, Channel
+      // Column 2: Freshness, Data, Sort
+      controlsGrid.appendChild(makeFilterRow('CV', filterBar));
+      controlsGrid.appendChild(makeFilterRow('Fresh', freshnessBar));
+      controlsGrid.appendChild(makeFilterRow('Location', locationBar));
+      controlsGrid.appendChild(makeFilterRow('Data', confidenceBar));
+      controlsGrid.appendChild(makeFilterRow('Channel', channelBar));
+      // Sort row combines metric + direction
+      var sortCombined = makeButtonGroup();
+      sortBar.querySelectorAll('button').forEach(function(b) { sortCombined.appendChild(b); });
+      sortCombined.appendChild(SM.el('span', { style: { width: '1px', height: '14px', background: 'var(--sm-border)', margin: '0 4px' } }));
+      orderBar.querySelectorAll('button').forEach(function(b) { sortCombined.appendChild(b); });
+      controlsGrid.appendChild(makeFilterRow('Sort', sortCombined));
+
+      leadsHeader.appendChild(controlsGrid);
+
+      function updateLeadsCount(showing) {
+        leadsCount.textContent = showing !== emp.top_leads.length ? showing + ' / ' + emp.top_leads.length : emp.top_leads.length + ' total';
+      }
       leadsPanel.appendChild(leadsHeader);
       leadsPanel.appendChild(leadsContainer);
       renderLeadCards();

@@ -18,15 +18,36 @@ function generateId(company, role) {
   return `${slug}-${Date.now().toString(36)}`;
 }
 
+const COMPANY_ALIASES = {
+  'tether operations limited': 'tether',
+  'cow dao (cow swap)': 'cow dao',
+  'cow protocol (cow swap)': 'cow dao',
+  'cow dao': 'cow dao',
+};
+
+function normCompany(s) {
+  const lower = (s || '').toLowerCase().trim();
+  return COMPANY_ALIASES[lower] || lower.replace(/[^a-z0-9]/g, '');
+}
+
+function normRole(s) {
+  return (s || '').toLowerCase()
+    .replace(/\(100%\s*remote.*?\)/g, '')
+    .replace(/\(remote.*?\)/g, '')
+    .replace(/worldwide/g, '')
+    .replace(/[^a-z0-9]/g, '');
+}
+
 function isDuplicate(existing, candidate) {
-  const norm = (s) => (s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+  const candCompany = normCompany(candidate.company);
+  const candRole = normRole(candidate.title);
 
   for (const job of existing) {
     const jobLid = job.linkedin_job_id || (job.channel && job.channel.linkedin_job_id);
     if (jobLid && candidate.job_id && String(jobLid) === String(candidate.job_id)) return true;
-    const cMatch = norm(job.company) === norm(candidate.company);
-    const rMatch = norm(job.role) === norm(candidate.title);
-    if (cMatch && rMatch && norm(job.company)) return true;
+    const cMatch = normCompany(job.company) === candCompany;
+    const rMatch = normRole(job.role) === candRole;
+    if (cMatch && rMatch && candCompany) return true;
   }
   return false;
 }
@@ -36,6 +57,54 @@ function loadArchive() {
   if (!fs.existsSync(archivePath)) return [];
   const data = JSON.parse(fs.readFileSync(archivePath, 'utf-8'));
   return data.jobs || [];
+}
+
+const REJECT_TITLES = [
+  // Sales / BD / marketing
+  'business development', 'sales director', 'sales manager', 'account executive',
+  'account manager', 'country manager', 'marketing lead', 'marketing manager',
+  'marketing strategy', 'growth manager',
+  // Content / social / design
+  'content creator', 'social media', 'social account manager', 'graphic design',
+  'ui/ux designer', 'ux researcher', 'copywriter',
+  // HR / legal / finance / ops
+  'recruiter', 'talent acquisition', 'people technology',
+  'legal counsel', 'litigator', 'paralegal',
+  'accountant', 'bookkeeper', 'finance lead', 'finance manager',
+  'customer support', 'customer success',
+  // Junior / intern
+  'intern', 'junior developer', 'junior engineer', 'junior front-end',
+  'junior social', 'junior ip',
+  // IC dev roles (no leadership)
+  'rust developer', 'rust engineer', 'solidity developer', 'smart contract engineer',
+  'solana developer', 'blockchain developer', 'blockchain engineer',
+  'qa engineer', 'test engineer', 'sdet',
+  'data scientist', 'data analyst', 'data engineer', 'ml engineer', 'machine learning engineer',
+  'mobile engineer', 'android developer', 'ios developer',
+  'devops engineer', 'sre', 'site reliability',
+  'full stack developer', 'frontend developer', 'backend developer',
+  'integrations engineer', 'software architect', 'technical architect',
+  // Analyst-level roles
+  'governance analyst', 'compliance analyst', 'compliance case analyst',
+  'research analyst', 'risk analyst'
+];
+
+const REJECT_PATTERNS = [
+  /^senior\s+(software|blockchain|data|backend|frontend|full.?stack|smart contract|mobile|platform)\s+engineer/i,
+  /^staff\s+(software|blockchain|data|backend|frontend|mobile)\s+engineer/i,
+  /^principal\s+.*engineer/i,
+  /^(senior|staff|lead)\s+.*developer$/i,
+  /product\s+engineer$/i,
+  /technical product manager/i,
+  /product owner/i
+];
+
+function isIrrelevantRole(title) {
+  if (!title) return false;
+  const t = title.toLowerCase();
+  if (REJECT_TITLES.some(r => t.includes(r))) return true;
+  if (REJECT_PATTERNS.some(rx => rx.test(title))) return true;
+  return false;
 }
 
 function ingest(searchResults) {
@@ -49,9 +118,15 @@ function ingest(searchResults) {
 
   const candidates = Array.isArray(searchResults) ? searchResults : (searchResults.jobs || []);
 
+  let filtered = 0;
   for (const c of candidates) {
     if (isDuplicate(allKnown, c)) {
       skipped++;
+      continue;
+    }
+
+    if (isIrrelevantRole(c.title)) {
+      filtered++;
       continue;
     }
 
@@ -94,7 +169,7 @@ function ingest(searchResults) {
   saveJobs(data);
   classifyAll(true);
 
-  return { added, skipped, total: existing.length, newIds: newIds };
+  return { added, skipped, filtered, total: existing.length, newIds: newIds };
 }
 
 async function fetchAndScore(newIds) {
@@ -196,7 +271,7 @@ Options:
     result = ingestFromFile(arg);
   }
 
-  console.log(`Ingested: ${result.added} new, ${result.skipped} duplicates skipped. Total pipeline: ${result.total}`);
+  console.log(`Ingested: ${result.added} new, ${result.skipped} duplicates, ${result.filtered} irrelevant filtered. Total pipeline: ${result.total}`);
 
   if (result.added > 0 && !noScore) {
     console.log(`\nFetching descriptions and scoring ${result.added} new jobs...`);

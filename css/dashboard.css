@@ -397,12 +397,19 @@
 
 .lead-card {
   background: var(--sm-surface-alt);
-  border-radius: 8px;
-  padding: 14px 16px;
-  margin-bottom: 10px;
+  border-radius: 6px;
+  padding: 10px 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
+  transition: background 0.15s;
+  border: 1px solid transparent;
+}
+
+.lead-card:hover {
+  background: var(--sm-surface);
+  border-color: var(--sm-border);
 }
 
 .lead-info {

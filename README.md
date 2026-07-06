@@ -46,6 +46,13 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 
 ## Changelog
 
+#### 2026-07-06
+- Job pipeline hygiene: role-type filter on ingest (rejects IC devs, sales, marketing, junior roles), company alias dedup (Tether/Tether Operations Limited), regex patterns for edge cases. Pipeline 351 → 210 relevant jobs.
+- Variant-specific keyword expansion maps in match-job.js (CTO/RegTech/DevRel each have their own semantic neighbourhood)
+- Dashboard: tri-score support in top_leads filter, search includes title field
+- Blog article "Building the Machine That Builds Your Career": transparency angle, expansion map section, sidebar tags/nav
+- 6 fresh leads ingested and auto-scored (Xapo Bank 79, Wintermute 80, Google 70, Kast 69, Ciklo 79)
+
 #### 2026-06-19
 - First job application sent via automated pipeline (Deel Head of Engineering, email-direct with CTO CV attached)
 - Email attachment support added to MCP email_send tool (nodemailer + file paths)

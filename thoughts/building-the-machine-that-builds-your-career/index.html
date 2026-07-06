@@ -33,7 +33,7 @@
 
       <p>This creates an obvious paradox: every hour spent improving the system is an hour not spent applying through it. The system gets better while the bank account gets worse. At some point the investment pays off in higher-quality applications with lower effort per submission. The question is whether that crossover happens before the money runs out.</p>
 
-      <p>This article documents the engineering decisions in real time. Each section represents a problem encountered, diagnosed, and solved. The system is live, the code is production, and the job search is real.</p>
+      <p>This article documents the engineering decisions in real time. Each section represents a problem encountered, diagnosed, and solved. The system is live, the code is open, and the job search is real. Not just the code: the changelog, the scoring logic, the architectural dead-ends, the daily progress. Everything that most people would keep behind a private repo until it's polished, published here while it's still rough and actively evolving. If you want to see how a senior engineer actually works through hard problems, this is it, including the wrong turns.</p>
 
       <h2>The Scoring Problem</h2>
 
@@ -89,6 +89,16 @@
 
       <p>The scoring quality creates a natural incentive: write a better CV, get better match accuracy. This is the opposite of most job platforms where the algorithm is opaque and the user has no lever to pull except "apply to more things."</p>
 
+      <h2>The Expansion Map Problem</h2>
+
+      <p>The CV-derived proof pools solved the differentiation problem but introduced a subtler one. A job description might say "5+ years Solidity." My CTO CV doesn't use the word "Solidity" because it talks about architecture and team leadership. But it does say "smart contract" and "EVM." These are obviously related. The system needs to know that.</p>
+
+      <p>The first implementation used a single global expansion map: "blockchain" expands to ["bitcoin", "ethereum", "web3", "crypto"...]. Every variant used the same map. This is the same mistake as the shared proof pool, just one level deeper. When a CTO reads "blockchain" they think "architecture, protocol design, infrastructure." When a DevRel reads it they think "documentation, tutorials, developer education." The semantic neighbourhood of a keyword depends on who's reading it.</p>
+
+      <p>The fix: three variant-specific expansion maps. The CTO map expands "team" to ["hiring", "managed", "moonshot", "sprint"]. The DevRel map expands it to ["community", "contributors", "maintainers", "ambassadors"]. The RegTech map expands "compliance" to ["kyc", "aml", "sandbox", "securities commission", "fca", "mica"]. Each map reflects how that version of the person actually talks about their work.</p>
+
+      <p>This layered approach (variant-specific proof pools + variant-specific semantic expansion) means two jobs with identical keywords can score differently because the system understands that "team management" means different things depending on whether you're hiring engineers or coordinating a developer community. The scores finally reflect human judgement about fit, not just keyword overlap.</p>
+
       <h2>What's Next</h2>
 
       <p>This section will grow as the system evolves. Open problems as of today:</p>
@@ -104,8 +114,19 @@
 
       <div class="article-divider"></div>
 
-      <p><em>This article is updated as the system evolves. Each section represents a real engineering decision made during an active job search. The code is live at the time of writing.</em></p>
+      <p><em>This article is updated as the system evolves. Each section represents a real engineering decision made during an active job search. The source code, commit history, and changelogs are all public. No waiting until it's finished. No cleaning up the messy parts. This is what building looks like in progress.</em></p>
 
+      <div class="article-tags">
+        <a class="pill" href="../../explore/?tag=AI/LLM">AI/LLM</a>
+        <a class="pill" href="../../explore/?tag=Job Search">Job Search</a>
+        <a class="pill" href="../../explore/?tag=Product Design">Product Design</a>
+        <a class="pill" href="../../explore/?tag=Scoring Systems">Scoring Systems</a>
+        <a class="pill" href="../../explore/?tag=Engineering Journal">Engineering Journal</a>
+      </div>
+
+      <nav class="case-nav">
+        <a href="../16-days-one-ecosystem/">← 16 Days, One Ecosystem</a>
+      </nav>
     </div>
   </div>
 </section>

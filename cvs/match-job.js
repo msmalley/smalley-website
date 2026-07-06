@@ -148,48 +148,96 @@ function extractMetadata(jobDescription) {
   return { company, role, location };
 }
 
-const KEYWORD_EXPANSIONS = {
-  'blockchain': ['bitcoin', 'ethereum', 'utxo', 'ordinals', 'taproot', 'protocol', 'web3', 'crypto', 'digital asset', 'defi', 'l1', 'l2'],
-  'bitcoin': ['utxo', 'ordinals', 'taproot', 'psbt', 'schnorr', 'inscription', 'brc-20', 'runes', 'bitcoinjs'],
-  'ethereum': ['solidity', 'evm', 'erc-20', 'erc-721', 'smart contract', 'ethersjs', 'web3.js', 'defi'],
-  'production': ['shipped', 'built', 'deployed', 'launched', 'live', 'production', 'shipping', 'released'],
-  'team': ['engineers', 'hiring', 'managed', 'led', 'founded', 'cross-functional', 'moonshot', 'onboarding', 'mentoring'],
-  'leadership': ['cto', 'head of', 'led', 'managed', 'founded', 'director', 'vp', 'engineering leader', 'tech lead'],
-  'sdk': ['toolkit', 'api', 'library', 'npm', 'package', 'developer tooling', 'consumer sdk', 'developer experience'],
-  'startup': ['seed', 'series', '500 startups', 'antler', 'founder', 'co-founded', 'early-stage', 'pre-seed', 'mvp'],
-  'fundrais': ['draper', 'investment', 'raised', 'seed', 'series', '$500k', '$300k', 'investor', 'pitch'],
-  'protocol': ['sado', 'dn-key', 'everstore', 'ordit', 'bip32', 'psbt', 'specification', 'standard', 'rfc'],
-  'architecture': ['extensible', 'plugin', 'framework', 'designed', 'infrastructure', 'system', 'scalable', 'microservices', 'modular'],
-  'open source': ['github', 'repository', 'npm', 'contributor', 'backpress', 'open-source', 'oss', 'community'],
-  'compliance': ['kyc', 'aml', 'regulatory', 'sandbox', 'securities commission', 'soc 2', 'pci', 'fca', 'mica'],
-  'devrel': ['documentation', 'developer', 'community', 'advocacy', 'speaking', 'content', 'tutorial', 'workshop'],
-  'fintech': ['payment', 'financial', 'banking', 'custody', 'digital asset', 'kyc', 'aml', 'regulated', 'neobank'],
-  'regulated': ['compliance', 'regulatory', 'sandbox', 'securities', 'kyc', 'aml', 'audit', 'soc', 'licensed'],
-  'remote': ['distributed', 'async', 'global', 'multiple countries', 'cross-timezone'],
-  'distributed': ['remote', 'global', 'multiple countries', 'malaysia', 'singapore', 'uk'],
-  'delivery': ['shipped', 'commits', 'deployed', 'launched', 'production', 'ci/cd', 'sprint', 'agile'],
-  'security': ['cryptographic', 'custody', 'passkey', 'webauthn', 'key management', 'audit', 'encryption'],
-  'investor': ['draper', 'raised', 'seed', 'pitch', 'due diligence', 'funding'],
-  'management': ['hiring', 'onboarding', 'sprint', 'roadmap', 'stakeholder', 'performance', 'okr'],
-  'ai': ['llm', 'machine learning', 'ml', 'mcp', 'agent', 'ai-augmented', 'automation', 'generative'],
-  'node': ['javascript', 'typescript', 'express', 'esm', 'npm', 'backend', 'server-side'],
-  'javascript': ['typescript', 'node', 'react', 'vue', 'frontend', 'full-stack', 'esm'],
-  'typescript': ['javascript', 'node', 'typed', 'frontend', 'full-stack'],
-  'full-stack': ['frontend', 'backend', 'node', 'react', 'api', 'database', 'end-to-end'],
-  'cloud': ['aws', 'cloudflare', 'docker', 'kubernetes', 'infrastructure', 'serverless', 'workers'],
-  'identity': ['passkey', 'webauthn', 'authentication', 'oauth', 'sso', 'key management', 'did'],
-  'gaming': ['game engine', 'game development', 'multiplayer', 'esm', 'plugin', 'modding'],
-  'content': ['writing', 'blog', 'documentation', 'tutorial', 'video', 'speaking', 'thought leadership'],
-  'strategy': ['roadmap', 'vision', 'planning', 'stakeholder', 'board', 'investor', 'growth'],
-  'custody': ['wallet', 'key management', 'hsm', 'multi-sig', 'cold storage', 'digital asset'],
-  'defi': ['dex', 'amm', 'yield', 'staking', 'liquidity', 'smart contract', 'protocol'],
+// Each variant gets its own expansion map reflecting that person's unique story.
+// CTO person: builds companies, scales teams, raises funding, ships products.
+// RegTech person: navigates regulation, builds compliance systems, advises institutions.
+// DevRel person: teaches developers, builds communities, creates content, open-sources.
+const VARIANT_EXPANSIONS = {
+  cto: {
+    'blockchain': ['bitcoin', 'ethereum', 'utxo', 'ordinals', 'taproot', 'web3', 'crypto', 'digital asset'],
+    'bitcoin': ['utxo', 'ordinals', 'taproot', 'psbt', 'schnorr', 'inscription', 'runes', 'bitcoinjs'],
+    'ethereum': ['solidity', 'evm', 'erc-20', 'erc-721', 'smart contract', 'ethersjs', 'defi'],
+    'production': ['shipped', 'built', 'deployed', 'launched', 'live', 'shipping', 'released', 'commits'],
+    'team': ['engineers', 'hiring', 'managed', 'founded', 'cross-functional', 'moonshot', 'onboarding', 'mentoring', 'sprint'],
+    'leadership': ['cto', 'head of', 'led', 'managed', 'founded', 'director', 'vp', 'engineering leader', 'tech lead'],
+    'startup': ['seed', 'series', '500 startups', 'antler', 'founder', 'co-founded', 'early-stage', 'pre-seed', 'mvp', 'draper'],
+    'fundrais': ['draper', 'investment', 'raised', 'seed', 'series', 'investor', 'pitch', 'due diligence'],
+    'architecture': ['extensible', 'plugin', 'framework', 'designed', 'infrastructure', 'scalable', 'microservices', 'modular', 'system'],
+    'protocol': ['sado', 'dn-key', 'everstore', 'ordit', 'bip32', 'specification', 'standard'],
+    'delivery': ['shipped', 'commits', 'deployed', 'launched', 'ci/cd', 'sprint', 'agile', 'velocity'],
+    'security': ['cryptographic', 'passkey', 'webauthn', 'key management', 'encryption', 'custody'],
+    'management': ['hiring', 'onboarding', 'sprint', 'roadmap', 'stakeholder', 'performance', 'okr'],
+    'ai': ['llm', 'machine learning', 'ml', 'mcp', 'agent', 'ai-augmented', 'automation', 'generative'],
+    'node': ['javascript', 'typescript', 'express', 'esm', 'npm', 'backend'],
+    'javascript': ['typescript', 'node', 'react', 'vue', 'full-stack', 'esm'],
+    'typescript': ['javascript', 'node', 'full-stack'],
+    'full-stack': ['frontend', 'backend', 'node', 'react', 'api', 'database'],
+    'cloud': ['aws', 'cloudflare', 'docker', 'kubernetes', 'infrastructure', 'serverless', 'workers'],
+    'identity': ['passkey', 'webauthn', 'authentication', 'key management'],
+    'strategy': ['roadmap', 'vision', 'planning', 'stakeholder', 'board', 'investor', 'growth'],
+    'custody': ['wallet', 'key management', 'multi-sig', 'cold storage', 'digital asset'],
+    'scale': ['growth', 'distributed', 'multi-site', 'global', 'enterprise', 'high-availability'],
+    'investor': ['draper', 'raised', 'seed', 'pitch', 'due diligence', 'funding', 'series'],
+    'remote': ['distributed', 'global', 'multiple countries', 'cross-timezone'],
+    'fintech': ['payment', 'financial', 'banking', 'custody', 'digital asset'],
+  },
+  regtech: {
+    'compliance': ['kyc', 'aml', 'regulatory', 'sandbox', 'securities commission', 'soc 2', 'pci', 'fca', 'mica', 'licensed', 'audit'],
+    'regulatory': ['compliance', 'sandbox', 'securities commission', 'fca', 'mica', 'policy', 'framework', 'oversight', 'regulator'],
+    'kyc': ['aml', 'cdd', 'customer due diligence', 'identity verification', 'transaction monitoring', 'onboarding'],
+    'aml': ['kyc', 'financial crime', 'sanctions', 'transaction monitoring', 'suspicious activity', 'compliance'],
+    'fintech': ['payment', 'financial', 'banking', 'custody', 'digital asset', 'kyc', 'aml', 'regulated', 'neobank'],
+    'regulated': ['compliance', 'regulatory', 'sandbox', 'securities', 'kyc', 'aml', 'audit', 'soc', 'licensed', 'oversight'],
+    'blockchain': ['digital asset', 'distributed ledger', 'dlt', 'crypto', 'custody', 'tokenisation'],
+    'digital asset': ['cryptocurrency', 'token', 'custody', 'blockchain', 'distributed ledger', 'licensed'],
+    'custody': ['custodian', 'safekeeping', 'digital asset', 'wallet', 'cokeeps', 'institutional'],
+    'risk': ['compliance', 'audit', 'governance', 'controls', 'oversight', 'framework', 'assurance'],
+    'governance': ['policy', 'framework', 'controls', 'audit', 'board', 'oversight', 'risk'],
+    'security': ['cryptographic', 'key management', 'encryption', 'data protection', 'audit'],
+    'institutional': ['enterprise', 'bank', 'dbs', 'financial institution', 'advisory', 'stakeholder'],
+    'advisory': ['consulting', 'training', 'engagement', 'institutional', 'dbs bank', 'baker hostetler'],
+    'sandbox': ['regulatory', 'securities commission', 'pilot', 'innovation', 'experimental'],
+    'policy': ['regulatory', 'framework', 'governance', 'legislation', 'guideline', 'standard'],
+    'audit': ['assurance', 'controls', 'soc 2', 'pci', 'evidence', 'attestation'],
+    'fca': ['uk regulation', 'financial conduct authority', 'authorised', 'regulated', 'mica'],
+    'data protection': ['gdpr', 'privacy', 'data governance', 'retention', 'consent'],
+    'financial crime': ['aml', 'sanctions', 'fraud', 'transaction monitoring', 'suspicious activity'],
+    'identity': ['kyc', 'verification', 'onboarding', 'cdd', 'passkey', 'webauthn'],
+    'ai': ['automation', 'machine learning', 'monitoring', 'detection', 'analytics'],
+    'stakeholder': ['regulator', 'board', 'executive', 'institutional', 'central bank'],
+  },
+  devrel: {
+    'developer': ['community', 'documentation', 'sdk', 'api', 'tutorial', 'workshop', 'ecosystem', 'contributor'],
+    'community': ['developer', 'contributor', 'open source', 'ecosystem', 'forum', 'meetup', 'ambassador'],
+    'documentation': ['technical writing', 'api docs', 'sdk', 'tutorial', 'guide', 'reference', 'readme'],
+    'sdk': ['toolkit', 'api', 'library', 'npm', 'package', 'developer tooling', 'consumer sdk', 'integration'],
+    'open source': ['github', 'repository', 'npm', 'contributor', 'backpress', 'oss', 'community', 'public repo'],
+    'content': ['writing', 'blog', 'documentation', 'tutorial', 'video', 'speaking', 'thought leadership', 'article'],
+    'speaking': ['conference', 'tedx', 'webcamp', 'meetup', 'presentation', 'keynote', 'workshop', 'slideshare'],
+    'conference': ['tedx', 'webcamp', 'finnovasia', 'mdec', 'speaker', 'presentation', 'summit'],
+    'advocacy': ['evangelism', 'developer relations', 'community', 'education', 'outreach', 'engagement'],
+    'tutorial': ['workshop', 'training', 'curriculum', 'guide', 'hands-on', 'startingblock', 'hackathon'],
+    'blockchain': ['bitcoin', 'ethereum', 'web3', 'crypto', 'digital asset', 'ordinals', 'protocol'],
+    'protocol': ['sado', 'dn-key', 'everstore', 'ordit', 'specification', 'standard', 'open-source'],
+    'ai': ['llm', 'mcp', 'agent', 'ai-augmented', 'generative', 'model context protocol'],
+    'gaming': ['game engine', 'moddable', 'chess', 'hexmap', 'variant', 'plugin', 'modding'],
+    'javascript': ['typescript', 'node', 'esm', 'npm', 'frontend', 'full-stack'],
+    'node': ['javascript', 'typescript', 'esm', 'npm', 'backend'],
+    'education': ['training', 'workshop', 'curriculum', 'startingblock', 'hackathon', 'hack-pack'],
+    'hackathon': ['dbs bank', 'hack-pack', 'workshop', 'developer event', 'hands-on'],
+    'video': ['youtube', 'recording', 'livestream', 'demo', 'screencast'],
+    'writing': ['article', 'whitepaper', 'blog', 'publication', 'islamic finance news', 'byline'],
+    'integration': ['sdk', 'api', 'webhook', 'plugin', 'embed', 'third-party'],
+    'remote': ['distributed', 'global', 'async'],
+  },
 };
 
-function expandKeywords(text) {
+function expandKeywords(text, variant) {
   const lower = text.toLowerCase();
   const expanded = new Set(lower.split(/\s+/).filter(w => w.length > 3));
+  const expansions = VARIANT_EXPANSIONS[variant] || VARIANT_EXPANSIONS.cto;
 
-  for (const [trigger, synonyms] of Object.entries(KEYWORD_EXPANSIONS)) {
+  for (const [trigger, synonyms] of Object.entries(expansions)) {
     if (lower.includes(trigger)) {
       synonyms.forEach(s => expanded.add(s));
     }
@@ -210,7 +258,7 @@ function matchProofPoints(requirements, profile, variant) {
   const usedProofs = new Set();
 
   for (const req of requirements) {
-    const reqKeywords = expandKeywords(req);
+    const reqKeywords = expandKeywords(req, variant);
 
     let bestMatch = null;
     let bestScore = 0;

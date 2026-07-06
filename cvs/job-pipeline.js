@@ -126,6 +126,22 @@ function updateStatus(jobId, newStatus) {
     process.exit(1);
   }
   job.status = newStatus;
+
+  // Auto-archive terminal statuses
+  const archiveStatuses = ['closed', 'rejected', 'applied', 'withdrawn'];
+  if (archiveStatuses.includes(newStatus)) {
+    const archivePath = path.resolve(__dirname, 'jobs-archive.json');
+    let archive = { jobs: [], updated: '' };
+    if (fs.existsSync(archivePath)) {
+      archive = JSON.parse(fs.readFileSync(archivePath, 'utf-8'));
+    }
+    archive.jobs.push(job);
+    archive.updated = new Date().toISOString().split('T')[0];
+    fs.writeFileSync(archivePath, JSON.stringify(archive, null, 2) + '\n');
+    data.jobs = data.jobs.filter(j => j.id !== job.id);
+    console.log(`Archived ${job.role} @ ${job.company} → jobs-archive.json`);
+  }
+
   saveJobs(data);
   console.log(`Updated ${job.role} @ ${job.company} → ${newStatus}`);
 }

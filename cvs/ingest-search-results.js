@@ -31,9 +31,18 @@ function isDuplicate(existing, candidate) {
   return false;
 }
 
+function loadArchive() {
+  const archivePath = path.resolve(__dirname, 'jobs-archive.json');
+  if (!fs.existsSync(archivePath)) return [];
+  const data = JSON.parse(fs.readFileSync(archivePath, 'utf-8'));
+  return data.jobs || [];
+}
+
 function ingest(searchResults) {
   const data = loadJobs();
   const existing = data.jobs;
+  const archived = loadArchive();
+  const allKnown = existing.concat(archived);
   let added = 0;
   let skipped = 0;
   const newIds = [];
@@ -41,7 +50,7 @@ function ingest(searchResults) {
   const candidates = Array.isArray(searchResults) ? searchResults : (searchResults.jobs || []);
 
   for (const c of candidates) {
-    if (isDuplicate(existing, c)) {
+    if (isDuplicate(allKnown, c)) {
       skipped++;
       continue;
     }
@@ -69,7 +78,8 @@ function ingest(searchResults) {
       matched: scored ? scored.matched : null,
       gaps: scored ? scored.gaps : [],
       proof_points: scored ? scored.proof_points : [],
-      source_url: (c.url || '').replace(/^(https?:\/\/)uk\.linkedin\.com/, '$1www.linkedin.com'),
+      source_url: (c.url || '').replace(/^(https?:\/\/)uk\.linkedin\.com/, '$1www.linkedin.com')
+        || (c.job_id ? `https://www.linkedin.com/jobs/view/${c.job_id}/` : ''),
       source: c.source || 'unknown',
       linkedin_job_id: c.job_id || null,
       cover_letter: null,

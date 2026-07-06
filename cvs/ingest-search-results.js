@@ -240,6 +240,89 @@ async function fetchAndScore(newIds) {
   return { fetched, scored };
 }
 
+const MIN_REQUIREMENTS = 10;
+
+async function validateAndRefetch() {
+  let load;
+  try {
+    ({ load } = await import('cheerio'));
+  } catch {
+    const cheerioPath = path.resolve(__dirname, '../mcp/social/node_modules/cheerio/dist/commonjs/index.js');
+    ({ load } = require(cheerioPath));
+  }
+
+  const data = loadJobs();
+  const underScored = data.jobs.filter(j =>
+    j.requirements_found != null && j.requirements_found < MIN_REQUIREMENTS && j.linkedin_job_id
+  );
+
+  if (!underScored.length) {
+    console.log('All jobs have adequate requirement extraction (>= ' + MIN_REQUIREMENTS + ').');
+    return { refetched: 0, improved: 0, still_thin: 0 };
+  }
+
+  console.log(`Validating ${underScored.length} jobs with <${MIN_REQUIREMENTS} requirements...`);
+  let refetched = 0, improved = 0, still_thin = 0;
+
+  for (const job of underScored) {
+    try {
+      const url = `https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/${job.linkedin_job_id}`;
+      const response = await fetch(url, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36',
+          'Accept': 'text/html',
+          'Accept-Language': 'en-US,en;q=0.9'
+        }
+      });
+
+      if (response.status === 999) {
+        console.log(`  Rate limited after ${refetched} fetches.`);
+        break;
+      }
+      if (!response.ok) continue;
+
+      const html = await response.text();
+      const $ = load(html);
+      const description = $('div.description__text, div.show-more-less-html__markup').text().trim();
+      refetched++;
+
+      if (description && description.length > 100) {
+        const result = matchJob(description);
+        if (result.requirements_found >= MIN_REQUIREMENTS) {
+          const oldReqs = job.requirements_found;
+          job.score = result.score;
+          job.scores = result.scores;
+          job.confidence = result.confidence;
+          job.variant = result.variant;
+          job.requirements_found = result.requirements_found;
+          job.matched = result.matched;
+          job.gaps = result.gaps;
+          job.proof_points = result.proof_points;
+          job.status = result.score >= 50 ? 'new' : 'low_match';
+          improved++;
+          console.log(`  ✓ [${oldReqs}->${result.requirements_found} reqs] ${job.company}: ${job.role} (${result.score}, ${result.variant})`);
+        } else {
+          still_thin++;
+          job.status = 'needs_jd';
+          console.log(`  ✗ ${job.company}: ${job.role} — still thin (${result.requirements_found} reqs), marked needs_jd`);
+        }
+      } else {
+        still_thin++;
+        job.status = 'needs_jd';
+        console.log(`  ✗ ${job.company}: ${job.role} — no description available, marked needs_jd`);
+      }
+
+      await new Promise(r => setTimeout(r, 1200 + Math.random() * 800));
+    } catch (e) {
+      console.log(`  ${job.company}: ${job.role} — error: ${e.message}`);
+    }
+  }
+
+  saveJobs(data);
+  console.log(`\nValidation complete: ${improved} improved, ${still_thin} still thin, ${refetched} fetched.`);
+  return { refetched, improved, still_thin };
+}
+
 function ingestFromFile(filePath) {
   const raw = fs.readFileSync(filePath, 'utf-8');
   const results = JSON.parse(raw);
@@ -254,33 +337,41 @@ if (require.main === module) {
 Usage:
   node ingest-search-results.js <results.json>     Ingest from file
   echo '{"jobs":[...]}' | node ingest-search-results.js --stdin   Ingest from stdin
+  node ingest-search-results.js --validate         Re-fetch jobs with <${MIN_REQUIREMENTS} requirements
 
 Options:
   --no-score    Skip fetching descriptions and scoring (classify only)
+  --validate    Re-fetch and re-score under-extracted jobs
 `);
     process.exit(0);
   }
 
-  const noScore = process.argv.includes('--no-score');
-
-  let result;
-  if (arg === '--stdin') {
-    const input = fs.readFileSync(0, 'utf-8');
-    result = ingest(JSON.parse(input));
+  if (arg === '--validate') {
+    validateAndRefetch().catch(e => console.error(e.message));
   } else {
-    result = ingestFromFile(arg);
-  }
+    const noScore = process.argv.includes('--no-score');
 
-  console.log(`Ingested: ${result.added} new, ${result.skipped} duplicates, ${result.filtered} irrelevant filtered. Total pipeline: ${result.total}`);
+    let result;
+    if (arg === '--stdin') {
+      const input = fs.readFileSync(0, 'utf-8');
+      result = ingest(JSON.parse(input));
+    } else {
+      result = ingestFromFile(arg);
+    }
 
-  if (result.added > 0 && !noScore) {
-    console.log(`\nFetching descriptions and scoring ${result.added} new jobs...`);
-    fetchAndScore(result.newIds).then(scoreResult => {
-      console.log(`\nScored: ${scoreResult.scored}/${scoreResult.fetched} fetched jobs.`);
-    }).catch(e => {
-      console.error(`Scoring error: ${e.message}`);
-    });
+    console.log(`Ingested: ${result.added} new, ${result.skipped} duplicates, ${result.filtered} irrelevant filtered. Total pipeline: ${result.total}`);
+
+    if (result.added > 0 && !noScore) {
+      console.log(`\nFetching descriptions and scoring ${result.added} new jobs...`);
+      fetchAndScore(result.newIds).then(async (scoreResult) => {
+        console.log(`Scored: ${scoreResult.scored}/${scoreResult.fetched} fetched jobs.`);
+        console.log(`\nRunning validation pass...`);
+        await validateAndRefetch();
+      }).catch(e => {
+        console.error(`Scoring error: ${e.message}`);
+      });
+    }
   }
 }
 
-module.exports = { ingest, isDuplicate, fetchAndScore };
+module.exports = { ingest, isDuplicate, fetchAndScore, validateAndRefetch };

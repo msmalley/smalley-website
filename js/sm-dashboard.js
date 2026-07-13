@@ -1057,19 +1057,7 @@
       { label: 'Error rate', value: (cf.error_rate * 100).toFixed(2) + '%' }
     ]));
 
-    if (cf.by_worker && cf.by_worker.length) {
-      var maxReq = cf.by_worker[0].requests;
-      var items = cf.by_worker.map(function(w) {
-        return { label: w.name, value: w.requests, accent: w.errors > 0 ? 'red' : 'teal' };
-      });
-      grid.appendChild(SM.el('div', { class: 'dashboard-panel' },
-        SM.el('div', { class: 'dashboard-panel-title' }, 'Requests by Worker'),
-        barChart(items, maxReq)
-      ));
-    }
-    el.appendChild(grid);
-
-    // MCP Tool usage from GA4 events (moddable-tools Worker serves these)
+    // MCP Tool usage from GA4 events as second grid column
     var mgEvents = analytics && analytics.moddable_games && analytics.moddable_games.events_30d;
     if (mgEvents && mgEvents.length) {
       var toolEvents = mgEvents.filter(function(e) {
@@ -1081,12 +1069,22 @@
           var accent = e.event.includes('game') ? 'violet' : e.event.includes('tool') ? 'teal' : 'gold';
           return { label: e.event, value: e.count, accent: accent };
         });
-        el.appendChild(SM.el('div', { class: 'dashboard-panel', style: { marginTop: '24px' } },
+        grid.appendChild(SM.el('div', { class: 'dashboard-panel' },
           SM.el('div', { class: 'dashboard-panel-title' }, 'Tool & Game Events via GA4 (30d)'),
           barChart(teItems, teMax)
         ));
       }
+    } else if (cf.by_worker && cf.by_worker.length) {
+      var maxReq = cf.by_worker[0].requests;
+      var items = cf.by_worker.map(function(w) {
+        return { label: w.name, value: w.requests, accent: w.errors > 0 ? 'red' : 'teal' };
+      });
+      grid.appendChild(SM.el('div', { class: 'dashboard-panel' },
+        SM.el('div', { class: 'dashboard-panel-title' }, 'Requests by Worker'),
+        barChart(items, maxReq)
+      ));
     }
+    el.appendChild(grid);
   }
 
   function renderInvestment(inv) {

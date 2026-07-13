@@ -742,20 +742,63 @@
     var detailGrid = SM.el('div', { class: 'dashboard-grid-2', style: { marginTop: '24px' } });
 
     for (var s = 0; s < sites.length; s++) {
-      var key = sites[s][0], label = sites[s][1];
-      var site = analytics[key];
-      if (!site || site.error) continue;
+      (function(key, label) {
+        var site = analytics[key];
+        if (!site || site.error) return;
+        if (!site.referrers_30d || !site.referrers_30d.length) return;
 
-      if (site.referrers_30d && site.referrers_30d.length) {
-        var refMax = site.referrers_30d[0].sessions;
-        var refItems = site.referrers_30d.map(function(r) {
-          return { label: r.source, value: r.sessions, accent: r.source.includes('linkedin') ? 'teal' : r.source.includes('t.co') ? 'violet' : 'gold' };
-        });
-        detailGrid.appendChild(SM.el('div', { class: 'dashboard-panel' },
-          SM.el('div', { class: 'dashboard-panel-title' }, label + ' — Referrers (30d)'),
-          barChart(refItems, refMax)
-        ));
-      }
+        var panel = SM.el('div', { class: 'dashboard-panel' });
+        var titleRow = SM.el('div', { style: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px' } });
+        titleRow.appendChild(SM.el('div', { class: 'dashboard-panel-title', style: { marginBottom: '0' } }, label + ' — Referrers'));
+
+        var toggleBar = SM.el('div', { style: { display: 'flex', gap: '3px' } });
+        var periods = [
+          { key: '7d', label: '7D', data: site.referrers_7d || [] },
+          { key: '30d', label: '30D', data: site.referrers_30d || [] },
+          { key: '90d', label: '90D', data: site.referrers_90d || [] }
+        ];
+        var chartContainer = SM.el('div');
+        var activePeriod = '30d';
+
+        function renderRefChart(data) {
+          chartContainer.innerHTML = '';
+          if (!data.length) { chartContainer.appendChild(SM.el('div', { style: { color: 'var(--sm-muted)', fontSize: '12px' } }, 'No data')); return; }
+          var refMax = data[0].sessions;
+          var refItems = data.map(function(r) {
+            return { label: r.source, value: r.sessions, accent: r.source.includes('linkedin') ? 'teal' : r.source.includes('t.co') ? 'violet' : 'gold' };
+          });
+          chartContainer.appendChild(barChart(refItems, refMax));
+        }
+
+        for (var pi = 0; pi < periods.length; pi++) {
+          (function(period) {
+            var btn = SM.el('button', { style: {
+              fontFamily: 'var(--f-mono)', fontSize: '10px', fontWeight: period.key === activePeriod ? '700' : '500',
+              padding: '2px 7px', borderRadius: '3px', cursor: 'pointer',
+              border: '1px solid ' + (period.key === activePeriod ? 'var(--sm-teal)' : 'var(--sm-border)'),
+              background: period.key === activePeriod ? 'var(--sm-surface-alt)' : 'transparent',
+              color: period.key === activePeriod ? 'var(--sm-teal)' : 'var(--sm-muted)'
+            } }, period.label);
+            btn.addEventListener('click', function() {
+              activePeriod = period.key;
+              toggleBar.querySelectorAll('button').forEach(function(b) {
+                b.style.fontWeight = '500'; b.style.borderColor = 'var(--sm-border)';
+                b.style.background = 'transparent'; b.style.color = 'var(--sm-muted)';
+              });
+              btn.style.fontWeight = '700'; btn.style.borderColor = 'var(--sm-teal)';
+              btn.style.background = 'var(--sm-surface-alt)'; btn.style.color = 'var(--sm-teal)';
+              renderRefChart(period.data);
+            });
+            toggleBar.appendChild(btn);
+          })(periods[pi]);
+        }
+
+        titleRow.appendChild(toggleBar);
+        panel.appendChild(titleRow);
+        panel.appendChild(chartContainer);
+        renderRefChart(site.referrers_30d);
+        detailGrid.appendChild(panel);
+      })(sites[s][0], sites[s][1]);
     }
     el.appendChild(detailGrid);
 
@@ -834,18 +877,63 @@
     // Events breakdown (custom interactions)
     var eventsGrid = SM.el('div', { class: 'dashboard-grid-2', style: { marginTop: '24px' } });
     for (var s = 0; s < sites.length; s++) {
-      var key = sites[s][0], label = sites[s][1];
-      var site = analytics[key];
-      if (!site || !site.events_30d || !site.events_30d.length) continue;
-      var evMax = site.events_30d[0].count;
-      var evItems = site.events_30d.slice(0, 10).map(function(e) {
-        var accent = e.event.includes('game') ? 'violet' : e.event.includes('tool') || e.event.includes('dice') || e.event.includes('hex') ? 'teal' : 'gold';
-        return { label: e.event, value: e.count, accent: accent };
-      });
-      eventsGrid.appendChild(SM.el('div', { class: 'dashboard-panel' },
-        SM.el('div', { class: 'dashboard-panel-title' }, label + ' — Interactions (30d)'),
-        barChart(evItems, evMax)
-      ));
+      (function(key, label) {
+        var site = analytics[key];
+        if (!site || !site.events_30d || !site.events_30d.length) return;
+
+        var panel = SM.el('div', { class: 'dashboard-panel' });
+        var titleRow = SM.el('div', { style: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px' } });
+        titleRow.appendChild(SM.el('div', { class: 'dashboard-panel-title', style: { marginBottom: '0' } }, label + ' — Interactions'));
+
+        var toggleBar = SM.el('div', { style: { display: 'flex', gap: '3px' } });
+        var periods = [
+          { key: '7d', label: '7D', data: site.events_7d || [] },
+          { key: '30d', label: '30D', data: site.events_30d || [] },
+          { key: '90d', label: '90D', data: site.events_90d || [] }
+        ];
+        var chartContainer = SM.el('div');
+        var activePeriod = '30d';
+
+        function renderEvChart(data) {
+          chartContainer.innerHTML = '';
+          if (!data.length) { chartContainer.appendChild(SM.el('div', { style: { color: 'var(--sm-muted)', fontSize: '12px' } }, 'No data')); return; }
+          var evMax = data[0].count;
+          var evItems = data.slice(0, 10).map(function(e) {
+            var accent = e.event.includes('game') ? 'violet' : e.event.includes('tool') || e.event.includes('dice') || e.event.includes('hex') ? 'teal' : 'gold';
+            return { label: e.event, value: e.count, accent: accent };
+          });
+          chartContainer.appendChild(barChart(evItems, evMax));
+        }
+
+        for (var pi = 0; pi < periods.length; pi++) {
+          (function(period) {
+            var btn = SM.el('button', { style: {
+              fontFamily: 'var(--f-mono)', fontSize: '10px', fontWeight: period.key === activePeriod ? '700' : '500',
+              padding: '2px 7px', borderRadius: '3px', cursor: 'pointer',
+              border: '1px solid ' + (period.key === activePeriod ? 'var(--sm-teal)' : 'var(--sm-border)'),
+              background: period.key === activePeriod ? 'var(--sm-surface-alt)' : 'transparent',
+              color: period.key === activePeriod ? 'var(--sm-teal)' : 'var(--sm-muted)'
+            } }, period.label);
+            btn.addEventListener('click', function() {
+              activePeriod = period.key;
+              toggleBar.querySelectorAll('button').forEach(function(b) {
+                b.style.fontWeight = '500'; b.style.borderColor = 'var(--sm-border)';
+                b.style.background = 'transparent'; b.style.color = 'var(--sm-muted)';
+              });
+              btn.style.fontWeight = '700'; btn.style.borderColor = 'var(--sm-teal)';
+              btn.style.background = 'var(--sm-surface-alt)'; btn.style.color = 'var(--sm-teal)';
+              renderEvChart(period.data);
+            });
+            toggleBar.appendChild(btn);
+          })(periods[pi]);
+        }
+
+        titleRow.appendChild(toggleBar);
+        panel.appendChild(titleRow);
+        panel.appendChild(chartContainer);
+        renderEvChart(site.events_30d);
+        eventsGrid.appendChild(panel);
+      })(sites[s][0], sites[s][1]);
     }
     el.appendChild(eventsGrid);
   }

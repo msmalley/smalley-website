@@ -458,9 +458,11 @@ async function collectGA4() {
           .map(r => ({ event: r.dimensionValues[0].value, count: +r.metricValues[0].value }))
           .filter(e => !builtinEvents.includes(e.event));
 
-        const engagementPeriods = { '7d': '7daysAgo', '90d': '90daysAgo' };
+        const extraPeriods = { '7d': '7daysAgo', '90d': '90daysAgo' };
         const engagementByPeriod = {};
-        for (const [period, startDate] of Object.entries(engagementPeriods)) {
+        const referrersByPeriod = {};
+        const eventsByPeriod = {};
+        for (const [period, startDate] of Object.entries(extraPeriods)) {
           try {
             const [raw] = await client.runReport({
               property: `properties/${propId}`,
@@ -475,6 +477,30 @@ async function collectGA4() {
               return !path.includes('/personal/') && !path.includes('/MODDABLE/') && !path.startsWith('/localhost');
             }).slice(0, 10).map(r => ({ path: r.dimensionValues[0].value, views: +r.metricValues[0].value, avg_duration_s: Math.round(+r.metricValues[1].value), engaged: +r.metricValues[2].value }));
           } catch { engagementByPeriod[period] = []; }
+          try {
+            const [raw] = await client.runReport({
+              property: `properties/${propId}`,
+              dateRanges: [{ startDate, endDate: 'today' }],
+              metrics: [{ name: 'sessions' }],
+              dimensions: [{ name: 'sessionSource' }],
+              orderBys: [{ metric: { metricName: 'sessions' }, desc: true }],
+              limit: 8
+            });
+            referrersByPeriod[period] = (raw.rows || []).map(r => ({ source: r.dimensionValues[0].value, sessions: +r.metricValues[0].value }));
+          } catch { referrersByPeriod[period] = []; }
+          try {
+            const [raw] = await client.runReport({
+              property: `properties/${propId}`,
+              dateRanges: [{ startDate, endDate: 'today' }],
+              metrics: [{ name: 'eventCount' }],
+              dimensions: [{ name: 'eventName' }],
+              orderBys: [{ metric: { metricName: 'eventCount' }, desc: true }],
+              limit: 20
+            });
+            eventsByPeriod[period] = (raw.rows || [])
+              .map(r => ({ event: r.dimensionValues[0].value, count: +r.metricValues[0].value }))
+              .filter(e => !builtinEvents.includes(e.event));
+          } catch { eventsByPeriod[period] = []; }
         }
 
         result[key] = {
@@ -483,11 +509,15 @@ async function collectGA4() {
           change_pct: { page_views: pct(cur.page_views, prv.page_views), sessions: pct(cur.sessions, prv.sessions), users: pct(cur.users, prv.users) },
           top_pages: (topPages.rows || []).map(r => ({ path: r.dimensionValues[0].value, views: +r.metricValues[0].value })),
           traffic_sources: (sources.rows || []).map(r => ({ source: r.dimensionValues[0].value, sessions: +r.metricValues[0].value })),
+          referrers_7d: referrersByPeriod['7d'] || [],
           referrers_30d: (referrers.rows || []).map(r => ({ source: r.dimensionValues[0].value, sessions: +r.metricValues[0].value })),
+          referrers_90d: referrersByPeriod['90d'] || [],
           top_pages_7d: engagementByPeriod['7d'] || [],
           top_pages_30d: (engagement.rows || []).map(r => ({ path: r.dimensionValues[0].value, views: +r.metricValues[0].value, avg_duration_s: Math.round(+r.metricValues[1].value), engaged: +r.metricValues[2].value })),
           top_pages_90d: engagementByPeriod['90d'] || [],
-          events_30d: events
+          events_7d: eventsByPeriod['7d'] || [],
+          events_30d: events,
+          events_90d: eventsByPeriod['90d'] || []
         };
       } catch (e) {
         result[key] = { error: e.message, period_7d: { page_views: 0, sessions: 0, users: 0 }, period_7d_previous: { page_views: 0, sessions: 0, users: 0 }, change_pct: {}, top_pages: [], traffic_sources: [] };

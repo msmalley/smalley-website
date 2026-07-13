@@ -464,6 +464,30 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         } else {
           throw new Error(`Unsupported platform: ${args.platform}`);
         }
+        // Auto-persist platform_id back to pipeline.json
+        if (result && (result.id || result.tweet_id)) {
+          try {
+            const pl = JSON.parse(readFileSync(PIPELINE_PATH, 'utf8'));
+            if (pl.posts) {
+              const platformId = result.id || result.tweet_id;
+              const contentSnippet = args.content.substring(0, 80);
+              const match = pl.posts.find(p =>
+                p.status === 'ready' &&
+                p.platforms?.includes(args.platform) &&
+                p.content?.substring(0, 80) === contentSnippet
+              );
+              if (match) {
+                match.status = 'posted';
+                match.posted = new Date().toISOString();
+                match.posted_by = 'pipeline';
+                match.platform_id = platformId;
+                if (result.url) match.url = result.url;
+                if (result.method) match.method = result.method;
+                writeFileSync(PIPELINE_PATH, JSON.stringify(pl, null, 2));
+              }
+            }
+          } catch {}
+        }
         break;
 
       case 'social_thread':

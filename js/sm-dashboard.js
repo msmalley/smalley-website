@@ -652,6 +652,7 @@
     }
 
     var allComments = [];
+    var allReactions = [];
     for (var i = 0; i < social.posts.length; i++) {
       var post = social.posts[i];
       if (post.recent_comments) {
@@ -659,24 +660,59 @@
           allComments.push({ author: post.recent_comments[j].author, text: post.recent_comments[j].text, platform: post.platform });
         }
       }
+      if (post.recent_reactions) {
+        for (var j = 0; j < post.recent_reactions.length; j++) {
+          allReactions.push({ author: post.recent_reactions[j].author, type: post.recent_reactions[j].type || 'LIKE', platform: post.platform, post_preview: post.content_preview });
+        }
+      }
     }
-    if (allComments.length) {
-      var commentsPanel = SM.el('div', { class: 'dashboard-panel', style: { marginTop: '24px' } },
+    if (allComments.length || allReactions.length) {
+      var engagementGrid = SM.el('div', { class: 'dashboard-grid-2', style: { marginTop: '24px' } });
+
+      var commentsPanel = SM.el('div', { class: 'dashboard-panel' },
         SM.el('div', { class: 'dashboard-panel-title' }, 'Recent Comments')
       );
-      for (var i = 0; i < allComments.length; i++) {
-        var c = allComments[i];
-        var platformTag = c.platform === 'linkedin' ? 'LI' : 'X';
-        var platformColor = c.platform === 'linkedin' ? 'var(--sm-teal-glow)' : 'var(--sm-violet-glow)';
-        commentsPanel.appendChild(SM.el('div', { class: 'comment-item' },
-          SM.el('div', { class: 'comment-meta' },
-            SM.el('span', { class: 'comment-platform', style: { color: platformColor } }, platformTag),
-            SM.el('span', { class: 'comment-author' }, c.author)
-          ),
-          SM.el('span', { class: 'comment-text' }, c.text)
-        ));
+      if (allComments.length) {
+        for (var i = 0; i < allComments.length; i++) {
+          var c = allComments[i];
+          var platformTag = c.platform === 'linkedin' ? 'LI' : 'X';
+          var platformColor = c.platform === 'linkedin' ? 'var(--sm-teal-glow)' : 'var(--sm-violet-glow)';
+          commentsPanel.appendChild(SM.el('div', { class: 'comment-item' },
+            SM.el('div', { class: 'comment-meta' },
+              SM.el('span', { class: 'comment-platform', style: { color: platformColor } }, platformTag),
+              SM.el('span', { class: 'comment-author' }, c.author)
+            ),
+            SM.el('span', { class: 'comment-text' }, c.text)
+          ));
+        }
+      } else {
+        commentsPanel.appendChild(SM.el('div', { style: { color: 'var(--sm-muted)', fontSize: '12px' } }, 'No recent comments'));
       }
-      el.appendChild(commentsPanel);
+      engagementGrid.appendChild(commentsPanel);
+
+      var reactionsPanel = SM.el('div', { class: 'dashboard-panel' },
+        SM.el('div', { class: 'dashboard-panel-title' }, 'Recent Reactions')
+      );
+      if (allReactions.length) {
+        for (var i = 0; i < allReactions.length; i++) {
+          var r = allReactions[i];
+          var rPlatformTag = r.platform === 'linkedin' ? 'LI' : 'X';
+          var rPlatformColor = r.platform === 'linkedin' ? 'var(--sm-teal-glow)' : 'var(--sm-violet-glow)';
+          var typeIcon = r.type === 'LIKE' ? '👍' : r.type === 'CELEBRATE' ? '👏' : r.type === 'LOVE' ? '❤️' : r.type === 'INSIGHTFUL' ? '💡' : '👍';
+          reactionsPanel.appendChild(SM.el('div', { class: 'comment-item' },
+            SM.el('div', { class: 'comment-meta' },
+              SM.el('span', { class: 'comment-platform', style: { color: rPlatformColor } }, rPlatformTag),
+              SM.el('span', { class: 'comment-author' }, r.author)
+            ),
+            SM.el('span', { class: 'comment-text', style: { fontSize: '11px' } }, typeIcon + ' ' + (r.post_preview || '').slice(0, 40) + '...')
+          ));
+        }
+      } else {
+        reactionsPanel.appendChild(SM.el('div', { style: { color: 'var(--sm-muted)', fontSize: '12px' } }, 'No recent reactions tracked'));
+      }
+      engagementGrid.appendChild(reactionsPanel);
+
+      el.appendChild(engagementGrid);
     }
   }
 
@@ -998,15 +1034,22 @@
         return e.event === 'tool_call' || e.event.includes('game_') || e.event.includes('puzzle') || e.event.includes('hex_') || e.event.includes('dice_') || e.event.includes('deck_') || e.event.includes('faction') || e.event.includes('pdf_') || e.event.includes('file_');
       });
       if (toolEvents.length) {
+        var toolGrid = SM.el('div', { class: 'dashboard-grid-2', style: { marginTop: '24px' } });
         var teMax = toolEvents[0].count;
         var teItems = toolEvents.map(function(e) {
           var accent = e.event.includes('game') ? 'violet' : e.event.includes('tool') ? 'teal' : 'gold';
           return { label: e.event, value: e.count, accent: accent };
         });
-        el.appendChild(SM.el('div', { class: 'dashboard-panel', style: { marginTop: '24px' } },
+        toolGrid.appendChild(SM.el('div', { class: 'dashboard-panel' },
           SM.el('div', { class: 'dashboard-panel-title' }, 'Tool & Game Events via GA4 (30d)'),
           barChart(teItems, teMax)
         ));
+        toolGrid.appendChild(statPanel('Worker Health', [
+          { label: 'Total requests (7d)', value: cf.total_requests.toLocaleString() },
+          { label: 'Error rate', value: (cf.error_rate * 100).toFixed(2) + '%' },
+          { label: 'Workers active', value: String(cf.by_worker ? cf.by_worker.length : 0) }
+        ]));
+        el.appendChild(toolGrid);
       }
     }
   }

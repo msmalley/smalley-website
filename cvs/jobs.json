@@ -776,7 +776,7 @@
     {
       "id": "explore-group-chief-technology-officer-mqifoo6y",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "expired",
       "company": "Explore Group",
       "role": "Chief Technology Officer",
       "location": "United Kingdom",
@@ -836,7 +836,8 @@
         "regtech": 29,
         "devrel": 46
       },
-      "confidence": "high"
+      "confidence": "high",
+      "reject_reason": "Closed before application — missed opportunity (too slow)"
     },
     {
       "id": "nextech-group-limited-chief-technology-o-mqifouxk",
@@ -977,7 +978,7 @@
     {
       "id": "jobgether-head-of-engineering-mqifq1b6",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "expired",
       "company": "Jobgether",
       "role": "Head of Engineering",
       "location": "United Kingdom",
@@ -1038,7 +1039,8 @@
         "regtech": 53,
         "devrel": 56
       },
-      "confidence": "high"
+      "confidence": "high",
+      "reject_reason": "Closed before application — missed opportunity (too slow)"
     },
     {
       "id": "monex-europe-head-of-engineering-mqifqnbz",
@@ -1461,7 +1463,7 @@
     {
       "id": "amex-vp-onchain-products-mqlxqnxw",
       "added": "2026-06-20",
-      "status": "new",
+      "status": "expired",
       "company": "American Express",
       "role": "Vice President, Onchain Products",
       "location": "London, England, United Kingdom",
@@ -1524,7 +1526,8 @@
           "evidence": "Cross-functional team leadership, hiring, technical roadmap, stakeholder management, hands-on (P4→M3)"
         }
       ],
-      "source_url": "https://www.linkedin.com/jobs/view/4429351312/"
+      "source_url": "https://www.linkedin.com/jobs/view/4429351312/",
+      "reject_reason": "Closed before application — missed opportunity (too slow)"
     },
     {
       "id": "ably-developer-relations-manager-mqmpgx6k",
@@ -2535,7 +2538,7 @@
     {
       "id": "governr-chief-technology-officer",
       "added": "2026-06-27",
-      "status": "scored",
+      "status": "expired",
       "company": "governr",
       "role": "Chief Technology Officer",
       "location": "London",
@@ -2594,7 +2597,8 @@
           "evidence": "Contributed to investor materials and technical due diligence process that resulted in DraperVC funding"
         }
       ],
-      "source_url": "https://www.linkedin.com/jobs/view/4410210715/"
+      "source_url": "https://www.linkedin.com/jobs/view/4410210715/",
+      "reject_reason": "Closed before application — missed opportunity (too slow)"
     },
     {
       "id": "product-partners-chief-technology-officer",
@@ -2869,7 +2873,7 @@
     {
       "id": "naga-head-of-development-mqxuzwve",
       "added": "2026-06-28",
-      "status": "new",
+      "status": "expired",
       "company": "NAGA",
       "role": "Head of Development",
       "location": "UK",
@@ -2925,7 +2929,8 @@
         "regtech": 65,
         "devrel": 63
       },
-      "confidence": "medium"
+      "confidence": "medium",
+      "reject_reason": "Closed before application — missed opportunity (too slow)"
     },
     {
       "id": "chainalysis-senior-manager-engineering-c-mqxuzwve",

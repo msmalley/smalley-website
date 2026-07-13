@@ -1394,7 +1394,7 @@
       "source_url": "https://www.linkedin.com/jobs/view/4423500853/",
       "linkedin_job_id": "4423500853",
       "date_found": "2026-06-19",
-      "status": "new",
+      "status": "expired",
       "cv_variant": "cto",
       "notes": "Non-profit, fractional, fully remote. Azure-heavy. Governance/compliance focus. Decent fit for RegTech variant.",
       "channel": {
@@ -1455,7 +1455,8 @@
           "requirement": "Provide board-level assurance on technology risk and compliance",
           "evidence": "FCA (Financial Conduct Authority) digital asset framework, Markets in Crypto-Assets (MiCA), PRA supervisory approach, FATF recommendations, Travel Rule. Malaysian sandbox model maps onto EU MiCA graduated framework."
         }
-      ]
+      ],
+      "reject_reason": "Closed before application — missed opportunity (too slow)"
     },
     {
       "id": "amex-vp-onchain-products-mqlxqnxw",
@@ -1528,7 +1529,7 @@
     {
       "id": "ably-developer-relations-manager-mqmpgx6k",
       "added": "2026-06-20",
-      "status": "new",
+      "status": "applied",
       "company": "Ably",
       "role": "Developer Relations Manager",
       "location": "United Kingdom",
@@ -1589,7 +1590,9 @@
         "regtech": 42,
         "devrel": 70
       },
-      "confidence": "high"
+      "confidence": "high",
+      "date_applied": "2026-07-13",
+      "cv_variant": "devrel"
     },
     {
       "company": "Ethos",
@@ -1857,7 +1860,7 @@
     {
       "id": "sanderson-king-chief-technology-officer",
       "added": "2026-06-27",
-      "status": "new",
+      "status": "applied",
       "company": "Sanderson King",
       "role": "Chief Technology Officer",
       "location": "London",
@@ -1921,12 +1924,14 @@
           "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
         }
       ],
-      "source_url": "https://www.linkedin.com/jobs/view/4433086155/"
+      "source_url": "https://www.linkedin.com/jobs/view/4433086155/",
+      "date_applied": "2026-07-13",
+      "cv_variant": "cto"
     },
     {
       "id": "bny-director-product-and-innovation---tokeni",
       "added": "2026-06-27",
-      "status": "new",
+      "status": "applied",
       "company": "BNY",
       "role": "Director, Product and Innovation - Tokenisation",
       "location": "London",
@@ -1990,12 +1995,14 @@
           "evidence": "Delivered blockchain and distributed ledger training and advisory to DBS Bank (Singapore) and Baker Hostetler (USA, 5-day intensive programme) covering compliance strategy, transaction monitoring, and digital asset custody"
         }
       ],
-      "source_url": "https://www.linkedin.com/jobs/view/4414972986/"
+      "source_url": "https://www.linkedin.com/jobs/view/4414972986/",
+      "date_applied": "2026-07-13",
+      "cv_variant": "cto"
     },
     {
       "id": "lseg-director-engineering-di&f",
       "added": "2026-06-27",
-      "status": "new",
+      "status": "rejected",
       "company": "LSEG",
       "role": "Director, Engineering DI&F",
       "location": "London",
@@ -2059,7 +2066,8 @@
           "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
         }
       ],
-      "source_url": "https://www.linkedin.com/jobs/view/4415090834/"
+      "source_url": "https://www.linkedin.com/jobs/view/4415090834/",
+      "reject_reason": "Not interested — requires 5-8+ years leading multiple teams/orgs, enterprise scale mismatch"
     },
     {
       "id": "kraken-data-platform-engineering-manager",
@@ -2261,7 +2269,7 @@
     {
       "id": "mufg-director-head-of-digital-engineering-ser",
       "added": "2026-06-27",
-      "status": "new",
+      "status": "expired",
       "company": "MUFG",
       "role": "Director, Head of Digital Engineering Service Portfolio",
       "location": "London",
@@ -2325,7 +2333,8 @@
           "evidence": "Technical studio applying AI-augmented engineering to algorithmic decision systems, pattern recognition engines, and automated risk-scoring architectures. Demonstrates continued production delivery using the same methodology applicable to compliance automation and regulatory tooling."
         }
       ],
-      "source_url": "https://www.linkedin.com/jobs/view/4414748287/"
+      "source_url": "https://www.linkedin.com/jobs/view/4414748287/",
+      "reject_reason": "Closed before application — missed opportunity (too slow)"
     },
     {
       "id": "azets-compliance-design-lead",
@@ -2590,7 +2599,7 @@
     {
       "id": "product-partners-chief-technology-officer",
       "added": "2026-06-27",
-      "status": "new",
+      "status": "rejected",
       "company": "Product Partners",
       "role": "Chief Technology Officer",
       "location": "London",
@@ -2654,12 +2663,13 @@
           "evidence": "Built the entire product suite using LLM-driven development at production scale: native ESM, zero build step, same source serves browser + Worker + Node.js"
         }
       ],
-      "source_url": "https://www.linkedin.com/jobs/view/4416637061/"
+      "source_url": "https://www.linkedin.com/jobs/view/4416637061/",
+      "reject_reason": "Location — San Francisco, not viable"
     },
     {
       "id": "overstory-chief-technology-officer",
       "added": "2026-06-27",
-      "status": "new",
+      "status": "rejected",
       "company": "Overstory",
       "role": "Chief Technology Officer",
       "location": "United Kingdom",
@@ -2723,7 +2733,8 @@
           "evidence": "Ranked Top 5 by VentureBeat from 500 Startups Batch 9; the only Malaysian company in Deloitte's Top 50 Global RegTech"
         }
       ],
-      "source_url": "https://www.linkedin.com/jobs/view/4377882825/"
+      "source_url": "https://www.linkedin.com/jobs/view/4377882825/",
+      "reject_reason": "Not suitable — hardware/sensory focus, requires Series A-G scaling experience"
     },
     {
       "id": "symphony-chief-technology-officer-cloud9",
@@ -2987,7 +2998,7 @@
     {
       "id": "bestman-solutions-chief-architect-mqxuzwve",
       "added": "2026-06-28",
-      "status": "new",
+      "status": "applied",
       "company": "Bestman Solutions",
       "role": "Chief Architect",
       "location": "London",
@@ -3047,12 +3058,14 @@
         "regtech": 63,
         "devrel": 45
       },
-      "confidence": "high"
+      "confidence": "high",
+      "date_applied": "2026-07-13",
+      "cv_variant": "cto"
     },
     {
       "id": "mastercard-vp-product-stablecoins",
       "added": "2026-07-05",
-      "status": "new",
+      "status": "applied",
       "company": "Mastercard",
       "role": "Vice President, Product Management, Stablecoins",
       "location": "London",
@@ -3116,7 +3129,9 @@
           "evidence": "Cross-functional team leadership, hiring, technical roadmap, stakeholder management, hands-on (P4→M3)"
         }
       ],
-      "source_url": "https://www.linkedin.com/jobs/view/4413627747/"
+      "source_url": "https://www.linkedin.com/jobs/view/4413627747/",
+      "date_applied": "2026-07-13",
+      "cv_variant": "cto"
     },
     {
       "id": "ripple-senior-manager-engineering",
@@ -3259,7 +3274,7 @@
     {
       "id": "malt-senior-eng-manager-compliance",
       "added": "2026-07-05",
-      "status": "new",
+      "status": "applied",
       "company": "Malt",
       "role": "Senior Engineering Manager - Compliance",
       "location": "London",
@@ -3323,12 +3338,14 @@
           "evidence": "15 years building compliance-grade blockchain infrastructure while simultaneously shaping the regulatory frameworks that govern it. First company in SC Malaysia's digital asset sandbox; co-founded what is now Malaysia's largest Digital Asset Custodian by AUM; delivered to DBS Bank and Baker Hostetler. UK-based since 2025, seeking senior RegTech/FinTech roles where regulatory fluency and production engineering intersect."
         }
       ],
-      "source_url": "https://www.linkedin.com/jobs/view/4435457551/"
+      "source_url": "https://www.linkedin.com/jobs/view/4435457551/",
+      "date_applied": "2026-07-13",
+      "cv_variant": "cto"
     },
     {
       "id": "griffin-engineering-manager",
       "added": "2026-07-05",
-      "status": "new",
+      "status": "rejected",
       "company": "Griffin",
       "role": "Engineering Manager",
       "location": "London",
@@ -3392,7 +3409,8 @@
           "evidence": "Shipped 535 commits across 10+ repositories in 16 days using LLM-augmented development. Demonstrates the methodology's viability for startup-speed delivery at architecture quality"
         }
       ],
-      "source_url": "https://www.linkedin.com/jobs/view/4426162541/"
+      "source_url": "https://www.linkedin.com/jobs/view/4426162541/",
+      "reject_reason": "Tech stack not suitable (Griffin)"
     },
     {
       "id": "galaxy-technical-program-manager",
@@ -3529,7 +3547,7 @@
     {
       "id": "novera-cto",
       "added": "2026-07-05",
-      "status": "new",
+      "status": "applied",
       "company": "Novera Search",
       "role": "Chief Technology Officer",
       "location": "United Kingdom",
@@ -3593,12 +3611,14 @@
           "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
         }
       ],
-      "source_url": "https://www.linkedin.com/jobs/view/4432956820/"
+      "source_url": "https://www.linkedin.com/jobs/view/4432956820/",
+      "date_applied": "2026-07-13",
+      "cv_variant": "cto"
     },
     {
       "id": "la-fosse-head-of-ai",
       "added": "2026-07-05",
-      "status": "new",
+      "status": "expired",
       "company": "La Fosse",
       "role": "Head of AI",
       "location": "United Kingdom",
@@ -3662,12 +3682,13 @@
           "evidence": "Built and deployed the first board game MCP server ( tools.moddable.games ): 16 AI-callable tools across 2 engines, Cloudflare Worker, MCP + REST + OpenAPI + llms.txt"
         }
       ],
-      "source_url": "https://www.linkedin.com/jobs/view/4409900747/"
+      "source_url": "https://www.linkedin.com/jobs/view/4409900747/",
+      "reject_reason": "Closed before application — missed opportunity (too slow)"
     },
     {
       "id": "proton-engineering-director",
       "added": "2026-07-05",
-      "status": "new",
+      "status": "rejected",
       "company": "Proton",
       "role": "Engineering Director",
       "location": "London",
@@ -3731,7 +3752,8 @@
           "evidence": "Joined a 170-engineer company as P4 Engineer; promoted to M3 Manager within months. Tasked with designing novel Bitcoin meta-protocols, then given mandate to form and lead a new Moonshot team (grown from 1 to 10) whose first output became Cake's fifth business vertical."
         }
       ],
-      "source_url": "https://www.linkedin.com/jobs/view/4338294320/"
+      "source_url": "https://www.linkedin.com/jobs/view/4338294320/",
+      "reject_reason": "Not suitable"
     },
     {
       "id": "barclays-head-digital-platform-eng",
@@ -3798,7 +3820,7 @@
     {
       "id": "bcg-senior-director-developer-experience",
       "added": "2026-07-05",
-      "status": "new",
+      "status": "rejected",
       "company": "BCG",
       "role": "Global IT Senior Director - Developer Experience",
       "location": "London",
@@ -3862,12 +3884,13 @@
           "evidence": "Cross-functional team leadership, hiring, technical roadmap, stakeholder management, hands-on (P4→M3)"
         }
       ],
-      "source_url": "https://www.linkedin.com/jobs/view/4420049158/"
+      "source_url": "https://www.linkedin.com/jobs/view/4420049158/",
+      "reject_reason": "Not interested"
     },
     {
       "id": "sothebys-svp-engineering",
       "added": "2026-07-05",
-      "status": "new",
+      "status": "applied",
       "company": "Sothebys",
       "role": "SVP, Engineering",
       "location": "London",
@@ -3931,7 +3954,9 @@
           "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
         }
       ],
-      "source_url": "https://www.linkedin.com/jobs/view/4430152188/"
+      "source_url": "https://www.linkedin.com/jobs/view/4430152188/",
+      "date_applied": "2026-07-13",
+      "cv_variant": "cto"
     },
     {
       "id": "arrows-cto",
@@ -3995,7 +4020,7 @@
     {
       "id": "fyst-head-of-engineering-cto",
       "added": "2026-07-05",
-      "status": "new",
+      "status": "rejected",
       "company": "FYST",
       "role": "Head of Engineering / CTO (Partner Company Role)",
       "location": "United Kingdom",
@@ -4059,12 +4084,13 @@
           "evidence": "Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites: renderer hooks, game controller, replay API, unit templates, terrain predicates, native ESM (same source serves browser, Worker, and Node.js)"
         }
       ],
-      "source_url": "https://www.linkedin.com/jobs/view/4432000958/"
+      "source_url": "https://www.linkedin.com/jobs/view/4432000958/",
+      "reject_reason": "Tech stack not suitable"
     },
     {
       "id": "fanalysis-cto",
       "added": "2026-07-05",
-      "status": "new",
+      "status": "rejected",
       "company": "Fanalysis",
       "role": "CTO",
       "location": "London",
@@ -4128,7 +4154,8 @@
           "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
         }
       ],
-      "source_url": "https://www.linkedin.com/jobs/view/4362257595/"
+      "source_url": "https://www.linkedin.com/jobs/view/4362257595/",
+      "reject_reason": "Not interested"
     },
     {
       "id": "input-output-group-chief-operating-offic-mr8vmttk",
@@ -13140,7 +13167,7 @@
     {
       "id": "wintermute-product-engineering-tech-lead-mr94n3z8",
       "added": "2026-07-06",
-      "status": "new",
+      "status": "applied",
       "company": "Wintermute",
       "role": "Product Engineering Tech Lead",
       "location": "London, UK",
@@ -13205,12 +13232,14 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "date_applied": "2026-07-13",
+      "cv_variant": "cto"
     },
     {
       "id": "google-cloud-universal-ledger-lead-mr94n3z8",
       "added": "2026-07-06",
-      "status": "new",
+      "status": "rejected",
       "company": "Google",
       "role": "Cloud Universal Ledger Lead",
       "location": "London, UK",
@@ -13275,7 +13304,8 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "reject_reason": "Sales role disguised as engineering role"
     },
     {
       "id": "kast-product-director-fiat-payments--mr94n3z9",
@@ -15274,7 +15304,7 @@
     {
       "id": "quotacom-founding-engineer-cto-mriwdqdf",
       "added": "2026-07-13",
-      "status": "new",
+      "status": "expired",
       "company": "Quotacom",
       "role": "Founding Engineer / CTO",
       "location": "United Kingdom",
@@ -15336,7 +15366,8 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "reject_reason": "Closed before application — missed opportunity (too slow)"
     },
     {
       "id": "jobgether-cto-mriwdqdh",
@@ -15411,7 +15442,7 @@
     {
       "id": "jobgether-deputy-cto-ai-product--mriwdqdi",
       "added": "2026-07-13",
-      "status": "new",
+      "status": "expired",
       "company": "Jobgether",
       "role": "Deputy CTO (AI Product)",
       "location": "United Kingdom",
@@ -15476,12 +15507,13 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "reject_reason": "Closed before application — missed opportunity (too slow)"
     },
     {
       "id": "hazelcast-svp-engineering-mriwdqdi",
       "added": "2026-07-13",
-      "status": "new",
+      "status": "rejected",
       "company": "Hazelcast",
       "role": "SVP Engineering",
       "location": "United Kingdom",
@@ -15546,12 +15578,13 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "reject_reason": "Not interested"
     },
     {
       "id": "hazelcast-vp-engineering-mriwdqdi",
       "added": "2026-07-13",
-      "status": "new",
+      "status": "rejected",
       "company": "Hazelcast",
       "role": "VP Engineering",
       "location": "United Kingdom",
@@ -15616,7 +15649,8 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "reject_reason": "Not interested — Hazelcast not a fit"
     },
     {
       "id": "iinvest-via-jack-jill-founding-vp-of-eng-mriwdqdk",
@@ -15763,9 +15797,17 @@
       "status": "applied",
       "score": 78,
       "channel": {
-        "source": "linkedin",
+        "source": "unknown",
         "method": "email_direct",
-        "contact_email": "recruiting@deel.com"
+        "apply_url": null,
+        "contact_email": "recruiting@deel.com",
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "unknown",
+          "days_old": null
+        },
+        "action": null,
+        "notes": null
       },
       "date_applied": "2026-06-19",
       "cv_variant": "cto",
@@ -15777,9 +15819,17 @@
       "status": "applied",
       "score": 71,
       "channel": {
-        "source": "linkedin",
-        "method": "portal",
-        "apply_url": "https://jobs.verda.com/jobs/7903387-ai-developer-advocate"
+        "source": "unknown",
+        "method": null,
+        "apply_url": null,
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "unknown",
+          "days_old": null
+        },
+        "action": null,
+        "notes": null
       },
       "date_applied": "2026-06-20",
       "cv_variant": "devrel",
@@ -15791,13 +15841,266 @@
       "status": "applied",
       "score": 75,
       "channel": {
-        "source": "linkedin",
-        "method": "portal",
-        "apply_url": "https://careers.arbor-education.com/_/j/288033E722/apply/"
+        "source": "unknown",
+        "method": null,
+        "apply_url": null,
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "unknown",
+          "days_old": null
+        },
+        "action": null,
+        "notes": null
       },
       "date_applied": "2026-06-20",
       "cv_variant": "cto",
       "url": "https://www.linkedin.com/jobs/view/4429942486"
+    },
+    {
+      "id": "harrington-starr-cto-hands-on-mrj5ehiy",
+      "added": "2026-07-13",
+      "status": "discovered",
+      "company": "Harrington Starr",
+      "role": "CTO - Hands on",
+      "location": "City of London",
+      "variant": null,
+      "score": null,
+      "scores": null,
+      "confidence": null,
+      "requirements_found": null,
+      "matched": null,
+      "gaps": [],
+      "proof_points": [],
+      "source_url": "https://www.linkedin.com/jobs/view/4438227675/",
+      "source": "linkedin",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: 2026-07-08.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4438227675/",
+        "contact_email": null,
+        "linkedin_job_id": "4438227675",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      }
+    },
+    {
+      "id": "bullish-lead-engineer-mrj5ehiz",
+      "added": "2026-07-13",
+      "status": "discovered",
+      "company": "Bullish",
+      "role": "Lead Engineer",
+      "location": "London",
+      "variant": null,
+      "score": null,
+      "scores": null,
+      "confidence": null,
+      "requirements_found": null,
+      "matched": null,
+      "gaps": [],
+      "proof_points": [],
+      "source_url": "https://www.linkedin.com/jobs/view/4369641839/",
+      "source": "linkedin",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: 2026-07-07.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4369641839/",
+        "contact_email": null,
+        "linkedin_job_id": "4369641839",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      }
+    },
+    {
+      "id": "coindesk-lead-engineer-mrj5ehj0",
+      "added": "2026-07-13",
+      "status": "discovered",
+      "company": "CoinDesk",
+      "role": "Lead Engineer",
+      "location": "London",
+      "variant": null,
+      "score": null,
+      "scores": null,
+      "confidence": null,
+      "requirements_found": null,
+      "matched": null,
+      "gaps": [],
+      "proof_points": [],
+      "source_url": "https://www.linkedin.com/jobs/view/4369664883/",
+      "source": "linkedin",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: 2026-07-10.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4369664883/",
+        "contact_email": null,
+        "linkedin_job_id": "4369664883",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      }
+    },
+    {
+      "id": "kast-principal-architect-mrj5ehj0",
+      "added": "2026-07-13",
+      "status": "discovered",
+      "company": "Kast",
+      "role": "Principal Architect",
+      "location": "London",
+      "variant": null,
+      "score": null,
+      "scores": null,
+      "confidence": null,
+      "requirements_found": null,
+      "matched": null,
+      "gaps": [],
+      "proof_points": [],
+      "source_url": "https://web3.career/r/1cTMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: 2026-07-09.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/1cTMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      }
+    },
+    {
+      "id": "tradinghub-head-of-engineering-mrj5ehj1",
+      "added": "2026-07-13",
+      "status": "discovered",
+      "company": "TradingHub",
+      "role": "Head of Engineering",
+      "location": "London",
+      "variant": null,
+      "score": null,
+      "scores": null,
+      "confidence": null,
+      "requirements_found": null,
+      "matched": null,
+      "gaps": [],
+      "proof_points": [],
+      "source_url": "https://www.linkedin.com/jobs/view/4438216899/",
+      "source": "linkedin",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: 2026-07-10.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4438216899/",
+        "contact_email": null,
+        "linkedin_job_id": "4438216899",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      }
+    },
+    {
+      "id": "mondrian-alpha-head-of-platform-engineer-mrj5ehj1",
+      "added": "2026-07-13",
+      "status": "discovered",
+      "company": "Mondrian Alpha",
+      "role": "Head of Platform Engineering (AI)",
+      "location": "London",
+      "variant": null,
+      "score": null,
+      "scores": null,
+      "confidence": null,
+      "requirements_found": null,
+      "matched": null,
+      "gaps": [],
+      "proof_points": [],
+      "source_url": "https://www.linkedin.com/jobs/view/4434559562/",
+      "source": "linkedin",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: 2026-07-10.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4434559562/",
+        "contact_email": null,
+        "linkedin_job_id": "4434559562",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      }
+    },
+    {
+      "id": "dex-head-of-platform-engineering-mrj5ehj1",
+      "added": "2026-07-13",
+      "status": "discovered",
+      "company": "Dex",
+      "role": "Head of Platform Engineering",
+      "location": "London",
+      "variant": null,
+      "score": null,
+      "scores": null,
+      "confidence": null,
+      "requirements_found": null,
+      "matched": null,
+      "gaps": [],
+      "proof_points": [],
+      "source_url": "https://www.linkedin.com/jobs/view/4439312322/",
+      "source": "linkedin",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: 2026-07-10.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4439312322/",
+        "contact_email": null,
+        "linkedin_job_id": "4439312322",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      }
     }
   ]
 }

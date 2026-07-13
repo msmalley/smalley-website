@@ -97,6 +97,11 @@ export async function postLinkedIn(content, linkUrl = null) {
           `Without Voyager, posts with links will NOT show preview cards.`
         );
       }
+      throw new Error(
+        `LinkedIn Voyager failed (OG card would not render).\n` +
+        `Post aborted to prevent card-less publication.\n` +
+        `Original error: ${err.message}`
+      );
     }
   }
 

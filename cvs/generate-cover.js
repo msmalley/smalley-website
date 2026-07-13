@@ -2,6 +2,11 @@ const puppeteer = require('puppeteer');
 const path = require('path');
 const fs = require('fs');
 
+const VARIANT_TEMPLATES = {
+  cto: path.resolve(__dirname, 'html/cover-letter-template.html'),
+  regtech: path.resolve(__dirname, 'html/cover-letter-template.html'),
+  devrel: path.resolve(__dirname, 'html/cover-letter-devrel.html'),
+};
 const templatePath = path.resolve(__dirname, 'html/cover-letter-template.html');
 const outDir = path.resolve(__dirname, 'dist');
 
@@ -53,7 +58,8 @@ async function generate(matchFile) {
     matchData = JSON.parse(fs.readFileSync(matchFile, 'utf-8'));
   }
 
-  const template = fs.readFileSync(templatePath, 'utf-8');
+  const variantTemplate = VARIANT_TEMPLATES[matchData.variant] || templatePath;
+  const template = fs.readFileSync(variantTemplate, 'utf-8');
   const filled = fillTemplate(template, matchData);
 
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });

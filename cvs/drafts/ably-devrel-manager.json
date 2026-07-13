@@ -1,0 +1,32 @@
+{
+  "company": "Ably",
+  "role": "Developer Relations Manager",
+  "variant": "devrel",
+  "date": "13 July 2026",
+  "opening": "I built and deployed the first board game MCP server with an llms.txt file, OpenAPI spec, and 41 AI-callable tools served via Cloudflare Workers. I structured it specifically so that AI coding assistants could discover and correctly implement it without human guidance. When I read your job description, particularly the emphasis on LLM visibility, content structured for AI ingestion, and making Ably appear accurately in AI-mediated developer evaluations, I recognised exactly the problem I have been solving for my own infrastructure products.",
+  "proof_points": [
+    {
+      "requirement": "Technical background — write real code, read architecture",
+      "evidence": "15 years shipping production infrastructure: SDKs (Ordit, ~50K npm downloads), protocol specs (SADO, DN-Key, Everstore), and a game engine framework with plugin architecture, AI opponents, and native ESM serving browser, Worker, and Node.js from same source."
+    },
+    {
+      "requirement": "LLM visibility & content structured for AI ingestion",
+      "evidence": "Built tools.moddable.games: MCP server with llms.txt, OpenAPI spec, and REST endpoints designed for AI assistant discovery. Claude and Cursor can discover the tools and generate correct implementations without documentation. This is the pattern Ably needs."
+    },
+    {
+      "requirement": "Technical writing that developers read and share",
+      "evidence": "Published articles on protocol design and AI-augmented engineering at smalley.my/thoughts. 21 SlideShare presentations, 59K+ views. TEDx speaker. Content written for senior engineers making evaluation decisions, not beginners following tutorials."
+    },
+    {
+      "requirement": "AI as core workflow",
+      "evidence": "AI-native engineering is my daily practice. Built autonomous agent pipelines managing a 6-repo production system. Shipped 535 commits across 10+ repos in 16 days using LLM-augmented methodology. Not theoretical familiarity with AI tooling."
+    },
+    {
+      "requirement": "Community presence & realtime infrastructure",
+      "evidence": "Active across LinkedIn, X, and GitHub (20+ public repos). Built real-time blockchain event streaming, WebSocket game state sync, and event-driven wallet infrastructure. Understand pub/sub, session continuity, and reconnection at protocol level."
+    }
+  ],
+  "body": "Ably has identified the exact shift I have been navigating: developer discovery now happens through AI intermediaries, not search rankings. My MCP server work is a direct proof-of-concept. I structured tools.moddable.games so that when a developer asks Claude \"how do I add a chess game to my app,\" my infrastructure appears because the content is machine-readable by design. Applying that methodology to Ably's AI Transport product is the natural next step of work I am already doing.",
+  "closing": "I would welcome the opportunity to discuss how my experience building AI-discoverable developer infrastructure, creating technical content that earns trust through honesty about tradeoffs, and operating as an AI-native practitioner could contribute to Ably's developer relations strategy. I am UK-based and available to meet at your London hub.",
+  "source_url": "https://www.linkedin.com/jobs/view/4429320217/"
+}

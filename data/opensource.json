@@ -39,9 +39,9 @@
     "tagline": "Intelligent document pagination with orphan prevention",
     "role": "Creator",
     "category": "engine",
-    "description": "Pagination system that measures rendered element heights, groups headings atomically, enforces page-fill minimums, and assembles multi-section documents. Powers 20 game families with 155 rule files producing 1000+ indexed pages. Pure DOM measurement, no wkhtmltopdf.",
+    "description": "Pagination system that measures rendered element heights, groups headings atomically, enforces page-fill minimums, and assembles multi-section documents. Powers 37 game families with 315 rule files producing 2,974 indexed pages. Pure DOM measurement, no wkhtmltopdf.",
     "stats": [
-      { "value": "1000+", "label": "pages assembled" },
+      { "value": "2,974", "label": "pages assembled" },
       { "value": "0", "label": "orphaned elements" },
       { "value": "155", "label": "variant PDFs generated" }
     ],

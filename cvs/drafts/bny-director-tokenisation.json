@@ -1,0 +1,32 @@
+{
+  "company": "BNY",
+  "role": "Director, Product and Innovation — Tokenisation",
+  "variant": "cto",
+  "date": "13 July 2026",
+  "opening": "I have spent 15 years building production blockchain infrastructure for institutional clients, from the first bank-backed blockchain hackathon at DBS Bank Singapore to regulatory sandbox admission by the Securities Commission Malaysia. Your Director of Tokenisation role sits precisely at the intersection where I have operated throughout my career: translating complex blockchain protocols into secure, compliant payment and custody products for institutional and corporate clients.",
+  "proof_points": [
+    {
+      "requirement": "Digital asset & tokenisation experience",
+      "evidence": "Sole developer of the Ordzaar prototype (Bitcoin Ordinals marketplace) at CakeDefi, which spun out, raised US$500K, and was acquired. Co-authored the SADO Protocol, a self-authenticating order-book standard for tokenised Bitcoin assets. Co-founded CoKeeps, now Malaysia's largest Digital Asset Custodian by AUM."
+    },
+    {
+      "requirement": "Payment systems & blockchain protocols",
+      "evidence": "Deep protocol-level expertise across both UTXO (Bitcoin scripting, Schnorr/Taproot, Ordinals) and EVM (Solidity, ERC-20/721, DeFi). Built SDK infrastructure that processed 1M+ API requests at the DBS Bank hackathon. Authored the Everstore protocol (relational database on BIP32 key derivation) and DN-Key protocol for decentralised key management."
+    },
+    {
+      "requirement": "Regulatory awareness (AML/KYC, digital assets)",
+      "evidence": "First company admitted to the Securities Commission Malaysia regulatory sandbox. Contributed directly to Malaysia's national Digital Asset regulatory roadmap alongside the central bank. Built production KYC/AML pipeline systems. Neuroware ranked in Deloitte's Top 50 Global RegTech."
+    },
+    {
+      "requirement": "Product strategy & commercialisation",
+      "evidence": "Led the technical pivot at Oviato from consumer app to B2B infrastructure provider, securing DraperVC investment. At CakeDefi (170-engineer company), grew the Moonshot team from 1 to 10, defining product vision and stakeholder reporting for what became the company's fifth business vertical."
+    },
+    {
+      "requirement": "Stakeholder management & client engagement",
+      "evidence": "Enterprise clients include DBS Bank (Singapore) and Baker Hostetler (US law firm, 5-day intensive engagement). TEDx speaker on financial inclusion. Regular presenter at fintech conferences. Experienced bridging technical depth with commercial outcomes across regulators, investors, and institutional clients."
+    }
+  ],
+  "body": "What distinguishes my background for this role is that I have operated on both sides of the institutional divide. I understand permissioned chains and regulatory constraints from building inside them (Securities Commission sandbox, CoKeeps custody), while my open-source protocol work (SADO, Ordit SDK, Everstore) demonstrates the public chain fluency needed to evaluate stablecoin settlement, deposit tokens, and cross-border rail architectures. I have shipped products that required interoperability between traditional financial infrastructure and blockchain, not merely theorised about them.",
+  "closing": "I would welcome the opportunity to discuss how my experience building institutional-grade blockchain products, navigating regulatory frameworks, and leading engineering teams from prototype to production could contribute to BNY's tokenisation strategy. I am based in the UK and available to meet in London at your convenience.",
+  "source_url": "https://www.linkedin.com/jobs/view/4414972986/"
+}

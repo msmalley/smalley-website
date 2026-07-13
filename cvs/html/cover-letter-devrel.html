@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cover Letter — {{ROLE_TITLE}} — {{COMPANY_NAME}}</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../cover-letter-devrel.css">
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div class="header-inner">
+      <h1>Mark Smalley</h1>
+      <div class="headline">{{HEADLINE}}</div>
+    </div>
+  </div>
+
+  <div class="contact-bar">
+    <div class="contact-bar-inner">
+      <a href="mailto:mark@smalley.my">mark@smalley.my</a>
+      <span class="sep">|</span>
+      <span>+44 (0) 7526 860 262</span>
+      <span class="sep">|</span>
+      <a href="https://smalley.my" target="_blank" rel="noopener">smalley.my</a>
+      <span class="sep">|</span>
+      <a href="https://github.com/msmalley" target="_blank" rel="noopener">github.com/msmalley</a>
+      <span class="sep">|</span>
+      <a href="https://linkedin.com/in/msmalley" target="_blank" rel="noopener">linkedin.com/in/msmalley</a>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <div class="addressee">
+      <div class="date">{{DATE}}</div>
+      <div class="company-name">{{COMPANY_NAME}}</div>
+      <div class="role-title">Re: {{ROLE_TITLE}}</div>
+    </div>
+
+    <div class="letter-section opening">
+      <p>{{OPENING_HOOK}}</p>
+    </div>
+
+    <div class="letter-section proof">
+      <p>Specific evidence mapped to your requirements:</p>
+      <ul class="proof-points">
+        {{PROOF_POINTS}}
+      </ul>
+    </div>
+
+    <div class="letter-section body-paragraph">
+      <p>{{BODY_PARAGRAPH}}</p>
+    </div>
+
+    <div class="closing">
+      <p>{{CLOSING_PARAGRAPH}}</p>
+      <div class="sign-off">
+        Mark Smalley
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

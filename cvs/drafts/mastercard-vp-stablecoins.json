@@ -1,0 +1,32 @@
+{
+  "company": "Mastercard",
+  "role": "Vice President, Product Management — Stablecoins",
+  "variant": "cto",
+  "date": "13 July 2026",
+  "opening": "I have spent 15 years building blockchain payment and custody infrastructure for regulated financial institutions, from the first company admitted to Malaysia's Securities Commission regulatory sandbox to co-founding what is now the country's largest Digital Asset Custodian by AUM. Your VP Stablecoins role requires someone who can bridge on-chain protocol mechanics with institutional compliance requirements, which is precisely where my career has operated: shipping production systems that connect tokenised value to regulated financial rails.",
+  "proof_points": [
+    {
+      "requirement": "Blockchain & digital assets knowledge",
+      "evidence": "15 years building production blockchain infrastructure. Co-authored the SADO Protocol (decentralised order-book for tokenised Bitcoin assets). Built the Ordzaar prototype at CakeDefi (spun out, raised US$500K, acquired). Deep protocol expertise across UTXO (Schnorr/Taproot, Ordinals) and EVM (Solidity, ERC-20/721, DeFi). Published the Everstore protocol whitepaper (on-chain relational database via BIP32 key derivation)."
+    },
+    {
+      "requirement": "Payments & regulatory expertise",
+      "evidence": "First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. Contributed directly to Malaysia's national Digital Asset regulatory roadmap alongside the central bank. Built production KYC/AML pipeline systems. Neuroware ranked in Deloitte's Top 50 Global RegTech. Enterprise clients include DBS Bank (Singapore) handling 1M+ payment API requests."
+    },
+    {
+      "requirement": "Product development & commercialisation",
+      "evidence": "Led the technical pivot at Oviato from consumer app to B2B infrastructure provider, securing DraperVC investment. At CakeDefi (170-engineer company), grew the Moonshot team from 1 to 10, defining product vision and go-to-market for what became the company's fifth business vertical. Co-founded and funded CoKeeps (Digital Asset Custodian), structuring the product from custody framework to commercial launch."
+    },
+    {
+      "requirement": "Commercial acumen & stakeholder management",
+      "evidence": "Structured equity arrangements with CoKeeps and Sinegy from advisory and build work. Enterprise engagements with DBS Bank (Singapore) and Baker Hostetler (US law firm). TEDx speaker on financial inclusion. 13 years managing client relationships across regulators, institutional investors, and licensed FinTech operators across Southeast Asia."
+    },
+    {
+      "requirement": "People leadership & entrepreneurial mindset",
+      "evidence": "Founded and scaled teams across multiple companies: Moonshot team 1 to 10 at CakeDefi, team of 5 at Neuroware (500 Startups Batch 9). Currently demonstrating entrepreneurial velocity at Moddable, shipping framework-level architecture using AI-augmented methodology. Accepted into 500 Startups and Antler accelerator programmes."
+    }
+  ],
+  "body": "What makes my background particularly relevant to this role is that I have repeatedly sat at the exact junction Mastercard is now productising: the interface between tokenised value and regulated payment infrastructure. At CoKeeps I helped build the custody framework that underpins institutional stablecoin holding. At R1 I designed the compliance tooling that licensed operators use for AML/KYC on digital asset transactions. At CakeDefi I built the marketplace infrastructure for tokenised Bitcoin assets. I understand the on-ramp and off-ramp mechanics not as a theoretical framework, but from having built and shipped them for regulated counterparties.",
+  "closing": "I would welcome the opportunity to discuss how my experience building institutional-grade blockchain payment products, navigating multi-jurisdictional regulatory frameworks, and leading product teams from concept to commercial scale could contribute to Mastercard's stablecoin strategy. I am based in the UK and available to meet in London at your convenience.",
+  "source_url": "https://www.linkedin.com/jobs/view/4413627747/"
+}

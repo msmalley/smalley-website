@@ -1,0 +1,202 @@
+:root {
+  --plum:    #2E1065;
+  --violet:  #6D28D9;
+  --violet-l:#F3F0FF;
+  --cyan:    #0891B2;
+  --cyan-l:  #F0FDFA;
+  --slate:   #334155;
+  --muted:   #64748B;
+  --bg:      #FAFAFA;
+  --white:   #FFFFFF;
+  --text:    #1A1333;
+  --rule:    #E2E8F0;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-wrap: pretty;
+}
+
+.page {
+  max-width: 100%;
+  margin: 0;
+  background: var(--white);
+  padding: 0;
+  overflow: hidden;
+}
+
+/* ── Header ── */
+.header {
+  background: linear-gradient(135deg, var(--plum) 0%, #1E0A3C 100%);
+  padding: 36px 0 28px;
+  position: relative;
+  overflow: hidden;
+}
+.header::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 50px solid rgba(109,40,217,0.08);
+}
+.header-inner {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 72px;
+  position: relative;
+}
+.header h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: #FFFFFF;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+}
+.header .headline {
+  font-size: 14px;
+  color: #C4B5FD;
+  font-weight: 500;
+  margin-top: 6px;
+  letter-spacing: 0.5px;
+}
+
+/* ── Contact bar ── */
+.contact-bar {
+  background: #1E0A3C;
+  padding: 10px 0;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: #C4B5FD;
+}
+.contact-bar-inner {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 72px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 6px 12px;
+}
+.contact-bar a, .contact-bar span { color: #F5F3FF; text-decoration: none; }
+.contact-bar .sep { color: rgba(255,255,255,0.3); }
+
+/* ── Body ── */
+.body {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 40px 72px 48px;
+}
+
+/* ── Addressee block ── */
+.addressee {
+  margin-bottom: 28px;
+  font-size: 13px;
+  color: var(--slate);
+  line-height: 1.7;
+}
+.addressee .date {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.addressee .company-name {
+  font-weight: 600;
+  color: var(--plum);
+}
+.addressee .role-title {
+  color: var(--violet);
+  font-weight: 500;
+}
+
+/* ── Letter sections ── */
+.letter-section {
+  margin-bottom: 24px;
+}
+.letter-section p {
+  font-size: 13.5px;
+  color: var(--slate);
+  line-height: 1.8;
+  text-align: justify;
+  text-wrap: pretty;
+}
+
+/* ── Proof points list ── */
+.proof-points {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+.proof-points li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 13px;
+  color: var(--slate);
+  margin-bottom: 8px;
+  line-height: 1.7;
+}
+.proof-points li::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 0.63em;
+  width: 5px;
+  height: 5px;
+  border: 1.5px solid var(--cyan);
+  border-radius: 50%;
+}
+.proof-points .requirement {
+  font-weight: 600;
+  color: var(--plum);
+}
+.proof-points .evidence {
+  color: var(--slate);
+}
+
+/* ── Closing ── */
+.closing {
+  margin-top: 32px;
+  font-size: 13.5px;
+  color: var(--slate);
+  line-height: 1.8;
+}
+.closing .sign-off {
+  margin-top: 24px;
+  font-weight: 600;
+  color: var(--plum);
+}
+
+/* ── Print ── */
+@page { margin: 48px 0; size: A4; }
+@page :first { margin-top: 0; }
+@media print {
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { background: white; margin: 0; padding: 0; width: 210mm; }
+  .page { margin: 0; box-shadow: none; width: 210mm; max-width: 210mm; }
+  .header { padding: 32px 0 20px; background: var(--plum); }
+  .header::before { display: none; }
+  .header-inner { max-width: 100%; padding: 0 48px; }
+  .header h1 { font-size: 28px; }
+  .header .headline { font-size: 12px; }
+  .contact-bar { padding: 8px 0; background: var(--violet); }
+  .contact-bar-inner { max-width: 100%; padding: 0 48px; font-size: 9.5px; }
+  .body { padding: 32px 48px 40px; max-width: 100%; }
+  .addressee { margin-bottom: 20px; font-size: 11.5px; }
+  .addressee .date { font-size: 10px; margin-bottom: 8px; }
+  .letter-section p { font-size: 11.5px; line-height: 1.65; }
+  .letter-section { margin-bottom: 16px; }
+  .proof-points li { font-size: 11.5px; line-height: 1.55; margin-bottom: 5px; padding-left: 16px; }
+  .proof-points li::before { top: 0.46em; width: 4.5px; height: 4.5px; }
+  .closing { margin-top: 24px; font-size: 11.5px; line-height: 1.65; }
+  .closing .sign-off { margin-top: 16px; }
+}

@@ -695,8 +695,9 @@
         SM.el('div', { class: 'dashboard-panel-title' }, 'Recent Reactions')
       );
       if (allReactions.length) {
-        for (var i = 0; i < allReactions.length; i++) {
-          var r = allReactions[i];
+        var showReactions = allReactions.slice(0, 10);
+        for (var i = 0; i < showReactions.length; i++) {
+          var r = showReactions[i];
           var rPlatformTag = r.platform === 'linkedin' ? 'LI' : 'X';
           var rPlatformColor = r.platform === 'linkedin' ? 'var(--sm-teal-glow)' : 'var(--sm-violet-glow)';
           var typeIcon = r.type === 'LIKE' ? '👍' : r.type === 'CELEBRATE' ? '👏' : r.type === 'LOVE' ? '❤️' : r.type === 'INSIGHTFUL' ? '💡' : '👍';

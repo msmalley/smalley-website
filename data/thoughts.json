@@ -4,16 +4,29 @@
     "title": "Building the Machine That Builds Your Career",
     "date": "2026-07-06",
     "readingTime": "8 min",
-    "tags": ["AI/LLM", "Job Search", "Product Design", "Scoring Systems", "Engineering Journal"],
+    "tags": [
+      "AI/LLM",
+      "Job Search",
+      "Product Design",
+      "Scoring Systems",
+      "Engineering Journal"
+    ],
     "excerpt": "What happens when getting a job requires building a system that helps people get jobs. A real-time engineering journal from inside the paradox.",
-    "draft": true
+    "draft": false
   },
   {
     "slug": "16-days-one-ecosystem",
     "title": "16 Days, One Ecosystem",
     "date": "2026-06-12",
     "readingTime": "8 min",
-    "tags": ["AI/LLM", "JavaScript", "MCP", "Consumer SDK", "Plugin architecture", "Canvas"],
+    "tags": [
+      "AI/LLM",
+      "JavaScript",
+      "MCP",
+      "Consumer SDK",
+      "Plugin architecture",
+      "Canvas"
+    ],
     "excerpt": "Two engines, six games, 16 MCP tools, and a documentation pipeline. How architecture decisions made it possible to ship an entire open-source ecosystem in 16 days."
   },
   {
@@ -21,7 +34,13 @@
     "title": "Four Protocols, Nine Years, One Design Philosophy",
     "date": "2026-06-01",
     "readingTime": "8 min",
-    "tags": ["Protocol Design", "Bitcoin", "PSBTs", "WebAuthn", "DNS"],
+    "tags": [
+      "Protocol Design",
+      "Bitcoin",
+      "PSBTs",
+      "WebAuthn",
+      "DNS"
+    ],
     "excerpt": "From Everstore's 38-byte database to Oviato's passkey wallets — what I learned designing protocols that other people actually adopt."
   },
   {
@@ -29,7 +48,12 @@
     "title": "What Regulators Actually Need from Blockchain Teams",
     "date": "2026-05-30",
     "readingTime": "10 min",
-    "tags": ["Regulatory Compliance", "Digital Custody", "KYC/AML", "Bitcoin"],
+    "tags": [
+      "Regulatory Compliance",
+      "Digital Custody",
+      "KYC/AML",
+      "Bitcoin"
+    ],
     "excerpt": "After advising Malaysia's Securities Commission for 2 years and spending 5 years getting CoKeeps approved, here's what regulators care about — and it's not what most blockchain teams think."
   },
   {
@@ -37,7 +61,12 @@
     "title": "The Case for Vanilla JS in 2026",
     "date": "2026-05-29",
     "readingTime": "12 min",
-    "tags": ["JavaScript", "Architecture", "Plugin architecture", "GitHub Pages"],
+    "tags": [
+      "JavaScript",
+      "Architecture",
+      "Plugin architecture",
+      "GitHub Pages"
+    ],
     "excerpt": "Six production sites, a 70-variant chess engine with tiered plugin architecture, 169 JS modules — zero frameworks, zero build steps. The constraint isn't a limitation. It's the architecture."
   },
   {
@@ -45,7 +74,11 @@
     "title": "The Cardinal Sins of Bitcoin Ordinals",
     "date": "2024-03-15",
     "readingTime": "4 min",
-    "tags": ["Bitcoin", "Ordinals", "UTXO"],
+    "tags": [
+      "Bitcoin",
+      "Ordinals",
+      "UTXO"
+    ],
     "excerpt": "Did you know that although your wallet might say that you only have 0.00000001 Bitcoin, depending upon where that Bitcoin came from and what's attached, it could actually be worth millions of dollars?"
   }
 ]

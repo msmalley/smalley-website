@@ -387,7 +387,6 @@
   color: var(--sm-text);
   margin: 40px 0 16px;
 }
-.article-content h2:first-of-type { margin-top: 0; }
 .article-content p {
   font-size: 16px;
   color: var(--sm-muted);

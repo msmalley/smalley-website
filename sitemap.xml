@@ -9,6 +9,10 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://smalley.my/dashboard/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://smalley.my/explore/</loc>
     <priority>0.8</priority>
   </url>
@@ -129,7 +133,15 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://smalley.my/thoughts/building-the-machine-that-builds-your-career/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://smalley.my/thoughts/cardinal-sins-of-bitcoin-ordinals/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://smalley.my/thoughts/chess-variants-that-defeated-ai/</loc>
     <priority>0.6</priority>
   </url>
   <url>

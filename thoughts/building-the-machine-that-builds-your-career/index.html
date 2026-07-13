@@ -4,10 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0B0F1A">
-<meta name="robots" content="noindex, nofollow">
 <style>html{background:#0B0F1A}body{opacity:0;transition:opacity .15s ease}</style>
 <title>Building the Machine That Builds Your Career — Mark Smalley</title>
 <meta name="description" content="What happens when getting a job requires building a system that helps people get jobs. A real-time engineering journal from inside the paradox.">
+<meta property="og:title" content="Building the Machine That Builds Your Career">
+<meta property="og:description" content="What happens when getting a job requires building a system that helps people get jobs. A real-time engineering journal from inside the paradox.">
+<meta property="og:image" content="https://smalley.my/img/og/thoughts-job-engine.jpg?v=1.0.35">
+<meta property="og:url" content="https://smalley.my/thoughts/building-the-machine-that-builds-your-career/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Mark Smalley">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Building the Machine That Builds Your Career">
+<meta name="twitter:description" content="What happens when getting a job requires building a system that helps people get jobs. A real-time engineering journal from inside the paradox.">
+<meta name="twitter:image" content="https://smalley.my/img/og/thoughts-job-engine.jpg?v=1.0.35">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="../../img/apple-touch-icon.png">
 <link rel="stylesheet" href="../../css/_sm.css?v=1.0.35">
@@ -29,11 +38,17 @@
     <div class="article-content">
       <div class="article-date">6 July 2026 · Engineering journal (ongoing)</div>
 
-      <p>I need a job. The fastest way to get one is to apply to everything that moves. The problem is that I also know what a good job-matching system looks like, and none of the existing ones are it. So instead of sending 200 generic applications, I'm building the system that tells me exactly which roles match which version of my experience, which CV to send, and how confident the recommendation is.</p>
+      <p>Most people start a job search with a spreadsheet and a LinkedIn tab. I already had the infrastructure. Autonomous agents, a scoring pipeline, content generation, deployment automation. All of it built to serve an unfunded side project in the tabletop gaming space. The system worked. The problem was that it ran on tokens, and tokens cost money I wasn't earning.</p>
+
+      <p>So I redirected those resources toward finding work. The fastest path would have been blasting out 200 generic applications. Instead, I started building a matching engine. One that parses job descriptions, scores them against proof points extracted directly from your CV, and surfaces which roles genuinely fit your experience. Not keyword matching. Structural alignment with confidence levels.</p>
+
+      <figure>
+        <img src="../../img/thoughts/job-pipeline-dashboard.png" alt="Job pipeline dashboard showing 416 jobs discovered, 223 scored, 7 applied, with tri-score matching across CTO, RegTech, and DevRel CVs">
+      </figure>
 
       <p>This creates an obvious paradox: every hour spent improving the system is an hour not spent applying through it. The system gets better while the bank account gets worse. At some point the investment pays off in higher-quality applications with lower effort per submission. The question is whether that crossover happens before the money runs out.</p>
 
-      <p>This article documents the engineering decisions in real time. Each section represents a problem encountered, diagnosed, and solved. The system is live, the code is open, and the job search is real. Not just the code: the changelog, the scoring logic, the architectural dead-ends, the daily progress. Everything that most people would keep behind a private repo until it's polished, published here while it's still rough and actively evolving. If you want to see how a senior engineer actually works through hard problems, this is it, including the wrong turns.</p>
+      <p>This article documents the engineering decisions in real time. Each section represents a problem encountered, diagnosed, and solved. The system is live, the code is open, and the job search is real. Not just the code: the changelog, the scoring logic, the architectural dead-ends, the daily progress. Everything that most people would keep behind a private repo until it's polished, published here while it's still rough and actively evolving.</p>
 
       <h2>The Scoring Problem</h2>
 
@@ -41,17 +56,17 @@
 
       <p>The first version of my scorer was simple: extract requirements from a job description, match them against a pool of proof points from my career history, calculate a percentage. It worked well enough to rank 500+ jobs and surface the top 10% worth applying to.</p>
 
-      <p>Then I added three CVs.</p>
+      <p>Then the patterns started suggesting I needed more than one CV.</p>
 
       <h2>The Three-CV Problem</h2>
 
-      <p>I have three distinct CVs targeting three different role types: CTO/Head of Engineering, RegTech/Compliance, and Developer Relations. The same career, told three different ways. The CTO version leads with "founded Moonshot team, scaled 1 to 10 engineers, secured DraperVC investment." The DevRel version leads with "TEDx speaker, 59K SlideShare views, SDK documentation, hackathon infrastructure." The RegTech version leads with "first company in SC Malaysia regulatory sandbox, built KYC/AML pipelines, Deloitte Top 50 Global RegTech."</p>
+      <p>After scoring hundreds of jobs, the matches clustered into three distinct shapes. Leadership roles lit up one set of proof points. Developer-facing roles lit up a completely different set. Compliance-adjacent roles activated a third. The same career, but three different stories depending on who was reading. So the system suggested three: CTO/Head of Engineering, DevRel/Developer Advocacy, and RegTech/Compliance. The CTO version leads with "founded Moonshot team, scaled 1 to 10 engineers, secured DraperVC investment." The DevRel version leads with "TEDx speaker, 59K SlideShare views, SDK documentation, hackathon infrastructure." The RegTech version leads with "first company in SC Malaysia regulatory sandbox, built KYC/AML pipelines, Deloitte Top 50 Global RegTech."</p>
 
       <p>The first tri-score implementation scored each job three times using the same proof pool with keyword-based multipliers. CTO keywords ("led", "managed", "founded") boosted proof points when scoring for the CTO variant. DevRel keywords ("documentation", "community", "speaking") boosted for DevRel. The theory was sound. The results were not.</p>
 
-      <h2>Nine Identical Scores</h2>
+      <h2>The Identical Scoring Problem</h2>
 
-      <p>Nine jobs returned identical scores across all three CVs. A "Senior Smart Contract Engineer" scored 85/85/85. A "Senior Technical Product Manager" scored 80/80/80. These are not generic roles. A smart contract engineer should score differently on a CTO CV (architecture, system design) versus a DevRel CV (SDK documentation, developer education). The fact that they didn't meant the system was fundamentally broken.</p>
+      <p>A large percentage of jobs returned identical scores across all three CVs. A smart contract engineering role scored the same whether matched against a CTO CV, a DevRel CV, or a RegTech CV. These are not generic roles. A smart contract engineer should score differently on a CTO CV (architecture, system design) versus a DevRel CV (SDK documentation, developer education). The fact that they didn't meant the system was fundamentally broken.</p>
 
       <p>The diagnosis took longer than the fix. The keyword multiplier approach failed because neutral technical language ("5+ years Solidity", "smart contract auditing", "deploy to mainnet") doesn't contain CTO keywords, DevRel keywords, OR RegTech keywords. When no multiplier fires, all three variants score identically against the same proof pool.</p>
 
@@ -73,21 +88,15 @@
         <li>Generic backend role: CTO 76, RegTech 70, DevRel 73 (6-point spread, correctly narrow)</li>
       </ul>
 
-      <p>The narrow spreads are as informative as the wide ones. A generic backend engineering role genuinely fits all three CVs comparably. A 6-point spread tells you: send whichever CV you prefer, the match quality won't differ meaningfully.</p>
+      <p>The narrow spreads are as informative as the wide ones. A 6-point spread on a generic backend engineering role tells you something different: this isn't a strong fit for any of your variants. When no version of your experience clearly outperforms the others, either the role isn't what you're looking for, or the engine doesn't have enough data to work with.</p>
 
       <h2>The Confidence Problem</h2>
 
-      <p>Of those nine originally-identical jobs, all had one thing in common: no job description. When a job listing has only a title and company name, the scorer extracts 2-3 "requirements" from that minimal text, matches them against proof points, and produces a number that looks like a score but carries no information.</p>
+      <p>A vast majority of those that scored identically shared a common pattern: either no job description at all, or poorly written ones. When a job listing has only a title and company name, the scorer extracts 2-3 "requirements" from that minimal text, matches them against proof points, and produces a number that looks like a score but carries no information.</p>
 
       <p>A score built on 2 data points is not the same thing as a score built on 12. The system now reports confidence alongside the score: high (8+ requirements, 4+ matches), medium (5+ requirements), or low (fewer than 5). Low-confidence scores are flagged in the dashboard and sorted below high-confidence leads at the same score level.</p>
 
       <p>This is more useful than suppressing them entirely. A low-confidence 85 still tells you "this role's title and skills are highly aligned" even if you can't yet confirm the full description matches. It becomes a signal to fetch the full JD and re-score, not a signal to apply blindly.</p>
-
-      <h2>The Product Insight</h2>
-
-      <p>Here's what makes this more than a personal tool: the architecture generalises immediately. A future user uploads one CV. The system parses their proof points from the document directly. No manual tagging, no keyword configuration, no profile form to fill out. The quality of scoring scales with the quality of their CV writing. A user with 3 targeted CVs (like me) gets 3 scores. A user with 1 gets 1. The engine is the same.</p>
-
-      <p>The scoring quality creates a natural incentive: write a better CV, get better match accuracy. This is the opposite of most job platforms where the algorithm is opaque and the user has no lever to pull except "apply to more things."</p>
 
       <h2>The Expansion Map Problem</h2>
 
@@ -95,26 +104,29 @@
 
       <p>The first implementation used a single global expansion map: "blockchain" expands to ["bitcoin", "ethereum", "web3", "crypto"...]. Every variant used the same map. This is the same mistake as the shared proof pool, just one level deeper. When a CTO reads "blockchain" they think "architecture, protocol design, infrastructure." When a DevRel reads it they think "documentation, tutorials, developer education." The semantic neighbourhood of a keyword depends on who's reading it.</p>
 
-      <p>The fix: three variant-specific expansion maps. The CTO map expands "team" to ["hiring", "managed", "moonshot", "sprint"]. The DevRel map expands it to ["community", "contributors", "maintainers", "ambassadors"]. The RegTech map expands "compliance" to ["kyc", "aml", "sandbox", "securities commission", "fca", "mica"]. Each map reflects how that version of the person actually talks about their work.</p>
+      <p>The fix: three variant-specific expansion maps. The CTO map expands "team" to ["hiring", "managed", "moonshot", "sprint"]. The DevRel map expands it to ["community", "contributors", "maintainers", "ambassadors"]. The RegTech map expands "compliance" to ["kyc", "aml", "sandbox", "securities commission", "fca", "mica"]. Each map reflects how that person actually talks about their work.</p>
 
       <p>This layered approach (variant-specific proof pools + variant-specific semantic expansion) means two jobs with identical keywords can score differently because the system understands that "team management" means different things depending on whether you're hiring engineers or coordinating a developer community. The scores finally reflect human judgement about fit, not just keyword overlap.</p>
 
-      <h2>What's Next</h2>
+      <h2>From Personal Tool to Open System</h2>
 
-      <p>This section will grow as the system evolves. Open problems as of today:</p>
+      <p>Here's what makes this more than a personal job search: the architecture generalises immediately. I started with one CV. After scoring hundreds of jobs against it, patterns emerged. Certain proof points dominated matches for leadership roles. Different ones dominated for developer-facing roles. Others lit up for compliance-adjacent positions. The data suggested I'd get better results with targeted variants. So the system suggested three.</p>
 
+      <p>That turned into the testing strategy. Scoring all three against the same job descriptions exposed every failure mode that a single-CV user would never trigger. Identical scores, missing semantic context, confidence without data. Each failure made the system more robust for the single-CV case. And it raised a product question: could the system itself identify when a user's experience clusters into distinct role types, and suggest they'd benefit from a variant?</p>
+
+      <p>A future user uploads one CV. The system parses their proof points from the document directly. No manual tagging, no keyword configuration, no profile form to fill out. Over time, as it scores enough jobs, it might surface the same insight: "your experience matches these 40 roles one way and those 30 a different way. Here's where a second CV would outperform your first." The quality of scoring scales with the quality of their CV writing, and the system teaches them where to improve it.</p>
+
+      <p>The goal is to eventually open this up as a working system that anyone can point at their own CV and start getting scored matches from. Until it's done its job and actually found me work, the focus stays on me. The same agents that were researching game rules and generating variant documentation are now fetching job descriptions, scoring matches, and drafting applications. The infrastructure costs money, they need feeding, and the paradox only resolves if the system produces results for its first user before it tries to serve others.</p>
+
+      <div class="article-divider"><hr></div>
+
+      <p><em>This article is updated as the system evolves. Each section represents a real engineering decision made during an active job search.</em></p>
+
+      <p><strong>Changelog</strong></p>
       <ul>
-        <li>59 jobs have no stored requirements. They need JD fetching from source URLs before scoring is meaningful.</li>
-        <li>The enrichment pipeline runs on ingestion only. Stale jobs need periodic re-scoring as CVs evolve.</li>
-        <li>Cover letter generation currently uses the primary variant only. It should reference the specific proof points that matched, creating a provable connection between the JD and the CV.</li>
-        <li>The dashboard shows leads but doesn't yet track application outcomes (response rate, interview conversion, time-to-response by channel). That feedback loop closes the system.</li>
+        <li>13 July 2026 — Added: Expansion Map Problem, From Personal Tool to Open System</li>
+        <li>6 July 2026 — Published: Scoring, Three-CV, Identical Scoring, Architectural Fix, Confidence</li>
       </ul>
-
-      <p>Every one of these is a product feature being built to solve my immediate problem. The paradox resolves when the system starts generating applications faster than I could manually, with higher match quality. At that point, the time investment inverts: the system applies while I build the next feature.</p>
-
-      <div class="article-divider"></div>
-
-      <p><em>This article is updated as the system evolves. Each section represents a real engineering decision made during an active job search. The source code, commit history, and changelogs are all public. No waiting until it's finished. No cleaning up the messy parts. This is what building looks like in progress.</em></p>
 
       <div class="article-tags">
         <a class="pill" href="../../explore/?tag=AI/LLM">AI/LLM</a>

@@ -259,6 +259,8 @@ def generate_all():
          'The Cardinal Sins of Bitcoin Ordinals', 'What the ecosystem gets wrong about digital artifacts'),
         ('thoughts-protocols.png', 'teal', 'Thoughts',
          'Four Protocols, Nine Years, One Design Philosophy', "From Everstore's 38-byte database to Oviato's passkey wallets"),
+        ('thoughts-job-engine.png', 'gold', 'Thoughts',
+         'Building the Machine That Builds Your Career', 'A real-time engineering journal from inside the paradox'),
         ('opensource-everstore.png', 'teal', 'Neuroware · 2016',
          'Everstore Protocol', 'Structured database functionality on UTXO blockchains (pre-EVM)'),
     ]

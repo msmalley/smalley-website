@@ -11370,6 +11370,111 @@
         "notes": null
       },
       "email": null
+    },
+    {
+      "id": "paradigm-senior-principal-infrastructure-mriwc7ne",
+      "added": "2026-07-13",
+      "status": "closed",
+      "company": "Paradigm",
+      "role": "Senior/Principal Infrastructure Engineer Paradex at Paradigm",
+      "location": "Remote",
+      "variant": null,
+      "score": null,
+      "scores": null,
+      "confidence": null,
+      "requirements_found": null,
+      "matched": null,
+      "gaps": [],
+      "proof_points": [],
+      "source_url": "https://crypto.jobs/jobs/senior-principal-infrastructure-engineer-at-paradigm-3",
+      "source": "crypto.jobs",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Sun, 07 Jun 2026 00:00:08 +0000.",
+      "channel": {
+        "source": "crypto.jobs",
+        "method": "direct_url",
+        "apply_url": "https://crypto.jobs/jobs/senior-principal-infrastructure-engineer-at-paradigm-3",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      }
+    },
+    {
+      "id": "graphlinq-chain-glq-lead-blockchain-amp--mriwc7nf",
+      "added": "2026-07-13",
+      "status": "closed",
+      "company": "GraphLinq Chain - GLQ",
+      "role": "Lead Blockchain &amp; AI Developer for Cutting-Edge Automation Platform at GraphLinq Chain - GLQ",
+      "location": "Remote",
+      "variant": null,
+      "score": null,
+      "scores": null,
+      "confidence": null,
+      "requirements_found": null,
+      "matched": null,
+      "gaps": [],
+      "proof_points": [],
+      "source_url": "https://crypto.jobs/jobs/job-opportunity-lead-blockchain-ai-developer-for-cutting-edge-automation-platform-at-graphlinq-chain-glq",
+      "source": "crypto.jobs",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Sat, 22 Nov 2025 00:00:08 +0000.",
+      "channel": {
+        "source": "crypto.jobs",
+        "method": "direct_url",
+        "apply_url": "https://crypto.jobs/jobs/job-opportunity-lead-blockchain-ai-developer-for-cutting-edge-automation-platform-at-graphlinq-chain-glq",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      }
+    },
+    {
+      "id": "alemx-chief-technology-officer-cto-amp-c-mriwc7nf",
+      "added": "2026-07-13",
+      "status": "closed",
+      "company": "Alemx",
+      "role": "Chief Technology Officer (CTO) &amp; Co-Founder at Alemx at Alemx",
+      "location": "Remote",
+      "variant": null,
+      "score": null,
+      "scores": null,
+      "confidence": null,
+      "requirements_found": null,
+      "matched": null,
+      "gaps": [],
+      "proof_points": [],
+      "source_url": "https://crypto.jobs/jobs/chief-technology-officer-cto-co-founder-at-alemx-at-alemx",
+      "source": "crypto.jobs",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Wed, 15 Jan 2025 00:00:08 +0000.",
+      "channel": {
+        "source": "crypto.jobs",
+        "method": "direct_url",
+        "apply_url": "https://crypto.jobs/jobs/chief-technology-officer-cto-co-founder-at-alemx-at-alemx",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      }
     }
   ],
   "updated": "2026-07-06"

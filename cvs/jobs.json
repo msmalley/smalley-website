@@ -553,7 +553,7 @@
         "linkedin_job_id": "4424904932",
         "freshness": {
           "status": "stale",
-          "days_old": 19,
+          "days_old": 26,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -621,7 +621,7 @@
         "linkedin_job_id": "4419490984",
         "freshness": {
           "status": "stale",
-          "days_old": 19,
+          "days_old": 26,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -690,7 +690,7 @@
         "linkedin_job_id": "4428720070",
         "freshness": {
           "status": "stale",
-          "days_old": 19,
+          "days_old": 26,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -757,7 +757,7 @@
         "linkedin_job_id": "4424837232",
         "freshness": {
           "status": "stale",
-          "days_old": 19,
+          "days_old": 26,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -822,7 +822,7 @@
         "linkedin_job_id": "4423630239",
         "freshness": {
           "status": "stale",
-          "days_old": 19,
+          "days_old": 26,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -888,7 +888,7 @@
         "linkedin_job_id": "4420454146",
         "freshness": {
           "status": "stale",
-          "days_old": 19,
+          "days_old": 26,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -958,7 +958,7 @@
         "linkedin_job_id": "4419163054",
         "freshness": {
           "status": "stale",
-          "days_old": 19,
+          "days_old": 26,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -1024,7 +1024,7 @@
         "linkedin_job_id": "4428089040",
         "freshness": {
           "status": "stale",
-          "days_old": 19,
+          "days_old": 26,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -1090,7 +1090,7 @@
         "linkedin_job_id": "4414925120",
         "freshness": {
           "status": "stale",
-          "days_old": 19,
+          "days_old": 26,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -1158,7 +1158,7 @@
         "linkedin_job_id": "4419011854",
         "freshness": {
           "status": "stale",
-          "days_old": 19,
+          "days_old": 26,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -1227,7 +1227,7 @@
         "linkedin_job_id": "4422794939",
         "freshness": {
           "status": "stale",
-          "days_old": 19,
+          "days_old": 26,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -1297,7 +1297,7 @@
         "linkedin_job_id": "4422458041",
         "freshness": {
           "status": "stale",
-          "days_old": 19,
+          "days_old": 26,
           "added": "2026-06-17"
         },
         "action": "check_easy_apply",
@@ -1333,7 +1333,7 @@
         "linkedin_job_id": "4422407624",
         "freshness": {
           "status": "stale",
-          "days_old": 17,
+          "days_old": 24,
           "added": "2026-06-19"
         },
         "action": "check_easy_apply",
@@ -1405,7 +1405,7 @@
         "linkedin_job_id": "4423500853",
         "freshness": {
           "status": "stale",
-          "days_old": 17,
+          "days_old": 24,
           "added": "2026-06-19"
         },
         "action": "check_easy_apply",
@@ -1474,7 +1474,7 @@
         "linkedin_job_id": "4429351312",
         "freshness": {
           "status": "stale",
-          "days_old": 16,
+          "days_old": 23,
           "added": "2026-06-20"
         },
         "action": "check_easy_apply",
@@ -1576,7 +1576,7 @@
         "linkedin_job_id": "4429320217",
         "freshness": {
           "status": "stale",
-          "days_old": 16,
+          "days_old": 23,
           "added": "2026-06-20"
         },
         "action": "check_easy_apply",
@@ -1738,8 +1738,8 @@
         "contact_email": null,
         "linkedin_job_id": "4433474294",
         "freshness": {
-          "status": "aging",
-          "days_old": 9,
+          "status": "stale",
+          "days_old": 16,
           "added": "2026-06-27"
         },
         "action": "check_easy_apply",
@@ -1806,8 +1806,8 @@
         "contact_email": null,
         "linkedin_job_id": "4433469360",
         "freshness": {
-          "status": "aging",
-          "days_old": 9,
+          "status": "stale",
+          "days_old": 16,
           "added": "2026-06-27"
         },
         "action": "check_easy_apply",
@@ -1873,8 +1873,8 @@
         "contact_email": null,
         "linkedin_job_id": "4433086155",
         "freshness": {
-          "status": "aging",
-          "days_old": 9,
+          "status": "stale",
+          "days_old": 16,
           "added": "2026-06-27"
         },
         "action": "check_easy_apply",
@@ -1942,8 +1942,8 @@
         "contact_email": null,
         "linkedin_job_id": "4414972986",
         "freshness": {
-          "status": "aging",
-          "days_old": 9,
+          "status": "stale",
+          "days_old": 16,
           "added": "2026-06-27"
         },
         "action": "check_easy_apply",
@@ -2011,8 +2011,8 @@
         "contact_email": null,
         "linkedin_job_id": "4415090834",
         "freshness": {
-          "status": "aging",
-          "days_old": 9,
+          "status": "stale",
+          "days_old": 16,
           "added": "2026-06-27"
         },
         "action": "check_easy_apply",
@@ -2080,8 +2080,8 @@
         "contact_email": null,
         "linkedin_job_id": "4405344328",
         "freshness": {
-          "status": "aging",
-          "days_old": 9,
+          "status": "stale",
+          "days_old": 16,
           "added": "2026-06-27"
         },
         "action": "check_easy_apply",
@@ -2145,8 +2145,8 @@
         "contact_email": null,
         "linkedin_job_id": "4430658433",
         "freshness": {
-          "status": "aging",
-          "days_old": 9,
+          "status": "stale",
+          "days_old": 16,
           "added": "2026-06-27"
         },
         "action": "check_easy_apply",
@@ -2212,8 +2212,8 @@
         "contact_email": null,
         "linkedin_job_id": "4433459733",
         "freshness": {
-          "status": "aging",
-          "days_old": 9,
+          "status": "stale",
+          "days_old": 16,
           "added": "2026-06-27"
         },
         "action": "check_easy_apply",
@@ -2277,8 +2277,8 @@
         "contact_email": null,
         "linkedin_job_id": "4414748287",
         "freshness": {
-          "status": "aging",
-          "days_old": 9,
+          "status": "stale",
+          "days_old": 16,
           "added": "2026-06-27"
         },
         "action": "check_easy_apply",
@@ -2346,8 +2346,8 @@
         "contact_email": null,
         "linkedin_job_id": "4394643720",
         "freshness": {
-          "status": "aging",
-          "days_old": 9,
+          "status": "stale",
+          "days_old": 16,
           "added": "2026-06-27"
         },
         "action": "check_easy_apply",
@@ -2415,8 +2415,8 @@
         "contact_email": null,
         "linkedin_job_id": "4414735369",
         "freshness": {
-          "status": "aging",
-          "days_old": 9,
+          "status": "stale",
+          "days_old": 16,
           "added": "2026-06-27"
         },
         "action": "check_easy_apply",
@@ -2484,8 +2484,8 @@
         "contact_email": null,
         "linkedin_job_id": "4426837963",
         "freshness": {
-          "status": "aging",
-          "days_old": 9,
+          "status": "stale",
+          "days_old": 16,
           "added": "2026-06-27"
         },
         "action": "check_easy_apply",
@@ -2542,8 +2542,8 @@
         "contact_email": null,
         "linkedin_job_id": "4410210715",
         "freshness": {
-          "status": "aging",
-          "days_old": 9,
+          "status": "stale",
+          "days_old": 16,
           "added": "2026-06-27"
         },
         "action": "check_easy_apply",
@@ -2606,8 +2606,8 @@
         "contact_email": null,
         "linkedin_job_id": "4416637061",
         "freshness": {
-          "status": "aging",
-          "days_old": 9,
+          "status": "stale",
+          "days_old": 16,
           "added": "2026-06-27"
         },
         "action": "check_easy_apply",
@@ -2675,8 +2675,8 @@
         "contact_email": null,
         "linkedin_job_id": "4377882825",
         "freshness": {
-          "status": "aging",
-          "days_old": 9,
+          "status": "stale",
+          "days_old": 16,
           "added": "2026-06-27"
         },
         "action": "check_easy_apply",
@@ -2744,8 +2744,8 @@
         "contact_email": null,
         "linkedin_job_id": "4416467019",
         "freshness": {
-          "status": "aging",
-          "days_old": 9,
+          "status": "stale",
+          "days_old": 16,
           "added": "2026-06-27"
         },
         "action": "check_easy_apply",
@@ -2840,8 +2840,8 @@
         "contact_email": null,
         "linkedin_job_id": "4433092597",
         "freshness": {
-          "status": "aging",
-          "days_old": 8,
+          "status": "stale",
+          "days_old": 15,
           "added": "2026-06-28"
         },
         "action": "check_easy_apply",
@@ -2901,8 +2901,8 @@
         "contact_email": null,
         "linkedin_job_id": "4432575279",
         "freshness": {
-          "status": "aging",
-          "days_old": 8,
+          "status": "stale",
+          "days_old": 15,
           "added": "2026-06-28"
         },
         "action": "check_easy_apply",
@@ -2969,8 +2969,8 @@
         "contact_email": null,
         "linkedin_job_id": "4432844139",
         "freshness": {
-          "status": "aging",
-          "days_old": 8,
+          "status": "stale",
+          "days_old": 15,
           "added": "2026-06-28"
         },
         "action": "check_easy_apply",
@@ -3034,8 +3034,8 @@
         "contact_email": null,
         "linkedin_job_id": "4431853339",
         "freshness": {
-          "status": "aging",
-          "days_old": 8,
+          "status": "stale",
+          "days_old": 15,
           "added": "2026-06-28"
         },
         "action": "check_easy_apply",
@@ -3068,8 +3068,8 @@
         "contact_email": null,
         "linkedin_job_id": "4413627747",
         "freshness": {
-          "status": "fresh",
-          "days_old": 1,
+          "status": "aging",
+          "days_old": 8,
           "added": "2026-07-05"
         },
         "action": "check_easy_apply",
@@ -3137,8 +3137,8 @@
         "contact_email": null,
         "linkedin_job_id": "4366876971",
         "freshness": {
-          "status": "fresh",
-          "days_old": 1,
+          "status": "aging",
+          "days_old": 8,
           "added": "2026-07-05"
         },
         "action": "check_easy_apply",
@@ -3206,8 +3206,8 @@
         "contact_email": null,
         "linkedin_job_id": "4417127444",
         "freshness": {
-          "status": "fresh",
-          "days_old": 1,
+          "status": "aging",
+          "days_old": 8,
           "added": "2026-07-05"
         },
         "action": "check_easy_apply",
@@ -3275,8 +3275,8 @@
         "contact_email": null,
         "linkedin_job_id": "4435457551",
         "freshness": {
-          "status": "fresh",
-          "days_old": 1,
+          "status": "aging",
+          "days_old": 8,
           "added": "2026-07-05"
         },
         "action": "check_easy_apply",
@@ -3344,8 +3344,8 @@
         "contact_email": null,
         "linkedin_job_id": "4426162541",
         "freshness": {
-          "status": "fresh",
-          "days_old": 1,
+          "status": "aging",
+          "days_old": 8,
           "added": "2026-07-05"
         },
         "action": "check_easy_apply",
@@ -3413,8 +3413,8 @@
         "contact_email": null,
         "linkedin_job_id": "4427147387",
         "freshness": {
-          "status": "fresh",
-          "days_old": 1,
+          "status": "aging",
+          "days_old": 8,
           "added": "2026-07-05"
         },
         "action": "check_easy_apply",
@@ -3480,8 +3480,8 @@
         "contact_email": null,
         "linkedin_job_id": "4429964020",
         "freshness": {
-          "status": "fresh",
-          "days_old": 1,
+          "status": "aging",
+          "days_old": 8,
           "added": "2026-07-05"
         },
         "action": "check_easy_apply",
@@ -3545,8 +3545,8 @@
         "contact_email": null,
         "linkedin_job_id": "4432956820",
         "freshness": {
-          "status": "fresh",
-          "days_old": 1,
+          "status": "aging",
+          "days_old": 8,
           "added": "2026-07-05"
         },
         "action": "check_easy_apply",
@@ -3614,8 +3614,8 @@
         "contact_email": null,
         "linkedin_job_id": "4409900747",
         "freshness": {
-          "status": "fresh",
-          "days_old": 1,
+          "status": "aging",
+          "days_old": 8,
           "added": "2026-07-05"
         },
         "action": "check_easy_apply",
@@ -3683,8 +3683,8 @@
         "contact_email": null,
         "linkedin_job_id": "4338294320",
         "freshness": {
-          "status": "fresh",
-          "days_old": 1,
+          "status": "aging",
+          "days_old": 8,
           "added": "2026-07-05"
         },
         "action": "check_easy_apply",
@@ -3752,8 +3752,8 @@
         "contact_email": null,
         "linkedin_job_id": "4402818533",
         "freshness": {
-          "status": "fresh",
-          "days_old": 1,
+          "status": "aging",
+          "days_old": 8,
           "added": "2026-07-05"
         },
         "action": "check_easy_apply",
@@ -3814,8 +3814,8 @@
         "contact_email": null,
         "linkedin_job_id": "4420049158",
         "freshness": {
-          "status": "fresh",
-          "days_old": 1,
+          "status": "aging",
+          "days_old": 8,
           "added": "2026-07-05"
         },
         "action": "check_easy_apply",
@@ -3883,8 +3883,8 @@
         "contact_email": null,
         "linkedin_job_id": "4430152188",
         "freshness": {
-          "status": "fresh",
-          "days_old": 1,
+          "status": "aging",
+          "days_old": 8,
           "added": "2026-07-05"
         },
         "action": "check_easy_apply",
@@ -3952,8 +3952,8 @@
         "contact_email": null,
         "linkedin_job_id": "4435443098",
         "freshness": {
-          "status": "fresh",
-          "days_old": 1,
+          "status": "aging",
+          "days_old": 8,
           "added": "2026-07-05"
         },
         "action": "check_easy_apply",
@@ -4011,8 +4011,8 @@
         "contact_email": null,
         "linkedin_job_id": "4432000958",
         "freshness": {
-          "status": "fresh",
-          "days_old": 1,
+          "status": "aging",
+          "days_old": 8,
           "added": "2026-07-05"
         },
         "action": "check_easy_apply",
@@ -4080,8 +4080,8 @@
         "contact_email": null,
         "linkedin_job_id": "4362257595",
         "freshness": {
-          "status": "fresh",
-          "days_old": 1,
+          "status": "aging",
+          "days_old": 8,
           "added": "2026-07-05"
         },
         "action": "check_easy_apply",
@@ -4183,8 +4183,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -4247,8 +4247,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -4313,8 +4313,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -4382,8 +4382,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -4450,8 +4450,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -4516,8 +4516,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -4585,8 +4585,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -4652,8 +4652,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -4719,8 +4719,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -4788,8 +4788,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -4856,8 +4856,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -4924,8 +4924,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -4990,8 +4990,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -5059,8 +5059,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -5127,8 +5127,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -5196,8 +5196,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -5265,8 +5265,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -5334,8 +5334,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -5401,8 +5401,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -5461,8 +5461,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -5521,8 +5521,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -5587,8 +5587,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -5651,8 +5651,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -5720,8 +5720,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -5786,8 +5786,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -5852,8 +5852,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -5919,8 +5919,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -5985,8 +5985,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -6054,8 +6054,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -6121,8 +6121,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -6188,8 +6188,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -6257,8 +6257,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -6320,8 +6320,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -6385,8 +6385,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -6449,8 +6449,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -6512,8 +6512,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -6581,8 +6581,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -6650,8 +6650,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -6719,8 +6719,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -6779,8 +6779,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -6845,8 +6845,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -6908,8 +6908,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -6971,8 +6971,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -7036,8 +7036,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -7105,8 +7105,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -7174,8 +7174,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -7239,8 +7239,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -7308,8 +7308,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -7377,8 +7377,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -7446,8 +7446,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -7512,8 +7512,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -7580,8 +7580,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -7649,8 +7649,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -7708,8 +7708,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -7773,8 +7773,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -7841,8 +7841,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -7906,8 +7906,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -7975,8 +7975,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -8041,8 +8041,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -8107,8 +8107,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -8176,8 +8176,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -8245,8 +8245,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -8314,8 +8314,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -8380,8 +8380,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -8449,8 +8449,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -8517,8 +8517,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -8585,8 +8585,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -8652,8 +8652,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -8721,8 +8721,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -8785,8 +8785,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -8854,8 +8854,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -8920,8 +8920,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -8985,8 +8985,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -9052,8 +9052,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -9119,8 +9119,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -9188,8 +9188,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -9252,8 +9252,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -9321,8 +9321,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -9390,8 +9390,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -9459,8 +9459,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -9526,8 +9526,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -9588,8 +9588,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -9650,8 +9650,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -9716,8 +9716,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -9783,8 +9783,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -9851,8 +9851,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -9919,8 +9919,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -9987,8 +9987,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -10052,8 +10052,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -10120,8 +10120,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -10184,8 +10184,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -10253,8 +10253,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -10312,8 +10312,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -10377,8 +10377,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -10443,8 +10443,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -10511,8 +10511,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -10580,8 +10580,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -10646,8 +10646,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -10712,8 +10712,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -10780,8 +10780,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -10846,8 +10846,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -10914,8 +10914,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -10981,8 +10981,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -11048,8 +11048,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -11117,8 +11117,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -11186,8 +11186,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -11248,8 +11248,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -11310,8 +11310,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -11371,8 +11371,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -11439,8 +11439,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -11508,8 +11508,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -11576,8 +11576,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -11645,8 +11645,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -11714,8 +11714,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -11778,8 +11778,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -11847,8 +11847,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -11916,8 +11916,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -11980,8 +11980,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -12040,8 +12040,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -12109,8 +12109,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -12178,8 +12178,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -12245,8 +12245,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -12314,8 +12314,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -12383,8 +12383,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -12451,8 +12451,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -12508,8 +12508,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -12577,8 +12577,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -12645,8 +12645,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -12714,8 +12714,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -12783,8 +12783,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -12847,8 +12847,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -12915,8 +12915,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -12984,8 +12984,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -13053,8 +13053,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -13128,8 +13128,8 @@
         "contact_email": null,
         "linkedin_job_id": "4434492291",
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "check_easy_apply",
@@ -13198,8 +13198,8 @@
         "contact_email": null,
         "linkedin_job_id": "4431923733",
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "check_easy_apply",
@@ -13268,8 +13268,8 @@
         "contact_email": null,
         "linkedin_job_id": "4434130655",
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "check_easy_apply",
@@ -13335,8 +13335,8 @@
         "contact_email": null,
         "linkedin_job_id": null,
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "visit_and_apply",
@@ -13404,14 +13404,2400 @@
         "contact_email": null,
         "linkedin_job_id": "4431920702",
         "freshness": {
-          "status": "fresh",
-          "days_old": 0,
+          "status": "recent",
+          "days_old": 7,
           "added": "2026-07-06"
         },
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
       }
+    },
+    {
+      "id": "input-output-group-chief-technology-offi-mriwc7n9",
+      "added": "2026-07-13",
+      "status": "new",
+      "company": "Input Output Group",
+      "role": "Chief Technology Officer",
+      "location": "Longmont, CO",
+      "variant": "cto",
+      "score": 78,
+      "scores": {
+        "cto": 78,
+        "regtech": 77,
+        "devrel": 78
+      },
+      "confidence": "high",
+      "requirements_found": 83,
+      "matched": 31,
+      "gaps": [
+        "The CPO owns what is built",
+        "the CTO owns how it is built",
+        "the COO owns execution at scale",
+        "Leads the technology function at enterprise level",
+        "Hands-on technical credibility: commits code to engineering repositories, reviews engineering work, and works alongside engineers regularly",
+        "Experience leading technical due diligence for acquisitions, partnerships, and venture investments",
+        "Strong ability to translate complex technical concepts for board members, investors, and non-technical executives",
+        "Strong external profile and the ability to represent IOG credibly at the most senior levels of the industry"
+      ],
+      "proof_points": [
+        {
+          "requirement": "The CTO retains the engineering hiring bar and provides regular technical health metrics including technical debt levels, architectural risks, and engineering velocity blockers",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "A clearly articulated engineering philosophy and proven ability to apply it - setting and upholding engineering, architectural, and security standards across a large, distributed organisation",
+          "evidence": "Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems"
+        },
+        {
+          "requirement": "Proven track record as a senior technical leader in a high-growth technology, blockchain, or venture studio environment",
+          "evidence": "UTXO scripting, Schnorr/Taproot, Ordinals, Inscriptions, Runes, BRC-20, BitcoinJS, digital assets"
+        },
+        {
+          "requirement": "Serve as the primary external technical voice for IOG, including conferences, panels, investor forums, and key partnerships",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "Deep familiarity with formal verification methods and cryptographic correctness, including zero-knowledge proof systems, consensus protocol verification, and provably secure system design.",
+          "evidence": "Co-authored the SADO Protocol — a decentralised, self-authenticating order-book standard for Bitcoin Ordinals — published as an open-source SDK now used across the ecosystem"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/chief-technology-officer-at-input-output-group-4437707034",
+      "source": "linkedin",
+      "linkedin_job_id": "4437707034",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: 2026-07-07.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/chief-technology-officer-at-input-output-group-4437707034",
+        "contact_email": null,
+        "linkedin_job_id": "4437707034",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      }
+    },
+    {
+      "id": "ampstek-architect-crypto-digital-asset-c-mriwc7nb",
+      "added": "2026-07-13",
+      "status": "new",
+      "company": "Ampstek",
+      "role": "Architect Crypto Digital Asset Custody & Blockchain Platforms",
+      "location": "Austin, Texas Metropolitan Area",
+      "variant": "regtech",
+      "score": 80,
+      "scores": {
+        "cto": 79,
+        "regtech": 80,
+        "devrel": 80
+      },
+      "confidence": "high",
+      "requirements_found": 69,
+      "matched": 35,
+      "gaps": [
+        "experience designing secure, scalable, observable, and fault-tolerant distributed systems.",
+        "experience in one or more languages such as Go, Java, Rust, Python, C, or C++.",
+        "Prior ownership of disaster recovery design, security runbooks, incident response processes, or post-incident remediation.",
+        "Experience applying AI tools to architecture, engineering, documentation, testing, and review workflows.Primary",
+        "Cryptographic Key Management",
+        "Secure Distributed Systems",
+        "Resilience, Observability, and Incident Readiness",
+        "Secure Wallet and Key Management Architecture"
+      ],
+      "proof_points": [
+        {
+          "requirement": "experience with blockchain or distributed ledger platforms, especially Layer 1 protocols and transaction lifecycles.",
+          "evidence": "Delivered blockchain and distributed ledger training and advisory to DBS Bank (Singapore) and Baker Hostetler (USA, 5-day intensive programme) covering compliance strategy, transaction monitoring, and digital asset custody"
+        },
+        {
+          "requirement": "Experience with crypto custody platforms, digital asset platforms, tokenization platforms, or blockchain infrastructure.",
+          "evidence": "Advised on Project Castor (2018) — the SC Malaysia blockchain blueprint that introduced Digital Asset Custodian regulation into capital markets. Technical implementation progressed from Dogecoin (distributed key-value storage) to Ethereum (ERC-20/721 token standards with programmable compliance)"
+        },
+        {
+          "requirement": "Digital Asset Custody & Blockchain Infrastructure",
+          "evidence": "15 years building compliance-grade blockchain infrastructure while simultaneously shaping the regulatory frameworks that govern it. First company in SC Malaysia's digital asset sandbox; co-founded what is now Malaysia's largest Digital Asset Custodian by AUM; delivered to DBS Bank and Baker Hostetler. UK-based since 2025, seeking senior RegTech/FinTech roles where regulatory fluency and production engineering intersect."
+        },
+        {
+          "requirement": "Experience architecting backend services, APIs, data pipelines, blockchain infrastructure, and observability components.",
+          "evidence": "Blockchain / Distributed Ledger Technology (DLT), cryptographic infrastructure, smart contracts, passkeys/WebAuthN, AI-augmented workflows, on-chain risk analysis"
+        },
+        {
+          "requirement": "Experience with wallet architecture, custody workflows, transaction controls, and secure blockchain transaction processing.",
+          "evidence": "Advised on Project Castor — the Securities Commission's blockchain / Distributed Ledger Technology (DLT) blueprint that established Digital Asset Custodian requirements in Malaysian capital markets"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/architect-crypto-digital-asset-custody-blockchain-platforms-at-ampstek-4437561226",
+      "source": "linkedin",
+      "linkedin_job_id": "4437561226",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: 2026-07-09.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/architect-crypto-digital-asset-custody-blockchain-platforms-at-ampstek-4437561226",
+        "contact_email": null,
+        "linkedin_job_id": "4437561226",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      }
+    },
+    {
+      "id": "ipolarity-crypto-digital-asset-custody-b-mriwc7nc",
+      "added": "2026-07-13",
+      "status": "new",
+      "company": "IPolarity",
+      "role": "Crypto Digital Asset Custody & Blockchain Platforms",
+      "location": "Texas, United States",
+      "variant": "cto",
+      "score": 74,
+      "scores": {
+        "cto": 74,
+        "regtech": 66,
+        "devrel": 67
+      },
+      "confidence": "high",
+      "requirements_found": 15,
+      "matched": 12,
+      "gaps": [
+        "experience designing secure, scalable, observable, and fault-tolerant distributed systems.* Hands-on",
+        "Location: Onshore Austin / Dallas, TX",
+        "experience designing secure, scalable, observable, and fault-tolerant distributed systems.* Hands-on"
+      ],
+      "proof_points": [
+        {
+          "requirement": "experience with blockchain or distributed ledger platforms, especially Layer 1 protocols and transaction lifecycles.*",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "Experience with crypto custody platforms, digital asset platforms, tokenization platforms, or blockchain infrastructure.*",
+          "evidence": "UTXO scripting, Schnorr/Taproot, Ordinals, Inscriptions, Runes, BRC-20, BitcoinJS, digital assets"
+        },
+        {
+          "requirement": "Experience with blockchain indexers, explorers, chain analytics, event processing, and reconciliation systems.* Familiarity with Web3 security tooling such as Slither, Mythril, and Foundry Fuzzing.*",
+          "evidence": "Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems"
+        },
+        {
+          "requirement": "Experience applying AI tools to architecture, engineering, documentation, testing, and review workflows.Primary",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "Role: Architect Crypto Digital Asset Custody & Blockchain Platforms",
+          "evidence": "Designed and shipped multiple production systems: KYC/AML pipelines, blockchain wallets, learning management, and digital identity platforms — full-stack from protocol to UI"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/crypto-digital-asset-custody-blockchain-platforms-at-ipolarity-4437592431",
+      "source": "linkedin",
+      "linkedin_job_id": "4437592431",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: 2026-07-09.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/crypto-digital-asset-custody-blockchain-platforms-at-ipolarity-4437592431",
+        "contact_email": null,
+        "linkedin_job_id": "4437592431",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      }
+    },
+    {
+      "id": "ampstek-architect-crypto-digital-asset-c-mriwc7nc",
+      "added": "2026-07-13",
+      "status": "new",
+      "company": "Ampstek",
+      "role": "Architect Crypto Digital Asset Custody & Blockchain Platforms",
+      "location": "Dallas, TX",
+      "variant": "regtech",
+      "score": 80,
+      "scores": {
+        "cto": 79,
+        "regtech": 80,
+        "devrel": 80
+      },
+      "confidence": "high",
+      "requirements_found": 71,
+      "matched": 35,
+      "gaps": [
+        "experience designing secure, scalable, observable, and fault-tolerant distributed systems.",
+        "experience in one or more languages such as Go, Java, Rust, Python, C, or C++.",
+        "Prior ownership of disaster recovery design, security runbooks, incident response processes, or post-incident remediation.",
+        "Experience applying AI tools to architecture, engineering, documentation, testing, and review workflows.Primary",
+        "Cryptographic Key Management",
+        "Secure Distributed Systems",
+        "Resilience, Observability, and Incident Readiness.Specialization",
+        "Secure Wallet and Key Management Architecture"
+      ],
+      "proof_points": [
+        {
+          "requirement": "experience with blockchain or distributed ledger platforms, especially Layer 1 protocols and transaction lifecycles.",
+          "evidence": "Delivered blockchain and distributed ledger training and advisory to DBS Bank (Singapore) and Baker Hostetler (USA, 5-day intensive programme) covering compliance strategy, transaction monitoring, and digital asset custody"
+        },
+        {
+          "requirement": "Experience with crypto custody platforms, digital asset platforms, tokenization platforms, or blockchain infrastructure.",
+          "evidence": "Advised on Project Castor (2018) — the SC Malaysia blockchain blueprint that introduced Digital Asset Custodian regulation into capital markets. Technical implementation progressed from Dogecoin (distributed key-value storage) to Ethereum (ERC-20/721 token standards with programmable compliance)"
+        },
+        {
+          "requirement": "Digital Asset Custody & Blockchain Infrastructure",
+          "evidence": "15 years building compliance-grade blockchain infrastructure while simultaneously shaping the regulatory frameworks that govern it. First company in SC Malaysia's digital asset sandbox; co-founded what is now Malaysia's largest Digital Asset Custodian by AUM; delivered to DBS Bank and Baker Hostetler. UK-based since 2025, seeking senior RegTech/FinTech roles where regulatory fluency and production engineering intersect."
+        },
+        {
+          "requirement": "Experience architecting backend services, APIs, data pipelines, blockchain infrastructure, and observability components.",
+          "evidence": "Blockchain / Distributed Ledger Technology (DLT), cryptographic infrastructure, smart contracts, passkeys/WebAuthN, AI-augmented workflows, on-chain risk analysis"
+        },
+        {
+          "requirement": "Experience with wallet architecture, custody workflows, transaction controls, and secure blockchain transaction processing.",
+          "evidence": "Advised on Project Castor — the Securities Commission's blockchain / Distributed Ledger Technology (DLT) blueprint that established Digital Asset Custodian requirements in Malaysian capital markets"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/architect-crypto-digital-asset-custody-blockchain-platforms-at-ampstek-4437556718",
+      "source": "linkedin",
+      "linkedin_job_id": "4437556718",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: 2026-07-09.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/architect-crypto-digital-asset-custody-blockchain-platforms-at-ampstek-4437556718",
+        "contact_email": null,
+        "linkedin_job_id": "4437556718",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      }
+    },
+    {
+      "id": "fidelity-investments-head-of-architectur-mriwc7nc",
+      "added": "2026-07-13",
+      "status": "new",
+      "company": "Fidelity Investments",
+      "role": "Head of Architecture, Digital Assets (Crypto)",
+      "location": "Durham, NC",
+      "variant": "cto",
+      "score": 80,
+      "scores": {
+        "cto": 80,
+        "regtech": 80,
+        "devrel": 78
+      },
+      "confidence": "high",
+      "requirements_found": 42,
+      "matched": 25,
+      "gaps": [
+        "Strong ownership mindset and",
+        "Strong analytical, communication, organizational, and decision-making",
+        "experience that incorporates the history, principles, and expertise of a traditional financial institution.",
+        "Fidelity is transitioning to a full-time onsite working model through a phased rollout across regions and roles.",
+        "Currently, some roles and locations require 100% onsite presence, while others require less.",
+        "Onsite expectations are likely to evolve as the rollout continues.",
+        "Bachelor's degree in computer science or a related field15 plus years of software development",
+        "Demonstrated ability to attract, develop, mentor, and retain top technical talent"
+      ],
+      "proof_points": [
+        {
+          "requirement": "experience, including significant architecture and leadership responsibility",
+          "evidence": "Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites: renderer hooks, game controller, replay API, unit templates, terrain predicates, native ESM (same source serves browser, Worker, and Node.js)"
+        },
+        {
+          "requirement": "Deep software architecture expertise across distributed systems, cloud-native platforms, APIs, data, security, reliability, and operational excellence",
+          "evidence": "Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems"
+        },
+        {
+          "requirement": "experience with at least one public blockchain protocol",
+          "evidence": "Authored Everstore protocol (25-page whitepaper) — complete relational database engine mapped onto BIP32 key derivation with CRUD, encryption tiers, and audit trails on UTXO chains, before Ethereum existed"
+        },
+        {
+          "requirement": "Ability to influence engineering leaders and teams through technical credibility, sound judgment, clear communication, and partnership",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "The team works with both technology and business teams to design secure, scalable, resilient cloud-based services while ensuring that user",
+          "evidence": "Joined a 170-engineer company as P4 Engineer; promoted to M3 Manager within months. Tasked with designing novel Bitcoin meta-protocols, then given mandate to form and lead a new Moonshot team (grown from 1 to 10) whose first output became Cake's fifth business vertical."
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/head-of-architecture-digital-assets-crypto-at-fidelity-investments-4430717483",
+      "source": "linkedin",
+      "linkedin_job_id": "4430717483",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: 2026-07-10.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-architecture-digital-assets-crypto-at-fidelity-investments-4430717483",
+        "contact_email": null,
+        "linkedin_job_id": "4430717483",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      }
+    },
+    {
+      "id": "predicate-protocol-lead-mriwc7nc",
+      "added": "2026-07-13",
+      "status": "new",
+      "company": "Predicate",
+      "role": "Protocol Lead",
+      "location": "New York, NY",
+      "variant": "cto",
+      "score": 81,
+      "scores": {
+        "cto": 81,
+        "regtech": 66,
+        "devrel": 79
+      },
+      "confidence": "high",
+      "requirements_found": 32,
+      "matched": 18,
+      "gaps": [
+        "These policies, owned and governed by application developers or DAOs, define the prerequisites for transaction execution.",
+        "This role combines R&D and engineering to shape how transaction rules are enforced across the ecosystem.",
+        "Strong scripting language proficiency (e.g., Type",
+        "Script, Python) and comfort building Po",
+        "experience leading smart contract audits and designing upgradable systems",
+        "These policies, owned and governed by application developers or DAOs, define the prerequisites for transaction execution.",
+        "Our operator network ensures that these rules are enforced with cryptographic guarantees, enabling sophisticated transaction validation without compromising on censorship resistance.The role",
+        "This role combines R&D and engineering to shape how transaction rules are enforced across the ecosystem."
+      ],
+      "proof_points": [
+        {
+          "requirement": "Deep familiarity with Ethereum, Solidity, zero knowledge, and relevant emerging tools",
+          "evidence": "Solidity, EthersJS, Web3.js, ERC-20, ERC-721, IPFS, smart contract development, DeFi"
+        },
+        {
+          "requirement": "As Protocol Lead, you’ll own our core smart contract architecture and drive its evolution.",
+          "evidence": "Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites: renderer hooks, game controller, replay API, unit templates, terrain predicates, native ESM (same source serves browser, Worker, and Node.js)"
+        },
+        {
+          "requirement": "Manage security audits, bug bounties, and ongoing protocol upgrades",
+          "evidence": "Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems"
+        },
+        {
+          "requirement": "Own the architecture, development, and maintenance of core smart contracts",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "Our operator network ensures that these rules are enforced with cryptographic guarantees, enabling sophisticated transaction validation without compromising on censorship resistance.The role",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/protocol-lead-at-predicate-4439578682",
+      "source": "linkedin",
+      "linkedin_job_id": "4439578682",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: 2026-07-11.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/protocol-lead-at-predicate-4439578682",
+        "contact_email": null,
+        "linkedin_job_id": "4439578682",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      }
+    },
+    {
+      "id": "td-vice-president-managing-director-digi-mriwc7nd",
+      "added": "2026-07-13",
+      "status": "new",
+      "company": "TD",
+      "role": "Vice President & Managing Director, Digital Assets & Tokenized Technology",
+      "location": "New York, NY",
+      "variant": "regtech",
+      "score": 81,
+      "scores": {
+        "cto": 80,
+        "regtech": 81,
+        "devrel": 77
+      },
+      "confidence": "high",
+      "requirements_found": 58,
+      "matched": 22,
+      "gaps": [
+        "experience, job-related knowledge, geographic location, and other specific business and organizational needs.As a candidate, you are encouraged to ask",
+        "Bachelor's degree in Computer Science, Engineering, Mathematics or related field",
+        "MBA or advanced technical degree preferred",
+        "Proven track record managing global engineering organizations and multi-million-dollar technology budgets",
+        "Executive presence and board level communication",
+        "Strategic thinking with hands on execution orientation",
+        "Crisis management and operational leadership",
+        "Ability to influence across complex matrix organizations strong people leadership and talent development"
+      ],
+      "proof_points": [
+        {
+          "requirement": "5+ years leading large scale digital assets, blockchain or fintech platforms",
+          "evidence": "Digital asset regulation, regulatory sandbox, Know Your Customer (KYC), Anti-Money Laundering (AML), Customer Due Diligence (CDD), custody compliance, transaction monitoring, financial crime prevention"
+        },
+        {
+          "requirement": "Experience within GSIBs, Tier 1 investment banks, systemically regulated financial institutions, major fintech infrastructure providers",
+          "evidence": "Digital asset custody, RegTech, cryptocurrency compliance, Islamic Finance / FinTech, payments, identity, DeFi (Decentralized Finance), Virtual Asset Service Providers (VASPs)"
+        },
+        {
+          "requirement": "Deep expertise in digital assets, distributed ledger technology, and enterprise platform architecture",
+          "evidence": "Delivered blockchain and distributed ledger training and advisory to DBS Bank (Singapore) and Baker Hostetler (USA, 5-day intensive programme) covering compliance strategy, transaction monitoring, and digital asset custody"
+        },
+        {
+          "requirement": "5+ years leading large scale digital assets, blockchain or fintech platforms",
+          "evidence": "15 years building compliance-grade blockchain infrastructure while simultaneously shaping the regulatory frameworks that govern it. First company in SC Malaysia's digital asset sandbox; co-founded what is now Malaysia's largest Digital Asset Custodian by AUM; delivered to DBS Bank and Baker Hostetler. UK-based since 2025, seeking senior RegTech/FinTech roles where regulatory fluency and production engineering intersect."
+        },
+        {
+          "requirement": "experience leading large-scale platform builds within regulated financial institutions",
+          "evidence": "Built blockchain infrastructure adopted by licensed financial institutions operating under regulatory oversight"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/vice-president-managing-director-digital-assets-tokenized-technology-at-td-4433367908",
+      "source": "linkedin",
+      "linkedin_job_id": "4433367908",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: 2026-07-08.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/vice-president-managing-director-digital-assets-tokenized-technology-at-td-4433367908",
+        "contact_email": null,
+        "linkedin_job_id": "4433367908",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      }
+    },
+    {
+      "id": "dragonfly-cto-founding-engineer-dragonfl-mriwc7nd",
+      "added": "2026-07-13",
+      "status": "new",
+      "company": "Dragonfly",
+      "role": "CTO / Founding Engineer - Dragonfly Portfolio",
+      "location": "United States",
+      "variant": "cto",
+      "score": 67,
+      "scores": {
+        "cto": 67,
+        "regtech": 40,
+        "devrel": 49
+      },
+      "confidence": "high",
+      "requirements_found": 24,
+      "matched": 12,
+      "gaps": [
+        "Fi products, or scaled crypto infrastructure.",
+        "experience, we encourage you to apply.",
+        "All candidate submissions are strictly confidential.Submit your information below, and we’ll be in touch if there’s a potential fit.",
+        "experience with a track record of building and shipping crypto products.Ability to execute independently, especially in 0 to 1 environments.Strong technical judgment and a bias toward action.",
+        "Fi products, or scaled crypto infrastructure.",
+        "experience, we encourage you to apply.",
+        "If mutual interest exists between you and a team, we’ll facilitate a warm introduction.",
+        "If there isn’t a match today, we’ll keep you top of mind for future opportunities.Our portfolio companies are globally distributed, hiring for remote, hybrid, and in-person roles worldwide."
+      ],
+      "proof_points": [
+        {
+          "requirement": "About The Role(s)Depending on the team, you could be",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "Engineering leadership",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "Fi, infrastructure, L1s and L2s, creator/consumer applications, NFTs, ZK, Crypto x AI, and more.",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "experience with a track record of building and shipping crypto products.Ability to execute independently, especially in 0 to 1 environments.Strong technical judgment and a bias toward action.",
+          "evidence": "Co-founded and led the technical pivot from consumer app to passkey-native wallet infrastructure provider, building on prototype work from Project Eden (weekend hackathon → production architecture). The pivot secured DraperVC investment."
+        },
+        {
+          "requirement": "There may be other opportunities that fit your skill set.Process: We’ll confidentially match you with portfolio companies aligned with your background, skill set, and interests.",
+          "evidence": "Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites: renderer hooks, game controller, replay API, unit templates, terrain predicates, native ESM (same source serves browser, Worker, and Node.js)"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/cto-founding-engineer-dragonfly-portfolio-at-dragonfly-4431952461",
+      "source": "linkedin",
+      "linkedin_job_id": "4431952461",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: 2026-07-08.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/cto-founding-engineer-dragonfly-portfolio-at-dragonfly-4431952461",
+        "contact_email": null,
+        "linkedin_job_id": "4431952461",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      }
+    },
+    {
+      "id": "coinbase-senior-staff-software-engineer--mriwc7ne",
+      "added": "2026-07-13",
+      "status": "low_match",
+      "company": "Coinbase",
+      "role": "Senior Staff Software Engineer - Blockchain Platform",
+      "location": "Miami, FL",
+      "variant": "regtech",
+      "score": 43,
+      "scores": {
+        "cto": 33,
+        "regtech": 43,
+        "devrel": 55
+      },
+      "confidence": "high",
+      "requirements_found": 25,
+      "matched": 6,
+      "gaps": [
+        "Pay Transparency Notice: Base",
+        "Need screen reading technology?",
+        "Click here to download a free compatible screen reader and view the tutorial.Data Privacy & Arbitration: By submitting your application, you agree to our Candidate Privacy Notice.",
+        "The tool simulates realistic interview scenarios and engages in dynamic conversation.",
+        "Coinbase is also piloting an AI interview intelligence platform to transcribe and summarize interview notes, allowing our interviewers to fully focus on you as the candidate.",
+        "Coinbase will not use AI to make decisions impacting employment.",
+        "At Coinbase, we are uncompromising on our mission to increase economic freedom.",
+        "The bar is high, the environment is intense, and we like it that way."
+      ],
+      "proof_points": [
+        {
+          "requirement": "12+ years of software engineering",
+          "evidence": "Founded and led Malaysia's foremost blockchain infrastructure and regulatory advisory practice for 13 years. R1 sat at the intersection of engineering, compliance, and policy, building production-grade digital asset systems for licensed operators while advising regulators on the frameworks that would govern them."
+        },
+        {
+          "requirement": "4+ years operating at a staff-plus level designing and scaling high-throughput transaction systems requiring strong auditability, idempotency, and financial precision.Hands-on",
+          "evidence": "Built blockchain infrastructure adopted by licensed financial institutions operating under regulatory oversight"
+        },
+        {
+          "requirement": "Ready to do the most impactful work of your career?",
+          "evidence": "Active contributor to Malaysia's national Digital Asset regulatory roadmap — engaged directly with SC and Bank Negara Malaysia stakeholders on Anti-Money Laundering (AML) and Know Your Customer (KYC) frameworks"
+        },
+        {
+          "requirement": "If you're ready to build the future of finance alongside people who refuse to settle for \"good enough,\" you belong here.",
+          "evidence": "Published: 'Unravelling Blockchain's Future' — IFN (Islamic Finance News), 2017"
+        },
+        {
+          "requirement": "12+ years of software engineering",
+          "evidence": "15 years building compliance-grade blockchain infrastructure while simultaneously shaping the regulatory frameworks that govern it. First company in SC Malaysia's digital asset sandbox; co-founded what is now Malaysia's largest Digital Asset Custodian by AUM; delivered to DBS Bank and Baker Hostetler. UK-based since 2025, seeking senior RegTech/FinTech roles where regulatory fluency and production engineering intersect."
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/senior-staff-software-engineer-blockchain-platform-at-coinbase-4430155435",
+      "source": "linkedin",
+      "linkedin_job_id": "4430155435",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: 2026-07-09.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/senior-staff-software-engineer-blockchain-platform-at-coinbase-4430155435",
+        "contact_email": null,
+        "linkedin_job_id": "4430155435",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      }
+    },
+    {
+      "id": "web3creators-senior-product-manager-mriwc7ng",
+      "added": "2026-07-13",
+      "status": "low_match",
+      "company": "Web3creators",
+      "role": "Senior Product Manager",
+      "location": " CA San Francisco US",
+      "variant": "cto",
+      "score": 23,
+      "scores": {
+        "cto": 23,
+        "regtech": 17,
+        "devrel": 23
+      },
+      "confidence": "medium",
+      "requirements_found": 7,
+      "matched": 1,
+      "gaps": [
+        "experience the opposite of it! by Chuck Cummings CFO @Bankless Consulting Next Stories from people working at Set No items found.",
+        "Are You Ready to take the leap?",
+        "Your submission has been received!",
+        "Something went wrong while submitting the form.",
+        "Contact us Made with 💜 in 🇫🇷 Made by Clément When applying, mention the word CANDYSHOP to show you read the job post completely."
+      ],
+      "proof_points": [
+        {
+          "requirement": "Get alerted of the best New Web 3 jobs 🔔 People signed up to our mailing list always receive the job offers we post here with a one week prior notice, so they are among the first to apply!",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        }
+      ],
+      "source_url": "https://web3.career/r/1kjMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Sun, 12 Jul 2026 06:21:34 +0100.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/1kjMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      }
+    },
+    {
+      "id": "golang-cz-senior-go-developer-web3--mriwc7oo",
+      "added": "2026-07-13",
+      "status": "new",
+      "company": "golang.cz",
+      "role": "Senior Go Developer (web3)",
+      "location": " United States Indiana US",
+      "variant": "cto",
+      "score": 52,
+      "scores": {
+        "cto": 52,
+        "regtech": 32,
+        "devrel": 44
+      },
+      "confidence": "high",
+      "requirements_found": 19,
+      "matched": 6,
+      "gaps": [
+        "experience in Go, backend development, Postgre",
+        "SQL, Git version control and Linux.",
+        "SQL, Redis Docker, Kubernetes, Grafana REST API, g",
+        "You will be using and actively contributing to many Open-Source projects, including: github.com/webrpc/webrpc, an alternative to g",
+        "RPC for web applications. github.com/go-chi/chi, one of the most popular HTTP routers in Go github.com/pressly/goose, the DB migration tool.",
+        "A suite of HTTP middlewares and tools for caching, HTTP rate limiting, tracing etc.",
+        "We're working on long-term projects for our customers mostly in USA and Canada.",
+        "We're contributing to Open-Source and attending local meetups."
+      ],
+      "proof_points": [
+        {
+          "requirement": "Note: You'll get extra points if you have worked with blockchain technology or Ethereum before.",
+          "evidence": "Solidity, EthersJS, Web3.js, ERC-20, ERC-721, IPFS, smart contract development, DeFi"
+        },
+        {
+          "requirement": "RPC, event queue, pub/sub Blockchain Ethereum, EVM Open-Source",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "We're designing software solutions and scalable web applications with a focus on clean architecture and modern tech stack.",
+          "evidence": "Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites: renderer hooks, game controller, replay API, unit templates, terrain predicates, native ESM (same source serves browser, Worker, and Node.js)"
+        },
+        {
+          "requirement": "Vojtech & the team When applying, mention the word CANDYSHOP to show you read the job post completely.",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "Tech Stack Go 1.22+ Postgre",
+          "evidence": "Core technical stack: UTXO scripting, Solidity, EthersJS, BitcoinJS, IPFS, MongoDB, Node.js"
+        }
+      ],
+      "source_url": "https://web3.career/r/2YjMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Sat, 11 Jul 2026 06:31:34 +0100.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/2YjMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      }
+    },
+    {
+      "id": "web3creators-full-stack-engineer-mriwc7ov",
+      "added": "2026-07-13",
+      "status": "low_match",
+      "company": "Web3creators",
+      "role": "Full Stack Engineer",
+      "location": " CA San Francisco US",
+      "variant": "cto",
+      "score": 21,
+      "scores": {
+        "cto": 21,
+        "regtech": 24,
+        "devrel": 21
+      },
+      "confidence": "medium",
+      "requirements_found": 9,
+      "matched": 1,
+      "gaps": [
+        "QL, Postgres, Redis Web3: Solidity Infrastructure: Heroku, AWS",
+        "experience the opposite of it! by Chuck Cummings CFO @Bankless Consulting Next Stories from people working at Set No items found.",
+        "Are You Ready to take the leap?",
+        "Your submission has been received!",
+        "Something went wrong while submitting the form.",
+        "Contact us Made with 💜 in 🇫🇷 Made by Clément When applying, mention the word CANDYSHOP to show you read the job post completely."
+      ],
+      "proof_points": [
+        {
+          "requirement": "Get alerted of the best New Web 3 jobs 🔔 People signed up to our mailing list always receive the job offers we post here with a one week prior notice, so they are among the first to apply!",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        }
+      ],
+      "source_url": "https://web3.career/r/1YjMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Sat, 11 Jul 2026 06:26:02 +0100.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/1YjMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      }
+    },
+    {
+      "id": "web3creators-backend-engineer-mriwc7oz",
+      "added": "2026-07-13",
+      "status": "low_match",
+      "company": "Web3creators",
+      "role": "Backend Engineer",
+      "location": " CA San Francisco US",
+      "variant": "cto",
+      "score": 21,
+      "scores": {
+        "cto": 21,
+        "regtech": 15,
+        "devrel": 21
+      },
+      "confidence": "medium",
+      "requirements_found": 9,
+      "matched": 1,
+      "gaps": [
+        "QL, Postgres, Redis Web3: Solidity Infrastructure: Heroku, AWS",
+        "experience the opposite of it! by Chuck Cummings CFO @Bankless Consulting Next Stories from people working at Set No items found.",
+        "Are You Ready to take the leap?",
+        "Your submission has been received!",
+        "Something went wrong while submitting the form.",
+        "Contact us Made with 💜 in 🇫🇷 Made by Clément When applying, mention the word CANDYSHOP to show you read the job post completely."
+      ],
+      "proof_points": [
+        {
+          "requirement": "Get alerted of the best New Web 3 jobs 🔔 People signed up to our mailing list always receive the job offers we post here with a one week prior notice, so they are among the first to apply!",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        }
+      ],
+      "source_url": "https://web3.career/r/0YjMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Sat, 11 Jul 2026 06:25:30 +0100.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/0YjMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      }
+    },
+    {
+      "id": "brg-senior-blockchain-consultant-mriwc7p2",
+      "added": "2026-07-13",
+      "status": "new",
+      "company": "BRG",
+      "role": "Senior Blockchain Consultant",
+      "location": " NY New York US",
+      "variant": "cto",
+      "score": 59,
+      "scores": {
+        "cto": 59,
+        "regtech": 52,
+        "devrel": 48
+      },
+      "confidence": "high",
+      "requirements_found": 17,
+      "matched": 9,
+      "gaps": [
+        "experience in a technology consulting or professional services environment.",
+        "Must be able to travel in this role (domestic and/or international) Additional",
+        "experience in Cryptography.",
+        "Experience in programming in SQL and Python"
+      ],
+      "proof_points": [
+        {
+          "requirement": "experience in blockchain analysis, including",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "experience with Bitcoin, Ethereum, and other digital assets.",
+          "evidence": "Deepened UTXO expertise across Schnorr signatures, Taproot, Ordinals, Inscriptions, and Runes"
+        },
+        {
+          "requirement": "experience with blockchain analytics tools, such as Chainalysis, TRM, Elliptic, and Solidus.",
+          "evidence": "UTXO scripting, Schnorr/Taproot, Ordinals, Inscriptions, Runes, BRC-20, BitcoinJS, digital assets"
+        },
+        {
+          "requirement": "Analytical mindset determines work ethics, efficient time management, and organizational",
+          "evidence": "Cross-functional team leadership, hiring, technical roadmap, stakeholder management, hands-on (P4→M3)"
+        },
+        {
+          "requirement": "master’s degree is certainly welcome.",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        }
+      ],
+      "source_url": "https://web3.career/r/zYjMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Sat, 11 Jul 2026 06:12:13 +0100.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/zYjMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      }
+    },
+    {
+      "id": "m0-product-manager-mriwc7p7",
+      "added": "2026-07-13",
+      "status": "new",
+      "company": "M0",
+      "role": "Product Manager",
+      "location": " NY New York US",
+      "variant": "regtech",
+      "score": 64,
+      "scores": {
+        "cto": 65,
+        "regtech": 64,
+        "devrel": 58
+      },
+      "confidence": "high",
+      "requirements_found": 25,
+      "matched": 11,
+      "gaps": [
+        "Define success metrics, instrument what matters, and use data to drive prioritization and trade-off decisions.",
+        "experience, with a proven track record of shipping products that made an impact in the market.",
+        "Equivalent entrepreneurial",
+        "experience is highly valued.",
+        "Demonstrated ability to scale a product's revenue — you've owned commercial outcomes and can point to products whose growth you were directly accountable for.",
+        "Excellent written and verbal communication",
+        "you know which metrics matter and why.",
+        "Genuine curiosity about crypto, stablecoins, and the future of money — or a clear track record of ramping quickly in complex new domains."
+      ],
+      "proof_points": [
+        {
+          "requirement": "Ship inside regulated, supervised environments, working through risks and constraints without losing momentum.",
+          "evidence": "Digital asset regulation, regulatory sandbox, Know Your Customer (KYC), Anti-Money Laundering (AML), Customer Due Diligence (CDD), custody compliance, transaction monitoring, financial crime prevention"
+        },
+        {
+          "requirement": "experience in payments, financial services, or building within regulated or supervised environments — you know how to ship when compliance, licensing, and risk shape the product.",
+          "evidence": "Founded and led Malaysia's foremost blockchain infrastructure and regulatory advisory practice for 13 years. R1 sat at the intersection of engineering, compliance, and policy, building production-grade digital asset systems for licensed operators while advising regulators on the frameworks that would govern them."
+        },
+        {
+          "requirement": "Collaborative communicator: You foster relationships with finance experts, blockchain specialists, engineers, and designers — and translate fluently between them.",
+          "evidence": "Advised on Project Castor — the Securities Commission's blockchain / Distributed Ledger Technology (DLT) blueprint that established Digital Asset Custodian requirements in Malaysian capital markets"
+        },
+        {
+          "requirement": "Strong technical fluency — you are a systems thinker and while you won't be expected to write code, you are able to hold your own in architectural discussions.",
+          "evidence": "Technical studio applying AI-augmented engineering to algorithmic decision systems, pattern recognition engines, and automated risk-scoring architectures. Demonstrates continued production delivery using the same methodology applicable to compliance automation and regulatory tooling."
+        },
+        {
+          "requirement": "Partner closely with engineering on technical trade-offs, sequencing, and scoping.",
+          "evidence": "Advised on Project Castor (2018) — the SC Malaysia blockchain blueprint that introduced Digital Asset Custodian regulation into capital markets. Technical implementation progressed from Dogecoin (distributed key-value storage) to Ethereum (ERC-20/721 token standards with programmable compliance)"
+        }
+      ],
+      "source_url": "https://web3.career/r/yYjMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Sat, 11 Jul 2026 06:12:02 +0100.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/yYjMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      }
+    },
+    {
+      "id": "ipolarity-crypto-digital-asset-custody-a-mriwc7pg",
+      "added": "2026-07-13",
+      "status": "new",
+      "company": "IPolarity",
+      "role": "Crypto Digital Asset Custody &amp; Blockchain Platforms",
+      "location": " United States Texas US",
+      "variant": "cto",
+      "score": 74,
+      "scores": {
+        "cto": 74,
+        "regtech": 70,
+        "devrel": 64
+      },
+      "confidence": "medium",
+      "requirements_found": 5,
+      "matched": 4,
+      "gaps": [
+        "experience designing secure, scalable, observable, and fault-tolerant distributed systems. * Hands-on"
+      ],
+      "proof_points": [
+        {
+          "requirement": "experience with blockchain or distributed ledger platforms, especially Layer 1 protocols and transaction lifecycles. *",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "Experience with crypto custody platforms, digital asset platforms, tokenization platforms, or blockchain infrastructure. *",
+          "evidence": "UTXO scripting, Schnorr/Taproot, Ordinals, Inscriptions, Runes, BRC-20, BitcoinJS, digital assets"
+        },
+        {
+          "requirement": "Experience applying AI tools to architecture, engineering, documentation, testing, and review workflows.",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "experience in software engineering, platform engineering, secure systems engineering, or architecture. * Strong",
+          "evidence": "Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites: renderer hooks, game controller, replay API, unit templates, terrain predicates, native ESM (same source serves browser, Worker, and Node.js)"
+        }
+      ],
+      "source_url": "https://web3.career/r/xYjMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Sat, 11 Jul 2026 06:10:21 +0100.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/xYjMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      }
+    },
+    {
+      "id": "ampstek-architect-crypto-digital-asset-c-mriwc7pl",
+      "added": "2026-07-13",
+      "status": "new",
+      "company": "Ampstek",
+      "role": "Architect Crypto Digital Asset Custody &amp; Blockchain Platforms",
+      "location": " TX Dallas US",
+      "variant": "regtech",
+      "score": 81,
+      "scores": {
+        "cto": 81,
+        "regtech": 81,
+        "devrel": 71
+      },
+      "confidence": "high",
+      "requirements_found": 26,
+      "matched": 18,
+      "gaps": [
+        "experience designing secure, scalable, observable, and fault-tolerant distributed systems.",
+        "experience in one or more languages such as Go, Java, Rust, Python, C, or C++.",
+        "Prior ownership of disaster recovery design, security runbooks, incident response processes, or post-incident remediation.",
+        "Experience applying AI tools to architecture, engineering, documentation, testing, and review workflows.",
+        "Cryptographic Key Management",
+        "Secure Distributed Systems",
+        "Resilience, Observability, and Incident Readiness ."
+      ],
+      "proof_points": [
+        {
+          "requirement": "experience with blockchain or distributed ledger platforms, especially Layer 1 protocols and transaction lifecycles.",
+          "evidence": "Delivered blockchain and distributed ledger training and advisory to DBS Bank (Singapore) and Baker Hostetler (USA, 5-day intensive programme) covering compliance strategy, transaction monitoring, and digital asset custody"
+        },
+        {
+          "requirement": "Experience with crypto custody platforms, digital asset platforms, tokenization platforms, or blockchain infrastructure.",
+          "evidence": "Advised on Project Castor (2018) — the SC Malaysia blockchain blueprint that introduced Digital Asset Custodian regulation into capital markets. Technical implementation progressed from Dogecoin (distributed key-value storage) to Ethereum (ERC-20/721 token standards with programmable compliance)"
+        },
+        {
+          "requirement": "Digital Asset Custody & Blockchain Infrastructure",
+          "evidence": "15 years building compliance-grade blockchain infrastructure while simultaneously shaping the regulatory frameworks that govern it. First company in SC Malaysia's digital asset sandbox; co-founded what is now Malaysia's largest Digital Asset Custodian by AUM; delivered to DBS Bank and Baker Hostetler. UK-based since 2025, seeking senior RegTech/FinTech roles where regulatory fluency and production engineering intersect."
+        },
+        {
+          "requirement": "Experience architecting backend services, APIs, data pipelines, blockchain infrastructure, and observability components.",
+          "evidence": "Blockchain / Distributed Ledger Technology (DLT), cryptographic infrastructure, smart contracts, passkeys/WebAuthN, AI-augmented workflows, on-chain risk analysis"
+        },
+        {
+          "requirement": "Experience with wallet architecture, custody workflows, transaction controls, and secure blockchain transaction processing.",
+          "evidence": "Advised on Project Castor — the Securities Commission's blockchain / Distributed Ledger Technology (DLT) blueprint that established Digital Asset Custodian requirements in Malaysian capital markets"
+        }
+      ],
+      "source_url": "https://web3.career/r/wYjMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Sat, 11 Jul 2026 06:08:10 +0100.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/wYjMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      }
+    },
+    {
+      "id": "coin-market-cap-ltd-java-engineer-contra-mriwc7pu",
+      "added": "2026-07-13",
+      "status": "low_match",
+      "company": "Coin Market Cap Ltd",
+      "role": "Java Engineer - Contractor",
+      "location": " Kuala Lumpur",
+      "variant": "cto",
+      "score": 47,
+      "scores": {
+        "cto": 47,
+        "regtech": 21,
+        "devrel": 44
+      },
+      "confidence": "high",
+      "requirements_found": 14,
+      "matched": 6,
+      "gaps": [
+        "Ensure the best possible performance, quality, and responsiveness of the applications 7.",
+        "Identify bottlenecks and bugs, and devise solutions to these problems 8.",
+        "8+ years of Online troubleshooting",
+        "Understand the underlying principles of commonly used middleware 3.",
+        "SQL/Kafka/xxl-job/K8s/Spring",
+        "Solid knowledge of event processing models, multi-threading, enterprise integration pattern, Web Service and REST 7.",
+        "Experience in Reactor and Microservice would be an added value 8."
+      ],
+      "proof_points": [
+        {
+          "requirement": "Review, test, and verify code for adherence to quality and security standards 6.",
+          "evidence": "Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems"
+        },
+        {
+          "requirement": "Design, build, and maintain efficient, reusable, and reliable Java code 5.",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "experience in software design, architecture, development integration 6.",
+          "evidence": "Designed and deployed autonomous agent orchestration: Researcher and Builder routines on cloud infrastructure manage a 6-repo production pipeline via label-triggered coordination. Research agents investigate and verify sources; Builder agents branch, implement, test, and merge. The system ships rulebooks, resolves issues, and expands content continuously without a terminal open"
+        },
+        {
+          "requirement": "Help maintain code quality and organization",
+          "evidence": "Built and deployed the first board game MCP server ( tools.moddable.games ): 16 AI-callable tools across 2 engines, Cloudflare Worker, MCP + REST + OpenAPI + llms.txt"
+        },
+        {
+          "requirement": "experience with full lifecycle of project development for Java applications from similar industry 2.",
+          "evidence": "Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites: renderer hooks, game controller, replay API, unit templates, terrain predicates, native ESM (same source serves browser, Worker, and Node.js)"
+        }
+      ],
+      "source_url": "https://web3.career/r/1MjMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Fri, 10 Jul 2026 07:01:16 +0100.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/1MjMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      }
+    },
+    {
+      "id": "ampstek-solidity-engineer-only-us-citize-mriwc7py",
+      "added": "2026-07-13",
+      "status": "new",
+      "company": "Ampstek",
+      "role": "Solidity Engineer || Only US Citizen and Green Card || Tampa, FL/ Jersey City, NJ/ Texas City, TX (Hybrid)",
+      "location": " FL Tampa US",
+      "variant": "cto",
+      "score": 81,
+      "scores": {
+        "cto": 81,
+        "regtech": 62,
+        "devrel": 73
+      },
+      "confidence": "high",
+      "requirements_found": 27,
+      "matched": 15,
+      "gaps": [
+        "Rigorously review code to uphold standards of quality and functional robustness.",
+        "Troubleshoot and resolve issues in live smart contracts.",
+        "Proficiency with: o Truffle o Hardhat o Foundry o Remix",
+        "Strong understanding of: o Software development best practices o Data structures o Algorithms o Development methodologies Education & Professional",
+        "Excellent debugging and troubleshooting",
+        "Strong written and verbal communication",
+        "Strong English communication",
+        "Experience in banking, finance, or trading domains with knowledge of financial instruments and systems."
+      ],
+      "proof_points": [
+        {
+          "requirement": "you will play a pivotal part in developing and deploying smart contracts for our blockchain projects, ensuring the secure, efficient, and innovative application of decentralized technology.",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "Stay current with cryptographic and blockchain advancements to proactively address security threats.",
+          "evidence": "Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems"
+        },
+        {
+          "requirement": "Provide blockchain and smart contract expertise to both technical and non-technical team members.",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "Stay updated with the latest Blockchain ecosystem developments and adapt solutions accordingly.",
+          "evidence": "UTXO scripting, Schnorr/Taproot, Ordinals, Inscriptions, Runes, BRC-20, BitcoinJS, digital assets"
+        },
+        {
+          "requirement": "Collaborate with frontend and backend developers to integrate smart contracts with web applications.",
+          "evidence": "Developed 30+ Ethereum smart contracts for BloqVerse (~20 upgradeable, ~10 immutable) — fully serverless architecture with IPFS-served frontend and no traditional database"
+        }
+      ],
+      "source_url": "https://web3.career/r/0MjMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Fri, 10 Jul 2026 06:23:03 +0100.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/0MjMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      }
+    },
+    {
+      "id": "axg-solowin-holdings-technical-product-l-mriwc7q6",
+      "added": "2026-07-13",
+      "status": "new",
+      "company": "AXG (Solowin Holdings)",
+      "role": "Technical Product Lead – Stablecoin, Payment &amp; Onchain FX",
+      "location": " NY New York US",
+      "variant": "cto",
+      "score": 69,
+      "scores": {
+        "cto": 69,
+        "regtech": 68,
+        "devrel": 67
+      },
+      "confidence": "high",
+      "requirements_found": 18,
+      "matched": 12,
+      "gaps": [
+        "Experience with cross-border payments, settlement infrastructure, liquidity platforms, or tokenised assets. 7.Understanding of De",
+        "Experience integrating payment rails such as SWIFT, ACH, Fed",
+        "Experience working with regulated financial products and institutional customers. 5.",
+        "Fi liquidity routing, onchain financial products, or tokenised real-world assets. 6.",
+        "Experience in fast-paced, high-growth technology environments.",
+        "When applying, mention the word CANDYSHOP to show you read the job post completely."
+      ],
+      "proof_points": [
+        {
+          "requirement": "experience in technical product, product management, or product leadership roles across stablecoins, digital assets, blockchain, payments, or De",
+          "evidence": "UTXO scripting, Schnorr/Taproot, Ordinals, Inscriptions, Runes, BRC-20, BitcoinJS, digital assets"
+        },
+        {
+          "requirement": "Responsibilities 1.Product Leadership & System Design ·Own product vision, roadmap,",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "experience with custody, wallet infrastructure, MPC/HSM, and digital asset security systems. 6.",
+          "evidence": "Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems"
+        },
+        {
+          "requirement": "Experience with AI-powered workflows, automation, or agentic AI solutions is a plus. 11.Strong ownership, communication, execution, and stakeholder management",
+          "evidence": "Cross-functional team leadership, hiring, technical roadmap, stakeholder management, hands-on (P4→M3)"
+        },
+        {
+          "requirement": "Fi, and onchain FX products.",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        }
+      ],
+      "source_url": "https://web3.career/r/zMjMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Fri, 10 Jul 2026 06:19:20 +0100.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/zMjMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      }
+    },
+    {
+      "id": "jpmorganchase-investment-banking-equity--mriwc7qd",
+      "added": "2026-07-13",
+      "status": "new",
+      "company": "JPMorganChase",
+      "role": "Investment Banking Equity Capital Markets [Multiple Positions Available]",
+      "location": " NY New York US",
+      "variant": "regtech",
+      "score": 57,
+      "scores": {
+        "cto": 45,
+        "regtech": 57,
+        "devrel": 44
+      },
+      "confidence": "high",
+      "requirements_found": 15,
+      "matched": 9,
+      "gaps": [
+        "Leveraging Bloomberg, Fact",
+        "Set, Dealogic, CMG, Refinitiv, and Pitch",
+        "Book to extract market data, benchmark peers, target investors, analyze issuances, and track league tables",
+        "Controlling the lifecycle of investment transactions using deal and operational transaction platforms including P1.",
+        "Job Location: 270 Park Ave., New York, NY 10179.",
+        "This position requires up to 10% domestic and 5% international travel required to JPMC sites."
+      ],
+      "proof_points": [
+        {
+          "requirement": "Applying US equity capital markets regulatory frameworks, including SEC registration, FINRA rules, Reg M stabilization, and compliance for Fin",
+          "evidence": "Founded and led Malaysia's foremost blockchain infrastructure and regulatory advisory practice for 13 years. R1 sat at the intersection of engineering, compliance, and policy, building production-grade digital asset systems for licensed operators while advising regulators on the frameworks that would govern them."
+        },
+        {
+          "requirement": "Tech and Digital Asset issuers",
+          "evidence": "Advised on Project Castor — the Securities Commission's blockchain / Distributed Ledger Technology (DLT) blueprint that established Digital Asset Custodian requirements in Malaysian capital markets"
+        },
+        {
+          "requirement": "experience required: Bachelor's degree in Economics, Management, Accounting, Finance, Business, or related field of study. plus three (3) years of",
+          "evidence": "Co-founded, funded, and architected CoKeeps — now Malaysia's largest Digital Asset Custodian by AUM — investing two years of R1 capital into product development plus three operational years pending regulatory approval"
+        },
+        {
+          "requirement": "experience in the job offered or as Investment Banking Equity Capital Markets, Corporate and Investment Bank Analyst, or related occupation.",
+          "evidence": "Founded the Blockchain Embassy of Asia — Malaysia's first registered blockchain consortium with members from Maybank, RHB, Capital Bay, and ATA Plus"
+        },
+        {
+          "requirement": "Tech, and financial institutions",
+          "evidence": "Registered HRDF Trainer — designed and delivered multi-day blockchain compliance workshops for financial institutions"
+        }
+      ],
+      "source_url": "https://web3.career/r/yMjMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Fri, 10 Jul 2026 06:13:49 +0100.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/yMjMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      }
+    },
+    {
+      "id": "nexus-director-of-engineering-usa--mriwc7qi",
+      "added": "2026-07-13",
+      "status": "new",
+      "company": "Nexus",
+      "role": "Director of Engineering (USA)",
+      "location": " United States",
+      "variant": "cto",
+      "score": 80,
+      "scores": {
+        "cto": 80,
+        "regtech": 66,
+        "devrel": 70
+      },
+      "confidence": "high",
+      "requirements_found": 39,
+      "matched": 16,
+      "gaps": [
+        "Location: Remote Type: Full-time The Role",
+        "You’ll set direction and stay hands-on in the highest-leverage code.",
+        "Lead the engineering org — senior engineers plus pods — managing timelines, roadmaps, and resourcing.",
+        "drive urgency and high-frequency iteration.",
+        "Make the org the most productive and efficient it can be.",
+        "Manage an international, distributed workforce.",
+        "Correctness and performance should be continuously provable, not assumed.",
+        "Communicate via design docs, RFCs, and post-mortems."
+      ],
+      "proof_points": [
+        {
+          "requirement": "Design team structures and incentives with the CEO and exec team.",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "Architecture chops with sound correctness / latency / throughput / operability trade-offs.",
+          "evidence": "Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites: renderer hooks, game controller, replay API, unit templates, terrain predicates, native ESM (same source serves browser, Worker, and Node.js)"
+        },
+        {
+          "requirement": "Infrastructure: Google Cloud (GCE/GCP), containerized services, modern CI/CD, Terraform/Pulumi, Prometheus/Grafana.",
+          "evidence": "Docker, CI/CD, Cloudflare Workers, LLM-augmented engineering, AI systems"
+        },
+        {
+          "requirement": "experienced engineering leaders and rising leaders with outsized leadership ambition and the trajectory to back it.",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "8+ years building production software, including",
+          "evidence": "Founded and operated Malaysia's leading blockchain infrastructure and advisory firm for 13 years. Built and shipped production products across KYC, AML, digital custody, and wallet infrastructure while simultaneously shaping national regulatory policy."
+        }
+      ],
+      "source_url": "https://web3.career/r/xEjMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Thu, 9 Jul 2026 19:52:45 +0100.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/xEjMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      }
+    },
+    {
+      "id": "chainalysis-channel-partner-manager-amer-mriwc7qr",
+      "added": "2026-07-13",
+      "status": "new",
+      "company": "Chainalysis",
+      "role": "Channel Partner Manager, AMER",
+      "location": " New York New York City United States",
+      "variant": "regtech",
+      "score": 79,
+      "scores": {
+        "cto": 79,
+        "regtech": 79,
+        "devrel": 78
+      },
+      "confidence": "high",
+      "requirements_found": 38,
+      "matched": 17,
+      "gaps": [
+        "Ops, Marketing, and Partnerships to align partners to the right accounts, opportunities, and go-to-market motions in-region.",
+        "Track partner activity and outcomes in partnership with Rev",
+        "experience managing channel, reseller, MSP, VAR, and SI relationships at a B2B technology or services company.",
+        "Experience driving measurable business outcomes through partners, including partner-sourced pipeline Strong cross-functional collaboration",
+        "experience working closely with sales, marketing, Rev",
+        "Strong commercial judgment and execution",
+        "Experience working in the US or in a multi-country region with different market dynamics, sales motions, and partner maturity levels.",
+        "Experience with PRM tools, deal registration processes, account mapping, and partner performance tracking."
+      ],
+      "proof_points": [
+        {
+          "requirement": "Background in crypto, financial services, fintech, and/or compliance software.",
+          "evidence": "Digital asset regulation, regulatory sandbox, Know Your Customer (KYC), Anti-Money Laundering (AML), Customer Due Diligence (CDD), custody compliance, transaction monitoring, financial crime prevention"
+        },
+        {
+          "requirement": "Experience at a consulting/services firm advising clients on digital asset initiatives",
+          "evidence": "Founded and led Malaysia's foremost blockchain infrastructure and regulatory advisory practice for 13 years. R1 sat at the intersection of engineering, compliance, and policy, building production-grade digital asset systems for licensed operators while advising regulators on the frameworks that would govern them."
+        },
+        {
+          "requirement": "About Chainalysis Chainalysis is the blockchain data platform, making it easy to connect the movement of digital assets to real-world services.",
+          "evidence": "First company admitted to the Securities Commission Malaysia (SC) regulatory sandbox for digital assets and cryptocurrency"
+        },
+        {
+          "requirement": "Our mission is to build trust in blockchains, blending safety and security with an unwavering commitment to growth and innovation.",
+          "evidence": "Advised on Project Castor — the Securities Commission's blockchain / Distributed Ledger Technology (DLT) blueprint that established Digital Asset Custodian requirements in Malaysian capital markets"
+        },
+        {
+          "requirement": "Support internal field enablement in AMER so sellers understand when and how to engage partners, the relevant program guidelines, and how to work effectively with indirect routes to market.",
+          "evidence": "Engaged directly with regulators to demonstrate technical compliance with emerging distributed ledger frameworks"
+        }
+      ],
+      "source_url": "https://web3.career/r/4kTMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Thu, 9 Jul 2026 19:40:10 +0100.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/4kTMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      }
+    },
+    {
+      "id": "chainalysis-senior-grc-engineer-trust-mriwc7r2",
+      "added": "2026-07-13",
+      "status": "new",
+      "company": "Chainalysis",
+      "role": "Senior GRC Engineer, Trust",
+      "location": " New York New York City United States",
+      "variant": "regtech",
+      "score": 79,
+      "scores": {
+        "cto": 80,
+        "regtech": 79,
+        "devrel": 78
+      },
+      "confidence": "high",
+      "requirements_found": 41,
+      "matched": 19,
+      "gaps": [
+        "Help shape GRC automation and stronger operating rhythms across the Trust organization.",
+        "Built repeatable evidence collection, control testing, or remediation workflows that improved audit readiness and reduced manual work.",
+        "The ability to translate customer, audit, or internal control",
+        "Strong written and verbal communication",
+        "A track record of influencing cross-functional work, collaborating broadly, and providing guidance in a senior IC role.",
+        "A practical, systems-minded approach to improving controls without creating unnecessary friction for the business.",
+        "Experience with GRC automation or workflow tooling that improves evidence collection, remediation tracking, or control monitoring.",
+        "C) Vanta Trust Center workflows Jira Okta Please note: This position is ineligible for visa sponsorship."
+      ],
+      "proof_points": [
+        {
+          "requirement": "In this role, you’ll: Partner with Product, R&D Engineering, Security Engineering and adjacent teams to implement and operationalize security and compliance controls across Chainalysis products.",
+          "evidence": "Digital asset regulation, regulatory sandbox, Know Your Customer (KYC), Anti-Money Laundering (AML), Customer Due Diligence (CDD), custody compliance, transaction monitoring, financial crime prevention"
+        },
+        {
+          "requirement": "About Chainalysis Chainalysis is the blockchain data platform, making it easy to connect the movement of digital assets to real-world services.",
+          "evidence": "Delivered blockchain and distributed ledger training and advisory to DBS Bank (Singapore) and Baker Hostetler (USA, 5-day intensive programme) covering compliance strategy, transaction monitoring, and digital asset custody"
+        },
+        {
+          "requirement": "Exposure to blockchain, fintech, or other high-trust environments where customer assurance and technical controls are tightly coupled.",
+          "evidence": "Digital asset custody, RegTech, cryptocurrency compliance, Islamic Finance / FinTech, payments, identity, DeFi (Decentralized Finance), Virtual Asset Service Providers (VASPs)"
+        },
+        {
+          "requirement": "Drive continuous control improvement across a segmented product suite, including pass-through security and compliance",
+          "evidence": "Founded and led Malaysia's foremost blockchain infrastructure and regulatory advisory practice for 13 years. R1 sat at the intersection of engineering, compliance, and policy, building production-grade digital asset systems for licensed operators while advising regulators on the frameworks that would govern them."
+        },
+        {
+          "requirement": "Our mission is to build trust in blockchains, blending safety and security with an unwavering commitment to growth and innovation.",
+          "evidence": "Advised on Project Castor — the Securities Commission's blockchain / Distributed Ledger Technology (DLT) blueprint that established Digital Asset Custodian requirements in Malaysian capital markets"
+        }
+      ],
+      "source_url": "https://web3.career/r/3kTMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Thu, 9 Jul 2026 19:39:58 +0100.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/3kTMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      }
+    },
+    {
+      "id": "chainalysis-senior-intelligence-analyst-mriwc7rg",
+      "added": "2026-07-13",
+      "status": "new",
+      "company": "Chainalysis",
+      "role": "Senior Intelligence Analyst",
+      "location": " North Carolina United States",
+      "variant": "cto",
+      "score": 63,
+      "scores": {
+        "cto": 63,
+        "regtech": 49,
+        "devrel": 58
+      },
+      "confidence": "high",
+      "requirements_found": 26,
+      "matched": 10,
+      "gaps": [
+        "Strong research instincts and analytic rigor.",
+        "Adaptability — comfortable with ambiguity and energized by a fast-moving space",
+        "the threats, the tech, and our tooling are always evolving.",
+        "Excellent writing and communication.",
+        "AI at Chainalysis AI is not a feature at Chainalysis - it is a new way of working.",
+        "AI fluency is tied directly to how we measure performance and how we plan to win.",
+        "There is no substitute for your own curiosity.",
+        "We are using it to do what was never possible before."
+      ],
+      "proof_points": [
+        {
+          "requirement": "About Chainalysis Chainalysis is the blockchain data platform, making it easy to connect the movement of digital assets to real-world services.",
+          "evidence": "UTXO scripting, Schnorr/Taproot, Ordinals, Inscriptions, Runes, BRC-20, BitcoinJS, digital assets"
+        },
+        {
+          "requirement": "Initiative — you set the agenda: you see what the team should be working on and drive it.",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "Our mission is to build trust in blockchains, blending safety and security with an unwavering commitment to growth and innovation.",
+          "evidence": "Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems"
+        },
+        {
+          "requirement": "This is a demanding, high-bar role, and you raise everyone around you.",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "AI-forward instincts — you build automation to scale your work and others’.",
+          "evidence": "Built and deployed the first board game MCP server ( tools.moddable.games ): 16 AI-callable tools across 2 engines, Cloudflare Worker, MCP + REST + OpenAPI + llms.txt"
+        }
+      ],
+      "source_url": "https://web3.career/r/2kTMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Thu, 9 Jul 2026 19:39:38 +0100.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/2kTMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      }
+    },
+    {
+      "id": "blockdaemon-program-manager-mriwc7rn",
+      "added": "2026-07-13",
+      "status": "new",
+      "company": "Blockdaemon",
+      "role": "Program Manager",
+      "location": " USA",
+      "variant": "cto",
+      "score": 61,
+      "scores": {
+        "cto": 61,
+        "regtech": 62,
+        "devrel": 55
+      },
+      "confidence": "high",
+      "requirements_found": 16,
+      "matched": 10,
+      "gaps": [
+        "This is not a roadmap or backlog-prioritization role.",
+        "proactively drive execution, unblock work, and escalate appropriately when engagement health is at risk.",
+        "experience, with a track record of managing large, complex, external-facing engagements (ideally with enterprise, institutional, or financial services customers).",
+        "Exceptional executive communication",
+        "comfortable presenting to senior stakeholders, including C-level executives, and producing polished reporting such as status decks, executive summaries, and steering committee materials.",
+        "Strong track record of structuring ambiguous, complex engagements into clear plans, workstreams, and reporting cadences."
+      ],
+      "proof_points": [
+        {
+          "requirement": "You won't be running sprint ceremonies for an internal product team.",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "Produce clear, executive-ready reporting for both internal leadership and customer executives, translating technical and operational detail into business-relevant narratives.",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "6+ years of program or project management",
+          "evidence": "Cross-functional team leadership, hiring, technical roadmap, stakeholder management, hands-on (P4→M3)"
+        },
+        {
+          "requirement": "Build and maintain detailed project plans, tracking scope, milestones, dependencies, RAID logs, and owners",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "Proven ability to build and drive detailed project plans and hold cross-functional teams accountable to them, without formal authority over those teams.",
+          "evidence": "Designed and deployed autonomous agent orchestration: Researcher and Builder routines on cloud infrastructure manage a 6-repo production pipeline via label-triggered coordination. Research agents investigate and verify sources; Builder agents branch, implement, test, and merge. The system ships rulebooks, resolves issues, and expands content continuously without a terminal open"
+        }
+      ],
+      "source_url": "https://web3.career/r/1kTMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Thu, 9 Jul 2026 19:36:53 +0100.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/1kTMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      }
+    },
+    {
+      "id": "certik-apac-policy-and-regulatory-strate-mriwc7ru",
+      "added": "2026-07-13",
+      "status": "new",
+      "company": "CertiK",
+      "role": "APAC Policy and Regulatory Strategist",
+      "location": " Singapore / HK",
+      "variant": "regtech",
+      "score": 78,
+      "scores": {
+        "cto": 68,
+        "regtech": 78,
+        "devrel": 64
+      },
+      "confidence": "high",
+      "requirements_found": 29,
+      "matched": 14,
+      "gaps": [
+        "You are a precise and persuasive writer, rigorous about detail, and comfortable operating in a fast-moving environment where the rules are still being written.",
+        "You move fluently between close analysis of a legal framework, structured mapping of a competitive landscape, and the disciplined capture of discussions that inform strategy.",
+        "Consultation responses and submissions.",
+        "Research and help draft Certi",
+        "K's responses to public consultations and requests for comment from regulators.",
+        "Law enforcement and capacity-building support.",
+        "Market and go-to-market research.",
+        "K understand regional needs and prioritize its efforts."
+      ],
+      "proof_points": [
+        {
+          "requirement": "experience in policy, regulatory affairs, financial regulation, management/strategy consulting, a think tank, a law firm, a regulator or public-sector body, or a compliance function.",
+          "evidence": "Digital asset regulation, regulatory sandbox, Know Your Customer (KYC), Anti-Money Laundering (AML), Customer Due Diligence (CDD), custody compliance, transaction monitoring, financial crime prevention"
+        },
+        {
+          "requirement": "Produce clear, well-sourced briefs, memos, and explainers that translate complex regulatory developments into actionable insight for stakeholders.",
+          "evidence": "15 years building compliance-grade blockchain infrastructure while simultaneously shaping the regulatory frameworks that govern it. First company in SC Malaysia's digital asset sandbox; co-founded what is now Malaysia's largest Digital Asset Custodian by AUM; delivered to DBS Bank and Baker Hostetler. UK-based since 2025, seeking senior RegTech/FinTech roles where regulatory fluency and production engineering intersect."
+        },
+        {
+          "requirement": "A solid working understanding of financial regulation and/or the digital asset and blockchain landscape.",
+          "evidence": "Advised on Project Castor — the Securities Commission's blockchain / Distributed Ledger Technology (DLT) blueprint that established Digital Asset Custodian requirements in Malaysian capital markets"
+        },
+        {
+          "requirement": "Working knowledge of blockchain, on-chain analytics, AML/CFT, or virtual asset compliance concepts.",
+          "evidence": "Digital asset custody, RegTech, cryptocurrency compliance, Islamic Finance / FinTech, payments, identity, DeFi (Decentralized Finance), Virtual Asset Service Providers (VASPs)"
+        },
+        {
+          "requirement": "Responsibilities Regulatory tracking and horizon scanning.",
+          "evidence": "Founded and led Malaysia's foremost blockchain infrastructure and regulatory advisory practice for 13 years. R1 sat at the intersection of engineering, compliance, and policy, building production-grade digital asset systems for licensed operators while advising regulators on the frameworks that would govern them."
+        }
+      ],
+      "source_url": "https://web3.career/r/2cTMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Thu, 9 Jul 2026 14:01:43 +0100.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/2cTMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      }
+    },
+    {
+      "id": "crossmint-forward-deployed-engineer-buen-mriwc7s3",
+      "added": "2026-07-13",
+      "status": "new",
+      "company": "Crossmint",
+      "role": "Forward Deployed Engineer (Buenos Aires)",
+      "location": " Buenos Aires, Argentina",
+      "variant": "regtech",
+      "score": 64,
+      "scores": {
+        "cto": 76,
+        "regtech": 64,
+        "devrel": 72
+      },
+      "confidence": "high",
+      "requirements_found": 31,
+      "matched": 11,
+      "gaps": [
+        "Script, Python, Go, or similar languages.",
+        "Designing and debugging REST APIs, authentication flows, and cloud-native applications.",
+        "Knowing when to prototype quickly and when to build for long-term reliability.",
+        "Fluent professional English, written and spoken.",
+        "experience as a Forward Deployed Engineer, Partner Engineer, Sales Engineer, or Technical Solutions Engineer in enterprise Saa",
+        "experience in agentic commerce and AI-agent payment frameworks.",
+        "Experience contributing to Web3 open-source projects or agentic systems.",
+        "Experience contributing to SDKs, middleware, or infrastructure products used by external developers."
+      ],
+      "proof_points": [
+        {
+          "requirement": "Working with blockchain technologies (Ethereum, Solana, Stellar, smart wallets, smart contracts, or digital assets).",
+          "evidence": "Delivered blockchain and distributed ledger training and advisory to DBS Bank (Singapore) and Baker Hostetler (USA, 5-day intensive programme) covering compliance strategy, transaction monitoring, and digital asset custody"
+        },
+        {
+          "requirement": "S, fintech, or crypto.",
+          "evidence": "Digital asset regulation, regulatory sandbox, Know Your Customer (KYC), Anti-Money Laundering (AML), Customer Due Diligence (CDD), custody compliance, transaction monitoring, financial crime prevention"
+        },
+        {
+          "requirement": "Troubleshooting production systems across multiple services and infrastructure layers.",
+          "evidence": "Provided infrastructure for the world's first bank-backed blockchain hackathon (DBS Bank Singapore); systems handled over 1 million API requests across the event"
+        },
+        {
+          "requirement": "Explaining complex technical concepts clearly to both engineers and technical stakeholders.",
+          "evidence": "Technical studio applying AI-augmented engineering to algorithmic decision systems, pattern recognition engines, and automated risk-scoring architectures. Demonstrates continued production delivery using the same methodology applicable to compliance automation and regulatory tooling."
+        },
+        {
+          "requirement": "equal opportunity employer, and this policy applies to all employment practices within our organization.",
+          "evidence": "Founded and led Malaysia's foremost blockchain infrastructure and regulatory advisory practice for 13 years. R1 sat at the intersection of engineering, compliance, and policy, building production-grade digital asset systems for licensed operators while advising regulators on the frameworks that would govern them."
+        }
+      ],
+      "source_url": "https://web3.career/r/wcTMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Thu, 9 Jul 2026 09:30:53 +0100.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/wcTMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      }
+    },
+    {
+      "id": "quotacom-founding-engineer-cto-mriwdqdf",
+      "added": "2026-07-13",
+      "status": "new",
+      "company": "Quotacom",
+      "role": "Founding Engineer / CTO",
+      "location": "United Kingdom",
+      "variant": "cto",
+      "score": 73,
+      "scores": {
+        "cto": 73,
+        "regtech": 48,
+        "devrel": 59
+      },
+      "confidence": "high",
+      "requirements_found": 22,
+      "matched": 13,
+      "gaps": [
+        "For the first 12–16 months,",
+        "For the first 12–16 months,",
+        "you will be the sole technical powerhouse, writing the code and architecting the backend.",
+        "API.AI/ML Implementation: Strong, hands-on",
+        "Experience with data-heavy or industry intelligence platforms, frontend capabilities (React), or prior technical co-founder"
+      ],
+      "proof_points": [
+        {
+          "requirement": "experience integrating LLMs, managing data pipelines, and building data-heavy product features.Cloud Architecture: Production",
+          "evidence": "Designed and deployed autonomous agent orchestration: Researcher and Builder routines on cloud infrastructure manage a 6-repo production pipeline via label-triggered coordination. Research agents investigate and verify sources; Builder agents branch, implement, test, and merge. The system ships rulebooks, resolves issues, and expands content continuously without a terminal open"
+        },
+        {
+          "requirement": "experience integrating LLMs, managing data pipelines, and building data-heavy product features.Cloud Architecture: Production",
+          "evidence": "Designed and shipped multiple production systems: KYC/AML pipelines, blockchain wallets, learning management, and digital identity platforms — full-stack from protocol to UI"
+        },
+        {
+          "requirement": "you will transition into a leadership role, hiring and directing your own world-class engineering team.",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "We need a finisher who ships production-grade code, not an abstract planner.Expert Python Backend Engineer: Proven track record of building scalable REST APIs and microservices using Python and Fast",
+          "evidence": "Shipped 535 commits across 10+ repositories in 16 days using LLM-augmented development. Demonstrates the methodology's viability for startup-speed delivery at architecture quality"
+        },
+        {
+          "requirement": "experience with cloud infrastructure, hosting, deployment, and cost management (AWS, GCP, or Azure).Data Expertise: Deep understanding of relational and No",
+          "evidence": "Docker, CI/CD, Cloudflare Workers, LLM-augmented engineering, AI systems"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4428237886",
+      "source": "linkedin",
+      "linkedin_job_id": "4428237886",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: unknown.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4428237886",
+        "contact_email": null,
+        "linkedin_job_id": "4428237886",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      }
+    },
+    {
+      "id": "jobgether-cto-mriwdqdh",
+      "added": "2026-07-13",
+      "status": "new",
+      "company": "Jobgether",
+      "role": "CTO",
+      "location": "United Kingdom",
+      "variant": "cto",
+      "score": 68,
+      "scores": {
+        "cto": 68,
+        "regtech": 50,
+        "devrel": 51
+      },
+      "confidence": "high",
+      "requirements_found": 29,
+      "matched": 12,
+      "gaps": [
+        "As Chief Technology Officer,",
+        "Working in a fully remote and globally distributed environment,",
+        "Experience with multiple programming languages is highly",
+        "This processing is based on legitimate interest and pre-contractual measures under applicable data protection laws (including GDPR).",
+        "Final hiring decisions are ultimately made by humans.",
+        "If you would like more information about how your data is processed, please contact us.",
+        "This position is listed on behalf of a partner company, who manages all applications and next steps.",
+        "experienced technology leader to shape the future of an ambitious, open-source virtual world built on decentralized technologies."
+      ],
+      "proof_points": [
+        {
+          "requirement": "Experience overseeing infrastructure, system administration, application security, and production operations.Exceptional leadership, communication, and decision-making",
+          "evidence": "Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems"
+        },
+        {
+          "requirement": "The final decision and next steps (interviews, assessments) are managed by their internal team.We appreciate your interest and wish you the best!",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "Experience overseeing infrastructure, system administration, application security, and production operations.Exceptional leadership, communication, and decision-making",
+          "evidence": "Founded and operated Malaysia's leading blockchain infrastructure and advisory firm for 13 years. Built and shipped production products across KYC, AML, digital custody, and wallet infrastructure while simultaneously shaping national regulatory policy."
+        },
+        {
+          "requirement": "experienced technology leader to shape the future of an ambitious, open-source virtual world built on decentralized technologies.",
+          "evidence": "Built open-source blockchain wallet and SDK infrastructure — powering the world's first bank-backed blockchain hackathon (DBS Bank Singapore), processing 1M+ API requests; 7 of 15 teams built on our stack"
+        },
+        {
+          "requirement": "experience building a custom game engine or contributing to advanced game engine development is considered a strong advantage.",
+          "evidence": "Proved the architecture by building a second product (Dungeon Chess) entirely on the framework's consumer APIs. Zero engine forks, zero special-casing. 4 factions, custom rendering, AI opponents"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4436086498",
+      "source": "linkedin",
+      "linkedin_job_id": "4436086498",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: unknown.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4436086498",
+        "contact_email": null,
+        "linkedin_job_id": "4436086498",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      }
+    },
+    {
+      "id": "jobgether-deputy-cto-ai-product--mriwdqdi",
+      "added": "2026-07-13",
+      "status": "new",
+      "company": "Jobgether",
+      "role": "Deputy CTO (AI Product)",
+      "location": "United Kingdom",
+      "variant": "cto",
+      "score": 76,
+      "scores": {
+        "cto": 76,
+        "regtech": 51,
+        "devrel": 49
+      },
+      "confidence": "high",
+      "requirements_found": 29,
+      "matched": 14,
+      "gaps": [
+        "Operating in a fast-moving, globally distributed environment,",
+        "you will ensure alignment across engineering, product, and infrastructure.",
+        "The final decision and next steps (interviews, assessments) are managed by their internal team.We appreciate your interest and wish you the best!",
+        "This processing is based on legitimate interest and pre-contractual measures under applicable data protection laws (including GDPR).",
+        "Final hiring decisions are ultimately made by humans.",
+        "If you would like more information about how your data is processed, please contact us.",
+        "This position is listed on behalf of a partner company, who manages all applications and next steps.",
+        "Operating in a fast-moving, globally distributed environment,"
+      ],
+      "proof_points": [
+        {
+          "requirement": "The role combines strategic ownership of system architecture with the ability to prototype and ship code when needed.",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "Strong backend engineering background with deep understanding of system architecture",
+          "evidence": "Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites: renderer hooks, game controller, replay API, unit templates, terrain predicates, native ESM (same source serves browser, Worker, and Node.js)"
+        },
+        {
+          "requirement": "You will act as the right hand to the CTO, helping steer backend and ML teams while remaining deeply hands-on in development and delivery.",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "You will translate complex business challenges into scalable technical solutions and lead small, focused teams toward fast execution.",
+          "evidence": "Cross-functional team leadership, hiring, technical roadmap, stakeholder management, hands-on (P4→M3)"
+        },
+        {
+          "requirement": "You will act as the right hand to the CTO, helping steer backend and ML teams while remaining deeply hands-on in development and delivery.",
+          "evidence": "Shipped 535 commits across 10+ repositories in 16 days using LLM-augmented development. Demonstrates the methodology's viability for startup-speed delivery at architecture quality"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4432353188",
+      "source": "linkedin",
+      "linkedin_job_id": "4432353188",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: unknown.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4432353188",
+        "contact_email": null,
+        "linkedin_job_id": "4432353188",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      }
+    },
+    {
+      "id": "hazelcast-svp-engineering-mriwdqdi",
+      "added": "2026-07-13",
+      "status": "new",
+      "company": "Hazelcast",
+      "role": "SVP Engineering",
+      "location": "United Kingdom",
+      "variant": "devrel",
+      "score": 80,
+      "scores": {
+        "cto": 78,
+        "regtech": 78,
+        "devrel": 80
+      },
+      "confidence": "high",
+      "requirements_found": 58,
+      "matched": 22,
+      "gaps": [
+        "We are seeking a visionary, inspirational Senior Vice President of Engineering to lead and scale our global engineering function.",
+        "Talent Acquisition & Leadership Development: Lead global headcount planning to ensure a right-sized, highly skilled, and diverse engineering organisation.",
+        "Build a robust leadership bench and succession plan for critical technical and managerial roles.",
+        "Executive Client Sponsorship: Serve as an executive sponsor for key enterprise accounts.",
+        "Partner with Sales to engage in high-stakes C-level prospect meetings, acting as the ultimate technical authority for the company.",
+        "12+ years of progressive leadership",
+        "experience in software engineering, with at least",
+        "7+ years operating at the VP, SVP, or CTO level, preferably in a B2B enterprise software or platform company."
+      ],
+      "proof_points": [
+        {
+          "requirement": "Superior Developer and Operator",
+          "evidence": "Technical writing, API documentation, developer guides, SDK documentation, code samples, tutorial creation, workshop facilitation, hackathon organisation, conference presentations, community building"
+        },
+        {
+          "requirement": "Developer Relations: Inspire and engage advanced developers globally, encouraging contributions to our open-source projects and fostering a vibrant technical community.",
+          "evidence": "Open-source games studio shipping developer-facing engines, Consumer SDKs, MCP tools, and documentation, built entirely using AI-augmented engineering workflows. Deployed the first board game engine MCP server and a full Developers section with API docs, SDK demos, and integration examples."
+        },
+        {
+          "requirement": "Open Source Software Expertise: Excel at balancing open-source community expectations with enterprise",
+          "evidence": "Core contributor to Automattic's BackPress framework — meaningful contribution to a major open-source ecosystem"
+        },
+        {
+          "requirement": "Open Source Software Expertise: Excel at balancing open-source community expectations with enterprise",
+          "evidence": "Built open-source blockchain wallet framework — the only one with themes and plugins, targeting mainstream developers rather than blockchain specialists"
+        },
+        {
+          "requirement": "Experience: Champion exceptional developer and operator",
+          "evidence": "Wrote developer documentation spanning plugins (Build a Variant, Crazyhouse, Poison Chess), consumer integration (Dungeon Chess guide), full API reference, SDK demo page, and a Developers section with connection guides and build examples"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4428495923",
+      "source": "linkedin",
+      "linkedin_job_id": "4428495923",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: unknown.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4428495923",
+        "contact_email": null,
+        "linkedin_job_id": "4428495923",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      }
+    },
+    {
+      "id": "hazelcast-vp-engineering-mriwdqdi",
+      "added": "2026-07-13",
+      "status": "new",
+      "company": "Hazelcast",
+      "role": "VP Engineering",
+      "location": "United Kingdom",
+      "variant": "cto",
+      "score": 79,
+      "scores": {
+        "cto": 79,
+        "regtech": 78,
+        "devrel": 80
+      },
+      "confidence": "high",
+      "requirements_found": 60,
+      "matched": 26,
+      "gaps": [
+        "Superior Developer and Operator",
+        "Experience: Champion exceptional developer and operator",
+        "experience, driving documentation quality, release clarity, and community engagement to strengthen Hazelcast’s ecosystem.",
+        "Organizational Design: Evolve and optimize the organisational structure for maximum performance, resilience, scalability, and ownership.",
+        "Talent Acquisition & Planning: Involvement in headcount planning to ensure a right-sized, highly skilled, and diverse global engineering organisation.",
+        "Managerial Development: Identify, coach, mentor, and develop engineering managers within the organisation, creating clear career paths for both technical and managerial career tracks.",
+        "Developer Relations: Inspire and engage advanced developers globally, encouraging contributions to our open-source projects and fostering a vibrant technical community.",
+        "experience in software engineering, with at least"
+      ],
+      "proof_points": [
+        {
+          "requirement": "Roadmap Execution: Drive, own and manage end-to-end engineering delivery against the product roadmap, utilising agile methodologies to ensure rapid, predictable, and high-quality releases.",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "Quality & Resilience: Maintain and continuously elevate world-class standards for system quality, performance, security, and resilience across the entire platform.",
+          "evidence": "Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems"
+        },
+        {
+          "requirement": "The majority of our Engineers are based in the UK with smaller teams across EMEA.",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "Culture & Ethos: Instill a strong product-led, innovation ethos within the company, guiding engineering teams to imagine the product primarily as a customer acquisition and value-delivery tool.",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "Performance Management: Ensure teams are empowered and aligned with company goals, providing frequent, actionable, and constructive feedback to support personal development and measure team outcomes.",
+          "evidence": "Cross-functional team leadership, hiring, technical roadmap, stakeholder management, hands-on (P4→M3)"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4331200883",
+      "source": "linkedin",
+      "linkedin_job_id": "4331200883",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: unknown.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4331200883",
+        "contact_email": null,
+        "linkedin_job_id": "4331200883",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      }
+    },
+    {
+      "id": "iinvest-via-jack-jill-founding-vp-of-eng-mriwdqdk",
+      "added": "2026-07-13",
+      "status": "new",
+      "company": "iinvest (via Jack & Jill)",
+      "role": "Founding VP of Engineering (CTO Track)",
+      "location": "United Kingdom",
+      "variant": "cto",
+      "score": 51,
+      "scores": {
+        "cto": 51,
+        "regtech": 33,
+        "devrel": 45
+      },
+      "confidence": "high",
+      "requirements_found": 17,
+      "matched": 8,
+      "gaps": [
+        "He works for you.Jill is the AI recruiter working for the company.",
+        "In the meantime, if you'd like, Jack will send you excellent alternatives.We never post fake jobs",
+        "If not, most people find him incredibly helpful with their job search, and we're giving his services away for free.",
+        "Founding VP of Engineering (CTO Track)",
+        "He works for you.Jill is the AI recruiter working for the company.",
+        "In the meantime, if you'd like, Jack will send you excellent alternatives.We never post fake jobs",
+        "If not, most people find him incredibly helpful with their job search, and we're giving his services away for free."
+      ],
+      "proof_points": [
+        {
+          "requirement": "I'm Jack, an AI that gets to know you on a quick call, learning",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "Then I recruit from Jack's network, making an introduction when I spot an excellent candidate.How does this work?Jack's an AI agent for job searching and career coaching.",
+          "evidence": "Built and deployed the first board game MCP server ( tools.moddable.games ): 16 AI-callable tools across 2 engines, Cloudflare Worker, MCP + REST + OpenAPI + llms.txt"
+        },
+        {
+          "requirement": "She recruits from Jack's network.If it's a match and the company wants to meet you, they'll make the intro.",
+          "evidence": "Led the technical narrative that pivoted the company from consumer app to B2B infrastructure provider"
+        },
+        {
+          "requirement": "This is a job that Jill, our AI Recruiter, is recruiting for on behalf of one of our customers.She will pick the best candidates from Jack's network.The next step is to speak to Jack.===Title",
+          "evidence": "Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites: renderer hooks, game controller, replay API, unit templates, terrain predicates, native ESM (same source serves browser, Worker, and Node.js)"
+        },
+        {
+          "requirement": "Founding VP of Engineering (CTO Track) (£68,000 GBP + Equity) at iinvest.ai - AI-native trading platform",
+          "evidence": "Designed and shipped multiple production systems: KYC/AML pipelines, blockchain wallets, learning management, and digital identity platforms — full-stack from protocol to UI"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4436231984",
+      "source": "linkedin",
+      "linkedin_job_id": "4436231984",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: unknown.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4436231984",
+        "contact_email": null,
+        "linkedin_job_id": "4436231984",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      }
+    },
+    {
+      "id": "the-investigo-group-cto-chief-technology-mriwdqdk",
+      "added": "2026-07-13",
+      "status": "new",
+      "company": "The Investigo Group",
+      "role": "CTO (Chief Technology Officer)",
+      "location": "Liverpool",
+      "variant": "cto",
+      "score": 79,
+      "scores": {
+        "cto": 79,
+        "regtech": 77,
+        "devrel": 59
+      },
+      "confidence": "high",
+      "requirements_found": 50,
+      "matched": 19,
+      "gaps": [
+        "You are a proven technology leader with the credibility, judgement and presence to operate confidently at Executive and Board level.",
+        "experience, ideally at CTO, Group CTO, Technology Director, VP Engineering, Head of Technology or equivalent level.",
+        "You are commercially aware,",
+        "experienced in managing technology budgets, vendors, partners and cost optimisation, and able to connect technology investment to ROI, risk reduction, operational efficiency and business growth.",
+        "S and customer-facing digital products, balancing growth, reliability, customer",
+        "Experience evolving an SME, scale-up or growing technology-led organisation through scale, maturity, transformation or operating model change.-",
+        "Experience managing technology budgets, cost optimisation, vendors and strategic partners.-",
+        "experience operating as a CTO, Group CTO, Technology Director, VP Engineering or equivalent senior technology leader.-"
+      ],
+      "proof_points": [
+        {
+          "requirement": "Your background may be software engineering, cloud, infrastructure, architecture, security or a blend of these areas.",
+          "evidence": "Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems"
+        },
+        {
+          "requirement": "Your background may be software engineering, cloud, infrastructure, architecture, security or a blend of these areas.",
+          "evidence": "Docker, CI/CD, Cloudflare Workers, LLM-augmented engineering, AI systems"
+        },
+        {
+          "requirement": "You will build trust quickly, develop leadership capability, hold teams to account fairly and foster collaboration, continuous improvement, reliability, security awareness and delivery excellence.",
+          "evidence": "Designed and deployed autonomous agent orchestration: Researcher and Builder routines on cloud infrastructure manage a 6-repo production pipeline via label-triggered coordination. Research agents investigate and verify sources; Builder agents branch, implement, test, and merge. The system ships rulebooks, resolves issues, and expands content continuously without a terminal open"
+        },
+        {
+          "requirement": "You will build trust quickly, develop leadership capability, hold teams to account fairly and foster collaboration, continuous improvement, reliability, security awareness and delivery excellence.",
+          "evidence": "Cross-functional team leadership, hiring, technical roadmap, stakeholder management, hands-on (P4→M3)"
+        },
+        {
+          "requirement": "You will have significant senior leadership",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4427991442",
+      "source": "linkedin",
+      "linkedin_job_id": "4427991442",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: unknown.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4427991442",
+        "contact_email": null,
+        "linkedin_job_id": "4427991442",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      }
+    },
+    {
+      "title": "Head of Engineering (FinTech Platform)",
+      "company": "Deel",
+      "status": "applied",
+      "score": 78,
+      "channel": {
+        "source": "linkedin",
+        "method": "email_direct",
+        "contact_email": "recruiting@deel.com"
+      },
+      "date_applied": "2026-06-19",
+      "cv_variant": "cto",
+      "url": "https://www.linkedin.com/jobs/view/4399109246"
+    },
+    {
+      "title": "AI Developer Advocate",
+      "company": "Verda",
+      "status": "applied",
+      "score": 71,
+      "channel": {
+        "source": "linkedin",
+        "method": "portal",
+        "apply_url": "https://jobs.verda.com/jobs/7903387-ai-developer-advocate"
+      },
+      "date_applied": "2026-06-20",
+      "cv_variant": "devrel",
+      "url": "https://www.linkedin.com/jobs/view/4426968768"
+    },
+    {
+      "title": "Engineering Director",
+      "company": "Arbor Education",
+      "status": "applied",
+      "score": 75,
+      "channel": {
+        "source": "linkedin",
+        "method": "portal",
+        "apply_url": "https://careers.arbor-education.com/_/j/288033E722/apply/"
+      },
+      "date_applied": "2026-06-20",
+      "cv_variant": "cto",
+      "url": "https://www.linkedin.com/jobs/view/4429942486"
     }
   ]
 }

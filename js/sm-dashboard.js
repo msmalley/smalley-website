@@ -178,13 +178,13 @@
     var el = document.getElementById('employment-content');
     var grid = SM.el('div', { class: 'dashboard-grid-2' });
 
-    var funnelMax = Math.max(emp.funnel.discovered, emp.funnel.scored, emp.funnel.new, emp.funnel.applied);
+    var funnelMax = Math.max(emp.funnel.discovered || 0, emp.funnel.scored || 0, emp.funnel.applied || 0, emp.funnel.rejected || 0, emp.funnel.closed || 0);
     var funnelItems = [
-      { label: 'Discovered', value: emp.funnel.discovered, accent: 'muted' },
-      { label: 'Scored', value: emp.funnel.scored, accent: 'gold' },
-      { label: 'New', value: emp.funnel.new, accent: 'teal' },
-      { label: 'Applied', value: emp.funnel.applied, accent: 'violet' },
-      { label: 'Rejected', value: emp.funnel.rejected, accent: 'red' }
+      { label: 'Discovered', value: emp.funnel.discovered || 0, accent: 'muted' },
+      { label: 'Scored', value: emp.funnel.scored || 0, accent: 'gold' },
+      { label: 'Applied', value: emp.funnel.applied || 0, accent: 'teal' },
+      { label: 'Rejected', value: emp.funnel.rejected || 0, accent: 'red' },
+      { label: 'Closed', value: emp.funnel.closed || 0, accent: 'violet' }
     ];
     var funnelPanel = SM.el('div', { class: 'dashboard-panel' },
       SM.el('div', { class: 'dashboard-panel-title' }, 'Pipeline Funnel'),

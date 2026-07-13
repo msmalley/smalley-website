@@ -13516,7 +13516,7 @@
     {
       "id": "ampstek-architect-crypto-digital-asset-c-mriwc7nb",
       "added": "2026-07-13",
-      "status": "new",
+      "status": "rejected",
       "company": "Ampstek",
       "role": "Architect Crypto Digital Asset Custody & Blockchain Platforms",
       "location": "Austin, Texas Metropolitan Area",
@@ -13581,12 +13581,13 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "reject_reason": "US-only location (not viable from UK)"
     },
     {
       "id": "ipolarity-crypto-digital-asset-custody-b-mriwc7nc",
       "added": "2026-07-13",
-      "status": "new",
+      "status": "rejected",
       "company": "IPolarity",
       "role": "Crypto Digital Asset Custody & Blockchain Platforms",
       "location": "Texas, United States",
@@ -13646,12 +13647,13 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "reject_reason": "US-only location (not viable from UK)"
     },
     {
       "id": "ampstek-architect-crypto-digital-asset-c-mriwc7nc",
       "added": "2026-07-13",
-      "status": "new",
+      "status": "rejected",
       "company": "Ampstek",
       "role": "Architect Crypto Digital Asset Custody & Blockchain Platforms",
       "location": "Dallas, TX",
@@ -13716,12 +13718,13 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "reject_reason": "US-only location (not viable from UK)"
     },
     {
       "id": "fidelity-investments-head-of-architectur-mriwc7nc",
       "added": "2026-07-13",
-      "status": "new",
+      "status": "rejected",
       "company": "Fidelity Investments",
       "role": "Head of Architecture, Digital Assets (Crypto)",
       "location": "Durham, NC",
@@ -13786,12 +13789,13 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "reject_reason": "US-only location (not viable from UK)"
     },
     {
       "id": "predicate-protocol-lead-mriwc7nc",
       "added": "2026-07-13",
-      "status": "new",
+      "status": "rejected",
       "company": "Predicate",
       "role": "Protocol Lead",
       "location": "New York, NY",
@@ -13856,12 +13860,13 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "reject_reason": "US-only location (not viable from UK)"
     },
     {
       "id": "td-vice-president-managing-director-digi-mriwc7nd",
       "added": "2026-07-13",
-      "status": "new",
+      "status": "rejected",
       "company": "TD",
       "role": "Vice President & Managing Director, Digital Assets & Tokenized Technology",
       "location": "New York, NY",
@@ -13926,12 +13931,13 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "reject_reason": "US-only location (not viable from UK)"
     },
     {
       "id": "dragonfly-cto-founding-engineer-dragonfl-mriwc7nd",
       "added": "2026-07-13",
-      "status": "new",
+      "status": "rejected",
       "company": "Dragonfly",
       "role": "CTO / Founding Engineer - Dragonfly Portfolio",
       "location": "United States",
@@ -13996,7 +14002,8 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "reject_reason": "US-only location (not viable from UK)"
     },
     {
       "id": "coinbase-senior-staff-software-engineer--mriwc7ne",
@@ -14121,7 +14128,7 @@
     {
       "id": "golang-cz-senior-go-developer-web3--mriwc7oo",
       "added": "2026-07-13",
-      "status": "new",
+      "status": "rejected",
       "company": "golang.cz",
       "role": "Senior Go Developer (web3)",
       "location": " United States Indiana US",
@@ -14185,7 +14192,8 @@
         },
         "action": "visit_and_apply",
         "notes": null
-      }
+      },
+      "reject_reason": "US-only location (not viable from UK)"
     },
     {
       "id": "web3creators-full-stack-engineer-mriwc7ov",
@@ -14292,7 +14300,7 @@
     {
       "id": "brg-senior-blockchain-consultant-mriwc7p2",
       "added": "2026-07-13",
-      "status": "new",
+      "status": "rejected",
       "company": "BRG",
       "role": "Senior Blockchain Consultant",
       "location": " NY New York US",
@@ -14352,12 +14360,13 @@
         },
         "action": "visit_and_apply",
         "notes": null
-      }
+      },
+      "reject_reason": "US-only location (not viable from UK)"
     },
     {
       "id": "m0-product-manager-mriwc7p7",
       "added": "2026-07-13",
-      "status": "new",
+      "status": "rejected",
       "company": "M0",
       "role": "Product Manager",
       "location": " NY New York US",
@@ -14421,12 +14430,13 @@
         },
         "action": "visit_and_apply",
         "notes": null
-      }
+      },
+      "reject_reason": "US-only location (not viable from UK)"
     },
     {
       "id": "ipolarity-crypto-digital-asset-custody-a-mriwc7pg",
       "added": "2026-07-13",
-      "status": "new",
+      "status": "rejected",
       "company": "IPolarity",
       "role": "Crypto Digital Asset Custody &amp; Blockchain Platforms",
       "location": " United States Texas US",
@@ -14479,12 +14489,13 @@
         },
         "action": "visit_and_apply",
         "notes": null
-      }
+      },
+      "reject_reason": "US-only location (not viable from UK)"
     },
     {
       "id": "ampstek-architect-crypto-digital-asset-c-mriwc7pl",
       "added": "2026-07-13",
-      "status": "new",
+      "status": "rejected",
       "company": "Ampstek",
       "role": "Architect Crypto Digital Asset Custody &amp; Blockchain Platforms",
       "location": " TX Dallas US",
@@ -14547,7 +14558,8 @@
         },
         "action": "visit_and_apply",
         "notes": null
-      }
+      },
+      "reject_reason": "US-only location (not viable from UK)"
     },
     {
       "id": "coin-market-cap-ltd-java-engineer-contra-mriwc7pu",
@@ -14620,7 +14632,7 @@
     {
       "id": "ampstek-solidity-engineer-only-us-citize-mriwc7py",
       "added": "2026-07-13",
-      "status": "new",
+      "status": "rejected",
       "company": "Ampstek",
       "role": "Solidity Engineer || Only US Citizen and Green Card || Tampa, FL/ Jersey City, NJ/ Texas City, TX (Hybrid)",
       "location": " FL Tampa US",
@@ -14684,12 +14696,13 @@
         },
         "action": "visit_and_apply",
         "notes": null
-      }
+      },
+      "reject_reason": "US-only location (not viable from UK)"
     },
     {
       "id": "axg-solowin-holdings-technical-product-l-mriwc7q6",
       "added": "2026-07-13",
-      "status": "new",
+      "status": "rejected",
       "company": "AXG (Solowin Holdings)",
       "role": "Technical Product Lead – Stablecoin, Payment &amp; Onchain FX",
       "location": " NY New York US",
@@ -14751,12 +14764,13 @@
         },
         "action": "visit_and_apply",
         "notes": null
-      }
+      },
+      "reject_reason": "US-only location (not viable from UK)"
     },
     {
       "id": "jpmorganchase-investment-banking-equity--mriwc7qd",
       "added": "2026-07-13",
-      "status": "new",
+      "status": "rejected",
       "company": "JPMorganChase",
       "role": "Investment Banking Equity Capital Markets [Multiple Positions Available]",
       "location": " NY New York US",
@@ -14818,12 +14832,13 @@
         },
         "action": "visit_and_apply",
         "notes": null
-      }
+      },
+      "reject_reason": "US-only location (not viable from UK)"
     },
     {
       "id": "nexus-director-of-engineering-usa--mriwc7qi",
       "added": "2026-07-13",
-      "status": "new",
+      "status": "rejected",
       "company": "Nexus",
       "role": "Director of Engineering (USA)",
       "location": " United States",
@@ -14887,12 +14902,13 @@
         },
         "action": "visit_and_apply",
         "notes": null
-      }
+      },
+      "reject_reason": "US-only location (not viable from UK)"
     },
     {
       "id": "chainalysis-channel-partner-manager-amer-mriwc7qr",
       "added": "2026-07-13",
-      "status": "new",
+      "status": "rejected",
       "company": "Chainalysis",
       "role": "Channel Partner Manager, AMER",
       "location": " New York New York City United States",
@@ -14956,12 +14972,13 @@
         },
         "action": "visit_and_apply",
         "notes": null
-      }
+      },
+      "reject_reason": "US-only location (not viable from UK)"
     },
     {
       "id": "chainalysis-senior-grc-engineer-trust-mriwc7r2",
       "added": "2026-07-13",
-      "status": "new",
+      "status": "rejected",
       "company": "Chainalysis",
       "role": "Senior GRC Engineer, Trust",
       "location": " New York New York City United States",
@@ -15025,12 +15042,13 @@
         },
         "action": "visit_and_apply",
         "notes": null
-      }
+      },
+      "reject_reason": "US-only location (not viable from UK)"
     },
     {
       "id": "chainalysis-senior-intelligence-analyst-mriwc7rg",
       "added": "2026-07-13",
-      "status": "new",
+      "status": "rejected",
       "company": "Chainalysis",
       "role": "Senior Intelligence Analyst",
       "location": " North Carolina United States",
@@ -15094,7 +15112,8 @@
         },
         "action": "visit_and_apply",
         "notes": null
-      }
+      },
+      "reject_reason": "US-only location (not viable from UK)"
     },
     {
       "id": "blockdaemon-program-manager-mriwc7rn",

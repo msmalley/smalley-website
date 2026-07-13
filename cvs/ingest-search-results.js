@@ -107,6 +107,28 @@ function isIrrelevantRole(title) {
   return false;
 }
 
+const US_LOCATIONS = [
+  'united states', ', us', ' us ', 'new york', 'san francisco', 'austin', 'dallas',
+  'tampa', 'jersey city', 'durham', 'indiana', 'california', 'boston', 'seattle',
+  'chicago', 'miami', 'denver', 'atlanta', 'phoenix', 'washington dc', 'los angeles',
+  'portland', ' tx ', ' ny ', ' ca ', ' fl ', ' co ', ' wa ', ' ma ', ' ga ', ' az ',
+  'north carolina', 'virginia', 'maryland', 'connecticut', 'pennsylvania'
+];
+
+function isIrrelevantLocation(location) {
+  if (!location) return false;
+  const loc = location.toLowerCase().trim();
+  // Allow "Remote" even if it mentions US (might be globally remote)
+  if (loc === 'remote' || loc === 'worldwide' || loc === 'global') return false;
+  // Filter US-only locations (not remote)
+  if (US_LOCATIONS.some(us => loc.includes(us))) {
+    // But allow if also marked remote/global
+    if (loc.includes('remote') || loc.includes('global') || loc.includes('worldwide')) return false;
+    return true;
+  }
+  return false;
+}
+
 function ingest(searchResults) {
   const data = loadJobs();
   const existing = data.jobs;
@@ -126,6 +148,11 @@ function ingest(searchResults) {
     }
 
     if (isIrrelevantRole(c.title)) {
+      filtered++;
+      continue;
+    }
+
+    if (isIrrelevantLocation(c.location)) {
       filtered++;
       continue;
     }

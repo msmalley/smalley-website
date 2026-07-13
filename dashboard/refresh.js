@@ -812,6 +812,9 @@ async function collectCloudflare() {
       body: JSON.stringify({ query })
     });
     const data = await res.json();
+    if (data.errors?.length) {
+      return { error: `Cloudflare API: ${data.errors[0].message} (token may be expired — run: wrangler whoami)` };
+    }
     const rows = data?.data?.viewer?.accounts?.[0]?.workersInvocationsAdaptive || [];
 
     const byScript = {};

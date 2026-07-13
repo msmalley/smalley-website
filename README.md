@@ -46,6 +46,16 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 
 ## Changelog
 
+#### 2026-07-13
+- Application sprint: 9 new applications (BNY, Mastercard, Wintermute, Sotheby's, Malt, Novera, Bestman, Sanderson King, Ably). 12 total, 0 responses.
+- DevRel cover letter template (plum/violet, Space Grotesk) matching cv_devrel styling
+- Cover letter generator now selects template by variant (CTO/RegTech use original, DevRel uses new)
+- Moddable stats refresh across entire site: 41 MCP tools, 37 games, 315 variants, 2,974 pages
+- Canonical tags added to all 38 pages (fixes Google Search Console "duplicate without canonical")
+- Bug fix: social_post now auto-persists platform_id to pipeline.json (was silently lost)
+- 7 new job leads ingested (ClearBank, Harrington Starr, Bullish, CoinDesk, Kast, TradingHub, Dex)
+- 5 expired opportunities tracked, 8 rejected
+
 #### 2026-07-06
 - Job pipeline hygiene: role-type filter on ingest (rejects IC devs, sales, marketing, junior roles), company alias dedup (Tether/Tether Operations Limited), regex patterns for edge cases. Pipeline 351 → 210 relevant jobs.
 - Variant-specific keyword expansion maps in match-job.js (CTO/RegTech/DevRel each have their own semantic neighbourhood)

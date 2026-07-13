@@ -196,6 +196,12 @@ export async function getPostInsights(postIdentifier) {
     `/feed/updatesV2?q=backendUrnOrNss&urnOrNss=${encodeURIComponent(shareUrn)}&commentsCount=20&likesCount=20`
   );
 
+  // New response format: elements[0].socialDetail
+  const el = data?.elements?.[0];
+  if (el?.socialDetail) {
+    return parseElementsResponse(el);
+  }
+
   const included = data?.included || [];
   const hasActivityCounts = included.some(i =>
     i.$type === 'com.linkedin.voyager.feed.shared.SocialActivityCounts' &&
@@ -207,10 +213,58 @@ export async function getPostInsights(postIdentifier) {
     const retryData = await voyagerRequest(
       `/feed/updatesV2?q=backendUrnOrNss&urnOrNss=${encodeURIComponent(activityUrn)}&commentsCount=20&likesCount=20`
     );
+    const retryEl = retryData?.elements?.[0];
+    if (retryEl?.socialDetail) return parseElementsResponse(retryEl);
     return parseResponse(retryData);
   }
 
   return parseResponse(data);
+}
+
+function parseElementsResponse(el) {
+  const social = el.socialDetail;
+  const counts = social.totalSocialActivityCounts || {};
+
+  const reactions = {};
+  if (counts.reactionTypeCounts?.length) {
+    for (const r of counts.reactionTypeCounts) {
+      reactions[r.reactionType] = r.count;
+    }
+  }
+
+  const commentElements = social.comments?.elements || [];
+  const commentsList = commentElements.map(c => {
+    const actor = c.commenter?.['com.linkedin.voyager.feed.MemberActor'];
+    const mini = actor?.miniProfile || c.commenterForDashConversion;
+    return {
+      author: mini ? (mini.firstName + ' ' + mini.lastName).trim() : (c.commenterForDashConversion?.title?.text || 'Unknown'),
+      subtitle: mini?.occupation || null,
+      text: c.commentV2?.text || c.comment?.values?.[0]?.value || '',
+      created: c.createdTime || null,
+      permalink: c.permalink || null
+    };
+  });
+
+  const reactionElements = social.reactionElements || [];
+  const reactionsList = reactionElements.map(r => {
+    const mini = r.image?.attributes?.[0]?.miniProfile;
+    return {
+      author: mini ? (mini.firstName + ' ' + mini.lastName).trim() : 'Unknown',
+      occupation: mini?.occupation || null,
+      type: r.reactionType || 'LIKE'
+    };
+  });
+
+  return {
+    likes: counts.numLikes || 0,
+    comments: counts.numComments || 0,
+    shares: counts.numShares || 0,
+    impressions: counts.numImpressions || null,
+    reactions: Object.keys(reactions).length > 0 ? reactions : undefined,
+    commentsList: commentsList.length > 0 ? commentsList : undefined,
+    reactionsList: reactionsList.length > 0 ? reactionsList : undefined,
+    activityUrn: counts.urn || social.urn
+  };
 }
 
 function parseResponse(data) {
@@ -243,6 +297,22 @@ function parseResponse(data) {
     }
   }
 
+  const profiles = {};
+  included.filter(i => i.$type === 'com.linkedin.voyager.identity.shared.MiniProfile').forEach(p => {
+    profiles[p.entityUrn] = { firstName: p.firstName, lastName: p.lastName, occupation: p.occupation };
+  });
+
+  const likeEntities = included.filter(i => i.$type === 'com.linkedin.voyager.feed.Like');
+  const reactionsList = likeEntities.map(l => {
+    const profileRef = l.actor?.['*miniProfile'];
+    const profile = profileRef ? profiles[profileRef] : null;
+    return {
+      author: profile ? `${profile.firstName} ${profile.lastName}`.trim() : 'Unknown',
+      occupation: profile?.occupation || null,
+      type: 'LIKE'
+    };
+  }).filter(r => r.author !== 'Unknown');
+
   return {
     likes: activityCounts.numLikes || 0,
     comments: activityCounts.numComments || 0,
@@ -250,6 +320,7 @@ function parseResponse(data) {
     impressions: activityCounts.numImpressions || null,
     reactions: Object.keys(reactions).length > 0 ? reactions : undefined,
     commentsList: commentsList.length > 0 ? commentsList : undefined,
+    reactionsList: reactionsList.length > 0 ? reactionsList : undefined,
     activityUrn: activityCounts.urn
   };
 }

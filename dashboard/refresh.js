@@ -146,10 +146,10 @@ function collectSocial() {
 
       const commentsList = m.commentsList || p.metrics_linkedin?.commentsList || [];
 
-      const reactionTypes = m.reactions || {};
-      const recentReactions = Object.entries(reactionTypes).flatMap(([type, count]) => {
-        return [{ type, count, post_preview: (p.content || '').slice(0, 40) }];
-      });
+      const reactionsList = m.reactionsList || [];
+      const recentReactions = reactionsList.length
+        ? reactionsList.slice(0, 10).map(r => ({ author: r.author, type: r.type || 'LIKE', occupation: r.occupation, post_preview: (p.content || '').slice(0, 40) }))
+        : Object.entries(m.reactions || {}).flatMap(([type, count]) => [{ type, count: count, post_preview: (p.content || '').slice(0, 40) }]);
 
       postData.push({
         id: p.id || p.platform_id || 'unknown',
@@ -246,7 +246,8 @@ async function refreshSocialMetrics() {
           comments: insights.comments || 0,
           shares: insights.shares || 0,
           reactions: insights.reactions || prev.reactions,
-          commentsList: insights.commentsList || prev.commentsList
+          commentsList: insights.commentsList || prev.commentsList,
+          reactionsList: insights.reactionsList || prev.reactionsList
         };
         if (prev.impressions != null && insights.impressions != null) {
           post.deltas = { impressions: (insights.impressions || 0) - (prev.impressions || 0), likes: (insights.likes || 0) - (prev.likes || 0) };

@@ -1076,22 +1076,15 @@
         return e.event === 'tool_call' || e.event.includes('game_') || e.event.includes('puzzle') || e.event.includes('hex_') || e.event.includes('dice_') || e.event.includes('deck_') || e.event.includes('faction') || e.event.includes('pdf_') || e.event.includes('file_');
       });
       if (toolEvents.length) {
-        var toolGrid = SM.el('div', { class: 'dashboard-grid-2', style: { marginTop: '24px' } });
         var teMax = toolEvents[0].count;
         var teItems = toolEvents.map(function(e) {
           var accent = e.event.includes('game') ? 'violet' : e.event.includes('tool') ? 'teal' : 'gold';
           return { label: e.event, value: e.count, accent: accent };
         });
-        toolGrid.appendChild(SM.el('div', { class: 'dashboard-panel' },
+        el.appendChild(SM.el('div', { class: 'dashboard-panel', style: { marginTop: '24px' } },
           SM.el('div', { class: 'dashboard-panel-title' }, 'Tool & Game Events via GA4 (30d)'),
           barChart(teItems, teMax)
         ));
-        toolGrid.appendChild(statPanel('Worker Health', [
-          { label: 'Total requests (7d)', value: cf.total_requests.toLocaleString() },
-          { label: 'Error rate', value: (cf.error_rate * 100).toFixed(2) + '%' },
-          { label: 'Workers active', value: String(cf.by_worker ? cf.by_worker.length : 0) }
-        ]));
-        el.appendChild(toolGrid);
       }
     }
   }

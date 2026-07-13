@@ -662,7 +662,8 @@
       }
       if (post.recent_reactions) {
         for (var j = 0; j < post.recent_reactions.length; j++) {
-          allReactions.push({ author: post.recent_reactions[j].author, type: post.recent_reactions[j].type || 'LIKE', platform: post.platform, post_preview: post.content_preview });
+          var rx = post.recent_reactions[j];
+          allReactions.push({ author: rx.author || (rx.count + ' people'), type: rx.type || 'LIKE', platform: post.platform, post_preview: rx.post_preview || post.content_preview });
         }
       }
     }
@@ -758,35 +759,75 @@
     el.appendChild(detailGrid);
 
     for (var s = 0; s < sites.length; s++) {
-      var key = sites[s][0], label = sites[s][1];
-      var site = analytics[key];
-      if (!site || !site.top_pages_30d || !site.top_pages_30d.length) continue;
+      (function(key, label) {
+        var site = analytics[key];
+        if (!site || !site.top_pages_30d || !site.top_pages_30d.length) return;
 
-      var table = SM.el('table', { class: 'metrics-table' });
-      table.appendChild(SM.el('thead', {},
-        SM.el('tr', {},
-          SM.el('th', {}, 'Page'), SM.el('th', {}, 'Views'),
-          SM.el('th', {}, 'Avg Duration'), SM.el('th', {}, 'Engaged')
-        )
-      ));
-      var tbody = SM.el('tbody');
-      for (var i = 0; i < site.top_pages_30d.length; i++) {
-        var p = site.top_pages_30d[i];
-        var dur = p.avg_duration_s >= 60 ? Math.floor(p.avg_duration_s / 60) + 'm ' + (p.avg_duration_s % 60) + 's' : p.avg_duration_s + 's';
-        var domain = key === 'smalley_my' ? 'https://smalley.my' : 'https://moddable.games';
-        var pageLink = SM.el('a', { href: domain + p.path, target: '_blank', rel: 'noopener', style: { color: 'var(--sm-teal-glow)', textDecoration: 'none', fontFamily: 'var(--f-mono)', fontSize: '12px' } }, p.path);
-        tbody.appendChild(SM.el('tr', {},
-          SM.el('td', {}, pageLink),
-          SM.el('td', {}, String(p.views)),
-          SM.el('td', {}, dur),
-          SM.el('td', {}, String(p.engaged))
-        ));
-      }
-      table.appendChild(tbody);
-      el.appendChild(SM.el('div', { class: 'dashboard-panel', style: { marginTop: '24px' } },
-        SM.el('div', { class: 'dashboard-panel-title' }, label + ' — Page Engagement (30d)'),
-        table
-      ));
+        var panel = SM.el('div', { class: 'dashboard-panel', style: { marginTop: '24px' } });
+        var titleRow = SM.el('div', { style: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px' } });
+        titleRow.appendChild(SM.el('div', { class: 'dashboard-panel-title', style: { marginBottom: '0' } }, label + ' — Page Engagement'));
+
+        var toggleBar = SM.el('div', { style: { display: 'flex', gap: '3px' } });
+        var periods = [
+          { key: '7d', label: '7D', data: site.top_pages_7d || [] },
+          { key: '30d', label: '30D', data: site.top_pages_30d || [] },
+          { key: '90d', label: '90D', data: site.top_pages_90d || [] }
+        ];
+        var tableContainer = SM.el('div');
+        var activePeriod = '30d';
+
+        function renderTable(data) {
+          tableContainer.innerHTML = '';
+          if (!data.length) { tableContainer.appendChild(SM.el('div', { style: { color: 'var(--sm-muted)', fontSize: '12px' } }, 'No data for this period')); return; }
+          var table = SM.el('table', { class: 'metrics-table' });
+          table.appendChild(SM.el('thead', {}, SM.el('tr', {},
+            SM.el('th', {}, 'Page'), SM.el('th', {}, 'Views'),
+            SM.el('th', {}, 'Avg Duration'), SM.el('th', {}, 'Engaged')
+          )));
+          var tbody = SM.el('tbody');
+          var domain = key === 'smalley_my' ? 'https://smalley.my' : 'https://moddable.games';
+          for (var i = 0; i < data.length; i++) {
+            var p = data[i];
+            var dur = p.avg_duration_s >= 60 ? Math.floor(p.avg_duration_s / 60) + 'm ' + (p.avg_duration_s % 60) + 's' : p.avg_duration_s + 's';
+            var pageLink = SM.el('a', { href: domain + p.path, target: '_blank', rel: 'noopener', style: { color: 'var(--sm-teal-glow)', textDecoration: 'none', fontFamily: 'var(--f-mono)', fontSize: '12px' } }, p.path);
+            tbody.appendChild(SM.el('tr', {},
+              SM.el('td', {}, pageLink), SM.el('td', {}, String(p.views)),
+              SM.el('td', {}, dur), SM.el('td', {}, String(p.engaged))
+            ));
+          }
+          table.appendChild(tbody);
+          tableContainer.appendChild(table);
+        }
+
+        for (var pi = 0; pi < periods.length; pi++) {
+          (function(period) {
+            var btn = SM.el('button', { style: {
+              fontFamily: 'var(--f-mono)', fontSize: '10px', fontWeight: period.key === activePeriod ? '700' : '500',
+              padding: '2px 7px', borderRadius: '3px', cursor: 'pointer',
+              border: '1px solid ' + (period.key === activePeriod ? 'var(--sm-teal)' : 'var(--sm-border)'),
+              background: period.key === activePeriod ? 'var(--sm-surface-alt)' : 'transparent',
+              color: period.key === activePeriod ? 'var(--sm-teal)' : 'var(--sm-muted)'
+            } }, period.label);
+            btn.addEventListener('click', function() {
+              activePeriod = period.key;
+              toggleBar.querySelectorAll('button').forEach(function(b) {
+                b.style.fontWeight = '500'; b.style.borderColor = 'var(--sm-border)';
+                b.style.background = 'transparent'; b.style.color = 'var(--sm-muted)';
+              });
+              btn.style.fontWeight = '700'; btn.style.borderColor = 'var(--sm-teal)';
+              btn.style.background = 'var(--sm-surface-alt)'; btn.style.color = 'var(--sm-teal)';
+              renderTable(period.data);
+            });
+            toggleBar.appendChild(btn);
+          })(periods[pi]);
+        }
+
+        titleRow.appendChild(toggleBar);
+        panel.appendChild(titleRow);
+        panel.appendChild(tableContainer);
+        renderTable(site.top_pages_30d);
+        el.appendChild(panel);
+      })(sites[s][0], sites[s][1]);
     }
 
     // Events breakdown (custom interactions)

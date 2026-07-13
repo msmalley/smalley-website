@@ -709,7 +709,7 @@
     {
       "id": "robinhood-crypto-product-compliance-lead-mqifod33",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Robinhood",
       "role": "Crypto Product Compliance Lead",
       "location": "Greater London, England, United Kingdom",
@@ -771,7 +771,8 @@
         "regtech": 63,
         "devrel": 56
       },
-      "confidence": "high"
+      "confidence": "high",
+      "reject_reason": "Not suitable"
     },
     {
       "id": "explore-group-chief-technology-officer-mqifoo6y",
@@ -1045,7 +1046,7 @@
     {
       "id": "monex-europe-head-of-engineering-mqifqnbz",
       "added": "2026-06-17",
-      "status": "new",
+      "status": "rejected",
       "company": "Monex Europe",
       "role": "Head of Engineering",
       "location": "Manchester, England, United Kingdom",
@@ -1106,7 +1107,8 @@
         "regtech": 65,
         "devrel": 29
       },
-      "confidence": "high"
+      "confidence": "high",
+      "reject_reason": "Not suitable"
     },
     {
       "id": "addition-director-of-engineering-mqifukny",
@@ -2140,7 +2142,7 @@
     {
       "id": "qognitive-director-of-engineering",
       "added": "2026-06-27",
-      "status": "new",
+      "status": "rejected",
       "company": "Qognitive",
       "role": "Director of Engineering",
       "location": "England, UK",
@@ -2202,7 +2204,8 @@
           "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
         }
       ],
-      "source_url": "https://www.linkedin.com/jobs/view/4430658433/"
+      "source_url": "https://www.linkedin.com/jobs/view/4430658433/",
+      "reject_reason": "Not suitable"
     },
     {
       "id": "model-ml-head-of-platform-engineering",
@@ -2935,7 +2938,7 @@
     {
       "id": "chainalysis-senior-manager-engineering-c-mqxuzwve",
       "added": "2026-06-28",
-      "status": "new",
+      "status": "rejected",
       "company": "Chainalysis",
       "role": "Senior Manager, Engineering-Clustering & Exposure",
       "location": "London",
@@ -2998,7 +3001,8 @@
         "regtech": 52,
         "devrel": 57
       },
-      "confidence": "high"
+      "confidence": "high",
+      "reject_reason": "Not suitable"
     },
     {
       "id": "bestman-solutions-chief-architect-mqxuzwve",
@@ -3210,7 +3214,7 @@
     {
       "id": "ripple-staff-partner-engineer",
       "added": "2026-07-05",
-      "status": "new",
+      "status": "rejected",
       "company": "Ripple",
       "role": "Staff Partner Engineer",
       "location": "London",
@@ -3274,7 +3278,8 @@
           "evidence": "Cross-functional team leadership, hiring, technical roadmap, stakeholder management, hands-on (P4→M3)"
         }
       ],
-      "source_url": "https://www.linkedin.com/jobs/view/4417127444/"
+      "source_url": "https://www.linkedin.com/jobs/view/4417127444/",
+      "reject_reason": "Not suitable"
     },
     {
       "id": "malt-senior-eng-manager-compliance",
@@ -13102,7 +13107,7 @@
     {
       "id": "xapo-bank-head-of-engineering-mr94n3z6",
       "added": "2026-07-06",
-      "status": "new",
+      "status": "rejected",
       "company": "Xapo Bank",
       "role": "Head of Engineering",
       "location": "Remote (Gibraltar)",
@@ -13167,7 +13172,8 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "reject_reason": "Not suitable"
     },
     {
       "id": "wintermute-product-engineering-tech-lead-mr94n3z8",

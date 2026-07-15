@@ -126,6 +126,7 @@ function updateStatus(jobId, newStatus) {
     process.exit(1);
   }
   job.status = newStatus;
+  if (newStatus === 'applied') job.applied_at = new Date().toISOString().split('T')[0];
 
   // Auto-archive terminal statuses
   const archiveStatuses = ['closed', 'rejected', 'applied', 'withdrawn'];

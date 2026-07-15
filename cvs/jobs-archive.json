@@ -514,7 +514,8 @@
         "cto": 56,
         "regtech": 62,
         "devrel": 31
-      }
+      },
+      "applied_at": "2026-06-29"
     },
     {
       "id": "stax-deep-tech-talent-head-of-ai-softwar-mqifnv9y",
@@ -891,7 +892,8 @@
         "cto": 54,
         "regtech": 61,
         "devrel": 55
-      }
+      },
+      "applied_at": "2026-06-29"
     },
     {
       "id": "the-openwork-partnership-head-of-complia-mqifoavc",
@@ -6442,7 +6444,8 @@
         "cto": 63,
         "regtech": 53,
         "devrel": 58
-      }
+      },
+      "applied_at": "2026-06-29"
     },
     {
       "id": "paddle-developer-advocate-mqifu2p5",
@@ -11291,7 +11294,8 @@
           "evidence": "Founded and operated Malaysia's leading blockchain infrastructure and advisory firm for 13 years. Built and shipped production products across KYC, AML, digital custody, and wallet infrastructure while simultaneously shaping national regulatory policy."
         }
       ],
-      "source_url": "https://www.linkedin.com/jobs/view/4430963455/"
+      "source_url": "https://www.linkedin.com/jobs/view/4430963455/",
+      "applied_at": "2026-06-29"
     },
     {
       "company": "WUNDERTALENT",
@@ -11475,7 +11479,3144 @@
         "action": "visit_and_apply",
         "notes": null
       }
+    },
+    {
+      "id": "robinhood-crypto-product-compliance-lead-mqifod33",
+      "added": "2026-06-17",
+      "status": "rejected",
+      "company": "Robinhood",
+      "role": "Crypto Product Compliance Lead",
+      "location": "Greater London, England, United Kingdom",
+      "variant": "regtech",
+      "score": 63,
+      "requirements_found": 46,
+      "matched": 8,
+      "gaps": [
+        "We’re a high-performing, fast-moving team with ethics at the center of everything we do.",
+        "Builders who are wired to make an impact.",
+        "Robinhood isn’t a place for complacency, it’s where ambitious people do the best work of their careers.",
+        "At Robinhood, we believe in the power of in-person work to accelerate progress, spark innovation, and strengthen community.",
+        "experience is intentional, energizing, and designed to fully support high-performing teams."
+      ],
+      "proof_points": [
+        {
+          "requirement": "experiences that meet customer needs while maintaining strong regulatory standards!As Crypto Product Compliance Lead,",
+          "evidence": "15 years building compliance-grade blockchain infrastructure while simultaneously shaping the regulatory frameworks that govern it. First company in SC Malaysia's digital asset sandbox; co-founded what is now Malaysia's largest Digital Asset Custodian by AUM; delivered to DBS Bank and Baker Hostetler. UK-based since 2025, seeking senior RegTech/FinTech roles where regulatory fluency and production engineering intersect."
+        },
+        {
+          "requirement": "Expectations are high, and so are the rewards.The Robinhood Crypto Product Compliance team supports Product teams in developing and launching crypto products and services in alignment with regulatory",
+          "evidence": "Founded and led Malaysia's foremost blockchain infrastructure and regulatory advisory practice for 13 years. R1 sat at the intersection of engineering, compliance, and policy, building production-grade digital asset systems for licensed operators while advising regulators on the frameworks that would govern them."
+        },
+        {
+          "requirement": "The team serves as the primary compliance partner for product initiatives, providing guidance on product design, customer communications, and operational processes related to crypto offerings.",
+          "evidence": "Digital asset regulation, regulatory sandbox, Know Your Customer (KYC), Anti-Money Laundering (AML), Customer Due Diligence (CDD), custody compliance, transaction monitoring, financial crime prevention"
+        },
+        {
+          "requirement": "You will lead initiatives responsible for reviewing product designs, customer communications, and operational processes to support compliance with applicable regulations and firm policies.",
+          "evidence": "Active contributor to Malaysia's national Digital Asset regulatory roadmap — engaged directly with SC and Bank Negara Malaysia stakeholders on Anti-Money Laundering (AML) and Know Your Customer (KYC) frameworks"
+        },
+        {
+          "requirement": "Partner with Product teams and other business partners, including Legal, Risk, and Operations, during the design, testing, launch, and enhancement of crypto products and services.Advise on regulatory",
+          "evidence": "First company admitted to the Securities Commission Malaysia (SC) regulatory sandbox for digital assets and cryptocurrency"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/crypto-product-compliance-lead-at-robinhood-4424837232",
+      "cover_letter": null,
+      "notes": "Full match. Title: 32, JD: 80. Keywords: digital asset compliance",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/crypto-product-compliance-lead-at-robinhood-4424837232",
+        "contact_email": null,
+        "linkedin_job_id": "4424837232",
+        "freshness": {
+          "status": "stale",
+          "days_old": 26,
+          "added": "2026-06-17"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      },
+      "linkedin_job_id": "4424837232",
+      "url": "https://www.linkedin.com/jobs/view/4424837232",
+      "scores": {
+        "cto": 64,
+        "regtech": 63,
+        "devrel": 56
+      },
+      "confidence": "high",
+      "reject_reason": "Not suitable"
+    },
+    {
+      "id": "monex-europe-head-of-engineering-mqifqnbz",
+      "added": "2026-06-17",
+      "status": "rejected",
+      "company": "Monex Europe",
+      "role": "Head of Engineering",
+      "location": "Manchester, England, United Kingdom",
+      "variant": "regtech",
+      "score": 65,
+      "requirements_found": 22,
+      "matched": 9,
+      "gaps": [
+        "5 years in financial services>",
+        "Strong knowledge of FX and derivatives.",
+        "experience is further enhanced by our dedicated sector expertise across a range of industries.Job Overview",
+        "Business Knowledge / Technical"
+      ],
+      "proof_points": [
+        {
+          "requirement": "Embed security-by-design principles into all engineering processes.Ensure compliance with regulatory frameworks such as Mi",
+          "evidence": "Founded and led Malaysia's foremost blockchain infrastructure and regulatory advisory practice for 13 years. R1 sat at the intersection of engineering, compliance, and policy, building production-grade digital asset systems for licensed operators while advising regulators on the frameworks that would govern them."
+        },
+        {
+          "requirement": "experience of working within a regulated investment firm or strong equivalent demonstrable knowledge within a relevant Financial Services firm",
+          "evidence": "Digital asset regulation, regulatory sandbox, Know Your Customer (KYC), Anti-Money Laundering (AML), Customer Due Diligence (CDD), custody compliance, transaction monitoring, financial crime prevention"
+        },
+        {
+          "requirement": "Able to demonstrate a clear understanding of the purpose of risk management and compliance within a regulated environment",
+          "evidence": "Technical studio applying AI-augmented engineering to algorithmic decision systems, pattern recognition engines, and automated risk-scoring architectures. Demonstrates continued production delivery using the same methodology applicable to compliance automation and regulatory tooling."
+        },
+        {
+          "requirement": "experience of working within a regulated investment firm or strong equivalent demonstrable knowledge within a relevant Financial Services firm",
+          "evidence": "Built blockchain infrastructure adopted by licensed financial institutions operating under regulatory oversight"
+        },
+        {
+          "requirement": "Strong knowledge of the regulatory environment in which an FX firm operates",
+          "evidence": "Established R1 as the first blockchain company to enter the SC Malaysia regulatory sandbox, engaging directly in the policy design process"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-monex-europe-4414925120",
+      "cover_letter": null,
+      "notes": "Full match. Title: 28, JD: 57. Keywords: Engineering Director fintech",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-engineering-at-monex-europe-4414925120",
+        "contact_email": null,
+        "linkedin_job_id": "4414925120",
+        "freshness": {
+          "status": "stale",
+          "days_old": 26,
+          "added": "2026-06-17"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      },
+      "linkedin_job_id": "4414925120",
+      "url": "https://www.linkedin.com/jobs/view/4414925120",
+      "scores": {
+        "cto": 57,
+        "regtech": 65,
+        "devrel": 29
+      },
+      "confidence": "high",
+      "reject_reason": "Not suitable"
+    },
+    {
+      "id": "ably-developer-relations-manager-mqmpgx6k",
+      "added": "2026-06-20",
+      "status": "applied",
+      "company": "Ably",
+      "role": "Developer Relations Manager",
+      "location": "United Kingdom",
+      "variant": "devrel",
+      "score": 70,
+      "requirements_found": 92,
+      "matched": 10,
+      "gaps": [
+        "You will work closely together.",
+        "Not just how to use the API.",
+        "But you won't be the only Ably voice."
+      ],
+      "proof_points": [
+        {
+          "requirement": "You'll sit within the Marketing team, working closely with the Developer",
+          "evidence": "Technical writing, API documentation, developer guides, SDK documentation, code samples, tutorial creation, workshop facilitation, hackathon organisation, conference presentations, community building"
+        },
+        {
+          "requirement": "You'll write quickstarts and guides that teach developers how to solve real AI problems with Ably.",
+          "evidence": "Open-source games studio shipping developer-facing engines, Consumer SDKs, MCP tools, and documentation, built entirely using AI-augmented engineering workflows. Deployed the first board game engine MCP server and a full Developers section with API docs, SDK demos, and integration examples."
+        },
+        {
+          "requirement": "Your focus is everything upstream: the content, community, and credibility that brings developers to the door in the first place.",
+          "evidence": "Wrote developer documentation spanning plugins (Build a Variant, Crazyhouse, Poison Chess), consumer integration (Dungeon Chess guide), full API reference, SDK demo page, and a Developers section with connection guides and build examples"
+        },
+        {
+          "requirement": "Your work feeds their funnel.This is an AI-forward role.",
+          "evidence": "LLM-augmented development workflows, AI game engines, procedural generation, MCP (Model Context Protocol)"
+        },
+        {
+          "requirement": "The goal is a company where technical opinions come from many voices, not one.Day to day,",
+          "evidence": "Developer advocate and technical evangelist with 15 years building on, and explaining, blockchain technology. One of Southeast Asia's earliest Bitcoin voices, with a track record of making complex cryptographic concepts accessible to developers, institutions, and the general public alike. Personally designed protocols now running in production (SADO, DN-Key), built open-source SDKs used across the Bitcoin Ordinals ecosystem, and currently shipping open-source game engines with full developer documentation and embed APIs. Spoken at TEDx, FinTech conferences, and developer meetups across Asia and Europe. Using AI-native engineering workflows to ship developer tooling at unprecedented pace. Looking for a DevRel or Technical Evangelist role at a Layer 1/2 protocol, developer tooling company, or infrastructure provider where both the code and the community matter."
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/developer-relations-manager-at-ably-4429320217",
+      "source": "linkedin",
+      "linkedin_job_id": "4429320217",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-06-20. Posted: 2026-06-18.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/developer-relations-manager-at-ably-4429320217",
+        "contact_email": null,
+        "linkedin_job_id": "4429320217",
+        "freshness": {
+          "status": "stale",
+          "days_old": 23,
+          "added": "2026-06-20"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      },
+      "url": "https://www.linkedin.com/jobs/view/4429320217",
+      "scores": {
+        "cto": 58,
+        "regtech": 42,
+        "devrel": 70
+      },
+      "confidence": "high",
+      "date_applied": "2026-07-13",
+      "cv_variant": "devrel",
+      "applied_at": "2026-07-13"
+    },
+    {
+      "id": "sanderson-king-chief-technology-officer",
+      "added": "2026-06-27",
+      "status": "applied",
+      "company": "Sanderson King",
+      "role": "Chief Technology Officer",
+      "location": "London",
+      "variant": "cto",
+      "score": 80,
+      "url": "https://www.linkedin.com/jobs/view/4433086155",
+      "linkedin_job_id": "4433086155",
+      "notes": "Recruiter posting. Industry TBC.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4433086155/",
+        "contact_email": null,
+        "linkedin_job_id": "4433086155",
+        "freshness": {
+          "status": "stale",
+          "days_old": 16,
+          "added": "2026-06-27"
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      },
+      "email": null,
+      "scores": {
+        "cto": 80,
+        "regtech": 58,
+        "devrel": 77
+      },
+      "confidence": "high",
+      "requirements_found": 54,
+      "matched": 19,
+      "gaps": [
+        "experience and day-to-day operations across a growing multi-site estate.Initially, this is a highly hands-on role.",
+        "You'll spend as much time building, integrating and improving systems as",
+        "You'll own technology across a real-world, multi-site operating environment, including:Customer booking platforms",
+        "CRM and customer lifecycle systems",
+        "Operational workflows and automation",
+        "Payments and POS integrations",
+        "Internal operational tools",
+        "Data platforms, reporting and commercial insight"
+      ],
+      "proof_points": [
+        {
+          "requirement": "Technology is central to the future of the business.You'll own the strategy, architecture and delivery of the platforms that power both the customer",
+          "evidence": "Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites: renderer hooks, game controller, replay API, unit templates, terrain predicates, native ESM (same source serves browser, Worker, and Node.js)"
+        },
+        {
+          "requirement": "Cloud infrastructure, security and scalability",
+          "evidence": "Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems"
+        },
+        {
+          "requirement": "We're specifically interested in people who have:Built products and platforms themselves-not simply managed engineering teams",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "AI-enabled workflow improvements",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "Strong software engineering and architecture capability",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4433086155/",
+      "date_applied": "2026-07-13",
+      "cv_variant": "cto",
+      "applied_at": "2026-07-13"
+    },
+    {
+      "id": "bny-director-product-and-innovation---tokeni",
+      "added": "2026-06-27",
+      "status": "applied",
+      "company": "BNY",
+      "role": "Director, Product and Innovation - Tokenisation",
+      "location": "London",
+      "variant": "regtech",
+      "score": 80,
+      "url": "https://www.linkedin.com/jobs/view/4414972986",
+      "linkedin_job_id": "4414972986",
+      "notes": "Digital assets / tokenisation at major bank. Strong blockchain fit.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4414972986/",
+        "contact_email": null,
+        "linkedin_job_id": "4414972986",
+        "freshness": {
+          "status": "stale",
+          "days_old": 16,
+          "added": "2026-06-27"
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      },
+      "email": null,
+      "scores": {
+        "cto": 80,
+        "regtech": 80,
+        "devrel": 78
+      },
+      "confidence": "high",
+      "requirements_found": 44,
+      "matched": 29,
+      "gaps": [
+        "Commercialization & Growth",
+        "Monitor adoption and client feedback to refine and scale offerings.",
+        "To be successful in this role, we’re seeking the following:",
+        "Education: Bachelor’s degree in business, finance, engineering, or related field.",
+        "Translate business opportunities into clear product",
+        "Ensure interoperability with traditional payment infrastructure (ACH, SWIFT, RTP, card networks).",
+        "Commercialization & Growth",
+        "Partner with Product Commercialization to develop go-to-market strategies, pricing models, and performance metrics."
+      ],
+      "proof_points": [
+        {
+          "requirement": "Partner with compliance, legal, and risk functions to ensure products meet regulatory and security standards.",
+          "evidence": "Digital asset regulation, regulatory sandbox, Know Your Customer (KYC), Anti-Money Laundering (AML), Customer Due Diligence (CDD), custody compliance, transaction monitoring, financial crime prevention"
+        },
+        {
+          "requirement": "experience in product management, payments, fintech, or digital assets.",
+          "evidence": "Digital asset custody, RegTech, cryptocurrency compliance, Islamic Finance / FinTech, payments, identity, DeFi (Decentralized Finance), Virtual Asset Service Providers (VASPs)"
+        },
+        {
+          "requirement": "Regulatory Awareness: Familiarity with financial regulations related to payments, AML/KYC, and digital assets.",
+          "evidence": "Active contributor to Malaysia's national Digital Asset regulatory roadmap — engaged directly with SC and Bank Negara Malaysia stakeholders on Anti-Money Laundering (AML) and Know Your Customer (KYC) frameworks"
+        },
+        {
+          "requirement": "Track market trends, regulatory developments, and customer needs to refine product strategy.",
+          "evidence": "Founded and led Malaysia's foremost blockchain infrastructure and regulatory advisory practice for 13 years. R1 sat at the intersection of engineering, compliance, and policy, building production-grade digital asset systems for licensed operators while advising regulators on the frameworks that would govern them."
+        },
+        {
+          "requirement": "Define and own the product roadmap for digital asset–based payments, including stablecoin settlement, deposit tokens and cross-border rails.",
+          "evidence": "Delivered blockchain and distributed ledger training and advisory to DBS Bank (Singapore) and Baker Hostetler (USA, 5-day intensive programme) covering compliance strategy, transaction monitoring, and digital asset custody"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4414972986/",
+      "date_applied": "2026-07-13",
+      "cv_variant": "cto",
+      "applied_at": "2026-07-13"
+    },
+    {
+      "id": "lseg-director-engineering-di&f",
+      "added": "2026-06-27",
+      "status": "rejected",
+      "company": "LSEG",
+      "role": "Director, Engineering DI&F",
+      "location": "London",
+      "variant": "cto",
+      "score": 80,
+      "url": "https://www.linkedin.com/jobs/view/4415090834",
+      "linkedin_job_id": "4415090834",
+      "notes": "London Stock Exchange Group. Fintech infrastructure.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4415090834/",
+        "contact_email": null,
+        "linkedin_job_id": "4415090834",
+        "freshness": {
+          "status": "stale",
+          "days_old": 16,
+          "added": "2026-06-27"
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      },
+      "email": null,
+      "scores": {
+        "cto": 80,
+        "regtech": 51,
+        "devrel": 45
+      },
+      "confidence": "high",
+      "requirements_found": 28,
+      "matched": 15,
+      "gaps": [
+        "experience, and talent engagement.",
+        "experience in software engineering, with 5–",
+        "Technologies you and the organization may use",
+        "essential and your responsibility to ensure that candidates applying to LSEG are aware of this privacy notice.",
+        "We’re building next-generation Risk Intelligence platforms that enable customers to make trusted decisions at scale, in real time.",
+        "As a Director of Engineering,",
+        "experience, and talent engagement.",
+        "experience in software engineering, with 5–"
+      ],
+      "proof_points": [
+        {
+          "requirement": "lead portfolio planning and prioritization while balancing speed, quality, security, and regulatory",
+          "evidence": "Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems"
+        },
+        {
+          "requirement": "Operational efficiency: Optimized engineering costs (cloud, tooling), with predictable, high-quality portfolio delivery",
+          "evidence": "Docker, CI/CD, Cloudflare Workers, LLM-augmented engineering, AI systems"
+        },
+        {
+          "requirement": "You will move beyond team-level execution to org-level leadership, setting the bar for engineering excellence, talent development, and cross-functional impact.",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "experience managing budgets, cost optimization, and investment tradeoffs Excellent communication and stakeholder management",
+          "evidence": "Cross-functional team leadership, hiring, technical roadmap, stakeholder management, hands-on (P4→M3)"
+        },
+        {
+          "requirement": "Engineering excellence: Improved DORA metrics (lead time, deployment frequency, reliability), high service reliability, and consistent SLO attainment",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4415090834/",
+      "reject_reason": "Not interested — requires 5-8+ years leading multiple teams/orgs, enterprise scale mismatch"
+    },
+    {
+      "id": "qognitive-director-of-engineering",
+      "added": "2026-06-27",
+      "status": "rejected",
+      "company": "Qognitive",
+      "role": "Director of Engineering",
+      "location": "England, UK",
+      "variant": "cto",
+      "score": 61,
+      "url": "https://www.linkedin.com/jobs/view/4430658433",
+      "linkedin_job_id": "4430658433",
+      "notes": "Quantum computing / AI company. Director level.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4430658433/",
+        "contact_email": null,
+        "linkedin_job_id": "4430658433",
+        "freshness": {
+          "status": "stale",
+          "days_old": 16,
+          "added": "2026-06-27"
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      },
+      "email": null,
+      "scores": {
+        "cto": 61,
+        "regtech": 33,
+        "devrel": 46
+      },
+      "confidence": "high",
+      "requirements_found": 16,
+      "matched": 10,
+      "gaps": [
+        "experience in software engineering, machine learning infrastructure, or high-performance computing, with at least 3-",
+        "Experience with ML frameworks (Py",
+        "experience in software engineering, machine learning infrastructure, or high-performance computing, with at least 3-",
+        "experience in building scalable model training and deployment pipelines.Proficiency in Python, C++, and distributed computing frameworks (Ray, Dask, Spark, MPI, etc.).",
+        "Experience with ML frameworks (Py",
+        "Flow, JAX) and MLOps tools (MLflow, Weights & Biases, Airflow, etc.).Strong understanding of Dev"
+      ],
+      "proof_points": [
+        {
+          "requirement": "Ops principles, including CI/CD, Kubernetes, and containerization (Docker).Proven track record of leading, mentoring, and scaling engineering teams.Excellent communication and leadership",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "5 years in a leadership role.Prior",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "experience scaling an ML-first startup to production-grade systems.Deep knowledge of ML infrastructure:",
+          "evidence": "Shipped 535 commits across 10+ repositories in 16 days using LLM-augmented development. Demonstrates the methodology's viability for startup-speed delivery at architecture quality"
+        },
+        {
+          "requirement": "experience scaling an ML-first startup to production-grade systems.Deep knowledge of ML infrastructure:",
+          "evidence": "500 Startups Batch 9 (US$300K+ seed sustaining 12 years of operation). Launched at TechCrunch Disrupt London. Blockchain infrastructure company providing compliance-grade tooling to licensed FinTech operators and regulators across Southeast Asia. Team of 5 engineers."
+        },
+        {
+          "requirement": "experience in building scalable model training and deployment pipelines.Proficiency in Python, C++, and distributed computing frameworks (Ray, Dask, Spark, MPI, etc.).",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4430658433/",
+      "reject_reason": "Not suitable"
+    },
+    {
+      "id": "product-partners-chief-technology-officer",
+      "added": "2026-06-27",
+      "status": "rejected",
+      "company": "Product Partners",
+      "role": "Chief Technology Officer",
+      "location": "London",
+      "variant": "devrel",
+      "score": 71,
+      "url": "https://www.linkedin.com/jobs/view/4416637061",
+      "linkedin_job_id": "4416637061",
+      "notes": "Product consultancy. High skills match.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4416637061/",
+        "contact_email": null,
+        "linkedin_job_id": "4416637061",
+        "freshness": {
+          "status": "stale",
+          "days_old": 16,
+          "added": "2026-06-27"
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      },
+      "email": null,
+      "scores": {
+        "cto": 55,
+        "regtech": 47,
+        "devrel": 71
+      },
+      "confidence": "high",
+      "requirements_found": 32,
+      "matched": 13,
+      "gaps": [
+        "Improving platform scalability, performance and user",
+        "Exploring opportunities to diversify revenue streams",
+        "Experience leading both Engineering and Product organisations",
+        "Experience within high-growth consumer technology businesses",
+        "Worked on platforms serving millions of users",
+        "A track record of improving engineering productivity and delivery velocity",
+        "Strong commercial awareness and an understanding of advertising monetisation models",
+        "The ability to operate as both strategist and operator"
+      ],
+      "proof_points": [
+        {
+          "requirement": "Unlocking value from millions of community interactions and content signals",
+          "evidence": "Technical writing, API documentation, developer guides, SDK documentation, code samples, tutorial creation, workshop facilitation, hackathon organisation, conference presentations, community building"
+        },
+        {
+          "requirement": "Reimagining how Product and Engineering work together in an AI-first environment",
+          "evidence": "Open-source games studio shipping developer-facing engines, Consumer SDKs, MCP tools, and documentation, built entirely using AI-augmented engineering workflows. Deployed the first board game engine MCP server and a full Developers section with API docs, SDK demos, and integration examples."
+        },
+        {
+          "requirement": "Successfully delivered AI transformation initiatives at scale",
+          "evidence": "LLM-augmented development workflows, AI game engines, procedural generation, MCP (Model Context Protocol)"
+        },
+        {
+          "requirement": "We're particularly interested in leaders who have already redefined how teams work in the age of AI, rather than those still exploring what AI might mean for their organisation.Ideal Profile",
+          "evidence": "MCP Tools Server ( tools.moddable.games ) — first board game engine MCP server: 16 AI-callable tools, MCP + REST + OpenAPI + llms.txt, Cloudflare Worker on free tier. Connect with one command from Claude Desktop, Cursor, or VS Code"
+        },
+        {
+          "requirement": "Reimagining how Product and Engineering work together in an AI-first environment",
+          "evidence": "Built the entire product suite using LLM-driven development at production scale: native ESM, zero build step, same source serves browser + Worker + Node.js"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4416637061/",
+      "reject_reason": "Location — San Francisco, not viable"
+    },
+    {
+      "id": "overstory-chief-technology-officer",
+      "added": "2026-06-27",
+      "status": "rejected",
+      "company": "Overstory",
+      "role": "Chief Technology Officer",
+      "location": "United Kingdom",
+      "variant": "cto",
+      "score": 79,
+      "url": "https://www.linkedin.com/jobs/view/4377882825",
+      "linkedin_job_id": "4377882825",
+      "notes": "Climate tech. Remote-first.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4377882825/",
+        "contact_email": null,
+        "linkedin_job_id": "4377882825",
+        "freshness": {
+          "status": "stale",
+          "days_old": 16,
+          "added": "2026-06-27"
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      },
+      "email": null,
+      "scores": {
+        "cto": 79,
+        "regtech": 77,
+        "devrel": 77
+      },
+      "confidence": "high",
+      "requirements_found": 68,
+      "matched": 20,
+      "gaps": [
+        "Listening: You lead with inquiry.",
+        "experience working on a complex, ML-based product.",
+        "Bonus points for geospatial or remote sensing",
+        "You have a deep understanding of software development processes and are product-centric in the way you think about building technology.",
+        "You have managed remote teams.You have managed global teams.",
+        "We also offer the option to occasionally meet up for in-person collaboration.",
+        "The climate crisis is a human crisis that requires diverse perspectives to solve.We place enormous value on",
+        "diversity and believe that the best ideas emerge when people with different backgrounds and"
+      ],
+      "proof_points": [
+        {
+          "requirement": "You’re an entrepreneurial startup leader with a track record of leading engineering teams from Series A through Series C and beyond with a mix of boldness and empathy.",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "You know how to inspire global teams with an exciting vision while offering them the hands-on support to bring it to life.You have a strong network to tap, and you are bold in your recruiting.",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "Foster an inclusive culture where everyone can do their best work.Create strong lines of communication within your team and partnerships with other key parts of the business.",
+          "evidence": "Joined a 170-engineer company as P4 Engineer; promoted to M3 Manager within months. Tasked with designing novel Bitcoin meta-protocols, then given mandate to form and lead a new Moonshot team (grown from 1 to 10) whose first output became Cake's fifth business vertical."
+        },
+        {
+          "requirement": "You make people on your own team and across the company feel heard.Curiosity: Learning excites you, and you’re not afraid to admit",
+          "evidence": "500 Startups Batch 9 (US$300K+ seed sustaining 12 years of operation). Launched at TechCrunch Disrupt London. Blockchain infrastructure company providing compliance-grade tooling to licensed FinTech operators and regulators across Southeast Asia. Team of 5 engineers."
+        },
+        {
+          "requirement": "You have managed a team of 70+ people.You have been on a VC-backed startup journey from Series A through Series C or later, and you know how to scale a team successfully through those transitions.",
+          "evidence": "Ranked Top 5 by VentureBeat from 500 Startups Batch 9; the only Malaysian company in Deloitte's Top 50 Global RegTech"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4377882825/",
+      "reject_reason": "Not suitable — hardware/sensory focus, requires Series A-G scaling experience"
+    },
+    {
+      "id": "chainalysis-senior-manager-engineering-c-mqxuzwve",
+      "added": "2026-06-28",
+      "status": "rejected",
+      "company": "Chainalysis",
+      "role": "Senior Manager, Engineering-Clustering & Exposure",
+      "location": "London",
+      "variant": "cto",
+      "score": 60,
+      "requirements_found": 45,
+      "matched": 7,
+      "gaps": [
+        "Strong hands-on software and data engineering",
+        "There is no substitute for your own curiosity.",
+        "experience and thought makes us stronger.",
+        "We’re ensuring we keep learning by committing to continually revisit and reevaluate our",
+        "diversity culture.We encourage applicants across any race, ethnicity, gender/gender expression, age, spirituality, ability,",
+        "If you need any accommodations to make our interview process more accessible to you due to a disability, don't hesitate to let us know."
+      ],
+      "proof_points": [
+        {
+          "requirement": "experience with blockchain technology, cryptocurrency protocols, or on-chain data analysis.",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "Chainalysis is the blockchain data platform, making it easy to connect the movement of digital assets to real-world services.",
+          "evidence": "UTXO scripting, Schnorr/Taproot, Ordinals, Inscriptions, Runes, BRC-20, BitcoinJS, digital assets"
+        },
+        {
+          "requirement": "experience with blockchain technology, cryptocurrency protocols, or on-chain data analysis.",
+          "evidence": "Authored Everstore protocol (25-page whitepaper) — complete relational database engine mapped onto BIP32 key derivation with CRUD, encryption tiers, and audit trails on UTXO chains, before Ethereum existed"
+        },
+        {
+          "requirement": "Our mission is to build trust in blockchains, blending safety and security with an unwavering commitment to growth and innovation.You belong here.",
+          "evidence": "Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems"
+        },
+        {
+          "requirement": "We're a global organization that thrives on challenging work and doing it alongside exceptionally talented teammates.",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4432844139",
+      "source": "linkedin",
+      "linkedin_job_id": "4432844139",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-06-28. Posted: 2026-06-24.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4432844139",
+        "contact_email": null,
+        "linkedin_job_id": "4432844139",
+        "freshness": {
+          "status": "stale",
+          "days_old": 15,
+          "added": "2026-06-28"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      },
+      "scores": {
+        "cto": 60,
+        "regtech": 52,
+        "devrel": 57
+      },
+      "confidence": "high",
+      "reject_reason": "Not suitable"
+    },
+    {
+      "id": "bestman-solutions-chief-architect-mqxuzwve",
+      "added": "2026-06-28",
+      "status": "applied",
+      "company": "Bestman Solutions",
+      "role": "Chief Architect",
+      "location": "London",
+      "variant": "cto",
+      "score": 71,
+      "requirements_found": 38,
+      "matched": 10,
+      "gaps": [
+        "experience designing and architecting enterprise-scale platforms",
+        "Credibility with engineers, architects, and senior business stakeholders alike",
+        "experience designing and architecting enterprise-scale platforms"
+      ],
+      "proof_points": [
+        {
+          "requirement": "Establishing architecture principles around resilience, scalability, security, compliance, and operational readiness",
+          "evidence": "Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems"
+        },
+        {
+          "requirement": "Determining appropriate on-chain, off-chain, and hybrid architecture models",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "experience with digital assets, tokenisation, DLT, blockchain, or related technologies",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "Evaluating DLT, blockchain, and distributed systems technologies",
+          "evidence": "UTXO scripting, Schnorr/Taproot, Ordinals, Inscriptions, Runes, BRC-20, BitcoinJS, digital assets"
+        },
+        {
+          "requirement": "Establishing architecture principles around resilience, scalability, security, compliance, and operational readiness",
+          "evidence": "Designed and built internal cryptographic framework underpinning the passkey wallet architecture"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4431853339",
+      "source": "linkedin",
+      "linkedin_job_id": "4431853339",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-06-28. Posted: 2026-06-24.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4431853339",
+        "contact_email": null,
+        "linkedin_job_id": "4431853339",
+        "freshness": {
+          "status": "stale",
+          "days_old": 15,
+          "added": "2026-06-28"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      },
+      "scores": {
+        "cto": 71,
+        "regtech": 63,
+        "devrel": 45
+      },
+      "confidence": "high",
+      "date_applied": "2026-07-13",
+      "cv_variant": "cto",
+      "applied_at": "2026-07-13"
+    },
+    {
+      "id": "mastercard-vp-product-stablecoins",
+      "added": "2026-07-05",
+      "status": "applied",
+      "company": "Mastercard",
+      "role": "Vice President, Product Management, Stablecoins",
+      "location": "London",
+      "variant": "cto",
+      "score": 80,
+      "url": "https://www.linkedin.com/jobs/view/4413627747",
+      "linkedin_job_id": "4413627747",
+      "notes": "VP-level, stablecoins at Mastercard. Perfect blockchain+institutional alignment. Top target.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4413627747/",
+        "contact_email": null,
+        "linkedin_job_id": "4413627747",
+        "freshness": {
+          "status": "aging",
+          "days_old": 8,
+          "added": "2026-07-05"
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      },
+      "email": null,
+      "scores": {
+        "cto": 80,
+        "regtech": 80,
+        "devrel": 79
+      },
+      "confidence": "high",
+      "requirements_found": 36,
+      "matched": 18,
+      "gaps": [
+        "Experience in treasury services or transaction banking is highly valued.",
+        "desirable Payments expertise:",
+        "Treasury and transaction banking",
+        "Experience in bringing new products to market, including concept definition and validation, business",
+        "experience building value propositions for all participants in a payments ecosystem, including Mastercard, our customers, and partners Communication",
+        "Ensure the confidentiality and integrity of the information being accessed",
+        "Mastercard powers economies and empowers people in 200+ countries and territories worldwide.",
+        "We support a wide range of digital payments choices, making transactions secure, simple, smart and accessible."
+      ],
+      "proof_points": [
+        {
+          "requirement": "Lead product and business engagements with third-party and distributed blockchains to facilitate payment product enablement and mutually beneficial business outcomes.",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "Experience building and contributing to well-known blockchain or crypto projects is",
+          "evidence": "UTXO scripting, Schnorr/Taproot, Ordinals, Inscriptions, Runes, BRC-20, BitcoinJS, digital assets"
+        },
+        {
+          "requirement": "Report any suspected information security violation or breach, and",
+          "evidence": "Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems"
+        },
+        {
+          "requirement": "Vice President, Product Management, Stablecoins",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "Vice President, Product Management, Stablecoins",
+          "evidence": "Cross-functional team leadership, hiring, technical roadmap, stakeholder management, hands-on (P4→M3)"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4413627747/",
+      "date_applied": "2026-07-13",
+      "cv_variant": "cto",
+      "applied_at": "2026-07-13"
+    },
+    {
+      "id": "ripple-staff-partner-engineer",
+      "added": "2026-07-05",
+      "status": "rejected",
+      "company": "Ripple",
+      "role": "Staff Partner Engineer",
+      "location": "London",
+      "variant": "cto",
+      "score": 69,
+      "url": "https://www.linkedin.com/jobs/view/4417127444",
+      "linkedin_job_id": "4417127444",
+      "notes": "Partner-facing engineering. DevRel adjacent but IC-level. Good crypto brand.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4417127444/",
+        "contact_email": null,
+        "linkedin_job_id": "4417127444",
+        "freshness": {
+          "status": "aging",
+          "days_old": 8,
+          "added": "2026-07-05"
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      },
+      "email": null,
+      "scores": {
+        "cto": 69,
+        "regtech": 69,
+        "devrel": 71
+      },
+      "confidence": "high",
+      "requirements_found": 49,
+      "matched": 12,
+      "gaps": [
+        "you will tackle challenges head-on and unlock new opportunities for our groundbreaking payment ecosystem.",
+        "Handles mid-sized customers and partners independently",
+        "Drive the design, deployment, and successful usage of new solutions",
+        "Guide customers/partners to achieve maximum",
+        "8+ years of IT/software proven",
+        "Ability to enable real-world, global use cases with new technologies and innovative thinking",
+        "A strong understanding of network principles and design, and an appreciation of financial services networks",
+        "Has a full understanding of the wider market dynamics, challenges, and technological advancements surrounding Ripple and its customers/partners to enable insightful problem solving"
+      ],
+      "proof_points": [
+        {
+          "requirement": "Get ready to collaborate with a diverse range of team members and contribute to the deployment of Ripple's transformative solutions worldwide.",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "Serves as the functional and technical specialist to achieve the business objectives of both customers and partners and Ripple",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "Responsible for the entire delivery life cycle, starting from training, conducting meetings, testing configurations, and launch support",
+          "evidence": "Shipped 535 commits across 10+ repositories in 16 days using LLM-augmented development. Demonstrates the methodology's viability for startup-speed delivery at architecture quality"
+        },
+        {
+          "requirement": "experience with software development (ideally writing production code)WHO WE ARE:Do Your Best Work",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "This is your chance to be part of a team that is crafting the future of financial technology and driving outstanding change in the industry!",
+          "evidence": "Cross-functional team leadership, hiring, technical roadmap, stakeholder management, hands-on (P4→M3)"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4417127444/",
+      "reject_reason": "Not suitable"
+    },
+    {
+      "id": "griffin-engineering-manager",
+      "added": "2026-07-05",
+      "status": "rejected",
+      "company": "Griffin",
+      "role": "Engineering Manager",
+      "location": "London",
+      "variant": "cto",
+      "score": 78,
+      "url": "https://www.linkedin.com/jobs/view/4426162541",
+      "linkedin_job_id": "4426162541",
+      "notes": "FCA-regulated banking platform. Eng management. Strong regulatory + tech intersection.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4426162541/",
+        "contact_email": null,
+        "linkedin_job_id": "4426162541",
+        "freshness": {
+          "status": "aging",
+          "days_old": 8,
+          "added": "2026-07-05"
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      },
+      "email": null,
+      "scores": {
+        "cto": 78,
+        "regtech": 74,
+        "devrel": 73
+      },
+      "confidence": "high",
+      "requirements_found": 51,
+      "matched": 17,
+      "gaps": [
+        "You'll create an environment where engineers have high autonomy, psychological safety, and the space to do their best work.",
+        "This could be how pitches get shaped so engineers have better context upfront, or fixing a process that was slowing everyone down.",
+        "We place a lot of emphasis on our Engineering Leaders having the technical",
+        "How do I apply?Are we your next move?",
+        "We trust people to do great work wherever they are.",
+        "We hire across the UK and most of our team works remotely full-time.",
+        "We have a small London office in Moorgate for those who want it, and about a third of the company is close enough to use it occasionally, but there's no expectation to be there.",
+        "What matters is the work, not where you do it.Under representation"
+      ],
+      "proof_points": [
+        {
+          "requirement": "As we grow, you'll help us scale without losing what makes us good - hiring people who raise the bar and helping your team members develop.You'll shape what gets built.",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "Comfort with high autonomy and startup pace - you trust your team to make decisions, priorities shift, and you don't need perfect clarity to move forward",
+          "evidence": "500 Startups Batch 9 (US$300K+ seed sustaining 12 years of operation). Launched at TechCrunch Disrupt London. Blockchain infrastructure company providing compliance-grade tooling to licensed FinTech operators and regulators across Southeast Asia. Team of 5 engineers."
+        },
+        {
+          "requirement": "You've built a culture where people have high autonomy, feel safe to raise problems, and focus on impact over just being busy.",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "The team ships quality work consistently because you've created an environment where that's possible.",
+          "evidence": "Cross-functional team leadership, hiring, technical roadmap, stakeholder management, hands-on (P4→M3)"
+        },
+        {
+          "requirement": "Delivery through Shape Up cycles - turning pitches into work engineers can execute, managing the shape/architect/build phases, making sure what ships actually solves the customer problem",
+          "evidence": "Shipped 535 commits across 10+ repositories in 16 days using LLM-augmented development. Demonstrates the methodology's viability for startup-speed delivery at architecture quality"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4426162541/",
+      "reject_reason": "Tech stack not suitable (Griffin)"
+    },
+    {
+      "id": "novera-cto",
+      "added": "2026-07-05",
+      "status": "applied",
+      "company": "Novera Search",
+      "role": "Chief Technology Officer",
+      "location": "United Kingdom",
+      "variant": "cto",
+      "score": 71,
+      "url": "https://www.linkedin.com/jobs/view/4432956820",
+      "linkedin_job_id": "4432956820",
+      "notes": "CTO via recruiter. Unknown company size/sector.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4432956820/",
+        "contact_email": null,
+        "linkedin_job_id": "4432956820",
+        "freshness": {
+          "status": "aging",
+          "days_old": 8,
+          "added": "2026-07-05"
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      },
+      "email": null,
+      "scores": {
+        "cto": 71,
+        "regtech": 43,
+        "devrel": 64
+      },
+      "confidence": "high",
+      "requirements_found": 34,
+      "matched": 13,
+      "gaps": [
+        "experience (modern JS frameworks, APIs, databases)Comfortable owning the entire stack end-to-end",
+        "Experience building and shipping real products",
+        "Self-starter who thrives in early-stage, ambiguous environments",
+        "Experience with consumer-facing products",
+        "Experience building interactive or data-driven platforms",
+        "Opportunity to join at a very early stage as a key technical hire",
+        "High ownership and direct impact on product direction",
+        "Clear pathway to evolve into a long-term founding role with meaningful equity"
+      ],
+      "proof_points": [
+        {
+          "requirement": "Small, fast-moving team",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "Building and shipping the core product across the full stack",
+          "evidence": "Designed and shipped multiple production systems: KYC/AML pipelines, blockchain wallets, learning management, and digital identity platforms — full-stack from protocol to UI"
+        },
+        {
+          "requirement": "Turning an early prototype into a scalable, production-ready platform",
+          "evidence": "Shipped 535 commits across 10+ repositories in 16 days using LLM-augmented development. Demonstrates the methodology's viability for startup-speed delivery at architecture quality"
+        },
+        {
+          "requirement": "Working closely with the founder on product decisions and UXDesigning and implementing core backend systems and user-facing features",
+          "evidence": "Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites: renderer hooks, game controller, replay API, unit templates, terrain predicates, native ESM (same source serves browser, Worker, and Node.js)"
+        },
+        {
+          "requirement": "Integrating third-party services and lightweight AI functionality where relevant",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4432956820/",
+      "date_applied": "2026-07-13",
+      "cv_variant": "cto",
+      "applied_at": "2026-07-13"
+    },
+    {
+      "id": "proton-engineering-director",
+      "added": "2026-07-05",
+      "status": "rejected",
+      "company": "Proton",
+      "role": "Engineering Director",
+      "location": "London",
+      "variant": "cto",
+      "score": 78,
+      "url": "https://www.linkedin.com/jobs/view/4338294320",
+      "linkedin_job_id": "4338294320",
+      "notes": "Proton (privacy-first tech company). Engineering Director. Strong product company, good values alignment.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4338294320/",
+        "contact_email": null,
+        "linkedin_job_id": "4338294320",
+        "freshness": {
+          "status": "aging",
+          "days_old": 8,
+          "added": "2026-07-05"
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      },
+      "email": null,
+      "scores": {
+        "cto": 78,
+        "regtech": 77,
+        "devrel": 77
+      },
+      "confidence": "high",
+      "requirements_found": 71,
+      "matched": 22,
+      "gaps": [
+        "Drive continuous improvement in our Dev",
+        "Our Tech stack:Applied cryptography (PGP, TLS, etc.)REST APIs",
+        "PHP (Symfony), Rust, Pythoni",
+        "Experience in software engineering in progressively complex roles",
+        "Experience directly leading and managing engineers",
+        "experience as a manager of managers",
+        "Great empathy and collaboration",
+        "A curious, passionate, and growth-oriented mindset"
+      ],
+      "proof_points": [
+        {
+          "requirement": "Hold yourself and team accountable for timely delivery of scalable, quality-focus user",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "Ops practices, and improve lead times and time to market while maintaining exceptional standards of product quality",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "Event architectures HTTP networking",
+          "evidence": "Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites: renderer hooks, game controller, replay API, unit templates, terrain predicates, native ESM (same source serves browser, Worker, and Node.js)"
+        },
+        {
+          "requirement": "Lead technical design and platform discussions",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "Develop efficient processes, and motivate your team to operate with high velocity, ownership, and accountability",
+          "evidence": "Joined a 170-engineer company as P4 Engineer; promoted to M3 Manager within months. Tasked with designing novel Bitcoin meta-protocols, then given mandate to form and lead a new Moonshot team (grown from 1 to 10) whose first output became Cake's fifth business vertical."
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4338294320/",
+      "reject_reason": "Not suitable"
+    },
+    {
+      "id": "bcg-senior-director-developer-experience",
+      "added": "2026-07-05",
+      "status": "rejected",
+      "company": "BCG",
+      "role": "Global IT Senior Director - Developer Experience",
+      "location": "London",
+      "variant": "cto",
+      "score": 79,
+      "url": "https://www.linkedin.com/jobs/view/4420049158",
+      "linkedin_job_id": "4420049158",
+      "notes": "Developer experience leadership at BCG. DevRel-adjacent in consultancy context.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4420049158/",
+        "contact_email": null,
+        "linkedin_job_id": "4420049158",
+        "freshness": {
+          "status": "aging",
+          "days_old": 8,
+          "added": "2026-07-05"
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      },
+      "email": null,
+      "scores": {
+        "cto": 79,
+        "regtech": 77,
+        "devrel": 78
+      },
+      "confidence": "high",
+      "requirements_found": 57,
+      "matched": 22,
+      "gaps": [
+        "Experience pillar of the Platform",
+        "Spanning the Engineering Toolkit, SDLC, and Dev Productivity squads,",
+        "You will be measured on the impact your tooling and enablement help BCG’S digital builders to achieve.",
+        "Experience and Customer Engagement pillar leads",
+        "Senior-level engineering and platform leadership",
+        "Experience inside a consulting, professional-services, or fast-moving product environment is a strong plus — particularly where you have served senior partners, MDPs, or principal enginee",
+        "Equal Opportunity Employer.",
+        "for more information on E-Verify."
+      ],
+      "proof_points": [
+        {
+          "requirement": "Experience Portfolio, with end-to-end accountability for the tools, paved roads, and engineering enablement that make BCG’s software builders faster, safer, and more capable in the AI era.",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "Ex organization, line-managing the Team Lead and squad leads (Engineering Toolkit, SDLC, Dev Productivity)",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "develop senior engineers and managers who can engage credibly with partner-org technical leadership on their hardest problems Build and operate the Dev",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "you will lead a multi-million-dollar capability that serves engineering leaders across BCG X, Platinion, Helix, Core IT, and EP&E — partnering closely with them on",
+          "evidence": "Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites: renderer hooks, game controller, replay API, unit templates, terrain predicates, native ESM (same source serves browser, Worker, and Node.js)"
+        },
+        {
+          "requirement": "Experience leadership team and EP&E governance forums",
+          "evidence": "Cross-functional team leadership, hiring, technical roadmap, stakeholder management, hands-on (P4→M3)"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4420049158/",
+      "reject_reason": "Not interested"
+    },
+    {
+      "id": "sothebys-svp-engineering",
+      "added": "2026-07-05",
+      "status": "applied",
+      "company": "Sothebys",
+      "role": "SVP, Engineering",
+      "location": "London",
+      "variant": "cto",
+      "score": 79,
+      "url": "https://www.linkedin.com/jobs/view/4430152188",
+      "linkedin_job_id": "4430152188",
+      "notes": "SVP Engineering at luxury/art marketplace. Digital assets (NFTs) overlap possible. Very senior.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4430152188/",
+        "contact_email": null,
+        "linkedin_job_id": "4430152188",
+        "freshness": {
+          "status": "aging",
+          "days_old": 8,
+          "added": "2026-07-05"
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      },
+      "email": null,
+      "scores": {
+        "cto": 79,
+        "regtech": 77,
+        "devrel": 67
+      },
+      "confidence": "high",
+      "requirements_found": 51,
+      "matched": 22,
+      "gaps": [
+        "solution-oriented mindset and work approach",
+        "Charisma and a natural ability to connect with others",
+        "Agile and organized working style to manage and consistently prioritize key initiatives",
+        "To view our Candidate Privacy Notice for the US, please click here.To view our Candidate Privacy Notice for the UK, Hong Kong, France and Switzerland, please click here.The Company is an",
+        "Sotheby’s Financial Services is a leading art lender and provides capital solutions for collectors around the world, having originated more than $12 billion in loans since its inception.",
+        "establish clear career paths",
+        "and foster a culture of accountability, craft, and continuous improvement",
+        "Experience with one or more general purpose programming languages including but not limited to: Java"
+      ],
+      "proof_points": [
+        {
+          "requirement": "Serve as the senior technical decision-maker for architecture, platform, and build-vs-buy choices, balancing long-term scalability with pragmatic near-term execution",
+          "evidence": "Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites: renderer hooks, game controller, replay API, unit templates, terrain predicates, native ESM (same source serves browser, Worker, and Node.js)"
+        },
+        {
+          "requirement": "Establish and uphold engineering standards across code quality, automated testing, security, and operational reliability, including 24x7 availability of production systems",
+          "evidence": "Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems"
+        },
+        {
+          "requirement": "You will lead a team of engineers, engineering managers, and technical leads, setting a high bar for talent, culture, and delivery.",
+          "evidence": "Cross-functional team leadership, hiring, technical roadmap, stakeholder management, hands-on (P4→M3)"
+        },
+        {
+          "requirement": "experience with Amazon Web Services, Google Cloud Platform, or Azure technologies",
+          "evidence": "Docker, CI/CD, Cloudflare Workers, LLM-augmented engineering, AI systems"
+        },
+        {
+          "requirement": "detail-oriented strategic thinker",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4430152188/",
+      "date_applied": "2026-07-13",
+      "cv_variant": "cto",
+      "applied_at": "2026-07-13"
+    },
+    {
+      "id": "fyst-head-of-engineering-cto",
+      "added": "2026-07-05",
+      "status": "rejected",
+      "company": "FYST",
+      "role": "Head of Engineering / CTO (Partner Company Role)",
+      "location": "United Kingdom",
+      "variant": "cto",
+      "score": 79,
+      "url": "https://www.linkedin.com/jobs/view/4432000958",
+      "linkedin_job_id": "4432000958",
+      "notes": "CTO/HoE via FYST (talent platform placing into partner companies). Good seniority.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4432000958/",
+        "contact_email": null,
+        "linkedin_job_id": "4432000958",
+        "freshness": {
+          "status": "aging",
+          "days_old": 8,
+          "added": "2026-07-05"
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      },
+      "email": null,
+      "scores": {
+        "cto": 79,
+        "regtech": 79,
+        "devrel": 78
+      },
+      "confidence": "high",
+      "requirements_found": 46,
+      "matched": 21,
+      "gaps": [
+        "build a culture of end-to-end ownership and accountability",
+        "Design APIs and integration strategies",
+        "establish coding, architectural, and infrastructure standards",
+        "experience as a CTO, Head of Engineering, or Principal Architect in a high-load Saa",
+        "Strong hands-on development background, especially in Go and Python",
+        "Familiar with PCI DSS compliance and secure system design",
+        "Comfortable with vendor evaluation, negotiation, and tooling decisions",
+        "You understand how engineering decisions affect revenue, risk, and customer trust"
+      ],
+      "proof_points": [
+        {
+          "requirement": "Manage cybersecurity protocols, disaster recovery, and business continuity in collaboration with Dev",
+          "evidence": "Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems"
+        },
+        {
+          "requirement": "Define and drive architectural strategy, introducing clear engineering governance — RFCs, tech radar, vendor evaluation, and practical risk management — without unnecessary bureaucracy",
+          "evidence": "Cross-functional team leadership, hiring, technical roadmap, stakeholder management, hands-on (P4→M3)"
+        },
+        {
+          "requirement": "Track record of improving reliability, delivery speed, and infrastructure efficiency (uptime, MTTR, MTTD, release cadence, cloud cost)Solid understanding of Dev",
+          "evidence": "Docker, CI/CD, Cloudflare Workers, LLM-augmented engineering, AI systems"
+        },
+        {
+          "requirement": "Comprehensive technical background across architecture, cloud platforms, security, and distributed systems, with a focus on scalability, reliability, and strategic technology leadership",
+          "evidence": "Co-founded and led the technical pivot from consumer app to passkey-native wallet infrastructure provider, building on prototype work from Project Eden (weekend hackathon → production architecture). The pivot secured DraperVC investment."
+        },
+        {
+          "requirement": "You'll own the company's full technical direction: architecture, reliability, delivery, infrastructure, and the people who make it happen",
+          "evidence": "Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites: renderer hooks, game controller, replay API, unit templates, terrain predicates, native ESM (same source serves browser, Worker, and Node.js)"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4432000958/",
+      "reject_reason": "Tech stack not suitable"
+    },
+    {
+      "id": "fanalysis-cto",
+      "added": "2026-07-05",
+      "status": "rejected",
+      "company": "Fanalysis",
+      "role": "CTO",
+      "location": "London",
+      "variant": "cto",
+      "score": 80,
+      "url": "https://www.linkedin.com/jobs/view/4362257595",
+      "linkedin_job_id": "4362257595",
+      "notes": "CTO at Fanalysis (sports/data). London based. Startup.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4362257595/",
+        "contact_email": null,
+        "linkedin_job_id": "4362257595",
+        "freshness": {
+          "status": "aging",
+          "days_old": 8,
+          "added": "2026-07-05"
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      },
+      "email": null,
+      "scores": {
+        "cto": 80,
+        "regtech": 77,
+        "devrel": 74
+      },
+      "confidence": "high",
+      "requirements_found": 32,
+      "matched": 20,
+      "gaps": [
+        "You’ve scaled a platform through high growth, handling issues like concurrency, latency, caching, and load balancing under pressure",
+        "You’re collaborative, low-ego, and motivated by building something that genuinely improves the fan",
+        "experience with LLMs, vector databases, real-time ML inference, or agentic frameworks",
+        "This is a full-time role based in London.",
+        "Our office is in Soho and we believe in the",
+        "You’ve scaled a platform through high growth, handling issues like concurrency, latency, caching, and load balancing under pressure",
+        "You’ve worked on or built a B2B data platform, including delivery to third-party clients under SLAs",
+        "You've implemented AI/ML in production, whether for content moderation, recommendations, NLP, or operational automation"
+      ],
+      "proof_points": [
+        {
+          "requirement": "You have a clear point of view on how AI transforms product development, internal operations, and team structure",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "You’re fluent in data architecture and know how to design data stacks, APIs, and dashboards that deliver timely, accurate insights to clients",
+          "evidence": "Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites: renderer hooks, game controller, replay API, unit templates, terrain predicates, native ESM (same source serves browser, Worker, and Node.js)"
+        },
+        {
+          "requirement": "You’re confident balancing speed of delivery with tech debt management and long-term scalability",
+          "evidence": "Cross-functional team leadership, hiring, technical roadmap, stakeholder management, hands-on (P4→M3)"
+        },
+        {
+          "requirement": "You've implemented AI/ML in production, whether for content moderation, recommendations, NLP, or operational automation",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "You understand how to balance fast iteration with technical robustness, and how to design systems that power both fan-facing",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4362257595/",
+      "reject_reason": "Not interested"
+    },
+    {
+      "id": "xapo-bank-head-of-engineering-mr94n3z6",
+      "added": "2026-07-06",
+      "status": "rejected",
+      "company": "Xapo Bank",
+      "role": "Head of Engineering",
+      "location": "Remote (Gibraltar)",
+      "variant": "cto",
+      "score": 79,
+      "scores": {
+        "cto": 79,
+        "regtech": 79,
+        "devrel": 78
+      },
+      "confidence": "high",
+      "requirements_found": 103,
+      "matched": 26,
+      "gaps": [
+        "You own:The unified Software Development Lifecycle: you define it, evolve it, and own its governance and enforcement.",
+        "EMs run it day-to-day in their tribes.",
+        "The function-level tech-debt roadmap and engineering capacity planning.",
+        "Engineering incident response and post-mortems, and the closure of resulting action items.",
+        "The quality framework and quality gates - with the Head of Quality Engineering.",
+        "You own the practices that surface shortfalls early and the remediation that closes the gap.",
+        "Engineering standards and practice - you set and enforce the engineering bar: code review standards, retrospectives, and the feedback loops that keep them healthy across the tribes.",
+        "You are accountable for the EMs you develop and the standard they operate to."
+      ],
+      "proof_points": [
+        {
+          "requirement": "Building and running that organisation is the job.We are a Bitcoin-native, regulated bank.",
+          "evidence": "UTXO scripting, Schnorr/Taproot, Ordinals, Inscriptions, Runes, BRC-20, BitcoinJS, digital assets"
+        },
+        {
+          "requirement": "You partner on:Architecture standards - with the Solutions Architect, agreed at the Architecture Advice Forum.",
+          "evidence": "Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites: renderer hooks, game controller, replay API, unit templates, terrain predicates, native ESM (same source serves browser, Worker, and Node.js)"
+        },
+        {
+          "requirement": "A defect here can move customer Bitcoin and customer Dollars, under the scrutiny of two regulators.",
+          "evidence": "Deepened UTXO expertise across Schnorr signatures, Taproot, Ordinals, Inscriptions, and Runes"
+        },
+        {
+          "requirement": "Security standards and controls - with the Security function.",
+          "evidence": "Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems"
+        },
+        {
+          "requirement": "People management of Engineering Managers - performance management, growth, 1:1 cadence, and engineering hiring across the function.",
+          "evidence": "Cross-functional team leadership, hiring, technical roadmap, stakeholder management, hands-on (P4→M3)"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4434492291",
+      "source": "linkedin",
+      "linkedin_job_id": "4434492291",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-06. Posted: 2026-06-29.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4434492291",
+        "contact_email": null,
+        "linkedin_job_id": "4434492291",
+        "freshness": {
+          "status": "recent",
+          "days_old": 7,
+          "added": "2026-07-06"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      },
+      "reject_reason": "Not suitable"
+    },
+    {
+      "id": "wintermute-product-engineering-tech-lead-mr94n3z8",
+      "added": "2026-07-06",
+      "status": "applied",
+      "company": "Wintermute",
+      "role": "Product Engineering Tech Lead",
+      "location": "London, UK",
+      "variant": "cto",
+      "score": 80,
+      "scores": {
+        "cto": 80,
+        "regtech": 57,
+        "devrel": 45
+      },
+      "confidence": "high",
+      "requirements_found": 30,
+      "matched": 16,
+      "gaps": [
+        "Think of this as a mini-CTO role:",
+        "8+ years of software engineering",
+        "you will be deeply technical.Write us a short, honest, and direct message about why you want to lead engineering at Wintermute.",
+        "Read more here.Working at Wintermute",
+        "Think of this as a mini-CTO role:",
+        "8+ years of software engineering",
+        "Script, React, Node.js — and the ability to evaluate and adopt new technologies as needed.Hands-on server-side",
+        "Sockets, message queues, databases, and how frontend and backend systems work together in high-performance environments."
+      ],
+      "proof_points": [
+        {
+          "requirement": "you will own architecture decisions, set technical direction, and drive the engineering culture for the team building Wintermute's client-facing and internal trading platforms.",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "You'll lead a team of talented engineers while staying deeply hands-on with the codebase.",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "you will own architecture decisions, set technical direction, and drive the engineering culture for the team building Wintermute's client-facing and internal trading platforms.",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "Script, React, Node.js — and the ability to evaluate and adopt new technologies as needed.Hands-on server-side",
+          "evidence": "Node.js, TypeScript, JavaScript, MongoDB, Neo4j, REST APIs, SDK development, distributed systems"
+        },
+        {
+          "requirement": "You'll lead a team of talented engineers while staying deeply hands-on with the codebase.",
+          "evidence": "Joined a 170-engineer company as P4 Engineer; promoted to M3 Manager within months. Tasked with designing novel Bitcoin meta-protocols, then given mandate to form and lead a new Moonshot team (grown from 1 to 10) whose first output became Cake's fifth business vertical."
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4431923733",
+      "source": "linkedin",
+      "linkedin_job_id": "4431923733",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-06. Posted: 2026-06-30.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4431923733",
+        "contact_email": null,
+        "linkedin_job_id": "4431923733",
+        "freshness": {
+          "status": "recent",
+          "days_old": 7,
+          "added": "2026-07-06"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      },
+      "date_applied": "2026-07-13",
+      "cv_variant": "cto",
+      "applied_at": "2026-07-13"
+    },
+    {
+      "id": "google-cloud-universal-ledger-lead-mr94n3z8",
+      "added": "2026-07-06",
+      "status": "rejected",
+      "company": "Google",
+      "role": "Cloud Universal Ledger Lead",
+      "location": "London, UK",
+      "variant": "cto",
+      "score": 70,
+      "scores": {
+        "cto": 70,
+        "regtech": 73,
+        "devrel": 61
+      },
+      "confidence": "high",
+      "requirements_found": 31,
+      "matched": 12,
+      "gaps": [
+        "experience managing projects or accounts.",
+        "Experience developing and executing multi-year business plans.Preferred",
+        "Operating under a specialist-led sales model, your bjective is to land initial transacting parties using three currencies to generate network density.",
+        "You will translate your vision into \"first-of-a-kind\" agreements, leveraging \"market makers\" to pull financial ecosystems onto our platform.",
+        "By providing a \"credibly neutral\" infrastructure,",
+        "equal opportunity workplace and is an affirmative action employer.",
+        "See also Google's EEO Policy and EEO is the Law.",
+        "Note: By applying to this position"
+      ],
+      "proof_points": [
+        {
+          "requirement": "Experience with blockchain, DLT, or digital asset infrastructure in a financial services context.",
+          "evidence": "UTXO scripting, Schnorr/Taproot, Ordinals, Inscriptions, Runes, BRC-20, BitcoinJS, digital assets"
+        },
+        {
+          "requirement": "The Google Cloud Universal Ledger (GCUL) GTM team leads the early-stage rollout of our blockchain built for financial services.",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "We deliver enterprise-grade solutions that leverage Google’s cutting-edge technology, and tools that help developers build more sustainably.",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "The Google Cloud Universal Ledger (GCUL) GTM team leads the early-stage rollout of our blockchain built for financial services.",
+          "evidence": "Founded and operated Malaysia's leading blockchain infrastructure and advisory firm for 13 years. Built and shipped production products across KYC, AML, digital custody, and wallet infrastructure while simultaneously shaping national regulatory policy."
+        },
+        {
+          "requirement": "Customers in more than 200 countries and territories turn to Google Cloud as their trusted partner to enable growth and solve their most critical business problems.",
+          "evidence": "Docker, CI/CD, Cloudflare Workers, LLM-augmented engineering, AI systems"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4434130655",
+      "source": "linkedin",
+      "linkedin_job_id": "4434130655",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-06. Posted: 2026-06-29.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4434130655",
+        "contact_email": null,
+        "linkedin_job_id": "4434130655",
+        "freshness": {
+          "status": "recent",
+          "days_old": 7,
+          "added": "2026-07-06"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      },
+      "reject_reason": "Sales role disguised as engineering role"
+    },
+    {
+      "id": "ampstek-architect-crypto-digital-asset-c-mriwc7nb",
+      "added": "2026-07-13",
+      "status": "rejected",
+      "company": "Ampstek",
+      "role": "Architect Crypto Digital Asset Custody & Blockchain Platforms",
+      "location": "Austin, Texas Metropolitan Area",
+      "variant": "regtech",
+      "score": 80,
+      "scores": {
+        "cto": 79,
+        "regtech": 80,
+        "devrel": 80
+      },
+      "confidence": "high",
+      "requirements_found": 69,
+      "matched": 35,
+      "gaps": [
+        "experience designing secure, scalable, observable, and fault-tolerant distributed systems.",
+        "experience in one or more languages such as Go, Java, Rust, Python, C, or C++.",
+        "Prior ownership of disaster recovery design, security runbooks, incident response processes, or post-incident remediation.",
+        "Experience applying AI tools to architecture, engineering, documentation, testing, and review workflows.Primary",
+        "Cryptographic Key Management",
+        "Secure Distributed Systems",
+        "Resilience, Observability, and Incident Readiness",
+        "Secure Wallet and Key Management Architecture"
+      ],
+      "proof_points": [
+        {
+          "requirement": "experience with blockchain or distributed ledger platforms, especially Layer 1 protocols and transaction lifecycles.",
+          "evidence": "Delivered blockchain and distributed ledger training and advisory to DBS Bank (Singapore) and Baker Hostetler (USA, 5-day intensive programme) covering compliance strategy, transaction monitoring, and digital asset custody"
+        },
+        {
+          "requirement": "Experience with crypto custody platforms, digital asset platforms, tokenization platforms, or blockchain infrastructure.",
+          "evidence": "Advised on Project Castor (2018) — the SC Malaysia blockchain blueprint that introduced Digital Asset Custodian regulation into capital markets. Technical implementation progressed from Dogecoin (distributed key-value storage) to Ethereum (ERC-20/721 token standards with programmable compliance)"
+        },
+        {
+          "requirement": "Digital Asset Custody & Blockchain Infrastructure",
+          "evidence": "15 years building compliance-grade blockchain infrastructure while simultaneously shaping the regulatory frameworks that govern it. First company in SC Malaysia's digital asset sandbox; co-founded what is now Malaysia's largest Digital Asset Custodian by AUM; delivered to DBS Bank and Baker Hostetler. UK-based since 2025, seeking senior RegTech/FinTech roles where regulatory fluency and production engineering intersect."
+        },
+        {
+          "requirement": "Experience architecting backend services, APIs, data pipelines, blockchain infrastructure, and observability components.",
+          "evidence": "Blockchain / Distributed Ledger Technology (DLT), cryptographic infrastructure, smart contracts, passkeys/WebAuthN, AI-augmented workflows, on-chain risk analysis"
+        },
+        {
+          "requirement": "Experience with wallet architecture, custody workflows, transaction controls, and secure blockchain transaction processing.",
+          "evidence": "Advised on Project Castor — the Securities Commission's blockchain / Distributed Ledger Technology (DLT) blueprint that established Digital Asset Custodian requirements in Malaysian capital markets"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/architect-crypto-digital-asset-custody-blockchain-platforms-at-ampstek-4437561226",
+      "source": "linkedin",
+      "linkedin_job_id": "4437561226",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: 2026-07-09.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/architect-crypto-digital-asset-custody-blockchain-platforms-at-ampstek-4437561226",
+        "contact_email": null,
+        "linkedin_job_id": "4437561226",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      },
+      "reject_reason": "US-only location (not viable from UK)"
+    },
+    {
+      "id": "ipolarity-crypto-digital-asset-custody-b-mriwc7nc",
+      "added": "2026-07-13",
+      "status": "rejected",
+      "company": "IPolarity",
+      "role": "Crypto Digital Asset Custody & Blockchain Platforms",
+      "location": "Texas, United States",
+      "variant": "cto",
+      "score": 74,
+      "scores": {
+        "cto": 74,
+        "regtech": 66,
+        "devrel": 67
+      },
+      "confidence": "high",
+      "requirements_found": 15,
+      "matched": 12,
+      "gaps": [
+        "experience designing secure, scalable, observable, and fault-tolerant distributed systems.* Hands-on",
+        "Location: Onshore Austin / Dallas, TX",
+        "experience designing secure, scalable, observable, and fault-tolerant distributed systems.* Hands-on"
+      ],
+      "proof_points": [
+        {
+          "requirement": "experience with blockchain or distributed ledger platforms, especially Layer 1 protocols and transaction lifecycles.*",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "Experience with crypto custody platforms, digital asset platforms, tokenization platforms, or blockchain infrastructure.*",
+          "evidence": "UTXO scripting, Schnorr/Taproot, Ordinals, Inscriptions, Runes, BRC-20, BitcoinJS, digital assets"
+        },
+        {
+          "requirement": "Experience with blockchain indexers, explorers, chain analytics, event processing, and reconciliation systems.* Familiarity with Web3 security tooling such as Slither, Mythril, and Foundry Fuzzing.*",
+          "evidence": "Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems"
+        },
+        {
+          "requirement": "Experience applying AI tools to architecture, engineering, documentation, testing, and review workflows.Primary",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "Role: Architect Crypto Digital Asset Custody & Blockchain Platforms",
+          "evidence": "Designed and shipped multiple production systems: KYC/AML pipelines, blockchain wallets, learning management, and digital identity platforms — full-stack from protocol to UI"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/crypto-digital-asset-custody-blockchain-platforms-at-ipolarity-4437592431",
+      "source": "linkedin",
+      "linkedin_job_id": "4437592431",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: 2026-07-09.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/crypto-digital-asset-custody-blockchain-platforms-at-ipolarity-4437592431",
+        "contact_email": null,
+        "linkedin_job_id": "4437592431",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      },
+      "reject_reason": "US-only location (not viable from UK)"
+    },
+    {
+      "id": "ampstek-architect-crypto-digital-asset-c-mriwc7nc",
+      "added": "2026-07-13",
+      "status": "rejected",
+      "company": "Ampstek",
+      "role": "Architect Crypto Digital Asset Custody & Blockchain Platforms",
+      "location": "Dallas, TX",
+      "variant": "regtech",
+      "score": 80,
+      "scores": {
+        "cto": 79,
+        "regtech": 80,
+        "devrel": 80
+      },
+      "confidence": "high",
+      "requirements_found": 71,
+      "matched": 35,
+      "gaps": [
+        "experience designing secure, scalable, observable, and fault-tolerant distributed systems.",
+        "experience in one or more languages such as Go, Java, Rust, Python, C, or C++.",
+        "Prior ownership of disaster recovery design, security runbooks, incident response processes, or post-incident remediation.",
+        "Experience applying AI tools to architecture, engineering, documentation, testing, and review workflows.Primary",
+        "Cryptographic Key Management",
+        "Secure Distributed Systems",
+        "Resilience, Observability, and Incident Readiness.Specialization",
+        "Secure Wallet and Key Management Architecture"
+      ],
+      "proof_points": [
+        {
+          "requirement": "experience with blockchain or distributed ledger platforms, especially Layer 1 protocols and transaction lifecycles.",
+          "evidence": "Delivered blockchain and distributed ledger training and advisory to DBS Bank (Singapore) and Baker Hostetler (USA, 5-day intensive programme) covering compliance strategy, transaction monitoring, and digital asset custody"
+        },
+        {
+          "requirement": "Experience with crypto custody platforms, digital asset platforms, tokenization platforms, or blockchain infrastructure.",
+          "evidence": "Advised on Project Castor (2018) — the SC Malaysia blockchain blueprint that introduced Digital Asset Custodian regulation into capital markets. Technical implementation progressed from Dogecoin (distributed key-value storage) to Ethereum (ERC-20/721 token standards with programmable compliance)"
+        },
+        {
+          "requirement": "Digital Asset Custody & Blockchain Infrastructure",
+          "evidence": "15 years building compliance-grade blockchain infrastructure while simultaneously shaping the regulatory frameworks that govern it. First company in SC Malaysia's digital asset sandbox; co-founded what is now Malaysia's largest Digital Asset Custodian by AUM; delivered to DBS Bank and Baker Hostetler. UK-based since 2025, seeking senior RegTech/FinTech roles where regulatory fluency and production engineering intersect."
+        },
+        {
+          "requirement": "Experience architecting backend services, APIs, data pipelines, blockchain infrastructure, and observability components.",
+          "evidence": "Blockchain / Distributed Ledger Technology (DLT), cryptographic infrastructure, smart contracts, passkeys/WebAuthN, AI-augmented workflows, on-chain risk analysis"
+        },
+        {
+          "requirement": "Experience with wallet architecture, custody workflows, transaction controls, and secure blockchain transaction processing.",
+          "evidence": "Advised on Project Castor — the Securities Commission's blockchain / Distributed Ledger Technology (DLT) blueprint that established Digital Asset Custodian requirements in Malaysian capital markets"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/architect-crypto-digital-asset-custody-blockchain-platforms-at-ampstek-4437556718",
+      "source": "linkedin",
+      "linkedin_job_id": "4437556718",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: 2026-07-09.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/architect-crypto-digital-asset-custody-blockchain-platforms-at-ampstek-4437556718",
+        "contact_email": null,
+        "linkedin_job_id": "4437556718",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      },
+      "reject_reason": "US-only location (not viable from UK)"
+    },
+    {
+      "id": "fidelity-investments-head-of-architectur-mriwc7nc",
+      "added": "2026-07-13",
+      "status": "rejected",
+      "company": "Fidelity Investments",
+      "role": "Head of Architecture, Digital Assets (Crypto)",
+      "location": "Durham, NC",
+      "variant": "cto",
+      "score": 80,
+      "scores": {
+        "cto": 80,
+        "regtech": 80,
+        "devrel": 78
+      },
+      "confidence": "high",
+      "requirements_found": 42,
+      "matched": 25,
+      "gaps": [
+        "Strong ownership mindset and",
+        "Strong analytical, communication, organizational, and decision-making",
+        "experience that incorporates the history, principles, and expertise of a traditional financial institution.",
+        "Fidelity is transitioning to a full-time onsite working model through a phased rollout across regions and roles.",
+        "Currently, some roles and locations require 100% onsite presence, while others require less.",
+        "Onsite expectations are likely to evolve as the rollout continues.",
+        "Bachelor's degree in computer science or a related field15 plus years of software development",
+        "Demonstrated ability to attract, develop, mentor, and retain top technical talent"
+      ],
+      "proof_points": [
+        {
+          "requirement": "experience, including significant architecture and leadership responsibility",
+          "evidence": "Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites: renderer hooks, game controller, replay API, unit templates, terrain predicates, native ESM (same source serves browser, Worker, and Node.js)"
+        },
+        {
+          "requirement": "Deep software architecture expertise across distributed systems, cloud-native platforms, APIs, data, security, reliability, and operational excellence",
+          "evidence": "Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems"
+        },
+        {
+          "requirement": "experience with at least one public blockchain protocol",
+          "evidence": "Authored Everstore protocol (25-page whitepaper) — complete relational database engine mapped onto BIP32 key derivation with CRUD, encryption tiers, and audit trails on UTXO chains, before Ethereum existed"
+        },
+        {
+          "requirement": "Ability to influence engineering leaders and teams through technical credibility, sound judgment, clear communication, and partnership",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "The team works with both technology and business teams to design secure, scalable, resilient cloud-based services while ensuring that user",
+          "evidence": "Joined a 170-engineer company as P4 Engineer; promoted to M3 Manager within months. Tasked with designing novel Bitcoin meta-protocols, then given mandate to form and lead a new Moonshot team (grown from 1 to 10) whose first output became Cake's fifth business vertical."
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/head-of-architecture-digital-assets-crypto-at-fidelity-investments-4430717483",
+      "source": "linkedin",
+      "linkedin_job_id": "4430717483",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: 2026-07-10.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-architecture-digital-assets-crypto-at-fidelity-investments-4430717483",
+        "contact_email": null,
+        "linkedin_job_id": "4430717483",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      },
+      "reject_reason": "US-only location (not viable from UK)"
+    },
+    {
+      "id": "predicate-protocol-lead-mriwc7nc",
+      "added": "2026-07-13",
+      "status": "rejected",
+      "company": "Predicate",
+      "role": "Protocol Lead",
+      "location": "New York, NY",
+      "variant": "cto",
+      "score": 81,
+      "scores": {
+        "cto": 81,
+        "regtech": 66,
+        "devrel": 79
+      },
+      "confidence": "high",
+      "requirements_found": 32,
+      "matched": 18,
+      "gaps": [
+        "These policies, owned and governed by application developers or DAOs, define the prerequisites for transaction execution.",
+        "This role combines R&D and engineering to shape how transaction rules are enforced across the ecosystem.",
+        "Strong scripting language proficiency (e.g., Type",
+        "Script, Python) and comfort building Po",
+        "experience leading smart contract audits and designing upgradable systems",
+        "These policies, owned and governed by application developers or DAOs, define the prerequisites for transaction execution.",
+        "Our operator network ensures that these rules are enforced with cryptographic guarantees, enabling sophisticated transaction validation without compromising on censorship resistance.The role",
+        "This role combines R&D and engineering to shape how transaction rules are enforced across the ecosystem."
+      ],
+      "proof_points": [
+        {
+          "requirement": "Deep familiarity with Ethereum, Solidity, zero knowledge, and relevant emerging tools",
+          "evidence": "Solidity, EthersJS, Web3.js, ERC-20, ERC-721, IPFS, smart contract development, DeFi"
+        },
+        {
+          "requirement": "As Protocol Lead, you’ll own our core smart contract architecture and drive its evolution.",
+          "evidence": "Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites: renderer hooks, game controller, replay API, unit templates, terrain predicates, native ESM (same source serves browser, Worker, and Node.js)"
+        },
+        {
+          "requirement": "Manage security audits, bug bounties, and ongoing protocol upgrades",
+          "evidence": "Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems"
+        },
+        {
+          "requirement": "Own the architecture, development, and maintenance of core smart contracts",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "Our operator network ensures that these rules are enforced with cryptographic guarantees, enabling sophisticated transaction validation without compromising on censorship resistance.The role",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/protocol-lead-at-predicate-4439578682",
+      "source": "linkedin",
+      "linkedin_job_id": "4439578682",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: 2026-07-11.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/protocol-lead-at-predicate-4439578682",
+        "contact_email": null,
+        "linkedin_job_id": "4439578682",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      },
+      "reject_reason": "US-only location (not viable from UK)"
+    },
+    {
+      "id": "td-vice-president-managing-director-digi-mriwc7nd",
+      "added": "2026-07-13",
+      "status": "rejected",
+      "company": "TD",
+      "role": "Vice President & Managing Director, Digital Assets & Tokenized Technology",
+      "location": "New York, NY",
+      "variant": "regtech",
+      "score": 81,
+      "scores": {
+        "cto": 80,
+        "regtech": 81,
+        "devrel": 77
+      },
+      "confidence": "high",
+      "requirements_found": 58,
+      "matched": 22,
+      "gaps": [
+        "experience, job-related knowledge, geographic location, and other specific business and organizational needs.As a candidate, you are encouraged to ask",
+        "Bachelor's degree in Computer Science, Engineering, Mathematics or related field",
+        "MBA or advanced technical degree preferred",
+        "Proven track record managing global engineering organizations and multi-million-dollar technology budgets",
+        "Executive presence and board level communication",
+        "Strategic thinking with hands on execution orientation",
+        "Crisis management and operational leadership",
+        "Ability to influence across complex matrix organizations strong people leadership and talent development"
+      ],
+      "proof_points": [
+        {
+          "requirement": "5+ years leading large scale digital assets, blockchain or fintech platforms",
+          "evidence": "Digital asset regulation, regulatory sandbox, Know Your Customer (KYC), Anti-Money Laundering (AML), Customer Due Diligence (CDD), custody compliance, transaction monitoring, financial crime prevention"
+        },
+        {
+          "requirement": "Experience within GSIBs, Tier 1 investment banks, systemically regulated financial institutions, major fintech infrastructure providers",
+          "evidence": "Digital asset custody, RegTech, cryptocurrency compliance, Islamic Finance / FinTech, payments, identity, DeFi (Decentralized Finance), Virtual Asset Service Providers (VASPs)"
+        },
+        {
+          "requirement": "Deep expertise in digital assets, distributed ledger technology, and enterprise platform architecture",
+          "evidence": "Delivered blockchain and distributed ledger training and advisory to DBS Bank (Singapore) and Baker Hostetler (USA, 5-day intensive programme) covering compliance strategy, transaction monitoring, and digital asset custody"
+        },
+        {
+          "requirement": "5+ years leading large scale digital assets, blockchain or fintech platforms",
+          "evidence": "15 years building compliance-grade blockchain infrastructure while simultaneously shaping the regulatory frameworks that govern it. First company in SC Malaysia's digital asset sandbox; co-founded what is now Malaysia's largest Digital Asset Custodian by AUM; delivered to DBS Bank and Baker Hostetler. UK-based since 2025, seeking senior RegTech/FinTech roles where regulatory fluency and production engineering intersect."
+        },
+        {
+          "requirement": "experience leading large-scale platform builds within regulated financial institutions",
+          "evidence": "Built blockchain infrastructure adopted by licensed financial institutions operating under regulatory oversight"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/vice-president-managing-director-digital-assets-tokenized-technology-at-td-4433367908",
+      "source": "linkedin",
+      "linkedin_job_id": "4433367908",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: 2026-07-08.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/vice-president-managing-director-digital-assets-tokenized-technology-at-td-4433367908",
+        "contact_email": null,
+        "linkedin_job_id": "4433367908",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      },
+      "reject_reason": "US-only location (not viable from UK)"
+    },
+    {
+      "id": "dragonfly-cto-founding-engineer-dragonfl-mriwc7nd",
+      "added": "2026-07-13",
+      "status": "rejected",
+      "company": "Dragonfly",
+      "role": "CTO / Founding Engineer - Dragonfly Portfolio",
+      "location": "United States",
+      "variant": "cto",
+      "score": 67,
+      "scores": {
+        "cto": 67,
+        "regtech": 40,
+        "devrel": 49
+      },
+      "confidence": "high",
+      "requirements_found": 24,
+      "matched": 12,
+      "gaps": [
+        "Fi products, or scaled crypto infrastructure.",
+        "experience, we encourage you to apply.",
+        "All candidate submissions are strictly confidential.Submit your information below, and we’ll be in touch if there’s a potential fit.",
+        "experience with a track record of building and shipping crypto products.Ability to execute independently, especially in 0 to 1 environments.Strong technical judgment and a bias toward action.",
+        "Fi products, or scaled crypto infrastructure.",
+        "experience, we encourage you to apply.",
+        "If mutual interest exists between you and a team, we’ll facilitate a warm introduction.",
+        "If there isn’t a match today, we’ll keep you top of mind for future opportunities.Our portfolio companies are globally distributed, hiring for remote, hybrid, and in-person roles worldwide."
+      ],
+      "proof_points": [
+        {
+          "requirement": "About The Role(s)Depending on the team, you could be",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "Engineering leadership",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "Fi, infrastructure, L1s and L2s, creator/consumer applications, NFTs, ZK, Crypto x AI, and more.",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "experience with a track record of building and shipping crypto products.Ability to execute independently, especially in 0 to 1 environments.Strong technical judgment and a bias toward action.",
+          "evidence": "Co-founded and led the technical pivot from consumer app to passkey-native wallet infrastructure provider, building on prototype work from Project Eden (weekend hackathon → production architecture). The pivot secured DraperVC investment."
+        },
+        {
+          "requirement": "There may be other opportunities that fit your skill set.Process: We’ll confidentially match you with portfolio companies aligned with your background, skill set, and interests.",
+          "evidence": "Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites: renderer hooks, game controller, replay API, unit templates, terrain predicates, native ESM (same source serves browser, Worker, and Node.js)"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/cto-founding-engineer-dragonfly-portfolio-at-dragonfly-4431952461",
+      "source": "linkedin",
+      "linkedin_job_id": "4431952461",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: 2026-07-08.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/cto-founding-engineer-dragonfly-portfolio-at-dragonfly-4431952461",
+        "contact_email": null,
+        "linkedin_job_id": "4431952461",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      },
+      "reject_reason": "US-only location (not viable from UK)"
+    },
+    {
+      "id": "golang-cz-senior-go-developer-web3--mriwc7oo",
+      "added": "2026-07-13",
+      "status": "rejected",
+      "company": "golang.cz",
+      "role": "Senior Go Developer (web3)",
+      "location": " United States Indiana US",
+      "variant": "cto",
+      "score": 52,
+      "scores": {
+        "cto": 52,
+        "regtech": 32,
+        "devrel": 44
+      },
+      "confidence": "high",
+      "requirements_found": 19,
+      "matched": 6,
+      "gaps": [
+        "experience in Go, backend development, Postgre",
+        "SQL, Git version control and Linux.",
+        "SQL, Redis Docker, Kubernetes, Grafana REST API, g",
+        "You will be using and actively contributing to many Open-Source projects, including: github.com/webrpc/webrpc, an alternative to g",
+        "RPC for web applications. github.com/go-chi/chi, one of the most popular HTTP routers in Go github.com/pressly/goose, the DB migration tool.",
+        "A suite of HTTP middlewares and tools for caching, HTTP rate limiting, tracing etc.",
+        "We're working on long-term projects for our customers mostly in USA and Canada.",
+        "We're contributing to Open-Source and attending local meetups."
+      ],
+      "proof_points": [
+        {
+          "requirement": "Note: You'll get extra points if you have worked with blockchain technology or Ethereum before.",
+          "evidence": "Solidity, EthersJS, Web3.js, ERC-20, ERC-721, IPFS, smart contract development, DeFi"
+        },
+        {
+          "requirement": "RPC, event queue, pub/sub Blockchain Ethereum, EVM Open-Source",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "We're designing software solutions and scalable web applications with a focus on clean architecture and modern tech stack.",
+          "evidence": "Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites: renderer hooks, game controller, replay API, unit templates, terrain predicates, native ESM (same source serves browser, Worker, and Node.js)"
+        },
+        {
+          "requirement": "Vojtech & the team When applying, mention the word CANDYSHOP to show you read the job post completely.",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "Tech Stack Go 1.22+ Postgre",
+          "evidence": "Core technical stack: UTXO scripting, Solidity, EthersJS, BitcoinJS, IPFS, MongoDB, Node.js"
+        }
+      ],
+      "source_url": "https://web3.career/r/2YjMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Sat, 11 Jul 2026 06:31:34 +0100.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/2YjMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      },
+      "reject_reason": "US-only location (not viable from UK)"
+    },
+    {
+      "id": "brg-senior-blockchain-consultant-mriwc7p2",
+      "added": "2026-07-13",
+      "status": "rejected",
+      "company": "BRG",
+      "role": "Senior Blockchain Consultant",
+      "location": " NY New York US",
+      "variant": "cto",
+      "score": 59,
+      "scores": {
+        "cto": 59,
+        "regtech": 52,
+        "devrel": 48
+      },
+      "confidence": "high",
+      "requirements_found": 17,
+      "matched": 9,
+      "gaps": [
+        "experience in a technology consulting or professional services environment.",
+        "Must be able to travel in this role (domestic and/or international) Additional",
+        "experience in Cryptography.",
+        "Experience in programming in SQL and Python"
+      ],
+      "proof_points": [
+        {
+          "requirement": "experience in blockchain analysis, including",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "experience with Bitcoin, Ethereum, and other digital assets.",
+          "evidence": "Deepened UTXO expertise across Schnorr signatures, Taproot, Ordinals, Inscriptions, and Runes"
+        },
+        {
+          "requirement": "experience with blockchain analytics tools, such as Chainalysis, TRM, Elliptic, and Solidus.",
+          "evidence": "UTXO scripting, Schnorr/Taproot, Ordinals, Inscriptions, Runes, BRC-20, BitcoinJS, digital assets"
+        },
+        {
+          "requirement": "Analytical mindset determines work ethics, efficient time management, and organizational",
+          "evidence": "Cross-functional team leadership, hiring, technical roadmap, stakeholder management, hands-on (P4→M3)"
+        },
+        {
+          "requirement": "master’s degree is certainly welcome.",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        }
+      ],
+      "source_url": "https://web3.career/r/zYjMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Sat, 11 Jul 2026 06:12:13 +0100.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/zYjMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      },
+      "reject_reason": "US-only location (not viable from UK)"
+    },
+    {
+      "id": "m0-product-manager-mriwc7p7",
+      "added": "2026-07-13",
+      "status": "rejected",
+      "company": "M0",
+      "role": "Product Manager",
+      "location": " NY New York US",
+      "variant": "regtech",
+      "score": 64,
+      "scores": {
+        "cto": 65,
+        "regtech": 64,
+        "devrel": 58
+      },
+      "confidence": "high",
+      "requirements_found": 25,
+      "matched": 11,
+      "gaps": [
+        "Define success metrics, instrument what matters, and use data to drive prioritization and trade-off decisions.",
+        "experience, with a proven track record of shipping products that made an impact in the market.",
+        "Equivalent entrepreneurial",
+        "experience is highly valued.",
+        "Demonstrated ability to scale a product's revenue — you've owned commercial outcomes and can point to products whose growth you were directly accountable for.",
+        "Excellent written and verbal communication",
+        "you know which metrics matter and why.",
+        "Genuine curiosity about crypto, stablecoins, and the future of money — or a clear track record of ramping quickly in complex new domains."
+      ],
+      "proof_points": [
+        {
+          "requirement": "Ship inside regulated, supervised environments, working through risks and constraints without losing momentum.",
+          "evidence": "Digital asset regulation, regulatory sandbox, Know Your Customer (KYC), Anti-Money Laundering (AML), Customer Due Diligence (CDD), custody compliance, transaction monitoring, financial crime prevention"
+        },
+        {
+          "requirement": "experience in payments, financial services, or building within regulated or supervised environments — you know how to ship when compliance, licensing, and risk shape the product.",
+          "evidence": "Founded and led Malaysia's foremost blockchain infrastructure and regulatory advisory practice for 13 years. R1 sat at the intersection of engineering, compliance, and policy, building production-grade digital asset systems for licensed operators while advising regulators on the frameworks that would govern them."
+        },
+        {
+          "requirement": "Collaborative communicator: You foster relationships with finance experts, blockchain specialists, engineers, and designers — and translate fluently between them.",
+          "evidence": "Advised on Project Castor — the Securities Commission's blockchain / Distributed Ledger Technology (DLT) blueprint that established Digital Asset Custodian requirements in Malaysian capital markets"
+        },
+        {
+          "requirement": "Strong technical fluency — you are a systems thinker and while you won't be expected to write code, you are able to hold your own in architectural discussions.",
+          "evidence": "Technical studio applying AI-augmented engineering to algorithmic decision systems, pattern recognition engines, and automated risk-scoring architectures. Demonstrates continued production delivery using the same methodology applicable to compliance automation and regulatory tooling."
+        },
+        {
+          "requirement": "Partner closely with engineering on technical trade-offs, sequencing, and scoping.",
+          "evidence": "Advised on Project Castor (2018) — the SC Malaysia blockchain blueprint that introduced Digital Asset Custodian regulation into capital markets. Technical implementation progressed from Dogecoin (distributed key-value storage) to Ethereum (ERC-20/721 token standards with programmable compliance)"
+        }
+      ],
+      "source_url": "https://web3.career/r/yYjMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Sat, 11 Jul 2026 06:12:02 +0100.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/yYjMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      },
+      "reject_reason": "US-only location (not viable from UK)"
+    },
+    {
+      "id": "ipolarity-crypto-digital-asset-custody-a-mriwc7pg",
+      "added": "2026-07-13",
+      "status": "rejected",
+      "company": "IPolarity",
+      "role": "Crypto Digital Asset Custody &amp; Blockchain Platforms",
+      "location": " United States Texas US",
+      "variant": "cto",
+      "score": 74,
+      "scores": {
+        "cto": 74,
+        "regtech": 70,
+        "devrel": 64
+      },
+      "confidence": "medium",
+      "requirements_found": 5,
+      "matched": 4,
+      "gaps": [
+        "experience designing secure, scalable, observable, and fault-tolerant distributed systems. * Hands-on"
+      ],
+      "proof_points": [
+        {
+          "requirement": "experience with blockchain or distributed ledger platforms, especially Layer 1 protocols and transaction lifecycles. *",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "Experience with crypto custody platforms, digital asset platforms, tokenization platforms, or blockchain infrastructure. *",
+          "evidence": "UTXO scripting, Schnorr/Taproot, Ordinals, Inscriptions, Runes, BRC-20, BitcoinJS, digital assets"
+        },
+        {
+          "requirement": "Experience applying AI tools to architecture, engineering, documentation, testing, and review workflows.",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "experience in software engineering, platform engineering, secure systems engineering, or architecture. * Strong",
+          "evidence": "Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites: renderer hooks, game controller, replay API, unit templates, terrain predicates, native ESM (same source serves browser, Worker, and Node.js)"
+        }
+      ],
+      "source_url": "https://web3.career/r/xYjMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Sat, 11 Jul 2026 06:10:21 +0100.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/xYjMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      },
+      "reject_reason": "US-only location (not viable from UK)"
+    },
+    {
+      "id": "ampstek-architect-crypto-digital-asset-c-mriwc7pl",
+      "added": "2026-07-13",
+      "status": "rejected",
+      "company": "Ampstek",
+      "role": "Architect Crypto Digital Asset Custody &amp; Blockchain Platforms",
+      "location": " TX Dallas US",
+      "variant": "regtech",
+      "score": 81,
+      "scores": {
+        "cto": 81,
+        "regtech": 81,
+        "devrel": 71
+      },
+      "confidence": "high",
+      "requirements_found": 26,
+      "matched": 18,
+      "gaps": [
+        "experience designing secure, scalable, observable, and fault-tolerant distributed systems.",
+        "experience in one or more languages such as Go, Java, Rust, Python, C, or C++.",
+        "Prior ownership of disaster recovery design, security runbooks, incident response processes, or post-incident remediation.",
+        "Experience applying AI tools to architecture, engineering, documentation, testing, and review workflows.",
+        "Cryptographic Key Management",
+        "Secure Distributed Systems",
+        "Resilience, Observability, and Incident Readiness ."
+      ],
+      "proof_points": [
+        {
+          "requirement": "experience with blockchain or distributed ledger platforms, especially Layer 1 protocols and transaction lifecycles.",
+          "evidence": "Delivered blockchain and distributed ledger training and advisory to DBS Bank (Singapore) and Baker Hostetler (USA, 5-day intensive programme) covering compliance strategy, transaction monitoring, and digital asset custody"
+        },
+        {
+          "requirement": "Experience with crypto custody platforms, digital asset platforms, tokenization platforms, or blockchain infrastructure.",
+          "evidence": "Advised on Project Castor (2018) — the SC Malaysia blockchain blueprint that introduced Digital Asset Custodian regulation into capital markets. Technical implementation progressed from Dogecoin (distributed key-value storage) to Ethereum (ERC-20/721 token standards with programmable compliance)"
+        },
+        {
+          "requirement": "Digital Asset Custody & Blockchain Infrastructure",
+          "evidence": "15 years building compliance-grade blockchain infrastructure while simultaneously shaping the regulatory frameworks that govern it. First company in SC Malaysia's digital asset sandbox; co-founded what is now Malaysia's largest Digital Asset Custodian by AUM; delivered to DBS Bank and Baker Hostetler. UK-based since 2025, seeking senior RegTech/FinTech roles where regulatory fluency and production engineering intersect."
+        },
+        {
+          "requirement": "Experience architecting backend services, APIs, data pipelines, blockchain infrastructure, and observability components.",
+          "evidence": "Blockchain / Distributed Ledger Technology (DLT), cryptographic infrastructure, smart contracts, passkeys/WebAuthN, AI-augmented workflows, on-chain risk analysis"
+        },
+        {
+          "requirement": "Experience with wallet architecture, custody workflows, transaction controls, and secure blockchain transaction processing.",
+          "evidence": "Advised on Project Castor — the Securities Commission's blockchain / Distributed Ledger Technology (DLT) blueprint that established Digital Asset Custodian requirements in Malaysian capital markets"
+        }
+      ],
+      "source_url": "https://web3.career/r/wYjMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Sat, 11 Jul 2026 06:08:10 +0100.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/wYjMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      },
+      "reject_reason": "US-only location (not viable from UK)"
+    },
+    {
+      "id": "ampstek-solidity-engineer-only-us-citize-mriwc7py",
+      "added": "2026-07-13",
+      "status": "rejected",
+      "company": "Ampstek",
+      "role": "Solidity Engineer || Only US Citizen and Green Card || Tampa, FL/ Jersey City, NJ/ Texas City, TX (Hybrid)",
+      "location": " FL Tampa US",
+      "variant": "cto",
+      "score": 81,
+      "scores": {
+        "cto": 81,
+        "regtech": 62,
+        "devrel": 73
+      },
+      "confidence": "high",
+      "requirements_found": 27,
+      "matched": 15,
+      "gaps": [
+        "Rigorously review code to uphold standards of quality and functional robustness.",
+        "Troubleshoot and resolve issues in live smart contracts.",
+        "Proficiency with: o Truffle o Hardhat o Foundry o Remix",
+        "Strong understanding of: o Software development best practices o Data structures o Algorithms o Development methodologies Education & Professional",
+        "Excellent debugging and troubleshooting",
+        "Strong written and verbal communication",
+        "Strong English communication",
+        "Experience in banking, finance, or trading domains with knowledge of financial instruments and systems."
+      ],
+      "proof_points": [
+        {
+          "requirement": "you will play a pivotal part in developing and deploying smart contracts for our blockchain projects, ensuring the secure, efficient, and innovative application of decentralized technology.",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "Stay current with cryptographic and blockchain advancements to proactively address security threats.",
+          "evidence": "Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems"
+        },
+        {
+          "requirement": "Provide blockchain and smart contract expertise to both technical and non-technical team members.",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "Stay updated with the latest Blockchain ecosystem developments and adapt solutions accordingly.",
+          "evidence": "UTXO scripting, Schnorr/Taproot, Ordinals, Inscriptions, Runes, BRC-20, BitcoinJS, digital assets"
+        },
+        {
+          "requirement": "Collaborate with frontend and backend developers to integrate smart contracts with web applications.",
+          "evidence": "Developed 30+ Ethereum smart contracts for BloqVerse (~20 upgradeable, ~10 immutable) — fully serverless architecture with IPFS-served frontend and no traditional database"
+        }
+      ],
+      "source_url": "https://web3.career/r/0MjMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Fri, 10 Jul 2026 06:23:03 +0100.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/0MjMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      },
+      "reject_reason": "US-only location (not viable from UK)"
+    },
+    {
+      "id": "axg-solowin-holdings-technical-product-l-mriwc7q6",
+      "added": "2026-07-13",
+      "status": "rejected",
+      "company": "AXG (Solowin Holdings)",
+      "role": "Technical Product Lead – Stablecoin, Payment &amp; Onchain FX",
+      "location": " NY New York US",
+      "variant": "cto",
+      "score": 69,
+      "scores": {
+        "cto": 69,
+        "regtech": 68,
+        "devrel": 67
+      },
+      "confidence": "high",
+      "requirements_found": 18,
+      "matched": 12,
+      "gaps": [
+        "Experience with cross-border payments, settlement infrastructure, liquidity platforms, or tokenised assets. 7.Understanding of De",
+        "Experience integrating payment rails such as SWIFT, ACH, Fed",
+        "Experience working with regulated financial products and institutional customers. 5.",
+        "Fi liquidity routing, onchain financial products, or tokenised real-world assets. 6.",
+        "Experience in fast-paced, high-growth technology environments.",
+        "When applying, mention the word CANDYSHOP to show you read the job post completely."
+      ],
+      "proof_points": [
+        {
+          "requirement": "experience in technical product, product management, or product leadership roles across stablecoins, digital assets, blockchain, payments, or De",
+          "evidence": "UTXO scripting, Schnorr/Taproot, Ordinals, Inscriptions, Runes, BRC-20, BitcoinJS, digital assets"
+        },
+        {
+          "requirement": "Responsibilities 1.Product Leadership & System Design ·Own product vision, roadmap,",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "experience with custody, wallet infrastructure, MPC/HSM, and digital asset security systems. 6.",
+          "evidence": "Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems"
+        },
+        {
+          "requirement": "Experience with AI-powered workflows, automation, or agentic AI solutions is a plus. 11.Strong ownership, communication, execution, and stakeholder management",
+          "evidence": "Cross-functional team leadership, hiring, technical roadmap, stakeholder management, hands-on (P4→M3)"
+        },
+        {
+          "requirement": "Fi, and onchain FX products.",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        }
+      ],
+      "source_url": "https://web3.career/r/zMjMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Fri, 10 Jul 2026 06:19:20 +0100.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/zMjMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      },
+      "reject_reason": "US-only location (not viable from UK)"
+    },
+    {
+      "id": "jpmorganchase-investment-banking-equity--mriwc7qd",
+      "added": "2026-07-13",
+      "status": "rejected",
+      "company": "JPMorganChase",
+      "role": "Investment Banking Equity Capital Markets [Multiple Positions Available]",
+      "location": " NY New York US",
+      "variant": "regtech",
+      "score": 57,
+      "scores": {
+        "cto": 45,
+        "regtech": 57,
+        "devrel": 44
+      },
+      "confidence": "high",
+      "requirements_found": 15,
+      "matched": 9,
+      "gaps": [
+        "Leveraging Bloomberg, Fact",
+        "Set, Dealogic, CMG, Refinitiv, and Pitch",
+        "Book to extract market data, benchmark peers, target investors, analyze issuances, and track league tables",
+        "Controlling the lifecycle of investment transactions using deal and operational transaction platforms including P1.",
+        "Job Location: 270 Park Ave., New York, NY 10179.",
+        "This position requires up to 10% domestic and 5% international travel required to JPMC sites."
+      ],
+      "proof_points": [
+        {
+          "requirement": "Applying US equity capital markets regulatory frameworks, including SEC registration, FINRA rules, Reg M stabilization, and compliance for Fin",
+          "evidence": "Founded and led Malaysia's foremost blockchain infrastructure and regulatory advisory practice for 13 years. R1 sat at the intersection of engineering, compliance, and policy, building production-grade digital asset systems for licensed operators while advising regulators on the frameworks that would govern them."
+        },
+        {
+          "requirement": "Tech and Digital Asset issuers",
+          "evidence": "Advised on Project Castor — the Securities Commission's blockchain / Distributed Ledger Technology (DLT) blueprint that established Digital Asset Custodian requirements in Malaysian capital markets"
+        },
+        {
+          "requirement": "experience required: Bachelor's degree in Economics, Management, Accounting, Finance, Business, or related field of study. plus three (3) years of",
+          "evidence": "Co-founded, funded, and architected CoKeeps — now Malaysia's largest Digital Asset Custodian by AUM — investing two years of R1 capital into product development plus three operational years pending regulatory approval"
+        },
+        {
+          "requirement": "experience in the job offered or as Investment Banking Equity Capital Markets, Corporate and Investment Bank Analyst, or related occupation.",
+          "evidence": "Founded the Blockchain Embassy of Asia — Malaysia's first registered blockchain consortium with members from Maybank, RHB, Capital Bay, and ATA Plus"
+        },
+        {
+          "requirement": "Tech, and financial institutions",
+          "evidence": "Registered HRDF Trainer — designed and delivered multi-day blockchain compliance workshops for financial institutions"
+        }
+      ],
+      "source_url": "https://web3.career/r/yMjMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Fri, 10 Jul 2026 06:13:49 +0100.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/yMjMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      },
+      "reject_reason": "US-only location (not viable from UK)"
+    },
+    {
+      "id": "nexus-director-of-engineering-usa--mriwc7qi",
+      "added": "2026-07-13",
+      "status": "rejected",
+      "company": "Nexus",
+      "role": "Director of Engineering (USA)",
+      "location": " United States",
+      "variant": "cto",
+      "score": 80,
+      "scores": {
+        "cto": 80,
+        "regtech": 66,
+        "devrel": 70
+      },
+      "confidence": "high",
+      "requirements_found": 39,
+      "matched": 16,
+      "gaps": [
+        "Location: Remote Type: Full-time The Role",
+        "You’ll set direction and stay hands-on in the highest-leverage code.",
+        "Lead the engineering org — senior engineers plus pods — managing timelines, roadmaps, and resourcing.",
+        "drive urgency and high-frequency iteration.",
+        "Make the org the most productive and efficient it can be.",
+        "Manage an international, distributed workforce.",
+        "Correctness and performance should be continuously provable, not assumed.",
+        "Communicate via design docs, RFCs, and post-mortems."
+      ],
+      "proof_points": [
+        {
+          "requirement": "Design team structures and incentives with the CEO and exec team.",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "Architecture chops with sound correctness / latency / throughput / operability trade-offs.",
+          "evidence": "Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites: renderer hooks, game controller, replay API, unit templates, terrain predicates, native ESM (same source serves browser, Worker, and Node.js)"
+        },
+        {
+          "requirement": "Infrastructure: Google Cloud (GCE/GCP), containerized services, modern CI/CD, Terraform/Pulumi, Prometheus/Grafana.",
+          "evidence": "Docker, CI/CD, Cloudflare Workers, LLM-augmented engineering, AI systems"
+        },
+        {
+          "requirement": "experienced engineering leaders and rising leaders with outsized leadership ambition and the trajectory to back it.",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "8+ years building production software, including",
+          "evidence": "Founded and operated Malaysia's leading blockchain infrastructure and advisory firm for 13 years. Built and shipped production products across KYC, AML, digital custody, and wallet infrastructure while simultaneously shaping national regulatory policy."
+        }
+      ],
+      "source_url": "https://web3.career/r/xEjMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Thu, 9 Jul 2026 19:52:45 +0100.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/xEjMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      },
+      "reject_reason": "US-only location (not viable from UK)"
+    },
+    {
+      "id": "chainalysis-channel-partner-manager-amer-mriwc7qr",
+      "added": "2026-07-13",
+      "status": "rejected",
+      "company": "Chainalysis",
+      "role": "Channel Partner Manager, AMER",
+      "location": " New York New York City United States",
+      "variant": "regtech",
+      "score": 79,
+      "scores": {
+        "cto": 79,
+        "regtech": 79,
+        "devrel": 78
+      },
+      "confidence": "high",
+      "requirements_found": 38,
+      "matched": 17,
+      "gaps": [
+        "Ops, Marketing, and Partnerships to align partners to the right accounts, opportunities, and go-to-market motions in-region.",
+        "Track partner activity and outcomes in partnership with Rev",
+        "experience managing channel, reseller, MSP, VAR, and SI relationships at a B2B technology or services company.",
+        "Experience driving measurable business outcomes through partners, including partner-sourced pipeline Strong cross-functional collaboration",
+        "experience working closely with sales, marketing, Rev",
+        "Strong commercial judgment and execution",
+        "Experience working in the US or in a multi-country region with different market dynamics, sales motions, and partner maturity levels.",
+        "Experience with PRM tools, deal registration processes, account mapping, and partner performance tracking."
+      ],
+      "proof_points": [
+        {
+          "requirement": "Background in crypto, financial services, fintech, and/or compliance software.",
+          "evidence": "Digital asset regulation, regulatory sandbox, Know Your Customer (KYC), Anti-Money Laundering (AML), Customer Due Diligence (CDD), custody compliance, transaction monitoring, financial crime prevention"
+        },
+        {
+          "requirement": "Experience at a consulting/services firm advising clients on digital asset initiatives",
+          "evidence": "Founded and led Malaysia's foremost blockchain infrastructure and regulatory advisory practice for 13 years. R1 sat at the intersection of engineering, compliance, and policy, building production-grade digital asset systems for licensed operators while advising regulators on the frameworks that would govern them."
+        },
+        {
+          "requirement": "About Chainalysis Chainalysis is the blockchain data platform, making it easy to connect the movement of digital assets to real-world services.",
+          "evidence": "First company admitted to the Securities Commission Malaysia (SC) regulatory sandbox for digital assets and cryptocurrency"
+        },
+        {
+          "requirement": "Our mission is to build trust in blockchains, blending safety and security with an unwavering commitment to growth and innovation.",
+          "evidence": "Advised on Project Castor — the Securities Commission's blockchain / Distributed Ledger Technology (DLT) blueprint that established Digital Asset Custodian requirements in Malaysian capital markets"
+        },
+        {
+          "requirement": "Support internal field enablement in AMER so sellers understand when and how to engage partners, the relevant program guidelines, and how to work effectively with indirect routes to market.",
+          "evidence": "Engaged directly with regulators to demonstrate technical compliance with emerging distributed ledger frameworks"
+        }
+      ],
+      "source_url": "https://web3.career/r/4kTMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Thu, 9 Jul 2026 19:40:10 +0100.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/4kTMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      },
+      "reject_reason": "US-only location (not viable from UK)"
+    },
+    {
+      "id": "chainalysis-senior-grc-engineer-trust-mriwc7r2",
+      "added": "2026-07-13",
+      "status": "rejected",
+      "company": "Chainalysis",
+      "role": "Senior GRC Engineer, Trust",
+      "location": " New York New York City United States",
+      "variant": "regtech",
+      "score": 79,
+      "scores": {
+        "cto": 80,
+        "regtech": 79,
+        "devrel": 78
+      },
+      "confidence": "high",
+      "requirements_found": 41,
+      "matched": 19,
+      "gaps": [
+        "Help shape GRC automation and stronger operating rhythms across the Trust organization.",
+        "Built repeatable evidence collection, control testing, or remediation workflows that improved audit readiness and reduced manual work.",
+        "The ability to translate customer, audit, or internal control",
+        "Strong written and verbal communication",
+        "A track record of influencing cross-functional work, collaborating broadly, and providing guidance in a senior IC role.",
+        "A practical, systems-minded approach to improving controls without creating unnecessary friction for the business.",
+        "Experience with GRC automation or workflow tooling that improves evidence collection, remediation tracking, or control monitoring.",
+        "C) Vanta Trust Center workflows Jira Okta Please note: This position is ineligible for visa sponsorship."
+      ],
+      "proof_points": [
+        {
+          "requirement": "In this role, you’ll: Partner with Product, R&D Engineering, Security Engineering and adjacent teams to implement and operationalize security and compliance controls across Chainalysis products.",
+          "evidence": "Digital asset regulation, regulatory sandbox, Know Your Customer (KYC), Anti-Money Laundering (AML), Customer Due Diligence (CDD), custody compliance, transaction monitoring, financial crime prevention"
+        },
+        {
+          "requirement": "About Chainalysis Chainalysis is the blockchain data platform, making it easy to connect the movement of digital assets to real-world services.",
+          "evidence": "Delivered blockchain and distributed ledger training and advisory to DBS Bank (Singapore) and Baker Hostetler (USA, 5-day intensive programme) covering compliance strategy, transaction monitoring, and digital asset custody"
+        },
+        {
+          "requirement": "Exposure to blockchain, fintech, or other high-trust environments where customer assurance and technical controls are tightly coupled.",
+          "evidence": "Digital asset custody, RegTech, cryptocurrency compliance, Islamic Finance / FinTech, payments, identity, DeFi (Decentralized Finance), Virtual Asset Service Providers (VASPs)"
+        },
+        {
+          "requirement": "Drive continuous control improvement across a segmented product suite, including pass-through security and compliance",
+          "evidence": "Founded and led Malaysia's foremost blockchain infrastructure and regulatory advisory practice for 13 years. R1 sat at the intersection of engineering, compliance, and policy, building production-grade digital asset systems for licensed operators while advising regulators on the frameworks that would govern them."
+        },
+        {
+          "requirement": "Our mission is to build trust in blockchains, blending safety and security with an unwavering commitment to growth and innovation.",
+          "evidence": "Advised on Project Castor — the Securities Commission's blockchain / Distributed Ledger Technology (DLT) blueprint that established Digital Asset Custodian requirements in Malaysian capital markets"
+        }
+      ],
+      "source_url": "https://web3.career/r/3kTMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Thu, 9 Jul 2026 19:39:58 +0100.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/3kTMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      },
+      "reject_reason": "US-only location (not viable from UK)"
+    },
+    {
+      "id": "chainalysis-senior-intelligence-analyst-mriwc7rg",
+      "added": "2026-07-13",
+      "status": "rejected",
+      "company": "Chainalysis",
+      "role": "Senior Intelligence Analyst",
+      "location": " North Carolina United States",
+      "variant": "cto",
+      "score": 63,
+      "scores": {
+        "cto": 63,
+        "regtech": 49,
+        "devrel": 58
+      },
+      "confidence": "high",
+      "requirements_found": 26,
+      "matched": 10,
+      "gaps": [
+        "Strong research instincts and analytic rigor.",
+        "Adaptability — comfortable with ambiguity and energized by a fast-moving space",
+        "the threats, the tech, and our tooling are always evolving.",
+        "Excellent writing and communication.",
+        "AI at Chainalysis AI is not a feature at Chainalysis - it is a new way of working.",
+        "AI fluency is tied directly to how we measure performance and how we plan to win.",
+        "There is no substitute for your own curiosity.",
+        "We are using it to do what was never possible before."
+      ],
+      "proof_points": [
+        {
+          "requirement": "About Chainalysis Chainalysis is the blockchain data platform, making it easy to connect the movement of digital assets to real-world services.",
+          "evidence": "UTXO scripting, Schnorr/Taproot, Ordinals, Inscriptions, Runes, BRC-20, BitcoinJS, digital assets"
+        },
+        {
+          "requirement": "Initiative — you set the agenda: you see what the team should be working on and drive it.",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "Our mission is to build trust in blockchains, blending safety and security with an unwavering commitment to growth and innovation.",
+          "evidence": "Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems"
+        },
+        {
+          "requirement": "This is a demanding, high-bar role, and you raise everyone around you.",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "AI-forward instincts — you build automation to scale your work and others’.",
+          "evidence": "Built and deployed the first board game MCP server ( tools.moddable.games ): 16 AI-callable tools across 2 engines, Cloudflare Worker, MCP + REST + OpenAPI + llms.txt"
+        }
+      ],
+      "source_url": "https://web3.career/r/2kTMxUTM__ZBAczh",
+      "source": "web3.career",
+      "linkedin_job_id": null,
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: Thu, 9 Jul 2026 19:39:38 +0100.",
+      "channel": {
+        "source": "web3.career",
+        "method": "direct_url",
+        "apply_url": "https://web3.career/r/2kTMxUTM__ZBAczh",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "visit_and_apply",
+        "notes": null
+      },
+      "reject_reason": "US-only location (not viable from UK)"
+    },
+    {
+      "id": "hazelcast-svp-engineering-mriwdqdi",
+      "added": "2026-07-13",
+      "status": "rejected",
+      "company": "Hazelcast",
+      "role": "SVP Engineering",
+      "location": "United Kingdom",
+      "variant": "devrel",
+      "score": 80,
+      "scores": {
+        "cto": 78,
+        "regtech": 78,
+        "devrel": 80
+      },
+      "confidence": "high",
+      "requirements_found": 58,
+      "matched": 22,
+      "gaps": [
+        "We are seeking a visionary, inspirational Senior Vice President of Engineering to lead and scale our global engineering function.",
+        "Talent Acquisition & Leadership Development: Lead global headcount planning to ensure a right-sized, highly skilled, and diverse engineering organisation.",
+        "Build a robust leadership bench and succession plan for critical technical and managerial roles.",
+        "Executive Client Sponsorship: Serve as an executive sponsor for key enterprise accounts.",
+        "Partner with Sales to engage in high-stakes C-level prospect meetings, acting as the ultimate technical authority for the company.",
+        "12+ years of progressive leadership",
+        "experience in software engineering, with at least",
+        "7+ years operating at the VP, SVP, or CTO level, preferably in a B2B enterprise software or platform company."
+      ],
+      "proof_points": [
+        {
+          "requirement": "Superior Developer and Operator",
+          "evidence": "Technical writing, API documentation, developer guides, SDK documentation, code samples, tutorial creation, workshop facilitation, hackathon organisation, conference presentations, community building"
+        },
+        {
+          "requirement": "Developer Relations: Inspire and engage advanced developers globally, encouraging contributions to our open-source projects and fostering a vibrant technical community.",
+          "evidence": "Open-source games studio shipping developer-facing engines, Consumer SDKs, MCP tools, and documentation, built entirely using AI-augmented engineering workflows. Deployed the first board game engine MCP server and a full Developers section with API docs, SDK demos, and integration examples."
+        },
+        {
+          "requirement": "Open Source Software Expertise: Excel at balancing open-source community expectations with enterprise",
+          "evidence": "Core contributor to Automattic's BackPress framework — meaningful contribution to a major open-source ecosystem"
+        },
+        {
+          "requirement": "Open Source Software Expertise: Excel at balancing open-source community expectations with enterprise",
+          "evidence": "Built open-source blockchain wallet framework — the only one with themes and plugins, targeting mainstream developers rather than blockchain specialists"
+        },
+        {
+          "requirement": "Experience: Champion exceptional developer and operator",
+          "evidence": "Wrote developer documentation spanning plugins (Build a Variant, Crazyhouse, Poison Chess), consumer integration (Dungeon Chess guide), full API reference, SDK demo page, and a Developers section with connection guides and build examples"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4428495923",
+      "source": "linkedin",
+      "linkedin_job_id": "4428495923",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: unknown.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4428495923",
+        "contact_email": null,
+        "linkedin_job_id": "4428495923",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      },
+      "reject_reason": "Not interested"
+    },
+    {
+      "id": "hazelcast-vp-engineering-mriwdqdi",
+      "added": "2026-07-13",
+      "status": "rejected",
+      "company": "Hazelcast",
+      "role": "VP Engineering",
+      "location": "United Kingdom",
+      "variant": "cto",
+      "score": 79,
+      "scores": {
+        "cto": 79,
+        "regtech": 78,
+        "devrel": 80
+      },
+      "confidence": "high",
+      "requirements_found": 60,
+      "matched": 26,
+      "gaps": [
+        "Superior Developer and Operator",
+        "Experience: Champion exceptional developer and operator",
+        "experience, driving documentation quality, release clarity, and community engagement to strengthen Hazelcast’s ecosystem.",
+        "Organizational Design: Evolve and optimize the organisational structure for maximum performance, resilience, scalability, and ownership.",
+        "Talent Acquisition & Planning: Involvement in headcount planning to ensure a right-sized, highly skilled, and diverse global engineering organisation.",
+        "Managerial Development: Identify, coach, mentor, and develop engineering managers within the organisation, creating clear career paths for both technical and managerial career tracks.",
+        "Developer Relations: Inspire and engage advanced developers globally, encouraging contributions to our open-source projects and fostering a vibrant technical community.",
+        "experience in software engineering, with at least"
+      ],
+      "proof_points": [
+        {
+          "requirement": "Roadmap Execution: Drive, own and manage end-to-end engineering delivery against the product roadmap, utilising agile methodologies to ensure rapid, predictable, and high-quality releases.",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 16 AI-callable MCP tools, 20 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "Quality & Resilience: Maintain and continuously elevate world-class standards for system quality, performance, security, and resilience across the entire platform.",
+          "evidence": "Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems"
+        },
+        {
+          "requirement": "The majority of our Engineers are based in the UK with smaller teams across EMEA.",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "Culture & Ethos: Instill a strong product-led, innovation ethos within the company, guiding engineering teams to imagine the product primarily as a customer acquisition and value-delivery tool.",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "Performance Management: Ensure teams are empowered and aligned with company goals, providing frequent, actionable, and constructive feedback to support personal development and measure team outcomes.",
+          "evidence": "Cross-functional team leadership, hiring, technical roadmap, stakeholder management, hands-on (P4→M3)"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4331200883",
+      "source": "linkedin",
+      "linkedin_job_id": "4331200883",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-13. Posted: unknown.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4331200883",
+        "contact_email": null,
+        "linkedin_job_id": "4331200883",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-13"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      },
+      "reject_reason": "Not interested — Hazelcast not a fit"
+    },
+    {
+      "title": "Head of Engineering (FinTech Platform)",
+      "company": "Deel",
+      "status": "applied",
+      "score": 78,
+      "channel": {
+        "source": "unknown",
+        "method": "email_direct",
+        "apply_url": null,
+        "contact_email": "recruiting@deel.com",
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "unknown",
+          "days_old": null
+        },
+        "action": null,
+        "notes": null
+      },
+      "date_applied": "2026-06-19",
+      "cv_variant": "cto",
+      "url": "https://www.linkedin.com/jobs/view/4399109246",
+      "applied_at": "2026-07-13"
+    },
+    {
+      "title": "AI Developer Advocate",
+      "company": "Verda",
+      "status": "applied",
+      "score": 71,
+      "channel": {
+        "source": "unknown",
+        "method": null,
+        "apply_url": null,
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "unknown",
+          "days_old": null
+        },
+        "action": null,
+        "notes": null
+      },
+      "date_applied": "2026-06-20",
+      "cv_variant": "devrel",
+      "url": "https://www.linkedin.com/jobs/view/4426968768",
+      "applied_at": "2026-07-13"
+    },
+    {
+      "title": "Engineering Director",
+      "company": "Arbor Education",
+      "status": "applied",
+      "score": 75,
+      "channel": {
+        "source": "unknown",
+        "method": null,
+        "apply_url": null,
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "unknown",
+          "days_old": null
+        },
+        "action": null,
+        "notes": null
+      },
+      "date_applied": "2026-06-20",
+      "cv_variant": "cto",
+      "url": "https://www.linkedin.com/jobs/view/4429942486",
+      "applied_at": "2026-07-13"
     }
   ],
-  "updated": "2026-07-06"
+  "updated": "2026-07-15"
 }

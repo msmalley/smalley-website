@@ -71,7 +71,7 @@ function collectJobs() {
     }
 
     if (j.added && thisWeek(j.added)) weekLeads++;
-    if (s === 'applied' && j.added && thisWeek(j.added)) weekApps++;
+    if (s === 'applied' && j.applied_at && thisWeek(j.applied_at)) weekApps++;
     if (s === 'rejected' && j.added && thisWeek(j.added)) weekRejects++;
   }
 
@@ -840,6 +840,69 @@ async function collectCloudflare() {
   }
 }
 
+// --- KV STORES COLLECTOR ---
+function collectKV() {
+  const namespaces = [
+    { id: '01d09ee59d5a41e0a43cd60eedb9d345', name: 'STORE', prefixes: ['sub:', 'mod:'] },
+    { id: '918c60b4bb144827a93c98905eb97f68', name: 'JAM_KV', prefixes: ['current_jam', 'house_posts'] }
+  ];
+
+  const result = { subscribers: [], submissions: [], jam: null, house_posts: [] };
+
+  for (const ns of namespaces) {
+    let keys = [];
+    try {
+      const raw = execSync(`wrangler kv key list --namespace-id=${ns.id} 2>/dev/null`, { timeout: 15000 }).toString().trim();
+      keys = JSON.parse(raw || '[]');
+    } catch { continue; }
+
+    for (const keyObj of keys) {
+      const key = keyObj.name;
+      let value = null;
+      try {
+        const raw = execSync(`wrangler kv key get --namespace-id=${ns.id} "${key}" 2>/dev/null`, { timeout: 10000 }).toString().trim();
+        value = JSON.parse(raw);
+      } catch { continue; }
+
+      if (ns.name === 'STORE') {
+        if (key.startsWith('sub:')) {
+          result.subscribers.push({
+            email: value.email || key.replace('sub:', ''),
+            subscribed_at: value.subscribedAt || null,
+            source: value.source || null
+          });
+        } else if (key.startsWith('mod:')) {
+          result.submissions.push({
+            id: value.id || key.replace('mod:', ''),
+            title: value.title || 'Untitled',
+            category: value.category || null,
+            base_game: value.baseGame || null,
+            email: value.email || null,
+            submitted_at: value.submittedAt || null,
+            status: value.status || 'pending'
+          });
+        }
+      } else if (ns.name === 'JAM_KV') {
+        if (key === 'current_jam') result.jam = value;
+        else if (key === 'house_posts') result.house_posts = value || [];
+      }
+    }
+  }
+
+  result.subscribers.sort((a, b) => (b.subscribed_at || '').localeCompare(a.subscribed_at || ''));
+  result.submissions.sort((a, b) => (b.submitted_at || '').localeCompare(a.submitted_at || ''));
+
+  return {
+    subscriber_count: result.subscribers.length,
+    submission_count: result.submissions.length,
+    pending_submissions: result.submissions.filter(s => s.status === 'pending').length,
+    subscribers: result.subscribers.slice(0, 20),
+    submissions: result.submissions.slice(0, 20),
+    jam: result.jam,
+    house_posts: result.house_posts
+  };
+}
+
 // --- INVESTMENT COLLECTOR ---
 function collectInvestment() {
   const manual = readJSON(resolve(__dirname, 'data/investment.json'));
@@ -890,7 +953,7 @@ function computeIndicators(employment, social, agents) {
 }
 
 // --- ALERTS COLLECTOR ---
-function collectAlerts({ employment, social, analytics, cloudflare, sourcesFailed, metricsRefreshed, socialRefreshResult }) {
+function collectAlerts({ employment, social, analytics, cloudflare, sourcesFailed, metricsRefreshed, socialRefreshResult, kvStores }) {
   const alerts = [];
 
   // Content cadence — critical if 14+ days
@@ -1044,6 +1107,28 @@ function collectAlerts({ employment, social, analytics, cloudflare, sourcesFaile
     });
   }
 
+  // KV store activity
+  if (kvStores && kvStores.pending_submissions > 0) {
+    alerts.push({
+      level: 'warning',
+      category: 'community',
+      title: `${kvStores.pending_submissions} mod submission${kvStores.pending_submissions > 1 ? 's' : ''} pending review`,
+      detail: `Someone submitted a mod to moddable.games. Review and approve/reject in the KV store.`,
+      cta: { label: 'List submissions', action: 'bash', command: 'wrangler kv key list --namespace-id=01d09ee59d5a41e0a43cd60eedb9d345 --prefix="mod:"' }
+    });
+  }
+  if (kvStores && kvStores.subscriber_count > 0) {
+    const newest = kvStores.subscribers[0];
+    const newestDate = newest?.subscribed_at ? newest.subscribed_at.split('T')[0] : 'unknown';
+    alerts.push({
+      level: 'info',
+      category: 'community',
+      title: `${kvStores.subscriber_count} email subscriber${kvStores.subscriber_count > 1 ? 's' : ''}`,
+      detail: `Latest signup: ${newest?.email || 'unknown'} on ${newestDate}.`,
+      cta: null
+    });
+  }
+
   // Specific token expiry alerts — only shows if auto-refresh from Firefox also failed
   if (socialRefreshResult?.linkedinFailed) {
     alerts.push({
@@ -1098,6 +1183,12 @@ async function main() {
   const ecosystem = collectEcosystem();
   sourcesOk.push('ecosystem');
 
+  let kvStores = null;
+  try {
+    kvStores = collectKV();
+    sourcesOk.push('kv');
+  } catch { sourcesFailed.push('kv'); }
+
   const investment = collectInvestment();
   sourcesOk.push('investment');
 
@@ -1124,7 +1215,7 @@ async function main() {
   } catch { sourcesFailed.push('cloudflare'); }
 
   const indicators = computeIndicators(employment, social, agents);
-  const alerts = collectAlerts({ employment, social, analytics, cloudflare, sourcesFailed, metricsRefreshed, socialRefreshResult });
+  const alerts = collectAlerts({ employment, social, analytics, cloudflare, sourcesFailed, metricsRefreshed, socialRefreshResult, kvStores });
 
   const snapshot = {
     _meta: {
@@ -1139,7 +1230,7 @@ async function main() {
     social,
     analytics,
     agents: { ...agents, ...git },
-    ecosystem,
+    ecosystem: ecosystem ? { ...ecosystem, kv_stores: kvStores } : null,
     github,
     cloudflare,
     investment

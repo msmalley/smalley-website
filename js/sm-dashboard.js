@@ -1075,6 +1075,56 @@
       convGrid.appendChild(rightPanel);
       el.appendChild(convGrid);
     }
+
+    renderKVStores(eco.kv_stores, el);
+  }
+
+  function renderKVStores(kv, el) {
+    if (!kv) return;
+    var kvGrid = SM.el('div', { class: 'dashboard-grid-2', style: { marginTop: '24px' } });
+
+    kvGrid.appendChild(statPanel('Community Inbox', [
+      { label: 'Email subscribers', value: String(kv.subscriber_count) },
+      { label: 'Mod submissions', value: String(kv.submission_count) },
+      { label: 'Pending review', value: String(kv.pending_submissions) },
+      { label: 'Active jam', value: kv.jam ? 'Jam #' + (kv.jam.number || '?') : 'None' }
+    ]));
+
+    if (kv.submissions.length > 0) {
+      var panel = SM.el('div', { class: 'dashboard-panel' },
+        SM.el('div', { class: 'dashboard-panel-title' }, 'Recent Submissions')
+      );
+      for (var i = 0; i < Math.min(kv.submissions.length, 5); i++) {
+        var s = kv.submissions[i];
+        var date = s.submitted_at ? s.submitted_at.split('T')[0] : '—';
+        panel.appendChild(SM.el('div', { class: 'stat-row' },
+          SM.el('span', { class: 'stat-label' }, s.title + ' (' + (s.category || s.base_game || '?') + ')'),
+          SM.el('span', { class: 'stat-value' }, date)
+        ));
+      }
+      kvGrid.appendChild(panel);
+    } else if (kv.subscribers.length > 0) {
+      var subPanel = SM.el('div', { class: 'dashboard-panel' },
+        SM.el('div', { class: 'dashboard-panel-title' }, 'Recent Subscribers')
+      );
+      for (var i2 = 0; i2 < Math.min(kv.subscribers.length, 5); i2++) {
+        var sub = kv.subscribers[i2];
+        var subDate = sub.subscribed_at ? sub.subscribed_at.split('T')[0] : '—';
+        subPanel.appendChild(SM.el('div', { class: 'stat-row' },
+          SM.el('span', { class: 'stat-label' }, sub.email),
+          SM.el('span', { class: 'stat-value' }, subDate)
+        ));
+      }
+      kvGrid.appendChild(subPanel);
+    } else {
+      kvGrid.appendChild(statPanel('Status', [
+        { label: 'Subscribers', value: 'No signups yet' },
+        { label: 'Submissions', value: 'No mods submitted yet' },
+        { label: 'KV namespaces', value: '2 monitored' }
+      ]));
+    }
+
+    el.appendChild(kvGrid);
   }
 
   function renderGitHub(gh) {

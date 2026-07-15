@@ -56,6 +56,12 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 - 7 new job leads ingested (ClearBank, Harrington Starr, Bullish, CoinDesk, Kast, TradingHub, Dex)
 - 5 expired opportunities tracked, 8 rejected
 
+#### 2026-07-15
+- Dashboard: KV store monitoring for Moddable Games (subscriber + mod submission tracking from Cloudflare KV)
+- Job pipeline: `applied_at` timestamp now stamped on status transition; backfilled 16 existing applications
+- Job pipeline: archived 47 terminal-status jobs from jobs.json to jobs-archive.json (pipeline stays current)
+- Fixed dashboard "applications this week" counter to use `applied_at` instead of ingestion date
+
 #### 2026-07-06
 - Job pipeline hygiene: role-type filter on ingest (rejects IC devs, sales, marketing, junior roles), company alias dedup (Tether/Tether Operations Limited), regex patterns for edge cases. Pipeline 351 → 210 relevant jobs.
 - Variant-specific keyword expansion maps in match-job.js (CTO/RegTech/DevRel each have their own semantic neighbourhood)

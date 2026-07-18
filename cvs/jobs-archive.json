@@ -28019,6 +28019,173 @@
         "devrel": 51
       },
       "confidence": "high"
+    },
+    {
+      "company": "ZRG",
+      "role": "Interim Head of Product | Digital Assets Bank",
+      "status": "declined",
+      "applied_at": "2026-04-16",
+      "declined_at": "2026-04-16",
+      "source": "linkedin",
+      "channel": "linkedin-easy-apply",
+      "notes": "Pre-pipeline manual application. Rejection found in email trash."
+    },
+    {
+      "company": "La Fosse",
+      "role": "Senior WordPress Engineer",
+      "status": "declined",
+      "applied_at": "2026-05-08",
+      "declined_at": "2026-05-12",
+      "source": "linkedin",
+      "channel": "linkedin-easy-apply",
+      "notes": "Pre-pipeline manual application. Rejection found in email trash."
+    },
+    {
+      "company": "Americaneagle.com",
+      "role": "WordPress Architect",
+      "status": "declined",
+      "applied_at": "2026-05-08",
+      "declined_at": "2026-05-11",
+      "source": "linkedin",
+      "channel": "linkedin-easy-apply",
+      "notes": "Pre-pipeline manual application. Rejection found in email trash."
+    },
+    {
+      "company": "Ripple",
+      "role": "Director of Developer Relations",
+      "status": "declined",
+      "applied_at": "2026-04-16",
+      "declined_at": "2026-05-28",
+      "source": "linkedin",
+      "channel": "greenhouse",
+      "notes": "Pre-pipeline manual application. Rejection found in email trash."
+    },
+    {
+      "company": "Lloyds Banking Group",
+      "role": "Senior Manager - Digital Assets Risk",
+      "status": "declined",
+      "applied_at": "2026-04-26",
+      "declined_at": "2026-07-06",
+      "source": "linkedin",
+      "channel": "workday-direct",
+      "notes": "Pre-pipeline manual application. Rejection found in email trash."
+    },
+    {
+      "company": "Candour",
+      "role": "Unknown (LinkedIn Easy Apply)",
+      "status": "applied",
+      "applied_at": "2026-04-26",
+      "source": "linkedin",
+      "channel": "linkedin-easy-apply",
+      "notes": "Pre-pipeline manual application. No response received."
+    },
+    {
+      "company": "Fruition Group",
+      "role": "Unknown (LinkedIn Easy Apply)",
+      "status": "applied",
+      "applied_at": "2026-04-26",
+      "source": "linkedin",
+      "channel": "linkedin-easy-apply",
+      "notes": "Pre-pipeline manual application. No response received."
+    },
+    {
+      "company": "Jobgether",
+      "role": "Senior Blockchain Expansion Manager (remote)",
+      "status": "applied",
+      "applied_at": "2026-04-13",
+      "source": "linkedin",
+      "channel": "jobgether",
+      "notes": "Pre-pipeline. Got match score email but no final outcome."
+    },
+    {
+      "company": "Harrington Starr",
+      "role": "Unknown (LinkedIn Easy Apply)",
+      "status": "applied",
+      "applied_at": "2026-04-13",
+      "source": "linkedin",
+      "channel": "linkedin-easy-apply",
+      "notes": "Pre-pipeline manual application. No response received."
+    },
+    {
+      "company": "G.Digital",
+      "role": "Unknown (LinkedIn Easy Apply)",
+      "status": "applied",
+      "applied_at": "2026-04-13",
+      "source": "linkedin",
+      "channel": "linkedin-easy-apply",
+      "notes": "Pre-pipeline manual application. No response received."
+    },
+    {
+      "company": "Input Output Group",
+      "role": "Unknown (LinkedIn Easy Apply)",
+      "status": "applied",
+      "applied_at": "2026-05-12",
+      "source": "linkedin",
+      "channel": "linkedin-easy-apply",
+      "notes": "Pre-pipeline manual application. No response received."
+    },
+    {
+      "company": "Searchability",
+      "role": "Unknown (LinkedIn Easy Apply)",
+      "status": "applied",
+      "applied_at": "2026-05-08",
+      "source": "linkedin",
+      "channel": "linkedin-easy-apply",
+      "notes": "Pre-pipeline manual application. No response received."
+    },
+    {
+      "company": "Confidential",
+      "role": "Unknown (LinkedIn Easy Apply)",
+      "status": "applied",
+      "applied_at": "2026-05-06",
+      "source": "linkedin",
+      "channel": "linkedin-easy-apply",
+      "notes": "Pre-pipeline manual application. No response received."
+    },
+    {
+      "company": "Stack Recruitment",
+      "role": "Unknown (LinkedIn Easy Apply)",
+      "status": "applied",
+      "applied_at": "2026-05-06",
+      "source": "linkedin",
+      "channel": "linkedin-easy-apply",
+      "notes": "Pre-pipeline manual application. No response received."
+    },
+    {
+      "company": "Arbitrum Foundation",
+      "role": "Unknown (Lever)",
+      "status": "applied",
+      "applied_at": "2026-04-16",
+      "source": "linkedin",
+      "channel": "lever",
+      "notes": "Pre-pipeline. Confirmation email received. No rejection found."
+    },
+    {
+      "company": "Chainlink Labs",
+      "role": "Unknown (Ashby)",
+      "status": "applied",
+      "applied_at": "2026-04-26",
+      "source": "linkedin",
+      "channel": "ashby",
+      "notes": "Pre-pipeline. Confirmation email received. No rejection found."
+    },
+    {
+      "company": "Fitch Group",
+      "role": "Senior Director, Frontier Technology (Manchester)",
+      "status": "applied",
+      "applied_at": "2026-05-08",
+      "source": "linkedin",
+      "channel": "successfactors",
+      "notes": "Pre-pipeline. Confirmation email received. No rejection found."
+    },
+    {
+      "company": "XWP US LLC",
+      "role": "Chief Technology Officer",
+      "status": "applied",
+      "applied_at": "2026-04-16",
+      "source": "linkedin",
+      "channel": "rippling",
+      "notes": "Pre-pipeline. Confirmation email received. No rejection found."
     }
   ],
   "updated": "2026-07-18"

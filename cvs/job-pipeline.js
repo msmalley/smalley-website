@@ -62,7 +62,7 @@ function addJob(jobDescription, options = {}) {
 
 async function generateCover(jobId, letterData) {
   const data = loadJobs();
-  const job = data.jobs.find(j => j.id === jobId || j.id.startsWith(jobId));
+  const job = data.jobs.find(j => j.id && (j.id === jobId || j.id.startsWith(jobId)));
 
   if (!job) {
     console.error(`Job not found: ${jobId}`);
@@ -120,7 +120,7 @@ function listJobs(filter) {
 
 function updateStatus(jobId, newStatus) {
   const data = loadJobs();
-  const job = data.jobs.find(j => j.id === jobId || j.id.startsWith(jobId));
+  const job = data.jobs.find(j => j.id && (j.id === jobId || j.id.startsWith(jobId)));
   if (!job) {
     console.error(`Job not found: ${jobId}`);
     process.exit(1);

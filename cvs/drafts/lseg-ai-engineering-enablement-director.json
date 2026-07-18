@@ -1,0 +1,24 @@
+{
+  "target": {
+    "company": "LSEG",
+    "role": "AI Engineering Enablement Director",
+    "contact_email": null,
+    "contact_type": null,
+    "contact_name": null,
+    "source_url": "https://lseg.wd3.myworkdayjobs.com/en-US/Careers/job/London%2C-United-Kingdom/AI-Engineering-Enablement-Director_R0116809-1/apply/autofillWithResume",
+    "cv_variant": "cto",
+    "cv_pdf": "/Applications/MAMP/htdocs/personal/smalley-website/cvs/dist/Mark-Smalley-CV-CTO.pdf"
+  },
+  "send_from": "mark@smalley.my",
+  "subject": "AI Engineering Enablement Director — Mark Smalley",
+  "status": "draft",
+  "created": "2026-07-18",
+  "variant": "cto",
+  "company": "LSEG",
+  "role": "AI Engineering Enablement Director",
+  "date": "18 July 2026",
+  "opening": "I am writing to apply for the AI Engineering Enablement Director role at LSEG. I have spent the past year building production AI agent infrastructure while drawing on 15 years of financial services engineering experience. This role sits at the intersection of both.",
+  "body": "I currently operate a production AI pipeline with 41 MCP tools, autonomous task orchestration, and LLM-augmented development workflows that ship framework-level architecture at solo-founder velocity. Before that, 15 years building regulated financial infrastructure: digital custody, settlement systems, and blockchain protocols for licensed operators. The combination of hands-on AI engineering and institutional fintech delivery is exactly what this role requires.",
+  "closing": "I am based in the UK, immediately available, and open to London hybrid arrangements. I would welcome the opportunity to discuss how my AI engineering and financial services background maps to what LSEG is building.",
+  "body_email": "Dear Hiring Team,\n\nI am writing to apply for the AI Engineering Enablement Director role at LSEG. I have spent the past year building production AI agent infrastructure while drawing on 15 years of financial services engineering experience.\n\nI currently operate a production AI pipeline with 41 MCP tools, autonomous task orchestration, and LLM-augmented development workflows that ship framework-level architecture at solo-founder velocity. Before that, 15 years building regulated financial infrastructure: digital custody, settlement systems, and blockchain protocols for licensed operators.\n\nThe combination of hands-on AI engineering and institutional fintech delivery is exactly what this role requires.\n\nI am based in the UK, immediately available, and open to London hybrid arrangements.\n\nKind regards,\nMark Smalley"
+}

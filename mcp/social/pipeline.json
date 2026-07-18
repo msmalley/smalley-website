@@ -62,7 +62,7 @@
       },
       "notes": "First post after long silence. Combines comeback with MCP meta-demonstration. Must land before anything else.",
       "metrics_twitter": {
-        "impressions": 138,
+        "impressions": 139,
         "likes": 1,
         "comments": 1,
         "shares": 0
@@ -198,10 +198,10 @@
       "pending_replies": [],
       "notes": "First post after long silence. Combines comeback with MCP meta-demonstration. No ask, no role signal — just presence and proof.",
       "metrics_linkedin": {
+        "impressions": 776,
         "likes": 21,
         "comments": 10,
         "shares": 0,
-        "impressions": 769,
         "reactions": {
           "LIKE": 16,
           "EMPATHY": 3,
@@ -272,7 +272,108 @@
             "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473009376979759105%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473009376979759105%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
           }
         ],
-        "last_checked": "2026-07-13T13:55:02.377Z"
+        "reactionsList": [
+          {
+            "author": "Johnny Mayo",
+            "occupation": "Scale-up programmes & corporate innovation partnerships | Forbes 30U30 | MBA",
+            "type": "LIKE"
+          },
+          {
+            "author": "Steven Kearns",
+            "occupation": "Retired - playing - having fun - I might be building something.... you will never guess what! Every day I’m Vibe Coding.",
+            "type": "LIKE"
+          },
+          {
+            "author": "Matías Cascallares",
+            "occupation": "Setting your data in motion",
+            "type": "LIKE"
+          },
+          {
+            "author": "richard abas",
+            "occupation": "founder, geotude.com",
+            "type": "LIKE"
+          },
+          {
+            "author": "Mark Leo",
+            "occupation": "Guiding customers and building their trust in our services throughout their cloud journey | markleo.net | linktr.ee/markleo82",
+            "type": "LIKE"
+          },
+          {
+            "author": "Mong Suan Yee",
+            "occupation": "Provides engineering productisation consultancy and algorithm development for engineering products.",
+            "type": "LIKE"
+          },
+          {
+            "author": "Karen Tan",
+            "occupation": "Operations and Client Servicing | Financial Advisory & Wealth Management | Streamlining Processes for Financial Success",
+            "type": "LIKE"
+          },
+          {
+            "author": "Ruben Tan",
+            "occupation": "Solutions Architect | Fintech, Blockchain",
+            "type": "LIKE"
+          },
+          {
+            "author": "Hanson Toh",
+            "occupation": "Experienced leader, P&L manager and Mentor. Battle scars from McKinsey, Boost (Fintech), Google + others. Right-brain Salesman and BD Hustler, Left-brain Product Manager and Corp Strategist. 2x Startup Founder.",
+            "type": "LIKE"
+          },
+          {
+            "author": "Matthew Smalley (BSc Hons)",
+            "occupation": "Director MPS Private Ltd. Sales Management & Business Development Consultant: Wealth & Asset Management / Financial Planning / Sales & Advisory Consulting to IFA firms/networks, looking to grow or expand internationally.",
+            "type": "LIKE"
+          },
+          {
+            "author": "Shafiu Hussain",
+            "occupation": "Co-Founder & Chef @ Oviato | Passkey-based Wallet infra as a service. Building onboarding tool for Web 3.0",
+            "type": "LIKE"
+          },
+          {
+            "author": "Nishant Ghodke",
+            "occupation": "human data @ handshake",
+            "type": "LIKE"
+          },
+          {
+            "author": "Sumanth Krishna",
+            "occupation": "AI for TA @ Deel | Top 10 Mentors Asia 2024 / Top 1% @ ADPList 🏆 | SaaS 🔥",
+            "type": "LIKE"
+          },
+          {
+            "author": "Wahyu Sumartha Priya Dharma",
+            "occupation": "From Architecture to Execution | Leading Teams That Deliver",
+            "type": "LIKE"
+          },
+          {
+            "author": "Suhanna Husein",
+            "occupation": "Delivering Institutional-Grade Infrastructure Solutions for Digital Assets. (Hiring)",
+            "type": "LIKE"
+          },
+          {
+            "author": "Tristan Gomez",
+            "occupation": "Chief Problem Solver | Senior Software Developer | Mentor | broad experience from startup MVPs to massive applications",
+            "type": "LIKE"
+          },
+          {
+            "author": "Renyi Khor",
+            "occupation": "Technical Founder & PropTech Builder | myhanko.ai",
+            "type": "LIKE"
+          },
+          {
+            "author": "Swee Meng Ng",
+            "occupation": "Herder of Containers, software incident investigator, manipulator of bits and bytes. Are you not entertained!.",
+            "type": "LIKE"
+          },
+          {
+            "author": "Mark Smalley",
+            "occupation": "Engineering Leader | AI Platforms, Digital Assets, Developer Tools",
+            "type": "LIKE"
+          },
+          {
+            "author": "Ikmal Badrol",
+            "occupation": "Software Engineer | Fintech",
+            "type": "LIKE"
+          }
+        ]
       },
       "deltas": {
         "impressions": 0,
@@ -343,8 +444,8 @@
         "last_checked": "2026-07-13T13:55:02.620Z"
       },
       "metrics_twitter": {
-        "impressions": 68,
-        "likes": 1,
+        "impressions": 69,
+        "likes": 2,
         "comments": 1,
         "shares": 0
       }
@@ -386,10 +487,10 @@
       },
       "notes": "Follow-up to comeback posts. Explains the process teased in the comeback. Positions engineering approach.",
       "metrics_linkedin": {
+        "impressions": 851,
         "likes": 3,
         "comments": 1,
         "shares": 0,
-        "impressions": 834,
         "reactions": {
           "LIKE": 3
         },
@@ -402,7 +503,23 @@
             "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473696853268725761?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473696853268725761%2C7476920240686424064%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287476920240686424064%2Curn%3Ali%3Aactivity%3A7473696853268725761%29"
           }
         ],
-        "last_checked": "2026-07-13T13:55:03.461Z"
+        "reactionsList": [
+          {
+            "author": "💻 Akmal Fikri Abdul Rahman",
+            "occupation": "Backend Developer | Drupal Specialist Since 2010 | Speaker @ DrupalCon Asia 2024 | Board Game Evangelist | Agency Experience | ENFJ-A",
+            "type": "LIKE"
+          },
+          {
+            "author": "Fuzail  Millican",
+            "occupation": "Senior Talent Acquisition Specialist",
+            "type": "LIKE"
+          },
+          {
+            "author": "Kevin Chand",
+            "occupation": "Architect of Professional Media Production Systems | Co-Founder, Moddable Games | Producer, MusicWerks Studio | Helping Creative Ventures Scale through Operational Design & Community-Centric Strategy",
+            "type": "LIKE"
+          }
+        ]
       },
       "deltas": {
         "impressions": 0,
@@ -469,10 +586,34 @@
       "platform_id": "urn:li:activity:7482386169809526784",
       "url": "https://www.linkedin.com/feed/update/urn:li:activity:7482386169809526784/",
       "metrics_linkedin": {
-        "impressions": 77,
-        "likes": 1,
+        "impressions": 448,
+        "likes": 3,
         "comments": 0,
-        "shares": 0
+        "shares": 0,
+        "reactions": {
+          "LIKE": 3
+        },
+        "reactionsList": [
+          {
+            "author": "Matthew Smalley (BSc Hons)",
+            "occupation": "Director MPS Private Ltd. Sales Management & Business Development Consultant: Wealth & Asset Management / Financial Planning / Sales & Advisory Consulting to IFA firms/networks, looking to grow or expand internationally.",
+            "type": "LIKE"
+          },
+          {
+            "author": "Grayson Smith",
+            "occupation": "Staff Product Manager & Product Coach",
+            "type": "LIKE"
+          },
+          {
+            "author": "Dorian Lazzari",
+            "occupation": "CEO @ Cubish",
+            "type": "LIKE"
+          }
+        ]
+      },
+      "deltas": {
+        "impressions": 2,
+        "likes": 0
       }
     },
     {
@@ -492,7 +633,7 @@
       "platform_id": "2076620514785652912",
       "url": "https://x.com/m_smalley/status/2076620514785652912",
       "metrics_twitter": {
-        "impressions": 15,
+        "impressions": 28,
         "likes": 0,
         "comments": 0,
         "shares": 0

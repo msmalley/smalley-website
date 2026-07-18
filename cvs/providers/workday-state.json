@@ -1,0 +1,16 @@
+{
+  "lseg": {
+    "apply_url": "https://lseg.wd3.myworkdayjobs.com/en-US/Careers/job/London%2C-United-Kingdom/AI-Engineering-Enablement-Director_R0116809-1/apply/autofillWithResume",
+    "sign_in_url": "https://lseg.wd3.myworkdayjobs.com/en-US/Careers/job/London%2C-United-Kingdom/AI-Engineering-Enablement-Director_R0116809-1/apply/autofillWithResume",
+    "account_email": "mark@smalley.my",
+    "account_password": "Sm4ll3y!Wd2026",
+    "account_status": "activated_and_password_reset",
+    "notes": "Account created and verified. Password reset manually by Mark. Sign-in not yet working via Puppeteer — Workday React components block standard click/type/enter. Need Playwright or React synthetic event approach."
+  },
+  "known_issues": [
+    "Workday buttons don't respond to element.click(), page.mouse.click(), or keyboard Enter",
+    "Form fields filled via page.type() may not trigger React state updates",
+    "data-automation-id selectors exist but interactions are blocked",
+    "Possible solutions: Playwright force:true, React fiber state injection, CDP Input.dispatchMouseEvent"
+  ]
+}

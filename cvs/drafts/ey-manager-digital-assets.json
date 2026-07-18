@@ -1,0 +1,49 @@
+{
+  "target": {
+    "company": "EY",
+    "role": "Manager, Digital Assets, TC, FS",
+    "contact_email": null,
+    "contact_type": null,
+    "contact_name": null,
+    "source_url": "https://www.linkedin.com/jobs/view/4418770418/",
+    "cv_variant": "cto",
+    "cv_pdf": "/Applications/MAMP/htdocs/personal/smalley-website/cvs/dist/Mark-Smalley-CV-CTO.pdf"
+  },
+  "send_from": "mark@smalley.my",
+  "subject": "Manager, Digital Assets — Mark Smalley",
+  "status": "draft",
+  "created": "2026-07-18",
+  "variant": "cto",
+  "company": "EY",
+  "role": "Manager, Digital Assets, TC, FS",
+  "date": "18 July 2026",
+  "opening": "I am writing to apply for the Manager, Digital Assets role within EY's Financial Services Tech Consulting team. I have spent 15 years building exactly what this role describes: production-grade DLT and tokenisation platforms for regulated financial institutions, primarily in Node.js, across custody, settlement, and digital asset infrastructure.",
+  "proof_points": [
+    {
+      "requirement": "5-10 years in backend/platform engineering within financial services or complex distributed systems",
+      "evidence": "15 years building production blockchain infrastructure. Co-founded CoKeeps (now Malaysia's largest Digital Asset Custodian by AUM). First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. Built custody, wallet, and settlement systems for licensed financial operators."
+    },
+    {
+      "requirement": "Production-grade code in Node.js (Express, NestJS), REST/event-driven APIs",
+      "evidence": "Node.js is my primary stack for 15 years. Authored the Ordit SDK (TypeScript/Node, ~50K npm downloads), SADO Protocol (decentralised order-book via PSBTs with REST APIs), and production REST services handling 1M+ requests during DBS Bank's blockchain hackathon."
+    },
+    {
+      "requirement": "Hands-on DLT/blockchain delivery, public and permissioned chains, smart contract interaction models",
+      "evidence": "Deep hands-on experience across UTXO scripting, Schnorr/Taproot, Ordinals, transaction lifecycle management, and protocol design. Built production systems on both public chains (Bitcoin, Ethereum) and permissioned infrastructure. Designed on-chain/off-chain state reconciliation for the SADO order-book protocol."
+    },
+    {
+      "requirement": "Strong understanding of financial markets: trading, clearing, settlement, custody, collateral",
+      "evidence": "Co-founded and architected a Digital Asset Custodian (CoKeeps). Contributed directly to Malaysia's national Digital Asset regulatory roadmap alongside the central bank. Built custody and wallet infrastructure for licensed financial operators. Advisory engagement with Baker Hostetler (US law firm) on digital asset custody frameworks."
+    },
+    {
+      "requirement": "Lead engineering workstreams, manage developers/engineers, mentor junior engineers",
+      "evidence": "Founded and grew CakeDefi's Moonshot team from 1 to 10 engineers. Led cross-functional delivery at Neuroware (5 engineers) for 12 years. Ran DBS Bank's blockchain hackathon (world's first bank-backed). Consistently operated at the intersection of hands-on engineering and team leadership."
+    },
+    {
+      "requirement": "Client-facing professional services environment, project-based delivery",
+      "evidence": "13 years operating Neuroware as a consultancy delivering blockchain solutions to institutional clients. 5-day intensive advisory engagement with Baker Hostetler. Created and delivered the StartingBlock developer programme across 6 cities (~1,000 attendees). Comfortable presenting technical designs to senior stakeholders."
+    }
+  ],
+  "body": "This role describes my exact career trajectory: a builder who can write production code, lead engineering delivery, and engage credibly with institutional stakeholders on digital asset architecture. The difference between my background and a typical candidate is that I have done this across multiple ventures and jurisdictions for 15 years, not as a recent pivot into digital assets from traditional finance.",
+  "closing": "I am based in the UK, immediately available, and open to London hybrid arrangements. I would welcome the opportunity to discuss how my combination of hands-on DLT engineering, institutional custody experience, and delivery leadership maps to what EY is building in this space."
+}

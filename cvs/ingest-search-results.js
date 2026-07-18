@@ -59,6 +59,10 @@ function loadArchive() {
   return data.jobs || [];
 }
 
+const REJECT_COMPANIES = [
+  'tether', 'tether operations limited',
+];
+
 const REJECT_TITLES = [
   // Sales / BD / marketing
   'business development', 'sales director', 'sales manager', 'account executive',
@@ -69,8 +73,8 @@ const REJECT_TITLES = [
   'ui/ux designer', 'ux researcher', 'copywriter',
   // HR / legal / finance / ops
   'recruiter', 'talent acquisition', 'people technology',
-  'legal counsel', 'litigator', 'paralegal',
-  'accountant', 'bookkeeper', 'finance lead', 'finance manager',
+  'legal counsel', 'legal lead', 'legal operations', 'corporate counsel', 'litigator', 'paralegal',
+  'accountant', 'bookkeeper', 'finance lead', 'finance manager', 'head of finance', 'finance director',
   'customer support', 'customer success',
   // Junior / intern
   'intern', 'junior developer', 'junior engineer', 'junior front-end',
@@ -78,7 +82,7 @@ const REJECT_TITLES = [
   // IC dev roles (no leadership)
   'rust developer', 'rust engineer', 'solidity developer', 'smart contract engineer',
   'solana developer', 'blockchain developer', 'blockchain engineer',
-  'qa engineer', 'test engineer', 'sdet',
+  'qa engineer', 'quality engineer', 'test engineer', 'sdet', 'security engineer',
   'data scientist', 'data analyst', 'data engineer', 'ml engineer', 'machine learning engineer',
   'mobile engineer', 'android developer', 'ios developer',
   'devops engineer', 'sre', 'site reliability',
@@ -96,10 +100,13 @@ const REJECT_PATTERNS = [
   /^(senior|staff|lead)\s+.*developer$/i,
   /product\s+engineer$/i,
   /technical product manager/i,
-  /product owner/i
+  /product owner/i,
+  /\blegal\b/i,
+  /co-?founder/i
 ];
 
-function isIrrelevantRole(title) {
+function isIrrelevantRole(title, company) {
+  if (company && REJECT_COMPANIES.some(r => company.toLowerCase().includes(r))) return true;
   if (!title) return false;
   const t = title.toLowerCase();
   if (REJECT_TITLES.some(r => t.includes(r))) return true;
@@ -147,7 +154,7 @@ function ingest(searchResults) {
       continue;
     }
 
-    if (isIrrelevantRole(c.title)) {
+    if (isIrrelevantRole(c.title, c.company)) {
       filtered++;
       continue;
     }
@@ -183,7 +190,7 @@ function ingest(searchResults) {
       source_url: (c.url || '').replace(/^(https?:\/\/)uk\.linkedin\.com/, '$1www.linkedin.com')
         || (c.job_id ? `https://www.linkedin.com/jobs/view/${c.job_id}/` : ''),
       source: c.source || 'unknown',
-      linkedin_job_id: c.job_id || null,
+      linkedin_job_id: c.job_id || ((c.url || '').match(/(\d{10,})/) || [])[1] || null,
       cover_letter: null,
       notes: `Auto-discovered ${new Date().toISOString().split('T')[0]}. Posted: ${c.posted || 'unknown'}.`
     };
@@ -365,16 +372,63 @@ Usage:
   node ingest-search-results.js <results.json>     Ingest from file
   echo '{"jobs":[...]}' | node ingest-search-results.js --stdin   Ingest from stdin
   node ingest-search-results.js --validate         Re-fetch jobs with <${MIN_REQUIREMENTS} requirements
+  node ingest-search-results.js --score-pending    Score all discovered/unscored jobs
+  node ingest-search-results.js --check-open       Verify all LinkedIn jobs are still open
 
 Options:
-  --no-score    Skip fetching descriptions and scoring (classify only)
-  --validate    Re-fetch and re-score under-extracted jobs
+  --no-score       Skip fetching descriptions and scoring (classify only)
+  --validate       Re-fetch and re-score under-extracted jobs
+  --score-pending  Fetch descriptions and score jobs stuck in discovered/new
+  --check-open     Hit LinkedIn API to verify jobs are still accepting applications
 `);
     process.exit(0);
   }
 
-  if (arg === '--validate') {
+  if (arg === '--check-open') {
+    (async () => {
+      const data = loadJobs();
+      const withId = data.jobs.filter(j => j.linkedin_job_id);
+      console.log(`Checking ${withId.length} jobs for liveness...`);
+      const closed = [];
+      for (const j of withId) {
+        try {
+          const url = `https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/${j.linkedin_job_id}`;
+          const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36' } });
+          if (res.status === 404 || res.status === 403) { closed.push(j); console.log(`  CLOSED: ${j.company} — ${j.role}`); }
+          else if (res.status === 999) { console.log('  Rate limited, stopping.'); break; }
+          else {
+            const html = await res.text();
+            if (html.includes('No longer accepting') || html.includes('no longer available')) { closed.push(j); console.log(`  CLOSED: ${j.company} — ${j.role}`); }
+          }
+          await new Promise(r => setTimeout(r, 1500));
+        } catch (e) { /* skip */ }
+      }
+      if (closed.length > 0) {
+        const archivePath = path.resolve(__dirname, 'jobs-archive.json');
+        let archive = { jobs: [], updated: '' };
+        if (fs.existsSync(archivePath)) archive = JSON.parse(fs.readFileSync(archivePath, 'utf-8'));
+        for (const j of closed) {
+          j.status = 'closed';
+          archive.jobs.push(j);
+          data.jobs = data.jobs.filter(x => x.id !== j.id);
+        }
+        archive.updated = new Date().toISOString().split('T')[0];
+        fs.writeFileSync(archivePath, JSON.stringify(archive, null, 2) + '\n');
+        saveJobs(data);
+      }
+      console.log(`\nDone: ${closed.length} closed, ${data.jobs.length} remaining.`);
+    })();
+  } else if (arg === '--validate') {
     validateAndRefetch().catch(e => console.error(e.message));
+  } else if (arg === '--score-pending') {
+    const data = loadJobs();
+    const pending = data.jobs.filter(j => j.id && (j.status === 'discovered' || (j.status === 'new' && j.score == null)));
+    const ids = pending.map(j => j.id);
+    console.log(`Scoring ${ids.length} pending jobs (discovered + unscored new)...`);
+    if (ids.length === 0) { console.log('Nothing to score.'); process.exit(0); }
+    fetchAndScore(ids).then(r => {
+      console.log(`\nScored: ${r.scored}/${r.fetched} fetched jobs.`);
+    }).catch(e => console.error(e.message));
   } else {
     const noScore = process.argv.includes('--no-score');
 

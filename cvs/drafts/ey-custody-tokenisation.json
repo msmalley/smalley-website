@@ -1,0 +1,49 @@
+{
+  "target": {
+    "company": "EY",
+    "role": "Manager, Digital Product Development, Custody & Tokenisation, TC, FS",
+    "contact_email": null,
+    "contact_type": null,
+    "contact_name": null,
+    "source_url": "https://www.linkedin.com/jobs/view/4418773394/",
+    "cv_variant": "cto",
+    "cv_pdf": "/Applications/MAMP/htdocs/personal/smalley-website/cvs/dist/Mark-Smalley-CV-CTO.pdf"
+  },
+  "send_from": "mark@smalley.my",
+  "subject": "Manager, Digital Product Development, Custody & Tokenisation — Mark Smalley",
+  "status": "draft",
+  "created": "2026-07-18",
+  "variant": "cto",
+  "company": "EY",
+  "role": "Manager, Digital Product Development, Custody & Tokenisation, TC, FS",
+  "date": "18 July 2026",
+  "opening": "I am writing to apply for the Manager, Digital Product Development (Custody & Tokenisation) role within EY's Financial Services Tech Consulting team. I co-founded and architected a licensed Digital Asset Custodian that became the largest in Malaysia by AUM. This role describes the exact work I have been doing for the past decade.",
+  "proof_points": [
+    {
+      "requirement": "8-12 years in financial services including custody, capital markets, payments, or operations",
+      "evidence": "15 years in digital asset infrastructure. Co-founded CoKeeps (Malaysia's largest Digital Asset Custodian by AUM). First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. Built custody, wallet, and settlement systems for licensed financial operators across multiple jurisdictions."
+    },
+    {
+      "requirement": "Hands-on experience with wallet infrastructure (Fireblocks, Metaco, Taurus, BitGo) and institutional custody solutions",
+      "evidence": "Designed and built production custody architecture from the ground up at CoKeeps: multi-signature wallet infrastructure, key management systems, role-based access controls, and secure transaction signing workflows. Built the complete custody stack rather than integrating a third-party platform, giving me deep understanding of what those platforms abstract away."
+    },
+    {
+      "requirement": "Delivery of custody solutions for tokenised funds or digital native assets, including MPC/HSM key management and atomic DvP",
+      "evidence": "Built production transaction lifecycle management and signing orchestration systems. Designed on-chain/off-chain state reconciliation for the SADO Protocol (decentralised order-book via PSBTs). Deep experience with UTXO scripting, Schnorr/Taproot multi-signature schemes, and atomic swap patterns."
+    },
+    {
+      "requirement": "Regulatory awareness and translating business/regulatory requirements into product requirements and delivery roadmaps",
+      "evidence": "Contributed directly to Malaysia's national Digital Asset regulatory roadmap alongside the central bank and Securities Commission. Translated regulatory requirements into technical architecture at CoKeeps. 5-day intensive advisory engagement with Baker Hostetler (US law firm) on digital asset custody frameworks."
+    },
+    {
+      "requirement": "Lead end-to-end delivery across multi-disciplinary teams (engineering, operations, risk, legal, compliance)",
+      "evidence": "13 years leading cross-functional delivery at Neuroware. Founded and grew CakeDefi's Moonshot team (1 to 10 engineers). At CoKeeps, coordinated across engineering, legal, compliance, and the regulator simultaneously to achieve sandbox admission. Comfortable operating as primary stakeholder contact."
+    },
+    {
+      "requirement": "Client-facing professional services, translating technical complexity into executive-level narratives",
+      "evidence": "13 years operating a blockchain consultancy delivering to institutional clients. Created and delivered the StartingBlock developer programme across 6 cities (~1,000 attendees). Presented at TEDx, BFM Radio, and DBS Bank. Consistently bridge the gap between deeply technical architecture and non-technical stakeholder communication."
+    }
+  ],
+  "body": "The distinction between my background and a typical candidate is that I did not integrate a custody platform. I built one, from key management through to regulatory approval. When your clients ask how MPC signing orchestration should interact with their existing settlement workflows, or how to reconcile on-chain state with legacy systems, I can answer from direct production experience building exactly those systems.",
+  "closing": "I am based in the UK, immediately available, and open to London hybrid arrangements. I would welcome the opportunity to discuss how my hands-on custody architecture experience, regulatory engagement track record, and delivery leadership maps to what EY is building in this space."
+}

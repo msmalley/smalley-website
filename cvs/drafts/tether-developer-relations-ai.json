@@ -1,0 +1,49 @@
+{
+  "target": {
+    "company": "Tether Operations Limited",
+    "role": "Developer Relations AI",
+    "contact_email": null,
+    "contact_type": null,
+    "contact_name": null,
+    "source_url": "https://web3.career/developer-relations-ai-100-remote-tetheroperationslimited/147104",
+    "cv_variant": "devrel",
+    "cv_pdf": "/Applications/MAMP/htdocs/personal/smalley-website/cvs/dist/Mark-Smalley-CV-DevRel.pdf"
+  },
+  "send_from": "mark@smalley.my",
+  "subject": "Developer Relations AI — Mark Smalley",
+  "status": "draft",
+  "created": "2026-07-18",
+  "variant": "devrel",
+  "company": "Tether Operations Limited",
+  "role": "Developer Relations AI",
+  "date": "18 July 2026",
+  "opening": "I am writing to apply for the Developer Relations AI role at Tether. I have spent 15 years building developer-facing blockchain infrastructure, and the past 12 months building production AI agent systems on top of it. This role sits at the exact intersection of my two deepest areas of expertise.",
+  "proof_points": [
+    {
+      "requirement": "3+ years software development with JavaScript, TypeScript, and Node.js",
+      "evidence": "15 years building production systems in this stack. Authored the Ordit SDK (TypeScript, ~50K npm downloads), SADO Protocol (decentralised order-book), and a complete open-source game engine framework with Consumer SDKs, all in TypeScript/Node.js."
+    },
+    {
+      "requirement": "AI/ML technology experience (LLMs, chatbots, AI-driven SDKs)",
+      "evidence": "Built and operate a production AI agent pipeline with 41 MCP tools, autonomous task orchestration, and LLM-augmented development workflows. Currently shipping framework-level architecture at solo-founder velocity using Claude, local inference, and custom tooling. This is daily production use, not experimentation."
+    },
+    {
+      "requirement": "Experience with Llama.cpp and ggml inference engines",
+      "evidence": "Direct experience running local LLM inference via llama.cpp and GGUF models for development tooling. Familiar with quantisation tradeoffs, context window management, and integrating local inference into developer workflows alongside cloud APIs."
+    },
+    {
+      "requirement": "Developer Advocate or Developer Relations experience",
+      "evidence": "21 presentations on SlideShare (59K+ views, \"Introducing Bitcoin\" at 31.5K). Delivered keynotes at TEDx and BFM Radio. Created the StartingBlock developer tour (~1,000 attendees across 6 cities). Ran DBS Bank's blockchain hackathon (world's first bank-backed). All focused on making complex technical concepts accessible to developer audiences."
+    },
+    {
+      "requirement": "Technical content creation (tutorials, blog posts, videos)",
+      "evidence": "Currently publishing technical articles on smalley.my covering protocol design, vanilla JS architecture, and AI-augmented engineering. Built comprehensive developer documentation for Moddable (game engine + MCP tools). History of creating technical educational materials for the StartingBlock nationwide developer programme."
+    },
+    {
+      "requirement": "SDK design and documentation, open-source contributions",
+      "evidence": "Designed and shipped the Ordit SDK (open-source, npm), SADO Protocol SDK, and Moddable Consumer SDKs with full API documentation. 7 open-source repositories on GitHub covering game engines, protocol infrastructure, and developer tooling."
+    }
+  ],
+  "body": "What makes me particularly suited to this role is that I am not a DevRel professional learning AI. I am an engineer who has been building AI-driven developer tools for the past year, with 15 years of blockchain infrastructure before that. When Tether's developers ask how to integrate inference into their workflows, I can answer from direct production experience, not from reading documentation.",
+  "closing": "I am based in the UK, fully remote, and immediately available. I would welcome the opportunity to discuss how my combination of hands-on AI engineering, SDK architecture experience, and developer advocacy background maps to what Tether is building in this space."
+}

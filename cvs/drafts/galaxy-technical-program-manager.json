@@ -1,0 +1,46 @@
+{
+  "target": {
+    "company": "Galaxy",
+    "role": "Technical Program Manager",
+    "contact_email": "careers@galaxy.com",
+    "contact_type": "generic",
+    "contact_name": null,
+    "source_url": "https://www.linkedin.com/jobs/view/4427147387",
+    "cv_variant": "cto",
+    "cv_pdf": "/Applications/MAMP/htdocs/personal/smalley-website/cvs/dist/Mark-Smalley-CV-CTO.pdf"
+  },
+  "send_from": "mark@smalley.my",
+  "subject": "Technical Program Manager — Mark Smalley",
+  "status": "draft",
+  "created": "2026-07-18",
+  "variant": "cto",
+  "company": "Galaxy",
+  "role": "Technical Program Manager",
+  "date": "18 July 2026",
+  "opening": "I am writing to express my interest in the Technical Program Manager role within Galaxy's Blockchain Engineering team. Having spent 15 years as a hands-on blockchain engineer before moving into engineering leadership, I bring the rare combination you are looking for: deep technical fluency in blockchain infrastructure, proven cross-timezone delivery coordination, and an AI-first approach to team productivity.",
+  "proof_points": [
+    {
+      "requirement": "7+ years in Technical Program Management with engineering-led delivery",
+      "evidence": "Led delivery across multiple concurrent engineering initiatives for 13 years: founded and operated Neuroware (5 engineers), grew CakeDefi's Moonshot team from 1 to 10, coordinated cross-functional delivery at Oviato through to DraperVC investment. Built intake, prioritisation, and sprint processes from scratch at each."
+    },
+    {
+      "requirement": "Cross-timezone coordination with multiple engineering teams",
+      "evidence": "Operated across Asian and European time zones for 13 years (Malaysia, Singapore, UK, international clients). At CakeDefi (170 engineers), coordinated blockchain engineering delivery across distributed pods in Singapore and remote teams."
+    },
+    {
+      "requirement": "Prior software engineer with familiarity in staking, validators, or blockchain infrastructure",
+      "evidence": "15 years building production blockchain systems: UTXO scripting, Schnorr/Taproot, protocol design (SADO order-book), digital custody architecture (CoKeeps), and wallet infrastructure. This is not adjacent familiarity; it is my core career."
+    },
+    {
+      "requirement": "AI tools to improve productivity, decision-making, and output quality",
+      "evidence": "Built and operate an AI agent pipeline with 41 MCP tools, autonomous task orchestration, and LLM-augmented development workflows. Currently shipping framework-level architecture at solo-founder velocity using these systems. This is production methodology, not experimentation."
+    },
+    {
+      "requirement": "Experience in digital assets or alongside tier-1 financial institutions",
+      "evidence": "First blockchain company admitted to Securities Commission Malaysia's regulatory sandbox. Co-founded CoKeeps (Malaysia's largest Digital Asset Custodian by AUM). Ran DBS Bank's blockchain hackathon (world's first bank-backed). Advisory engagement with Baker Hostetler (US law firm, 5-day intensive)."
+    }
+  ],
+  "body": "Your JD describes someone who bridges the gap between deep technical understanding and structured execution. Most TPMs come from project management and learn enough tech to follow along. I come from the opposite direction: 15 years of hands-on blockchain engineering, now applying that depth to delivery coordination and team operations. When your engineers discuss validator architecture or staking dependencies, I will not be translating; I will be contributing.",
+  "closing": "I am based in the UK, London-accessible, and immediately available. The timezone bridge between New York and Hong Kong is familiar territory. I would welcome the opportunity to discuss how my combination of blockchain engineering depth, cross-functional delivery experience, and AI-first tooling maps to what you are building at Galaxy.",
+  "body_email": "Dear Hiring Team,\n\nI am writing to express my interest in the Technical Program Manager role within Galaxy's Blockchain Engineering team. Having spent 15 years as a hands-on blockchain engineer before moving into engineering leadership, I bring the rare combination you are looking for: deep technical fluency in blockchain infrastructure, proven cross-timezone delivery coordination, and an AI-first approach to team productivity.\n\nYour JD describes someone who bridges the gap between deep technical understanding and structured execution. Most TPMs come from project management and learn enough tech to follow along. I come from the opposite direction: 15 years of hands-on blockchain engineering, now applying that depth to delivery coordination and team operations. When your engineers discuss validator architecture or staking dependencies, I will not be translating; I will be contributing.\n\nSpecific evidence mapped to your requirements:\n\n- Engineering-led delivery leadership — Led delivery across multiple concurrent engineering initiatives for 13 years: founded and operated Neuroware (5 engineers), grew CakeDefi's Moonshot team from 1 to 10, coordinated cross-functional delivery at Oviato through to DraperVC investment. Built intake, prioritisation, and sprint processes from scratch at each.\n\n- Cross-timezone coordination — Operated across Asian and European time zones for 13 years (Malaysia, Singapore, UK, international clients). At CakeDefi (170 engineers), coordinated blockchain engineering delivery across distributed pods.\n\n- Blockchain infrastructure depth — 15 years building production systems: UTXO scripting, Schnorr/Taproot, protocol design (SADO decentralised order-book), digital custody architecture (CoKeeps), and wallet infrastructure. This is not adjacent familiarity; it is my core career.\n\n- AI-augmented delivery — Built and operate an AI agent pipeline with 41 MCP tools, autonomous task orchestration, and LLM-augmented development workflows. Currently shipping framework-level architecture at solo-founder velocity using these systems.\n\n- Digital assets and institutional experience — First blockchain company admitted to Securities Commission Malaysia's regulatory sandbox. Co-founded CoKeeps (Malaysia's largest DAC by AUM). Ran DBS Bank's blockchain hackathon. Advisory engagement with Baker Hostetler.\n\nI am based in the UK, London-accessible, and immediately available. The timezone bridge between New York and Hong Kong is familiar territory. I would welcome the opportunity to discuss how my combination of blockchain engineering depth, cross-functional delivery experience, and AI-first tooling maps to what you are building at Galaxy.\n\nKind regards,\nMark Smalley"
+}

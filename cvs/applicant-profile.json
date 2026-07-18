@@ -1,0 +1,27 @@
+{
+  "first_name": "Mark",
+  "last_name": "Smalley",
+  "email": "mark@smalley.my",
+  "phone": "+44 (0) 7526 860 262",
+  "phone_country": "GB",
+  "location": {
+    "city": "Huddersfield",
+    "region": "West Yorkshire",
+    "country": "United Kingdom",
+    "postcode": "HD1"
+  },
+  "linkedin": "https://www.linkedin.com/in/msmalley",
+  "github": "https://github.com/msmalley",
+  "website": "https://smalley.my",
+  "work_authorisation": "British Citizen — no sponsorship required",
+  "visa_status": "British Citizen",
+  "notice_period": "Immediately available",
+  "willing_to_relocate": true,
+  "salary_expectations": "Competitive / market rate",
+  "how_did_you_hear": "LinkedIn",
+  "gender": "Male",
+  "pronouns": "He/Him",
+  "disability": "No",
+  "ethnicity": "Prefer not to say",
+  "veteran": "No"
+}

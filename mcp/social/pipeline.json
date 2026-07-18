@@ -444,7 +444,7 @@
         "last_checked": "2026-07-13T13:55:02.620Z"
       },
       "metrics_twitter": {
-        "impressions": 69,
+        "impressions": 70,
         "likes": 2,
         "comments": 1,
         "shares": 0
@@ -487,7 +487,7 @@
       },
       "notes": "Follow-up to comeback posts. Explains the process teased in the comeback. Positions engineering approach.",
       "metrics_linkedin": {
-        "impressions": 851,
+        "impressions": 852,
         "likes": 3,
         "comments": 1,
         "shares": 0,
@@ -522,7 +522,7 @@
         ]
       },
       "deltas": {
-        "impressions": 0,
+        "impressions": 1,
         "likes": 0
       }
     },
@@ -586,13 +586,22 @@
       "platform_id": "urn:li:activity:7482386169809526784",
       "url": "https://www.linkedin.com/feed/update/urn:li:activity:7482386169809526784/",
       "metrics_linkedin": {
-        "impressions": 448,
+        "impressions": 454,
         "likes": 3,
-        "comments": 0,
+        "comments": 1,
         "shares": 0,
         "reactions": {
           "LIKE": 3
         },
+        "commentsList": [
+          {
+            "author": "Mark Smalley",
+            "subtitle": "Engineering Leader | AI Platforms, Digital Assets, Developer Tools",
+            "text": "Progress update: first fully automated submission completed this week. Two sessions, approximately US$78 in AI compute, to reverse-engineer one enterprise hiring platform's custom form widgets. The cost sounds confronting until you consider the marginal curve. Second application costs under $10. Third, maybe $2. Any job posted on that platform can now be applied to with a single command. Other platforms next.",
+            "created": 1784388311649,
+            "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7482386169809526784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7482386169809526784%2C7484267033098973184%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287484267033098973184%2Curn%3Ali%3Aactivity%3A7482386169809526784%29"
+          }
+        ],
         "reactionsList": [
           {
             "author": "Matthew Smalley (BSc Hons)",
@@ -612,7 +621,7 @@
         ]
       },
       "deltas": {
-        "impressions": 2,
+        "impressions": 6,
         "likes": 0
       }
     },
@@ -633,7 +642,7 @@
       "platform_id": "2076620514785652912",
       "url": "https://x.com/m_smalley/status/2076620514785652912",
       "metrics_twitter": {
-        "impressions": 28,
+        "impressions": 29,
         "likes": 0,
         "comments": 0,
         "shares": 0

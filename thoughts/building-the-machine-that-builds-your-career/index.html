@@ -109,16 +109,6 @@
 
       <p>This layered approach (variant-specific proof pools + variant-specific semantic expansion) means two jobs with identical keywords can score differently because the system understands that "team management" means different things depending on whether you're hiring engineers or coordinating a developer community. The scores finally reflect human judgement about fit, not just keyword overlap.</p>
 
-      <h2>From Personal Tool to Open System</h2>
-
-      <p>Here's what makes this more than a personal job search: the architecture generalises immediately. I started with one CV. After scoring hundreds of jobs against it, patterns emerged. Certain proof points dominated matches for leadership roles. Different ones dominated for developer-facing roles. Others lit up for compliance-adjacent positions. The data suggested I'd get better results with targeted variants. So the system suggested three.</p>
-
-      <p>That turned into the testing strategy. Scoring all three against the same job descriptions exposed every failure mode that a single-CV user would never trigger. Identical scores, missing semantic context, confidence without data. Each failure made the system more robust for the single-CV case. And it raised a product question: could the system itself identify when a user's experience clusters into distinct role types, and suggest they'd benefit from a variant?</p>
-
-      <p>A future user uploads one CV. The system parses their proof points from the document directly. No manual tagging, no keyword configuration, no profile form to fill out. Over time, as it scores enough jobs, it might surface the same insight: "your experience matches these 40 roles one way and those 30 a different way. Here's where a second CV would outperform your first." The quality of scoring scales with the quality of their CV writing, and the system teaches them where to improve it.</p>
-
-      <p>The goal is to eventually open this up as a working system that anyone can point at their own CV and start getting scored matches from. Until it's done its job and actually found me work, the focus stays on me. The same agents that were researching game rules and generating variant documentation are now fetching job descriptions, scoring matches, and drafting applications. The infrastructure costs money, they need feeding, and the paradox only resolves if the system produces results for its first user before it tries to serve others.</p>
-
       <h2>The Application Cost Problem</h2>
 
       <p>Scoring jobs and drafting cover letters is half the pipeline. The other half is actually filling out applications. The dominant enterprise ATS platform handles a huge share of director-level postings, and a typical application form on it takes 20 to 40 minutes of manual data entry across 6 steps. Every field is a custom React widget with non-standard DOM attributes. Triple-click-to-select doesn't work. Standard form selectors miss their targets. Dropdowns render options in category trees that need drill-down navigation before individual items become clickable.</p>
@@ -128,6 +118,16 @@
       <p>The maths is confronting. US$78 for one application. But that $78 bought a working automation framework for this platform. The second application on it should cost under $10 because every solved problem (stale DOM references, React native value setters, category drill-down, crash recovery) is now encoded in reusable code. The third might cost $2. By the tenth, the marginal cost approaches zero. Any job posted on this platform can now be applied to with a single command. The investment thesis is identical to any automation project: high upfront cost, declining marginal cost, eventual payback that depends entirely on volume.</p>
 
       <p>The broader implication for the system: if each ATS platform gets its own provider module, the orchestrator becomes trivial. Detect platform from URL, load provider, fill from structured profile data, stop at review for human approval. The job pipeline command becomes: pick a job, generate a cover letter, submit the application. Three commands where there used to be 40 minutes of typing the same address into the same fields for the hundredth time.</p>
+
+      <h2>From Personal Tool to Open System</h2>
+
+      <p>Here's what makes this more than a personal job search: the architecture generalises immediately. I started with one CV. After scoring hundreds of jobs against it, patterns emerged. Certain proof points dominated matches for leadership roles. Different ones dominated for developer-facing roles. Others lit up for compliance-adjacent positions. The data suggested I'd get better results with targeted variants. So the system suggested three.</p>
+
+      <p>That turned into the testing strategy. Scoring all three against the same job descriptions exposed every failure mode that a single-CV user would never trigger. Identical scores, missing semantic context, confidence without data. Each failure made the system more robust for the single-CV case. And it raised a product question: could the system itself identify when a user's experience clusters into distinct role types, and suggest they'd benefit from a variant?</p>
+
+      <p>A future user uploads one CV. The system parses their proof points from the document directly. No manual tagging, no keyword configuration, no profile form to fill out. Over time, as it scores enough jobs, it might surface the same insight: "your experience matches these 40 roles one way and those 30 a different way. Here's where a second CV would outperform your first." The quality of scoring scales with the quality of their CV writing, and the system teaches them where to improve it.</p>
+
+      <p>The goal is to eventually open this up as a working system that anyone can point at their own CV and start getting scored matches from. Until it's done its job and actually found me work, the focus stays on me. The same agents that were researching game rules and generating variant documentation are now fetching job descriptions, scoring matches, and drafting applications. The infrastructure costs money, they need feeding, and the paradox only resolves if the system produces results for its first user before it tries to serve others.</p>
 
       <div class="article-divider"><hr></div>
 

@@ -507,23 +507,11 @@
       "url": "https://www.linkedin.com/jobs/view/ai-engineering-enablement-director-at-lseg-4402730169",
       "linkedin_job_id": "4402730169",
       "source": "linkedin",
-      "status": "new",
+      "status": "applied",
       "discovered": "2026-06-22",
       "variant": "devrel",
-      "notes": "LSEG. Governance/enablement focus not hands-on building. 149 applicants. Very corporate. Needs Python/LangChain. Weak culture fit.",
-      "channel": {
-        "source": "linkedin",
-        "method": "linkedin_apply",
-        "apply_url": "https://www.linkedin.com/jobs/view/4402730169/",
-        "contact_email": null,
-        "linkedin_job_id": "4402730169",
-        "freshness": {
-          "status": "unknown",
-          "days_old": null
-        },
-        "action": "check_easy_apply",
-        "notes": null
-      },
+      "notes": "LSEG. Governance/enablement focus not hands-on building. 149 applicants. Very corporate. Needs Python/LangChain. Weak culture fit. Applied via Puppeteer automation (workday-lseg.js). CV uploaded, salary: flexible GBP based on remote/hybrid.",
+      "channel": "workday-direct",
       "score": 59,
       "scores": {
         "cto": 48,
@@ -539,33 +527,34 @@
         "Keep us connected to the market",
         "experience in cloud engineering, Dev",
         "Experience creating or curating engineering enablement assets such as templates, patterns, playbooks, or reusable guidance.Strong communication",
-        "Ops, such as cost‑aware model selection, unit economics, or prompt‑efficiency practices.",
+        "Ops, such as cost\u2011aware model selection, unit economics, or prompt\u2011efficiency practices.",
         "essential and your responsibility to ensure that candidates applying to LSEG are aware of this privacy notice.",
         "As a global organisation spanning 70 countries and one rooted in a culture of growth, opportunity,"
       ],
       "proof_points": [
         {
-          "requirement": "Ops, or software delivery (Azure, AWS, or GCP), with a track record of incremental, agile delivery.Hands‑on development capability, including practical",
+          "requirement": "Ops, or software delivery (Azure, AWS, or GCP), with a track record of incremental, agile delivery.Hands\u2011on development capability, including practical",
           "evidence": "Developer advocate and technical evangelist with 15 years building on, and explaining, blockchain technology. One of Southeast Asia's earliest Bitcoin voices, with a track record of making complex cryptographic concepts accessible to developers, institutions, and the general public alike. Personally designed protocols now running in production (SADO, DN-Key), built open-source SDKs used across the Bitcoin Ordinals ecosystem, and currently shipping open-source game engines with full developer documentation and embed APIs. Spoken at TEDx, FinTech conferences, and developer meetups across Asia and Europe. Using AI-native engineering workflows to ship developer tooling at unprecedented pace. Looking for a DevRel or Technical Evangelist role at a Layer 1/2 protocol, developer tooling company, or infrastructure provider where both the code and the community matter."
         },
         {
           "requirement": "experience with Python and modern AI frameworks (e.g., Lang",
-          "evidence": "MCP Tools Server ( tools.moddable.games ) — first board game engine MCP server: 16 AI-callable tools, MCP + REST + OpenAPI + llms.txt, Cloudflare Worker on free tier. Connect with one command from Claude Desktop, Cursor, or VS Code"
+          "evidence": "MCP Tools Server ( tools.moddable.games ) \u2014 first board game engine MCP server: 16 AI-callable tools, MCP + REST + OpenAPI + llms.txt, Cloudflare Worker on free tier. Connect with one command from Claude Desktop, Cursor, or VS Code"
         },
         {
-          "requirement": "Chain, Semantic Kernel, or similar) to build or support agents, chat interfaces, or retrieval‑augmented solutions.",
+          "requirement": "Chain, Semantic Kernel, or similar) to build or support agents, chat interfaces, or retrieval\u2011augmented solutions.",
           "evidence": "LLM-augmented development workflows, AI game engines, procedural generation, MCP (Model Context Protocol)"
         },
         {
           "requirement": "Experience applying software engineering fundamentals: writing tests, structuring user stories, managing iterative releases, and working with CI/CD pipelines.",
-          "evidence": "'Unravelling Blockchain's Future' — bylined article in Islamic Finance News (IFN), 2017"
+          "evidence": "'Unravelling Blockchain's Future' \u2014 bylined article in Islamic Finance News (IFN), 2017"
         },
         {
           "requirement": "experience with Python and modern AI frameworks (e.g., Lang",
           "evidence": "Open-source games studio shipping developer-facing engines, Consumer SDKs, MCP tools, and documentation, built entirely using AI-augmented engineering workflows. Deployed the first board game engine MCP server and a full Developers section with API docs, SDK demos, and integration examples."
         }
       ],
-      "source_url": "https://www.linkedin.com/jobs/view/4402730169/"
+      "source_url": "https://www.linkedin.com/jobs/view/4402730169/",
+      "applied_at": "2026-07-18"
     }
   ]
 }

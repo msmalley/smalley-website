@@ -8,7 +8,9 @@ mcp/**/.env.*
 !mcp/**/.env.example
 mcp/**/node_modules/
 mcp/**/credentials/
+cvs/.env
 cvs/.tmp-*
+cvs/screenshots/
 cvs/jobs-discovery.json
 cvs/jobs-discovery-history.json
 cvs/jobs-scored.json

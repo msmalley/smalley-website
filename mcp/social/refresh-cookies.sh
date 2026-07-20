@@ -154,6 +154,99 @@ fi
 
 rm -f "$TMP_DB"
 
+# --- Moddable (@ModdableGames) Twitter/X from Chrome ---
+if [ "$PLATFORM" = "all" ] || [ "$PLATFORM" = "moddable" ]; then
+  echo "Moddable (Chrome):"
+
+  CHROME_DB="$HOME/Library/Application Support/Google/Chrome/Default/Cookies"
+  if [ ! -f "$CHROME_DB" ]; then
+    echo "  Chrome cookie database not found"
+    FAILED=1
+  else
+    CHROME_COOKIES=$(python3 -c "
+import subprocess, sqlite3, shutil, tempfile, os, re, json
+from hashlib import pbkdf2_hmac
+from Crypto.Cipher import AES
+
+key_raw = subprocess.run(
+    ['security', 'find-generic-password', '-s', 'Chrome Safe Storage', '-w'],
+    capture_output=True, text=True
+).stdout.strip()
+if not key_raw:
+    print(json.dumps({'error': 'No Keychain key'}))
+    exit()
+
+enc_key = pbkdf2_hmac('sha1', key_raw.encode('utf-8'), b'saltysalt', 1003, dklen=16)
+chrome_db = os.path.expanduser('~/Library/Application Support/Google/Chrome/Default/Cookies')
+tmp = tempfile.mktemp(suffix='.sqlite')
+shutil.copy2(chrome_db, tmp)
+
+conn = sqlite3.connect(tmp)
+cursor = conn.execute(
+    '''SELECT name, encrypted_value FROM cookies
+       WHERE (host_key LIKE '%x.com' OR host_key LIKE '%twitter.com')
+       AND name IN ('auth_token', 'ct0', 'twid', 'guest_id', 'personalization_id')''')
+
+results = {}
+for name, ev in cursor:
+    if ev[:3] != b'v10': continue
+    payload = ev[3:]
+    cipher = AES.new(enc_key, AES.MODE_CBC, IV=b' ' * 16)
+    decrypted = cipher.decrypt(payload)
+    pad = decrypted[-1]
+    if isinstance(pad, int) and 1 <= pad <= 16:
+        decrypted = decrypted[:-pad]
+    text = decrypted.decode('latin-1')
+    val = None
+    if name == 'auth_token':
+        m = re.search(r'[0-9a-f]{40}', text)
+        if m: val = m.group(0)
+    elif name == 'ct0':
+        m = re.search(r'[0-9a-f]{100,}', text)
+        if m: val = m.group(0)
+    elif name == 'twid':
+        m = re.search(r'u%3D\d+', text)
+        if m: val = m.group(0)
+    elif name == 'guest_id':
+        m = re.search(r'v1%3A\d+', text)
+        if m: val = m.group(0)
+    elif name == 'personalization_id':
+        m = re.search(r'\"[^\"]+\"', text)
+        if m: val = m.group(0)
+    if val and (name not in results or len(val) > len(results[name])):
+        results[name] = val
+
+conn.close()
+os.unlink(tmp)
+print(json.dumps(results))
+" 2>&1)
+
+    MOD_AUTH=$(echo "$CHROME_COOKIES" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('auth_token',''))")
+    MOD_CT0=$(echo "$CHROME_COOKIES" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('ct0',''))")
+    MOD_TWID=$(echo "$CHROME_COOKIES" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('twid',''))")
+    MOD_GUEST=$(echo "$CHROME_COOKIES" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('guest_id',''))")
+    MOD_PERS=$(echo "$CHROME_COOKIES" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('personalization_id',''))")
+
+    if [ -z "$MOD_AUTH" ] || [ -z "$MOD_CT0" ]; then
+      echo "  Missing auth_token or ct0 from Chrome"
+      echo "  → Log into x.com as @ModdableGames in Chrome first"
+      FAILED=1
+    else
+      update_env "TWITTER_MODDABLE_AUTH_TOKEN" "$MOD_AUTH"
+      update_env "TWITTER_MODDABLE_CSRF_TOKEN" "$MOD_CT0"
+      [ -n "$MOD_TWID" ] && update_env "TWITTER_MODDABLE_TWID" "$MOD_TWID"
+      [ -n "$MOD_GUEST" ] && update_env "TWITTER_MODDABLE_GUEST_ID" "$MOD_GUEST"
+      [ -n "$MOD_PERS" ] && update_env "TWITTER_MODDABLE_PERSONALIZATION_ID" "$MOD_PERS"
+      echo "  auth_token:    ${#MOD_AUTH} chars"
+      echo "  ct0:           ${#MOD_CT0} chars"
+      [ -n "$MOD_TWID" ] && echo "  twid:          ${#MOD_TWID} chars"
+      [ -n "$MOD_GUEST" ] && echo "  guest_id:      ${#MOD_GUEST} chars"
+      UPDATED=1
+    fi
+  fi
+  echo ""
+fi
+
 if [ "$UPDATED" = "1" ]; then
   echo "Done. Restart Claude Code to pick up new cookies."
 fi

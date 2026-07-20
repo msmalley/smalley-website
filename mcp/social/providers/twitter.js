@@ -141,13 +141,25 @@ async function officialSearchTweets(query, count = 10) {
 
 // --- Cookie-based auth (free, no API credits needed) ---
 
-function getCookieHeaders() {
-  const authToken = process.env.TWITTER_AUTH_TOKEN;
-  const csrfToken = process.env.TWITTER_CSRF_TOKEN || crypto.randomBytes(16).toString('hex');
-  const twid = process.env.TWITTER_TWID || '';
-  const guestId = process.env.TWITTER_GUEST_ID || '';
-  const personalizationId = process.env.TWITTER_PERSONALIZATION_ID || '';
-  const cfClearance = process.env.TWITTER_CF_CLEARANCE || '';
+const ACCOUNTS = {
+  personal: { prefix: 'TWITTER_', username: 'm_smalley' },
+  moddable: { prefix: 'TWITTER_MODDABLE_', username: 'ModdableGames' }
+};
+
+function getAccountConfig(account = 'personal') {
+  const config = ACCOUNTS[account];
+  if (!config) throw new Error(`Unknown Twitter account: ${account}. Available: ${Object.keys(ACCOUNTS).join(', ')}`);
+  return config;
+}
+
+function getCookieHeaders(account = 'personal') {
+  const { prefix } = getAccountConfig(account);
+  const authToken = process.env[`${prefix}AUTH_TOKEN`];
+  const csrfToken = process.env[`${prefix}CSRF_TOKEN`] || crypto.randomBytes(16).toString('hex');
+  const twid = process.env[`${prefix}TWID`] || '';
+  const guestId = process.env[`${prefix}GUEST_ID`] || '';
+  const personalizationId = process.env[`${prefix}PERSONALIZATION_ID`] || '';
+  const cfClearance = process.env[`${prefix}CF_CLEARANCE`] || '';
 
   let cookieStr = `auth_token=${authToken}; ct0=${csrfToken}`;
   if (twid) cookieStr += `; twid=${twid}`;
@@ -269,7 +281,8 @@ const FIELD_TOGGLES = {
   withDisallowedReplyControls: false
 };
 
-async function cookiePostTweet(content, replyToId = null, attempt = 1) {
+async function cookiePostTweet(content, replyToId = null, attempt = 1, account = 'personal') {
+  const { username } = getAccountConfig(account);
   const variables = {
     tweet_text: content,
     disallowed_reply_options: null,
@@ -291,7 +304,7 @@ async function cookiePostTweet(content, replyToId = null, attempt = 1) {
 
   const response = await fetch(`${GRAPHQL_BASE}/${QUERY_IDS.CreateTweet}/CreateTweet`, {
     method: 'POST',
-    headers: getCookieHeaders(),
+    headers: getCookieHeaders(account),
     body: JSON.stringify(body)
   });
 
@@ -333,7 +346,7 @@ async function cookiePostTweet(content, replyToId = null, attempt = 1) {
   if (!tweetId) {
     if (attempt < 3) {
       await new Promise(r => setTimeout(r, 2000 * attempt));
-      return cookiePostTweet(content, replyToId, attempt + 1);
+      return cookiePostTweet(content, replyToId, attempt + 1, account);
     }
     throw new Error(
       'Tweet silently dropped by Twitter (no ID returned after 3 attempts). ' +
@@ -344,9 +357,10 @@ async function cookiePostTweet(content, replyToId = null, attempt = 1) {
   return {
     success: true,
     id: tweetId,
-    url: `https://x.com/m_smalley/status/${tweetId}`,
+    url: `https://x.com/${username}/status/${tweetId}`,
     content,
-    method: 'cookie'
+    method: 'cookie',
+    account
   };
 }
 
@@ -419,20 +433,20 @@ async function cookieSearchTweets(query, count = 10) {
 
 // --- Public API (auto-selects auth method) ---
 
-export async function postTweet(content, replyToId = null) {
+export async function postTweet(content, replyToId = null, account = 'personal') {
   if (content.length > 280) {
     throw new Error(`Tweet exceeds 280 characters (${content.length}). Shorten the content.`);
   }
 
   const method = getAuthMethod();
 
-  if (method === 'official') {
+  if (method === 'official' && account === 'personal') {
     return officialPostTweet(content, replyToId);
   }
-  return cookiePostTweet(content, replyToId);
+  return cookiePostTweet(content, replyToId, 1, account);
 }
 
-export async function postThread(tweets, replyToId = null) {
+export async function postThread(tweets, replyToId = null, account = 'personal') {
   if (!Array.isArray(tweets) || tweets.length === 0) {
     throw new Error('Thread must contain at least one tweet.');
   }
@@ -443,7 +457,7 @@ export async function postThread(tweets, replyToId = null) {
     }
   }
 
-  const firstResult = await postTweet(tweets[0], replyToId);
+  const firstResult = await postTweet(tweets[0], replyToId, account);
   if (!firstResult.id) {
     throw new Error('Thread failed: first tweet returned no ID.');
   }

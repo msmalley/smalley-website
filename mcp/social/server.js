@@ -29,7 +29,7 @@ const server = new Server(
 const TOOLS = [
   {
     name: 'social_post',
-    description: 'Post content to X/Twitter or LinkedIn. Returns the URL of the published post. Use reply_to to reply to an existing tweet.',
+    description: 'Post content to X/Twitter or LinkedIn. Returns the URL of the published post. Use reply_to to reply to an existing tweet. Use account to post from @ModdableGames instead of @m_smalley.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -45,6 +45,11 @@ const TOOLS = [
         reply_to: {
           type: 'string',
           description: 'Tweet ID to reply to (Twitter only). Makes this post a reply in that thread.'
+        },
+        account: {
+          type: 'string',
+          enum: ['personal', 'moddable'],
+          description: 'Twitter account to post from. personal=@m_smalley (default), moddable=@ModdableGames.'
         },
         link_url: {
           oneOf: [
@@ -458,7 +463,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
     switch (name) {
       case 'social_post':
         if (args.platform === 'twitter') {
-          result = await postTweet(args.content, args.reply_to || null);
+          result = await postTweet(args.content, args.reply_to || null, args.account || 'personal');
         } else if (args.platform === 'linkedin') {
           result = await postLinkedIn(args.content, args.link_url || null);
         } else {

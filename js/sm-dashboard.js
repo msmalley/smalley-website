@@ -11,6 +11,7 @@
     renderIndicators(data.indicators);
     if (data.employment) renderEmployment(data.employment);
     if (data.social) renderSocial(data.social);
+    if (data.moddable_social) renderModdableSocial(data.moddable_social);
     if (data.analytics) renderAnalytics(data.analytics);
     if (data.agents) renderAgents(data.agents);
     if (data.github) renderGitHub(data.github);
@@ -87,6 +88,7 @@
     var links = [
       { id: 'section-employment', label: 'Employment' },
       { id: 'section-social', label: 'Social' },
+      { id: 'section-moddable-social', label: '@Moddable' },
       { id: 'section-analytics', label: 'Analytics' },
       { id: 'section-agents', label: 'Agents' },
       { id: 'section-github', label: 'GitHub' },
@@ -715,6 +717,57 @@
       engagementGrid.appendChild(reactionsPanel);
 
       el.appendChild(engagementGrid);
+    }
+  }
+
+  function renderModdableSocial(ms) {
+    var el = document.getElementById('moddable-social-content');
+    var grid = SM.el('div', { class: 'dashboard-grid-2' });
+
+    grid.appendChild(statPanel('Aggregate', [
+      { label: 'Total impressions', value: ms.aggregate.total_impressions.toLocaleString() },
+      { label: 'Total likes', value: String(ms.aggregate.total_likes) },
+      { label: 'Total comments', value: String(ms.aggregate.total_comments) },
+      { label: 'Engagement rate', value: (ms.aggregate.engagement_rate * 100).toFixed(1) + '%' }
+    ]));
+
+    grid.appendChild(statPanel('Pipeline', [
+      { label: 'Posted', value: String(ms.pipeline_status.posted || 0) },
+      { label: 'Ready to post', value: String(ms.cadence.queued || 0) },
+      { label: 'Days since last', value: String(ms.cadence.days_since_last_post) }
+    ]));
+
+    el.appendChild(grid);
+
+    if (ms.posts.length) {
+      var table = SM.el('table', { class: 'metrics-table' });
+      table.appendChild(SM.el('thead', {},
+        SM.el('tr', {},
+          SM.el('th', {}, 'Post'), SM.el('th', {}, 'Posted'),
+          SM.el('th', {}, 'Impressions'), SM.el('th', {}, 'Likes'), SM.el('th', {}, 'Comments')
+        )
+      ));
+      var tbody = SM.el('tbody');
+      for (var i = 0; i < ms.posts.length; i++) {
+        var p = ms.posts[i];
+        var contentCell = p.url
+          ? SM.el('td', {}, SM.el('a', { href: p.url, target: '_blank', rel: 'noopener', style: { color: 'var(--sm-violet-glow)', textDecoration: 'none' } }, p.content_preview.slice(0, 50) + '...'))
+          : SM.el('td', {}, p.content_preview.slice(0, 50) + '...');
+        var dateStr = p.posted ? p.posted.split('T')[0] : '—';
+        tbody.appendChild(SM.el('tr', {},
+          contentCell,
+          SM.el('td', {}, dateStr),
+          SM.el('td', {}, String(p.metrics.impressions)),
+          SM.el('td', {}, String(p.metrics.likes)),
+          SM.el('td', {}, String(p.metrics.comments))
+        ));
+      }
+      table.appendChild(tbody);
+      var tablePanel = SM.el('div', { class: 'dashboard-panel', style: { marginTop: '24px' } },
+        SM.el('div', { class: 'dashboard-panel-title' }, 'Post Performance'),
+        table
+      );
+      el.appendChild(tablePanel);
     }
   }
 

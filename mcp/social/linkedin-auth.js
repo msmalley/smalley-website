@@ -75,7 +75,7 @@ if (!clientSecret || clientSecret === 'your_client_secret_here') {
 }
 
 const REDIRECT_URI = 'http://localhost:3000/callback';
-const SCOPES = 'openid profile email w_member_social';
+const SCOPES = 'openid profile email w_member_social r_member_social';
 const STATE = Math.random().toString(36).slice(2);
 
 const authUrl = `https://www.linkedin.com/oauth/v2/authorization?` +

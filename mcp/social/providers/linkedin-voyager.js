@@ -334,6 +334,38 @@ export async function verifySession() {
   };
 }
 
+export async function listOwnPosts(count = 5) {
+  const me = await voyagerRequest('/me');
+  const profileId = me?.entityUrn?.replace('urn:li:fs_miniProfile:', '') ||
+    me?.miniProfile?.entityUrn?.replace('urn:li:fs_miniProfile:', '');
+
+  const profileUrn = profileId
+    ? `urn:li:fsd_profile:${profileId}`
+    : 'urn:li:fsd_profile:ACoAAAHFG0cB14Q-GG9X7U_QR-hpqQl3J1vUbSo';
+
+  const data = await voyagerRequest(
+    `/graphql?variables=(start:0,count:${count},profileUrn:${encodeURIComponent(profileUrn)})&queryId=voyagerFeedDashProfileUpdates.f0f6fa508c9d2f2ee7fa5ff8e71e81a5`
+  );
+
+  const raw = JSON.stringify(data);
+  const activities = [...new Set([...raw.matchAll(/urn:li:activity:(\d+)/g)].map(m => m[0]))];
+
+  const posts = [];
+  const included = data?.included || data?.data?.included || [];
+  for (const item of included) {
+    if (item.commentary?.text?.text) {
+      const activityUrn = item.socialDetail?.urn || item['*socialDetail'] || '';
+      posts.push({
+        activityUrn,
+        text: item.commentary.text.text.substring(0, 120),
+        created: item.publishedAt || null
+      });
+    }
+  }
+
+  return { activities, posts };
+}
+
 const SHARE_QUERY_ID = process.env.LINKEDIN_SHARE_QUERY_ID ||
   'voyagerContentcreationDashShares.279996efa5064c01775d5aff003d9377';
 
@@ -400,8 +432,38 @@ export async function voyagerPost(content, linkUrl = null) {
   }
 
   const data = await response.json();
+
+  const { writeFileSync } = await import('node:fs');
+  const { fileURLToPath } = await import('node:url');
+  const debugPath = fileURLToPath(new URL('../.last-voyager-post-response.json', import.meta.url));
+  try { writeFileSync(debugPath, JSON.stringify(data, null, 2)); } catch {}
+
   const shareUrn = data?.value?.data?.createContentcreationDashShares?.urn ||
-    data?.data?.data?.createContentcreationDashShares?.urn;
+    data?.data?.data?.createContentcreationDashShares?.urn ||
+    data?.value?.data?.createContentcreationDashShares?.resourceKey ||
+    data?.data?.createContentcreationDashShares?.urn;
+
+  if (!shareUrn) {
+    const urnSearch = JSON.stringify(data).match(/urn:li:(?:share|activity):\d+/);
+    if (urnSearch) {
+      return {
+        success: true,
+        id: urnSearch[0],
+        url: `https://www.linkedin.com/feed/update/${urnSearch[0]}/`,
+        content,
+        method: 'voyager'
+      };
+    }
+    const headerUrn = response.headers.get('x-restli-id') || response.headers.get('x-linkedin-id');
+    return {
+      success: true,
+      id: headerUrn || null,
+      url: headerUrn ? `https://www.linkedin.com/feed/update/${headerUrn}/` : null,
+      content,
+      method: 'voyager',
+      warning: 'Post succeeded but URN could not be extracted from response. Check LinkedIn feed manually.'
+    };
+  }
 
   return {
     success: true,

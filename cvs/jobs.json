@@ -511,7 +511,19 @@
       "discovered": "2026-06-22",
       "variant": "devrel",
       "notes": "LSEG. Governance/enablement focus not hands-on building. 149 applicants. Very corporate. Needs Python/LangChain. Weak culture fit. Applied via Puppeteer automation (workday-lseg.js). CV uploaded, salary: flexible GBP based on remote/hybrid.",
-      "channel": "workday-direct",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4402730169/",
+        "contact_email": null,
+        "linkedin_job_id": "4402730169",
+        "freshness": {
+          "status": "unknown",
+          "days_old": null
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      },
       "score": 59,
       "scores": {
         "cto": 48,
@@ -527,26 +539,26 @@
         "Keep us connected to the market",
         "experience in cloud engineering, Dev",
         "Experience creating or curating engineering enablement assets such as templates, patterns, playbooks, or reusable guidance.Strong communication",
-        "Ops, such as cost\u2011aware model selection, unit economics, or prompt\u2011efficiency practices.",
+        "Ops, such as cost‑aware model selection, unit economics, or prompt‑efficiency practices.",
         "essential and your responsibility to ensure that candidates applying to LSEG are aware of this privacy notice.",
         "As a global organisation spanning 70 countries and one rooted in a culture of growth, opportunity,"
       ],
       "proof_points": [
         {
-          "requirement": "Ops, or software delivery (Azure, AWS, or GCP), with a track record of incremental, agile delivery.Hands\u2011on development capability, including practical",
+          "requirement": "Ops, or software delivery (Azure, AWS, or GCP), with a track record of incremental, agile delivery.Hands‑on development capability, including practical",
           "evidence": "Developer advocate and technical evangelist with 15 years building on, and explaining, blockchain technology. One of Southeast Asia's earliest Bitcoin voices, with a track record of making complex cryptographic concepts accessible to developers, institutions, and the general public alike. Personally designed protocols now running in production (SADO, DN-Key), built open-source SDKs used across the Bitcoin Ordinals ecosystem, and currently shipping open-source game engines with full developer documentation and embed APIs. Spoken at TEDx, FinTech conferences, and developer meetups across Asia and Europe. Using AI-native engineering workflows to ship developer tooling at unprecedented pace. Looking for a DevRel or Technical Evangelist role at a Layer 1/2 protocol, developer tooling company, or infrastructure provider where both the code and the community matter."
         },
         {
           "requirement": "experience with Python and modern AI frameworks (e.g., Lang",
-          "evidence": "MCP Tools Server ( tools.moddable.games ) \u2014 first board game engine MCP server: 16 AI-callable tools, MCP + REST + OpenAPI + llms.txt, Cloudflare Worker on free tier. Connect with one command from Claude Desktop, Cursor, or VS Code"
+          "evidence": "MCP Tools Server ( tools.moddable.games ) — first board game engine MCP server: 16 AI-callable tools, MCP + REST + OpenAPI + llms.txt, Cloudflare Worker on free tier. Connect with one command from Claude Desktop, Cursor, or VS Code"
         },
         {
-          "requirement": "Chain, Semantic Kernel, or similar) to build or support agents, chat interfaces, or retrieval\u2011augmented solutions.",
+          "requirement": "Chain, Semantic Kernel, or similar) to build or support agents, chat interfaces, or retrieval‑augmented solutions.",
           "evidence": "LLM-augmented development workflows, AI game engines, procedural generation, MCP (Model Context Protocol)"
         },
         {
           "requirement": "Experience applying software engineering fundamentals: writing tests, structuring user stories, managing iterative releases, and working with CI/CD pipelines.",
-          "evidence": "'Unravelling Blockchain's Future' \u2014 bylined article in Islamic Finance News (IFN), 2017"
+          "evidence": "'Unravelling Blockchain's Future' — bylined article in Islamic Finance News (IFN), 2017"
         },
         {
           "requirement": "experience with Python and modern AI frameworks (e.g., Lang",
@@ -555,6 +567,562 @@
       ],
       "source_url": "https://www.linkedin.com/jobs/view/4402730169/",
       "applied_at": "2026-07-18"
+    },
+    {
+      "id": "elliptic-engineering-manager-mrrg1cp3",
+      "added": "2026-07-19",
+      "status": "new",
+      "company": "Elliptic",
+      "role": "Engineering Manager",
+      "location": "London",
+      "variant": "cto",
+      "score": 78,
+      "scores": {
+        "cto": 78,
+        "regtech": 61,
+        "devrel": 73
+      },
+      "confidence": "high",
+      "requirements_found": 52,
+      "matched": 15,
+      "gaps": [
+        "experience and judgement to a set of real, unsolved challenges.",
+        "Run regular 1-1s and performance reviews, giving your engineers personalised, honest feedback",
+        "Understand each person's career goals and actively help them pursue them",
+        "Continuously refine your team's processes and ways of working to keep things frictionless",
+        "Identify and remove the friction slowing your teams down, using data where you can",
+        "Promote knowledge sharing and best practices across engineering more broadly",
+        "You'll be a strong fit if you:Have 2-",
+        "experience managing engineers"
+      ],
+      "proof_points": [
+        {
+          "requirement": "Build a healthy team culture where expectations are clear, people feel safe, and everyone can contribute fully",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "Team health and ways of working",
+          "evidence": "Cross-functional team leadership, hiring, technical roadmap, stakeholder management, hands-on (P4→M3)"
+        },
+        {
+          "requirement": "Objectives and delivery",
+          "evidence": "Shipped 535 commits across 10+ repositories in 16 days using LLM-augmented development. Demonstrates the methodology's viability for startup-speed delivery at architecture quality"
+        },
+        {
+          "requirement": "Participate actively in product and technical OKR-setting cycles, bringing your team's perspective into roadmap and goal-setting conversations",
+          "evidence": "Co-founded and led the technical pivot from consumer app to passkey-native wallet infrastructure provider, building on prototype work from Project Eden (weekend hackathon → production architecture). The pivot secured DraperVC investment."
+        },
+        {
+          "requirement": "Partner closely with your Tech Leads, who own delivery planning and execution, to ensure teams are well set up to hit their goals",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 41 AI-callable MCP tools, 37 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/engineering-manager-at-elliptic-4426586172",
+      "source": "linkedin",
+      "linkedin_job_id": "4426586172",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-19. Posted: unknown.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/engineering-manager-at-elliptic-4426586172",
+        "contact_email": null,
+        "linkedin_job_id": "4426586172",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 1,
+          "added": "2026-07-19"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      }
+    },
+    {
+      "id": "dex-head-of-platform-up-to-200k--mrrg1cp6",
+      "added": "2026-07-19",
+      "status": "rejected",
+      "company": "Dex",
+      "role": "Head of Platform (up to £200k)",
+      "location": "London",
+      "variant": "cto",
+      "score": 69,
+      "scores": {
+        "cto": 69,
+        "regtech": 55,
+        "devrel": 59
+      },
+      "confidence": "high",
+      "requirements_found": 25,
+      "matched": 12,
+      "gaps": [
+        "Tell Dex your stack, seniority, and",
+        "We will manage your applications and surface other opportunities that are a fit.The role",
+        "Their technology has already supported groundbreaking procedures, pushing the boundaries of what's possible in the operating room.",
+        "Dex cuts through the noise: get a full brief on the company and role, skip the cold application, and ensure your profile is seen by the right people.",
+        "Sign up once, and we'll match you to this and other high-impact roles that fit your unique",
+        "This role is with one of Dex's trusted partner companies.",
+        "Tell Dex your stack, seniority, and",
+        "We will manage your applications and surface other opportunities that are a fit.The role"
+      ],
+      "proof_points": [
+        {
+          "requirement": "Reporting to the VP of Engineering, you'll lead a growing team of software and XR engineers, scaling the platform from initial deployments to deep OEM partnerships.",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "You'll own the entire platform surface: the clinician-facing UI, the critical OEM-facing SDK, the low-latency edge deployment stack, and the cybersecurity posture required for hospital integration.",
+          "evidence": "Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems"
+        },
+        {
+          "requirement": "about the role before you commit to a process.If you're interested sign up to Dex to apply.Dex is an AI recruiter agent that helps you run your job search.",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "Reporting to the VP of Engineering, you'll lead a growing team of software and XR engineers, scaling the platform from initial deployments to deep OEM partnerships.",
+          "evidence": "Joined a 170-engineer company as P4 Engineer; promoted to M3 Manager within months. Tasked with designing novel Bitcoin meta-protocols, then given mandate to form and lead a new Moonshot team (grown from 1 to 10) whose first output became Cake's fifth business vertical."
+        },
+        {
+          "requirement": "This is a rare seat, defining the core interface for both surgeons and partners, with direct commercial and patient impact.The work",
+          "evidence": "Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites: renderer hooks, game controller, replay API, unit templates, terrain predicates, native ESM (same source serves browser, Worker, and Node.js)"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/head-of-platform-up-to-%C2%A3200k-at-dex-4442435131",
+      "source": "linkedin",
+      "linkedin_job_id": "4442435131",
+      "cover_letter": null,
+      "notes": "Not suitable.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-platform-up-to-%C2%A3200k-at-dex-4442435131",
+        "contact_email": null,
+        "linkedin_job_id": "4442435131",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 1,
+          "added": "2026-07-19"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      }
+    },
+    {
+      "id": "cursor-regional-director-forward-deploye-mrrg1cp6",
+      "added": "2026-07-19",
+      "status": "new",
+      "company": "Cursor",
+      "role": "Regional Director, Forward Deployed Engineering",
+      "location": "London",
+      "variant": "cto",
+      "score": 78,
+      "scores": {
+        "cto": 78,
+        "regtech": 77,
+        "devrel": 78
+      },
+      "confidence": "high",
+      "requirements_found": 87,
+      "matched": 25,
+      "gaps": [
+        "Translate between business outcomes and technical implementation in both directions",
+        "Build reusable playbooks that make the broader FDE org more capable over time",
+        "You’ve built and owned AI-native workflows in production, not just prototypes, and have debugged real-world model failures",
+        "Our mission is to automate coding.",
+        "The first step in our journey is to build the best tool for professional programmers, using a combination of inventive research, design, and engineering.",
+        "We particularly like people who are truth-seeking, passionate, and creative.",
+        "We enjoy spirited debate, crazy ideas, and shipping code.",
+        "your technical credibility is a direct lever on close rates for six- and seven-figure engagements"
+      ],
+      "proof_points": [
+        {
+          "requirement": "Identify and escalate product gaps, integration friction, and recurring customer pain back to Product and Engineering with enough specificity to drive roadmap decisions",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 41 AI-callable MCP tools, 37 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "Ensure delivery quality across your team's projects: appropriate scoping, milestone tracking, technical standards, and clean handoffs to customer engineering teams",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "set clear expectations, technical performance standards, and career growth paths for a team where \"excellent\" means actually shipping in production",
+          "evidence": "Founded and operated Malaysia's leading blockchain infrastructure and advisory firm for 13 years. Built and shipped production products across KYC, AML, digital custody, and wallet infrastructure while simultaneously shaping national regulatory policy."
+        },
+        {
+          "requirement": "experience with software development and coding in Python, Javascript/Typescript",
+          "evidence": "Node.js, TypeScript, JavaScript, MongoDB, Neo4j, REST APIs, SDK development, distributed systems"
+        },
+        {
+          "requirement": "You will serve as the primary point of contact for customers, owning both project delivery and the day-to-day relationship, while also identifying and scoping new opportunities.",
+          "evidence": "Shipped 535 commits across 10+ repositories in 16 days using LLM-augmented development. Demonstrates the methodology's viability for startup-speed delivery at architecture quality"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/regional-director-forward-deployed-engineering-at-cursor-4432401035",
+      "source": "linkedin",
+      "linkedin_job_id": "4432401035",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-19. Posted: unknown.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/regional-director-forward-deployed-engineering-at-cursor-4432401035",
+        "contact_email": null,
+        "linkedin_job_id": "4432401035",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 1,
+          "added": "2026-07-19"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      }
+    },
+    {
+      "id": "lseg-director-cloud-platform-engineering-mrrg1cp7",
+      "added": "2026-07-19",
+      "status": "rejected",
+      "company": "LSEG",
+      "role": "Director - Cloud Platform Engineering",
+      "location": "City Of London",
+      "variant": "cto",
+      "score": 78,
+      "scores": {
+        "cto": 78,
+        "regtech": 69,
+        "devrel": 69
+      },
+      "confidence": "high",
+      "requirements_found": 36,
+      "matched": 16,
+      "gaps": [
+        "As a global organisation spanning 70 countries and one rooted in a culture of growth, opportunity,",
+        "Experience building internal developer platforms and self-service capabilities, with a focus on developer",
+        "experience and adoption.Proven",
+        "experience treating platforms as products, including roadmap ownership, lifecycle thinking, and customer-centric design.Strong",
+        "experience, including leading managers and developing senior technical talent.",
+        "Experience in modern software engineering practices and languages (Python, Go).",
+        "essential and your responsibility to ensure that candidates applying to LSEG are aware of this privacy notice.",
+        "As a global organisation spanning 70 countries and one rooted in a culture of growth, opportunity,"
+      ],
+      "proof_points": [
+        {
+          "requirement": "experience leading large-scale platform engineering, cloud engineering, or infrastructure engineering organisations.Deep technical expertise in public cloud platforms, with strong hands-on",
+          "evidence": "Docker, CI/CD, Cloudflare Workers, LLM-augmented engineering, AI systems"
+        },
+        {
+          "requirement": "Experience in Cloud Cost Management and Fin",
+          "evidence": "Cross-functional team leadership, hiring, technical roadmap, stakeholder management, hands-on (P4→M3)"
+        },
+        {
+          "requirement": "Experience in Site Reliability Engineering, production operations, and platform observability.",
+          "evidence": "Shipped 535 commits across 10+ repositories in 16 days using LLM-augmented development. Demonstrates the methodology's viability for startup-speed delivery at architecture quality"
+        },
+        {
+          "requirement": "Experience managing significant budgets and delivery priorities.Excellent communication and senior stakeholder (C-Level) management",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "Experience in enterprise-scale multi-cloud environments.Familiarity with CNCF ecosystem tools (e.g. service mesh, observability stacks, policy engines).",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 41 AI-callable MCP tools, 37 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/director-cloud-platform-engineering-at-lseg-4412916898",
+      "source": "linkedin",
+      "linkedin_job_id": "4412916898",
+      "cover_letter": null,
+      "notes": "Already applying to LSEG for AI Engineering Enablement Director — more suitable role.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/director-cloud-platform-engineering-at-lseg-4412916898",
+        "contact_email": null,
+        "linkedin_job_id": "4412916898",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 1,
+          "added": "2026-07-19"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      }
+    },
+    {
+      "id": "monzo-engineering-director-eu-mrrg1cp7",
+      "added": "2026-07-19",
+      "status": "new",
+      "company": "Monzo",
+      "role": "Engineering Director, EU",
+      "location": "London",
+      "variant": "cto",
+      "score": 63,
+      "scores": {
+        "cto": 63,
+        "regtech": 58,
+        "devrel": 60
+      },
+      "confidence": "high",
+      "requirements_found": 12,
+      "matched": 8,
+      "gaps": [
+        "Please also use that email to let us know if there's anything we can do to make your application process easier for you, because of disability, neuro",
+        "We believe you'll do your best work if you are where you want to be.",
+        "Please also use that email to let us know if there's anything we can do to make your application process easier for you, because of disability, neuro",
+        "We believe you'll do your best work if you are where you want to be."
+      ],
+      "proof_points": [
+        {
+          "requirement": "You will have the chance to speak to our recruitment team at various points during your process but if you do have any specific questions ahead of this please contact us on tech-hiring@monzo.com.",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "experience, in particular people leadership, product delivery and technical leadership.",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "experiences locally.As an Engineering Director, you'll lead a distributed engineering organisation across the UK, Spain and remote locations.",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 41 AI-callable MCP tools, 37 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "experience, in particular people leadership, product delivery and technical leadership.",
+          "evidence": "Co-founded and led the technical pivot from consumer app to passkey-native wallet infrastructure provider, building on prototype work from Project Eden (weekend hackathon → production architecture). The pivot secured DraperVC investment."
+        },
+        {
+          "requirement": "After an informal ~30 min recruiter call our interview process involves 2 main stages:Initial Call (1 hour) You'll meet with one of our senior engineering leaders.",
+          "evidence": "Built and deployed the first board game MCP server ( tools.moddable.games ): 41 AI-callable tools across 2 engines, Cloudflare Worker, MCP + REST + OpenAPI + llms.txt"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/engineering-director-eu-at-monzo-4432862381",
+      "source": "linkedin",
+      "linkedin_job_id": "4432862381",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-19. Posted: unknown.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/engineering-director-eu-at-monzo-4432862381",
+        "contact_email": null,
+        "linkedin_job_id": "4432862381",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 1,
+          "added": "2026-07-19"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      }
+    },
+    {
+      "id": "mastercard-vice-president-product-ai-sol-mrrg1cp8",
+      "added": "2026-07-19",
+      "status": "new",
+      "company": "Mastercard",
+      "role": "Vice President, Product - AI Solutions",
+      "location": "London",
+      "variant": "regtech",
+      "score": 80,
+      "scores": {
+        "cto": 79,
+        "regtech": 80,
+        "devrel": 73
+      },
+      "confidence": "high",
+      "requirements_found": 37,
+      "matched": 18,
+      "gaps": [
+        "Customer Adoption & Commercialization",
+        "Experience leading product teams, cross-functional teams, or complex product portfolios.",
+        "Strong understanding of artificial intelligence, machine learning, generative AI, large language models, agentic AI, data products, model lifecycle management, and responsible AI practices.",
+        "Strong executive communication",
+        "Experience defining product metrics, OKRs, adoption goals, platform KPIs, and business value measures.",
+        "Ensure the confidentiality and integrity of the information being accessed",
+        "Mastercard powers economies and empowers people in 200+ countries and territories worldwide.",
+        "This leader will define how artificial intelligence, generative AI, machine learning, and agentic capabilities are applied across the payments ecosystem to improve customer"
+      ],
+      "proof_points": [
+        {
+          "requirement": "Embed responsible AI, data governance, privacy, security, and compliance",
+          "evidence": "Digital asset regulation, regulatory sandbox, Know Your Customer (KYC), Anti-Money Laundering (AML), Customer Due Diligence (CDD), custody compliance, transaction monitoring, financial crime prevention"
+        },
+        {
+          "requirement": "Governance, Risk & Compliance",
+          "evidence": "Founded and led Malaysia's foremost blockchain infrastructure and regulatory advisory practice for 13 years. R1 sat at the intersection of engineering, compliance, and policy, building production-grade digital asset systems for licensed operators while advising regulators on the frameworks that would govern them."
+        },
+        {
+          "requirement": "Drive adoption of the Agent Factory across internal product, engineering, data, and business teams.Create product",
+          "evidence": "Built extensible plugin architecture and SDK platform with LLM-driven workflows, maintaining solo-founder velocity across 10+ concurrent repositories. Deployed autonomous agent orchestration (Researcher + Builder routines) managing a multi-repo production pipeline via label-triggered coordination on cloud infrastructure"
+        },
+        {
+          "requirement": "Experience in product management, product strategy, platform product management, fintech, data products, AI/ML products, or enterprise technology",
+          "evidence": "Delivered blockchain and distributed ledger training and advisory to DBS Bank (Singapore) and Baker Hostetler (USA, 5-day intensive programme) covering compliance strategy, transaction monitoring, and digital asset custody"
+        },
+        {
+          "requirement": "Experience working in regulated, security-conscious, or highly governed environments such as financial services, payments, banking, insurance, healthcare, or large enterprise technology.",
+          "evidence": "Built blockchain infrastructure adopted by licensed financial institutions operating under regulatory oversight"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/vice-president-product-ai-solutions-at-mastercard-4438460752",
+      "source": "linkedin",
+      "linkedin_job_id": "4438460752",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-19. Posted: unknown.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/vice-president-product-ai-solutions-at-mastercard-4438460752",
+        "contact_email": null,
+        "linkedin_job_id": "4438460752",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 1,
+          "added": "2026-07-19"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      }
+    },
+    {
+      "id": "euronext-chief-product-officer-digital-a-mrtd4k9y",
+      "added": "2026-07-20",
+      "status": "new",
+      "company": "Euronext",
+      "role": "Chief Product Officer, Digital Assets",
+      "location": "London, England, United Kingdom",
+      "variant": "cto",
+      "score": 78,
+      "scores": {
+        "cto": 78,
+        "regtech": 79,
+        "devrel": 76
+      },
+      "confidence": "high",
+      "requirements_found": 50,
+      "matched": 17,
+      "gaps": [
+        "London and Amsterdam are also possible locations.",
+        "You Will Primarily Be Responsible For",
+        "Learning as you grow – Develop your",
+        "Having an impact – Contribute to projects that matter, in an agile and dynamic environment where your ideas help drive progress.",
+        "Together, we don’t just support markets — we help shape their future.Euronext Values",
+        "We respect and value the people we work with We are unified through a common purpose We embrace",
+        "diversity and strive for inclusion",
+        "equal opportunity employer."
+      ],
+      "proof_points": [
+        {
+          "requirement": "Being part of a European, international and diverse team – Collaborate across borders with talented colleagues connected by a shared ambition and purpose.",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "an additional European language is a plus.Working knowledge of token standards and DLT architecture (e.g.",
+          "evidence": "Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites: renderer hooks, game controller, replay API, unit templates, terrain predicates, native ESM (same source serves browser, Worker, and Node.js)"
+        },
+        {
+          "requirement": "Experience at a crypto-native or digital asset exchange, custodian or tokenisation platform, or comparable",
+          "evidence": "Co-founded and funded CoKeeps — now Malaysia's largest Digital Asset Custodian by AUM — providing five years of capital from R1"
+        },
+        {
+          "requirement": "Driving sustainability – Play an active role in building transparent, responsible and sustainable capital markets for the long term.",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 41 AI-callable MCP tools, 37 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "an additional European language is a plus.Working knowledge of token standards and DLT architecture (e.g.",
+          "evidence": "Designed and built internal cryptographic framework underpinning the passkey wallet architecture"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/chief-product-officer-digital-assets-at-euronext-4433896601",
+      "source": "linkedin",
+      "linkedin_job_id": "4433896601",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-20. Posted: 2026-07-18.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/chief-product-officer-digital-assets-at-euronext-4433896601",
+        "contact_email": null,
+        "linkedin_job_id": "4433896601",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-20"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      }
+    },
+    {
+      "id": "fireblocks-solution-architect-emea-mrtd4ka8",
+      "added": "2026-07-20",
+      "status": "new",
+      "company": "Fireblocks",
+      "role": "Solution Architect, EMEA",
+      "location": "London Area, United Kingdom",
+      "variant": "cto",
+      "score": 73,
+      "scores": {
+        "cto": 73,
+        "regtech": 61,
+        "devrel": 39
+      },
+      "confidence": "high",
+      "requirements_found": 31,
+      "matched": 13,
+      "gaps": [
+        "Bachelor’s degree or above in Computer Science or a related field, with",
+        "experience delivering post-sale implementations in complex enterprise or financial services environments",
+        "One is a must, both is a strong advantage",
+        "Excellent written and spoken English",
+        "additional EMEA languages are a plus",
+        "In order to do that, we strongly believe our workforce should be as diverse as our clients, and this is why we embrace",
+        "diversity and inclusion in all its forms.",
+        "Please see our candidate privacy policy here."
+      ],
+      "proof_points": [
+        {
+          "requirement": "Experience with either blockchain, cryptography, or Web3 technologies, or with Banks, Financial Institutions, or enterprise financial systems.",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "Deep understanding of IT security and proven cloud",
+          "evidence": "Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems"
+        },
+        {
+          "requirement": "Strong knowledge of enterprise architecture and best practices",
+          "evidence": "Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites: renderer hooks, game controller, replay API, unit templates, terrain predicates, native ESM (same source serves browser, Worker, and Node.js)"
+        },
+        {
+          "requirement": "Experience with either blockchain, cryptography, or Web3 technologies, or with Banks, Financial Institutions, or enterprise financial systems.",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 41 AI-callable MCP tools, 37 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "Deep understanding of IT security and proven cloud",
+          "evidence": "Docker, CI/CD, Cloudflare Workers, LLM-augmented engineering, AI systems"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/solution-architect-emea-at-fireblocks-4442714096",
+      "source": "linkedin",
+      "linkedin_job_id": "4442714096",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-20. Posted: 2026-07-20.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/solution-architect-emea-at-fireblocks-4442714096",
+        "contact_email": null,
+        "linkedin_job_id": "4442714096",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-07-20"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      }
     }
   ]
 }

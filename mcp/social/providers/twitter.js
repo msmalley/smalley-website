@@ -8,12 +8,12 @@ const GRAPHQL_BASE = 'https://x.com/i/api/graphql';
 // GraphQL query IDs — extracted from X's frontend bundle.
 // To refresh: curl https://abs.twimg.com/responsive-web/client-web/main.*.js
 //   then grep for: queryId:"...",operationName:"CreateTweet|SearchTimeline|DeleteTweet"
-// Last updated: 2026-06-15
+// Last updated: 2026-07-20
 const QUERY_IDS = {
-  CreateTweet: 'DQIp0b4mKIciCAZ3bfrwAA',
-  SearchTimeline: 'yIphfmxUO-hddQHKIOk9tA',
+  CreateTweet: 'hIL9XdleMYEtVXOZVbr8Bg',
+  SearchTimeline: 'hz_94eVAtrtQo_vO3my7Rw',
   DeleteTweet: 'nxpZCY2K-I6QoFHAHeojFQ',
-  TweetResultByRestId: 'sCU6ckfHY0CyJ4HFjPhjtg'
+  TweetResultByRestId: '4hhGRbehkcUVTKf8n0f0xw'
 };
 
 // Detect which auth method is available
@@ -160,7 +160,7 @@ function getCookieHeaders() {
     'Cookie': cookieStr,
     'X-Csrf-Token': csrfToken,
     'Content-Type': 'application/json',
-    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
     'Origin': 'https://x.com',
     'Referer': 'https://x.com',
     'X-Twitter-Active-User': 'yes',
@@ -173,7 +173,7 @@ function getCookieHeaders() {
     'Sec-Fetch-Dest': 'empty',
     'Sec-Fetch-Mode': 'cors',
     'Sec-Fetch-Site': 'same-origin',
-    'Sec-CH-UA': '"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"',
+    'Sec-CH-UA': '"Not_A Brand";v="8", "Chromium";v="126", "Google Chrome";v="126"',
     'Sec-CH-UA-Mobile': '?0',
     'Sec-CH-UA-Platform': '"macOS"',
     'DNT': '1'
@@ -218,7 +218,7 @@ async function sendViewerContext() {
 // Feature flags required by X GraphQL endpoints.
 // Source: https://abs.twimg.com/responsive-web/client-web/main.*.js
 // These rotate periodically — if endpoints return 404, re-extract from the main bundle.
-// Last updated: 2026-06-15
+// Last updated: 2026-07-20
 const TWEET_FEATURES = {
   articles_preview_enabled: true,
   c9s_tweet_anatomy_moderator_badge_enabled: true,
@@ -270,8 +270,6 @@ const FIELD_TOGGLES = {
 };
 
 async function cookiePostTweet(content, replyToId = null, attempt = 1) {
-  await sendViewerContext();
-
   const variables = {
     tweet_text: content,
     disallowed_reply_options: null,
@@ -287,6 +285,7 @@ async function cookiePostTweet(content, replyToId = null, attempt = 1) {
   const body = {
     variables,
     features: TWEET_FEATURES,
+    fieldToggles: FIELD_TOGGLES,
     queryId: QUERY_IDS.CreateTweet
   };
 
@@ -315,6 +314,14 @@ async function cookiePostTweet(content, replyToId = null, attempt = 1) {
       throw new Error(
         `Twitter auth failed (${response.status}): ${errMsg}\n` +
         'To refresh: open x.com in browser → DevTools → Application → Cookies → copy auth_token and ct0 values into .env'
+      );
+    }
+    const is226 = data.errors?.[0]?.code === 226;
+    if (is226) {
+      throw new Error(
+        `Twitter anti-automation triggered (226): ${errMsg}\n` +
+        'This session is rate-limited. Wait 5-10 minutes before retrying. ' +
+        'Do NOT retry immediately — each failed attempt extends the cooldown.'
       );
     }
     throw new Error(`Twitter error (${response.status}): ${errMsg}`);

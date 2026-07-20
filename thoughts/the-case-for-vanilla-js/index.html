@@ -53,6 +53,8 @@
 
       <p>This matters more than most people realise. When I built the <a href="../../open-source/moddable-chess-engine/">Moddable Chess Engine</a>, I didn't know it would need an embed API. I didn't know it would need to run inside an iframe with postMessage communication. I didn't know it would need to be consumed by three different parent sites with different theming requirements. None of that required architectural changes, because there was no framework boundary constraining where the code could run or how it could be consumed. It's just JavaScript. It runs anywhere JavaScript runs.</p>
 
+      <p>The same portability extends beyond the browser. The same vanilla JavaScript that renders pages client-side also runs as Cloudflare Workers on the edge and as MCP servers that expose tool interfaces to AI agents. No adaptation layer. No framework shim. The same source files, the same function signatures, running in fundamentally different environments because they depend on nothing except the language runtime itself. A React component cannot do this. A vanilla function can.</p>
+
       <p>Every other language can understand vanilla JS. Every other language can be built directly from it. That sentence sounds simple but its implications are profound.</p>
 
       <h2>The Constraint is the Feature</h2>
@@ -144,6 +146,8 @@
       <p>The Moddable Chess Engine will still work in 2036 without a single line changed. A React app from 2016 will not.</p>
 
       <p>When I look at the projects I've built (the ones that have lasted, the ones that survived company pivots and team changes and technology shifts), they all share one property. They're built on the platform, not on an abstraction over the platform. They own their entire surface area. They can be understood, ported, maintained, and extended by anyone who reads JavaScript. Not just anyone who reads React, or Vue, or whatever comes next.</p>
+
+      <p>The proof is in what happened when new runtimes appeared. When Cloudflare Workers launched an edge compute platform, my code ran on it without modification. When MCP emerged as a protocol for AI tool integration, the same modules became callable tools with a thin transport wrapper. No rewrite. No migration guide. No compatibility layer. The code was already platform-native because it never depended on anything except the platform.</p>
 
       <p>The constraint isn't a limitation. It's the architecture, and the architecture is what ships.</p>
 

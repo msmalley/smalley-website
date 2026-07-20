@@ -57,12 +57,12 @@
         "replies": 1,
         "quotes": 0,
         "bookmarks": 0,
-        "views": 138,
-        "last_checked": "2026-07-13T13:55:01.192Z"
+        "views": 140,
+        "last_checked": "2026-07-20T16:48:42.246Z"
       },
       "notes": "First post after long silence. Combines comeback with MCP meta-demonstration. Must land before anything else.",
       "metrics_twitter": {
-        "impressions": 139,
+        "impressions": 140,
         "likes": 1,
         "comments": 1,
         "shares": 0
@@ -91,8 +91,8 @@
         "replies": 0,
         "quotes": 0,
         "bookmarks": 0,
-        "views": 20,
-        "last_checked": "2026-07-13T13:55:01.448Z"
+        "views": 21,
+        "last_checked": "2026-07-20T16:48:42.420Z"
       },
       "notes": "Reply-to confirmed working. Posted as reply to tweet 2067236318627680743.",
       "metrics_twitter": {
@@ -198,10 +198,10 @@
       "pending_replies": [],
       "notes": "First post after long silence. Combines comeback with MCP meta-demonstration. No ask, no role signal — just presence and proof.",
       "metrics_linkedin": {
-        "impressions": 776,
         "likes": 21,
         "comments": 10,
         "shares": 0,
+        "impressions": 776,
         "reactions": {
           "LIKE": 16,
           "EMPATHY": 3,
@@ -272,108 +272,7 @@
             "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473009376979759105%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473009376979759105%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
           }
         ],
-        "reactionsList": [
-          {
-            "author": "Johnny Mayo",
-            "occupation": "Scale-up programmes & corporate innovation partnerships | Forbes 30U30 | MBA",
-            "type": "LIKE"
-          },
-          {
-            "author": "Steven Kearns",
-            "occupation": "Retired - playing - having fun - I might be building something.... you will never guess what! Every day I’m Vibe Coding.",
-            "type": "LIKE"
-          },
-          {
-            "author": "Matías Cascallares",
-            "occupation": "Setting your data in motion",
-            "type": "LIKE"
-          },
-          {
-            "author": "richard abas",
-            "occupation": "founder, geotude.com",
-            "type": "LIKE"
-          },
-          {
-            "author": "Mark Leo",
-            "occupation": "Guiding customers and building their trust in our services throughout their cloud journey | markleo.net | linktr.ee/markleo82",
-            "type": "LIKE"
-          },
-          {
-            "author": "Mong Suan Yee",
-            "occupation": "Provides engineering productisation consultancy and algorithm development for engineering products.",
-            "type": "LIKE"
-          },
-          {
-            "author": "Karen Tan",
-            "occupation": "Operations and Client Servicing | Financial Advisory & Wealth Management | Streamlining Processes for Financial Success",
-            "type": "LIKE"
-          },
-          {
-            "author": "Ruben Tan",
-            "occupation": "Solutions Architect | Fintech, Blockchain",
-            "type": "LIKE"
-          },
-          {
-            "author": "Hanson Toh",
-            "occupation": "Experienced leader, P&L manager and Mentor. Battle scars from McKinsey, Boost (Fintech), Google + others. Right-brain Salesman and BD Hustler, Left-brain Product Manager and Corp Strategist. 2x Startup Founder.",
-            "type": "LIKE"
-          },
-          {
-            "author": "Matthew Smalley (BSc Hons)",
-            "occupation": "Director MPS Private Ltd. Sales Management & Business Development Consultant: Wealth & Asset Management / Financial Planning / Sales & Advisory Consulting to IFA firms/networks, looking to grow or expand internationally.",
-            "type": "LIKE"
-          },
-          {
-            "author": "Shafiu Hussain",
-            "occupation": "Co-Founder & Chef @ Oviato | Passkey-based Wallet infra as a service. Building onboarding tool for Web 3.0",
-            "type": "LIKE"
-          },
-          {
-            "author": "Nishant Ghodke",
-            "occupation": "human data @ handshake",
-            "type": "LIKE"
-          },
-          {
-            "author": "Sumanth Krishna",
-            "occupation": "AI for TA @ Deel | Top 10 Mentors Asia 2024 / Top 1% @ ADPList 🏆 | SaaS 🔥",
-            "type": "LIKE"
-          },
-          {
-            "author": "Wahyu Sumartha Priya Dharma",
-            "occupation": "From Architecture to Execution | Leading Teams That Deliver",
-            "type": "LIKE"
-          },
-          {
-            "author": "Suhanna Husein",
-            "occupation": "Delivering Institutional-Grade Infrastructure Solutions for Digital Assets. (Hiring)",
-            "type": "LIKE"
-          },
-          {
-            "author": "Tristan Gomez",
-            "occupation": "Chief Problem Solver | Senior Software Developer | Mentor | broad experience from startup MVPs to massive applications",
-            "type": "LIKE"
-          },
-          {
-            "author": "Renyi Khor",
-            "occupation": "Technical Founder & PropTech Builder | myhanko.ai",
-            "type": "LIKE"
-          },
-          {
-            "author": "Swee Meng Ng",
-            "occupation": "Herder of Containers, software incident investigator, manipulator of bits and bytes. Are you not entertained!.",
-            "type": "LIKE"
-          },
-          {
-            "author": "Mark Smalley",
-            "occupation": "Engineering Leader | AI Platforms, Digital Assets, Developer Tools",
-            "type": "LIKE"
-          },
-          {
-            "author": "Ikmal Badrol",
-            "occupation": "Software Engineer | Fintech",
-            "type": "LIKE"
-          }
-        ]
+        "last_checked": "2026-07-20T16:48:43.079Z"
       },
       "deltas": {
         "impressions": 0,
@@ -435,16 +334,16 @@
         }
       ],
       "metrics": {
-        "likes": 1,
+        "likes": 2,
         "retweets": 0,
         "replies": 1,
         "quotes": 0,
         "bookmarks": 0,
-        "views": 68,
-        "last_checked": "2026-07-13T13:55:02.620Z"
+        "views": 75,
+        "last_checked": "2026-07-20T16:48:43.257Z"
       },
       "metrics_twitter": {
-        "impressions": 70,
+        "impressions": 74,
         "likes": 2,
         "comments": 1,
         "shares": 0
@@ -487,10 +386,10 @@
       },
       "notes": "Follow-up to comeback posts. Explains the process teased in the comeback. Positions engineering approach.",
       "metrics_linkedin": {
-        "impressions": 852,
         "likes": 3,
         "comments": 1,
         "shares": 0,
+        "impressions": 852,
         "reactions": {
           "LIKE": 3
         },
@@ -503,42 +402,63 @@
             "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473696853268725761?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473696853268725761%2C7476920240686424064%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287476920240686424064%2Curn%3Ali%3Aactivity%3A7473696853268725761%29"
           }
         ],
-        "reactionsList": [
-          {
-            "author": "💻 Akmal Fikri Abdul Rahman",
-            "occupation": "Backend Developer | Drupal Specialist Since 2010 | Speaker @ DrupalCon Asia 2024 | Board Game Evangelist | Agency Experience | ENFJ-A",
-            "type": "LIKE"
-          },
-          {
-            "author": "Fuzail  Millican",
-            "occupation": "Senior Talent Acquisition Specialist",
-            "type": "LIKE"
-          },
-          {
-            "author": "Kevin Chand",
-            "occupation": "Architect of Professional Media Production Systems | Co-Founder, Moddable Games | Producer, MusicWerks Studio | Helping Creative Ventures Scale through Operational Design & Community-Centric Strategy",
-            "type": "LIKE"
-          }
-        ]
+        "last_checked": "2026-07-20T16:48:43.996Z"
       },
       "deltas": {
-        "impressions": 1,
+        "impressions": 0,
         "likes": 0
       }
     },
     {
       "id": "vanilla-js-twitter",
       "created": "2026-06-15",
-      "status": "ready",
+      "status": "posted",
+      "posted": "2026-07-20T16:45:00Z",
+      "posted_by": "pipeline+mark",
+      "platform_id": "2079234951493419390",
+      "url": "https://x.com/m_smalley/status/2079234951493419390",
       "trigger": "vanilla JS article published on smalley.my",
       "platforms": [
         "twitter"
       ],
-      "content": "Every framework is a bet that someone else's abstractions will keep serving you. I stopped making that bet.\n\nNo build step. No dependencies. No deployment ceremony. The source code is the deployment. The constraint forced better architecture than any framework would have given me.\n\nTry running `npm install` on a React project from 2016. Mine deploys by pushing to main, same as day one.\n\nhttps://smalley.my/thoughts/the-case-for-vanilla-js/",
-      "chars": 440,
-      "angle": "Contrarian stance, longevity argument, no repeated stats from 16-days thread",
-      "sequence": 3,
-      "notes": "Twitter only. The opinion plays to builders. LinkedIn audience less suited to framework hot takes. Consider dev.to cross-post of full article."
+      "content": "Controversial take: frameworks are technical debt you volunteer for.\n\nBeen stripping dependencies for years. Transpilers first. Then CSS frameworks. Then component libraries. This year I hit zero. Same source now runs in the browser, on the edge, and as MCP tools. No shims.",
+      "format": "thread",
+      "chars": 275,
+      "angle": "Contrarian stance, journey narrative, MCP/edge portability proof, engagement question",
+      "sequence": 6,
+      "notes": "2-tweet thread. Tweet 1 posted by pipeline, tweet 2 posted manually by Mark (Twitter 226 cooldown from earlier failed attempts with stale queryId).",
+      "metrics_twitter": {
+        "impressions": 14,
+        "likes": 0,
+        "comments": 1,
+        "shares": 0
+      },
+      "metrics": {
+        "likes": 0,
+        "retweets": 0,
+        "replies": 1,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 15,
+        "last_checked": "2026-07-20T16:48:44.185Z"
+      }
+    },
+    {
+      "id": "vanilla-js-linkedin",
+      "created": "2026-07-20",
+      "status": "posted",
+      "posted": "2026-07-20T16:45:00Z",
+      "posted_by": "pipeline",
+      "method": "voyager",
+      "trigger": "vanilla JS article published on smalley.my",
+      "platforms": [
+        "linkedin"
+      ],
+      "content": "Controversial take: frameworks are technical debt you volunteer for.\n\nI've been stripping dependencies from my stack for years. First the transpilers. Then the CSS frameworks. Then the component libraries. This year I hit zero. No runtime dependencies. No transpilation. The source files are what the browser runs. The same source also runs on Cloudflare's edge and as MCP tool servers for AI agents. No adaptation layer. No framework shim.\n\nNothing can break that I didn't write myself. And the architecture is better for it, because every decision has to justify its own existence.\n\nThe mass response to this is \"it doesn't scale.\" Genuinely want to hear from anyone who went dependency-free and hit a wall. What broke? What made you reach for a framework?\n\nhttps://smalley.my/thoughts/the-case-for-vanilla-js/",
+      "chars": 812,
+      "angle": "Contrarian stance, journey narrative, MCP/edge portability proof, engagement question",
+      "sequence": 6,
+      "notes": "LinkedIn version with extra middle paragraph. Posted via Voyager."
     },
     {
       "id": "protocol-twitter",
@@ -586,10 +506,10 @@
       "platform_id": "urn:li:activity:7482386169809526784",
       "url": "https://www.linkedin.com/feed/update/urn:li:activity:7482386169809526784/",
       "metrics_linkedin": {
-        "impressions": 454,
         "likes": 3,
         "comments": 1,
         "shares": 0,
+        "impressions": 479,
         "reactions": {
           "LIKE": 3
         },
@@ -602,27 +522,30 @@
             "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7482386169809526784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7482386169809526784%2C7484267033098973184%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287484267033098973184%2Curn%3Ali%3Aactivity%3A7482386169809526784%29"
           }
         ],
-        "reactionsList": [
-          {
-            "author": "Matthew Smalley (BSc Hons)",
-            "occupation": "Director MPS Private Ltd. Sales Management & Business Development Consultant: Wealth & Asset Management / Financial Planning / Sales & Advisory Consulting to IFA firms/networks, looking to grow or expand internationally.",
-            "type": "LIKE"
-          },
-          {
-            "author": "Grayson Smith",
-            "occupation": "Staff Product Manager & Product Coach",
-            "type": "LIKE"
-          },
-          {
-            "author": "Dorian Lazzari",
-            "occupation": "CEO @ Cubish",
-            "type": "LIKE"
-          }
-        ]
+        "last_checked": "2026-07-20T16:48:44.942Z"
       },
       "deltas": {
-        "impressions": 6,
+        "impressions": 2,
         "likes": 0
+      },
+      "metrics": {
+        "likes": 3,
+        "comments": 1,
+        "shares": 0,
+        "impressions": 484,
+        "reactions": {
+          "LIKE": 3
+        },
+        "commentsList": [
+          {
+            "author": "Mark Smalley",
+            "subtitle": "Engineering Leader | AI Platforms, Digital Assets, Developer Tools",
+            "text": "Progress update: first fully automated submission completed this week. Two sessions, approximately US$78 in AI compute, to reverse-engineer one enterprise hiring platform's custom form widgets. The cost sounds confronting until you consider the marginal curve. Second application costs under $10. Third, maybe $2. Any job posted on that platform can now be applied to with a single command. Other platforms next.",
+            "created": 1784388311649,
+            "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7482386169809526784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7482386169809526784%2C7484267033098973184%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287484267033098973184%2Curn%3Ali%3Aactivity%3A7482386169809526784%29"
+          }
+        ],
+        "last_checked": "2026-07-20T17:10:43.956Z"
       }
     },
     {
@@ -642,19 +565,19 @@
       "platform_id": "2076620514785652912",
       "url": "https://x.com/m_smalley/status/2076620514785652912",
       "metrics_twitter": {
-        "impressions": 29,
+        "impressions": 37,
         "likes": 0,
-        "comments": 0,
+        "comments": 1,
         "shares": 0
       },
       "metrics": {
         "likes": 0,
         "retweets": 0,
-        "replies": 0,
+        "replies": 1,
         "quotes": 0,
         "bookmarks": 0,
-        "views": 15,
-        "last_checked": "2026-07-13T13:55:03.702Z"
+        "views": 37,
+        "last_checked": "2026-07-20T16:48:45.123Z"
       }
     },
     {

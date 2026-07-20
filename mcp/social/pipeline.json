@@ -726,6 +726,17 @@
       "angle": "Twitter: technical showcase, embed demo. LinkedIn: open-source leadership, SDK architecture.",
       "sequence": null,
       "notes": "Fires when next version ships. Include embed link or screenshot."
+    },
+    {
+      "id": "moddable-chess-linkedin",
+      "created": "2026-07-20",
+      "status": "draft",
+      "trigger": "Moddable chess/Nukes blog cross-promotion",
+      "platforms": ["linkedin"],
+      "content": "Chess grandmasters play 15-20 moves from memory before original thought begins. The fixed 8x8 board has been played billions of times. Memorization replaced strategy long ago.\n\nOur team spent a decade asking: what would a deterministic strategy game look like if the board was different every time? If memorization was worthless and only strategy survived?\n\nThe answer is Nukes. Two component types. Five terrain biomes. 44 modular hex tiles. No dice, no cards, no hidden information, any number of players.\n\nThe real kicker: 45 million Catan owners already have the hex tiles and tokens to play it. No new purchases required.\n\nhttps://moddable.games/news/conquering-the-constrains-of-chess/",
+      "chars": 497,
+      "angle": "Decade-long R&D, Nukes as the answer, Catan hook for virality",
+      "notes": "Blocked on article links being live (now done). Post tomorrow."
     }
   ],
   "moddable_posts": [

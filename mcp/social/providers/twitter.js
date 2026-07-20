@@ -13,7 +13,9 @@ const QUERY_IDS = {
   CreateTweet: 'hIL9XdleMYEtVXOZVbr8Bg',
   SearchTimeline: 'hz_94eVAtrtQo_vO3my7Rw',
   DeleteTweet: 'nxpZCY2K-I6QoFHAHeojFQ',
-  TweetResultByRestId: '4hhGRbehkcUVTKf8n0f0xw'
+  TweetResultByRestId: '4hhGRbehkcUVTKf8n0f0xw',
+  FavoriteTweet: 'lI07N6Otwv1PhnEgXILM7A',
+  CreateRetweet: 'mbRO74GrOvSfRcJnlMapnQ'
 };
 
 // Detect which auth method is available
@@ -576,6 +578,46 @@ export async function getTweetById(tweetId) {
       views: parseInt(tweet.views?.count) || null
     }
   };
+}
+
+export async function likeTweet(tweetId) {
+  const body = JSON.stringify({
+    variables: { tweet_id: tweetId },
+    queryId: QUERY_IDS.FavoriteTweet
+  });
+
+  const response = await fetch(`${GRAPHQL_BASE}/${QUERY_IDS.FavoriteTweet}/FavoriteTweet`, {
+    method: 'POST',
+    headers: getCookieHeaders(),
+    body
+  });
+
+  const text = await response.text();
+  if (!response.ok) {
+    throw new Error(`Failed to like tweet (${response.status}): ${text.slice(0, 300)}`);
+  }
+
+  return { success: true, liked_id: tweetId };
+}
+
+export async function retweet(tweetId) {
+  const body = JSON.stringify({
+    variables: { tweet_id: tweetId, dark_request: false },
+    queryId: QUERY_IDS.CreateRetweet
+  });
+
+  const response = await fetch(`${GRAPHQL_BASE}/${QUERY_IDS.CreateRetweet}/CreateRetweet`, {
+    method: 'POST',
+    headers: getCookieHeaders(),
+    body
+  });
+
+  const text = await response.text();
+  if (!response.ok) {
+    throw new Error(`Failed to retweet (${response.status}): ${text.slice(0, 300)}`);
+  }
+
+  return { success: true, retweeted_id: tweetId };
 }
 
 export async function deleteTweet(tweetId) {

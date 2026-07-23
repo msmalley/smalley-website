@@ -1220,21 +1220,6 @@
       el.appendChild(routinePanel);
     }
 
-    if (agents.queue && agents.queue.length) {
-      var queuePanel = SM.el('div', { class: 'dashboard-panel', style: { marginTop: '24px' } },
-        SM.el('div', { class: 'dashboard-panel-title' }, 'Ops Queue (' + agents.queue.length + ' open)')
-      );
-      for (var i = 0; i < agents.queue.length; i++) {
-        var issue = agents.queue[i];
-        var labels = issue.labels.join(', ');
-        var issueUrl = 'https://github.com/Moddable-Games/moddable-ops/issues/' + issue.number;
-        queuePanel.appendChild(SM.el('div', { class: 'stat-row' },
-          SM.el('a', { class: 'stat-label', href: issueUrl, target: '_blank', rel: 'noopener', style: { color: 'var(--sm-text)', textDecoration: 'none' } }, '#' + issue.number + ' ' + issue.title),
-          SM.el('span', { class: 'stat-value', style: { fontSize: '11px' } }, labels)
-        ));
-      }
-      el.appendChild(queuePanel);
-    }
 
     if (runs.history && runs.history.length) {
       var histPanel = SM.el('div', { class: 'dashboard-panel', style: { marginTop: '24px' } },

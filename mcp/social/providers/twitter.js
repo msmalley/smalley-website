@@ -194,8 +194,18 @@ function getCookieHeaders(account = 'personal') {
   };
 }
 
-async function sendViewerContext() {
-  const csrfToken = process.env.TWITTER_CSRF_TOKEN;
+async function warmSession(account = 'personal') {
+  const headers = getCookieHeaders(account);
+
+  // Step 1: Hit the home timeline endpoint (simulates page load)
+  try {
+    await fetch('https://x.com/i/api/2/notifications/all.json?count=1', {
+      method: 'GET',
+      headers
+    });
+  } catch {}
+
+  // Step 2: Send viewer context event (simulates compose interaction)
   const now = Date.now();
   const body = new URLSearchParams({
     debug: 'true',
@@ -218,15 +228,15 @@ async function sendViewerContext() {
   });
 
   try {
-    await fetch('https://x.com/i/api/1.1/graphql/viewer_context.json', {
+    await fetch('https://x.com/i/api/1.1/jot/client_event.json', {
       method: 'POST',
-      headers: {
-        ...getCookieHeaders(),
-        'Content-Type': 'application/x-www-form-urlencoded'
-      },
+      headers: { ...headers, 'Content-Type': 'application/x-www-form-urlencoded' },
       body: body.toString()
     });
   } catch {}
+
+  // Small delay to let the session register
+  await new Promise(r => setTimeout(r, 1500));
 }
 
 // Feature flags required by X GraphQL endpoints.
@@ -251,6 +261,7 @@ const TWEET_FEATURES = {
   responsive_web_graphql_skip_user_profile_image_extensions_enabled: false,
   responsive_web_graphql_timeline_navigation_enabled: true,
   responsive_web_grok_analysis_button_fetch_trends_enabled: false,
+  responsive_web_grok_analyze_button_fetch_trends_enabled: false,
   responsive_web_grok_analyze_post_followups_enabled: true,
   responsive_web_grok_analysis_button_from_backend: true,
   responsive_web_grok_annotations_enabled: true,
@@ -284,6 +295,9 @@ const FIELD_TOGGLES = {
 };
 
 async function cookiePostTweet(content, replyToId = null, attempt = 1, account = 'personal') {
+  if (attempt === 1) {
+    await warmSession(account);
+  }
   const { username } = getAccountConfig(account);
   const variables = {
     tweet_text: content,
@@ -580,7 +594,19 @@ export async function getTweetById(tweetId) {
   };
 }
 
-export async function likeTweet(tweetId) {
+export async function likeTweet(tweetId, account = 'personal') {
+  // Try v1.1 endpoint first (more stable than GraphQL queryId rotation)
+  const v1Response = await fetch(`https://x.com/i/api/1.1/favorites/create.json`, {
+    method: 'POST',
+    headers: { ...getCookieHeaders(account), 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: `id=${tweetId}`
+  });
+
+  if (v1Response.ok) {
+    return { success: true, liked_id: tweetId };
+  }
+
+  // Fallback to GraphQL
   const body = JSON.stringify({
     variables: { tweet_id: tweetId },
     queryId: QUERY_IDS.FavoriteTweet
@@ -588,7 +614,7 @@ export async function likeTweet(tweetId) {
 
   const response = await fetch(`${GRAPHQL_BASE}/${QUERY_IDS.FavoriteTweet}/FavoriteTweet`, {
     method: 'POST',
-    headers: getCookieHeaders(),
+    headers: getCookieHeaders(account),
     body
   });
 

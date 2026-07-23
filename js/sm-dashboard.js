@@ -9,13 +9,14 @@
     renderMeta(data._meta);
     renderAlerts(data);
     renderIndicators(data.indicators);
+    fetch(SM.url('/dashboard/data/trends.json?v=' + SM.VERSION)).then(function(r) { return r.json(); }).then(renderTrends).catch(function() {});
     if (data.employment) renderEmployment(data.employment);
     if (data.social) renderSocial(data.social);
     if (data.moddable_social) renderModdableSocial(data.moddable_social);
     if (data.analytics) renderAnalytics(data.analytics);
     if (data.agents) renderAgents(data.agents);
     if (data.github) renderGitHub(data.github);
-    if (data.cloudflare) renderCloudflare(data.cloudflare, data.analytics);
+    if (data.cloudflare) renderCloudflare(data.cloudflare, data.analytics, data.analytics?.mcp_tools_usage);
     if (data.ecosystem) renderEcosystem(data.ecosystem);
     if (data.investment) renderInvestment(data.investment);
   }
@@ -86,6 +87,7 @@
   function renderSubnav() {
     var nav = SM.el('nav', { class: 'dashboard-subnav', id: 'dashboard-subnav' });
     var links = [
+      { id: 'section-trends', label: 'Trends' },
       { id: 'section-employment', label: 'Employment' },
       { id: 'section-social', label: 'Social' },
       { id: 'section-moddable-social', label: '@Moddable' },
@@ -123,6 +125,119 @@
     for (var i = 0; i < links.length; i++) {
       var section = document.getElementById(links[i].id);
       if (section) observer.observe(section);
+    }
+  }
+
+  function sparkline(points, opts) {
+    opts = opts || {};
+    var width = opts.width || 280;
+    var height = opts.height || 60;
+    var color = opts.color || 'var(--sm-teal-glow)';
+    var fillColor = opts.fill || 'rgba(14, 116, 144, 0.15)';
+
+    if (!points.length) return SM.el('div', { style: { color: 'var(--sm-muted)', fontSize: '12px' } }, 'No data yet');
+
+    var max = Math.max.apply(null, points);
+    var min = Math.min.apply(null, points);
+    var range = max - min || 1;
+
+    var pathParts = [];
+    var fillParts = [];
+    var stepX = width / Math.max(points.length - 1, 1);
+
+    for (var i = 0; i < points.length; i++) {
+      var x = Math.round(i * stepX);
+      var y = Math.round(height - ((points[i] - min) / range) * (height - 8) - 4);
+      pathParts.push((i === 0 ? 'M' : 'L') + x + ',' + y);
+      fillParts.push((i === 0 ? 'M' : 'L') + x + ',' + y);
+    }
+    fillParts.push('L' + Math.round((points.length - 1) * stepX) + ',' + height);
+    fillParts.push('L0,' + height + 'Z');
+
+    var svg = '<svg width="' + width + '" height="' + height + '" viewBox="0 0 ' + width + ' ' + height + '" style="display:block;width:100%;height:' + height + 'px">';
+    svg += '<path d="' + fillParts.join(' ') + '" fill="' + fillColor + '" />';
+    svg += '<path d="' + pathParts.join(' ') + '" fill="none" stroke="' + color + '" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />';
+    svg += '<circle cx="' + Math.round((points.length - 1) * stepX) + '" cy="' + Math.round(height - ((points[points.length - 1] - min) / range) * (height - 8) - 4) + '" r="3" fill="' + color + '" />';
+    svg += '</svg>';
+
+    var container = SM.el('div');
+    container.innerHTML = svg;
+    return container;
+  }
+
+  function trendCard(title, points, labels, opts) {
+    opts = opts || {};
+    var card = SM.el('div', { class: 'dashboard-panel' });
+    var header = SM.el('div', { style: { display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '8px' } });
+    header.appendChild(SM.el('div', { class: 'dashboard-panel-title', style: { marginBottom: '0' } }, title));
+
+    if (points.length >= 2) {
+      var current = points[points.length - 1];
+      var prev = points[points.length - 2];
+      var diff = current - prev;
+      var diffStr = diff > 0 ? '+' + diff.toLocaleString() : diff.toLocaleString();
+      var diffColor = diff > 0 ? '#34D399' : diff < 0 ? '#EF4444' : 'var(--sm-muted)';
+      header.appendChild(SM.el('div', { style: { fontFamily: 'var(--f-mono)', fontSize: '12px' } },
+        SM.el('span', { style: { fontWeight: '700', fontSize: '16px', color: 'var(--sm-text)', marginRight: '8px' } }, current.toLocaleString()),
+        SM.el('span', { style: { color: diffColor } }, diffStr)
+      ));
+    } else if (points.length === 1) {
+      header.appendChild(SM.el('span', { style: { fontFamily: 'var(--f-mono)', fontSize: '16px', fontWeight: '700', color: 'var(--sm-text)' } }, points[0].toLocaleString()));
+    }
+
+    card.appendChild(header);
+    card.appendChild(sparkline(points, opts));
+
+    if (labels && labels.length >= 2) {
+      var labelRow = SM.el('div', { style: { display: 'flex', justifyContent: 'space-between', marginTop: '4px', fontFamily: 'var(--f-mono)', fontSize: '10px', color: 'var(--sm-muted)' } });
+      labelRow.appendChild(SM.el('span', {}, labels[0]));
+      labelRow.appendChild(SM.el('span', {}, labels[labels.length - 1]));
+      card.appendChild(labelRow);
+    }
+
+    return card;
+  }
+
+  function renderTrends(trends) {
+    var el = document.getElementById('trends-content');
+    if (!trends || trends.length < 2) {
+      el.appendChild(SM.el('p', { style: { color: 'var(--sm-muted)' } }, 'Need at least 2 snapshots for trend data. Currently: ' + (trends ? trends.length : 0)));
+      return;
+    }
+
+    var dates = trends.map(function(t) { return t.date.slice(5); });
+    var grid = SM.el('div', { class: 'dashboard-grid-3' });
+
+    function extract(key) { return trends.map(function(t) { return t[key] || 0; }); }
+
+    grid.appendChild(trendCard('Social Impressions', extract('social_impressions'), dates, { color: 'var(--sm-teal-glow)', fill: 'rgba(14, 116, 144, 0.12)' }));
+    grid.appendChild(trendCard('Jobs Discovered', extract('jobs_discovered'), dates, { color: 'var(--sm-gold-glow)', fill: 'rgba(154, 111, 46, 0.12)' }));
+    grid.appendChild(trendCard('Jobs Applied', extract('jobs_applied'), dates, { color: '#34D399', fill: 'rgba(52, 211, 153, 0.12)' }));
+    grid.appendChild(trendCard('Commits / Week', extract('commits_week'), dates, { color: 'var(--sm-violet-glow)', fill: 'rgba(167, 139, 250, 0.12)' }));
+    grid.appendChild(trendCard('smalley.my Views (7d)', extract('ga4_smalley_views'), dates, { color: 'var(--sm-teal-glow)', fill: 'rgba(14, 116, 144, 0.12)' }));
+    grid.appendChild(trendCard('moddable.games Views (7d)', extract('ga4_moddable_views'), dates, { color: 'var(--sm-violet-glow)', fill: 'rgba(167, 139, 250, 0.12)' }));
+
+    el.appendChild(grid);
+
+    // Moddable ecosystem metrics (only show if data exists)
+    var hasMcp = trends.some(function(t) { return t.mcp_tools > 0; });
+    if (hasMcp) {
+      var ecoGrid = SM.el('div', { class: 'dashboard-grid-3', style: { marginTop: '24px' } });
+      ecoGrid.appendChild(trendCard('MCP Tools', extract('mcp_tools'), dates, { color: 'var(--sm-teal-glow)', fill: 'rgba(14, 116, 144, 0.12)' }));
+      ecoGrid.appendChild(trendCard('Engine Variants', extract('engine_variants'), dates, { color: 'var(--sm-violet-glow)', fill: 'rgba(167, 139, 250, 0.12)' }));
+      ecoGrid.appendChild(trendCard('RPG Systems', extract('rpg_systems'), dates, { color: 'var(--sm-gold-glow)', fill: 'rgba(154, 111, 46, 0.12)' }));
+      el.appendChild(ecoGrid);
+    }
+
+    // Infrastructure metrics (only show if data exists)
+    var hasCf = trends.some(function(t) { return t.cf_requests > 0; });
+    var hasMcpUsers = trends.some(function(t) { return t.mcp_users > 0; });
+    if (hasCf || hasMcpUsers) {
+      var infraGrid = SM.el('div', { class: 'dashboard-grid-3', style: { marginTop: '24px' } });
+      if (hasCf) infraGrid.appendChild(trendCard('Worker Requests (7d)', extract('cf_requests'), dates, { color: 'var(--sm-teal-glow)', fill: 'rgba(14, 116, 144, 0.12)' }));
+      if (hasMcpUsers) infraGrid.appendChild(trendCard('MCP Tool Users', extract('mcp_users'), dates, { color: '#34D399', fill: 'rgba(52, 211, 153, 0.12)' }));
+      if (hasMcpUsers) infraGrid.appendChild(trendCard('MCP Tool Calls', extract('mcp_calls'), dates, { color: 'var(--sm-gold-glow)', fill: 'rgba(154, 111, 46, 0.12)' }));
+      el.appendChild(infraGrid);
     }
   }
 
@@ -873,27 +988,100 @@
         var tableContainer = SM.el('div');
         var activePeriod = '30d';
 
+        var activeHostFilter = 'all';
+        var showAll = false;
+
         function renderTable(data) {
           tableContainer.innerHTML = '';
           if (!data.length) { tableContainer.appendChild(SM.el('div', { style: { color: 'var(--sm-muted)', fontSize: '12px' } }, 'No data for this period')); return; }
+
+          // Subdomain breakdown bar chart (for moddable property)
+          if (key === 'moddable_games' && data.some(function(p) { return p.host; })) {
+            var byHost = {};
+            for (var h = 0; h < data.length; h++) {
+              var host = data[h].host || 'unknown';
+              if (!byHost[host]) byHost[host] = 0;
+              byHost[host] += data[h].views;
+            }
+            var hostItems = Object.entries(byHost).sort(function(a, b) { return b[1] - a[1]; }).map(function(e) {
+              var accent = e[0].includes('chess') ? 'teal' : e[0].includes('hex') ? 'violet' : e[0].includes('rules') ? 'gold' : e[0].includes('decks') ? 'violet' : 'muted';
+              return { label: e[0], value: e[1], accent: accent };
+            });
+            var hostMax = hostItems.length ? hostItems[0].value : 0;
+            tableContainer.appendChild(SM.el('div', { style: { marginBottom: '16px' } },
+              SM.el('div', { style: { fontFamily: 'var(--f-mono)', fontSize: '10px', fontWeight: '700', color: 'var(--sm-muted)', textTransform: 'uppercase', marginBottom: '8px' } }, 'By Subdomain'),
+              barChart(hostItems, hostMax)
+            ));
+
+            // Domain filter buttons
+            var domains = ['all'].concat(Object.keys(byHost).sort());
+            var filterRow = SM.el('div', { style: { display: 'flex', gap: '3px', marginBottom: '12px', flexWrap: 'wrap' } });
+            for (var di = 0; di < domains.length; di++) {
+              (function(d) {
+                var dlabel = d === 'all' ? 'All' : d.replace('.moddable.games', '').replace('moddable.games', 'main');
+                var isActive = d === activeHostFilter;
+                var dcolor = d.includes('chess') ? 'var(--sm-teal-glow)' : d.includes('hex') ? 'var(--sm-violet-glow)' : d.includes('rules') ? 'var(--sm-gold-glow)' : d.includes('decks') ? 'var(--sm-violet-glow)' : 'var(--sm-teal)';
+                var btn = SM.el('button', { style: {
+                  fontFamily: 'var(--f-mono)', fontSize: '10px', fontWeight: isActive ? '700' : '500',
+                  padding: '2px 7px', borderRadius: '3px', cursor: 'pointer',
+                  border: '1px solid ' + (isActive ? dcolor : 'var(--sm-border)'),
+                  background: isActive ? 'var(--sm-surface-alt)' : 'transparent',
+                  color: isActive ? dcolor : 'var(--sm-muted)'
+                } }, dlabel);
+                btn.addEventListener('click', function() {
+                  activeHostFilter = d;
+                  showAll = false;
+                  renderTable(data);
+                });
+                filterRow.appendChild(btn);
+              })(domains[di]);
+            }
+            tableContainer.appendChild(filterRow);
+          }
+
+          // Filter data by host
+          var filtered = data;
+          if (activeHostFilter !== 'all') {
+            filtered = data.filter(function(p) { return p.host === activeHostFilter; });
+          }
+          var displayCount = showAll ? filtered.length : Math.min(filtered.length, 10);
+
           var table = SM.el('table', { class: 'metrics-table' });
           table.appendChild(SM.el('thead', {}, SM.el('tr', {},
-            SM.el('th', {}, 'Page'), SM.el('th', {}, 'Views'),
+            SM.el('th', {}, 'Host'), SM.el('th', {}, 'Page'), SM.el('th', {}, 'Views'),
             SM.el('th', {}, 'Avg Duration'), SM.el('th', {}, 'Engaged')
           )));
           var tbody = SM.el('tbody');
-          var domain = key === 'smalley_my' ? 'https://smalley.my' : 'https://moddable.games';
-          for (var i = 0; i < data.length; i++) {
-            var p = data[i];
+          var fallbackDomain = key === 'smalley_my' ? 'https://smalley.my' : 'https://moddable.games';
+          for (var i = 0; i < displayCount; i++) {
+            var p = filtered[i];
+            var domain = p.host ? 'https://' + p.host : fallbackDomain;
+            var hostLabel = p.host || (key === 'smalley_my' ? 'smalley.my' : 'moddable.games');
             var dur = p.avg_duration_s >= 60 ? Math.floor(p.avg_duration_s / 60) + 'm ' + (p.avg_duration_s % 60) + 's' : p.avg_duration_s + 's';
             var pageLink = SM.el('a', { href: domain + p.path, target: '_blank', rel: 'noopener', style: { color: 'var(--sm-teal-glow)', textDecoration: 'none', fontFamily: 'var(--f-mono)', fontSize: '12px' } }, p.path);
+            var hostColor = hostLabel.includes('chess') ? 'var(--sm-teal-glow)' : hostLabel.includes('hex') ? 'var(--sm-violet-glow)' : hostLabel.includes('rules') ? 'var(--sm-gold-glow)' : 'var(--sm-muted)';
             tbody.appendChild(SM.el('tr', {},
+              SM.el('td', { style: { fontFamily: 'var(--f-mono)', fontSize: '10px', color: hostColor } }, hostLabel.replace('.moddable.games', '').replace('moddable.games', 'main')),
               SM.el('td', {}, pageLink), SM.el('td', {}, String(p.views)),
               SM.el('td', {}, dur), SM.el('td', {}, String(p.engaged))
             ));
           }
           table.appendChild(tbody);
           tableContainer.appendChild(table);
+
+          // Show all button
+          if (!showAll && filtered.length > 10) {
+            var showAllBtn = SM.el('button', { style: {
+              fontFamily: 'var(--f-body)', fontSize: '12px', color: 'var(--sm-teal-glow)',
+              background: 'none', border: 'none', cursor: 'pointer', padding: '12px 0',
+              width: '100%', textAlign: 'center'
+            } }, 'Show all ' + filtered.length + ' pages');
+            showAllBtn.addEventListener('click', function() {
+              showAll = true;
+              renderTable(data);
+            });
+            tableContainer.appendChild(showAllBtn);
+          }
         }
 
         for (var pi = 0; pi < periods.length; pi++) {
@@ -1143,41 +1331,63 @@
       { label: 'Active jam', value: kv.jam ? 'Jam #' + (kv.jam.number || '?') : 'None' }
     ]));
 
-    if (kv.submissions.length > 0) {
-      var panel = SM.el('div', { class: 'dashboard-panel' },
-        SM.el('div', { class: 'dashboard-panel-title' }, 'Recent Submissions')
-      );
-      for (var i = 0; i < Math.min(kv.submissions.length, 5); i++) {
-        var s = kv.submissions[i];
-        var date = s.submitted_at ? s.submitted_at.split('T')[0] : '—';
-        panel.appendChild(SM.el('div', { class: 'stat-row' },
-          SM.el('span', { class: 'stat-label' }, s.title + ' (' + (s.category || s.base_game || '?') + ')'),
-          SM.el('span', { class: 'stat-value' }, date)
-        ));
-      }
-      kvGrid.appendChild(panel);
-    } else if (kv.subscribers.length > 0) {
+    if (kv.subscribers.length > 0) {
       var subPanel = SM.el('div', { class: 'dashboard-panel' },
-        SM.el('div', { class: 'dashboard-panel-title' }, 'Recent Subscribers')
+        SM.el('div', { class: 'dashboard-panel-title' }, 'Subscribers (' + kv.subscriber_count + ')')
       );
-      for (var i2 = 0; i2 < Math.min(kv.subscribers.length, 5); i2++) {
-        var sub = kv.subscribers[i2];
+      var subTable = SM.el('table', { class: 'metrics-table' });
+      subTable.appendChild(SM.el('thead', {},
+        SM.el('tr', {},
+          SM.el('th', {}, 'Email'), SM.el('th', {}, 'Source'), SM.el('th', {}, 'Date')
+        )
+      ));
+      var subTbody = SM.el('tbody');
+      for (var i = 0; i < kv.subscribers.length; i++) {
+        var sub = kv.subscribers[i];
         var subDate = sub.subscribed_at ? sub.subscribed_at.split('T')[0] : '—';
-        subPanel.appendChild(SM.el('div', { class: 'stat-row' },
-          SM.el('span', { class: 'stat-label' }, sub.email),
-          SM.el('span', { class: 'stat-value' }, subDate)
+        subTbody.appendChild(SM.el('tr', {},
+          SM.el('td', {}, sub.email || '—'),
+          SM.el('td', { style: { fontFamily: 'var(--f-mono)', fontSize: '11px', color: 'var(--sm-muted)' } }, sub.source || '—'),
+          SM.el('td', {}, subDate)
         ));
       }
+      subTable.appendChild(subTbody);
+      subPanel.appendChild(subTable);
       kvGrid.appendChild(subPanel);
-    } else {
-      kvGrid.appendChild(statPanel('Status', [
-        { label: 'Subscribers', value: 'No signups yet' },
-        { label: 'Submissions', value: 'No mods submitted yet' },
-        { label: 'KV namespaces', value: '2 monitored' }
-      ]));
     }
 
     el.appendChild(kvGrid);
+
+    if (kv.submissions.length > 0) {
+      var modPanel = SM.el('div', { class: 'dashboard-panel', style: { marginTop: '24px' } },
+        SM.el('div', { class: 'dashboard-panel-title' }, 'Mod Submissions (' + kv.submission_count + ')')
+      );
+      var modTable = SM.el('table', { class: 'metrics-table' });
+      modTable.appendChild(SM.el('thead', {},
+        SM.el('tr', {},
+          SM.el('th', {}, 'Title'), SM.el('th', {}, 'Category'),
+          SM.el('th', {}, 'Base Game'), SM.el('th', {}, 'Email'),
+          SM.el('th', {}, 'Status'), SM.el('th', {}, 'Date')
+        )
+      ));
+      var modTbody = SM.el('tbody');
+      for (var j = 0; j < kv.submissions.length; j++) {
+        var s = kv.submissions[j];
+        var modDate = s.submitted_at ? s.submitted_at.split('T')[0] : '—';
+        var statusColor = s.status === 'pending' ? 'var(--sm-gold-glow)' : s.status === 'approved' ? '#34D399' : 'var(--sm-muted)';
+        modTbody.appendChild(SM.el('tr', {},
+          SM.el('td', {}, s.title || '—'),
+          SM.el('td', {}, s.category || '—'),
+          SM.el('td', {}, s.base_game || '—'),
+          SM.el('td', { style: { fontFamily: 'var(--f-mono)', fontSize: '11px' } }, s.email || '—'),
+          SM.el('td', { style: { color: statusColor, fontWeight: '600' } }, s.status || '—'),
+          SM.el('td', {}, modDate)
+        ));
+      }
+      modTable.appendChild(modTbody);
+      modPanel.appendChild(modTable);
+      el.appendChild(modPanel);
+    }
   }
 
   function renderGitHub(gh) {
@@ -1195,16 +1405,50 @@
     el.appendChild(grid);
 
     if (gh.issues && gh.issues.length) {
+      var projectIssues = gh.issues.filter(function(i) { return i.repo !== 'moddable-ops'; });
+      var opsIssues = gh.issues.filter(function(i) { return i.repo === 'moddable-ops'; });
+
+      if (projectIssues.length) {
+        renderIssueTable(el, 'Open Issues (' + projectIssues.length + ')', projectIssues);
+      }
+      if (opsIssues.length) {
+        renderIssueTable(el, 'Ops Queue — moddable-ops (' + opsIssues.length + ')', opsIssues);
+      }
+    }
+  }
+
+  function renderIssueTable(el, title, issues) {
+    var panel = SM.el('div', { class: 'dashboard-panel', style: { marginTop: '24px' } });
+    var titleRow = SM.el('div', { style: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px' } });
+    titleRow.appendChild(SM.el('div', { class: 'dashboard-panel-title', style: { marginBottom: '0' } }, title));
+
+    var sortBar = SM.el('div', { style: { display: 'flex', gap: '3px' } });
+    var sortOptions = [
+      { key: 'oldest', label: 'Oldest' },
+      { key: 'newest', label: 'Newest' }
+    ];
+    var tableContainer = SM.el('div');
+    var activeSort = 'oldest';
+
+    function renderTable(sortKey) {
+      tableContainer.innerHTML = '';
+      var sorted = issues.slice();
+      if (sortKey === 'oldest') {
+        sorted.sort(function(a, b) { return (a.updated || '').localeCompare(b.updated || ''); });
+      } else {
+        sorted.sort(function(a, b) { return (b.updated || '').localeCompare(a.updated || ''); });
+      }
+
       var table = SM.el('table', { class: 'metrics-table' });
       table.appendChild(SM.el('thead', {},
         SM.el('tr', {},
           SM.el('th', {}, 'Repo'), SM.el('th', {}, '#'),
-          SM.el('th', {}, 'Title'), SM.el('th', {}, 'Labels')
+          SM.el('th', {}, 'Title'), SM.el('th', {}, 'Updated'), SM.el('th', {}, 'Labels')
         )
       ));
       var tbody = SM.el('tbody');
-      for (var i = 0; i < Math.min(gh.issues.length, 20); i++) {
-        var issue = gh.issues[i];
+      for (var i = 0; i < sorted.length; i++) {
+        var issue = sorted[i];
         var titleCell = issue.url
           ? SM.el('td', {}, SM.el('a', { href: issue.url, target: '_blank', rel: 'noopener', style: { color: 'var(--sm-text)', textDecoration: 'none' } }, issue.title))
           : SM.el('td', {}, issue.title);
@@ -1220,18 +1464,45 @@
           SM.el('td', { style: { fontFamily: 'var(--f-mono)', fontSize: '11px' } }, issue.repo),
           SM.el('td', {}, '#' + issue.number),
           titleCell,
+          SM.el('td', { style: { fontFamily: 'var(--f-mono)', fontSize: '11px', color: 'var(--sm-muted)' } }, issue.updated || '—'),
           labelsCell
         ));
       }
       table.appendChild(tbody);
-      el.appendChild(SM.el('div', { class: 'dashboard-panel', style: { marginTop: '24px' } },
-        SM.el('div', { class: 'dashboard-panel-title' }, 'All Open Issues (most recent)'),
-        table
-      ));
+      tableContainer.appendChild(table);
     }
+
+    for (var i = 0; i < sortOptions.length; i++) {
+      (function(opt) {
+        var btn = SM.el('button', { style: {
+          fontFamily: 'var(--f-mono)', fontSize: '10px', fontWeight: opt.key === activeSort ? '700' : '500',
+          padding: '2px 7px', borderRadius: '3px', cursor: 'pointer',
+          border: '1px solid ' + (opt.key === activeSort ? 'var(--sm-teal)' : 'var(--sm-border)'),
+          background: opt.key === activeSort ? 'var(--sm-surface-alt)' : 'transparent',
+          color: opt.key === activeSort ? 'var(--sm-teal)' : 'var(--sm-muted)'
+        } }, opt.label);
+        btn.addEventListener('click', function() {
+          activeSort = opt.key;
+          sortBar.querySelectorAll('button').forEach(function(b) {
+            b.style.fontWeight = '500'; b.style.borderColor = 'var(--sm-border)';
+            b.style.background = 'transparent'; b.style.color = 'var(--sm-muted)';
+          });
+          btn.style.fontWeight = '700'; btn.style.borderColor = 'var(--sm-teal)';
+          btn.style.background = 'var(--sm-surface-alt)'; btn.style.color = 'var(--sm-teal)';
+          renderTable(opt.key);
+        });
+        sortBar.appendChild(btn);
+      })(sortOptions[i]);
+    }
+
+    titleRow.appendChild(sortBar);
+    panel.appendChild(titleRow);
+    panel.appendChild(tableContainer);
+    renderTable('oldest');
+    el.appendChild(panel);
   }
 
-  function renderCloudflare(cf, analytics) {
+  function renderCloudflare(cf, analytics, mcpUsage) {
     var el = document.getElementById('cloudflare-content');
     if (cf.error) {
       el.appendChild(SM.el('p', { style: { color: 'var(--sm-muted)' } }, 'Error: ' + cf.error));
@@ -1241,14 +1512,80 @@
     var cfLink = SM.el('a', { href: 'https://dash.cloudflare.com/52066e47a6c7b705baee636a1dff5387/workers/overview', target: '_blank', rel: 'noopener', class: 'dashboard-external-link' }, 'Open Cloudflare Dashboard →');
     el.appendChild(cfLink);
 
-    var grid = SM.el('div', { class: 'dashboard-grid-2' });
-    grid.appendChild(statPanel('Workers (7d)', [
-      { label: 'Total requests', value: cf.total_requests.toLocaleString() },
-      { label: 'Total errors', value: String(cf.total_errors) },
-      { label: 'Error rate', value: (cf.error_rate * 100).toFixed(2) + '%' }
-    ]));
+    // Workers panel with period toggle
+    var workersPanel = SM.el('div', { class: 'dashboard-panel' });
+    var titleRow = SM.el('div', { style: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px' } });
+    titleRow.appendChild(SM.el('div', { class: 'dashboard-panel-title', style: { marginBottom: '0' } }, 'Worker Requests'));
 
-    // MCP Tool usage from GA4 events as second grid column
+    var toggleBar = SM.el('div', { style: { display: 'flex', gap: '3px' } });
+    var periods = [
+      { key: '7d', label: '7D' },
+      { key: '30d', label: '30D' }
+    ];
+    var chartContainer = SM.el('div');
+    var activePeriod = '7d';
+
+    function renderWorkerChart(periodKey) {
+      chartContainer.innerHTML = '';
+      var periodData = cf[periodKey];
+      if (!periodData || !periodData.by_worker || !periodData.by_worker.length) {
+        chartContainer.appendChild(SM.el('div', { style: { color: 'var(--sm-muted)', fontSize: '12px' } }, 'No data for this period'));
+        return;
+      }
+      var statsRow = SM.el('div', { style: { display: 'flex', gap: '24px', marginBottom: '14px' } });
+      statsRow.appendChild(SM.el('div', { style: { fontFamily: 'var(--f-mono)', fontSize: '12px' } },
+        SM.el('span', { style: { color: 'var(--sm-muted)' } }, 'Requests: '),
+        SM.el('span', { style: { color: 'var(--sm-text)', fontWeight: '700' } }, periodData.total_requests.toLocaleString())
+      ));
+      statsRow.appendChild(SM.el('div', { style: { fontFamily: 'var(--f-mono)', fontSize: '12px' } },
+        SM.el('span', { style: { color: 'var(--sm-muted)' } }, 'Errors: '),
+        SM.el('span', { style: { color: periodData.total_errors > 0 ? '#EF4444' : 'var(--sm-text)' } }, String(periodData.total_errors))
+      ));
+      statsRow.appendChild(SM.el('div', { style: { fontFamily: 'var(--f-mono)', fontSize: '12px' } },
+        SM.el('span', { style: { color: 'var(--sm-muted)' } }, 'Error rate: '),
+        SM.el('span', {}, (periodData.error_rate * 100).toFixed(2) + '%')
+      ));
+      chartContainer.appendChild(statsRow);
+
+      var maxReq = periodData.by_worker[0].requests;
+      var items = periodData.by_worker.map(function(w) {
+        return { label: w.name, value: w.requests, accent: w.errors > 0 ? 'red' : 'teal' };
+      });
+      chartContainer.appendChild(barChart(items, maxReq));
+    }
+
+    for (var pi = 0; pi < periods.length; pi++) {
+      (function(period) {
+        var btn = SM.el('button', { style: {
+          fontFamily: 'var(--f-mono)', fontSize: '10px', fontWeight: period.key === activePeriod ? '700' : '500',
+          padding: '2px 7px', borderRadius: '3px', cursor: 'pointer',
+          border: '1px solid ' + (period.key === activePeriod ? 'var(--sm-teal)' : 'var(--sm-border)'),
+          background: period.key === activePeriod ? 'var(--sm-surface-alt)' : 'transparent',
+          color: period.key === activePeriod ? 'var(--sm-teal)' : 'var(--sm-muted)'
+        } }, period.label);
+        btn.addEventListener('click', function() {
+          activePeriod = period.key;
+          toggleBar.querySelectorAll('button').forEach(function(b) {
+            b.style.fontWeight = '500'; b.style.borderColor = 'var(--sm-border)';
+            b.style.background = 'transparent'; b.style.color = 'var(--sm-muted)';
+          });
+          btn.style.fontWeight = '700'; btn.style.borderColor = 'var(--sm-teal)';
+          btn.style.background = 'var(--sm-surface-alt)'; btn.style.color = 'var(--sm-teal)';
+          renderWorkerChart(period.key);
+        });
+        toggleBar.appendChild(btn);
+      })(periods[pi]);
+    }
+
+    titleRow.appendChild(toggleBar);
+    workersPanel.appendChild(titleRow);
+    workersPanel.appendChild(chartContainer);
+    renderWorkerChart('7d');
+
+    var grid = SM.el('div', { class: 'dashboard-grid-2' });
+    grid.appendChild(workersPanel);
+
+    // MCP Tool usage from GA4 events
     var mgEvents = analytics && analytics.moddable_games && analytics.moddable_games.events_30d;
     if (mgEvents && mgEvents.length) {
       var toolEvents = mgEvents.filter(function(e) {
@@ -1265,17 +1602,32 @@
           barChart(teItems, teMax)
         ));
       }
-    } else if (cf.by_worker && cf.by_worker.length) {
-      var maxReq = cf.by_worker[0].requests;
-      var items = cf.by_worker.map(function(w) {
-        return { label: w.name, value: w.requests, accent: w.errors > 0 ? 'red' : 'teal' };
-      });
-      grid.appendChild(SM.el('div', { class: 'dashboard-panel' },
-        SM.el('div', { class: 'dashboard-panel-title' }, 'Requests by Worker'),
-        barChart(items, maxReq)
-      ));
     }
     el.appendChild(grid);
+
+    // MCP tool usage breakdown
+    if (mcpUsage && mcpUsage.by_tool && mcpUsage.by_tool.length) {
+      var mcpGrid = SM.el('div', { class: 'dashboard-grid-2', style: { marginTop: '24px' } });
+
+      mcpGrid.appendChild(statPanel('MCP Tool Users (7d)', [
+        { label: 'Unique users', value: String(mcpUsage.unique_users) },
+        { label: 'Total tool calls', value: mcpUsage.total_calls.toLocaleString() },
+        { label: 'Avg calls/user', value: mcpUsage.unique_users > 0 ? String(Math.round(mcpUsage.total_calls / mcpUsage.unique_users)) : '—' },
+        { label: 'Untracked (no name)', value: mcpUsage.untracked_calls.toLocaleString() }
+      ]));
+
+      var toolMax = mcpUsage.by_tool[0].calls;
+      var toolItems = mcpUsage.by_tool.slice(0, 15).map(function(t) {
+        var accent = t.tool.startsWith('chess') ? 'teal' : t.tool.startsWith('rules') ? 'gold' : t.tool.startsWith('oracle') ? 'violet' : t.tool.startsWith('hex') ? 'violet' : 'muted';
+        return { label: t.tool, value: t.calls, accent: accent };
+      });
+      mcpGrid.appendChild(SM.el('div', { class: 'dashboard-panel' },
+        SM.el('div', { class: 'dashboard-panel-title' }, 'Top Tools by Call Count (7d)'),
+        barChart(toolItems, toolMax)
+      ));
+
+      el.appendChild(mcpGrid);
+    }
   }
 
   function renderInvestment(inv) {

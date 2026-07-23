@@ -11618,7 +11618,7 @@
     {
       "id": "ably-developer-relations-manager-mqmpgx6k",
       "added": "2026-06-20",
-      "status": "applied",
+      "status": "declined",
       "company": "Ably",
       "role": "Developer Relations Manager",
       "location": "United Kingdom",
@@ -11682,7 +11682,9 @@
       "confidence": "high",
       "date_applied": "2026-07-13",
       "cv_variant": "devrel",
-      "applied_at": "2026-07-13"
+      "applied_at": "2026-07-13",
+      "declined_at": "2026-07-23",
+      "declined_reason": "Did not identify strong enough match with requirements"
     },
     {
       "id": "sanderson-king-chief-technology-officer",
@@ -12954,7 +12956,7 @@
     {
       "id": "wintermute-product-engineering-tech-lead-mr94n3z8",
       "added": "2026-07-06",
-      "status": "applied",
+      "status": "declined",
       "company": "Wintermute",
       "role": "Product Engineering Tech Lead",
       "location": "London, UK",
@@ -13022,7 +13024,8 @@
       },
       "date_applied": "2026-07-13",
       "cv_variant": "cto",
-      "applied_at": "2026-07-13"
+      "applied_at": "2026-07-13",
+      "note": "Rejection received 2026-07-17 via Lever."
     },
     {
       "id": "google-cloud-universal-ledger-lead-mr94n3z8",
@@ -14689,7 +14692,7 @@
     {
       "id": "ciklo-talent-head-of-engineering-mr94n40s",
       "added": "2026-07-06",
-      "status": "applied",
+      "status": "declined",
       "company": "Ciklo Talent",
       "role": "Head of Engineering",
       "location": "European Union (Remote)",
@@ -14755,7 +14758,8 @@
         "notes": null,
         "_fetched": true
       },
-      "applied_at": "2026-07-18"
+      "applied_at": "2026-07-18",
+      "note": "Rejection received 2026-07-21 via LinkedIn."
     },
     {
       "id": "ondo-finance-head-of-risk-mr8vmttz",
@@ -18915,7 +18919,7 @@
     {
       "id": "ey-manager-digital-assets-tc-fs-mroujifu",
       "added": "2026-07-17",
-      "status": "applied",
+      "status": "declined",
       "company": "EY",
       "role": "Manager, Digital Assets, TC, FS",
       "location": "London, England, United Kingdom",
@@ -18981,7 +18985,8 @@
         "notes": null,
         "_fetched": true
       },
-      "applied_at": "2026-07-18"
+      "applied_at": "2026-07-18",
+      "note": "Rejection received 2026-07-20. Ref 1712362."
     },
     {
       "id": "input-output-group-chief-operating-offic-mr8vmttk",
@@ -28186,7 +28191,147 @@
       "source": "linkedin",
       "channel": "rippling",
       "notes": "Pre-pipeline. Confirmation email received. No rejection found."
+    },
+    {
+      "id": "dex-head-of-platform-up-to-200k--mrrg1cp6",
+      "added": "2026-07-19",
+      "status": "rejected",
+      "company": "Dex",
+      "role": "Head of Platform (up to \u00a3200k)",
+      "location": "London",
+      "variant": "cto",
+      "score": 69,
+      "scores": {
+        "cto": 69,
+        "regtech": 55,
+        "devrel": 59
+      },
+      "confidence": "high",
+      "requirements_found": 25,
+      "matched": 12,
+      "gaps": [
+        "Tell Dex your stack, seniority, and",
+        "We will manage your applications and surface other opportunities that are a fit.The role",
+        "Their technology has already supported groundbreaking procedures, pushing the boundaries of what's possible in the operating room.",
+        "Dex cuts through the noise: get a full brief on the company and role, skip the cold application, and ensure your profile is seen by the right people.",
+        "Sign up once, and we'll match you to this and other high-impact roles that fit your unique",
+        "This role is with one of Dex's trusted partner companies.",
+        "Tell Dex your stack, seniority, and",
+        "We will manage your applications and surface other opportunities that are a fit.The role"
+      ],
+      "proof_points": [
+        {
+          "requirement": "Reporting to the VP of Engineering, you'll lead a growing team of software and XR engineers, scaling the platform from initial deployments to deep OEM partnerships.",
+          "evidence": "Founded and structured the Moonshot team (1 \u2192 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "You'll own the entire platform surface: the clinician-facing UI, the critical OEM-facing SDK, the low-latency edge deployment stack, and the cybersecurity posture required for hospital integration.",
+          "evidence": "Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems"
+        },
+        {
+          "requirement": "about the role before you commit to a process.If you're interested sign up to Dex to apply.Dex is an AI recruiter agent that helps you run your job search.",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "Reporting to the VP of Engineering, you'll lead a growing team of software and XR engineers, scaling the platform from initial deployments to deep OEM partnerships.",
+          "evidence": "Joined a 170-engineer company as P4 Engineer; promoted to M3 Manager within months. Tasked with designing novel Bitcoin meta-protocols, then given mandate to form and lead a new Moonshot team (grown from 1 to 10) whose first output became Cake's fifth business vertical."
+        },
+        {
+          "requirement": "This is a rare seat, defining the core interface for both surgeons and partners, with direct commercial and patient impact.The work",
+          "evidence": "Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites: renderer hooks, game controller, replay API, unit templates, terrain predicates, native ESM (same source serves browser, Worker, and Node.js)"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/head-of-platform-up-to-%C2%A3200k-at-dex-4442435131",
+      "source": "linkedin",
+      "linkedin_job_id": "4442435131",
+      "cover_letter": null,
+      "notes": "Not suitable.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/head-of-platform-up-to-%C2%A3200k-at-dex-4442435131",
+        "contact_email": null,
+        "linkedin_job_id": "4442435131",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 2,
+          "added": "2026-07-19"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      }
+    },
+    {
+      "id": "lseg-director-cloud-platform-engineering-mrrg1cp7",
+      "added": "2026-07-19",
+      "status": "rejected",
+      "company": "LSEG",
+      "role": "Director - Cloud Platform Engineering",
+      "location": "City Of London",
+      "variant": "cto",
+      "score": 78,
+      "scores": {
+        "cto": 78,
+        "regtech": 69,
+        "devrel": 69
+      },
+      "confidence": "high",
+      "requirements_found": 36,
+      "matched": 16,
+      "gaps": [
+        "As a global organisation spanning 70 countries and one rooted in a culture of growth, opportunity,",
+        "Experience building internal developer platforms and self-service capabilities, with a focus on developer",
+        "experience and adoption.Proven",
+        "experience treating platforms as products, including roadmap ownership, lifecycle thinking, and customer-centric design.Strong",
+        "experience, including leading managers and developing senior technical talent.",
+        "Experience in modern software engineering practices and languages (Python, Go).",
+        "essential and your responsibility to ensure that candidates applying to LSEG are aware of this privacy notice.",
+        "As a global organisation spanning 70 countries and one rooted in a culture of growth, opportunity,"
+      ],
+      "proof_points": [
+        {
+          "requirement": "experience leading large-scale platform engineering, cloud engineering, or infrastructure engineering organisations.Deep technical expertise in public cloud platforms, with strong hands-on",
+          "evidence": "Docker, CI/CD, Cloudflare Workers, LLM-augmented engineering, AI systems"
+        },
+        {
+          "requirement": "Experience in Cloud Cost Management and Fin",
+          "evidence": "Cross-functional team leadership, hiring, technical roadmap, stakeholder management, hands-on (P4\u2192M3)"
+        },
+        {
+          "requirement": "Experience in Site Reliability Engineering, production operations, and platform observability.",
+          "evidence": "Shipped 535 commits across 10+ repositories in 16 days using LLM-augmented development. Demonstrates the methodology's viability for startup-speed delivery at architecture quality"
+        },
+        {
+          "requirement": "Experience managing significant budgets and delivery priorities.Excellent communication and senior stakeholder (C-Level) management",
+          "evidence": "Founded and structured the Moonshot team (1 \u2192 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "Experience in enterprise-scale multi-cloud environments.Familiarity with CNCF ecosystem tools (e.g. service mesh, observability stacks, policy engines).",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 41 AI-callable MCP tools, 37 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/director-cloud-platform-engineering-at-lseg-4412916898",
+      "source": "linkedin",
+      "linkedin_job_id": "4412916898",
+      "cover_letter": null,
+      "notes": "Already applying to LSEG for AI Engineering Enablement Director \u2014 more suitable role.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/director-cloud-platform-engineering-at-lseg-4412916898",
+        "contact_email": null,
+        "linkedin_job_id": "4412916898",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 2,
+          "added": "2026-07-19"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      }
     }
   ],
-  "updated": "2026-07-18"
+  "updated": "2026-07-21"
 }

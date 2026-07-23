@@ -58,7 +58,7 @@
         "quotes": 0,
         "bookmarks": 0,
         "views": 140,
-        "last_checked": "2026-07-20T16:48:42.246Z"
+        "last_checked": "2026-07-22T19:55:33.648Z"
       },
       "notes": "First post after long silence. Combines comeback with MCP meta-demonstration. Must land before anything else.",
       "metrics_twitter": {
@@ -92,7 +92,7 @@
         "quotes": 0,
         "bookmarks": 0,
         "views": 21,
-        "last_checked": "2026-07-20T16:48:42.420Z"
+        "last_checked": "2026-07-22T19:55:33.853Z"
       },
       "notes": "Reply-to confirmed working. Posted as reply to tweet 2067236318627680743.",
       "metrics_twitter": {
@@ -198,7 +198,7 @@
       "pending_replies": [],
       "notes": "First post after long silence. Combines comeback with MCP meta-demonstration. No ask, no role signal — just presence and proof.",
       "metrics_linkedin": {
-        "impressions": 775,
+        "impressions": 776,
         "likes": 21,
         "comments": 10,
         "shares": 0,
@@ -376,7 +376,7 @@
         ]
       },
       "deltas": {
-        "impressions": -1,
+        "impressions": 0,
         "likes": 0
       }
     },
@@ -441,7 +441,7 @@
         "quotes": 0,
         "bookmarks": 0,
         "views": 75,
-        "last_checked": "2026-07-20T16:48:43.257Z"
+        "last_checked": "2026-07-22T19:55:34.873Z"
       },
       "metrics_twitter": {
         "impressions": 75,
@@ -545,7 +545,7 @@
       "sequence": 6,
       "notes": "2-tweet thread. Tweet 1 posted by pipeline, tweet 2 posted manually by Mark (Twitter 226 cooldown from earlier failed attempts with stale queryId).",
       "metrics_twitter": {
-        "impressions": 23,
+        "impressions": 33,
         "likes": 0,
         "comments": 1,
         "shares": 0
@@ -556,8 +556,8 @@
         "replies": 1,
         "quotes": 0,
         "bookmarks": 0,
-        "views": 15,
-        "last_checked": "2026-07-20T16:48:44.185Z"
+        "views": 33,
+        "last_checked": "2026-07-22T19:55:36.006Z"
       }
     },
     {
@@ -567,6 +567,8 @@
       "posted": "2026-07-20T16:45:00Z",
       "posted_by": "pipeline",
       "method": "voyager",
+      "platform_id": "urn:li:activity:7484999005932998657",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7484999005932998657/",
       "trigger": "vanilla JS article published on smalley.my",
       "platforms": [
         "linkedin"
@@ -575,7 +577,65 @@
       "chars": 812,
       "angle": "Contrarian stance, journey narrative, MCP/edge portability proof, engagement question",
       "sequence": 6,
-      "notes": "LinkedIn version with extra middle paragraph. Posted via Voyager."
+      "notes": "LinkedIn version with extra middle paragraph. Posted via Voyager.",
+      "metrics": {
+        "likes": 2,
+        "comments": 0,
+        "shares": 1,
+        "impressions": 650,
+        "reactions": {
+          "LIKE": 2
+        },
+        "commentsList": [],
+        "last_checked": "2026-07-22T19:57:01.868Z"
+      },
+      "metrics_linkedin": {
+        "impressions": 768,
+        "likes": 3,
+        "comments": 2,
+        "shares": 1,
+        "reactions": {
+          "LIKE": 2,
+          "PRAISE": 1
+        },
+        "commentsList": [
+          {
+            "author": "Alan Lansdowne",
+            "subtitle": "Front End / Full Stack Web Developer JavaScript / ES2023 / TypeScript, ARIA, Modern CSS & SVG, BEM, Tailwind, Vue3, Deno, HTML5 Canvas, PHP 8, PWAs, WebComponents, GIT, YAML, JSON, RegEx, REST, jQuery",
+            "text": "It’s not that I’ve never used TypeScript (and jQuery, back in the day) but I much prefer the dependency-free approach.\n\nMy go-to front-end stack is:\n\n1) HTML\n\n2) CSS\n\n3) JS\n\n4) SVG\n\n5) JSON",
+            "created": 1784763468685,
+            "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7484999005932998657?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7484999005932998657%2C7485840555755778048%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287485840555755778048%2Curn%3Ali%3Aactivity%3A7484999005932998657%29"
+          },
+          {
+            "author": "Mark Smalley",
+            "subtitle": "Engineering Leader | AI Platforms, Digital Assets, Developer Tools",
+            "text": "Alan Lansdowne - this might be my first year without jQuery - just don't tell anyone, as it's never something I'd admit in public :-)",
+            "created": 1784796653719,
+            "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7484999005932998657?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7484999005932998657%2C7485840555755778048%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7484999005932998657%2C7485979743880826880%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287485840555755778048%2Curn%3Ali%3Aactivity%3A7484999005932998657%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287485979743880826880%2Curn%3Ali%3Aactivity%3A7484999005932998657%29"
+          }
+        ],
+        "reactionsList": [
+          {
+            "author": "Alan Lansdowne",
+            "occupation": "Front End / Full Stack Web Developer JavaScript / ES2023 / TypeScript, ARIA, Modern CSS & SVG, BEM, Tailwind, Vue3, Deno, HTML5 Canvas, PHP 8, PWAs, WebComponents, GIT, YAML, JSON, RegEx, REST, jQuery",
+            "type": "LIKE"
+          },
+          {
+            "author": "Sharuzzaman Ahmat Raslan",
+            "occupation": "Aspiring CTO | Cloud and Open Source Specialist | 6x AWS Certified | Consultant | Trainer | Speaker | Coach | Sharing my knowledge where ever possible",
+            "type": "LIKE"
+          },
+          {
+            "author": "John Hiemstra",
+            "occupation": "Product Architect & Engineer",
+            "type": "LIKE"
+          }
+        ]
+      },
+      "deltas": {
+        "impressions": 0,
+        "likes": 0
+      }
     },
     {
       "id": "protocol-twitter",
@@ -623,12 +683,13 @@
       "platform_id": "urn:li:activity:7482386169809526784",
       "url": "https://www.linkedin.com/feed/update/urn:li:activity:7482386169809526784/",
       "metrics_linkedin": {
-        "impressions": 484,
-        "likes": 3,
+        "impressions": 491,
+        "likes": 4,
         "comments": 1,
         "shares": 0,
         "reactions": {
-          "LIKE": 3
+          "LIKE": 3,
+          "INTEREST": 1
         },
         "commentsList": [
           {
@@ -646,19 +707,24 @@
             "type": "LIKE"
           },
           {
+            "author": "Tristan Gomez",
+            "occupation": "Chief Problem Solver | Senior Software Developer | Mentor | broad experience from startup MVPs to massive applications",
+            "type": "LIKE"
+          },
+          {
             "author": "Grayson Smith",
             "occupation": "Staff Product Manager & Product Coach",
             "type": "LIKE"
           },
           {
             "author": "Dorian Lazzari",
-            "occupation": "CEO @ Cubish",
+            "occupation": "Your next customer is already outside. I built Cubish so they find you. Where digital meets physical.",
             "type": "LIKE"
           }
         ]
       },
       "deltas": {
-        "impressions": 5,
+        "impressions": 0,
         "likes": 0
       },
       "metrics": {
@@ -710,7 +776,7 @@
         "quotes": 0,
         "bookmarks": 0,
         "views": 37,
-        "last_checked": "2026-07-20T16:48:45.123Z"
+        "last_checked": "2026-07-22T19:55:37.132Z"
       }
     },
     {
@@ -730,13 +796,77 @@
     {
       "id": "moddable-chess-linkedin",
       "created": "2026-07-20",
-      "status": "draft",
+      "status": "posted",
+      "posted": "2026-07-22T19:40:00Z",
+      "posted_by": "pipeline",
+      "method": "voyager",
+      "platform_id": "urn:li:share:7485783582653784064",
+      "url": "https://www.linkedin.com/feed/update/urn:li:fsd_share:urn:li:share:7485783582653784064/",
       "trigger": "Moddable chess/Nukes blog cross-promotion",
-      "platforms": ["linkedin"],
-      "content": "Chess grandmasters play 15-20 moves from memory before original thought begins. The fixed 8x8 board has been played billions of times. Memorization replaced strategy long ago.\n\nOur team spent a decade asking: what would a deterministic strategy game look like if the board was different every time? If memorization was worthless and only strategy survived?\n\nThe answer is Nukes. Two component types. Five terrain biomes. 44 modular hex tiles. No dice, no cards, no hidden information, any number of players.\n\nThe real kicker: 45 million Catan owners already have the hex tiles and tokens to play it. No new purchases required.\n\nhttps://moddable.games/news/conquering-the-constrains-of-chess/",
-      "chars": 497,
-      "angle": "Decade-long R&D, Nukes as the answer, Catan hook for virality",
-      "notes": "Blocked on article links being live (now done). Post tomorrow."
+      "platforms": [
+        "linkedin"
+      ],
+      "content": "Chess grandmasters play 15-20 moves from memory before original thought begins. The fixed 8x8 board has been played billions of times. Memorization replaced strategy long ago.\n\nThe team at Moddable.Games spent a decade asking: what would a deterministic strategy game look like if the board was different every time? If memorization was worthless and only strategy survived?\n\nThe answer is Nukes. Two component types. Five terrain biomes. 44 modular hex tiles. No dice, no cards, no hidden information, any number of players.\n\nIt was designed so any hex tile collection works. Catan, Terraforming Mars, or your own 3D-printed ones.",
+      "chars": 491,
+      "angle": "Decade-long R&D, Nukes as the answer, hex-agnostic design",
+      "notes": "Link card included via Voyager. Post ID confirmed saved.",
+      "metrics_linkedin": {
+        "impressions": 66,
+        "likes": 1,
+        "comments": 0,
+        "shares": 0,
+        "reactions": {
+          "LIKE": 1
+        },
+        "reactionsList": [
+          {
+            "author": "Libby Wareing",
+            "occupation": "Marketing Coordinator at SPOR Group | End-to-End Marketing Strategy, Content & Creative for a Growing UK AV & Workplace Technology Company",
+            "type": "LIKE"
+          }
+        ]
+      },
+      "deltas": {
+        "impressions": 0,
+        "likes": 0
+      }
+    },
+    {
+      "id": "monopoly-linkedin",
+      "created": "2026-07-22",
+      "status": "draft",
+      "trigger": "Monopoly blog cross-promotion on LinkedIn",
+      "platforms": [
+        "linkedin"
+      ],
+      "content": "Monopoly was not born as a celebration of capitalism. In 1903, Lizzie Magie launched The Landlord's Game to expose income inequality. In 1935, Charles Darrow sold a modified version to Parker Brothers. Hasbro have been printing money ever since.\n\n275 million copies. 200+ licensed editions. More variations than Barbie has outfits. Yet almost none of them change how the game actually plays.\n\nThe team at Moddable.Games took a different approach and turned it into a Euro-style game where nobody goes bankrupt. Chance cards become strategic events. Community Chest becomes a resource deck. Victory points replace elimination.\n\nThe result is Econopoly: same components, completely different experience.",
+      "chars": 690,
+      "angle": "Origin story hook, design critique, Econopoly as the answer",
+      "notes": "Include link card with moddable.games/news/monopolising-modified-variations/ when posting."
+    },
+    {
+      "id": "monopoly-quote-twitter",
+      "created": "2026-07-22",
+      "status": "posted",
+      "posted": "2026-07-22T19:45:00Z",
+      "posted_by": "pipeline",
+      "platform_id": "2080020880252403890",
+      "url": "https://x.com/m_smalley/status/2080020880252403890",
+      "type": "quote",
+      "parent": "mg-monopolising",
+      "trigger": "Cross-promote @ModdableGames Monopoly tweet from personal",
+      "platforms": [
+        "twitter"
+      ],
+      "content": "Econopoly turns Monopoly into a Euro-style game with victory points. No more elimination. Same components, different experience entirely.",
+      "chars": 137,
+      "angle": "Personal endorsement + summary of the mod",
+      "metrics_twitter": {
+        "impressions": 22,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0
+      }
     }
   ],
   "moddable_posts": [
@@ -757,16 +887,20 @@
       "chars": 224,
       "blog_slug": "conquering-the-constrains-of-chess",
       "metrics_twitter": {
-        "impressions": 2,
-        "likes": 0,
+        "impressions": 16,
+        "likes": 1,
         "comments": 0,
-        "shares": 0
+        "shares": 1
       }
     },
     {
       "id": "mg-monopolising",
       "created": "2026-07-20",
-      "status": "ready",
+      "status": "posted",
+      "posted": "2026-07-22T14:00:00Z",
+      "posted_by": "pipeline",
+      "platform_id": "2080013396431315321",
+      "url": "https://x.com/ModdableGames/status/2080013396431315321",
       "trigger": "blog post promotion — Monopolising Modified Variations",
       "platforms": [
         "twitter"
@@ -774,7 +908,13 @@
       "account": "moddable",
       "content": "🏠 Monopoly was designed in 1903 to expose the dangers of capitalism.\n\n275 million copies later, we turned it into a Euro-style game where nobody goes bankrupt.\n\nhttps://moddable.games/news/monopolising-modified-variations/",
       "chars": 222,
-      "blog_slug": "monopolising-modified-variations"
+      "blog_slug": "monopolising-modified-variations",
+      "metrics_twitter": {
+        "impressions": 25,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0
+      }
     },
     {
       "id": "mg-spiralling-paths",

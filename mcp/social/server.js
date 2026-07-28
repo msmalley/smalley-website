@@ -51,6 +51,10 @@ const TOOLS = [
           enum: ['personal', 'moddable'],
           description: 'Twitter account to post from. personal=@m_smalley (default), moddable=@ModdableGames.'
         },
+        image: {
+          type: 'string',
+          description: 'Absolute file path to an image to attach (Twitter only). Supports png, jpg, gif, webp.'
+        },
         link_url: {
           oneOf: [
             { type: 'string' },
@@ -463,7 +467,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
     switch (name) {
       case 'social_post':
         if (args.platform === 'twitter') {
-          result = await postTweet(args.content, args.reply_to || null, args.account || 'personal');
+          result = await postTweet(args.content, args.reply_to || null, args.account || 'personal', args.image || null);
         } else if (args.platform === 'linkedin') {
           result = await postLinkedIn(args.content, args.link_url || null);
         } else {

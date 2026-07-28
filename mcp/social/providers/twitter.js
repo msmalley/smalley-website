@@ -1,6 +1,7 @@
 import crypto from 'crypto';
-import { writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
+import { basename } from 'node:path';
 
 const OFFICIAL_API = 'https://api.x.com/2';
 const GRAPHQL_BASE = 'https://x.com/i/api/graphql';
@@ -10,10 +11,10 @@ const GRAPHQL_BASE = 'https://x.com/i/api/graphql';
 //   then grep for: queryId:"...",operationName:"CreateTweet|SearchTimeline|DeleteTweet"
 // Last updated: 2026-07-20
 const QUERY_IDS = {
-  CreateTweet: 'hIL9XdleMYEtVXOZVbr8Bg',
-  SearchTimeline: 'hz_94eVAtrtQo_vO3my7Rw',
+  CreateTweet: 'wUgPBh9hEKhMMGlg8uDuFw',
+  SearchTimeline: 'BGd0T_j7oVwlW5U79tO_0A',
   DeleteTweet: 'nxpZCY2K-I6QoFHAHeojFQ',
-  TweetResultByRestId: '4hhGRbehkcUVTKf8n0f0xw',
+  TweetResultByRestId: 'LkId5Akr61BS6BmOIcffRg',
   FavoriteTweet: 'lI07N6Otwv1PhnEgXILM7A',
   CreateRetweet: 'mbRO74GrOvSfRcJnlMapnQ'
 };
@@ -194,6 +195,55 @@ function getCookieHeaders(account = 'personal') {
   };
 }
 
+// Rate limiter: enforces minimum gaps and simulates browsing between mutations.
+// Twitter links all requests via auth_token — can't fake separate sessions.
+// What we CAN do: simulate the GET traffic a real user generates between actions.
+const actionLog = { personal: [], moddable: [] };
+const MIN_GAP_MS = 30000; // 30s minimum between any two mutations on same account
+const CROSS_ACCOUNT_GAP_MS = 15000; // 15s between actions across accounts (same IP)
+
+async function simulateBrowsing(account) {
+  const headers = getCookieHeaders(account);
+  const endpoints = [
+    'https://x.com/i/api/2/notifications/all.json?count=3',
+    'https://x.com/i/api/1.1/dm/inbox_initial_state.json?filter_low_quality=true&include_quality=all',
+    'https://x.com/i/api/2/timeline/home.json?count=3',
+  ];
+  // Hit 1-2 random GET endpoints to simulate natural browsing
+  const picks = endpoints.sort(() => Math.random() - 0.5).slice(0, 1 + Math.floor(Math.random() * 2));
+  for (const url of picks) {
+    try { await fetch(url, { method: 'GET', headers }); } catch {}
+    await new Promise(r => setTimeout(r, 1000 + Math.random() * 2000));
+  }
+}
+
+async function rateLimitGuard(account = 'personal') {
+  const now = Date.now();
+  const otherAccount = account === 'personal' ? 'moddable' : 'personal';
+
+  // Check same-account gap
+  const lastOwn = actionLog[account]?.slice(-1)[0] || 0;
+  const ownWait = MIN_GAP_MS - (now - lastOwn);
+  if (ownWait > 0) {
+    await new Promise(r => setTimeout(r, ownWait));
+  }
+
+  // Check cross-account gap (same IP)
+  const lastOther = actionLog[otherAccount]?.slice(-1)[0] || 0;
+  const crossWait = CROSS_ACCOUNT_GAP_MS - (Date.now() - lastOther);
+  if (crossWait > 0) {
+    await new Promise(r => setTimeout(r, crossWait));
+  }
+
+  // If this isn't the first action, simulate browsing to break up the mutation pattern
+  if (lastOwn > 0) {
+    await simulateBrowsing(account);
+  }
+
+  actionLog[account].push(Date.now());
+  if (actionLog[account].length > 10) actionLog[account].shift();
+}
+
 async function warmSession(account = 'personal') {
   const headers = getCookieHeaders(account);
 
@@ -294,15 +344,69 @@ const FIELD_TOGGLES = {
   withDisallowedReplyControls: false
 };
 
-async function cookiePostTweet(content, replyToId = null, attempt = 1, account = 'personal') {
+async function uploadMedia(filePath, account = 'personal') {
+  const fileData = readFileSync(filePath);
+  const totalBytes = fileData.length;
+  const ext = basename(filePath).split('.').pop().toLowerCase();
+  const mimeTypes = { png: 'image/png', jpg: 'image/jpeg', jpeg: 'image/jpeg', gif: 'image/gif', webp: 'image/webp' };
+  const mediaType = mimeTypes[ext] || 'image/png';
+  const mediaCategory = ext === 'gif' ? 'tweet_gif' : 'tweet_image';
+
+  const headers = getCookieHeaders(account);
+  const uploadBase = 'https://upload.x.com/i/media/upload.json';
+
+  // INIT
+  const initParams = new URLSearchParams({
+    command: 'INIT',
+    total_bytes: totalBytes.toString(),
+    media_type: mediaType,
+    media_category: mediaCategory
+  });
+  const initResp = await fetch(`${uploadBase}?${initParams}`, {
+    method: 'POST',
+    headers: { ...headers, 'Content-Type': 'application/x-www-form-urlencoded' }
+  });
+  if (!initResp.ok) throw new Error(`Media INIT failed (${initResp.status}): ${await initResp.text()}`);
+  const { media_id_string: mediaId } = await initResp.json();
+
+  // APPEND (single chunk for images under 5MB) — use base64 via form-urlencoded
+  const appendParams = new URLSearchParams({
+    command: 'APPEND',
+    media_id: mediaId,
+    segment_index: '0',
+    media_data: fileData.toString('base64')
+  });
+  const appendResp = await fetch(uploadBase, {
+    method: 'POST',
+    headers: { ...headers, 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: appendParams.toString()
+  });
+  if (!appendResp.ok && appendResp.status !== 204) {
+    throw new Error(`Media APPEND failed (${appendResp.status}): ${await appendResp.text()}`);
+  }
+
+  // FINALIZE
+  const finalParams = new URLSearchParams({ command: 'FINALIZE', media_id: mediaId });
+  const finalResp = await fetch(`${uploadBase}?${finalParams}`, {
+    method: 'POST',
+    headers: { ...headers, 'Content-Type': 'application/x-www-form-urlencoded' }
+  });
+  if (!finalResp.ok) throw new Error(`Media FINALIZE failed (${finalResp.status}): ${await finalResp.text()}`);
+
+  return mediaId;
+}
+
+async function cookiePostTweet(content, replyToId = null, attempt = 1, account = 'personal', mediaIds = []) {
   if (attempt === 1) {
+    await rateLimitGuard(account);
     await warmSession(account);
   }
   const { username } = getAccountConfig(account);
+  const mediaEntities = mediaIds.map(id => ({ media_id: id, tagged_users: [] }));
   const variables = {
     tweet_text: content,
     disallowed_reply_options: null,
-    media: { media_entities: [], possibly_sensitive: false },
+    media: { media_entities: mediaEntities, possibly_sensitive: false },
     semantic_annotation_ids: [],
     semantic_annotation_options: { source: 'Profile' }
   };
@@ -449,17 +553,32 @@ async function cookieSearchTweets(query, count = 10) {
 
 // --- Public API (auto-selects auth method) ---
 
-export async function postTweet(content, replyToId = null, account = 'personal') {
+// Cache uploaded media IDs so retries don't re-upload (valid ~24h on Twitter's side)
+const mediaCache = new Map();
+
+export async function postTweet(content, replyToId = null, account = 'personal', imagePath = null) {
   if (content.length > 280) {
     throw new Error(`Tweet exceeds 280 characters (${content.length}). Shorten the content.`);
   }
 
   const method = getAuthMethod();
 
-  if (method === 'official' && account === 'personal') {
+  let mediaIds = [];
+  if (imagePath) {
+    const cached = mediaCache.get(imagePath);
+    if (cached && (Date.now() - cached.at) < 12 * 60 * 60 * 1000) {
+      mediaIds = [cached.id];
+    } else {
+      const mediaId = await uploadMedia(imagePath, account);
+      mediaCache.set(imagePath, { id: mediaId, at: Date.now() });
+      mediaIds = [mediaId];
+    }
+  }
+
+  if (method === 'official' && account === 'personal' && !imagePath) {
     return officialPostTweet(content, replyToId);
   }
-  return cookiePostTweet(content, replyToId, 1, account);
+  return cookiePostTweet(content, replyToId, 1, account, mediaIds);
 }
 
 export async function postThread(tweets, replyToId = null, account = 'personal') {
@@ -595,6 +714,7 @@ export async function getTweetById(tweetId) {
 }
 
 export async function likeTweet(tweetId, account = 'personal') {
+  await rateLimitGuard(account);
   // Try v1.1 endpoint first (more stable than GraphQL queryId rotation)
   const v1Response = await fetch(`https://x.com/i/api/1.1/favorites/create.json`, {
     method: 'POST',
@@ -627,6 +747,7 @@ export async function likeTweet(tweetId, account = 'personal') {
 }
 
 export async function retweet(tweetId) {
+  await rateLimitGuard('personal');
   const body = JSON.stringify({
     variables: { tweet_id: tweetId, dark_request: false },
     queryId: QUERY_IDS.CreateRetweet

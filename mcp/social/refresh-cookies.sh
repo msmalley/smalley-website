@@ -247,6 +247,88 @@ print(json.dumps(results))
   echo ""
 fi
 
+# --- Twitter GraphQL Query ID Refresh ---
+if [ "$PLATFORM" = "all" ] || [ "$PLATFORM" = "twitter" ] || [ "$PLATFORM" = "queryids" ]; then
+  echo "Query IDs:"
+
+  TWITTER_JS="$SCRIPT_DIR/providers/twitter.js"
+  if [ -z "$AUTH_TOKEN" ]; then
+    AUTH_TOKEN=$(grep "^TWITTER_AUTH_TOKEN=" "$ENV_FILE" | cut -d= -f2)
+  fi
+  if [ -z "$CT0" ]; then
+    CT0=$(grep "^TWITTER_CSRF_TOKEN=" "$ENV_FILE" | cut -d= -f2)
+  fi
+
+  if [ -n "$AUTH_TOKEN" ] && [ -n "$CT0" ]; then
+    QUERY_IDS=$(python3 -c "
+import re, subprocess, sys
+
+auth_token = '$AUTH_TOKEN'
+csrf = '$CT0'
+cookie = f'auth_token={auth_token}; ct0={csrf}'
+
+# Fetch logged-in page to find main bundle URL
+result = subprocess.run([
+    'curl', '-sL', 'https://x.com/home',
+    '-H', f'Cookie: {cookie}',
+    '-H', 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+], capture_output=True, text=True, timeout=15)
+
+main_match = re.search(r'https://abs\.twimg\.com/responsive-web/client-web/main\.[^\"<>\s]+\.js', result.stdout)
+if not main_match:
+    print('ERROR:no_main_bundle')
+    sys.exit(0)
+
+main_url = main_match.group(0)
+
+# Fetch the main bundle
+bundle = subprocess.run([
+    'curl', '-s', main_url,
+    '-H', 'User-Agent: Mozilla/5.0'
+], capture_output=True, text=True, timeout=30)
+
+# Extract query IDs
+targets = ['CreateTweet', 'FavoriteTweet', 'CreateRetweet', 'DeleteTweet', 'SearchTimeline', 'TweetResultByRestId']
+found = {}
+for m in re.finditer(r'queryId:\"([a-zA-Z0-9_-]+)\",operationName:\"([^\"]+)\"', bundle.stdout):
+    qid, name = m.groups()
+    if name in targets:
+        found[name] = qid
+
+for name in targets:
+    qid = found.get(name, 'NOTFOUND')
+    print(f'{name}={qid}')
+" 2>/dev/null)
+
+    if echo "$QUERY_IDS" | grep -q "ERROR:"; then
+      echo "  Failed to fetch main JS bundle (login may have failed)"
+    else
+      QID_UPDATED=0
+      while IFS='=' read -r name qid; do
+        [ -z "$name" ] && continue
+        [ "$qid" = "NOTFOUND" ] && continue
+        # Update the QUERY_IDS object in twitter.js
+        OLD_LINE=$(grep "  $name:" "$TWITTER_JS" 2>/dev/null)
+        if [ -n "$OLD_LINE" ]; then
+          OLD_QID=$(echo "$OLD_LINE" | grep -oE "'[a-zA-Z0-9_-]+'")
+          if [ "'$qid'" != "$OLD_QID" ]; then
+            sed -i '' "s|  $name: '.*'|  $name: '$qid'|" "$TWITTER_JS"
+            echo "  $name: $OLD_QID → '$qid'"
+            QID_UPDATED=1
+          fi
+        fi
+      done <<< "$QUERY_IDS"
+
+      if [ "$QID_UPDATED" = "0" ]; then
+        echo "  All query IDs up to date"
+      fi
+    fi
+  else
+    echo "  Skipped (no Twitter auth tokens available)"
+  fi
+  echo ""
+fi
+
 if [ "$UPDATED" = "1" ]; then
   echo "Done. Restart Claude Code to pick up new cookies."
 fi

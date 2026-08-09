@@ -4,7 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0B0F1A">
-<style>html{background:#0B0F1A}body{opacity:0;transition:opacity .15s ease}</style>
+<style>
+html{background:#0B0F1A}body{opacity:0;transition:opacity .15s ease}
+.engine-embed-demo{margin:2rem 0;padding:2rem;background:var(--surface-2,#111525);border-radius:12px;border:1px solid var(--border,#2a2d4a)}
+.engine-embed-demo__controls{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:1.5rem}
+.engine-embed-demo__select{width:100%;padding:12px 16px;font-size:15px;border-radius:8px;border:1px solid var(--border,#2a2d4a);background:var(--surface-3,#1a1e36);color:var(--text,#f0ede8);appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238a8580' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;cursor:pointer}
+.engine-embed-demo__select:hover{border-color:var(--accent,#6c8cff)}
+.engine-embed-demo__definition{margin:0 0 1.5rem;padding:1rem 1.25rem;background:var(--surface-1,#0d1020);border-radius:8px;border:1px solid var(--border,#2a2d4a);font-size:13px;line-height:1.7;overflow-x:auto}
+.engine-embed-demo__definition code{color:var(--text-muted,#b0ada8);font-family:'JetBrains Mono',monospace}
+.engine-embed-demo__caption{margin:1rem 0 0;font-size:14px;color:var(--text-muted,#8a8580);line-height:1.6;text-align:center}
+@media(max-width:600px){.engine-embed-demo__controls{grid-template-columns:1fr}.engine-embed-demo{padding:1rem}}
+</style>
 <title>The Moddable Layer Cake — Mark Smalley</title>
 <meta name="description" content="How we decomposed a JS monolith into four layers where data flows downhill. Rules, Engine, Tools, Web. Over 1 million MCP requests per week from external AI agents.">
 <meta property="og:title" content="The Moddable Layer Cake — Mark Smalley">
@@ -80,38 +90,18 @@
 
       <h2>Frontmatter-Driven Development</h2>
 
-      <p>The most dramatic proof is how new game variants enter the system. In the old monolith, a new variant was a feature branch. In the new architecture, a new variant is a YAML file:</p>
+      <p>The most dramatic proof is how new game variants enter the system. In the old monolith, a new variant was a feature branch. In the new architecture, a new variant is a YAML file. The engine reads it, resolves the topology, applies the plugin rules, evaluates the end condition. The tools layer exposes it as a playable game via MCP. The web layer renders it. Zero code written for variant-specific behaviour.</p>
 
-      <pre><code class="language-yaml">id: reversi
-name: Reversi
-category: Classic
-description: Place discs to outflank your opponent. Captured discs flip to your colour.
-board:
-  type: grid
-  cols: 8
-  rows: 8
-  style: checkerless
-pieces:
-  white: { symbol: "○", initial: [[3,3],[4,4]] }
-  black: { symbol: "●", initial: [[3,4],[4,3]] }
-rules:
-  placement: outflank
-  capture: flip
-  endCondition: noMoves
-  scoring: count
-tags: [abstract, territory, beginner-friendly]</code></pre>
-
-      <p>That file is the entire creative contribution. The engine reads it, resolves the placement logic, applies the capture rules, evaluates the end condition. The tools layer exposes it as a playable game via MCP. The web layer renders it. Zero code written for variant-specific behaviour.</p>
-
-      <p>Here it is, running live. Pick any game family and variant from the selectors:</p>
+      <p>Select any game family and variant below. The frontmatter shown is the real engine definition for that variant, fetched live from the Tools API. The board beneath it is that definition rendered into a playable game:</p>
 
       <div class="engine-embed-demo">
         <div class="engine-embed-demo__controls">
           <select id="embed-family" class="engine-embed-demo__select"></select>
           <select id="embed-variant" class="engine-embed-demo__select"></select>
         </div>
+        <pre class="engine-embed-demo__definition"><code id="definition-display"></code></pre>
         <div id="embed-container"></div>
-        <p class="engine-embed-demo__caption">This board is served by the Engine layer. The variant definition comes from Rules. The embed is consumed here by the Web layer. All from one frontmatter file.</p>
+        <p class="engine-embed-demo__caption">That is the entire creative contribution. One frontmatter file produces a playable game with AI opponent, legal move validation, and board rendering. 133 variants exist across 6 families. None required variant-specific code.</p>
       </div>
 
       <script type="module">
@@ -126,15 +116,62 @@ tags: [abstract, territory, beginner-friendly]</code></pre>
       const familyEl = document.getElementById('embed-family');
       const variantEl = document.getElementById('embed-variant');
       const container = document.getElementById('embed-container');
+      const defEl = document.getElementById('definition-display');
 
       let embed = null;
 
-      function createEmbed() {
+      function update() {
         embed = tools.embed.play(container, {
-          params: { game: familyEl.value, variant: variantEl.value, embed: '1' },
+          params: { game: familyEl.value, variant: variantEl.value },
           title: 'Moddable Engine: play any variant',
           height: 560,
         });
+        loadDefinition();
+      }
+
+      async function loadDefinition() {
+        if (!defEl) return;
+        try {
+          const result = await tools.play.getDefinition({ family: familyEl.value, variant: variantEl.value });
+          const def = (result.result || result).definition;
+          if (!def) { defEl.textContent = '# No definition available'; return; }
+          const clean = { ...def };
+          delete clean.meta;
+          if (clean.render?.ops) delete clean.render.ops;
+          if (clean.plugins) {
+            const fam = Object.keys(clean.plugins)[0];
+            if (fam && clean.plugins[fam]?.openingBook) delete clean.plugins[fam].openingBook;
+          }
+          defEl.textContent = '---\n' + toYaml(clean) + '---';
+        } catch (e) {
+          defEl.textContent = '# Failed to load definition';
+        }
+      }
+
+      function toYaml(obj, indent = 0) {
+        const pad = '  '.repeat(indent);
+        let out = '';
+        for (const [k, v] of Object.entries(obj)) {
+          if (v === null || v === undefined) continue;
+          if (Array.isArray(v)) {
+            if (v.length === 0) continue;
+            if (v.every(x => typeof x !== 'object')) {
+              out += pad + k + ': [' + v.join(', ') + ']\n';
+            } else {
+              out += pad + k + ':\n';
+              for (const item of v) {
+                out += pad + '  - ' + (typeof item === 'object' ? JSON.stringify(item) : item) + '\n';
+              }
+            }
+          } else if (typeof v === 'object') {
+            out += pad + k + ':\n' + toYaml(v, indent + 1);
+          } else if (typeof v === 'string' && (v.includes('/') || v.includes(' '))) {
+            out += pad + k + ': "' + v + '"\n';
+          } else {
+            out += pad + k + ': ' + v + '\n';
+          }
+        }
+        return out;
       }
 
       async function loadFamilies() {
@@ -162,11 +199,11 @@ tags: [abstract, territory, beginner-friendly]</code></pre>
           if (v.slug === 'standard') opt.selected = true;
           variantEl.appendChild(opt);
         });
-        createEmbed();
+        update();
       }
 
       familyEl.addEventListener('change', loadVariants);
-      variantEl.addEventListener('change', createEmbed);
+      variantEl.addEventListener('change', update);
       loadFamilies();
       </script>
 

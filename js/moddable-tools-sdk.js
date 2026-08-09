@@ -82,6 +82,8 @@ class HexNamespace extends Namespace {
 
 class PlayNamespace extends Namespace {
   listFamilies() { return this.call('play_list_families') }
+  listVariants(args) { return this.call('play_list_variants', args) }
+  getDefinition(args) { return this.call('play_get_definition', args) }
   createGame(args) { return this.call('play_create_game', args) }
   getMoves(args) { return this.call('play_get_moves', args) }
   applyMove(args) { return this.call('play_apply_move', args) }

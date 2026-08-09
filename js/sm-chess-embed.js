@@ -11,16 +11,6 @@
     { key: 'racingKings', label: 'Racing Kings', desc: 'Race your king to rank 8 — no checks allowed' }
   ];
 
-  var THEMES = [
-    { key: 'transparent', label: 'Transparent' },
-    { key: 'cosmic', label: 'Cosmic Dark' },
-    { key: 'classic', label: 'Classic' },
-    { key: 'wood', label: 'Wood' },
-    { key: 'marble', label: 'Marble' },
-    { key: 'neon', label: 'Neon' },
-    { key: 'minimal', label: 'Minimal' }
-  ];
-
   var DIFFICULTIES = [
     { key: 'beginner', label: 'Beginner' },
     { key: 'easy', label: 'Easy' },
@@ -30,8 +20,8 @@
   ];
 
   var BASE = location.hostname === 'localhost'
-    ? '/MODDABLE/moddable-chess/play/'
-    : 'https://chess.moddable.games/play/';
+    ? '/MODDABLE/moddable-engine/play/'
+    : 'https://engine.moddable.games/play/';
 
   function getBG() {
     return document.documentElement.getAttribute('data-theme') === 'light' ? 'F8F9FC' : '0B0F1A';
@@ -39,7 +29,6 @@
 
   containers.forEach(function(container) {
     var currentIdx = 0;
-    var currentThemeIdx = 0;
     var iframe = null;
 
     var controls = document.createElement('div');
@@ -58,19 +47,6 @@
     });
     controls.appendChild(select);
 
-    var themeSelect = document.createElement('select');
-    for (var i = 0; i < THEMES.length; i++) {
-      var opt = document.createElement('option');
-      opt.value = i;
-      opt.textContent = THEMES[i].label;
-      themeSelect.appendChild(opt);
-    }
-    themeSelect.addEventListener('change', function() {
-      currentThemeIdx = parseInt(this.value, 10);
-      switchTheme();
-    });
-    controls.appendChild(themeSelect);
-
     var diffSelect = document.createElement('select');
     for (var i = 0; i < DIFFICULTIES.length; i++) {
       var opt = document.createElement('option');
@@ -82,7 +58,7 @@
     diffSelect.addEventListener('change', function() {
       var d = DIFFICULTIES[parseInt(this.value, 10)];
       if (iframe && iframe.contentWindow) {
-        iframe.contentWindow.postMessage({ type: 'chess:setDifficulty', difficulty: d.key }, '*');
+        iframe.contentWindow.postMessage({ type: 'game:setDifficulty', difficulty: d.key }, '*');
       }
     });
     controls.appendChild(diffSelect);
@@ -92,7 +68,7 @@
     newGameBtn.className = 'demo-btn';
     newGameBtn.addEventListener('click', function() {
       if (iframe && iframe.contentWindow) {
-        iframe.contentWindow.postMessage({ type: 'chess:newGame' }, '*');
+        iframe.contentWindow.postMessage({ type: 'game:newGame' }, '*');
       }
     });
     controls.appendChild(newGameBtn);
@@ -108,12 +84,12 @@
 
     function buildIframe() {
       var v = VARIANTS[currentIdx];
-      var t = THEMES[currentThemeIdx];
       iframe = document.createElement('iframe');
       var bg = getBG();
-      iframe.src = BASE + '?variant=' + v.key + '&embed=1&boardonly=1&mode=solo&theme=' + t.key + '&bg=' + bg + '&radius=8px';
+      iframe.src = BASE + '?family=chess&variant=' + v.key + '&embed=1';
       iframe.setAttribute('scrolling', 'no');
       iframe.setAttribute('loading', 'lazy');
+      iframe.setAttribute('allowtransparency', 'true');
       iframe.style.aspectRatio = '1 / 1';
       iframe.style.width = '100%';
       iframe.style.border = 'none';
@@ -128,26 +104,24 @@
       var v = VARIANTS[currentIdx];
       descEl.textContent = v.desc;
       if (iframe && iframe.contentWindow) {
-        iframe.contentWindow.postMessage({ type: 'chess:setVariant', variant: v.key }, '*');
-      }
-    }
-
-    function switchTheme() {
-      var t = THEMES[currentThemeIdx];
-      if (iframe && iframe.contentWindow) {
-        iframe.contentWindow.postMessage({ type: 'chess:setTheme', theme: t.key }, '*');
+        iframe.contentWindow.postMessage({ type: 'game:setVariant', variant: v.key }, '*');
       }
     }
 
     buildIframe();
 
+    window.addEventListener('message', function(e) {
+      if (!e.data || e.source !== (iframe && iframe.contentWindow)) return;
+      if (e.data.type === 'game:resize' && e.data.height) {
+        iframe.style.height = e.data.height + 'px';
+        iframe.style.aspectRatio = 'auto';
+      }
+    });
+
     new MutationObserver(function() {
       var bg = getBG();
       if (iframe) {
         iframe.style.background = '#' + bg;
-        if (iframe.contentWindow) {
-          iframe.contentWindow.postMessage({ type: 'chess:setBg', bg: bg }, '*');
-        }
       }
     }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
   });

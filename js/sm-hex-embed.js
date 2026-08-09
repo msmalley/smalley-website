@@ -10,8 +10,8 @@
   ];
 
   var BASE = location.hostname === 'localhost'
-    ? '/MODDABLE/moddable-hexmaps/generate/'
-    : 'https://hex.moddable.games/generate/';
+    ? '/MODDABLE/moddable-engine/play/'
+    : 'https://engine.moddable.games/play/';
 
   function getBG() {
     return document.documentElement.getAttribute('data-theme') === 'light' ? 'F8F9FC' : '0B0F1A';
@@ -140,9 +140,9 @@
       if (existing) existing.remove();
 
       var bg = getBG();
-      var src = BASE + '?game=' + game.key + '&boardonly=1&mode=edit&bg=' + bg + '&style=' + style + '&random=1';
+      var src = BASE + '?embed=1&game=' + game.key + '&style=' + style + '&random=1&bg=' + bg;
       if (game.layouts) {
-        src += '&layout=' + (currentLayout || game.defaultLayout);
+        src += '&players=' + parseInt(currentLayout || game.defaultLayout);
       } else {
         src += '&size=' + (currentSize || game.defaultSize);
       }
@@ -151,6 +151,7 @@
       iframe.src = src;
       iframe.setAttribute('scrolling', 'no');
       iframe.setAttribute('loading', 'lazy');
+      iframe.setAttribute('allowtransparency', 'true');
       iframe.className = 'hex-embed';
       iframe.style.aspectRatio = '1 / 1';
       iframe.style.width = '100%';

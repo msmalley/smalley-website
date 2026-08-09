@@ -1,5 +1,20 @@
 [
   {
+    "slug": "the-moddable-layer-cake",
+    "title": "The Moddable Layer Cake",
+    "date": "2026-08-07",
+    "readingTime": "10 min",
+    "tags": [
+      "Architecture",
+      "JavaScript",
+      "MCP",
+      "Plugin architecture",
+      "AI/LLM"
+    ],
+    "excerpt": "How we decomposed a JS monolith into four layers where data flows downhill. Rules define games. Engine resolves them. Tools monetises them. Web renders them. Over 1 million MCP requests per week prove the architecture works.",
+    "draft": true
+  },
+  {
     "slug": "building-the-machine-that-builds-your-career",
     "title": "Building the Machine That Builds Your Career",
     "date": "2026-07-06",

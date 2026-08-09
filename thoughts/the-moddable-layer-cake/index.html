@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0B0F1A">
+<style>html{background:#0B0F1A}body{opacity:0;transition:opacity .15s ease}</style>
+<title>The Moddable Layer Cake — Mark Smalley</title>
+<meta name="description" content="How we decomposed a JS monolith into four layers where data flows downhill. Rules, Engine, Tools, Web. Over 1 million MCP requests per week from external AI agents.">
+<meta property="og:title" content="The Moddable Layer Cake — Mark Smalley">
+<meta property="og:description" content="How we decomposed a JS monolith into four layers where data flows downhill. Over 1M MCP requests per week from AI agents prove the architecture works.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://smalley.my/thoughts/the-moddable-layer-cake/">
+<meta property="og:site_name" content="Mark Smalley">
+<meta property="og:image" content="https://smalley.my/img/og/thoughts-layer-cake.jpg?v=1.0.35">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Moddable Layer Cake — Mark Smalley">
+<meta name="twitter:description" content="How we decomposed a JS monolith into four layers where data flows downhill. Over 1M MCP requests per week from AI agents prove the architecture works.">
+<meta name="twitter:image" content="https://smalley.my/img/og/thoughts-layer-cake.jpg?v=1.0.35">
+<link rel="canonical" href="https://smalley.my/thoughts/the-moddable-layer-cake/">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../../img/apple-touch-icon.png">
+<link rel="stylesheet" href="../../css/_sm.css?v=1.0.35">
+<link rel="stylesheet" href="../../css/thoughts.css?v=1.0.35">
+<link rel="stylesheet" href="../../css/pages.css?v=1.0.35">
+</head>
+<body>
+<div id="nav-root"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Thoughts</div>
+    <h1>The Moddable Layer Cake</h1>
+  </div>
+</section>
+
+<section class="page-content">
+  <div class="container">
+    <div class="article-content">
+      <div class="article-date">7 August 2026 · 10 min read</div>
+
+      <p><a href="https://moddable.games" target="_blank" rel="noopener">Moddable.Games</a> is a tabletop gaming platform I've been building for the past year. The premise is simple: board games should be moddable. Rules should be remixable. Variants should be first-class citizens, not hacks bolted onto a rigid system. We publish open-source engines that let anyone create, play, and share game variants across chess, draughts, go, reversi, shogi, xiangqi, hex strategy games, and tabletop RPGs.</p>
+
+      <p>Several weeks ago I went silent on social media and disappeared into what became a 1,027-commit sprint. The goal was to replace our client-rendered JavaScript monolith with something architecturally correct. Something where data flows in one direction, each layer has one job, and the rendering layer is so thin that you can delete it and rebuild from scratch in days without losing anything.</p>
+
+      <p>This post explains what we built, why, and how it's now serving over 1 million MCP tool requests per week to external AI agents who discovered the system autonomously.</p>
+
+      <h2>What is Moddable.Games</h2>
+
+      <p>At its core, Moddable is a collection of game engines, a rules library, and an AI-accessible tools layer. We currently have 45 published games with 333 playable variants, 458 oracle tables for tabletop RPGs, and 3,385 searchable entities. Six game families are fully playable online with AI opponents: chess (100 variants), draughts (13), go (9), shogi (5), xiangqi (3), and reversi (3).</p>
+
+      <p>The key insight is that games are data, not code. A chess variant is a set of rules declared in structured frontmatter. The engine resolves those rules into legal moves, win conditions, and board states. No variant-specific code required. 99 of 100 chess variants in our system have zero JavaScript. They are pure declarations that the engine interprets.</p>
+
+      <p>Everything is open-source except the services layer. Rules are CC BY-SA. Engines are MIT. The philosophy is: the community owns the content and the logic. We own the orchestration that makes it commercially useful at scale.</p>
+
+      <h2>The Monolith Problem</h2>
+
+      <p>The <a href="../16-days-one-ecosystem/">original 16-day sprint</a> that launched Moddable produced something that worked. A chess engine, a hexmap framework, six playable games, all deployed to production. What I didn't write about at the time was the architectural smell it left behind.</p>
+
+      <p>Content was trapped in code. Variant descriptions lived inside JavaScript objects alongside move-generation logic. Game metadata sat in the same files as rendering configuration. The rules engine knew about the web layer. The web layer knew about the rules. Every new variant required understanding the full stack, because knowledge was smeared across every layer rather than concentrated in one.</p>
+
+      <p>This is the default state of most JavaScript projects. You start clean, you ship fast, then content accumulates inside code because there's no external structure to receive it. Adding a new game meant opening a feature branch, touching files across four directories, and hoping you didn't break something in a layer you didn't intend to modify.</p>
+
+      <p>Worse, only a browser could consume the content. When AI agents wanted to discover our games, they had to parse HTML. When Discord bots wanted game descriptions, they had to scrape our own website. The monolith was a ceiling on how many consumers could access our data.</p>
+
+      <h2>Data Flows Downhill</h2>
+
+      <p>The reframing that unlocked the sprint: if your content is structured data rather than code, then your rendering layer contains no knowledge. It's a projection. You can smash it and grind a new one without losing anything, because everything you care about lives beneath it.</p>
+
+      <p>The architecture that emerged has four layers. Each has exactly one job. Each depends only on the layer below it. No layer reaches sideways or upward.</p>
+
+      <ul>
+        <li><strong>Rules</strong> (<a href="https://rules.moddable.games" target="_blank" rel="noopener">rules.moddable.games</a>). Pure structured content. 45 games, 333 variants, 458 oracle tables, 3,385 entities. Zero code. Markdown and YAML frontmatter. A full machine-readable API with discovery index, catalogue, and per-game endpoints. LLM-ready via <code>llms.txt</code> and MCP discovery via <code>.well-known/mcp.json</code>.</li>
+        <li><strong>Engine</strong> (<a href="https://engine.moddable.games" target="_blank" rel="noopener">engine.moddable.games</a>). Reads rule definitions and resolves them into playable game states with as little code as possible. 6 families, 1,511 tests, plugin architecture. A new variant is a frontmatter file, not a feature branch.</li>
+        <li><strong>Tools</strong> (<a href="https://tools.moddable.games" target="_blank" rel="noopener">tools.moddable.games</a>). Private. 83 MCP tools, REST API, JavaScript SDK, embeddable widgets. Wraps engine into monetisable services: puzzle generation, AI opponents, board rendering, oracle composition, combat simulation. This is the value layer.</li>
+        <li><strong>Web</strong> (<a href="https://moddable.games" target="_blank" rel="noopener">moddable.games</a>). A static site generator that consumes tools via iframes and API calls. All content lives in JSON data files and markdown. Zero game logic. Disposable by design.</li>
+      </ul>
+
+      <p>Each layer is a complete, independently deployable system with its own subdomain. The engine doesn't need the web to function. The tools don't need the web to be useful. An AI agent can play a full game of chess through MCP without a browser ever being involved.</p>
+
+      <h2>Frontmatter-Driven Development</h2>
+
+      <p>The most dramatic proof is how new game variants enter the system. In the old monolith, a new variant was a feature branch. In the new architecture, a new variant is a YAML file:</p>
+
+      <pre><code class="language-yaml">id: reversi
+name: Reversi
+category: Classic
+description: Place discs to outflank your opponent. Captured discs flip to your colour.
+board:
+  type: grid
+  cols: 8
+  rows: 8
+  style: checkerless
+pieces:
+  white: { symbol: "○", initial: [[3,3],[4,4]] }
+  black: { symbol: "●", initial: [[3,4],[4,3]] }
+rules:
+  placement: outflank
+  capture: flip
+  endCondition: noMoves
+  scoring: count
+tags: [abstract, territory, beginner-friendly]</code></pre>
+
+      <p>That file is the entire creative contribution. The engine reads it, resolves the placement logic, applies the capture rules, evaluates the end condition. The tools layer exposes it as a playable game via MCP. The web layer renders it. Zero code written for variant-specific behaviour.</p>
+
+      <p>Here it is, running live. Pick any game family and variant from the selectors:</p>
+
+      <div class="engine-embed-demo">
+        <div class="engine-embed-demo__controls">
+          <select id="embed-family" class="engine-embed-demo__select"></select>
+          <select id="embed-variant" class="engine-embed-demo__select"></select>
+        </div>
+        <div id="embed-container"></div>
+        <p class="engine-embed-demo__caption">This board is served by the Engine layer. The variant definition comes from Rules. The embed is consumed here by the Web layer. All from one frontmatter file.</p>
+      </div>
+
+      <script type="module">
+      import { ModdableTools } from '../../js/moddable-tools-sdk.js';
+
+      const engineBase = location.hostname === 'localhost'
+        ? location.origin + '/MODDABLE/moddable-engine'
+        : 'https://engine.moddable.games';
+
+      const tools = new ModdableTools({ base: 'https://tools.moddable.games', engineBase });
+
+      const familyEl = document.getElementById('embed-family');
+      const variantEl = document.getElementById('embed-variant');
+      const container = document.getElementById('embed-container');
+
+      let embed = null;
+
+      function createEmbed() {
+        embed = tools.embed.play(container, {
+          params: { game: familyEl.value, variant: variantEl.value, embed: '1' },
+          title: 'Moddable Engine: play any variant',
+          height: 560,
+        });
+      }
+
+      async function loadFamilies() {
+        const result = await tools.call('play_list_families');
+        const families = result.families || [];
+        familyEl.innerHTML = '';
+        families.forEach(f => {
+          const opt = document.createElement('option');
+          opt.value = f.name;
+          opt.textContent = f.name.charAt(0).toUpperCase() + f.name.slice(1);
+          if (f.name === 'reversi') opt.selected = true;
+          familyEl.appendChild(opt);
+        });
+        await loadVariants();
+      }
+
+      async function loadVariants() {
+        const result = await tools.call('play_list_variants', { family: familyEl.value });
+        const variants = result.variants || [];
+        variantEl.innerHTML = '';
+        variants.forEach(v => {
+          const opt = document.createElement('option');
+          opt.value = v.slug;
+          opt.textContent = v.slug.replace(/[-_]/g, ' ').replace(/^./, s => s.toUpperCase());
+          if (v.slug === 'standard') opt.selected = true;
+          variantEl.appendChild(opt);
+        });
+        createEmbed();
+      }
+
+      familyEl.addEventListener('change', loadVariants);
+      variantEl.addEventListener('change', createEmbed);
+      loadFamilies();
+      </script>
+
+      <h2>1 Million Requests Per Week</h2>
+
+      <p>The tools layer serves over 1 million MCP requests per week from external AI agents. These are not our own bots. They are third-party agents (Claude, GPT, and others) that discovered our tools through the <code>.well-known/mcp.json</code> endpoint and started making calls autonomously. They generate chess puzzles, roll oracle tables, look up game rules, render board SVGs, and play full games against our AI opponents.</p>
+
+      <p>This happened without marketing. No launch post. No Product Hunt campaign. AI agents found the system because we published machine-readable discovery endpoints and the tools were genuinely useful. The architecture made it possible: because the tools layer is a standalone service with a clean API contract, any consumer (browser, bot, agent, CLI) can interact with it identically.</p>
+
+      <p>250,000 of those weekly requests are MCP tool calls specifically. The rest are REST API calls and embed interactions. The number has grown every week since we deployed the discovery endpoints, with no plateau in sight.</p>
+
+      <h2>The Private Layer as Business Model</h2>
+
+      <p>This architecture has an elegant commercial property. The bottom two layers (rules and engine) are fully open-source. Anyone can read the variant definitions. Anyone can run the engine locally. Anyone can fork, extend, contribute back.</p>
+
+      <p>The tools layer is where commercial value concentrates. 83 MCP tools across 9 namespaces, a JavaScript SDK, embeddable widgets, REST API. The orchestration that manages game state across sessions, runs AI opponents at scale, renders boards to PNG via WASM. You can see everything we build in the open layers. You just cannot run our infrastructure.</p>
+
+      <p>This only works because the layers are genuinely independent. If the engine needed the tools layer to function, open-sourcing the engine would be theatre. Because each layer is complete in isolation, the open source is genuine and the commercial layer earns its value by providing services that individuals don't need locally.</p>
+
+      <h2>The Sprint in Numbers</h2>
+
+      <p>Several weeks of focused work. 1,027 commits across the four repositories. The old JS monolith retired entirely. The result:</p>
+
+      <ul>
+        <li>6 playable game families with AI opponents</li>
+        <li>45 games, 333 variants documented in structured data</li>
+        <li>1,511 engine tests (up from approximately 200)</li>
+        <li>83 MCP tools across 9 namespaces</li>
+        <li>3 new embeddable widgets (Oracle/RPG, Nukes combat, Talisman)</li>
+        <li>Full rules API with 2,445 discoverable endpoints</li>
+        <li>Over 1 million tool requests per week from external agents</li>
+        <li>The web layer rebuilt from scratch twice during the sprint, proving it's genuinely disposable</li>
+      </ul>
+
+      <p>That last point matters most. The web layer was rebuilt twice. Not refactored. Deleted and recreated. The first version taught me what the rendering patterns should be. The second implemented them cleanly. Knowledge flowed downward: the insights from v1 became data structures and engine capabilities, not frontend code. When v1 was deleted, all its lessons had already migrated to layers that persisted.</p>
+
+      <h2>Why the Cake Works</h2>
+
+      <p>Each layer in this stack is replaceable in isolation. That's the test. If swapping one layer requires changes to any other layer, the architecture has failed. We proved this during the sprint: the web layer was deleted and rebuilt from scratch without touching the engine, tools, or rules. Nothing broke. Nothing was lost. The knowledge lives in the layers below, not in the rendering.</p>
+
+      <p>This connects to everything else I've written about here. <a href="../the-case-for-vanilla-js/">The Case for Vanilla JS</a> argues that frameworks are voluntary lock-in. The layer cake elevates that argument: when the entire rendering layer is disposable, your framework choice carries zero long-term risk. <a href="../protocol-design-lessons/">Protocol Design Lessons</a> argues for pushing complexity downward. The layer cake is that principle applied to an entire product architecture, not just a single protocol. <a href="../16-days-one-ecosystem/">16 Days, One Ecosystem</a> was the sprint that produced the monolith. This sprint decomposed it correctly.</p>
+
+      <p>The further up the stack, the more disposable it should be. Rules will outlive every engine built on top of them. Engines will outlive every tools layer that wraps them. Tools will outlive every frontend that renders them.</p>
+
+      <h2>What the Cake Enables</h2>
+
+      <p>Contributing a game no longer requires engineering skill. A game designer writes a YAML file. A community member edits structured data. That contribution automatically propagates upward: playable in the engine, callable via MCP, rendered on the web. No layer touched. No deployment needed beyond rules.</p>
+
+      <p>The 1 million weekly requests from external AI agents prove the architecture creates value beyond what any single frontend could deliver. Browsers are one consumer. AI agents are another. Discord bots, mobile apps, voice assistants, embedded hardware: every new consumer benefits from the same rules, the same engine, the same tools. None of them need the web layer to exist.</p>
+
+      <p>Four layers, one direction, no shortcuts upward. That's the cake. It took 1,027 commits to bake. It will take years to outgrow.</p>
+
+      <div class="article-tags">
+        <a class="pill" href="../../explore/?tag=Architecture">Architecture</a>
+        <a class="pill" href="../../explore/?tag=JavaScript">JavaScript</a>
+        <a class="pill" href="../../explore/?tag=MCP">MCP</a>
+        <a class="pill" href="../../explore/?tag=Plugin architecture">Plugin architecture</a>
+        <a class="pill" href="../../explore/?tag=AI/LLM">AI/LLM</a>
+      </div>
+
+      <nav class="case-nav">
+        <a href="../building-the-machine-that-builds-your-career/">← Building the Machine</a>
+        <a href="../16-days-one-ecosystem/">16 Days, One Ecosystem →</a>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<div id="footer-root"></div>
+<script src="../../js/sm-loader.js?v=1.0.35"></script>
+</body>
+</html>

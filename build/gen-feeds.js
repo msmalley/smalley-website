@@ -15,6 +15,7 @@ function buildRSS() {
   var items = [];
 
   for (const t of thoughts) {
+    if (t.draft) continue;
     items.push({
       title: t.title,
       link: `${DOMAIN}/thoughts/${t.slug}/`,

@@ -261,6 +261,8 @@ def generate_all():
          'Four Protocols, Nine Years, One Design Philosophy', "From Everstore's 38-byte database to Oviato's passkey wallets"),
         ('thoughts-job-engine.png', 'gold', 'Thoughts',
          'Building the Machine That Builds Your Career', 'A real-time engineering journal from inside the paradox'),
+        ('thoughts-layer-cake.png', 'violet', 'Thoughts',
+         'The Moddable Layer Cake', 'Four layers, one direction, 1M requests per week'),
         ('opensource-everstore.png', 'teal', 'Neuroware · 2016',
          'Everstore Protocol', 'Structured database functionality on UTXO blockchains (pre-EVM)'),
     ]

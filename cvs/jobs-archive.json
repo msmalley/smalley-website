@@ -7245,7 +7245,7 @@
     {
       "id": "malt-senior-engineering-manager-complian-mqifuvww",
       "added": "2026-06-17",
-      "status": "closed",
+      "status": "declined",
       "company": "Malt",
       "role": "Senior Engineering Manager - Compliance",
       "location": "London, England, United Kingdom",
@@ -7307,7 +7307,9 @@
         "cto": 57,
         "regtech": 62,
         "devrel": 49
-      }
+      },
+      "declined_at": "2026-07-23",
+      "declined_reason": "Profile does not fully align with core requirements"
     },
     {
       "id": "share-founding-engineer-mqifv0dp",

@@ -16,7 +16,7 @@
       "instagram": {
         "audience": "visual/creative, game devs, broader reach",
         "tone": "visual-first, behind-the-scenes, product showcase",
-        "status": "planned \u2014 awaiting API/MCP integration"
+        "status": "planned — awaiting API/MCP integration"
       }
     },
     "content_triggers": [
@@ -28,7 +28,7 @@
       "Meaningful technical achievement across any project",
       "CV update or new portfolio case study added"
     ],
-    "workflow": "Claude appends posts (status: draft) during sessions when content triggers fire. Mark reviews and approves before posting. Posts track their full lifecycle: draft \u2192 ready \u2192 posted (with URL, date, and future metrics).",
+    "workflow": "Claude appends posts (status: draft) during sessions when content triggers fire. Mark reviews and approves before posting. Posts track their full lifecycle: draft → ready → posted (with URL, date, and future metrics).",
     "post_types": {
       "post": "Original top-level post or thread",
       "reply": "Reply to an existing post. Uses parent field to resolve tweet ID. Parent can be a pipeline post ID (resolved to that post's URL/tweet ID) or a raw tweet ID for external tweets."
@@ -132,7 +132,7 @@
           {
             "author": "Mark Smalley",
             "subtitle": "Engineering Leader | AI Platforms, Digital Assets, Developer Tools",
-            "text": "Touch\u00e9 \u2014 who do you think is replying right now?",
+            "text": "Touché — who do you think is replying right now?",
             "created": 1781783837869,
             "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473013369512411136%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473343078305792000%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473013369512411136%2Curn%3Ali%3Aactivity%3A7473002063375990784%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287473343078305792000%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
           },
@@ -153,7 +153,7 @@
           {
             "author": "Harinder Singh",
             "subtitle": "Growth/GTM Lead | I build and deploy monetizable GTM & funnel systems | Founder, MIMR Growth Lab",
-            "text": "Put a chatbot on your CV bro \ud83d\ude02 I can show you how I do mine if you wanna see ",
+            "text": "Put a chatbot on your CV bro 😂 I can show you how I do mine if you wanna see ",
             "created": 1781705229167,
             "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473013369512411136%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473013369512411136%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
           },
@@ -167,7 +167,7 @@
           {
             "author": "Mark Smalley",
             "subtitle": "Engineering Leader | AI Platforms, Digital Assets, Developer Tools",
-            "text": "One for chess variants and one for hex-based strategy. Have a look: https://moddable.games/engines/ \u2014 the architecture ended up being more interesting than the games themselves and both have interesting roadmaps ahead of them.",
+            "text": "One for chess variants and one for hex-based strategy. Have a look: https://moddable.games/engines/ — the architecture ended up being more interesting than the games themselves and both have interesting roadmaps ahead of them.",
             "created": 1781935030812,
             "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473254607591374849%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473977227475488768%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473254607591374849%2Curn%3Ali%3Aactivity%3A7473002063375990784%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287473977227475488768%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
           },
@@ -181,7 +181,7 @@
           {
             "author": "Daniel Yap",
             "subtitle": "Founder and COO - ProxifAI",
-            "text": "Mark Smalley\u00a0Kiera and Kyra (did I get that right) must be very grown up now. ",
+            "text": "Mark Smalley Kiera and Kyra (did I get that right) must be very grown up now. ",
             "created": 1781785463880,
             "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473009376979759105%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473349898289971200%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473009376979759105%2Curn%3Ali%3Aactivity%3A7473002063375990784%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287473349898289971200%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
           },
@@ -196,7 +196,7 @@
         "last_checked": "2026-06-28T08:21:33.329Z"
       },
       "pending_replies": [],
-      "notes": "First post after long silence. Combines comeback with MCP meta-demonstration. No ask, no role signal \u2014 just presence and proof.",
+      "notes": "First post after long silence. Combines comeback with MCP meta-demonstration. No ask, no role signal — just presence and proof.",
       "metrics_linkedin": {
         "impressions": 776,
         "likes": 21,
@@ -211,7 +211,7 @@
           {
             "author": "Mark Smalley",
             "subtitle": "Engineering Leader | AI Platforms, Digital Assets, Developer Tools",
-            "text": "Touch\u00e9 \u2014 who do you think is replying right now?",
+            "text": "Touché — who do you think is replying right now?",
             "created": 1781783837869,
             "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473013369512411136%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473343078305792000%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473013369512411136%2Curn%3Ali%3Aactivity%3A7473002063375990784%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287473343078305792000%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
           },
@@ -232,7 +232,7 @@
           {
             "author": "Harinder Singh",
             "subtitle": "Growth/GTM Lead | I build and deploy monetizable GTM & funnel systems | Founder, MIMR Growth Lab",
-            "text": "Put a chatbot on your CV bro \ud83d\ude02 I can show you how I do mine if you wanna see ",
+            "text": "Put a chatbot on your CV bro 😂 I can show you how I do mine if you wanna see ",
             "created": 1781705229167,
             "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473013369512411136%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473013369512411136%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
           },
@@ -246,7 +246,7 @@
           {
             "author": "Mark Smalley",
             "subtitle": "Engineering Leader | AI Platforms, Digital Assets, Developer Tools",
-            "text": "One for chess variants and one for hex-based strategy. Have a look: https://moddable.games/engines/ \u2014 the architecture ended up being more interesting than the games themselves and both have interesting roadmaps ahead of them.",
+            "text": "One for chess variants and one for hex-based strategy. Have a look: https://moddable.games/engines/ — the architecture ended up being more interesting than the games themselves and both have interesting roadmaps ahead of them.",
             "created": 1781935030812,
             "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473254607591374849%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473977227475488768%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473254607591374849%2Curn%3Ali%3Aactivity%3A7473002063375990784%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287473977227475488768%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
           },
@@ -260,7 +260,7 @@
           {
             "author": "Daniel Yap",
             "subtitle": "Founder and COO - ProxifAI",
-            "text": "Mark Smalley\u00a0Kiera and Kyra (did I get that right) must be very grown up now. ",
+            "text": "Mark Smalley Kiera and Kyra (did I get that right) must be very grown up now. ",
             "created": 1781785463880,
             "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473009376979759105%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473349898289971200%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473009376979759105%2Curn%3Ali%3Aactivity%3A7473002063375990784%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287473349898289971200%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
           },
@@ -280,11 +280,11 @@
           },
           {
             "author": "Steven Kearns",
-            "occupation": "Retired - playing - having fun - I might be building something.... you will never guess what! Every day I\u2019m Vibe Coding.",
+            "occupation": "Retired - playing - having fun - I might be building something.... you will never guess what! Every day I’m Vibe Coding.",
             "type": "LIKE"
           },
           {
-            "author": "Mat\u00edas Cascallares",
+            "author": "Matías Cascallares",
             "occupation": "Setting your data in motion",
             "type": "LIKE"
           },
@@ -335,7 +335,7 @@
           },
           {
             "author": "Sumanth Krishna",
-            "occupation": "AI for TA @ Deel | Top 10 Mentors Asia 2024 / Top 1% @ ADPList \ud83c\udfc6 | SaaS \ud83d\udd25",
+            "occupation": "AI for TA @ Deel | Top 10 Mentors Asia 2024 / Top 1% @ ADPList 🏆 | SaaS 🔥",
             "type": "LIKE"
           },
           {
@@ -390,7 +390,7 @@
       "platforms": [
         "twitter"
       ],
-      "content": "535 commits. 16 days. Two game engines, twenty games, 16 AI-callable tools, Consumer SDKs, and a documentation site. All shipped to production.\n\nHow architecture decisions made that possible. \ud83e\uddf5\n\n2/ The chess engine plays 70 variants. Every variant is a single plugin file. The hex framework generates seeded procedural maps \u2014 same seed, same map, every time. Both ship Consumer SDKs. Dungeon Chess runs entirely on the chess engine's APIs. Zero engine forks.\n\n3/ The same pure functions that power the browser games power 16 MCP tools on a Cloudflare Worker. Any AI agent connects with one command. No translation layer. No separate API. The embeddable architecture made them AI-callable for free.\n\n4/ 16 days to build. 14 more to make it professional. Every correction becomes a rule. Every rule gets encoded into the environment. That environment now governs every project. The content pipeline that sent this post runs on the same infrastructure.\n\n5/ Architecture decisions compound. The system that makes every subsequent build faster is the actual product worth talking about ...\n\nhttps://smalley.my/thoughts/16-days-one-ecosystem/",
+      "content": "535 commits. 16 days. Two game engines, twenty games, 16 AI-callable tools, Consumer SDKs, and a documentation site. All shipped to production.\n\nHow architecture decisions made that possible. 🧵\n\n2/ The chess engine plays 70 variants. Every variant is a single plugin file. The hex framework generates seeded procedural maps — same seed, same map, every time. Both ship Consumer SDKs. Dungeon Chess runs entirely on the chess engine's APIs. Zero engine forks.\n\n3/ The same pure functions that power the browser games power 16 MCP tools on a Cloudflare Worker. Any AI agent connects with one command. No translation layer. No separate API. The embeddable architecture made them AI-callable for free.\n\n4/ 16 days to build. 14 more to make it professional. Every correction becomes a rule. Every rule gets encoded into the environment. That environment now governs every project. The content pipeline that sent this post runs on the same infrastructure.\n\n5/ Architecture decisions compound. The system that makes every subsequent build faster is the actual product worth talking about ...\n\nhttps://smalley.my/thoughts/16-days-one-ecosystem/",
       "format": "thread",
       "angle": "Raw numbers, architecture decisions, pipeline self-reference",
       "sequence": 2,
@@ -505,7 +505,7 @@
         ],
         "reactionsList": [
           {
-            "author": "\ud83d\udcbb Akmal Fikri Abdul Rahman",
+            "author": "💻 Akmal Fikri Abdul Rahman",
             "occupation": "Backend Developer | Drupal Specialist Since 2010 | Speaker @ DrupalCon Asia 2024 | Board Game Evangelist | Agency Experience | ENFJ-A",
             "type": "LIKE"
           },
@@ -590,7 +590,7 @@
         "last_checked": "2026-07-22T19:57:01.868Z"
       },
       "metrics_linkedin": {
-        "impressions": 1881,
+        "impressions": 1884,
         "likes": 7,
         "comments": 2,
         "shares": 1,
@@ -603,7 +603,7 @@
           {
             "author": "Alan Lansdowne",
             "subtitle": "Front End / Full Stack Web Developer (MVC/VM), JavaScript (ES2023), TypeScript, ARIA, Modern CSS & SVG, BEM, Tailwind, Vue3, Deno, HTML5 Canvas, PHP 8, PWAs, WebComponents, GIT, YAML, JSON, RegEx, REST, jQuery",
-            "text": "It\u2019s not that I\u2019ve never used TypeScript (and jQuery, back in the day) but I much prefer the dependency-free approach.\n\nMy go-to front-end stack is:\n\n1) HTML\n\n2) CSS\n\n3) JS\n\n4) SVG\n\n5) JSON",
+            "text": "It’s not that I’ve never used TypeScript (and jQuery, back in the day) but I much prefer the dependency-free approach.\n\nMy go-to front-end stack is:\n\n1) HTML\n\n2) CSS\n\n3) JS\n\n4) SVG\n\n5) JSON",
             "created": 1784763468685,
             "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7484999005932998657?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7484999005932998657%2C7485840555755778048%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287485840555755778048%2Curn%3Ali%3Aactivity%3A7484999005932998657%29"
           },
@@ -661,16 +661,22 @@
       "platforms": [
         "twitter"
       ],
-      "content": "Four protocols. Nine years. One design philosophy.\n\nWhat I learned designing systems that other people actually adopted. \ud83e\uddf5\n\n2/ Everstore (2016): structured database functionality on Bitcoin using 38 bytes of OP_RETURN and HD key derivation. Before Ethereum's EVM. Before SegWit. Before Taproot.\n\nThe 38-byte ceiling forced the design. Constraints aren't limitations. They're architecture.\n\n3/ DN-Key (2016): publish your cryptographic public keys as DNS TXT records. Verification is a DNS lookup. That's it.\n\nBorrowed trust from infrastructure people already believed in. Adopted by regulated institutions because compliance teams understood it in one meeting.\n\n4/ SADO (2023): trustless Ordinals trading via PSBTs. No custody. No intermediary. The protocol is the transaction format itself.\n\nOrdzaar adopted it because it was the only option that didn't require trust. Adoption as a technical decision, not a business negotiation.\n\n5/ DN-Key was cited by name in the Securities Commission Malaysia's capital markets blueprint. Nine years later, the same protocol powers passkey-native identity across Bitcoin, EVM, and Solana via Oviato. No modifications required.\n\nIf the architecture is sound and the platform isn't ready, you're early, not wrong.\n\n6/ The thread: design for constraints. Borrow existing trust. Keep the chain dumb. Accept that timing matters.\n\nhttps://smalley.my/thoughts/protocol-design-lessons/",
+      "content": "Four protocols. Nine years. One design philosophy.\n\nWhat I learned designing systems that other people actually adopted. 🧵\n\n2/ Everstore (2016): structured database functionality on Bitcoin using 38 bytes of OP_RETURN and HD key derivation. Before Ethereum's EVM. Before SegWit. Before Taproot.\n\nThe 38-byte ceiling forced the design. Constraints aren't limitations. They're architecture.\n\n3/ DN-Key (2016): publish your cryptographic public keys as DNS TXT records. Verification is a DNS lookup. That's it.\n\nBorrowed trust from infrastructure people already believed in. Adopted by regulated institutions because compliance teams understood it in one meeting.\n\n4/ SADO (2023): trustless Ordinals trading via PSBTs. No custody. No intermediary. The protocol is the transaction format itself.\n\nOrdzaar adopted it because it was the only option that didn't require trust. Adoption as a technical decision, not a business negotiation.\n\n5/ DN-Key was cited by name in the Securities Commission Malaysia's capital markets blueprint. Nine years later, the same protocol powers passkey-native identity across Bitcoin, EVM, and Solana via Oviato. No modifications required.\n\nIf the architecture is sound and the platform isn't ready, you're early, not wrong.\n\n6/ The thread: design for constraints. Borrow existing trust. Keep the chain dumb. Accept that timing matters.\n\nhttps://smalley.my/thoughts/protocol-design-lessons/",
       "format": "thread",
       "angle": "One lesson per protocol, constraint-driven design philosophy",
       "sequence": 4,
-      "notes": "Backdated trigger \u2014 article already live. Strong crypto/protocol audience content.",
+      "notes": "Backdated trigger — article already live. Strong crypto/protocol audience content.",
       "posted": "2026-08-07T18:43:35.330Z",
       "posted_by": "pipeline",
       "platform_id": "2085799027564581372",
       "url": "https://x.com/m_smalley/status/2085799027564581372",
-      "method": "cookie"
+      "method": "cookie",
+      "metrics_twitter": {
+        "impressions": 29,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0
+      }
     },
     {
       "id": "protocol-linkedin",
@@ -684,7 +690,7 @@
       "chars": 780,
       "angle": "DN-Key arc as institutional credibility signal, longevity of simple design",
       "sequence": 4,
-      "notes": "LinkedIn gets DN-Key story specifically \u2014 regulator citation, institutional adoption, nine-year arc. Strongest signal for hiring managers."
+      "notes": "LinkedIn gets DN-Key story specifically — regulator citation, institutional adoption, nine-year arc. Strongest signal for hiring managers."
     },
     {
       "id": "job-engine-linkedin",
@@ -704,7 +710,7 @@
       "platform_id": "urn:li:activity:7482386169809526784",
       "url": "https://www.linkedin.com/feed/update/urn:li:activity:7482386169809526784/",
       "metrics_linkedin": {
-        "impressions": 521,
+        "impressions": 522,
         "likes": 4,
         "comments": 1,
         "shares": 0,
@@ -832,7 +838,7 @@
       "angle": "Decade-long R&D, Nukes as the answer, hex-agnostic design",
       "notes": "Link card included via Voyager. Post ID confirmed saved.",
       "metrics_linkedin": {
-        "impressions": 224,
+        "impressions": 227,
         "likes": 2,
         "comments": 0,
         "shares": 0,
@@ -847,7 +853,7 @@
           },
           {
             "author": "Claudia Yu",
-            "occupation": "\u5b81\u6ce2\u745e\u6f3e\u7684\u9500\u552e\u4e13\u5458",
+            "occupation": "宁波瑞漾的销售专员",
             "type": "LIKE"
           }
         ]
@@ -904,12 +910,12 @@
       "posted_by": "pipeline",
       "platform_id": "2079285215369867289",
       "url": "https://x.com/ModdableGames/status/2079285215369867289",
-      "trigger": "blog post promotion \u2014 Conquering the Constraints of Chess",
+      "trigger": "blog post promotion — Conquering the Constraints of Chess",
       "platforms": [
         "twitter"
       ],
       "account": "moddable",
-      "content": "\u265f\ufe0f Chess grandmasters play 15-20 moves from memory before original thought begins.\n\nWe asked: what if the board was modular? The answer took a decade to build.\n\nhttps://moddable.games/news/conquering-the-constrains-of-chess/",
+      "content": "♟️ Chess grandmasters play 15-20 moves from memory before original thought begins.\n\nWe asked: what if the board was modular? The answer took a decade to build.\n\nhttps://moddable.games/news/conquering-the-constrains-of-chess/",
       "chars": 224,
       "blog_slug": "conquering-the-constrains-of-chess",
       "metrics_twitter": {
@@ -927,12 +933,12 @@
       "posted_by": "pipeline",
       "platform_id": "2080013396431315321",
       "url": "https://x.com/ModdableGames/status/2080013396431315321",
-      "trigger": "blog post promotion \u2014 Monopolising Modified Variations",
+      "trigger": "blog post promotion — Monopolising Modified Variations",
       "platforms": [
         "twitter"
       ],
       "account": "moddable",
-      "content": "\ud83c\udfe0 Monopoly was designed in 1903 to expose the dangers of capitalism.\n\n275 million copies later, we turned it into a Euro-style game where nobody goes bankrupt.\n\nhttps://moddable.games/news/monopolising-modified-variations/",
+      "content": "🏠 Monopoly was designed in 1903 to expose the dangers of capitalism.\n\n275 million copies later, we turned it into a Euro-style game where nobody goes bankrupt.\n\nhttps://moddable.games/news/monopolising-modified-variations/",
       "chars": 222,
       "blog_slug": "monopolising-modified-variations",
       "metrics_twitter": {
@@ -946,12 +952,12 @@
       "id": "mg-spiralling-paths",
       "created": "2026-07-20",
       "status": "ready",
-      "trigger": "blog post promotion \u2014 Spiralling Paths of Power and Peril",
+      "trigger": "blog post promotion — Spiralling Paths of Power and Peril",
       "platforms": [
         "twitter"
       ],
       "account": "moddable",
-      "content": "\ud83c\udf00 Talisman has sold 800,000+ copies over 40 years. Its spiral board has never changed.\n\nWe reimagined it with 61 modular hex tiles.\n\nhttps://moddable.games/news/spiralling-paths-of-power-and-peril/",
+      "content": "🌀 Talisman has sold 800,000+ copies over 40 years. Its spiral board has never changed.\n\nWe reimagined it with 61 modular hex tiles.\n\nhttps://moddable.games/news/spiralling-paths-of-power-and-peril/",
       "chars": 197,
       "blog_slug": "spiralling-paths-of-power-and-peril"
     },
@@ -959,12 +965,12 @@
       "id": "mg-nuking-catan",
       "created": "2026-07-20",
       "status": "ready",
-      "trigger": "blog post promotion \u2014 Nuking Catan",
+      "trigger": "blog post promotion — Nuking Catan",
       "platforms": [
         "twitter"
       ],
       "account": "moddable",
-      "content": "\ud83d\udca3 45 million Catan owners already have the components to play our game Nukes.\n\nNo new purchases required. They just don't know it yet.\n\nhttps://moddable.games/news/nuking-catan/",
+      "content": "💣 45 million Catan owners already have the components to play our game Nukes.\n\nNo new purchases required. They just don't know it yet.\n\nhttps://moddable.games/news/nuking-catan/",
       "chars": 177,
       "blog_slug": "nuking-catan"
     },
@@ -972,12 +978,12 @@
       "id": "mg-twilight-imperium",
       "created": "2026-07-20",
       "status": "ready",
-      "trigger": "blog post promotion \u2014 Twilight's Prophecies Thunder On!",
+      "trigger": "blog post promotion — Twilight's Prophecies Thunder On!",
       "platforms": [
         "twitter"
       ],
       "account": "moddable",
-      "content": "\u26a1 Twilight Imperium takes 10-20 hours to play. It started as hand-cut cardboard in a Minnesota apartment.\n\nWe made 5 modular rule changes that fit any session length.\n\nhttps://moddable.games/news/twilights-prophecies-thunder-on/",
+      "content": "⚡ Twilight Imperium takes 10-20 hours to play. It started as hand-cut cardboard in a Minnesota apartment.\n\nWe made 5 modular rule changes that fit any session length.\n\nhttps://moddable.games/news/twilights-prophecies-thunder-on/",
       "chars": 228,
       "blog_slug": "twilights-prophecies-thunder-on"
     },
@@ -985,12 +991,12 @@
       "id": "mg-masterpiece-modification",
       "created": "2026-07-20",
       "status": "ready",
-      "trigger": "blog post promotion \u2014 Making a Masterpiece by Modification",
+      "trigger": "blog post promotion — Making a Masterpiece by Modification",
       "platforms": [
         "twitter"
       ],
       "account": "moddable",
-      "content": "\ud83c\udff0 Chess travelled the Silk Road and was rewritten at every stop.\n\nThe version we play today is simply the mod that won. We host 74 variants on one engine.\n\nhttps://moddable.games/news/making-a-masterpiece-by-modification/",
+      "content": "🏰 Chess travelled the Silk Road and was rewritten at every stop.\n\nThe version we play today is simply the mod that won. We host 74 variants on one engine.\n\nhttps://moddable.games/news/making-a-masterpiece-by-modification/",
       "chars": 221,
       "blog_slug": "making-a-masterpiece-by-modification"
     },
@@ -998,12 +1004,12 @@
       "id": "mg-season-traditions",
       "created": "2026-07-20",
       "status": "ready",
-      "trigger": "blog post promotion \u2014 'Tis the Season for Traditions",
+      "trigger": "blog post promotion — 'Tis the Season for Traditions",
       "platforms": [
         "twitter"
       ],
       "account": "moddable",
-      "content": "\ud83c\udf84 6 out of 10 UK adults play board games during the festive season.\n\nFrom Blood Bowl's goblin Santa to Carcassonne's frozen rivers, seasonality shapes how we play.\n\nhttps://moddable.games/news/tis-the-season-for-traditions/",
+      "content": "🎄 6 out of 10 UK adults play board games during the festive season.\n\nFrom Blood Bowl's goblin Santa to Carcassonne's frozen rivers, seasonality shapes how we play.\n\nhttps://moddable.games/news/tis-the-season-for-traditions/",
       "chars": 223,
       "blog_slug": "tis-the-season-for-traditions"
     },
@@ -1011,12 +1017,12 @@
       "id": "mg-open-sourcing",
       "created": "2026-07-20",
       "status": "ready",
-      "trigger": "blog post promotion \u2014 Open Sourcing Tabletop Games",
+      "trigger": "blog post promotion — Open Sourcing Tabletop Games",
       "platforms": [
         "twitter"
       ],
       "account": "moddable",
-      "content": "\ud83d\udcd6 The best games are the ones players mod anyway.\n\nChess survived 1,500 years with zero IP protection. We're open-sourcing our engines because the medium demands it.\n\nhttps://moddable.games/news/open-sourcing-tabletop-games/",
+      "content": "📖 The best games are the ones players mod anyway.\n\nChess survived 1,500 years with zero IP protection. We're open-sourcing our engines because the medium demands it.\n\nhttps://moddable.games/news/open-sourcing-tabletop-games/",
       "chars": 224,
       "blog_slug": "open-sourcing-tabletop-games"
     },
@@ -1024,12 +1030,12 @@
       "id": "mg-house-always-wins",
       "created": "2026-07-20",
       "status": "ready",
-      "trigger": "blog post promotion \u2014 The House Always Wins!",
+      "trigger": "blog post promotion — The House Always Wins!",
       "platforms": [
         "twitter"
       ],
       "account": "moddable",
-      "content": "\ud83c\udfb2 En passant was a house rule 500 years ago. Monopoly's Free Parking jackpot has no official basis.\n\nHouse rules become canon. We're building version control for tabletop.\n\nhttps://moddable.games/news/the-house-always-wins/",
+      "content": "🎲 En passant was a house rule 500 years ago. Monopoly's Free Parking jackpot has no official basis.\n\nHouse rules become canon. We're building version control for tabletop.\n\nhttps://moddable.games/news/the-house-always-wins/",
       "chars": 223,
       "blog_slug": "the-house-always-wins"
     },
@@ -1037,12 +1043,12 @@
       "id": "mg-making-mods-matter",
       "created": "2026-07-20",
       "status": "ready",
-      "trigger": "blog post promotion \u2014 Making Mods Matter",
+      "trigger": "blog post promotion — Making Mods Matter",
       "platforms": [
         "twitter"
       ],
       "account": "moddable",
-      "content": "\ud83d\udee0\ufe0f \"What if we change this rule?\"\n\nBoard game modding has happened at kitchen tables for centuries. It deserves real tools.\n\nhttps://moddable.games/news/making-mods-matter/",
+      "content": "🛠️ \"What if we change this rule?\"\n\nBoard game modding has happened at kitchen tables for centuries. It deserves real tools.\n\nhttps://moddable.games/news/making-mods-matter/",
       "chars": 172,
       "blog_slug": "making-mods-matter"
     },
@@ -1050,12 +1056,12 @@
       "id": "mg-the-ancients",
       "created": "2026-07-20",
       "status": "ready",
-      "trigger": "blog post promotion \u2014 The Ancients",
+      "trigger": "blog post promotion — The Ancients",
       "platforms": [
         "twitter"
       ],
       "account": "moddable",
-      "content": "\ud83c\udffa Mancala is 8,000 years old. Go has one rule and has sustained billions of games across 4,000 years.\n\nNo IP protection. No publishers. Just perfect design.\n\nhttps://moddable.games/news/the-ancients/",
+      "content": "🏺 Mancala is 8,000 years old. Go has one rule and has sustained billions of games across 4,000 years.\n\nNo IP protection. No publishers. Just perfect design.\n\nhttps://moddable.games/news/the-ancients/",
       "chars": 199,
       "blog_slug": "the-ancients"
     },
@@ -1063,12 +1069,12 @@
       "id": "mg-beyond-the-box",
       "created": "2026-07-20",
       "status": "ready",
-      "trigger": "blog post promotion \u2014 Beyond The Box",
+      "trigger": "blog post promotion — Beyond The Box",
       "platforms": [
         "twitter"
       ],
       "account": "moddable",
-      "content": "\ud83d\uddfa\ufe0f In Carcassonne, the visual language of tiles IS the game.\n\nRoads, cities, fields aren't just art; they're rules embedded in design. What really happens inside the box?\n\nhttps://moddable.games/news/beyond-the-box/",
+      "content": "🗺️ In Carcassonne, the visual language of tiles IS the game.\n\nRoads, cities, fields aren't just art; they're rules embedded in design. What really happens inside the box?\n\nhttps://moddable.games/news/beyond-the-box/",
       "chars": 215,
       "blog_slug": "beyond-the-box"
     },
@@ -1076,12 +1082,12 @@
       "id": "mg-infrastructure",
       "created": "2026-07-20",
       "status": "ready",
-      "trigger": "blog post promotion \u2014 The Infrastructure Behind the Games",
+      "trigger": "blog post promotion — The Infrastructure Behind the Games",
       "platforms": [
         "twitter"
       ],
       "account": "moddable",
-      "content": "\u2699\ufe0f One engine runs everything from Fischer Random to a 4-faction dungeon crawler with 24 units and AI opponents.\n\nThree MIT-licensed engines, open for anyone to fork.\n\nhttps://moddable.games/news/the-infrastructure-behind-the-games/",
+      "content": "⚙️ One engine runs everything from Fischer Random to a 4-faction dungeon crawler with 24 units and AI opponents.\n\nThree MIT-licensed engines, open for anyone to fork.\n\nhttps://moddable.games/news/the-infrastructure-behind-the-games/",
       "chars": 232,
       "blog_slug": "the-infrastructure-behind-the-games"
     },
@@ -1089,18 +1095,18 @@
       "id": "mg-civilization-loop",
       "created": "2026-07-20",
       "status": "ready",
-      "trigger": "blog post promotion \u2014 The Civilization Loop",
+      "trigger": "blog post promotion — The Civilization Loop",
       "platforms": [
         "twitter"
       ],
       "account": "moddable",
-      "content": "\ud83c\udf0d A RAF radio instructor in Wales invented the technology tree in 1980.\n\nSid Meier built a franchise on it. 40M+ units sold. The board-to-screen-to-board loop is complete.\n\nhttps://moddable.games/news/the-civilization-loop/",
+      "content": "🌍 A RAF radio instructor in Wales invented the technology tree in 1980.\n\nSid Meier built a franchise on it. 40M+ units sold. The board-to-screen-to-board loop is complete.\n\nhttps://moddable.games/news/the-civilization-loop/",
       "chars": 223,
       "blog_slug": "the-civilization-loop"
     },
     {
       "type": "roundup",
-      "content": "451 commits this week.\n\n\u2192 New tools API in staging: 76 tools, 27 endpoints, widgets + SDK\n\u2192 Go + draughts now playable (3 of 13 families interactive)\n\u2192 Fate Core, Dungeon World, Cairn, Knave added (11 RPG systems, 677 PDFs)\n\nAll open-source. https://moddable.games",
+      "content": "451 commits this week.\n\n→ New tools API in staging: 76 tools, 27 endpoints, widgets + SDK\n→ Go + draughts now playable (3 of 13 families interactive)\n→ Fate Core, Dungeon World, Cairn, Knave added (11 RPG systems, 677 PDFs)\n\nAll open-source. https://moddable.games",
       "platforms": [
         "twitter"
       ],
@@ -1108,7 +1114,7 @@
       "url": "https://x.com/ModdableGames/status/2081968991464034491",
       "platform_id": "2081968991464034491",
       "metrics_twitter": {
-        "impressions": 23,
+        "impressions": 24,
         "likes": 1,
         "comments": 0,
         "shares": 0
@@ -1130,7 +1136,7 @@
       "url": "https://x.com/ModdableGames/status/2081992980953502088",
       "platform_id": "2081992980953502088",
       "metrics_twitter": {
-        "impressions": 14,
+        "impressions": 17,
         "likes": 1,
         "comments": 0,
         "shares": 1
@@ -1139,12 +1145,13 @@
     {
       "platform": "twitter",
       "account": "moddable",
-      "content": "3 week sprint for new engine complete:\n\n\u2713 1,027 commits\n\u2713 6 playable game families\n\u2713 45 games, 333 variants\n\u2713 1,511 engine tests\n\u2713 83 AI-callable tools\n\u2713 3 new widgets (oracles, nukes, talisman)\n\u2713 Full rules API (2,445 endpoints)\n\nengine.moddable.games/play/",
+      "content": "3 week sprint for new engine complete:\n\n✓ 1,027 commits\n✓ 6 playable game families\n✓ 45 games, 333 variants\n✓ 1,511 engine tests\n✓ 83 AI-callable tools\n✓ 3 new widgets (oracles, nukes, talisman)\n✓ Full rules API (2,445 endpoints)\n\nengine.moddable.games/play/",
       "status": "posted",
-      "posted_at": "2026-08-07T17:26:00Z",
       "tweet_id": "2085764446476013826",
       "url": "https://x.com/ModdableGames/status/2085764446476013826",
-      "category": "milestone"
+      "category": "milestone",
+      "posted": "2026-08-07T17:26:00Z",
+      "id": "mg-013826"
     }
   ]
 }

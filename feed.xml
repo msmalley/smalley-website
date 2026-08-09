@@ -7,6 +7,14 @@
   <language>en</language>
   <atom:link href="https://smalley.my/feed.xml" rel="self" type="application/rss+xml"/>
   <item>
+    <title>The Moddable Layer Cake</title>
+    <link>https://smalley.my/thoughts/the-moddable-layer-cake/</link>
+    <guid>https://smalley.my/thoughts/the-moddable-layer-cake/</guid>
+    <pubDate>Fri, 07 Aug 2026 00:00:00 GMT</pubDate>
+    <category>Writing</category>
+    <description>How we decomposed a JS monolith into four layers where data flows downhill. Rules define games. Engine resolves them. Tools monetises them. Web renders them. Over 1 million MCP requests per week prove the architecture works.</description>
+  </item>
+  <item>
     <title>Building the Machine That Builds Your Career</title>
     <link>https://smalley.my/thoughts/building-the-machine-that-builds-your-career/</link>
     <guid>https://smalley.my/thoughts/building-the-machine-that-builds-your-career/</guid>
@@ -60,7 +68,7 @@
     <guid>https://smalley.my/portfolio/moddable/</guid>
     <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
     <category>Portfolio</category>
-    <description>Open-source games studio shipped in 16 days using AI-augmented engineering. Two engines (chess v0.9.7 + hexmaps v1.0.0), 20 game families, Consumer SDKs, and the first board game MCP server (16 AI-callable tools at tools.moddable.games). Autonomous agent pipeline (Researcher + Builder routines) manages multi-repo production across 6 product repos. Native ESM, zero dependencies, zero build step.</description>
+    <description>Open-source games studio shipped in 16 days using AI-augmented engineering. Two engines (chess v0.9.7 + hexmaps v1.0.0), 37 game families (315 variants), Consumer SDKs, and the first board game MCP server (41 AI-callable tools at tools.moddable.games). Autonomous agent pipeline (Researcher + Builder routines) manages multi-repo production across 6 product repos. Native ESM, zero dependencies, zero build step.</description>
   </item>
   <item>
     <title>Moddable Chess Engine</title>
@@ -84,7 +92,7 @@
     <guid>https://smalley.my/open-source/pdf-pagination-engine/</guid>
     <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
     <category>Open Source</category>
-    <description>Pagination system that measures rendered element heights, groups headings atomically, enforces page-fill minimums, and assembles multi-section documents. Powers 20 game families with 155 rule files producing 1000+ indexed pages. Pure DOM measurement, no wkhtmltopdf.</description>
+    <description>Pagination system that measures rendered element heights, groups headings atomically, enforces page-fill minimums, and assembles multi-section documents. Powers 37 game families with 315 rule files producing 2,974 indexed pages. Pure DOM measurement, no wkhtmltopdf.</description>
   </item>
   <item>
     <title>Ordit SDK</title>

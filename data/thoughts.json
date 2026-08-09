@@ -11,8 +11,7 @@
       "Plugin architecture",
       "AI/LLM"
     ],
-    "excerpt": "How we decomposed a JS monolith into four layers where data flows downhill. Rules define games. Engine resolves them. Tools monetises them. Web renders them. Over 1 million MCP requests per week prove the architecture works.",
-    "draft": true
+    "excerpt": "How we decomposed a JS monolith into four layers where data flows downhill. Rules define games. Engine resolves them. Tools monetises them. Web renders them. Over 1 million MCP requests per week prove the architecture works."
   },
   {
     "slug": "building-the-machine-that-builds-your-career",
@@ -56,7 +55,7 @@
       "WebAuthn",
       "DNS"
     ],
-    "excerpt": "From Everstore's 38-byte database to Oviato's passkey wallets — what I learned designing protocols that other people actually adopt."
+    "excerpt": "From Everstore's 38-byte database to Oviato's passkey wallets \u2014 what I learned designing protocols that other people actually adopt."
   },
   {
     "slug": "what-regulators-need",
@@ -69,7 +68,7 @@
       "KYC/AML",
       "Bitcoin"
     ],
-    "excerpt": "After advising Malaysia's Securities Commission for 2 years and spending 5 years getting CoKeeps approved, here's what regulators care about — and it's not what most blockchain teams think."
+    "excerpt": "After advising Malaysia's Securities Commission for 2 years and spending 5 years getting CoKeeps approved, here's what regulators care about \u2014 and it's not what most blockchain teams think."
   },
   {
     "slug": "the-case-for-vanilla-js",
@@ -82,7 +81,7 @@
       "Plugin architecture",
       "GitHub Pages"
     ],
-    "excerpt": "Six production sites, a 70-variant chess engine with tiered plugin architecture, 169 JS modules — zero frameworks, zero build steps. The constraint isn't a limitation. It's the architecture."
+    "excerpt": "Six production sites, a 70-variant chess engine with tiered plugin architecture, 169 JS modules \u2014 zero frameworks, zero build steps. The constraint isn't a limitation. It's the architecture."
   },
   {
     "slug": "cardinal-sins-of-bitcoin-ordinals",

@@ -49,7 +49,7 @@ html{background:#0B0F1A}body{opacity:0;transition:opacity .15s ease}
     <div class="article-content">
       <div class="article-date">7 August 2026 · 10 min read</div>
 
-      <p><a href="https://moddable.games" target="_blank" rel="noopener">Moddable.Games</a> is a tabletop gaming platform I've been building for the past year. The premise is simple: board games should be moddable. Rules should be remixable. Variants should be first-class citizens, not hacks bolted onto a rigid system. We publish open-source engines that let anyone create, play, and share game variants across chess, draughts, go, reversi, shogi, xiangqi, hex strategy games, and tabletop RPGs.</p>
+      <p><a href="https://moddable.games" target="_blank" rel="noopener">Moddable.Games</a> is a tabletop gaming platform I've been building for the past year. The premise is simple: board games should be moddable. Rules should be remixable. Variants should be first-class citizens, not hacks bolted onto a rigid system. We publish open-source engines that let anyone create, play, and share game variants across chess, draughts, go, reversi, shogi, xiangqi, hex strategy games, as well as hex based chess variants and tabletop RPGs.</p>
 
       <p>Several weeks ago I went silent on social media and disappeared into what became a 1,027-commit sprint. The goal was to replace our client-rendered JavaScript monolith with something architecturally correct. Something where data flows in one direction, each layer has one job, and the rendering layer is so thin that you can delete it and rebuild from scratch in days without losing anything.</p>
 
@@ -57,9 +57,9 @@ html{background:#0B0F1A}body{opacity:0;transition:opacity .15s ease}
 
       <h2>What is Moddable.Games</h2>
 
-      <p>At its core, Moddable is a collection of game engines, a rules library, and an AI-accessible tools layer. We currently have 45 published games with 333 playable variants, 458 oracle tables for tabletop RPGs, and 3,385 searchable entities. Six game families are fully playable online with AI opponents: chess (100 variants), draughts (13), go (9), shogi (5), xiangqi (3), and reversi (3).</p>
+      <p>At its core, Moddable is a collection of game engines, a rules library, and an AI-accessible tools layer. We currently have 45 published games with 333 playable variants, 458 oracle tables for tabletop RPGs, and 3,385 searchable entities. Six game families are fully playable online with AI opponents.</p>
 
-      <p>The key insight is that games are data, not code. A chess variant is a set of rules declared in structured frontmatter. The engine resolves those rules into legal moves, win conditions, and board states. No variant-specific code required. 99 of 100 chess variants in our system have zero JavaScript. They are pure declarations that the engine interprets.</p>
+      <p>The key insight is that games are data, not code. A chess variant is a set of rules declared in structured frontmatter. The engine resolves those rules into legal moves, win conditions, and board states. No variant-specific code required beyond win conditions that rely upon hook and filters, with everything else as pure declarations that the engine interprets.</p>
 
       <p>Everything is open-source except the services layer. Rules are CC BY-SA. Engines are MIT. The philosophy is: the community owns the content and the logic. We own the orchestration that makes it commercially useful at scale.</p>
 
@@ -80,9 +80,9 @@ html{background:#0B0F1A}body{opacity:0;transition:opacity .15s ease}
       <p>The architecture that emerged has four layers. Each has exactly one job. Each depends only on the layer below it. No layer reaches sideways or upward.</p>
 
       <ul>
-        <li><strong>Rules</strong> (<a href="https://rules.moddable.games" target="_blank" rel="noopener">rules.moddable.games</a>). Pure structured content. 45 games, 333 variants, 458 oracle tables, 3,385 entities. Zero code. Markdown and YAML frontmatter. A full machine-readable API with discovery index, catalogue, and per-game endpoints. LLM-ready via <code>llms.txt</code> and MCP discovery via <code>.well-known/mcp.json</code>.</li>
-        <li><strong>Engine</strong> (<a href="https://engine.moddable.games" target="_blank" rel="noopener">engine.moddable.games</a>). Reads rule definitions and resolves them into playable game states with as little code as possible. 6 families, 1,511 tests, plugin architecture. A new variant is a frontmatter file, not a feature branch.</li>
-        <li><strong>Tools</strong> (<a href="https://tools.moddable.games" target="_blank" rel="noopener">tools.moddable.games</a>). Private. 83 MCP tools, REST API, JavaScript SDK, embeddable widgets. Wraps engine into monetisable services: puzzle generation, AI opponents, board rendering, oracle composition, combat simulation. This is the value layer.</li>
+        <li><strong>Rules</strong> (<a href="https://rules.moddable.games" target="_blank" rel="noopener">rules.moddable.games</a>). Pure structured content. 45 games, 333 variants, 458 oracle tables, 3,385 entities. Zero code. Markdown and YAML frontmatter. A full machine-readable API with discovery index, catalogue, and per-game endpoints.</li>
+        <li><strong>Engine</strong> (<a href="https://engine.moddable.games" target="_blank" rel="noopener">engine.moddable.games</a>). Reads rule definitions and resolves them into playable game states with as little code as possible. 6 families, 1,511 tests, plugin architecture. A new variant is a frontmatter file.</li>
+        <li><strong>Tools</strong> (<a href="https://tools.moddable.games" target="_blank" rel="noopener">tools.moddable.games</a>). Our only private repository. 83 MCP tools, REST API, JavaScript SDK, embeddable widgets. Wraps engine into monetisable services: puzzle generation, AI opponents, board rendering, oracle composition, combat simulation. This is the value layer.</li>
         <li><strong>Web</strong> (<a href="https://moddable.games" target="_blank" rel="noopener">moddable.games</a>). A static site generator that consumes tools via iframes and API calls. All content lives in JSON data files and markdown. Zero game logic. Disposable by design.</li>
       </ul>
 
@@ -92,7 +92,7 @@ html{background:#0B0F1A}body{opacity:0;transition:opacity .15s ease}
 
       <p>The most dramatic proof is how new game variants enter the system. In the old monolith, a new variant was a feature branch. In the new architecture, a new variant is a YAML file. The engine reads it, resolves the topology, applies the plugin rules, evaluates the end condition. The tools layer exposes it as a playable game via MCP. The web layer renders it. Zero code written for variant-specific behaviour.</p>
 
-      <p>Select any game family and variant below. The frontmatter shown is the real engine definition for that variant, fetched live from the Tools API. The board beneath it is that definition rendered into a playable game:</p>
+      <p>Select any game family and variant below. The frontmatter shown is the real engine definition for that variant, fetched live from the Tools API. The board beneath is then rendered into a playable game:</p>
 
       <div class="engine-embed-demo">
         <div class="engine-embed-demo__controls">
@@ -225,7 +225,7 @@ html{background:#0B0F1A}body{opacity:0;transition:opacity .15s ease}
 
       <h2>The Sprint in Numbers</h2>
 
-      <p>Several weeks of focused work. 1,027 commits across the four repositories. The old JS monolith retired entirely. The result:</p>
+      <p>1,027 commits across four repositories. The old JS monolith retired entirely. The result:</p>
 
       <ul>
         <li>6 playable game families with AI opponents</li>
@@ -238,7 +238,7 @@ html{background:#0B0F1A}body{opacity:0;transition:opacity .15s ease}
         <li>The web layer rebuilt from scratch twice during the sprint, proving it's genuinely disposable</li>
       </ul>
 
-      <p>That last point matters most. The web layer was rebuilt twice. Not refactored. Deleted and recreated. The first version taught me what the rendering patterns should be. The second implemented them cleanly. Knowledge flowed downward: the insights from v1 became data structures and engine capabilities, not frontend code. When v1 was deleted, all its lessons had already migrated to layers that persisted.</p>
+      <p>That last point matters most. The web layer was rebuilt twice. Not refactored. Deleted and recreated. The first version taught me what the rendering patterns should be. The second implemented them cleanly. Knowledge flowed downward: with insights becoming data structures and engine capabilities, not frontend code.</p>
 
       <h2>Why the Cake Works</h2>
 
@@ -246,7 +246,6 @@ html{background:#0B0F1A}body{opacity:0;transition:opacity .15s ease}
 
       <p>This connects to everything else I've written about here. <a href="../the-case-for-vanilla-js/">The Case for Vanilla JS</a> argues that frameworks are voluntary lock-in. The layer cake elevates that argument: when the entire rendering layer is disposable, your framework choice carries zero long-term risk. <a href="../protocol-design-lessons/">Protocol Design Lessons</a> argues for pushing complexity downward. The layer cake is that principle applied to an entire product architecture, not just a single protocol. <a href="../16-days-one-ecosystem/">16 Days, One Ecosystem</a> was the sprint that produced the monolith. This sprint decomposed it correctly.</p>
 
-      <p>The further up the stack, the more disposable it should be. Rules will outlive every engine built on top of them. Engines will outlive every tools layer that wraps them. Tools will outlive every frontend that renders them.</p>
 
       <h2>What the Cake Enables</h2>
 
@@ -254,7 +253,7 @@ html{background:#0B0F1A}body{opacity:0;transition:opacity .15s ease}
 
       <p>The 1 million weekly requests from external AI agents prove the architecture creates value beyond what any single frontend could deliver. Browsers are one consumer. AI agents are another. Discord bots, mobile apps, voice assistants, embedded hardware: every new consumer benefits from the same rules, the same engine, the same tools. None of them need the web layer to exist.</p>
 
-      <p>Four layers, one direction, no shortcuts upward. That's the cake. It took 1,027 commits to bake. It will take years to outgrow.</p>
+      <p>Four layers, one direction, no shortcuts upward. That's the cake and it took 1,027 commits to bake.</p>
 
       <div class="article-tags">
         <a class="pill" href="../../explore/?tag=Architecture">Architecture</a>

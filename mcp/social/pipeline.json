@@ -448,7 +448,8 @@
         "likes": 1,
         "comments": 1,
         "shares": 0
-      }
+      },
+      "platform_id": "2067923162034024948"
     },
     {
       "id": "16-days-linkedin",
@@ -590,7 +591,7 @@
         "last_checked": "2026-07-22T19:57:01.868Z"
       },
       "metrics_linkedin": {
-        "impressions": 1884,
+        "impressions": 1885,
         "likes": 7,
         "comments": 2,
         "shares": 1,
@@ -672,7 +673,7 @@
       "url": "https://x.com/m_smalley/status/2085799027564581372",
       "method": "cookie",
       "metrics_twitter": {
-        "impressions": 29,
+        "impressions": 33,
         "likes": 0,
         "comments": 0,
         "shares": 0
@@ -710,7 +711,7 @@
       "platform_id": "urn:li:activity:7482386169809526784",
       "url": "https://www.linkedin.com/feed/update/urn:li:activity:7482386169809526784/",
       "metrics_linkedin": {
-        "impressions": 522,
+        "impressions": 523,
         "likes": 4,
         "comments": 1,
         "shares": 0,
@@ -838,7 +839,7 @@
       "angle": "Decade-long R&D, Nukes as the answer, hex-agnostic design",
       "notes": "Link card included via Voyager. Post ID confirmed saved.",
       "metrics_linkedin": {
-        "impressions": 227,
+        "impressions": 236,
         "likes": 2,
         "comments": 0,
         "shares": 0,
@@ -894,10 +895,70 @@
       "chars": 137,
       "angle": "Personal endorsement + summary of the mod",
       "metrics_twitter": {
-        "impressions": 27,
+        "impressions": 28,
         "likes": 0,
         "comments": 0,
         "shares": 0
+      }
+    },
+    {
+      "id": "layer-cake-twitter",
+      "created": "2026-08-10",
+      "status": "posted",
+      "posted": "2026-08-10",
+      "url": "https://x.com/m_smalley/status/2086697893218472308",
+      "trigger": "Layer Cake article published on smalley.my",
+      "platforms": [
+        "twitter"
+      ],
+      "content": "Spent a couple of weeks decomposing a JS monolith into four layers where data flows one direction.\n\nRules → Engine → Tools → Web.\n\nResult: 133 playable variants, 83 MCP tools, and over 1M requests a week from AI agents already.\n\nhttps://smalley.my/thoughts/the-moddable-layer-cake",
+      "method": "cookie",
+      "account": "personal",
+      "platform_id": "2086697893218472308",
+      "metrics_twitter": {
+        "impressions": 16,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0
+      }
+    },
+    {
+      "id": "layer-cake-linkedin",
+      "created": "2026-08-10",
+      "status": "posted",
+      "posted": "2026-08-10",
+      "url": "https://www.linkedin.com/feed/update/urn:li:fsd_share:urn:li:share:7492462614753599488/",
+      "trigger": "Layer Cake article published on smalley.my",
+      "platforms": [
+        "linkedin"
+      ],
+      "content": "1,027 commits. Four layers. One rule: data flows downhill...",
+      "method": "voyager",
+      "platform_id": "urn:li:fsd_share:urn:li:share:7492462614753599488",
+      "metrics_linkedin": {
+        "impressions": 157,
+        "likes": 2,
+        "comments": 0,
+        "shares": 0,
+        "reactions": {
+          "LIKE": 2
+        },
+        "reactionsList": [
+          {
+            "author": "Richard Alexandr Batista",
+            "occupation": "Engineering Manager | AI Builder | Solutions & Product Strategy",
+            "type": "LIKE"
+          },
+          {
+            "author": "Wahyu Sumartha Priya Dharma",
+            "occupation": "From Architecture to Execution | Leading Teams That Deliver",
+            "type": "LIKE"
+          }
+        ]
+      },
+      "deltas": {
+        "impressions": 1,
+        "likes": 0
       }
     }
   ],
@@ -919,7 +980,7 @@
       "chars": 224,
       "blog_slug": "conquering-the-constrains-of-chess",
       "metrics_twitter": {
-        "impressions": 29,
+        "impressions": 30,
         "likes": 1,
         "comments": 0,
         "shares": 1
@@ -942,7 +1003,7 @@
       "chars": 222,
       "blog_slug": "monopolising-modified-variations",
       "metrics_twitter": {
-        "impressions": 56,
+        "impressions": 58,
         "likes": 0,
         "comments": 0,
         "shares": 1
@@ -1114,7 +1175,7 @@
       "url": "https://x.com/ModdableGames/status/2081968991464034491",
       "platform_id": "2081968991464034491",
       "metrics_twitter": {
-        "impressions": 24,
+        "impressions": 25,
         "likes": 1,
         "comments": 0,
         "shares": 0
@@ -1136,7 +1197,7 @@
       "url": "https://x.com/ModdableGames/status/2081992980953502088",
       "platform_id": "2081992980953502088",
       "metrics_twitter": {
-        "impressions": 17,
+        "impressions": 20,
         "likes": 1,
         "comments": 0,
         "shares": 1
@@ -1151,7 +1212,14 @@
       "url": "https://x.com/ModdableGames/status/2085764446476013826",
       "category": "milestone",
       "posted": "2026-08-07T17:26:00Z",
-      "id": "mg-013826"
+      "id": "mg-013826",
+      "platform_id": "2085764446476013826",
+      "metrics_twitter": {
+        "impressions": 12,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0
+      }
     }
   ]
 }

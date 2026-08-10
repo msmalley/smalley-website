@@ -1,0 +1,49 @@
+{
+  "target": {
+    "company": "Fireblocks",
+    "role": "Solution Architect, EMEA",
+    "contact_email": null,
+    "contact_type": null,
+    "contact_name": null,
+    "source_url": "https://www.linkedin.com/jobs/view/solution-architect-emea-at-fireblocks-4442714096",
+    "cv_variant": "cto",
+    "cv_pdf": "/Applications/MAMP/htdocs/personal/smalley-website/cvs/dist/Mark-Smalley-CV-CTO.pdf"
+  },
+  "send_from": "mark@smalley.my",
+  "subject": "Solution Architect, EMEA — Mark Smalley",
+  "status": "draft",
+  "created": "2026-08-10",
+  "variant": "cto",
+  "company": "Fireblocks",
+  "role": "Solution Architect, EMEA",
+  "date": "10 August 2026",
+  "opening": "I am writing to apply for the Solution Architect, EMEA role at Fireblocks. My background is 15 years building production digital asset infrastructure: custody systems, wallet architecture, tokenisation platforms, and protocol-level cryptography. I have delivered end-to-end implementations for institutional clients across multiple jurisdictions, from initial architecture through to production deployment.",
+  "proof_points": [
+    {
+      "requirement": "Experience with blockchain, cryptography, or Web3 technologies, AND Banks, Financial Institutions, or enterprise financial systems",
+      "evidence": "Co-founded CoKeeps, now Malaysia's largest Digital Asset Custodian by AUM. Built the complete custody stack from first principles: multi-signature wallet infrastructure, key management, role-based access controls, transaction signing orchestration. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox."
+    },
+    {
+      "requirement": "Post-sales implementation delivery in complex enterprise or financial settings",
+      "evidence": "13 years operating a blockchain consultancy delivering to institutional clients across banking, securities regulation, and digital asset custody. 5-day intensive advisory engagement with Baker Hostetler (US law firm) on digital asset custody frameworks. Translated technical architecture into compliance-ready documentation for institutional stakeholders."
+    },
+    {
+      "requirement": "Deep understanding of IT security and cloud platform proficiency",
+      "evidence": "Designed and built the SADO Protocol (decentralised order-book using PSBTs on Bitcoin). Hands-on with UTXO scripting, Schnorr/Taproot multi-signature schemes, atomic swap patterns, passkey/WebAuthN/FIDO2 cryptographic key management. Production deployments on Cloudflare Workers, Docker, CI/CD pipelines."
+    },
+    {
+      "requirement": "Software development background with hands-on technical capabilities",
+      "evidence": "Led the Ordzaar SDK architecture (ordinals/inscriptions tooling) that spun out of CakeDefi, raised US$500K, and was acquired. Designed API interfaces, integration documentation, and developer onboarding. Currently shipping 83 AI-callable MCP tools and Consumer SDKs serving 1M+ requests per week."
+    },
+    {
+      "requirement": "Strong knowledge of enterprise architecture and best practices",
+      "evidence": "Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites. Four-layer separation (Rules, Engine, Tools, Web) where each layer is independently deployable with its own subdomain. Same architectural discipline applied to custody and tokenisation systems at CoKeeps."
+    },
+    {
+      "requirement": "Technical leadership experience mentoring technical teams",
+      "evidence": "Founded and grew CakeDefi's Moonshot team from 1 to 10 engineers in 7 months: hiring, sprint cadence, product vision, and stakeholder reporting. Led cross-functional delivery at Neuroware for 13 years. Comfortable serving as liaison between Sales, Product, R&D, and client teams."
+    }
+  ],
+  "body": "My differentiator is that I have built the systems Fireblocks abstracts. Understanding custody, key management, and settlement at the implementation level means I can architect solutions for enterprise clients that account for edge cases, security boundaries, and regulatory constraints that surface-level knowledge would miss. I have navigated integrations spanning banking infrastructure, asset custody, tokenisation, and regulatory compliance across four countries.",
+  "closing": "I am based in the UK, immediately available, and hold British citizenship (no sponsorship required). I would welcome the opportunity to discuss how my experience building institutional digital asset infrastructure can contribute to Fireblocks' enterprise deployments across EMEA."
+}

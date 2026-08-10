@@ -111,27 +111,40 @@ async function apply(page, { draft, profile, applyUrl, submit, screenshot }) {
 }
 
 async function handleAccountCreation(page, profile, screenshot) {
-  // Fill email field
+  // Fill email field — use React-compatible native setter to bypass controlled inputs
   const emailFields = await page.$$('input[type="text"], input[type="email"]');
   for (const field of emailFields) {
     const ariaLabel = await page.evaluate(el => el.getAttribute('aria-label') || el.getAttribute('data-automation-id') || '', field);
-    if (ariaLabel.toLowerCase().includes('email') || (await page.evaluate(el => {
+    const labelText = await page.evaluate(el => {
       const label = el.closest('.css-1wc0j0t, .css-1n0e2d3, div')?.querySelector('label');
       return label?.textContent || '';
-    }, field)).toLowerCase().includes('email')) {
+    }, field);
+    if (ariaLabel.toLowerCase().includes('email') || labelText.toLowerCase().includes('email')) {
       await field.click({ clickCount: 3 });
-      await field.type(profile.email, { delay: 30 });
+      await wait(DELAYS.short);
+      await page.evaluate((el, val) => {
+        const nativeSet = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set;
+        nativeSet.call(el, val);
+        el.dispatchEvent(new Event('input', { bubbles: true }));
+        el.dispatchEvent(new Event('change', { bubbles: true }));
+      }, field, profile.email);
       console.log(`  [workday] Filled email: ${profile.email}`);
       break;
     }
   }
 
-  // Fill password fields
+  // Fill password fields — same React-compatible approach
   const password = generatePassword();
   const passwordFields = await page.$$('input[type="password"]');
   for (const field of passwordFields) {
     await field.click({ clickCount: 3 });
-    await field.type(password, { delay: 30 });
+    await wait(DELAYS.short);
+    await page.evaluate((el, val) => {
+      const nativeSet = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set;
+      nativeSet.call(el, val);
+      el.dispatchEvent(new Event('input', { bubbles: true }));
+      el.dispatchEvent(new Event('change', { bubbles: true }));
+    }, field, password);
   }
   if (passwordFields.length > 0) {
     console.log(`  [workday] Password set (${passwordFields.length} fields filled)`);
@@ -149,6 +162,16 @@ async function handleAccountCreation(page, profile, screenshot) {
   }
 
   await screenshot('account_form_filled');
+
+  // Check for validation errors before clicking submit
+  await wait(DELAYS.short);
+  const preErrors = await page.evaluate(() => {
+    const errs = [...document.querySelectorAll('[class*="error"], [class*="Error"], [data-automation-id*="error"]')];
+    return errs.map(e => e.textContent.trim()).filter(t => t.length > 0);
+  });
+  if (preErrors.length > 0) {
+    console.log(`  [workday] Validation errors detected: ${preErrors.join('; ')}`);
+  }
 
   // Click "Create Account" button
   const createBtn = await page.$('button[data-automation-id="createAccountSubmitButton"], div[data-automation-id="createAccountSubmitButton"]');
@@ -234,11 +257,19 @@ async function fillStandardFields(page, profile, draft) {
   ];
 
   for (const { selector, value } of fieldMappings) {
+    if (!value) continue;
     const field = await page.$(selector);
     if (field) {
       const currentValue = await page.evaluate(el => el.value, field);
       if (!currentValue || currentValue.trim() === '') {
-        await typeInField(page, selector, value);
+        await field.click({ clickCount: 3 });
+        await wait(DELAYS.short);
+        await page.evaluate((el, val) => {
+          const nativeSet = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set;
+          nativeSet.call(el, val);
+          el.dispatchEvent(new Event('input', { bubbles: true }));
+          el.dispatchEvent(new Event('change', { bubbles: true }));
+        }, field, value);
       }
     }
   }

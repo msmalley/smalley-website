@@ -1,0 +1,46 @@
+{
+  "target": {
+    "company": "Euronext",
+    "role": "Chief Product Officer, Digital Assets",
+    "contact_email": null,
+    "contact_type": null,
+    "contact_name": null,
+    "source_url": "https://hrhub.wd3.myworkdayjobs.com/Euronext_Career_Page/job/Paris/Chief-Product-Officer--Digital-Assets_R27756/apply/autofillWithResume",
+    "cv_variant": "cto",
+    "cv_pdf": "/Applications/MAMP/htdocs/personal/smalley-website/cvs/dist/Mark-Smalley-CV-CTO.pdf"
+  },
+  "send_from": "mark@smalley.my",
+  "subject": "Chief Product Officer, Digital Assets — Mark Smalley",
+  "status": "draft",
+  "created": "2026-08-10",
+  "variant": "cto",
+  "company": "Euronext",
+  "role": "Chief Product Officer, Digital Assets",
+  "date": "10 August 2026",
+  "opening": "I am writing to apply for the Chief Product Officer, Digital Assets role at Euronext. My background combines 15 years of digital asset infrastructure with hands-on delivery of custody, tokenisation, and exchange systems at production scale.",
+  "proof_points": [
+    {
+      "requirement": "Experience at a crypto-native or digital asset exchange, custodian or tokenisation platform",
+      "evidence": "Co-founded CoKeeps — now Malaysia's largest Digital Asset Custodian by AUM. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. Built production custody, wallet, and settlement architecture from the ground up."
+    },
+    {
+      "requirement": "Working knowledge of token standards and DLT architecture",
+      "evidence": "Designed and built the SADO Protocol (decentralised order-book using PSBTs on Bitcoin). Deep experience with UTXO scripting, Schnorr/Taproot multi-signature schemes, token standards across EVM and Bitcoin ecosystems. Architected the Ordit SDK for ordinals/inscriptions (spun out as Ordzaar, raised US$500K, acquired)."
+    },
+    {
+      "requirement": "Product leadership and go-to-market strategy for institutional financial products",
+      "evidence": "13 years operating as CTO-founder delivering institutional-grade blockchain infrastructure. Led product strategy from prototype through regulatory sandbox admission to production at CoKeeps. Founded Moonshot team at CakeDefi (1 to 10 engineers in 7 months), shipped DeFi staking products to 100K+ users."
+    },
+    {
+      "requirement": "Stakeholder management across engineering, compliance, legal, and regulators",
+      "evidence": "Contributed directly to Malaysia's national Digital Asset regulatory roadmap alongside the central bank and Securities Commission. Coordinated engineering, legal, compliance, and regulatory stakeholders simultaneously at CoKeeps. 5-day advisory engagement with Baker Hostetler on digital asset custody frameworks."
+    },
+    {
+      "requirement": "International and cross-border collaboration in diverse teams",
+      "evidence": "15 years operating across 4 countries (UK, Malaysia, Singapore, US). Led distributed teams across time zones. Currently UK-based, experienced with European business culture and hybrid arrangements."
+    }
+  ],
+  "body": "My differentiator is that I built custody and exchange infrastructure from first principles rather than integrating third-party platforms. This gives me a depth of understanding about what tokenisation platforms abstract away, which translates directly into better product decisions when evaluating build vs buy, assessing vendor capabilities, and defining technical requirements for institutional-grade systems.\n\nAt Neuroware (my consultancy), I sustained 12 years of continuous operation on a $300K seed through disciplined capital allocation and a philosophy of shipping revenue-generating products before scaling teams. This lens on capital efficiency and product-market fit is directly applicable to building a new digital assets product line within an established exchange group.",
+  "closing": "I am based in the UK, immediately available, and hold British citizenship (no sponsorship required). I am open to London, Paris, or Amsterdam hybrid arrangements. I would welcome the opportunity to discuss how my experience building institutional digital asset infrastructure from the ground up can contribute to Euronext's digital assets strategy.",
+  "body_email": "I am writing to apply for the Chief Product Officer, Digital Assets role at Euronext.\n\nMy background combines 15 years of digital asset infrastructure with hands-on delivery of custody, tokenisation, and exchange systems at production scale. I co-founded CoKeeps (Malaysia's largest Digital Asset Custodian by AUM), designed the SADO Protocol (decentralised order-book on Bitcoin), and led CakeDefi's Moonshot team from 1 to 10 engineers.\n\nMy differentiator is building custody and exchange infrastructure from first principles rather than integrating third-party platforms, giving depth of understanding that translates into better product decisions for institutional-grade systems.\n\nI am UK-based, immediately available, and open to London/Paris/Amsterdam hybrid arrangements.\n\nPlease find my CV attached. I would welcome the opportunity to discuss this further."
+}

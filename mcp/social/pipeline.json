@@ -916,7 +916,7 @@
       "account": "personal",
       "platform_id": "2086697893218472308",
       "metrics_twitter": {
-        "impressions": 16,
+        "impressions": 18,
         "likes": 0,
         "comments": 0,
         "shares": 0
@@ -936,7 +936,7 @@
       "method": "voyager",
       "platform_id": "urn:li:fsd_share:urn:li:share:7492462614753599488",
       "metrics_linkedin": {
-        "impressions": 157,
+        "impressions": 163,
         "likes": 2,
         "comments": 0,
         "shares": 0,
@@ -957,7 +957,7 @@
         ]
       },
       "deltas": {
-        "impressions": 1,
+        "impressions": 6,
         "likes": 0
       }
     }

@@ -58,7 +58,7 @@
         "quotes": 0,
         "bookmarks": 0,
         "views": 140,
-        "last_checked": "2026-07-22T19:55:33.648Z"
+        "last_checked": "2026-08-20T15:19:46.296Z"
       },
       "notes": "First post after long silence. Combines comeback with MCP meta-demonstration. Must land before anything else.",
       "metrics_twitter": {
@@ -92,7 +92,7 @@
         "quotes": 0,
         "bookmarks": 0,
         "views": 21,
-        "last_checked": "2026-07-22T19:55:33.853Z"
+        "last_checked": "2026-08-20T15:19:46.567Z"
       },
       "notes": "Reply-to confirmed working. Posted as reply to tweet 2067236318627680743.",
       "metrics_twitter": {
@@ -355,7 +355,7 @@
           },
           {
             "author": "Renyi Khor",
-            "occupation": "Technical Founder & PropTech Builder | myhanko.ai",
+            "occupation": "Building the Enterprise AI Sandbox · 5× technical co-founder · 1 exit.",
             "type": "LIKE"
           },
           {
@@ -435,13 +435,13 @@
         }
       ],
       "metrics": {
-        "likes": 2,
+        "likes": 1,
         "retweets": 0,
         "replies": 1,
         "quotes": 0,
         "bookmarks": 0,
         "views": 75,
-        "last_checked": "2026-07-22T19:55:34.873Z"
+        "last_checked": "2026-08-20T15:19:48.759Z"
       },
       "metrics_twitter": {
         "impressions": 75,
@@ -546,7 +546,7 @@
       "sequence": 6,
       "notes": "2-tweet thread. Tweet 1 posted by pipeline, tweet 2 posted manually by Mark (Twitter 226 cooldown from earlier failed attempts with stale queryId).",
       "metrics_twitter": {
-        "impressions": 34,
+        "impressions": 35,
         "likes": 0,
         "comments": 1,
         "shares": 0
@@ -557,8 +557,8 @@
         "replies": 1,
         "quotes": 0,
         "bookmarks": 0,
-        "views": 33,
-        "last_checked": "2026-07-22T19:55:36.006Z"
+        "views": 34,
+        "last_checked": "2026-08-20T15:19:51.471Z"
       }
     },
     {
@@ -591,7 +591,7 @@
         "last_checked": "2026-07-22T19:57:01.868Z"
       },
       "metrics_linkedin": {
-        "impressions": 1885,
+        "impressions": 1891,
         "likes": 7,
         "comments": 2,
         "shares": 1,
@@ -673,25 +673,68 @@
       "url": "https://x.com/m_smalley/status/2085799027564581372",
       "method": "cookie",
       "metrics_twitter": {
-        "impressions": 33,
+        "impressions": 35,
         "likes": 0,
         "comments": 0,
         "shares": 0
+      },
+      "metrics": {
+        "likes": 0,
+        "retweets": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 33,
+        "last_checked": "2026-08-20T15:19:53.802Z"
       }
     },
     {
       "id": "protocol-linkedin",
       "created": "2026-06-15",
-      "status": "ready",
+      "status": "posted",
       "trigger": "protocol design article published on smalley.my",
       "platforms": [
         "linkedin"
       ],
-      "content": "Four protocols across nine years. One consistent design philosophy: borrow trust from systems people already believe in. Minimise what touches the chain. Let constraints force better architecture than unlimited resources ever would.\n\nIn 2016, I published DN-Key: publish cryptographic public keys as DNS TXT records. Verification is a lookup. That's it. Adopted by regulated custody providers because compliance teams could understand it in one meeting. Cited by name in the Securities Commission Malaysia's capital markets blueprint.\n\nNine years later, the same protocol powers passkey-native, chain-agnostic identity across Bitcoin, EVM, and Solana. No modifications. No upgrades. It was forward-compatible with systems that didn't exist when it was written.\n\nThe gap between \"too simple to be interesting\" and \"simple enough to survive nine years of platform evolution\" is where protocol design actually lives.\n\nhttps://smalley.my/thoughts/protocol-design-lessons/",
-      "chars": 780,
+      "content": "Four protocols across nine years. One consistent design philosophy: borrow trust from systems people already believe in.\n\nIn 2016, I published DN-Key: broadcasting cryptographic public keys as DNS TXT records. Verification is a lookup. That's it. Adopted by regulated custody providers because compliance teams could understand it in one meeting. Cited by name in the Securities Commission Malaysia's capital markets blueprint.\n\nNine years later, the same protocol powers passkey-native, chain-agnostic identity across Bitcoin, EVM, and Solana. No modifications. No upgrades. It was forward-compatible with systems that didn't exist when it was written.\n\nThe gap between \"too simple to be interesting\" and \"simple enough to survive nine years of platform evolution\" is where protocol design actually lives.\n\nhttps://smalley.my/thoughts/protocol-design-lessons/",
+      "chars": 860,
       "angle": "DN-Key arc as institutional credibility signal, longevity of simple design",
       "sequence": 4,
-      "notes": "LinkedIn gets DN-Key story specifically — regulator citation, institutional adoption, nine-year arc. Strongest signal for hiring managers."
+      "notes": "LinkedIn gets DN-Key story specifically — regulator citation, institutional adoption, nine-year arc. Strongest signal for hiring managers.",
+      "posted": "2026-08-21T11:42:52Z",
+      "posted_by": "pipeline",
+      "platform_id": "urn:li:share:7496532242333204480",
+      "url": "https://www.linkedin.com/feed/update/urn:li:fsd_share:urn:li:share:7496532242333204480/",
+      "method": "voyager",
+      "metrics_linkedin": {
+        "impressions": 73,
+        "likes": 1,
+        "comments": 1,
+        "shares": 0,
+        "reactions": {
+          "INTEREST": 1
+        },
+        "commentsList": [
+          {
+            "author": "Jason Chew",
+            "subtitle": "9 years experience in #Bitcoin | Bitcoin Treasury Builder | Strategy Consultant | Accredited HRDF Trainer",
+            "text": "Thank you Mark. 😊 Our industry has so many needles to move — its comforting to know we don't have to reinvent from scratch every time.",
+            "created": 1787313205127,
+            "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7496532242899341312?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7496532242899341312%2C7496534925513228288%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287496534925513228288%2Curn%3Ali%3Aactivity%3A7496532242899341312%29"
+          }
+        ],
+        "reactionsList": [
+          {
+            "author": "Jason Chew",
+            "occupation": "9 years experience in #Bitcoin | Bitcoin Treasury Builder | Strategy Consultant | Accredited HRDF Trainer",
+            "type": "LIKE"
+          }
+        ]
+      },
+      "deltas": {
+        "impressions": 1,
+        "likes": 0
+      }
     },
     {
       "id": "job-engine-linkedin",
@@ -804,7 +847,7 @@
         "quotes": 0,
         "bookmarks": 0,
         "views": 37,
-        "last_checked": "2026-07-22T19:55:37.132Z"
+        "last_checked": "2026-08-20T15:19:56.488Z"
       }
     },
     {
@@ -839,13 +882,14 @@
       "angle": "Decade-long R&D, Nukes as the answer, hex-agnostic design",
       "notes": "Link card included via Voyager. Post ID confirmed saved.",
       "metrics_linkedin": {
-        "impressions": 236,
+        "impressions": 246,
         "likes": 2,
         "comments": 0,
         "shares": 0,
         "reactions": {
           "LIKE": 2
         },
+        "commentsList": [],
         "reactionsList": [
           {
             "author": "Libby Wareing",
@@ -895,10 +939,19 @@
       "chars": 137,
       "angle": "Personal endorsement + summary of the mod",
       "metrics_twitter": {
-        "impressions": 28,
+        "impressions": 29,
         "likes": 0,
         "comments": 0,
         "shares": 0
+      },
+      "metrics": {
+        "likes": 0,
+        "retweets": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 28,
+        "last_checked": "2026-08-20T15:19:58.721Z"
       }
     },
     {
@@ -916,10 +969,19 @@
       "account": "personal",
       "platform_id": "2086697893218472308",
       "metrics_twitter": {
-        "impressions": 18,
+        "impressions": 25,
         "likes": 0,
         "comments": 0,
         "shares": 0
+      },
+      "metrics": {
+        "likes": 0,
+        "retweets": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 24,
+        "last_checked": "2026-08-20T15:19:58.936Z"
       }
     },
     {
@@ -936,13 +998,14 @@
       "method": "voyager",
       "platform_id": "urn:li:fsd_share:urn:li:share:7492462614753599488",
       "metrics_linkedin": {
-        "impressions": 163,
+        "impressions": 365,
         "likes": 2,
         "comments": 0,
         "shares": 0,
         "reactions": {
           "LIKE": 2
         },
+        "commentsList": [],
         "reactionsList": [
           {
             "author": "Richard Alexandr Batista",
@@ -957,7 +1020,7 @@
         ]
       },
       "deltas": {
-        "impressions": 6,
+        "impressions": 0,
         "likes": 0
       }
     }
@@ -1003,7 +1066,7 @@
       "chars": 222,
       "blog_slug": "monopolising-modified-variations",
       "metrics_twitter": {
-        "impressions": 58,
+        "impressions": 61,
         "likes": 0,
         "comments": 0,
         "shares": 1
@@ -1175,7 +1238,7 @@
       "url": "https://x.com/ModdableGames/status/2081968991464034491",
       "platform_id": "2081968991464034491",
       "metrics_twitter": {
-        "impressions": 25,
+        "impressions": 32,
         "likes": 1,
         "comments": 0,
         "shares": 0
@@ -1197,7 +1260,7 @@
       "url": "https://x.com/ModdableGames/status/2081992980953502088",
       "platform_id": "2081992980953502088",
       "metrics_twitter": {
-        "impressions": 20,
+        "impressions": 28,
         "likes": 1,
         "comments": 0,
         "shares": 1
@@ -1215,10 +1278,32 @@
       "id": "mg-013826",
       "platform_id": "2085764446476013826",
       "metrics_twitter": {
-        "impressions": 12,
+        "impressions": 25,
         "likes": 0,
         "comments": 0,
         "shares": 0
+      }
+    },
+    {
+      "id": "roundup-2026-08-15",
+      "type": "roundup",
+      "content": "260 commits across 4 repos this week.\n\n→ 14 new playable variants (bringing total to 177)\n→ Shogi exploded: 5 → 13 variants in one sprint\n→ New movement primitives: locust, bent, hopper, lame leaper\n→ 4-player support: chess + shogi end-to-end playable\n→ Create Page: design your own variant in-browser, test it live\n→ 9 new MCP tools (bringing total to 85)\n\nAll open-source. https://engine.moddable.games",
+      "platforms": [
+        "twitter"
+      ],
+      "status": "posted",
+      "posted": "2026-08-15",
+      "posted_by": "pipeline",
+      "platform_id": "2088551384614363516",
+      "url": "https://x.com/ModdableGames/status/2088551384614363516",
+      "method": "cookie",
+      "created": "2026-08-15",
+      "notes": "Trimmed from full draft to fit 280 chars. Movement primitives line dropped.",
+      "metrics_twitter": {
+        "impressions": 23,
+        "likes": 1,
+        "comments": 0,
+        "shares": 1
       }
     }
   ]

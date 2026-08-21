@@ -1,0 +1,36 @@
+{
+  "target": "Street Group Careers",
+  "send_from": "mark@smalley.my",
+  "subject": "Application: Senior Product Manager - SaaS (Cortex)",
+  "status": "draft",
+  "created": "2026-08-21",
+  "variant": "cto",
+  "company": "Street Group",
+  "role": "Senior Product Manager - SaaS",
+  "date": "21 August 2026",
+  "opening": "I am writing to apply for the Senior Product Manager role at Street Group. I have spent 15 years building and shipping technology products across blockchain infrastructure, developer platforms, and AI-augmented systems. My experience spans the full product lifecycle from discovery through to production operation, and I bring both the technical depth and commercial awareness this role requires.",
+  "proof_points": [
+    {
+      "requirement": "B2B/SaaS product strategy with measurable commercial impact",
+      "evidence": "At Neuroware I owned the product roadmap for a B2B blockchain infrastructure platform. Grew from proof-of-concept to production deployment across multiple enterprise clients, directly driving revenue through API subscriptions and managed infrastructure services."
+    },
+    {
+      "requirement": "AI-driven strategy and integration",
+      "evidence": "Currently applying AI-augmented engineering methodology across all my work. Built autonomous agent orchestration systems (Researcher and Builder routines on cloud infrastructure) that manage multi-repository production pipelines. Shipped a complete game engine framework using LLM-augmented development at architecture quality in 16 days."
+    },
+    {
+      "requirement": "Stakeholder management across engineering, design, data and leadership",
+      "evidence": "As CTO and CBO across multiple companies, I have operated as the bridge between technical teams and business leadership. At Oviato I worked directly with DraperVC investors, legal counsel, and distributed engineering teams simultaneously. At Neuroware I managed relationships with the Securities Commission Malaysia while coordinating a 12-person engineering team across three countries."
+    },
+    {
+      "requirement": "Customer discovery and translating insights into priorities",
+      "evidence": "The Ordzaar product I prototyped became CakeDefi's fifth business vertical specifically because it was built from direct market observation of what NFT traders needed on Bitcoin. My protocol designs (DN-Key, Everstore) were adopted by regulated custody providers because I prioritised understanding their compliance constraints before writing code."
+    },
+    {
+      "requirement": "Autonomous working in fast-paced environments",
+      "evidence": "As a founder and solo technical leader, I operate with full autonomy by default. My recent Moddable project (535 commits, 16 days, four-layer architecture across six repositories) demonstrates the capacity to move at startup speed while maintaining production quality and strategic coherence."
+    }
+  ],
+  "body": "What draws me to Street Group is the combination of AI-first product thinking within an established PropTech vertical. I understand the challenge of integrating AI capabilities into existing workflows without disrupting the value that customers already rely on. My experience building developer tools and platform infrastructure gives me a strong mental model for how AI workflows should be designed: as composable capabilities that augment human decision-making rather than replace it.",
+  "closing": "I am UK-based in West Yorkshire, immediately available, and comfortable with hybrid working in Manchester. I would welcome the opportunity to discuss how my product leadership and AI integration experience could contribute to the Cortex product area."
+}

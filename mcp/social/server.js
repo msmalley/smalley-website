@@ -13,6 +13,7 @@ import { getPostInsights, reactToContent, verifySession as verifyLinkedInSession
 import { searchLinkedInJobs, fetchLinkedInJobDescription } from './providers/linkedin-jobs.js';
 import { searchCryptoJobs } from './providers/job-boards.js';
 import { searchWeb3Career } from './providers/web3-career.js';
+import { searchIndeed, fetchIndeedJobDescription } from './providers/indeed.js';
 import { listInbox, searchMessages, readMessage, archiveMessages, trashMessages, replyToMessage, sendEmail } from './providers/email.js';
 import { readFileSync, writeFileSync } from 'fs';
 import { fileURLToPath } from 'url';
@@ -96,7 +97,7 @@ const TOOLS = [
   },
   {
     name: 'social_search_jobs',
-    description: 'Search job listings across multiple sources: LinkedIn (public guest API), crypto.jobs (RSS), web3.career (API). Returns job titles, companies, locations, and links.',
+    description: 'Search job listings across multiple sources: LinkedIn (public guest API), crypto.jobs (RSS), web3.career (API), Indeed UK. Returns job titles, companies, locations, and links.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -115,8 +116,8 @@ const TOOLS = [
         },
         source: {
           type: 'string',
-          enum: ['linkedin', 'crypto.jobs', 'web3.career', 'all'],
-          description: 'Which source to search. Default: all (searches LinkedIn guest API + crypto.jobs RSS + web3.career API)'
+          enum: ['linkedin', 'crypto.jobs', 'web3.career', 'indeed', 'all'],
+          description: 'Which source to search. Default: all (searches LinkedIn guest API + crypto.jobs RSS + web3.career API + Indeed UK)'
         },
         workplace: {
           type: 'string',
@@ -189,13 +190,18 @@ const TOOLS = [
   },
   {
     name: 'social_job_detail',
-    description: 'Fetch the full job description for a LinkedIn job by its numeric ID (from search results). Returns title, company, location, and full description text.',
+    description: 'Fetch the full job description for a job by its ID (from search results). Supports LinkedIn (numeric ID) and Indeed (hex ID). Returns title, company, location, and full description text.',
     inputSchema: {
       type: 'object',
       properties: {
         job_id: {
           type: 'string',
-          description: 'LinkedIn job numeric ID (from search results job_id field or URL)'
+          description: 'Job ID from search results (LinkedIn numeric ID or Indeed hex ID)'
+        },
+        source: {
+          type: 'string',
+          enum: ['linkedin', 'indeed'],
+          description: 'Which source the job ID is from. Default: auto-detect (numeric = LinkedIn, hex = Indeed)'
         }
       },
       required: ['job_id']
@@ -550,6 +556,24 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
           }
         }
 
+        if (source === 'indeed' || source === 'all') {
+          try {
+            const ind = await searchIndeed({
+              keywords: args.keywords,
+              location: args.location || 'United Kingdom',
+              posted_within: args.posted_within
+            });
+            if (ind.blocked) {
+              results.sources.push('indeed_uk (blocked: Cloudflare Turnstile — use WebFetch in Claude Code)');
+            } else {
+              results.sources.push('indeed_uk');
+              results.jobs.push(...ind.jobs);
+            }
+          } catch (e) {
+            results.sources.push(`indeed_uk (error: ${e.message})`);
+          }
+        }
+
         results.total = results.jobs.length;
         result = results;
         break;
@@ -577,9 +601,15 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         }
         break;
 
-      case 'social_job_detail':
-        result = await fetchLinkedInJobDescription(args.job_id);
+      case 'social_job_detail': {
+        const jobSource = args.source || (/^[a-f0-9]+$/i.test(args.job_id) && !/^\d+$/.test(args.job_id) ? 'indeed' : 'linkedin');
+        if (jobSource === 'indeed') {
+          result = await fetchIndeedJobDescription(args.job_id);
+        } else {
+          result = await fetchLinkedInJobDescription(args.job_id);
+        }
         break;
+      }
 
       case 'social_insights': {
         const isTwitter = args.platform === 'twitter' ||

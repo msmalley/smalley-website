@@ -7,13 +7,13 @@
 <meta name="robots" content="noindex, nofollow">
 <style>html{background:#0B0F1A}body{opacity:0;transition:opacity .15s ease}</style>
 <title>Chess Variants That Defeated Conventional AI Logic — Mark Smalley</title>
-<meta name="description" content="What happens when you ask AI to generate puzzles for 76 different chess rule systems. Three categories of challenge that broke every assumption.">
+<meta name="description" content="What happens when you ask AI to generate puzzles for 135 different chess rule systems. Three categories of challenge that broke every assumption.">
 <link rel="canonical" href="https://smalley.my/thoughts/chess-variants-that-defeated-ai/">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="../../img/apple-touch-icon.png">
-<link rel="stylesheet" href="../../css/_sm.css?v=1.0.35">
-<link rel="stylesheet" href="../../css/thoughts.css?v=1.0.35">
-<link rel="stylesheet" href="../../css/pages.css?v=1.0.35">
+<link rel="stylesheet" href="../../css/_sm.css?v=1.0.36">
+<link rel="stylesheet" href="../../css/thoughts.css?v=1.0.36">
+<link rel="stylesheet" href="../../css/pages.css?v=1.0.36">
 </head>
 <body>
 <div id="nav-root"></div>
@@ -34,7 +34,7 @@
 
       <p>Every single one of those 6 million puzzles is standard chess. Lichess supports variant play (Atomic, Crazyhouse, Antichess, and others) but offers zero variant-specific puzzles. No other platform does either. The formula that generates millions of standard puzzles does not transfer.</p>
 
-      <p>"Find the move that exploits THIS variant's unique mechanic" requires an engine that understands 76 different win conditions, move filters, and game mechanics, then identifies positions with exactly one correct answer. During development of the <a href="https://chess.moddable.games" target="_blank" rel="noopener">Moddable Chess Engine</a>, several variant families broke every assumption the puzzle generator was built on.</p>
+      <p>"Find the move that exploits THIS variant's unique mechanic" requires an engine that understands 135 different win conditions, move filters, and game mechanics, then identifies positions with exactly one correct answer. During development of the <a href="https://engine.moddable.games" target="_blank" rel="noopener">Moddable Engine</a>, several variant families broke every assumption the puzzle generator was built on. The engine now supports <a href="https://engine.moddable.games/play/" target="_blank" rel="noopener">playing any variant</a> in-browser and even <a href="https://engine.moddable.games/create/" target="_blank" rel="noopener">designing your own</a>.</p>
 
       <h2>When Losing is Winning</h2>
 
@@ -150,11 +150,11 @@ moveFilter: (moves, state) => {
 
       <div class="reveal number-grid">
         <div class="number-card"><div class="number-value" data-accent="teal">1,000+</div><div class="number-label">Puzzles generated</div></div>
-        <div class="number-card"><div class="number-value" data-accent="violet">66</div><div class="number-label">Variants with puzzles</div></div>
+        <div class="number-card"><div class="number-value" data-accent="violet">131</div><div class="number-label">Variants with puzzles</div></div>
         <div class="number-card"><div class="number-value" data-accent="gold">4</div><div class="number-label">Removed (paradoxical)</div></div>
       </div>
 
-      <p>Three lessons emerged from building puzzle generation across 76 chess variants simultaneously:</p>
+      <p>Three lessons emerged from building puzzle generation across 135 chess variants simultaneously:</p>
 
       <p><strong>Axioms are invisible until you violate them.</strong> The assumption that "more material is good" is not written anywhere in a chess engine's architecture explicitly. It is assumed by every layer at once: the evaluation function, the search heuristics, the move ordering, and the pruning decisions all encode it implicitly. You only discover the axiom exists when a variant contradicts it and the entire stack produces nonsense output.</p>
 
@@ -163,6 +163,8 @@ moveFilter: (moves, state) => {
       <p><strong>Some problems are not problems at all.</strong> The information paradox variants were not bugs in the generator that could be fixed with more engineering effort. They were category errors in the task definition itself. Recognising "this task is incoherent as specified" is a valid and important engineering output. The correct action was removing those variants from the puzzle pool entirely, not building an ever more sophisticated generator to produce output that cannot logically exist.</p>
 
       <p>Six million standard chess puzzles exist because the generation formula is universal within standard chess. Variant puzzles require solving the formula from scratch for each individual ruleset. That is why nobody else has built them, and why doing so required confronting assumptions that decades of chess programming never had reason to question. Sometimes the most important thing an engineering system can learn is precisely where the universal formula ends and the per-variant work must begin.</p>
+
+      <p>The engine now supports 135 variants, and the <a href="https://engine.moddable.games/create/" target="_blank" rel="noopener">Create page</a> lets anyone design their own variant in-browser and test it live against the puzzle generator. Every variant you create inherits the same puzzle infrastructure. The formula adapts to your rules, not the other way around.</p>
 
       <div class="article-tags">
         <a class="pill" href="../../explore/?tag=AI/LLM">AI/LLM</a>
@@ -178,7 +180,7 @@ moveFilter: (moves, state) => {
 </section>
 
 <div id="footer-root"></div>
-<script src="../../js/sm-loader.js?v=1.0.35"></script>
-<script src="../../js/sm-puzzle-embed.js?v=1.0.35"></script>
+<script src="../../js/sm-loader.js?v=1.0.36"></script>
+<script src="../../js/sm-puzzle-embed.js?v=1.0.36"></script>
 </body>
 </html>

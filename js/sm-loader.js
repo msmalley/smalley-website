@@ -1,5 +1,5 @@
 (function() {
-  var V = '1.0.36';
+  var V = '1.0.37';
   var scripts = document.querySelectorAll('script[src*="sm-loader.js"]');
   var src = scripts[scripts.length - 1].getAttribute('src');
   var base = src.replace(/sm-loader\.js.*$/, '');

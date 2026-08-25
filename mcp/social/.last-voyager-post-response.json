@@ -5,12 +5,12 @@
       "_type": "com.linkedin.31e5b20342a1ab99f89c8b5ecf8eef50",
       "createContentcreationDashShares": {
         "_type": "ShareCreateResponse",
-        "resourceKey": "urn:li:fsd_share:urn:li:share:7496532242333204480",
+        "resourceKey": "urn:li:fsd_share:urn:li:share:7498007536420438016",
         "_recipeType": "com.linkedin.0048dc457d67e0871f2997a20b14381e",
         "entity": {
           "_type": "com.linkedin.voyager.dash.contentcreation.Share",
           "_recipeType": "com.linkedin.942189bf171eb1a81a94bba9a67307ee",
-          "entityUrn": "urn:li:fsd_share:urn:li:share:7496532242333204480",
+          "entityUrn": "urn:li:fsd_share:urn:li:share:7498007536420438016",
           "scheduledAt": null,
           "status": {
             "_type": "com.linkedin.voyager.dash.contentcreation.ShareStatus",
@@ -22,8 +22,8 @@
                   "updateActions": {
                     "_type": "com.linkedin.voyager.dash.feed.controlmenu.UpdateActions",
                     "_recipeType": "com.linkedin.06af007e7618c4214a3336f62ec97dd5",
-                    "entityUrn": "urn:li:fsd_updateActions:(urn:li:activity:7496532242899341312,FEED_DETAIL,EMPTY,urn:li:reason:-,urn:li:adCreative:-)",
-                    "preDashEntityUrn": "urn:li:fs_updateV2Actions:(urn:li:activity:7496532242899341312,FEED_DETAIL,EMPTY,-,-)"
+                    "entityUrn": "urn:li:fsd_updateActions:(urn:li:activity:7498007537149997057,FEED_DETAIL,EMPTY,urn:li:reason:-,urn:li:adCreative:-)",
+                    "preDashEntityUrn": "urn:li:fs_updateV2Actions:(urn:li:activity:7498007537149997057,FEED_DETAIL,EMPTY,-,-)"
                   },
                   "actionTriggerEnabled": false,
                   "coachSummaryText": null,
@@ -31,7 +31,7 @@
                   "_type": "com.linkedin.voyager.dash.feed.metadata.UpdateMetadata",
                   "legoTrackingToken": null,
                   "_recipeType": "com.linkedin.aea822f2154815a887c2d330f6bca30f",
-                  "backendUrn": "urn:li:activity:7496532242899341312",
+                  "backendUrn": "urn:li:activity:7498007537149997057",
                   "coachSummaryUrn": null,
                   "trackingData": {
                     "_type": "com.linkedin.voyager.dash.feed.metadata.TrackingData",
@@ -39,11 +39,11 @@
                     "_recipeType": "com.linkedin.36b6cba0d083abfb9a57aceab1602f82",
                     "backendUrn": null,
                     "requestId": "no-request-id",
-                    "trackingId": "YWiR73xMTLWhnQ7EOsma7Q=="
+                    "trackingId": "Kpoooce2RPi3UFlUbpwVyQ=="
                   },
                   "detailPageType": "FEED_DETAIL",
                   "shouldForceRefetchFromNetwork": false,
-                  "shareUrn": "urn:li:share:7496532242333204480",
+                  "shareUrn": "urn:li:share:7498007536420438016",
                   "excludedFromSeen": true,
                   "coachAction": null,
                   "rootShare": true,
@@ -65,7 +65,7 @@
                   "hideReactAction": false,
                   "coachAction": null,
                   "hideCommentAction": false,
-                  "shareUrl": "https://www.linkedin.com/posts/msmalley_four-protocols-nine-years-one-design-philosophy-activity-7496532242899341312-O-hJ?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAACdVdIB7YToNQYYPrmybkkWAy1nGtJ3aW0",
+                  "shareUrl": "https://www.linkedin.com/posts/msmalley_building-the-machine-that-builds-your-career-activity-7498007537149997057-oCdh?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAACdVdIB7YToNQYYPrmybkkWAy1nGtJ3aW0",
                   "showContributionExperience": false
                 },
                 "showSocialDetail": true,
@@ -100,39 +100,39 @@
                               "c2paManifestData": null,
                               "artifacts": [
                                 {
-                                  "width": 480,
-                                  "_type": "com.linkedin.common.VectorArtifact",
-                                  "_recipeType": "com.linkedin.f385da71f8dd2241933389b0c592949f",
-                                  "fileIdentifyingUrlPathSegment": "480/B4EaAkIWCIJAAc-/0/1787312562995?e=1787918400&v=beta&t=WWMwHmHzXZLVVf0yQAJm4-y7bIoPDS-w_IteceUsN1M",
-                                  "expiresAt": 1787918400000,
-                                  "height": 252
-                                },
-                                {
                                   "width": 160,
                                   "_type": "com.linkedin.common.VectorArtifact",
                                   "_recipeType": "com.linkedin.f385da71f8dd2241933389b0c592949f",
-                                  "fileIdentifyingUrlPathSegment": "160/B4EaAkIWCIJAAY-/0/1787312562995?e=1787918400&v=beta&t=S3mLFSjOnBOptfyjbQfvq_x2bHYVXsAtoJCvX3Ia-6g",
-                                  "expiresAt": 1787918400000,
+                                  "fileIdentifyingUrlPathSegment": "160/B4EaAlXl5sGoAU-/0/1787333337807?e=1788271200&v=beta&t=1ye-EB3ugLrGwH6KMV6B_dQOjqnbu-JRLzop6bSgLBg",
+                                  "expiresAt": 1788271200000,
                                   "height": 84
                                 },
                                 {
                                   "width": 800,
                                   "_type": "com.linkedin.common.VectorArtifact",
                                   "_recipeType": "com.linkedin.f385da71f8dd2241933389b0c592949f",
-                                  "fileIdentifyingUrlPathSegment": "800/B4EaAkIWCIJAAg-/0/1787312562995?e=1787918400&v=beta&t=slH3yORniVbb4g3Lz286fgen0RJBBp3B5AV2sDal3p0",
-                                  "expiresAt": 1787918400000,
+                                  "fileIdentifyingUrlPathSegment": "800/B4EaAlXl5sGoAc-/0/1787333337807?e=1788271200&v=beta&t=CqkR6aqL-A3Xnj5PqcqK2LrFP6ExHKoeZwxNkzTLZI8",
+                                  "expiresAt": 1788271200000,
                                   "height": 420
                                 },
                                 {
                                   "width": 1200,
                                   "_type": "com.linkedin.common.VectorArtifact",
                                   "_recipeType": "com.linkedin.f385da71f8dd2241933389b0c592949f",
-                                  "fileIdentifyingUrlPathSegment": "1280_800/B4EaAkIWCIJAAo-/0/1787312562995?e=1787918400&v=beta&t=FvEkRUkREhq9e_Y47Go6KSQaNSoksFWw7Ey7iC0jem4",
-                                  "expiresAt": 1787918400000,
+                                  "fileIdentifyingUrlPathSegment": "1280_800/B4EaAlXl5sGoAk-/0/1787333337807?e=1788271200&v=beta&t=p8M2tIIlwwl_GahCGQUoY5wnujqRgZej9DOg1Zo5lDo",
+                                  "expiresAt": 1788271200000,
                                   "height": 630
+                                },
+                                {
+                                  "width": 480,
+                                  "_type": "com.linkedin.common.VectorArtifact",
+                                  "_recipeType": "com.linkedin.f385da71f8dd2241933389b0c592949f",
+                                  "fileIdentifyingUrlPathSegment": "480/B4EaAlXl5sGoAY-/0/1787333337807?e=1788271200&v=beta&t=wi_ZjAEtGqW3EyQKO2byiKhK6fyCfJ7GR-rYflYZF4I",
+                                  "expiresAt": 1788271200000,
+                                  "height": 252
                                 }
                               ],
-                              "rootUrl": "https://media.licdn.com/dms/image/sync/v2/D4E27AQG4K4_Ie3Djcg/articleshare-shrink_"
+                              "rootUrl": "https://media.licdn.com/dms/image/sync/v2/D4E27AQFgAwHEmc0e7w/articleshare-shrink_"
                             },
                             "nonEntityProfessionalEventLogo": null,
                             "profilePicture": null,
@@ -168,7 +168,7 @@
                     "title": {
                       "textDirection": "FIRST_STRONG",
                       "_type": "com.linkedin.voyager.dash.common.text.TextViewModel",
-                      "text": "Four Protocols, Nine Years, One Design Philosophy — Mark Smalley",
+                      "text": "Building the Machine That Builds Your Career",
                       "attributesV2": [],
                       "_recipeType": "com.linkedin.b4ee48b43c81d5e46fbd6ede9a34f2da",
                       "accessibilityTextAttributesV2": [],
@@ -176,7 +176,7 @@
                     },
                     "_recipeType": "com.linkedin.d07af781f26d61cd733d9fec385c1111",
                     "newsletterLogo": null,
-                    "articleUrn": "urn:li:article:8889374147147967399",
+                    "articleUrn": "urn:li:article:9191090492637916647",
                     "animatedOverlay": null,
                     "swapTitleAndSubtitle": false,
                     "newsletterTitle": null,
@@ -193,11 +193,11 @@
                     "subscribeAction": null,
                     "navigationContext": {
                       "_type": "com.linkedin.voyager.dash.feed.navigation.FeedNavigationContext",
-                      "actionTarget": "https://smalley.my/thoughts/protocol-design-lessons/",
+                      "actionTarget": "https://smalley.my/thoughts/building-the-machine-that-builds-your-career/",
                       "urlViewingBehavior": "DEFAULT",
                       "trackingActionType": "viewLink",
                       "_recipeType": "com.linkedin.4de40a108bcb3ef2632e9788871c3241",
-                      "accessibilityText": "Open article: Four Protocols, Nine Years, One Design Philosophy — Mark Smalley by smalley.my",
+                      "accessibilityText": "Open article: Building the Machine That Builds Your Career by smalley.my",
                       "sponsoredUrlAttributes": null
                     },
                     "showSmallTitle": false,
@@ -245,7 +245,7 @@
                 },
                 "attachment": null,
                 "detailHeader": null,
-                "entityUrn": "urn:li:fsd_update:(urn:li:activity:7496532242899341312,FEED_DETAIL,EMPTY,DEFAULT,false)",
+                "entityUrn": "urn:li:fsd_update:(urn:li:activity:7498007537149997057,FEED_DETAIL,EMPTY,DEFAULT,false)",
                 "leadGenFormContent": null,
                 "annotation": null,
                 "contextualHeader": null,
@@ -258,16 +258,16 @@
                 "socialDetail": {
                   "hideSocialCountsIfAllowed": false,
                   "socialPermissions": {
-                    "entityUrn": "urn:li:fsd_socialPermissions:(urn:li:activity:7496532242899341312,urn:li:fsd_profile:ACoAAACdVdIB7YToNQYYPrmybkkWAy1nGtJ3aW0)",
+                    "entityUrn": "urn:li:fsd_socialPermissions:(urn:li:activity:7498007537149997057,urn:li:fsd_profile:ACoAAACdVdIB7YToNQYYPrmybkkWAy1nGtJ3aW0)",
                     "messagePermission": "PUBLIC",
                     "canShare": true,
                     "canReact": true,
                     "_type": "com.linkedin.voyager.dash.social.SocialPermissions",
                     "canPostComments": true,
                     "_recipeType": "com.linkedin.a6ea0e594ecfe88c83998ae1d61a426a",
-                    "preDashEntityUrn": "urn:li:fs_socialPermissions:(urn:li:activity:7496532242899341312,urn:li:fs_profile:(ACoAAACdVdIB7YToNQYYPrmybkkWAy1nGtJ3aW0,en_US))"
+                    "preDashEntityUrn": "urn:li:fs_socialPermissions:(urn:li:activity:7498007537149997057,urn:li:fs_profile:(ACoAAACdVdIB7YToNQYYPrmybkkWAy1nGtJ3aW0,en_US))"
                   },
-                  "threadUrn": "urn:li:activity:7496532242899341312",
+                  "threadUrn": "urn:li:activity:7498007537149997057",
                   "quickComments": [],
                   "_type": "com.linkedin.voyager.dash.social.SocialDetail",
                   "socialPermissionsPersonalTopicUrn": null,
@@ -282,24 +282,24 @@
                     "numLikes": 0,
                     "_recipeType": "com.linkedin.c1bc2d8486b90f4bbc2aca26082e4504",
                     "liked": false,
-                    "urn": "urn:li:activity:7496532242899341312",
+                    "urn": "urn:li:activity:7498007537149997057",
                     "numComments": 0,
                     "highlightedReactorName": null,
                     "reactionTypeCounts": [],
-                    "entityUrn": "urn:li:fsd_socialActivityCounts:urn:li:activity:7496532242899341312",
+                    "entityUrn": "urn:li:fsd_socialActivityCounts:urn:li:activity:7498007537149997057",
                     "numShares": 0,
                     "numImpressions": null,
                     "reacted": null,
-                    "preDashEntityUrn": "urn:li:fs_socialActivityCounts:urn:li:activity:7496532242899341312"
+                    "preDashEntityUrn": "urn:li:fs_socialActivityCounts:urn:li:activity:7498007537149997057"
                   },
-                  "entityUrn": "urn:li:fsd_socialDetail:(urn:li:activity:7496532242899341312,urn:li:activity:7496532242899341312,urn:li:highlightedReply:-)",
+                  "entityUrn": "urn:li:fsd_socialDetail:(urn:li:activity:7498007537149997057,urn:li:activity:7498007537149997057,urn:li:highlightedReply:-)",
                   "socialUpdateType": "SHARE",
                   "reactionSummariesTopicUrn": null,
                   "commentsTopicUrn": null,
                   "reactionsTopicUrn": null,
                   "reshareUpdateUrn": null,
                   "socialDetailsTopicUrn": null,
-                  "preDashEntityUrn": "urn:li:fs_socialDetail:urn:li:activity:7496532242899341312",
+                  "preDashEntityUrn": "urn:li:fs_socialDetail:urn:li:activity:7498007537149997057",
                   "commentSocialPermissionsTopicUrn": null
                 },
                 "actor": {
@@ -580,7 +580,7 @@
                 "boostHeader": null,
                 "header": null,
                 "highlightedComments": [],
-                "preDashEntityUrn": "urn:li:fs_updateV2:(urn:li:activity:7496532242899341312,FEED_DETAIL,EMPTY,DEFAULT,false)",
+                "preDashEntityUrn": "urn:li:fs_updateV2:(urn:li:activity:7498007537149997057,FEED_DETAIL,EMPTY,DEFAULT,false)",
                 "commentary": {
                   "numLines": 3,
                   "_type": "com.linkedin.voyager.dash.feed.component.commentary.CommentaryComponent",
@@ -590,7 +590,7 @@
                   "text": {
                     "textDirection": "FIRST_STRONG",
                     "_type": "com.linkedin.voyager.dash.common.text.TextViewModel",
-                    "text": "Four protocols across nine years. One consistent design philosophy: borrow trust from systems people already believe in.\n\nIn 2016, I published DN-Key: broadcasting cryptographic public keys as DNS TXT records. Verification is a lookup. That's it. Adopted by regulated custody providers because compliance teams could understand it in one meeting. Cited by name in the Securities Commission Malaysia's capital markets blueprint.\n\nNine years later, the same protocol powers passkey-native, chain-agnostic identity across Bitcoin, EVM, and Solana. No modifications. No upgrades. It was forward-compatible with systems that didn't exist when it was written.\n\nThe gap between \"too simple to be interesting\" and \"simple enough to survive nine years of platform evolution\" is where protocol design actually lives.",
+                    "text": "Over 100 applications and yet every interview I've had came from people who read something I wrote, not from an ATS processing my CV.\n\nNew section added to the ongoing engineering journal: \"The Paradox of Visibility.\"\n\nThe machine that builds your career might not be the one that fills out applications, but might just be the one that makes your work legible.",
                     "attributesV2": [],
                     "_recipeType": "com.linkedin.b4ee48b43c81d5e46fbd6ede9a34f2da",
                     "accessibilityTextAttributesV2": [],
@@ -605,7 +605,7 @@
             "_recipeType": "com.linkedin.e2b1ec578cb220a50eb20709a77b3ad3",
             "feedbackData": {
               "toastComponent": {
-                "linkUrl": "https://www.linkedin.com/feed/update/urn:li:share:7496532242333204480",
+                "linkUrl": "https://www.linkedin.com/feed/update/urn:li:share:7498007536420438016",
                 "_type": "com.linkedin.voyager.dash.common.ux.InlineFeedbackViewModel",
                 "controlName": null,
                 "linkText": "View post",

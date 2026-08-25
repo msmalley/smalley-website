@@ -32092,7 +32092,7 @@
       "url": "https://finastra.wd3.myworkdayjobs.com/en-US/FINC/job/London/Director---AI---Innovation_REQ0625_0034225",
       "linkedin_job_id": null,
       "source": "workday",
-      "status": "applied",
+      "status": "declined",
       "applied_at": "2026-08-21",
       "discovered": "2026-08-21",
       "variant": "cto",
@@ -32109,7 +32109,8 @@
           "added": "2026-08-21"
         }
       },
-      "notes": "Applied via Workday automation. CV: CTO variant. Skills: Engineering Leadership, Blockchain, AI, Cloud Architecture, JavaScript."
+      "notes": "Applied via Workday automation. CV: CTO variant. Skills: Engineering Leadership, Blockchain, AI, Cloud Architecture, JavaScript.",
+      "declined_at": "2026-08-25"
     },
     {
       "company": "BBC",
@@ -32145,7 +32146,7 @@
       "url": "https://uk.indeed.com/viewjob?jk=99415af4d05cf1f4",
       "linkedin_job_id": null,
       "source": "indeed",
-      "status": "applied",
+      "status": "declined",
       "applied_at": "2026-08-21",
       "discovered": "2026-08-21",
       "variant": "cto",
@@ -32162,7 +32163,8 @@
           "added": "2026-08-21"
         }
       },
-      "notes": "Applied via Indeed Smart Apply. \u00a360-75k. Manchester hybrid. PropTech AI. Cover letter attached."
+      "notes": "Applied via Indeed Smart Apply. \u00a360-75k. Manchester hybrid. PropTech AI. Cover letter attached.",
+      "declined_at": "2026-08-25"
     },
     {
       "company": "Priority Crypto",
@@ -32198,7 +32200,7 @@
       "url": "https://www.linkedin.com/jobs/view/chief-product-and-technology-officer-at-definitive-4445487998/",
       "linkedin_job_id": "4445487998",
       "source": "linkedin",
-      "status": "applied",
+      "status": "declined",
       "applied_at": "2026-08-21",
       "discovered": "2026-08-20",
       "variant": "cto",
@@ -32216,7 +32218,8 @@
           "added": "2026-08-21"
         }
       },
-      "notes": "Applied via LinkedIn. DeFi infrastructure, cross-chain protocols, bridges, settlement. Remote EEA."
+      "notes": "Applied via LinkedIn. DeFi infrastructure, cross-chain protocols, bridges, settlement. Remote EEA.",
+      "declined_at": "2026-08-24"
     },
     {
       "company": "Mistral",
@@ -34155,7 +34158,128 @@
         }
       },
       "notes": "Applied via Workday wd5 (Travelers). Manual application."
+    },
+    {
+      "company": "Revolut",
+      "role": "Entrepreneur in Residence",
+      "location": "United Kingdom",
+      "url": "https://www.linkedin.com/jobs/view/4252982329/",
+      "linkedin_job_id": "4252982329",
+      "source": "linkedin",
+      "status": "applied",
+      "applied_at": "2026-08-25",
+      "discovered": "2026-08-25",
+      "variant": "cto",
+      "score": 82,
+      "id": "revolut-entrepreneur-in-residence-mt3x001",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "linkedin_job_id": "4252982329"
+      },
+      "notes": "EIR. Fintech. Launch/scale new products. P&L ownership. UK."
+    },
+    {
+      "company": "The Flex",
+      "role": "Entrepreneur in Residence (EIR)",
+      "location": "Manchester, England, United Kingdom",
+      "url": "https://www.linkedin.com/jobs/view/4436955114/",
+      "linkedin_job_id": "4436955114",
+      "source": "linkedin",
+      "status": "applied",
+      "applied_at": "2026-08-25",
+      "discovered": "2026-08-25",
+      "variant": "cto",
+      "score": 70,
+      "id": "the-flex-entrepreneur-in-residence-mt3x002",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "linkedin_job_id": "4436955114"
+      },
+      "notes": "EIR. Manchester."
+    },
+    {
+      "company": "University of Edinburgh",
+      "role": "Venture Creation Lead",
+      "location": "Edinburgh, Scotland, United Kingdom",
+      "url": "https://www.linkedin.com/jobs/view/4439232272/",
+      "linkedin_job_id": "4439232272",
+      "source": "linkedin",
+      "status": "applied",
+      "applied_at": "2026-08-25",
+      "discovered": "2026-08-25",
+      "variant": "cto",
+      "score": 72,
+      "id": "edinburgh-venture-creation-lead-mt3x003",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "linkedin_job_id": "4439232272"
+      },
+      "notes": "Edinburgh Innovations. Academic founders. AI/ML, SaaS, digital health. \u00a348-58k Grade 8."
+    },
+    {
+      "company": "AQA",
+      "role": "Solution Architect",
+      "location": "Manchester, England, United Kingdom",
+      "url": "https://uk.indeed.com/viewjob?jk=11b7576f29f2ebd7",
+      "linkedin_job_id": null,
+      "source": "indeed",
+      "status": "applied",
+      "applied_at": "2026-08-25",
+      "discovered": "2026-08-25",
+      "variant": "cto",
+      "score": 75,
+      "id": "aqa-solution-architect-mt3x004",
+      "channel": {
+        "source": "indeed",
+        "method": "direct_url",
+        "apply_url": "https://aqa.wd3.myworkdayjobs.com/en-US/AQA/jobTasks/completed/application"
+      },
+      "notes": "Applied via Workday wd3 (AQA). Manchester hybrid. \u00a373-85k. Cover letter + D&I answer attached."
+    },
+    {
+      "company": "AND Digital",
+      "role": "Contract Senior Microsoft Foundry AI Architect",
+      "location": "Leeds, England, United Kingdom",
+      "url": "https://www.linkedin.com/jobs/view/4454397836/",
+      "linkedin_job_id": "4454397836",
+      "source": "linkedin",
+      "status": "applied",
+      "applied_at": "2026-08-25",
+      "discovered": "2026-08-25",
+      "variant": "cto",
+      "score": 72,
+      "id": "and-digital-contract-ai-architect-mt3x005",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "linkedin_job_id": "4454397836"
+      },
+      "notes": "Contract. Leeds hybrid. Microsoft Foundry/Azure AI. Applied via LinkedIn Easy Apply."
+    },
+    {
+      "company": "Lloyds Banking Group",
+      "role": "Head of Engineering (Convo AI)",
+      "location": "Manchester / London, United Kingdom",
+      "url": "https://www.linkedin.com/jobs/view/4456347158/",
+      "linkedin_job_id": "4456347158",
+      "source": "linkedin",
+      "status": "applied",
+      "applied_at": "2026-08-25",
+      "discovered": "2026-08-25",
+      "variant": "cto",
+      "score": 82,
+      "id": "lloyds-head-of-engineering-convo-ai-mt3x006",
+      "channel": {
+        "source": "linkedin",
+        "method": "direct_url",
+        "apply_url": "https://lbg.wd3.myworkdayjobs.com/en-US/broadbean_external/jobTasks/completed/application",
+        "linkedin_job_id": "4456347158"
+      },
+      "notes": "Workday wd3 (LBG). Manchester/London hybrid. \u00a3126-163k. Conversational AI, agentic experiences."
     }
   ],
-  "updated": "2026-08-21"
+  "updated": "2026-08-25"
 }

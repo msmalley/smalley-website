@@ -1,0 +1,36 @@
+{
+  "target": "AQA Recruitment",
+  "send_from": "mark@smalley.my",
+  "subject": "Application: Solution Architect",
+  "status": "draft",
+  "created": "2026-08-25",
+  "variant": "cto",
+  "company": "AQA",
+  "role": "Solution Architect",
+  "date": "25 August 2026",
+  "opening": "I am writing to apply for the Solution Architect position at AQA. I bring 15 years of experience designing and delivering technology solutions across enterprise and startup environments, with particular depth in cloud architecture, API design, integration patterns, and platform modernisation.",
+  "proof_points": [
+    {
+      "requirement": "Extensive Solution Architect experience in complex enterprise settings",
+      "evidence": "As CTO at Neuroware (2013-2018) I designed the full technology architecture for a multi-product blockchain infrastructure platform: API gateways, microservices, database layers, authentication, and client-facing applications. At Oviato I architected a chain-agnostic identity layer spanning Bitcoin, Ethereum, and Solana with passkey/WebAuthN integration."
+    },
+    {
+      "requirement": "Knowledge of cloud platforms, integration methods, and modern technology frameworks",
+      "evidence": "I work daily with cloud infrastructure (AWS, Cloudflare Workers), CI/CD pipelines, containerisation, and serverless architecture. My current projects use multi-repository orchestration with autonomous agents managing build, test, and deploy across distributed systems. I design APIs, SDKs, and integration layers as core deliverables."
+    },
+    {
+      "requirement": "Strong communication and influence with diverse stakeholders",
+      "evidence": "I have presented to regulators (Securities Commission Malaysia), institutional investors (DraperVC, 500 Startups), enterprise clients, and engineering teams. I translate between technical and non-technical audiences as a daily practice, having operated as the bridge between business leadership and distributed engineering teams across three countries."
+    },
+    {
+      "requirement": "Balance strategic vision with practical implementation while managing legacy systems",
+      "evidence": "My recent Moddable project required decomposing a monolithic codebase into four cleanly separated layers (rules, engine, tools, web) while maintaining backwards compatibility throughout. I understand the reality of legacy constraints and the discipline of incremental migration over rewrites."
+    },
+    {
+      "requirement": "Collaborative, problem-solving approach",
+      "evidence": "I have built and led cross-functional teams from scratch, fostering collaborative delivery across engineering, product, and operations. My approach centres on making architectural decisions that simplify the work of everyone downstream, not just optimising for the architecture itself."
+    }
+  ],
+  "body": "What draws me to AQA is the opportunity to apply enterprise architecture thinking within an organisation whose work has genuine public impact. I am based in West Yorkshire, making Manchester hybrid working straightforward, and I value the structured approach to delivery governance that an organisation of AQA's maturity requires.",
+  "closing": "I am immediately available and would welcome the opportunity to discuss how my architecture and delivery experience could contribute to AQA's technology roadmap."
+}

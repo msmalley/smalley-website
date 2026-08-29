@@ -285,7 +285,7 @@
           },
           {
             "author": "Matías Cascallares",
-            "occupation": "Setting your data in motion",
+            "occupation": "OEM Technologist at Confluent, an IBM Company",
             "type": "LIKE"
           },
           {
@@ -707,12 +707,12 @@
       "url": "https://www.linkedin.com/feed/update/urn:li:fsd_share:urn:li:share:7496532242333204480/",
       "method": "voyager",
       "metrics_linkedin": {
-        "impressions": 193,
-        "likes": 5,
+        "impressions": 241,
+        "likes": 6,
         "comments": 1,
         "shares": 0,
         "reactions": {
-          "LIKE": 4,
+          "LIKE": 5,
           "INTEREST": 1
         },
         "commentsList": [
@@ -746,6 +746,11 @@
             "type": "LIKE"
           },
           {
+            "author": "Bikash Poudel",
+            "occupation": "Principal Security Engineer@Oracle; xIntel xFed",
+            "type": "LIKE"
+          },
+          {
             "author": "Colbert Low",
             "occupation": "Certified and Accredited Trainer (HRDCorp Malaysia). Organiser of Bitcoin Malaysia Conference 2024. Blockchain, Real World Assets (RWA), Stablecoins, WEB3 and AI Research.",
             "type": "LIKE"
@@ -753,7 +758,7 @@
         ]
       },
       "deltas": {
-        "impressions": 4,
+        "impressions": 7,
         "likes": 0
       }
     },
@@ -1019,7 +1024,7 @@
       "method": "voyager",
       "platform_id": "urn:li:fsd_share:urn:li:share:7492462614753599488",
       "metrics_linkedin": {
-        "impressions": 370,
+        "impressions": 372,
         "likes": 2,
         "comments": 0,
         "shares": 0,
@@ -1041,7 +1046,7 @@
         ]
       },
       "deltas": {
-        "impressions": 0,
+        "impressions": 1,
         "likes": 0
       }
     },
@@ -1063,10 +1068,14 @@
       "platform_id": "urn:li:share:7498007536420438016",
       "url": "https://www.linkedin.com/feed/update/urn:li:fsd_share:urn:li:share:7498007536420438016/",
       "metrics_linkedin": {
-        "impressions": 0,
+        "impressions": 321,
         "likes": 0,
         "comments": 0,
         "shares": 0
+      },
+      "deltas": {
+        "impressions": 72,
+        "likes": 0
       }
     },
     {
@@ -1087,7 +1096,7 @@
       "platform_id": "2092241699921678403",
       "url": "https://x.com/m_smalley/status/2092241699921678403",
       "metrics_twitter": {
-        "impressions": 2,
+        "impressions": 28,
         "likes": 0,
         "comments": 0,
         "shares": 0
@@ -1112,7 +1121,7 @@
       "chars": 224,
       "blog_slug": "conquering-the-constrains-of-chess",
       "metrics_twitter": {
-        "impressions": 30,
+        "impressions": 32,
         "likes": 1,
         "comments": 0,
         "shares": 1
@@ -1135,7 +1144,7 @@
       "chars": 222,
       "blog_slug": "monopolising-modified-variations",
       "metrics_twitter": {
-        "impressions": 62,
+        "impressions": 64,
         "likes": 0,
         "comments": 0,
         "shares": 1
@@ -1307,7 +1316,7 @@
       "url": "https://x.com/ModdableGames/status/2081968991464034491",
       "platform_id": "2081968991464034491",
       "metrics_twitter": {
-        "impressions": 32,
+        "impressions": 33,
         "likes": 1,
         "comments": 0,
         "shares": 0
@@ -1329,7 +1338,7 @@
       "url": "https://x.com/ModdableGames/status/2081992980953502088",
       "platform_id": "2081992980953502088",
       "metrics_twitter": {
-        "impressions": 28,
+        "impressions": 29,
         "likes": 1,
         "comments": 0,
         "shares": 1
@@ -1347,7 +1356,7 @@
       "id": "mg-013826",
       "platform_id": "2085764446476013826",
       "metrics_twitter": {
-        "impressions": 25,
+        "impressions": 26,
         "likes": 0,
         "comments": 0,
         "shares": 0
@@ -1369,7 +1378,7 @@
       "created": "2026-08-15",
       "notes": "Trimmed from full draft to fit 280 chars. Movement primitives line dropped.",
       "metrics_twitter": {
-        "impressions": 24,
+        "impressions": 25,
         "likes": 1,
         "comments": 0,
         "shares": 1

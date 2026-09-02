@@ -1876,7 +1876,7 @@
     {
       "id": "baillie-gifford-director-digital-assets--mte8ar4d",
       "added": "2026-08-29",
-      "status": "new",
+      "status": "applied",
       "company": "Baillie Gifford",
       "role": "Director, Digital Assets (Technical)",
       "location": "Edinburgh, Scotland, United Kingdom",
@@ -1926,7 +1926,7 @@
       "source": "linkedin",
       "linkedin_job_id": "4458011956",
       "cover_letter": null,
-      "notes": "Auto-discovered 2026-08-29. Posted: 2026-08-27.",
+      "notes": "Auto-discovered 2026-08-29. Posted: 2026-08-27. Applied 2026-09-02 via LinkedIn.",
       "channel": {
         "source": "linkedin",
         "method": "linkedin_apply",
@@ -1941,7 +1941,8 @@
         "action": "check_easy_apply",
         "notes": null,
         "_fetched": true
-      }
+      },
+      "applied": "2026-09-02"
     },
     {
       "id": "open-head-of-engineering-convo-ai--mte973pt",
@@ -2930,7 +2931,82 @@
         "action": "visit_and_apply",
         "notes": null
       }
+    },
+    {
+      "company": "MoonPay",
+      "role": "Senior Blockchain Platform Engineer",
+      "location": "London, England, United Kingdom",
+      "url": "https://www.linkedin.com/jobs/view/4455273904/",
+      "linkedin_job_id": "4455273904",
+      "variant": "cto",
+      "notes": "Applied 2026-09-02 via LinkedIn. Crypto payments infrastructure; hands-on blockchain platform work.",
+      "source": "linkedin",
+      "status": "applied",
+      "discovered": "2026-09-02",
+      "applied": "2026-09-02",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "unknown",
+          "days_old": null
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      }
+    },
+    {
+      "company": "Financial Conduct Authority",
+      "role": "Cryptoasset and Technology Policy Technical Specialist",
+      "location": "Leeds, England, United Kingdom",
+      "url": "https://www.linkedin.com/jobs/view/4457311187/",
+      "linkedin_job_id": "4457311187",
+      "variant": "regtech",
+      "notes": "Applied 2026-09-02 via LinkedIn. Regulator-side cryptoasset policy; strongest fit for the RegTech CV.",
+      "source": "linkedin",
+      "status": "applied",
+      "discovered": "2026-09-02",
+      "applied": "2026-09-02",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "unknown",
+          "days_old": null
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      }
+    },
+    {
+      "company": "Noah",
+      "role": "Forward Deployed Engineer (FDE) - Stablecoin Payments",
+      "location": "United Kingdom",
+      "url": "https://www.linkedin.com/jobs/view/4449003731/",
+      "linkedin_job_id": "4449003731",
+      "variant": "devrel",
+      "notes": "Applied 2026-09-02 via LinkedIn. Forward deployed engineering on stablecoin payments; customer-facing build work, closest to the DevRel CV.",
+      "source": "linkedin",
+      "status": "applied",
+      "discovered": "2026-09-02",
+      "applied": "2026-09-02",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "unknown",
+          "days_old": null
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      }
     }
   ],
-  "updated": "2026-08-21"
+  "updated": "2026-09-02"
 }

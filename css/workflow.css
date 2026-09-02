@@ -336,3 +336,10 @@ a.eco-card {
   .step-number { font-size: 24px; }
   .demo-embed-row { grid-template-columns: 1fr; }
 }
+
+/* Present-day counter to the historical snapshot above it. */
+.workflow-intro.workflow-now {
+  font-size: 0.95em;
+  opacity: 0.85;
+  margin-top: 12px;
+}

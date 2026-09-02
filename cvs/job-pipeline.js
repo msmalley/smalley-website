@@ -126,25 +126,75 @@ function updateStatus(jobId, newStatus) {
     process.exit(1);
   }
   job.status = newStatus;
-  if (newStatus === 'applied') job.applied_at = new Date().toISOString().split('T')[0];
+  const today = new Date().toISOString().split('T')[0];
+  if (newStatus === 'applied') job.applied_at = today;
+  // The dashboard computes response time from applied_at → declined_date, so a
+  // decline must stamp its own date or the response never gets measured.
+  if (newStatus === 'declined') job.declined_date = today;
 
-  // Auto-archive terminal statuses
-  const archiveStatuses = ['closed', 'rejected', 'applied', 'withdrawn'];
-  if (archiveStatuses.includes(newStatus)) {
-    const archivePath = path.resolve(__dirname, 'jobs-archive.json');
-    let archive = { jobs: [], updated: '' };
-    if (fs.existsSync(archivePath)) {
-      archive = JSON.parse(fs.readFileSync(archivePath, 'utf-8'));
-    }
-    archive.jobs.push(job);
-    archive.updated = new Date().toISOString().split('T')[0];
-    fs.writeFileSync(archivePath, JSON.stringify(archive, null, 2) + '\n');
-    data.jobs = data.jobs.filter(j => j.id !== job.id);
-    console.log(`Archived ${job.role} @ ${job.company} → jobs-archive.json`);
-  }
-
+  archiveIfTerminal(data, job);
   saveJobs(data);
   console.log(`Updated ${job.role} @ ${job.company} → ${newStatus}`);
+}
+
+const ARCHIVE_STATUSES = ['closed', 'rejected', 'applied', 'withdrawn', 'declined'];
+
+// Terminal statuses belong in jobs-archive.json regardless of which command set
+// them, so the same status never lives in two files depending on the path taken.
+function archiveIfTerminal(data, job) {
+  if (!ARCHIVE_STATUSES.includes(job.status)) return false;
+  const archivePath = path.resolve(__dirname, 'jobs-archive.json');
+  let archive = { jobs: [], updated: '' };
+  if (fs.existsSync(archivePath)) {
+    archive = JSON.parse(fs.readFileSync(archivePath, 'utf-8'));
+  }
+  archive.jobs = archive.jobs.filter(j => j.id !== job.id);
+  archive.jobs.push(job);
+  archive.updated = new Date().toISOString().split('T')[0];
+  fs.writeFileSync(archivePath, JSON.stringify(archive, null, 2) + '\n');
+  data.jobs = data.jobs.filter(j => j.id !== job.id);
+  console.log(`Archived ${job.role} @ ${job.company} → jobs-archive.json`);
+  return true;
+}
+
+function recordOutcome(opts) {
+  const data = loadJobs();
+  const norm = v => (v || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+  const existing = data.jobs.find(j =>
+    norm(j.company) === norm(opts.company) && norm(j.role) === norm(opts.role));
+
+  // A job we never captured a description for must not carry match data. Scoring
+  // a reconstructed description would put invented requirements into the pipeline
+  // and skew every average that reads score.
+  const job = existing || { id: generateId(opts.company, opts.role) };
+  Object.assign(job, {
+    added: opts.applied || job.added || new Date().toISOString().split('T')[0],
+    company: opts.company,
+    role: opts.role,
+    location: opts.location || job.location || null,
+    status: opts.status,
+    jd_verified: false,
+    score: null,
+    scores: null,
+    confidence: null,
+    requirements_found: null,
+    matched: null,
+    proof_points: [],
+    gaps: [],
+    source_url: opts.url || job.source_url || null,
+    reference: opts.ref || job.reference || null,
+    notes: opts.notes || job.notes || ''
+  });
+  if (opts.applied) job.applied_at = opts.applied;
+  if (opts.outcomeDate && opts.status === 'declined') job.declined_date = opts.outcomeDate;
+  if (!existing) data.jobs.push(job);
+  archiveIfTerminal(data, job);
+  saveJobs(data);
+
+  console.log(`${existing ? 'Updated' : 'Recorded'}: ${job.role} @ ${job.company} → ${job.status}`);
+  console.log(`  no verified JD, so score and match data are left null`);
+  console.log(`  id: ${job.id}`);
+  return job;
 }
 
 const command = process.argv[2];
@@ -167,6 +217,20 @@ switch (command) {
   }
   case 'list': {
     listJobs(arg);
+    break;
+  }
+  case 'record': {
+    const flag = n => { const i = process.argv.indexOf('--' + n); return i > -1 ? process.argv[i + 1] : null; };
+    const company = flag('company'), role = flag('role'), status = flag('status');
+    if (!company || !role || !status) {
+      console.error('Usage: node job-pipeline.js record --company X --role Y --status declined [--ref R] [--applied YYYY-MM-DD] [--outcome-date YYYY-MM-DD] [--location L] [--url U] [--notes "..."]');
+      process.exit(1);
+    }
+    recordOutcome({
+      company, role, status,
+      ref: flag('ref'), applied: flag('applied'), outcomeDate: flag('outcome-date'),
+      location: flag('location'), url: flag('url'), notes: flag('notes')
+    });
     break;
   }
   case 'status': {
@@ -199,6 +263,8 @@ switch (command) {
   node job-pipeline.js cover <job-id>                   Generate cover letter
   node job-pipeline.js list [status|variant]            List tracked jobs
   node job-pipeline.js status <job-id> <new-status>    Update job status
+  node job-pipeline.js record --company X --role Y --status S   Record a historical
+                                                        outcome with no verified JD
   node job-pipeline.js enrich [classify|fetch|emails]   Enrich jobs with channel data
 `);
 }

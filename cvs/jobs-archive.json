@@ -35013,7 +35013,77 @@
         "notes": null
       },
       "applied_at": "2026-08-30"
+    },
+    {
+      "id": "cgi-solutions-architect-mtk2rhld",
+      "added": "2026-09-02",
+      "status": "declined",
+      "company": "CGI",
+      "role": "Solutions Architect",
+      "location": "United Kingdom",
+      "variant": "cto",
+      "score": null,
+      "scores": null,
+      "confidence": null,
+      "requirements_found": null,
+      "matched": null,
+      "gaps": [],
+      "proof_points": [],
+      "source_url": null,
+      "cover_letter": null,
+      "notes": "Applied via CGI njoyn portal. Decline received 2026-09-02 to mark@neuroware.io. Original job description not captured and no longer retrievable, so this entry carries no match score.",
+      "jd_verified": false,
+      "reference": "J0826-0374",
+      "declined_date": "2026-09-02"
+    },
+    {
+      "id": "talensa-partners-digital-solutions-direc-mtk348g4",
+      "added": "2026-09-02",
+      "status": "applied",
+      "company": "Talensa Partners",
+      "role": "Digital Solutions Director - Digital Assets & Tokenisation",
+      "location": "London Area, United Kingdom - Flexible / Hybrid working",
+      "variant": "regtech",
+      "score": 68,
+      "scores": {
+        "cto": 57,
+        "regtech": 68,
+        "devrel": 48
+      },
+      "confidence": "high",
+      "requirements_found": 13,
+      "matched": 10,
+      "gaps": [
+        "Financial product management: Practical",
+        "experience preferred), sufficient to translate operational"
+      ],
+      "proof_points": [
+        {
+          "requirement": "Tokenized asset fundamentals: Understanding of how digital assets and tokenized financial assets are represented, issued and transferred",
+          "evidence": "Delivered blockchain and distributed ledger training and advisory to DBS Bank (Singapore) and Baker Hostetler (USA, 5-day intensive programme) covering compliance strategy, transaction monitoring, and digital asset custody"
+        },
+        {
+          "requirement": "Cross-team collaboration: Ability to work across legal, policy, technology and business teams, aligning diverse stakeholders to deliver integrated tokenized solutions",
+          "evidence": "Active contributor to Malaysia's national Digital Asset regulatory roadmap — engaged directly with SC and Bank Negara Malaysia stakeholders on Anti-Money Laundering (AML) and Know Your Customer (KYC) frameworks"
+        },
+        {
+          "requirement": "Market & regulatory education: Strong communication",
+          "evidence": "Founded and led Malaysia's foremost blockchain infrastructure and regulatory advisory practice for 13 years. R1 sat at the intersection of engineering, compliance, and policy, building production-grade digital asset systems for licensed operators while advising regulators on the frameworks that would govern them."
+        },
+        {
+          "requirement": "Experience in regulatory engagement and contributing to consultation responses, linking technical innovation with policy outcomes, would be beneficial",
+          "evidence": "Engaged directly with regulators to demonstrate technical compliance with emerging distributed ledger frameworks"
+        },
+        {
+          "requirement": "This individual will bring holistic digital assets and technology",
+          "evidence": "Advised on Project Castor — the Securities Commission's blockchain / Distributed Ledger Technology (DLT) blueprint that established Digital Asset Custodian requirements in Malaysian capital markets"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4462009668/",
+      "cover_letter": null,
+      "notes": "",
+      "applied_at": "2026-09-02"
     }
   ],
-  "updated": "2026-08-30"
+  "updated": "2026-09-02"
 }

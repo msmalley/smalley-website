@@ -52,6 +52,10 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 - ATS generator handles tabular and chip markup: build rows flatten to one self-describing line, stack keywords come out comma-separated
 - Moddable figures across all four CVs refreshed from the stats API: 89 MCP tools (the CVs claimed 41, and the ATS text still said 16), 204 playable variants across 10 families, ~2,900 commits. Replaces the retired "two engines" framing with the micro-kernel architecture, where a game is a configuration entry rather than code
 - 8 new job leads ingested (TraqCheck, Ethos BeathChapman, Skillsearch, InX, Keyrock, boxxe, Dex, Ihsan)
+- Moddable statistics now derive from the stats endpoint site-wide instead of being typed into pages. `sm-live.js` binds values through `data-stat` attributes and `{{stat:key|fallback}}` tokens in JSON prose, caches for an hour, falls back to inline values when the endpoint is unreachable, and skips the network entirely on pages with no bindings
+- Corrected every stale Moddable figure across the homepage, portfolio, open-source pages and data files. `/workflow/` and the 16-days article keep their May 2026 snapshot as a historical record, with the contradiction between the intro and its own numbers grid resolved
+- `job-pipeline.js` gains `record`, for logging an outcome where no job description was ever captured. It stores no score rather than inventing one from a reconstructed description
+- Declines now stamp `declined_date` and archive like other terminal statuses; the dashboard reads that field to measure response time and was never receiving it
 - Fixed `text-wrap: balance` leaking into print on every CV: the screen rules use element+class selectors that a bare `li` override could not beat, so each bullet carried an extra short line
 
 #### 2026-07-15

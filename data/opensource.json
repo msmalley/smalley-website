@@ -2,13 +2,13 @@
   {
     "slug": "moddable-chess-engine",
     "title": "Moddable Chess Engine",
-    "tagline": "Consumer game SDK — 71 variants, MCP tools, ESM architecture, AI with opening books",
+    "tagline": "Chess on the Moddable micro-kernel engine — {{stat:chessVariants|138}} variants, MCP tools, ESM architecture, AI with opening books",
     "role": "Creator",
     "category": "engine",
-    "description": "Consumer game framework (v0.9.7). 71 chess variants plus a reusable SDK that powers non-chess games. Native ESM, MCP server with 8 AI-callable tools, multi-depth AI with opening books, postMessage embed API, tiered plugin architecture. Dungeon Chess runs entirely on MCE without engine forks.",
+    "description": "Chess as a plugin family on the Moddable micro-kernel engine: {{stat:chessVariants|138}} variants share one set of movement primitives rather than carrying per-variant code. Native ESM, multi-depth AI with opening books, postMessage embed API, and a family-agnostic play SDK. Dungeon Chess runs entirely on the consumer APIs without engine forks.",
     "stats": [
-      { "value": "71", "label": "variants" },
-      { "value": "8", "label": "MCP tools" }
+      { "value": "{{stat:chessVariants|138}}", "label": "chess variants" },
+      { "value": "{{stat:tools|89}}", "label": "MCP tools" }
     ],
     "tech": ["JavaScript", "SVG", "Web Worker AI", "Consumer SDK", "MCP", "ESM"],
     "repo": "https://github.com/Moddable-Games/moddable-chess",
@@ -19,13 +19,13 @@
   {
     "slug": "moddable-hexmaps",
     "title": "Moddable Hexmaps",
-    "tagline": "Seeded procedural hex maps — 6 games, Consumer SDK, MCP tools, PNG/PDF/SVG export",
+    "tagline": "Seeded procedural hex maps on the Moddable engine — Consumer SDK, MCP tools, PNG/PDF/SVG export",
     "role": "Creator",
     "category": "engine",
-    "description": "Hex map framework (v1.0.0) with seeded procedural generation, Consumer SDK (createMapController), 6 games, 4 render styles, PNG/PDF/SVG export, MCP tools, hex metadata, and URL parameter API.",
+    "description": "Hex as a first-class topology on the Moddable engine, with seeded procedural generation, Consumer SDK (createMapController), 4 render styles, PNG/PDF/SVG export, MCP tools, hex metadata, and a URL parameter API.",
     "stats": [
-      { "value": "6", "label": "games" },
-      { "value": "6", "label": "MCP tools" }
+      { "value": "{{stat:hexVariants|8}}", "label": "hex variants" },
+      { "value": "{{stat:tools|89}}", "label": "MCP tools" }
     ],
     "tech": ["JavaScript", "Canvas", "SVG", "Consumer SDK", "MCP", "Seeded RNG"],
     "repo": "https://github.com/Moddable-Games/moddable-hexmaps",
@@ -39,11 +39,11 @@
     "tagline": "Intelligent document pagination with orphan prevention",
     "role": "Creator",
     "category": "engine",
-    "description": "Pagination system that measures rendered element heights, groups headings atomically, enforces page-fill minimums, and assembles multi-section documents. Powers 37 game families with 315 rule files producing 2,974 indexed pages. Pure DOM measurement, no wkhtmltopdf.",
+    "description": "Pagination system that measures rendered element heights, groups headings atomically, enforces page-fill minimums, and assembles multi-section documents. Powers {{stat:games|46}} games, producing {{stat:pdfs|665}} rulebook PDFs across {{stat:pages|9,765}} indexed pages. Pure DOM measurement, no wkhtmltopdf.",
     "stats": [
-      { "value": "2,974", "label": "pages assembled" },
+      { "value": "{{stat:pages|9,765}}", "label": "pages assembled" },
       { "value": "0", "label": "orphaned elements" },
-      { "value": "155", "label": "variant PDFs generated" }
+      { "value": "{{stat:pdfs|665}}", "label": "PDFs generated" }
     ],
     "tech": ["JavaScript", "Puppeteer", "DOM measurement", "pdfunite"],
     "repo": "https://github.com/Moddable-Games/moddable-rules",

@@ -50,8 +50,9 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 - Fourth CV variant (Full Stack), targeting senior/staff/lead and engineering manager roles: capability band, selected-builds table, layered stack matrix, emerald/graphite palette
 - `generate-pdfs.js` no longer wipes `dist/` on every run; it was deleting every generated cover letter alongside the CVs it rebuilt
 - ATS generator handles tabular and chip markup: build rows flatten to one self-describing line, stack keywords come out comma-separated
-- Regenerated ATS text for all variants, which had drifted from their HTML sources (16 → 41 MCP tools, chess engine v0.9.1 → v0.9.7, hexmaps v0.8.1 → v1.0.0)
+- Moddable figures across all four CVs refreshed from the stats API: 89 MCP tools (the CVs claimed 41, and the ATS text still said 16), 204 playable variants across 10 families, ~2,900 commits. Replaces the retired "two engines" framing with the micro-kernel architecture, where a game is a configuration entry rather than code
 - 8 new job leads ingested (TraqCheck, Ethos BeathChapman, Skillsearch, InX, Keyrock, boxxe, Dex, Ihsan)
+- Fixed `text-wrap: balance` leaking into print on every CV: the screen rules use element+class selectors that a bare `li` override could not beat, so each bullet carried an extra short line
 
 #### 2026-07-15
 - Dashboard: KV store monitoring for Moddable Games (subscriber + mod submission tracking from Cloudflare KV)

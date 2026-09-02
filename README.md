@@ -46,6 +46,31 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 
 ## Changelog
 
+#### 2026-09-02
+- Fourth CV variant (Full Stack), targeting senior/staff/lead and engineering manager roles: capability band, selected-builds table, layered stack matrix, emerald/graphite palette
+- `generate-pdfs.js` no longer wipes `dist/` on every run; it was deleting every generated cover letter alongside the CVs it rebuilt
+- ATS generator handles tabular and chip markup: build rows flatten to one self-describing line, stack keywords come out comma-separated
+- Moddable figures across all four CVs refreshed from the stats API: 89 MCP tools (the CVs claimed 41, and the ATS text still said 16), 204 playable variants across 10 families, ~2,900 commits. Replaces the retired "two engines" framing with the micro-kernel architecture, where a game is a configuration entry rather than code
+- 8 new job leads ingested (TraqCheck, Ethos BeathChapman, Skillsearch, InX, Keyrock, boxxe, Dex, Ihsan)
+- Engine embeds now run through the Tools SDK via `sm-engine-embed.js`, fetching families and variants from the API at load. The modules it replaces hand-rolled iframes around a typed-in list and offered 6 chess variants where the engine serves 135
+- Workflow page gains a Moddable layer cake section covering the four-repository stack (rules, engine, tools, web), each layer live-bound and linking to the architecture write-up
+- Moddable case study consolidated onto one engine: a single embed frame carrying every family and variant, with the live frontmatter definition beside it
+- Retired `sm-chess-embed.js` and `sm-hex-embed.js`
+- Hex embed style lists corrected against the engine's own `registerGame()` declarations. Restored the theme-matched `bg` parameter and made embeds re-render when the theme flips
+- Fixed the underlying engine bug these embeds exposed: hex tile styles never reached the renderer, so every style except Twilight's rendered as flat colour. Fixed upstream in moddable-engine, which also restores tile art on moddable.games
+- CGI Solutions Architect decline and the Talensa Partners and Jobgether applications recorded; 84 applications sent, 19 responses
+- Moddable statistics now derive from the stats endpoint site-wide instead of being typed into pages. `sm-live.js` binds values through `data-stat` attributes and `{{stat:key|fallback}}` tokens in JSON prose, caches for an hour, falls back to inline values when the endpoint is unreachable, and skips the network entirely on pages with no bindings
+- Corrected every stale Moddable figure across the homepage, portfolio, open-source pages and data files. `/workflow/` and the 16-days article keep their May 2026 snapshot as a historical record, with the contradiction between the intro and its own numbers grid resolved
+- `job-pipeline.js` gains `record`, for logging an outcome where no job description was ever captured. It stores no score rather than inventing one from a reconstructed description
+- Declines now stamp `declined_date` and archive like other terminal statuses; the dashboard reads that field to measure response time and was never receiving it
+- Fixed `text-wrap: balance` leaking into print on every CV: the screen rules use element+class selectors that a bare `li` override could not beat, so each bullet carried an extra short line
+
+#### 2026-07-15
+- Dashboard: KV store monitoring for Moddable Games (subscriber + mod submission tracking from Cloudflare KV)
+- Job pipeline: `applied_at` timestamp now stamped on status transition; backfilled 16 existing applications
+- Job pipeline: archived 47 terminal-status jobs from jobs.json to jobs-archive.json (pipeline stays current)
+- Fixed dashboard "applications this week" counter to use `applied_at` instead of ingestion date
+
 #### 2026-07-13
 - Application sprint: 9 new applications (BNY, Mastercard, Wintermute, Sotheby's, Malt, Novera, Bestman, Sanderson King, Ably). 12 total, 0 responses.
 - DevRel cover letter template (plum/violet, Space Grotesk) matching cv_devrel styling
@@ -55,12 +80,6 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 - Bug fix: social_post now auto-persists platform_id to pipeline.json (was silently lost)
 - 7 new job leads ingested (ClearBank, Harrington Starr, Bullish, CoinDesk, Kast, TradingHub, Dex)
 - 5 expired opportunities tracked, 8 rejected
-
-#### 2026-07-15
-- Dashboard: KV store monitoring for Moddable Games (subscriber + mod submission tracking from Cloudflare KV)
-- Job pipeline: `applied_at` timestamp now stamped on status transition; backfilled 16 existing applications
-- Job pipeline: archived 47 terminal-status jobs from jobs.json to jobs-archive.json (pipeline stays current)
-- Fixed dashboard "applications this week" counter to use `applied_at` instead of ingestion date
 
 #### 2026-07-06
 - Job pipeline hygiene: role-type filter on ingest (rejects IC devs, sales, marketing, junior roles), company alias dedup (Tether/Tether Operations Limited), regex patterns for edge cases. Pipeline 351 → 210 relevant jobs.

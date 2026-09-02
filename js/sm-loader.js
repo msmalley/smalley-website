@@ -1,5 +1,5 @@
 (function() {
-  var V = '1.0.38';
+  var V = '1.0.43';
   var scripts = document.querySelectorAll('script[src*="sm-loader.js"]');
   var src = scripts[scripts.length - 1].getAttribute('src');
   var base = src.replace(/sm-loader\.js.*$/, '');
@@ -21,7 +21,8 @@
     'sm-related.js',
     'sm-sidebar.js',
     'sm-codeblocks.js',
-    'sm-transitions.js'
+    'sm-transitions.js',
+    'sm-live.js'
   ];
   for (var i = 0; i < modules.length; i++) {
     document.write('<script src="' + base + modules[i] + '?v=' + V + '"><\/script>');

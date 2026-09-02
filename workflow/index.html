@@ -12,16 +12,16 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://smalley.my/workflow/">
 <meta property="og:site_name" content="Mark Smalley">
-<meta property="og:image" content="https://smalley.my/img/og/workflow.jpg?v=1.0.38">
+<meta property="og:image" content="https://smalley.my/img/og/workflow.jpg?v=1.0.43">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Augmented Workflows — Mark Smalley">
 <meta name="twitter:description" content="AI-augmented engineering at startup speed. Architecture-first development with AI as a force multiplier.">
-<meta name="twitter:image" content="https://smalley.my/img/og/workflow.jpg?v=1.0.38">
+<meta name="twitter:image" content="https://smalley.my/img/og/workflow.jpg?v=1.0.43">
 <link rel="canonical" href="https://smalley.my/workflow/">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
-<link rel="stylesheet" href="../css/_sm.css?v=1.0.38">
-<link rel="stylesheet" href="../css/workflow.css?v=1.0.38">
+<link rel="stylesheet" href="../css/_sm.css?v=1.0.43">
+<link rel="stylesheet" href="../css/workflow.css?v=1.0.43">
 </head>
 <body>
 <div id="nav-root"></div>
@@ -38,7 +38,8 @@
   <div class="container">
     <div class="eyebrow">The Numbers</div>
     <div class="section-title">16 Days, One Ecosystem</div>
-    <p class="workflow-intro">In May 2026, I built Moddable Games from zero to production: a complete open-source games studio with two game engines, 37 game families, 41 AI-callable MCP tools, Consumer SDKs, and a 2,974-page rulebook pipeline. 535 commits across 10+ repositories in the initial 16-day sprint, all of which can be audited, forked or downloaded from GitHub. <a href="../thoughts/16-days-one-ecosystem/">Read the full story.</a></p>
+    <p class="workflow-intro">In May 2026, I built Moddable Games from zero to production: a complete open-source games studio with two game engines, 37 game families, 16 AI-callable MCP tools, Consumer SDKs, and a 2,974-page rulebook pipeline. 535 commits across 10+ repositories in the initial 16-day sprint, all of which can be audited, forked or downloaded from GitHub. <a href="../thoughts/16-days-one-ecosystem/">Read the full story.</a></p>
+    <p class="workflow-intro workflow-now">The figures below are the state at the end of that sprint. Since then the two engines have been consolidated into a single micro-kernel, and the ecosystem now stands at <span data-stat="variants">204</span> playable variants across <span data-stat="families">10</span> families, <span data-stat="tools">89</span> MCP tools, and <span data-stat="pages">9,765</span> rulebook pages. <a href="../portfolio/moddable/">See where it is now.</a></p>
     <div class="numbers-grid reveal">
       <div class="number-card">
         <div class="number-value" data-accent="teal">535</div>
@@ -71,7 +72,7 @@
 <section class="workflow-what">
   <div class="container">
     <div class="eyebrow">What Was Built</div>
-    <div class="section-title">The Ecosystem</div>
+    <div class="section-title">The Ecosystem, May 2026</div>
     <div class="ecosystem-grid reveal">
       <a class="eco-card" href="../open-source/moddable-chess-engine/">
         <div class="eco-icon" data-accent="teal"></div>
@@ -199,21 +200,45 @@
   </div>
 </section>
 
+<section class="workflow-cake">
+  <div class="container">
+    <div class="eyebrow">How It Works Now</div>
+    <div class="section-title">The Moddable Layer Cake</div>
+    <p class="workflow-intro">The two engines above were the May 2026 shape. What replaced them is a four-repository stack where each layer has exactly one job and depends only on the layer below it. Nothing reaches sideways or upward. The reframing that made it possible: if content is structured data rather than code, the rendering layer holds no knowledge, so it can be thrown away and rebuilt without losing anything.</p>
+    <div class="cake-grid reveal">
+      <div class="cake-layer" data-accent="gold">
+        <div class="cake-layer-name">Rules</div>
+        <a class="cake-layer-host" href="https://rules.moddable.games" target="_blank" rel="noopener">rules.moddable.games</a>
+        <p class="cake-layer-desc">Pure structured content and zero code. <span data-stat="games">46</span> games, <span data-stat="ruleVariants">296</span> variants, <span data-stat="oracleTables">458</span> oracle tables, and <span data-stat="entities">3,385</span> entities as markdown and YAML frontmatter, behind a machine-readable API.</p>
+      </div>
+      <div class="cake-layer" data-accent="violet">
+        <div class="cake-layer-name">Engine</div>
+        <a class="cake-layer-host" href="https://engine.moddable.games" target="_blank" rel="noopener">engine.moddable.games</a>
+        <p class="cake-layer-desc">Resolves rule definitions into playable states with as little code as possible. <span data-stat="variants">204</span> playable variants across <span data-stat="families">10</span> families over six topologies, covered by <span data-stat="tests">6,527</span> tests. A new variant is a frontmatter file.</p>
+      </div>
+      <div class="cake-layer" data-accent="teal">
+        <div class="cake-layer-name">Tools</div>
+        <a class="cake-layer-host" href="https://tools.moddable.games" target="_blank" rel="noopener">tools.moddable.games</a>
+        <p class="cake-layer-desc">The only private repository, and the value layer. <span data-stat="tools">89</span> MCP tools, a REST API, a JavaScript SDK, and embeddable widgets wrapping the engine into services: puzzle generation, AI opponents, board rendering, oracle composition.</p>
+      </div>
+      <div class="cake-layer" data-accent="violet">
+        <div class="cake-layer-name">Web</div>
+        <a class="cake-layer-host" href="https://moddable.games" target="_blank" rel="noopener">moddable.games</a>
+        <p class="cake-layer-desc">A static site generator consuming tools through iframes and API calls. All content in JSON and markdown, zero game logic. Disposable by design, which is the point.</p>
+      </div>
+    </div>
+    <p class="workflow-intro workflow-now">Each layer is independently deployable on its own subdomain. The engine does not need the web to function, and an AI agent can play a full game through MCP without a browser. <a href="../thoughts/the-moddable-layer-cake/">Read the full architecture write-up.</a></p>
+  </div>
+</section>
+
 <section class="workflow-demo">
   <div class="container">
     <div class="eyebrow">Try It</div>
     <div class="section-title">Live Engine Demos</div>
-    <p class="workflow-intro">Both engines are embeddable anywhere with a single iframe and URL parameters. These are live. Play a game or generate a map right here.</p>
-    <div class="demo-embed-row reveal">
-      <div class="demo-embed-col">
-        <div class="demo-embed" id="chess-demo-workflow"></div>
-        <p class="demo-caption">Chess engine: switch variants above</p>
-      </div>
-      <div class="demo-embed-col">
-        <div class="demo-embed" id="hex-demo-workflow"></div>
-        <p class="demo-caption">Hexmap engine: switch games and styles above</p>
-      </div>
-    </div>
+    <p class="workflow-intro">These run on the stack described above, embedded through the same Tools SDK that <a href="https://moddable.games" target="_blank" rel="noopener">moddable.games</a> uses. The family and variant lists are fetched live from the Tools API rather than typed into this page, so everything the engine can play is here.</p>
+    <div class="engine-embed reveal" data-engine-embed="play" data-definition="true" data-family="chess" data-variant="standard" data-height="560"></div>
+    <p class="workflow-intro">Hex maps are generators rather than rule variants, so they sit outside the play API:</p>
+    <div class="engine-embed reveal" data-engine-embed="hex" data-height="520"></div>
   </div>
 </section>
 
@@ -257,8 +282,7 @@
 </section>
 
 <div id="footer-root"></div>
-<script src="../js/sm-loader.js?v=1.0.38"></script>
-<script src="../js/sm-chess-embed.js?v=1.0.38"></script>
-<script src="../js/sm-hex-embed.js?v=1.0.38"></script>
+<script src="../js/sm-loader.js?v=1.0.43"></script>
+<script type="module" src="../js/sm-engine-embed.js?v=1.0.43"></script>
 </body>
 </html>

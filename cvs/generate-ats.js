@@ -8,10 +8,36 @@ const cvs = [
   { file: 'cv_cto.html', out: 'Mark-Smalley-CV-CTO.txt' },
   { file: 'cv_regtech.html', out: 'Mark-Smalley-CV-RegTech.txt' },
   { file: 'cv_devrel.html', out: 'Mark-Smalley-CV-DevRel.txt' },
+  { file: 'cv_fullstack.html', out: 'Mark-Smalley-CV-FullStack.txt' },
 ];
 
 function stripHtml(html) {
   html = html.replace(/<head[\s\S]*?<\/head>/gi, '');
+  // Builds table: a parser reading cell-per-line sees disconnected fragments,
+  // so flatten each row into one self-describing sentence and drop the header.
+  html = html.replace(/<thead[\s\S]*?<\/thead>/gi, '');
+  html = html.replace(/<span class="b-year">([^<]*)<\/span>/gi, ' ($1)');
+  html = html.replace(/<span class="ref-name">([^<]*)<\/span>/gi, '$1 — ');
+  // Stack chips carry the keywords an ATS scans for, so they must come out
+  // comma-separated on one line per layer rather than run together.
+  html = html.replace(/<div class="layer-items">([\s\S]*?)<\/div>/gi, (m, items) => {
+    const chips = [];
+    items.replace(/<span class="chip">([\s\S]*?)<\/span>/gi, (cm, chip) => {
+      chips.push(chip.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim());
+      return '';
+    });
+    return `<p>${chips.join(', ')}</p>`;
+  });
+  html = html.replace(/<div class="layer-name">([^<]*)<\/div>/gi, '$1: ');
+  html = html.replace(/<tr>([\s\S]*?)<\/tr>/gi, (m, row) => {
+    const cells = [];
+    row.replace(/<td[^>]*>([\s\S]*?)<\/td>/gi, (cm, cell) => {
+      cells.push(cell.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim());
+      return '';
+    });
+    if (cells.length < 4) return m;
+    return `<p>${cells[0]} — ${cells[1]}. Stack: ${cells[2]}. Outcome: ${cells[3]}.</p>`;
+  });
   html = html.replace(/<style[\s\S]*?<\/style>/gi, '');
   html = html.replace(/<script[\s\S]*?<\/script>/gi, '');
   html = html.replace(/<span class="sep">[^<]*<\/span>/gi, ' · ');

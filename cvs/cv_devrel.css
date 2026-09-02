@@ -370,5 +370,8 @@ body {
   .ref-name { font-size: 12px; }
   .ref-detail { font-size: 9.5px; }
   p { orphans: 3; widows: 3; }
-  li { text-wrap: auto; }
+  /* These selectors set text-wrap: balance for screen; a bare `li` cannot
+     override them, so balanced wrapping was leaking into print and padding
+     each bullet with an extra short line. */
+  .content-list li, .job ul li { text-wrap: auto; }
 }

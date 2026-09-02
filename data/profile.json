@@ -67,9 +67,9 @@
       "active": true,
       "summary": "AI-augmented engineering methodology applied to framework-level architecture. Complete open-source product ecosystem at solo-founder velocity.",
       "proof_points": [
-        "Extensible plugin architecture: two engines, Consumer SDKs, 16 AI-callable MCP tools, developer docs",
+        "Micro-kernel architecture: a game is a configuration entry, not code — {{stat:variants|204}} playable variants across {{stat:families|10}} families",
         "Built second product (Dungeon Chess) entirely on framework's consumer APIs — zero engine forks",
-        "First board game MCP server: 16 tools, Cloudflare Worker, MCP + REST + OpenAPI + llms.txt",
+        "First board game MCP server: {{stat:tools|89}} tools, Cloudflare Worker, MCP + REST + OpenAPI + llms.txt",
         "535 commits across 10+ repositories in 16 days",
         "Autonomous CI pipeline: structured issue queue, research and implementation agents on cloud infrastructure",
         "Full API design: REST, OpenAPI spec, llms.txt, consumer SDK interfaces",

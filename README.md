@@ -46,6 +46,19 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 
 ## Changelog
 
+#### 2026-09-02
+- Fourth CV variant (Full Stack), targeting senior/staff/lead and engineering manager roles: capability band, selected-builds table, layered stack matrix, emerald/graphite palette
+- `generate-pdfs.js` no longer wipes `dist/` on every run; it was deleting every generated cover letter alongside the CVs it rebuilt
+- ATS generator handles tabular and chip markup: build rows flatten to one self-describing line, stack keywords come out comma-separated
+- Regenerated ATS text for all variants, which had drifted from their HTML sources (16 → 41 MCP tools, chess engine v0.9.1 → v0.9.7, hexmaps v0.8.1 → v1.0.0)
+- 8 new job leads ingested (TraqCheck, Ethos BeathChapman, Skillsearch, InX, Keyrock, boxxe, Dex, Ihsan)
+
+#### 2026-07-15
+- Dashboard: KV store monitoring for Moddable Games (subscriber + mod submission tracking from Cloudflare KV)
+- Job pipeline: `applied_at` timestamp now stamped on status transition; backfilled 16 existing applications
+- Job pipeline: archived 47 terminal-status jobs from jobs.json to jobs-archive.json (pipeline stays current)
+- Fixed dashboard "applications this week" counter to use `applied_at` instead of ingestion date
+
 #### 2026-07-13
 - Application sprint: 9 new applications (BNY, Mastercard, Wintermute, Sotheby's, Malt, Novera, Bestman, Sanderson King, Ably). 12 total, 0 responses.
 - DevRel cover letter template (plum/violet, Space Grotesk) matching cv_devrel styling
@@ -55,12 +68,6 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 - Bug fix: social_post now auto-persists platform_id to pipeline.json (was silently lost)
 - 7 new job leads ingested (ClearBank, Harrington Starr, Bullish, CoinDesk, Kast, TradingHub, Dex)
 - 5 expired opportunities tracked, 8 rejected
-
-#### 2026-07-15
-- Dashboard: KV store monitoring for Moddable Games (subscriber + mod submission tracking from Cloudflare KV)
-- Job pipeline: `applied_at` timestamp now stamped on status transition; backfilled 16 existing applications
-- Job pipeline: archived 47 terminal-status jobs from jobs.json to jobs-archive.json (pipeline stays current)
-- Fixed dashboard "applications this week" counter to use `applied_at` instead of ingestion date
 
 #### 2026-07-06
 - Job pipeline hygiene: role-type filter on ingest (rejects IC devs, sales, marketing, junior roles), company alias dedup (Tether/Tether Operations Limited), regex patterns for edge cases. Pipeline 351 → 210 relevant jobs.

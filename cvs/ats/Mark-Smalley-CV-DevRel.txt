@@ -36,11 +36,11 @@ Written & Published
 
 Open Source & Developer Community
 
-• Moddable Chess Engine (chess.moddable.games) — open-source game framework (v0.9.1): 70 chess variants, Consumer SDK (native ESM), 8 MCP tools, renderer hooks, game controller, replay API, and unit templates. Dungeon Chess runs entirely on MCE without engine forks. Tiered plugin system, developer guides, AI with opening books for 26 variants
+• Moddable Chess Engine (chess.moddable.games) — open-source game framework (v0.9.7): 71 chess variants, Consumer SDK (native ESM), 8 MCP tools, renderer hooks, game controller, replay API, and unit templates. Dungeon Chess runs entirely on MCE without engine forks. Tiered plugin system, developer guides, AI with opening books for 26 variants
 
-• Moddable Hexmaps (hex.moddable.games) — open-source hex map framework (v0.8.1): Consumer SDK (createMapController), 6 games, 4 render styles, seeded procedural generation, 6 MCP tools, PNG/PDF/SVG export, and URL param API
+• Moddable Hexmaps (hex.moddable.games) — open-source hex map framework (v1.0.0): Consumer SDK (createMapController), 6 games, 4 render styles, seeded procedural generation, 6 MCP tools, PNG/PDF/SVG export, and URL param API
 
-• MCP Tools Server (tools.moddable.games) — first board game engine MCP server: 16 AI-callable tools, MCP + REST + OpenAPI + llms.txt, Cloudflare Worker on free tier. Connect with one command from Claude Desktop, Cursor, or VS Code
+• MCP Tools Server (tools.moddable.games) — first board game engine MCP server: 41 AI-callable tools, MCP + REST + OpenAPI + llms.txt, Cloudflare Worker on free tier. Connect with one command from Claude Desktop, Cursor, or VS Code
 
 • SADO Protocol (github.com/sadoprotocol) — co-authored open-source, self-authenticating decentralised order-book for Bitcoin Ordinals; adopted by Ordzaar and third-party exchanges
 
@@ -76,17 +76,17 @@ CEO & Founder — Moddable Limited — United Kingdom
 
 Open-source games studio shipping developer-facing engines, Consumer SDKs, MCP tools, and documentation, built entirely using AI-augmented engineering workflows. Deployed the first board game engine MCP server and a full Developers section with API docs, SDK demos, and integration examples.
 
-• Evolved Moddable Chess (v0.9.1) from a 70-variant chess engine into a consumer game SDK with native ESM, and built Dungeon Chess entirely on its consumer APIs (4 factions, custom rendering, AI) without engine forks
+• Evolved Moddable Chess (v0.9.7) from a 71-variant chess engine into a consumer game SDK with native ESM, and built Dungeon Chess entirely on its consumer APIs (4 factions, custom rendering, AI) without engine forks
 
-• Published Moddable Hexmaps (v0.8.1) with Consumer SDK (createMapController), 6 games, 4 render styles, and 6 MCP tools. Built PDF pagination engine for 190+ page rulebook libraries
+• Published Moddable Hexmaps (v1.0.0) with Consumer SDK (createMapController), 6 games, 4 render styles, and 6 MCP tools. Built PDF pagination engine producing 2,974 indexed pages across 37 game families
 
-• Deployed tools.moddable.games — first board game MCP server: 16 AI-callable tools across 2 engines, MCP + REST + OpenAPI + llms.txt. One-command connection from Claude Desktop, Cursor, VS Code
+• Deployed tools.moddable.games — first board game MCP server: 41 AI-callable tools across 2 engines, MCP + REST + OpenAPI + llms.txt. One-command connection from Claude Desktop, Cursor, VS Code
 
 • Wrote developer documentation spanning plugins (Build a Variant, Crazyhouse, Poison Chess), consumer integration (Dungeon Chess guide), full API reference, SDK demo page, and a Developers section with connection guides and build examples
 
 • Built the entire product suite using LLM-driven development at production scale: native ESM, zero build step, same source serves browser + Worker + Node.js
 
-• Designed reproducible AI automation pipeline: typed issue queue across 6 repositories with labels routing work through research and implementation agents on cloud infrastructure. No terminal, no machine running. A workflow pattern applicable to any developer team shipping at scale
+• Designed autonomous agent orchestration: Researcher and Builder routines on cloud infrastructure manage a 6-repo production pipeline via label-triggered coordination. Research agents verify sources; Builder agents branch, implement, and merge. A reproducible pattern applicable to any developer team shipping at scale
 
 Head of Engineering — CakeDefi — Singapore
 

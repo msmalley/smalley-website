@@ -16,3 +16,10 @@ cvs/jobs-discovery-history.json
 cvs/jobs-scored.json
 dashboard/
 .wrangler/
+
+# Full Stack CV — kept out of the public repo (see CLAUDE.md)
+cvs/cv_fullstack.css
+cvs/html/cv_fullstack.html
+cvs/dist/Mark-Smalley-CV-FullStack.pdf
+cvs/dist/cv_fullstack.png
+cvs/ats/Mark-Smalley-CV-FullStack.txt

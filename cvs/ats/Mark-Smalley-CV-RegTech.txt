@@ -100,7 +100,7 @@ Technical studio applying AI-augmented engineering to algorithmic decision syste
 
 • Designed and shipped multi-depth search algorithms (iterative deepening, transposition tables, pattern recognition) and procedural generation systems — architectures directly transferable to algorithmic compliance scoring and transaction monitoring
 
-• Built extensible plugin architecture and SDK platform with LLM-driven workflows, maintaining solo-founder velocity across 10+ concurrent repositories. Regulatory engagement model maps directly onto EU MiCA consultation process, FCA sandbox programmes, and PRA supervisory frameworks
+• Built extensible plugin architecture and SDK platform with LLM-driven workflows, maintaining solo-founder velocity across 10+ concurrent repositories. Deployed autonomous agent orchestration (Researcher + Builder routines) managing a multi-repo production pipeline via label-triggered coordination on cloud infrastructure
 
 === Domain Expertise ===
 

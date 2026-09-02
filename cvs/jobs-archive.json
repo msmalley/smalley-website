@@ -34907,7 +34907,113 @@
         "notes": null,
         "_fetched": true
       }
+    },
+    {
+      "id": "linkedin-4439050291-applied-via-linkedin-mtfga817",
+      "added": "2026-08-30",
+      "status": "applied",
+      "company": "LinkedIn-4439050291",
+      "role": "Applied via LinkedIn",
+      "location": "UK",
+      "variant": "cto",
+      "score": 78,
+      "scores": {
+        "cto": 78,
+        "regtech": 53,
+        "devrel": 54
+      },
+      "confidence": "high",
+      "requirements_found": 21,
+      "matched": 14,
+      "gaps": [
+        "S and are someone who understands the nuance of B2B product development.You're a first-principles thinker.",
+        "(Hybrid) Head of Engineering: B2B Saa",
+        "S Platform – Up to £140k (base)Imagine building the engineering function that will take a profitable, revenue generating Saa",
+        "That's the challenge on the table.My client is an established B2B Saa",
+        "S platform with millions in annual revenue, real customers, and no VC funding pressure.",
+        "S and are someone who understands the nuance of B2B product development.You're a first-principles thinker.",
+        "You're data-driven, can challenge up with gravitas, and bring an objective, easy-going communication style that builds trust across the business.You're experimenting with AI beyond just the basics."
+      ],
+      "proof_points": [
+        {
+          "requirement": "Beyond the basics, you'll embed AI-assisted tools and workflows across the engineering team, improving development cycles, code quality, and team productivity.Partner across product and the business.",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "Take over day to day engineering leadership, including 1:1s, career progression frameworks, performance management, and hiring.",
+          "evidence": "Cross-functional team leadership, hiring, technical roadmap, stakeholder management, hands-on (P4→M3)"
+        },
+        {
+          "requirement": "Establish lightweight but rigorous delivery rituals, engineering metrics, and technical decision-making frameworks.Drive systematic AI adoption.",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 41 AI-callable MCP tools, 37 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "Interface with product and commercial teams to ensure engineering is a strategic partner, not a delivery factory.",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "experience building software engineering teams within an early stage startup.You've worked in B2B Saa",
+          "evidence": "Co-founded and led the technical pivot from consumer app to passkey-native wallet infrastructure provider, building on prototype work from Project Eden (weekend hackathon → production architecture). The pivot secured DraperVC investment."
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4439050291/",
+      "source": "linkedin",
+      "linkedin_job_id": "4439050291",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-08-30. Posted: unknown.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4439050291/",
+        "contact_email": null,
+        "linkedin_job_id": "4439050291",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-08-30"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      },
+      "applied_at": "2026-08-30"
+    },
+    {
+      "id": "indeed-36f7d5597603a572-applied-via-inde-mtfga81f",
+      "added": "2026-08-30",
+      "status": "applied",
+      "company": "Indeed-36f7d5597603a572",
+      "role": "Applied via Indeed",
+      "location": "UK",
+      "variant": null,
+      "score": null,
+      "scores": null,
+      "confidence": null,
+      "requirements_found": null,
+      "matched": null,
+      "gaps": [],
+      "proof_points": [],
+      "source_url": "https://uk.indeed.com/viewjob?jk=36f7d5597603a572",
+      "source": "indeed",
+      "linkedin_job_id": "36f7d5597603a572",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-08-30. Posted: unknown.",
+      "channel": {
+        "source": "indeed",
+        "method": null,
+        "apply_url": null,
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-08-30"
+        },
+        "action": null,
+        "notes": null
+      },
+      "applied_at": "2026-08-30"
     }
   ],
-  "updated": "2026-08-29"
+  "updated": "2026-08-30"
 }

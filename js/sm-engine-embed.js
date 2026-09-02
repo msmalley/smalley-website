@@ -29,12 +29,16 @@ const engineBase = location.hostname === 'localhost'
 
 const tools = new ModdableTools({ base: 'https://tools.moddable.games', engineBase });
 
-/** Hex maps are generators rather than rule variants, so they are not in the play API. */
+/**
+ * Hex maps are generators rather than rule variants, so they are not in the play
+ * API and cannot be listed dynamically. These mirror the styles declared in
+ * moddable-engine/packages/hex-generators/src/*.js — keep them in step.
+ */
 const HEX_GAMES = [
-  { key: 'nukes',    label: 'Nukes',    desc: 'Area control across volcanic terrain', styles: ['artistic', 'classic', 'kenney', 'realistic'] },
-  { key: 'talisman', label: 'Talisman', desc: '5-ring fantasy adventure map',         styles: ['artistic', 'classic', 'kenney', 'realistic'] },
+  { key: 'nukes',    label: 'Nukes',    desc: 'Area control across volcanic terrain', styles: ['artistic', 'classic', 'kenney'] },
+  { key: 'talisman', label: 'Talisman', desc: '5-ring fantasy adventure map',         styles: ['artistic', 'classic', 'kenney'] },
   { key: 'twilight', label: 'Twilight', desc: 'Galactic strategy, planetary systems', styles: ['artistic', 'classic'] },
-  { key: 'colony',   label: 'Colony',   desc: 'Settlements, ports, and trade routes', styles: ['classic', 'kenney', 'realistic'] }
+  { key: 'colony',   label: 'Colony',   desc: 'Settlements, ports, and trade routes', styles: ['classic', 'kenney'] }
 ];
 
 /** Match the embed's canvas to the active site theme, as the engine paints it. */

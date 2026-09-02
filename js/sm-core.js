@@ -1,5 +1,5 @@
 window.SM = (() => {
-  const VERSION = '1.0.41';
+  const VERSION = '1.0.42';
   const META_BASE = (document.querySelector('meta[name="sm-base"]') || {}).content;
   const BASE = META_BASE != null ? META_BASE
     : location.pathname.includes('/personal/smalley-website')

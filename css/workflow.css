@@ -42,6 +42,7 @@
 .workflow-what,
 .workflow-how,
 .workflow-philosophy,
+.workflow-cake,
 .workflow-evidence {
   padding: 80px 0;
   border-bottom: 1px solid var(--sm-border);
@@ -319,6 +320,7 @@ a.eco-card {
   .workflow-what,
   .workflow-how,
   .workflow-philosophy,
+  .workflow-cake,
   .workflow-demo,
   .workflow-evidence { padding: 48px 0; }
   .workflow-hero { padding-top: 100px; text-align: center; }
@@ -355,7 +357,7 @@ a.eco-card {
 }
 .cake-layer {
   display: grid;
-  grid-template-columns: 120px 1fr;
+  grid-template-columns: 150px 1fr;
   align-items: baseline;
   gap: 4px 20px;
   padding: 18px 22px;
@@ -379,7 +381,9 @@ a.eco-card {
   font-size: 11px;
   color: var(--sm-faint);
   text-decoration: none;
-  word-break: break-all;
+  /* Hostnames have no spaces, so break-all split them mid-word. The column is
+     sized to hold the longest of them instead. */
+  white-space: nowrap;
 }
 .cake-layer-host:hover { color: var(--sm-teal); }
 .cake-layer-desc {
@@ -389,7 +393,7 @@ a.eco-card {
   font-size: 14px;
   line-height: 1.7;
   color: var(--sm-muted);
-  text-wrap: pretty;
+  text-wrap: balance;
 }
 @media (max-width: 768px) {
   .cake-layer {

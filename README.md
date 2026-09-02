@@ -56,6 +56,7 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 - Workflow page gains a Moddable layer cake section covering the four-repository stack (rules, engine, tools, web), each layer live-bound and linking to the architecture write-up
 - Moddable case study consolidated onto one engine: a single embed frame carrying every family and variant, with the live frontmatter definition beside it
 - Retired `sm-chess-embed.js` and `sm-hex-embed.js`
+- Hex embed style lists corrected against the engine's own `registerGame()` declarations; Talisman was missing kenney and realistic. Restored the theme-matched `bg` parameter and made embeds re-render when the theme flips
 - Moddable statistics now derive from the stats endpoint site-wide instead of being typed into pages. `sm-live.js` binds values through `data-stat` attributes and `{{stat:key|fallback}}` tokens in JSON prose, caches for an hour, falls back to inline values when the endpoint is unreachable, and skips the network entirely on pages with no bindings
 - Corrected every stale Moddable figure across the homepage, portfolio, open-source pages and data files. `/workflow/` and the 16-days article keep their May 2026 snapshot as a historical record, with the contradiction between the intro and its own numbers grid resolved
 - `job-pipeline.js` gains `record`, for logging an outcome where no job description was ever captured. It stores no score rather than inventing one from a reconstructed description

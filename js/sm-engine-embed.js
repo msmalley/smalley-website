@@ -32,10 +32,15 @@ const tools = new ModdableTools({ base: 'https://tools.moddable.games', engineBa
 /** Hex maps are generators rather than rule variants, so they are not in the play API. */
 const HEX_GAMES = [
   { key: 'nukes',    label: 'Nukes',    desc: 'Area control across volcanic terrain', styles: ['artistic', 'classic', 'kenney', 'realistic'] },
-  { key: 'talisman', label: 'Talisman', desc: '5-ring fantasy adventure map',         styles: ['artistic', 'classic'] },
+  { key: 'talisman', label: 'Talisman', desc: '5-ring fantasy adventure map',         styles: ['artistic', 'classic', 'kenney', 'realistic'] },
   { key: 'twilight', label: 'Twilight', desc: 'Galactic strategy, planetary systems', styles: ['artistic', 'classic'] },
   { key: 'colony',   label: 'Colony',   desc: 'Settlements, ports, and trade routes', styles: ['classic', 'kenney', 'realistic'] }
 ];
+
+/** Match the embed's canvas to the active site theme, as the engine paints it. */
+function themeBg() {
+  return document.documentElement.getAttribute('data-theme') === 'light' ? 'F8F9FC' : '0B0F1A';
+}
 
 function title(s) {
   return String(s).replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
@@ -134,7 +139,7 @@ async function initPlay(container) {
 
   function update() {
     tools.embed.play(frame, {
-      params: { game: familyEl.value, variant: variantEl.value },
+      params: { game: familyEl.value, variant: variantEl.value, bg: themeBg() },
       title: 'Moddable Engine: ' + title(familyEl.value) + ', ' + title(variantEl.value),
       height
     });
@@ -161,6 +166,7 @@ async function initPlay(container) {
     fill(familyEl, families.map(f => ({ value: f.name, label: title(f.name) })),
          container.dataset.family || 'chess');
     await loadVariants();
+    watchTheme(update);
   } catch (e) {
     // The engine surface still works without the tools API, so fall back to a
     // plain playable board rather than leaving an empty box.
@@ -189,7 +195,7 @@ function initHex(container) {
   function update() {
     const g = current();
     tools.embed.play(frame, {
-      params: { game: g.key, style: styleEl.value, random: '1' },
+      params: { game: g.key, style: styleEl.value, random: '1', bg: themeBg() },
       title: 'Moddable Engine: ' + g.label,
       height
     });
@@ -198,6 +204,14 @@ function initHex(container) {
 
   syncStyles();
   update();
+  watchTheme(update);
+}
+
+/** Re-render on theme flip so the embed canvas never sits on the wrong ground. */
+function watchTheme(onChange) {
+  new MutationObserver(onChange).observe(document.documentElement, {
+    attributes: true, attributeFilter: ['data-theme']
+  });
 }
 
 document.querySelectorAll('[data-engine-embed]').forEach(el => {

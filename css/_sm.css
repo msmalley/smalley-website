@@ -518,3 +518,63 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--sm-teal-glow);
   padding: 8px 20px;
 }
+/* ── Engine embeds (sm-engine-embed.js) ───────────────────────────────
+   Variant lists come from the Tools API, so the selects can hold 130+
+   options and need to stay usable at that length. */
+.engine-embed {
+  margin: 24px 0;
+}
+.engine-embed__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.engine-embed__select {
+  font-family: var(--f-mono);
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--sm-border);
+  background: var(--sm-surface-alt);
+  color: var(--sm-text);
+  cursor: pointer;
+  max-width: 100%;
+}
+.engine-embed__select:hover {
+  border-color: var(--sm-teal);
+}
+.engine-embed__definition {
+  max-height: 260px;
+  overflow: auto;
+  margin: 0 0 14px;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--sm-border);
+  background: var(--sm-surface);
+}
+.engine-embed__definition code {
+  font-family: var(--f-mono);
+  font-size: 11.5px;
+  line-height: 1.6;
+  color: var(--sm-muted);
+  white-space: pre;
+}
+.engine-embed__frame iframe {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  display: block;
+  background: var(--sm-deep);
+}
+.engine-embed__caption {
+  font-family: var(--f-mono);
+  font-size: 11px;
+  color: var(--sm-faint);
+  margin-top: 12px;
+}
+@media (max-width: 768px) {
+  .engine-embed__controls { justify-content: center; }
+  .engine-embed__select { flex: 1 1 100%; }
+}

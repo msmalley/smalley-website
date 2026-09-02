@@ -12,16 +12,16 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://smalley.my/open-source/moddable-chess-engine/">
 <meta property="og:site_name" content="Mark Smalley">
-<meta property="og:image" content="https://smalley.my/img/og/tools-chess.jpg?v=1.0.39">
+<meta property="og:image" content="https://smalley.my/img/og/tools-chess.jpg?v=1.0.40">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Moddable Chess Engine — Mark Smalley">
 <meta name="twitter:description" content="Chess on the Moddable micro-kernel engine: variants share one set of movement primitives. MCP tools, native ESM, AI with opening books, and an SDK that powers Dungeon Chess without engine forks.">
-<meta name="twitter:image" content="https://smalley.my/img/og/tools-chess.jpg?v=1.0.39">
+<meta name="twitter:image" content="https://smalley.my/img/og/tools-chess.jpg?v=1.0.40">
 <link rel="canonical" href="https://smalley.my/open-source/moddable-chess-engine/">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="../../img/apple-touch-icon.png">
-<link rel="stylesheet" href="../../css/_sm.css?v=1.0.39">
-<link rel="stylesheet" href="../../css/case-study.css?v=1.0.39">
+<link rel="stylesheet" href="../../css/_sm.css?v=1.0.40">
+<link rel="stylesheet" href="../../css/case-study.css?v=1.0.40">
 </head>
 <body>
 <div id="nav-root"></div>
@@ -86,9 +86,9 @@
       <p>Developer guides walk through increasing complexity: building a basic variant, then Crazyhouse (hooks and piece drops), then Poison Chess (beforeMove effects). The plugin interface fails loudly with clear error messages when the contract is violated. Example variants ship as reference implementations at every level.</p>
 
       <h2>Try It</h2>
-      <p>Play against the AI below. Switch variants to see how the same engine handles completely different rule sets, from exploding pieces to fog of war to racing your king.</p>
-      <div class="demo-embed" id="chess-demo"></div>
-      <p class="demo-caption">Live embed: variant switcher controls the iframe URL, background matched, no scrolling</p>
+      <p>Play against the AI below. Switch variants to see how the same engine handles completely different rule sets, from exploding pieces to fog of war to racing your king. The list is fetched live from the Tools API, so every variant the engine can play is here, and the frontmatter shown is the real definition behind it.</p>
+      <div class="engine-embed" data-engine-embed="play" data-definition="true" data-family="chess" data-variant="standard" data-height="560"></div>
+      <p class="demo-caption">Live embed via the Tools SDK. See <a href="../../thoughts/the-moddable-layer-cake/">the Moddable layer cake</a> for how the engine, tools, and rules layers fit together.</p>
 
       <h2>Embed API</h2>
       <p>Any variant can be embedded on any website with a single iframe. URL parameters handle initial configuration:</p>
@@ -139,7 +139,7 @@
 </section>
 
 <div id="footer-root"></div>
-<script src="../../js/sm-loader.js?v=1.0.39"></script>
-<script src="../../js/sm-chess-embed.js?v=1.0.39"></script>
+<script src="../../js/sm-loader.js?v=1.0.40"></script>
+<script type="module" src="../../js/sm-engine-embed.js?v=1.0.40"></script>
 </body>
 </html>

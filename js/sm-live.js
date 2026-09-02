@@ -62,6 +62,10 @@
       apiEndpoints: dig(s, 'rules', 'site', 'apiEndpoints'),
       tools:        dig(s, 'tools', 'tools'),
       endpoints:    dig(s, 'tools', 'endpoints'),
+      // What the play API actually exposes, which is narrower than the engine
+      // total: hex, mancala and morris have no play endpoint.
+      embedVariants: dig(s, 'tools', 'variants'),
+      embedFamilies: dig(s, 'tools', 'families'),
       // Per-family playable counts, for pages that speak about one family.
       chessVariants:    dig(s, 'engine', 'playableByFamily', 'chess'),
       hexVariants:      dig(s, 'engine', 'playableByFamily', 'hex'),

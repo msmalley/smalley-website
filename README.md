@@ -52,6 +52,10 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 - ATS generator handles tabular and chip markup: build rows flatten to one self-describing line, stack keywords come out comma-separated
 - Moddable figures across all four CVs refreshed from the stats API: 89 MCP tools (the CVs claimed 41, and the ATS text still said 16), 204 playable variants across 10 families, ~2,900 commits. Replaces the retired "two engines" framing with the micro-kernel architecture, where a game is a configuration entry rather than code
 - 8 new job leads ingested (TraqCheck, Ethos BeathChapman, Skillsearch, InX, Keyrock, boxxe, Dex, Ihsan)
+- Engine embeds now run through the Tools SDK via `sm-engine-embed.js`, fetching families and variants from the API at load. The modules it replaces hand-rolled iframes around a typed-in list and offered 6 chess variants where the engine serves 135
+- Workflow page gains a Moddable layer cake section covering the four-repository stack (rules, engine, tools, web), each layer live-bound and linking to the architecture write-up
+- Moddable case study consolidated onto one engine: a single embed frame carrying every family and variant, with the live frontmatter definition beside it
+- Retired `sm-chess-embed.js` and `sm-hex-embed.js`
 - Moddable statistics now derive from the stats endpoint site-wide instead of being typed into pages. `sm-live.js` binds values through `data-stat` attributes and `{{stat:key|fallback}}` tokens in JSON prose, caches for an hour, falls back to inline values when the endpoint is unreachable, and skips the network entirely on pages with no bindings
 - Corrected every stale Moddable figure across the homepage, portfolio, open-source pages and data files. `/workflow/` and the 16-days article keep their May 2026 snapshot as a historical record, with the contradiction between the intro and its own numbers grid resolved
 - `job-pipeline.js` gains `record`, for logging an outcome where no job description was ever captured. It stores no score rather than inventing one from a reconstructed description

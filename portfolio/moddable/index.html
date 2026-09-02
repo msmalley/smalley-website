@@ -12,16 +12,16 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://smalley.my/portfolio/moddable/">
 <meta property="og:site_name" content="Mark Smalley">
-<meta property="og:image" content="https://smalley.my/img/og/portfolio-moddable.jpg?v=1.0.39">
+<meta property="og:image" content="https://smalley.my/img/og/portfolio-moddable.jpg?v=1.0.40">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Moddable Games — Mark Smalley">
 <meta name="twitter:description" content="Open-source games studio built on a micro-kernel game engine, with AI-callable MCP tools and an autonomous agent pipeline.">
-<meta name="twitter:image" content="https://smalley.my/img/og/portfolio-moddable.jpg?v=1.0.39">
+<meta name="twitter:image" content="https://smalley.my/img/og/portfolio-moddable.jpg?v=1.0.40">
 <link rel="canonical" href="https://smalley.my/portfolio/moddable/">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="../../img/apple-touch-icon.png">
-<link rel="stylesheet" href="../../css/_sm.css?v=1.0.39">
-<link rel="stylesheet" href="../../css/case-study.css?v=1.0.39">
+<link rel="stylesheet" href="../../css/_sm.css?v=1.0.40">
+<link rel="stylesheet" href="../../css/case-study.css?v=1.0.40">
 </head>
 <body>
 <div id="nav-root"></div>
@@ -58,21 +58,15 @@
         <li><strong>Developer documentation</strong> — tiered guides, consumer integration guide, full API reference, SDK demo page, Developers section with examples</li>
       </ul>
 
-      <h2>Try the Engines</h2>
-      <p>Both engines are embeddable anywhere with a single iframe. Switch variants to see the chess engine handle different rule sets, or click hexes on the map to cycle terrain.</p>
-      <div class="demo-embed-row">
-        <div class="demo-embed-col">
-          <div class="demo-embed" id="chess-demo-portfolio"></div>
-          <p class="demo-caption">Chess engine: switch variants above</p>
-        </div>
-        <div class="demo-embed-col">
-          <div class="demo-embed" id="hex-demo-portfolio"></div>
-          <p class="demo-caption">Hexmap engine: switch games and styles above</p>
-        </div>
-      </div>
+      <h2>Try the Engine</h2>
+      <p>Every family and every variant the engine can play is in the frame below, listed live from the Tools API rather than a list typed into this page. Pick a family, pick a variant, and read the frontmatter that defines it. That definition is the entire creative contribution: no variant-specific code sits behind it.</p>
+      <div class="engine-embed" data-engine-embed="play" data-definition="true" data-family="chess" data-variant="standard" data-height="560"></div>
+      <p>Hex maps are generators rather than rule variants, so they sit outside the play API and keep their own surface:</p>
+      <div class="engine-embed" data-engine-embed="hex" data-height="520"></div>
+      <p>The <a href="../../thoughts/the-moddable-layer-cake/">Moddable layer cake</a> explains how the four repositories fit together, and carries the same widget alongside the architecture it describes.</p>
 
       <h2>Why it matters</h2>
-      <p>Demonstrates the ability to <strong>ship production-quality software at unprecedented velocity</strong> and then <strong>evolve it into framework-level architecture with AI-native distribution</strong>. The chess engine didn't stay as a standalone app. It became a consumer SDK that powers a completely different game (Dungeon Chess) through renderer hooks, game controllers, and unit templates. Then both engines became AI-callable tools via MCP, with zero additional code beyond what already existed. Every project is MIT-licensed, publicly accessible, with proper documentation, version control, and deployment pipelines.</p>
+      <p>Demonstrates the ability to <strong>ship production-quality software at unprecedented velocity</strong> and then <strong>evolve it into framework-level architecture with AI-native distribution</strong>. The chess engine did not stay a standalone app, and it did not stay chess. It was folded into a micro-kernel where a game is a configuration entry, so draughts, shogi, go, xiangqi and reversi now run on the same movement primitives, and Dungeon Chess runs on the consumer APIs through renderer hooks and unit templates. The whole engine then became AI-callable via MCP, with zero additional code beyond what already existed. Every project is MIT-licensed, publicly accessible, with proper documentation, version control, and deployment pipelines.</p>
 
       <div class="case-outcome">
         <div class="case-outcome-label">Result</div>
@@ -108,8 +102,7 @@
 </section>
 
 <div id="footer-root"></div>
-<script src="../../js/sm-loader.js?v=1.0.39"></script>
-<script src="../../js/sm-chess-embed.js?v=1.0.39"></script>
-<script src="../../js/sm-hex-embed.js?v=1.0.39"></script>
+<script src="../../js/sm-loader.js?v=1.0.40"></script>
+<script type="module" src="../../js/sm-engine-embed.js?v=1.0.40"></script>
 </body>
 </html>

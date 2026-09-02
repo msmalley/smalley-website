@@ -22,17 +22,17 @@ html{background:#0B0F1A}body{opacity:0;transition:opacity .15s ease}
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://smalley.my/thoughts/the-moddable-layer-cake/">
 <meta property="og:site_name" content="Mark Smalley">
-<meta property="og:image" content="https://smalley.my/img/og/thoughts-layer-cake.jpg?v=1.0.39">
+<meta property="og:image" content="https://smalley.my/img/og/thoughts-layer-cake.jpg?v=1.0.40">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Moddable Layer Cake — Mark Smalley">
 <meta name="twitter:description" content="How we decomposed a JS monolith into four layers where data flows downhill. Over 1M MCP requests per week from AI agents prove the architecture works.">
-<meta name="twitter:image" content="https://smalley.my/img/og/thoughts-layer-cake.jpg?v=1.0.39">
+<meta name="twitter:image" content="https://smalley.my/img/og/thoughts-layer-cake.jpg?v=1.0.40">
 <link rel="canonical" href="https://smalley.my/thoughts/the-moddable-layer-cake/">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="../../img/apple-touch-icon.png">
-<link rel="stylesheet" href="../../css/_sm.css?v=1.0.39">
-<link rel="stylesheet" href="../../css/thoughts.css?v=1.0.39">
-<link rel="stylesheet" href="../../css/pages.css?v=1.0.39">
+<link rel="stylesheet" href="../../css/_sm.css?v=1.0.40">
+<link rel="stylesheet" href="../../css/thoughts.css?v=1.0.40">
+<link rel="stylesheet" href="../../css/pages.css?v=1.0.40">
 </head>
 <body>
 <div id="nav-root"></div>
@@ -80,9 +80,9 @@ html{background:#0B0F1A}body{opacity:0;transition:opacity .15s ease}
       <p>The architecture that emerged has four layers. Each has exactly one job. Each depends only on the layer below it. No layer reaches sideways or upward.</p>
 
       <ul>
-        <li><strong>Rules</strong> (<a href="https://rules.moddable.games" target="_blank" rel="noopener">rules.moddable.games</a>). Pure structured content. 45 games, 333 variants, 458 oracle tables, 3,385 entities. Zero code. Markdown and YAML frontmatter. A full machine-readable API with discovery index, catalogue, and per-game endpoints.</li>
-        <li><strong>Engine</strong> (<a href="https://engine.moddable.games" target="_blank" rel="noopener">engine.moddable.games</a>). Reads rule definitions and resolves them into playable game states with as little code as possible. 6 families, 1,511 tests, plugin architecture. A new variant is a frontmatter file.</li>
-        <li><strong>Tools</strong> (<a href="https://tools.moddable.games" target="_blank" rel="noopener">tools.moddable.games</a>). Our only private repository. 83 MCP tools, REST API, JavaScript SDK, embeddable widgets. Wraps engine into monetisable services: puzzle generation, AI opponents, board rendering, oracle composition, combat simulation. This is the value layer.</li>
+        <li><strong>Rules</strong> (<a href="https://rules.moddable.games" target="_blank" rel="noopener">rules.moddable.games</a>). Pure structured content. <span data-stat="games">46</span> games, <span data-stat="ruleVariants">296</span> variants, <span data-stat="oracleTables">458</span> oracle tables, <span data-stat="entities">3,385</span> entities. Zero code. Markdown and YAML frontmatter. A full machine-readable API with discovery index, catalogue, and per-game endpoints.</li>
+        <li><strong>Engine</strong> (<a href="https://engine.moddable.games" target="_blank" rel="noopener">engine.moddable.games</a>). Reads rule definitions and resolves them into playable game states with as little code as possible. <span data-stat="families">10</span> families, <span data-stat="tests">6,527</span> tests, plugin architecture. A new variant is a frontmatter file.</li>
+        <li><strong>Tools</strong> (<a href="https://tools.moddable.games" target="_blank" rel="noopener">tools.moddable.games</a>). Our only private repository. <span data-stat="tools">89</span> MCP tools, REST API, JavaScript SDK, embeddable widgets. Wraps engine into monetisable services: puzzle generation, AI opponents, board rendering, oracle composition, combat simulation. This is the value layer.</li>
         <li><strong>Web</strong> (<a href="https://moddable.games" target="_blank" rel="noopener">moddable.games</a>). A static site generator that consumes tools via iframes and API calls. All content lives in JSON data files and markdown. Zero game logic. Disposable by design.</li>
       </ul>
 
@@ -101,7 +101,7 @@ html{background:#0B0F1A}body{opacity:0;transition:opacity .15s ease}
         </div>
         <pre class="engine-embed-demo__definition"><code id="definition-display"></code></pre>
         <div id="embed-container"></div>
-        <p class="engine-embed-demo__caption">That is the entire creative contribution. One frontmatter file produces a playable game with AI opponent, legal move validation, and board rendering. 133 variants exist across 6 families. None required variant-specific code.</p>
+        <p class="engine-embed-demo__caption">That is the entire creative contribution. One frontmatter file produces a playable game with AI opponent, legal move validation, and board rendering. <span data-stat="embedVariants">177</span> variants exist across <span data-stat="embedFamilies">6</span> families playable through this API. None required variant-specific code.</p>
       </div>
 
       <script type="module">
@@ -272,6 +272,6 @@ html{background:#0B0F1A}body{opacity:0;transition:opacity .15s ease}
 </section>
 
 <div id="footer-root"></div>
-<script src="../../js/sm-loader.js?v=1.0.39"></script>
+<script src="../../js/sm-loader.js?v=1.0.40"></script>
 </body>
 </html>

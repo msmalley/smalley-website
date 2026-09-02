@@ -35083,6 +35083,57 @@
       "cover_letter": null,
       "notes": "",
       "applied_at": "2026-09-02"
+    },
+    {
+      "id": "jobgether-head-of-foundation-mtk50uxl",
+      "added": "2026-09-02",
+      "status": "applied",
+      "company": "Jobgether",
+      "role": "Head of Foundation",
+      "location": "Remote-first (partner company based in Germany)",
+      "variant": "cto",
+      "score": 59,
+      "scores": {
+        "cto": 59,
+        "regtech": 50,
+        "devrel": 61
+      },
+      "confidence": "high",
+      "requirements_found": 13,
+      "matched": 7,
+      "gaps": [
+        "Exceptional communication and presentation",
+        "experience developing ecosystem growth strategies",
+        "Strong commercial judgment and executive presence",
+        "Entrepreneurial, proactive, comfortable in a fast-moving decentralized environment",
+        "Willingness to travel for conferences and industry events"
+      ],
+      "proof_points": [
+        {
+          "requirement": "experience in business development, strategic partnerships, ecosystem development, or a closely related leadership role within Web3, blockchain, or technology",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "Strong public profile and credibility within the Web3 or blockchain community, with demonstrated",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a five-repository product ecosystem (a micro-kernel game engine, a rulebook publishing pipeline, an MCP and REST API, a static site generator, and agent tooling) across roughly 2,900 commits at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "Proven ability to develop and execute long-term strategic plans with cross-functional teams",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "Deep understanding of Web3, blockchain, decentralized finance and the broader crypto landscape",
+          "evidence": "UTXO scripting, Schnorr/Taproot, Ordinals, Inscriptions, Runes, BRC-20, BitcoinJS, digital assets"
+        },
+        {
+          "requirement": "Strong track record of building and maintaining strategic relationships with developers, projects and investors",
+          "evidence": "Built and deployed the first board game MCP server ( tools.moddable.games ): 89 AI-callable tools, Cloudflare Worker with Durable Object sessions, MCP + REST + OpenAPI + llms.txt, serving 250K+ requests per week from external AI agents"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4460944371/",
+      "cover_letter": null,
+      "notes": "",
+      "applied_at": "2026-09-02"
     }
   ],
   "updated": "2026-09-02"

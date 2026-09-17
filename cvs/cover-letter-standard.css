@@ -1,0 +1,35 @@
+/*
+ * Standard cover letter: pairs with the standard CV template.
+ *
+ * Loaded after cv_standard.css, which supplies the fonts, tokens, header
+ * and page box, so the letter and CV read as one set.
+ */
+
+.addressee { margin-top: 24px; }
+.letter-date {
+  font-size: var(--fs-small);
+  color: var(--muted);
+}
+.letter-company {
+  margin-top: 10px;
+  font-weight: 500;
+  color: var(--ink);
+}
+.letter-role {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.letter-body { margin-top: 20px; }
+.letter-body p + p { margin-top: 12px; }
+
+.sign-off { margin-top: 20px; }
+.sign-name {
+  margin-top: 4px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+@media print {
+  .letter-body p { break-inside: avoid; }
+}

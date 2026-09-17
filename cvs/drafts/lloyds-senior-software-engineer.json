@@ -1,0 +1,28 @@
+{
+  "target": {
+    "company": "Lloyds Banking Group",
+    "role": "Senior Software Engineer",
+    "req_id": "149710",
+    "closes": "2026-09-24",
+    "contact_email": null,
+    "contact_type": null,
+    "contact_name": null,
+    "source_url": "https://lbg.wd3.myworkdayjobs.com/en-US/lbg_Careers/job/Edinburgh/Senior-Software-Engineer_149710-3",
+    "cv_variant": "senior-engineer-fintech",
+    "cv_pdf": "/Applications/MAMP/htdocs/personal/smalley-website/cvs/dist/Mark-Smalley-Senior-Engineer-Fintech.pdf",
+    "cover_pdf": "/Applications/MAMP/htdocs/personal/smalley-website/cvs/dist/cover-lloyds-banking-group-149710.pdf"
+  },
+  "send_from": "mark@smalley.my",
+  "status": "sent",
+  "created": "2026-09-14",
+  "variant": "standard",
+  "ref": "149710",
+  "headline": "Senior Software Engineer &nbsp;·&nbsp; Digital Assets and DLT &nbsp;·&nbsp; Regulated Financial Services",
+  "company": "Lloyds Banking Group",
+  "role": "Senior Software Engineer, Digital Finance Lab (149710)",
+  "date": "14 September 2026",
+  "opening": "I am applying for the Senior Software Engineer role in the Payments Services Platform team within your Digital Finance Lab. I have spent over 15 years as a hands-on engineer building secure systems for regulated financial services, from digital asset custody and wallets to identity and anti-money-laundering checks. The Lab's focus on bringing distributed ledger technology into payments is exactly where my experience sits.",
+  "body": "My distributed ledger experience is practical rather than theoretical. I architected the compliance, KYC/AML and custody infrastructure for a digital asset custodian that went from concept to regulatory approval, built open-source wallet and SDK infrastructure that handled over a million API requests, and co-authored an open trading protocol built on partially signed Bitcoin transactions that is now used by third-party exchanges. More recently I led development of passkey-based wallet infrastructure for Bitcoin and Ethereum. In each case the work meant balancing what customers need with what operators and regulators require.\n\nToday I build and run a five-repository production platform, including a public API on Cloudflare Workers serving around 250,000 requests a week. Every change is branched, run against 6,887 automated tests and reviewed before merge, and I moved older standalone engines onto a single modular design without breaking what already worked. At CakeDefi I grew a new team from one to ten engineers while still writing code, and I enjoy raising the technical capability of the people around me.\n\nMy production work has been in TypeScript and Node.js rather than Java. The fundamentals your team describes, including secure design, testable services, automated delivery and careful handling of regulatory requirements, carry across languages. I have picked up new stacks throughout my career, from Bitcoin scripting to Solidity smart contracts, and would bring the same approach to Java and your wider platform.",
+  "closing": "I am based in Yorkshire and able to work from the Edinburgh office two days a week. I would welcome the chance to discuss how I could contribute to the Payments Services Platform.",
+  "workday_skills_answer": "Beyond hands-on delivery, I bring experience of working directly with banks and regulators on how new ledger technology should be adopted. I advised on a securities regulator's blueprint for distributed ledger technology in capital markets, worked within the first firm admitted to that regulator's sandbox, and delivered blockchain training to DBS Bank and the law firm Baker Hostetler. I also designed a DNS-based key management protocol that a regulated platform adopted for custody, and built the platform behind the world's first bank-backed blockchain hackathon, run by DBS Bank and chosen by 7 of the 15 competing teams. Day to day I use AI-assisted development with strict review and testing gates, which lets me move quickly without lowering the quality bar a bank expects."
+}

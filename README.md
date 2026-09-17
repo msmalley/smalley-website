@@ -46,6 +46,13 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 
 ## Changelog
 
+#### 2026-09-17
+- Standard ATS-first CV template (`cv_standard.css`) with a generic CV and role-targeted forks, all reading as UK-local and employee-level; kept private and sent as attachments
+- Cover letter "standard" variant paired with that template: per-letter headline, prose paragraphs, and filenames keyed to the job reference so each letter maps to one posting
+- `generate-pdfs.js` and `generate-ats.js` accept CV names, so rebuilding one private CV no longer churns the public PDFs
+- Job ingest role filter widened to senior, staff and principal engineers, technical programme managers and legal-tech roles
+- Chess variants article draft brought up to date with the engine: 296 documented variants across ten families, 230 playable, and a fourth category of challenge
+
 #### 2026-09-02
 - Fourth CV variant (Full Stack), targeting senior/staff/lead and engineering manager roles: capability band, selected-builds table, layered stack matrix, emerald/graphite palette
 - `generate-pdfs.js` no longer wipes `dist/` on every run; it was deleting every generated cover letter alongside the CVs it rebuilt

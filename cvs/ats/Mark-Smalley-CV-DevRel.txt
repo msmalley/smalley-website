@@ -36,7 +36,7 @@ Written & Published
 
 Open Source & Developer Community
 
-• Moddable Engine — micro-kernel board game engine with a family-agnostic play SDK and embed protocol: 204 playable variants across 10 families compose from shared movement primitives over six pluggable topologies. Developer guides, plugin tutorials, and a full API reference ship alongside it
+• Moddable Engine — micro-kernel board game engine with a family-agnostic play SDK and embed protocol: 230 playable variants across 10 families compose from shared movement primitives over six pluggable topologies. Developer guides, plugin tutorials, and a full API reference ship alongside it
 
 • Moddable Rules (rules.moddable.games) — open rulebook system and JSON API: 46 games and 296 variants generate 511 rule pages and 665 PDFs from a single content source, with oracle tables and entity indexes exposed to developers and AI agents
 
@@ -76,7 +76,7 @@ CEO & Founder — Moddable Limited — United Kingdom
 
 Open-source games studio shipping a developer-facing engine, Consumer SDKs, MCP tools, and documentation, built entirely using AI-augmented engineering workflows. Deployed the first board game engine MCP server and a full Developers section with API docs, SDK demos, and integration examples.
 
-• Consolidated separate chess and hex engines into a single micro-kernel engine where a game is a configuration entry rather than code: 204 playable variants across 10 families, and Dungeon Chess built entirely on its consumer APIs without engine forks
+• Consolidated separate chess and hex engines into a single micro-kernel engine where a game is a configuration entry rather than code: 230 playable variants across 10 families, and Dungeon Chess built entirely on its consumer APIs without engine forks
 
 • Built the rulebook publishing pipeline behind rules.moddable.games: 46 games and 296 variants generating 511 rule pages and 665 PDFs totalling 9,765 indexed pages from one content source
 

@@ -1,0 +1,178 @@
+/*
+ * Standard CV template: single column, ATS-first.
+ *
+ * Shared by the generic CV and every role-targeted CV built from it.
+ * Parsers read this layout top to bottom with no guessing: no tables,
+ * no side-by-side columns, no text in backgrounds, and each position
+ * gives title, company and dates on their own lines.
+ */
+
+@font-face { font-family: 'DM Sans'; src: url('../fonts/dm-sans-400.woff2') format('woff2'); font-weight: 400; }
+@font-face { font-family: 'DM Sans'; src: url('../fonts/dm-sans-500.woff2') format('woff2'); font-weight: 500; }
+@font-face { font-family: 'DM Sans'; src: url('../fonts/dm-sans-600.woff2') format('woff2'); font-weight: 600; }
+
+:root {
+  --ink:    #0F172A;
+  --text:   #1E293B;
+  --muted:  #475569;
+  --accent: #0E7490;
+  --rule:   #CBD5E1;
+  --paper:  #FFFFFF;
+  --desk:   #F1F5F9;
+
+  --fs-name:    30px;
+  --fs-role:    14px;
+  --fs-section: 12px;
+  --fs-title:   14.5px;
+  --fs-body:    13px;
+  --fs-small:   12px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+  font-size: var(--fs-body);
+  line-height: 1.55;
+  color: var(--text);
+  background: var(--desk);
+  -webkit-font-smoothing: antialiased;
+  /* Ligatures turn "fi" and "fl" into single glyphs that some parsers drop */
+  font-variant-ligatures: none;
+  text-wrap: pretty;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.page {
+  max-width: 820px;
+  margin: 32px auto;
+  padding: 56px 64px;
+  background: var(--paper);
+}
+
+/* ── Header ── */
+.header {
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--ink);
+}
+.header h1 {
+  font-size: var(--fs-name);
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: 0;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+.header .role {
+  font-size: var(--fs-role);
+  font-weight: 500;
+  color: var(--accent);
+  margin-top: 4px;
+  text-wrap: balance;
+}
+.header .contact {
+  font-size: var(--fs-small);
+  color: var(--muted);
+  margin-top: 8px;
+}
+.header .contact span + span::before {
+  content: "|";
+  margin: 0 8px;
+  color: var(--rule);
+}
+
+/* ── Sections ── */
+.section { margin-top: 20px; }
+h2.section-title {
+  font-size: var(--fs-section);
+  /* No tracking: spaced capitals extract as "E X P E R I E N C E" */
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: var(--ink);
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--rule);
+  break-after: avoid;
+}
+
+.summary p { text-align: justify; }
+.summary p + p { margin-top: 8px; }
+
+/* ── Positions ── */
+.job { margin-top: 14px; }
+/* Positions may cross a page, but never strand a heading or split a bullet */
+h3.job-title, .job-company, .job-dates { break-after: avoid; }
+.job-summary, ul.points li { break-inside: avoid; }
+.job:first-of-type { margin-top: 0; }
+h3.job-title {
+  font-size: var(--fs-title);
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.3;
+}
+.job-company {
+  font-weight: 500;
+  color: var(--text);
+}
+.job-dates {
+  font-size: var(--fs-small);
+  color: var(--muted);
+}
+.job-summary { margin-top: 5px; }
+
+ul.points {
+  list-style: none;
+  margin-top: 5px;
+}
+ul.points li {
+  position: relative;
+  padding-left: 16px;
+  margin-top: 3px;
+}
+/* CSS square bullet: centred on the x-height of the first line */
+ul.points li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.58em;
+  width: 5px;
+  height: 5px;
+  background: var(--accent);
+}
+
+/* ── Skills ── */
+.skills p + p { margin-top: 4px; }
+.skill-label {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* ── Print / PDF ── */
+@page { size: A4; margin: 48px 52px; }
+
+@media print {
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  :root {
+    --fs-body:  12.5px;
+    --fs-title: 14px;
+    --fs-small: 11.5px;
+  }
+  body { background: var(--paper); line-height: 1.5; }
+  /* Justified text opens rivers in a fixed-width PDF column */
+  .summary p { text-align: left; }
+  .page {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+  .header h1, .header .role { text-wrap: wrap; }
+}
+
+@media (max-width: 768px) {
+  .page { margin: 0; padding: 32px 20px; }
+  .header { text-align: center; }
+  .header .contact span { display: block; }
+  .header .contact span + span::before { content: none; }
+}

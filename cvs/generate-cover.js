@@ -6,6 +6,7 @@ const VARIANT_TEMPLATES = {
   cto: path.resolve(__dirname, 'html/cover-letter-template.html'),
   regtech: path.resolve(__dirname, 'html/cover-letter-template.html'),
   devrel: path.resolve(__dirname, 'html/cover-letter-devrel.html'),
+  standard: path.resolve(__dirname, 'html/cover-letter-standard.html'),
 };
 const templatePath = path.resolve(__dirname, 'html/cover-letter-template.html');
 const outDir = path.resolve(__dirname, 'dist');
@@ -28,8 +29,14 @@ function buildProofPointsHtml(proofPoints) {
   ).join('\n        ');
 }
 
+// Standard letters carry several body paragraphs, split on blank lines
+function buildBodyParagraphsHtml(body) {
+  return (body || '').split(/\n\s*\n/).filter(Boolean).map(para => `<p>${para.trim()}</p>`).join('\n    ');
+}
+
 function fillTemplate(template, data) {
-  const headline = VARIANT_HEADLINES[data.variant] || VARIANT_HEADLINES.cto;
+  // Role-targeted letters set their own headline to match the CV they accompany
+  const headline = data.headline || VARIANT_HEADLINES[data.variant] || VARIANT_HEADLINES.cto;
 
   return template
     .replace(/\{\{HEADLINE\}\}/g, headline)
@@ -37,7 +44,8 @@ function fillTemplate(template, data) {
     .replace(/\{\{COMPANY_NAME\}\}/g, data.company)
     .replace(/\{\{ROLE_TITLE\}\}/g, data.role)
     .replace(/\{\{OPENING_HOOK\}\}/g, data.opening)
-    .replace(/\{\{PROOF_POINTS\}\}/g, buildProofPointsHtml(data.proof_points))
+    .replace(/\{\{PROOF_POINTS\}\}/g, buildProofPointsHtml(data.proof_points || []))
+    .replace(/\{\{BODY_PARAGRAPHS\}\}/g, buildBodyParagraphsHtml(data.body))
     .replace(/\{\{BODY_PARAGRAPH\}\}/g, data.body || '')
     .replace(/\{\{CLOSING_PARAGRAPH\}\}/g, data.closing);
 }
@@ -64,7 +72,10 @@ async function generate(matchFile) {
 
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
 
-  const slug = `${matchData.company.replace(/[^a-z0-9]/gi, '-').toLowerCase()}-${matchData.variant}`;
+  // Name letters by job reference when one is known, so each file maps to one posting
+  const companySlug = matchData.company.replace(/[^a-z0-9]/gi, '-').toLowerCase();
+  const suffix = matchData.ref ? String(matchData.ref).replace(/[^a-z0-9]/gi, '-') : matchData.variant;
+  const slug = `${companySlug}-${suffix}`;
   const htmlOut = path.join(outDir, `cover-${slug}.html`);
   const pdfOut = path.join(outDir, `cover-${slug}.pdf`);
 

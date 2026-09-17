@@ -79,29 +79,27 @@ const REJECT_TITLES = [
   // Junior / intern
   'intern', 'junior developer', 'junior engineer', 'junior front-end',
   'junior social', 'junior ip',
-  // IC dev roles (no leadership)
+  // IC roles outside Mark's target stacks. Senior, staff and principal software,
+  // backend, full-stack and blockchain engineering roles are wanted since the
+  // standard-template CVs started aiming below leadership titles.
   'rust developer', 'rust engineer', 'solidity developer', 'smart contract engineer',
-  'solana developer', 'blockchain developer', 'blockchain engineer',
+  'solana developer',
   'qa engineer', 'quality engineer', 'test engineer', 'sdet', 'security engineer',
   'data scientist', 'data analyst', 'data engineer', 'ml engineer', 'machine learning engineer',
   'mobile engineer', 'android developer', 'ios developer',
   'devops engineer', 'sre', 'site reliability',
-  'full stack developer', 'frontend developer', 'backend developer',
-  'integrations engineer', 'software architect', 'technical architect',
+  'frontend developer', 'integrations engineer',
   // Analyst-level roles
   'governance analyst', 'compliance analyst', 'compliance case analyst',
   'research analyst', 'risk analyst'
 ];
 
 const REJECT_PATTERNS = [
-  /^senior\s+(software|blockchain|data|backend|frontend|full.?stack|smart contract|mobile|platform)\s+engineer/i,
-  /^staff\s+(software|blockchain|data|backend|frontend|mobile)\s+engineer/i,
-  /^principal\s+.*engineer/i,
-  /^(senior|staff|lead)\s+.*developer$/i,
-  /product\s+engineer$/i,
-  /technical product manager/i,
+  /^(senior|staff|principal)\s+(data|frontend|smart contract|mobile)\s+engineer/i,
+  /^(junior|graduate|associate)\s+.*(engineer|developer)/i,
   /product owner/i,
-  /\blegal\b/i,
+  // Legal practice roles, not legal-tech product or engineering roles
+  /\blegal\b(?!.*\b(product|engineer|developer|ai|tech))/i,
   /co-?founder/i
 ];
 
@@ -122,18 +120,30 @@ const US_LOCATIONS = [
   'north carolina', 'virginia', 'maryland', 'connecticut', 'pennsylvania'
 ];
 
+// Mark is UK-based and will take UK or remote work, nothing else. A US-only
+// blocklist let Singapore, Manila, Taipei, Hong Kong, Sofia and Canada straight
+// through, so this allows UK and remote and rejects every other stated location.
+const UK_LOCATIONS = [
+  'united kingdom', 'great britain', 'england', 'scotland', 'wales',
+  'northern ireland', 'london', 'edinburgh', 'glasgow', 'cardiff', 'belfast',
+  'manchester', 'birmingham', 'leeds', 'bristol', 'liverpool', 'sheffield',
+  'newcastle', 'nottingham', 'cambridge', 'oxford', 'brighton', 'reading',
+  'plymouth', 'york', 'leicester', 'coventry', 'southampton', 'aberdeen'
+];
+
 function isIrrelevantLocation(location) {
+  // No stated location is not evidence of a bad one; keep it for review.
   if (!location) return false;
   const loc = location.toLowerCase().trim();
-  // Allow "Remote" even if it mentions US (might be globally remote)
-  if (loc === 'remote' || loc === 'worldwide' || loc === 'global') return false;
-  // Filter US-only locations (not remote)
-  if (US_LOCATIONS.some(us => loc.includes(us))) {
-    // But allow if also marked remote/global
-    if (loc.includes('remote') || loc.includes('global') || loc.includes('worldwide')) return false;
-    return true;
-  }
-  return false;
+
+  // Remote in any form stays, including remote roles that name a US HQ.
+  if (loc.includes('remote') || loc.includes('worldwide') || loc.includes('global')) return false;
+
+  // A bare "uk" token, without matching "ukraine".
+  if (/\buk\b/.test(loc)) return false;
+  if (UK_LOCATIONS.some(uk => loc.includes(uk))) return false;
+
+  return true;
 }
 
 function ingest(searchResults) {

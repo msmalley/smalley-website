@@ -33444,7 +33444,7 @@
     {
       "id": "capital-one-director-of-software-enginee-mt1g3h2s",
       "added": "2026-08-20",
-      "status": "applied",
+      "status": "declined",
       "company": "Capital One",
       "role": "Director of Software Engineering",
       "location": "London, England, United Kingdom",
@@ -33510,7 +33510,8 @@
         "notes": null,
         "_fetched": true
       },
-      "applied_at": "2026-08-21"
+      "applied_at": "2026-08-21",
+      "declined_date": "2026-09-05"
     },
     {
       "id": "humanoid-vp-of-industrial-engineering-mt1g3h2u",
@@ -34202,12 +34203,12 @@
     {
       "company": "University of Edinburgh",
       "role": "Venture Creation Lead",
-      "location": "Edinburgh, Scotland, United Kingdom",
+      "location": "Edinburgh, UK",
       "url": "https://www.linkedin.com/jobs/view/4439232272/",
       "linkedin_job_id": "4439232272",
       "source": "linkedin",
       "status": "applied",
-      "applied_at": "2026-08-25",
+      "applied_at": "2026-08-21",
       "discovered": "2026-08-25",
       "variant": "cto",
       "score": 72,
@@ -34217,7 +34218,10 @@
         "method": "linkedin_apply",
         "linkedin_job_id": "4439232272"
       },
-      "notes": "Edinburgh Innovations. Academic founders. AI/ML, SaaS, digital health. £48-58k Grade 8."
+      "notes": "Applied via UoE Oracle recruiting. 2026-08-21 with selection panel; 2026-09-08 delay notice, still live.",
+      "added": "2026-08-21",
+      "source_url": null,
+      "reference": "14558"
     },
     {
       "company": "AQA",
@@ -34226,7 +34230,7 @@
       "url": "https://uk.indeed.com/viewjob?jk=11b7576f29f2ebd7",
       "linkedin_job_id": null,
       "source": "indeed",
-      "status": "applied",
+      "status": "declined",
       "applied_at": "2026-08-25",
       "discovered": "2026-08-25",
       "variant": "cto",
@@ -34237,7 +34241,8 @@
         "method": "direct_url",
         "apply_url": "https://aqa.wd3.myworkdayjobs.com/en-US/AQA/jobTasks/completed/application"
       },
-      "notes": "Applied via Workday wd3 (AQA). Manchester hybrid. £73-85k. Cover letter + D&I answer attached."
+      "notes": "Applied via Workday wd3 (AQA). Manchester hybrid. £73-85k. Cover letter + D&I answer attached.",
+      "declined_date": "2026-09-09"
     },
     {
       "company": "AND Digital",
@@ -35134,7 +35139,583 @@
       "cover_letter": null,
       "notes": "",
       "applied_at": "2026-09-02"
+    },
+    {
+      "id": "euronext-chief-product-officer-digital-a-mrtd4k9y",
+      "added": "2026-07-20",
+      "status": "declined",
+      "company": "Euronext",
+      "role": "Chief Product Officer, Digital Assets",
+      "location": "London, England, United Kingdom",
+      "variant": "cto",
+      "score": 78,
+      "scores": {
+        "cto": 78,
+        "regtech": 79,
+        "devrel": 76
+      },
+      "confidence": "high",
+      "requirements_found": 50,
+      "matched": 17,
+      "gaps": [
+        "London and Amsterdam are also possible locations.",
+        "You Will Primarily Be Responsible For",
+        "Learning as you grow – Develop your",
+        "Having an impact – Contribute to projects that matter, in an agile and dynamic environment where your ideas help drive progress.",
+        "Together, we don’t just support markets — we help shape their future.Euronext Values",
+        "We respect and value the people we work with We are unified through a common purpose We embrace",
+        "diversity and strive for inclusion",
+        "equal opportunity employer."
+      ],
+      "proof_points": [
+        {
+          "requirement": "Being part of a European, international and diverse team – Collaborate across borders with talented colleagues connected by a shared ambition and purpose.",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "an additional European language is a plus.Working knowledge of token standards and DLT architecture (e.g.",
+          "evidence": "Designed extensible plugin architecture that scaled from single product to multi-product ecosystem without core rewrites: renderer hooks, game controller, replay API, unit templates, terrain predicates, native ESM (same source serves browser, Worker, and Node.js)"
+        },
+        {
+          "requirement": "Experience at a crypto-native or digital asset exchange, custodian or tokenisation platform, or comparable",
+          "evidence": "Co-founded and funded CoKeeps — now Malaysia's largest Digital Asset Custodian by AUM — providing five years of capital from R1"
+        },
+        {
+          "requirement": "Driving sustainability – Play an active role in building transparent, responsible and sustainable capital markets for the long term.",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 41 AI-callable MCP tools, 37 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "an additional European language is a plus.Working knowledge of token standards and DLT architecture (e.g.",
+          "evidence": "Designed and built internal cryptographic framework underpinning the passkey wallet architecture"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/chief-product-officer-digital-assets-at-euronext-4433896601",
+      "source": "linkedin",
+      "linkedin_job_id": "4433896601",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-07-20. Posted: 2026-07-18.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/chief-product-officer-digital-assets-at-euronext-4433896601",
+        "contact_email": null,
+        "linkedin_job_id": "4433896601",
+        "freshness": {
+          "status": "expired",
+          "days_old": 44,
+          "added": "2026-07-20"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      },
+      "applied_method": "workday_portal",
+      "applied_at": "2026-08-10",
+      "declined_date": "2026-09-10"
+    },
+    {
+      "id": "lloyds-banking-group-lead-engineer-ai-pr-mtvmn250",
+      "added": "2026-09-03",
+      "company": "Lloyds Banking Group",
+      "role": "Lead Engineer – AI Productivity Lab",
+      "location": null,
+      "status": "declined",
+      "source_url": null,
+      "reference": "156909",
+      "notes": "Workday decline 2026-09-04; acknowledgement 2026-09-03",
+      "jd_verified": false,
+      "score": null,
+      "scores": null,
+      "confidence": null,
+      "requirements_found": null,
+      "matched": null,
+      "proof_points": [],
+      "gaps": [],
+      "applied_at": "2026-09-03",
+      "declined_date": "2026-09-04"
+    },
+    {
+      "id": "fruition-group-blockchain-developer-mtvmn28q",
+      "added": "2026-09-10",
+      "company": "Fruition Group",
+      "role": "Blockchain Developer",
+      "location": null,
+      "status": "declined",
+      "source_url": "https://www.linkedin.com/jobs/",
+      "reference": null,
+      "notes": "LinkedIn rejection notice 2026-09-10; application date not captured",
+      "jd_verified": false,
+      "score": null,
+      "scores": null,
+      "confidence": null,
+      "requirements_found": null,
+      "matched": null,
+      "proof_points": [],
+      "gaps": [],
+      "declined_date": "2026-09-10"
+    },
+    {
+      "id": "unknown-company-apply-for-this-job-mtvnnrba",
+      "added": "2026-09-10",
+      "status": "declined",
+      "company": "Genie AI",
+      "role": "Senior Agentic Engineer",
+      "location": "Remote",
+      "variant": "fullstack",
+      "score": 78,
+      "scores": {
+        "cto": 78,
+        "regtech": 73,
+        "devrel": 59
+      },
+      "confidence": "high",
+      "requirements_found": 46,
+      "matched": 20,
+      "gaps": [
+        "This isn't about being good at Cursor or Claude Code.",
+        "You won't simply execute our roadmap.",
+        "We expect you to challenge it.",
+        "You won't just ship features.",
+        "We want you to also ask: “What tool could I build that would help build this for me?”.",
+        "You'll create agents, subagents, software and workflows that allow AI to take on significantly more of the implementation process.",
+        "You'll build systems and tools that increase the output of the people around you too. sharing knowledge, improving workflows and designing for collective intelligence.",
+        "Challenge our roadmap: We don't want an engineer who waits for a PM to tell them what to build."
+      ],
+      "proof_points": [
+        {
+          "requirement": "You think about: Architecture, Technical risk, Security, Happy paths, Edge cases, Scale, Simplicity, Milestones, Trade-offs.",
+          "evidence": "Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems"
+        },
+        {
+          "requirement": "You’ll help us move faster, but more importantly, you'll increase the capability of the engineering team.",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "Own products end-to-end: You'll take ambiguous problems from: problem → discovery → technical design → architecture → implementation → verification → production.",
+          "evidence": "Designed and built internal cryptographic framework underpinning the passkey wallet architecture"
+        },
+        {
+          "requirement": "Your purpose in our mission We’ve raised $17.8 million in Series A funding led by Google Ventures and joined by Khosla Ventures.",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a five-repository product ecosystem (a micro-kernel game engine, a rulebook publishing pipeline, an MCP and REST API, a static site generator, and agent tooling) across roughly 2,900 commits at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "The core problem we're tackling is AI Agentic Workflows.",
+          "evidence": "Built and deployed the first board game MCP server ( tools.moddable.games ): 89 AI-callable tools, Cloudflare Worker with Durable Object sessions, MCP + REST + OpenAPI + llms.txt, serving 250K+ requests per week from external AI agents"
+        }
+      ],
+      "source_url": "https://careers.genieai.co/jobs/8339092-senior-agentic-engineer",
+      "cover_letter": null,
+      "notes": "",
+      "applied_at": "2026-09-10",
+      "declined_date": "2026-09-13"
+    },
+    {
+      "id": "forgd-ai-applied-ai-architect-mtzgzkrs",
+      "added": "2026-09-13",
+      "status": "applied",
+      "company": "forgd.ai",
+      "role": "Applied AI Architect",
+      "location": "Remote",
+      "variant": "cto",
+      "score": 54,
+      "scores": {
+        "cto": 54,
+        "regtech": 53,
+        "devrel": 51
+      },
+      "confidence": "high",
+      "requirements_found": 18,
+      "matched": 8,
+      "gaps": [
+        "Co-build agentic applications and modernise legacy systems on the Claude developer platform.",
+        "Codify deployment patterns.",
+        "Scope engagements: assumptions, risks, milestones, dependencies.",
+        "Build evaluation frameworks, MCP servers, sub-agents and deployment configurations.",
+        "5 years customer-facing technical role (Solutions Architect, Sales Engineer, Forward Deployed Engineer, Technical Consultant) or hands-on Software/Product Engineer.",
+        "Power user of Claude Code.",
+        "financial services, healthcare or regulated industries"
+      ],
+      "proof_points": [
+        {
+          "requirement": "Take teams from beginner to power user.",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "Advise how AI-native development changes issue management, branching, testing, code review and security.",
+          "evidence": "Passkeys, WebAuthN, FIDO2, cryptographic key management, custody systems"
+        },
+        {
+          "requirement": "Enterprise toolchains, CI/CD, SDLC, AWS/GCP/Azure.",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a five-repository product ecosystem (a micro-kernel game engine, a rulebook publishing pipeline, an MCP and REST API, a static site generator, and agent tooling) across roughly 2,900 commits at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "Partner with business stakeholders to deploy agents into sales, customer service and finance.",
+          "evidence": "Built and deployed the first board game MCP server ( tools.moddable.games ): 89 AI-callable tools, Cloudflare Worker with Durable Object sessions, MCP + REST + OpenAPI + llms.txt, serving 250K+ requests per week from external AI agents"
+        },
+        {
+          "requirement": "Responsibilities: Lead Claude Code Labs and customer workshops.",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4464899778/",
+      "cover_letter": null,
+      "notes": "",
+      "applied_at": "2026-09-13"
+    },
+    {
+      "company": "LSEG",
+      "role": "AI Engineering Enablement Director",
+      "location": "City Of London, England, United Kingdom",
+      "url": "https://www.linkedin.com/jobs/view/ai-engineering-enablement-director-at-lseg-4402730169",
+      "linkedin_job_id": "4402730169",
+      "source": "linkedin",
+      "status": "declined",
+      "discovered": "2026-06-22",
+      "variant": "devrel",
+      "notes": "Workday rejection email 2026-09-11",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4402730169/",
+        "contact_email": null,
+        "linkedin_job_id": "4402730169",
+        "freshness": {
+          "status": "unknown",
+          "days_old": null
+        },
+        "action": "check_easy_apply",
+        "notes": null
+      },
+      "score": 59,
+      "scores": {
+        "cto": 48,
+        "regtech": 47,
+        "devrel": 59
+      },
+      "confidence": "high",
+      "requirements_found": 26,
+      "matched": 10,
+      "gaps": [
+        "As a global organisation spanning 70 countries and one rooted in a culture of growth, opportunity,",
+        "Curate reference assets for speed and consistency",
+        "Keep us connected to the market",
+        "experience in cloud engineering, Dev",
+        "Experience creating or curating engineering enablement assets such as templates, patterns, playbooks, or reusable guidance.Strong communication",
+        "Ops, such as cost‑aware model selection, unit economics, or prompt‑efficiency practices.",
+        "essential and your responsibility to ensure that candidates applying to LSEG are aware of this privacy notice.",
+        "As a global organisation spanning 70 countries and one rooted in a culture of growth, opportunity,"
+      ],
+      "proof_points": [
+        {
+          "requirement": "Ops, or software delivery (Azure, AWS, or GCP), with a track record of incremental, agile delivery.Hands‑on development capability, including practical",
+          "evidence": "Developer advocate and technical evangelist with 15 years building on, and explaining, blockchain technology. One of Southeast Asia's earliest Bitcoin voices, with a track record of making complex cryptographic concepts accessible to developers, institutions, and the general public alike. Personally designed protocols now running in production (SADO, DN-Key), built open-source SDKs used across the Bitcoin Ordinals ecosystem, and currently shipping open-source game engines with full developer documentation and embed APIs. Spoken at TEDx, FinTech conferences, and developer meetups across Asia and Europe. Using AI-native engineering workflows to ship developer tooling at unprecedented pace. Looking for a DevRel or Technical Evangelist role at a Layer 1/2 protocol, developer tooling company, or infrastructure provider where both the code and the community matter."
+        },
+        {
+          "requirement": "experience with Python and modern AI frameworks (e.g., Lang",
+          "evidence": "MCP Tools Server ( tools.moddable.games ) — first board game engine MCP server: 16 AI-callable tools, MCP + REST + OpenAPI + llms.txt, Cloudflare Worker on free tier. Connect with one command from Claude Desktop, Cursor, or VS Code"
+        },
+        {
+          "requirement": "Chain, Semantic Kernel, or similar) to build or support agents, chat interfaces, or retrieval‑augmented solutions.",
+          "evidence": "LLM-augmented development workflows, AI game engines, procedural generation, MCP (Model Context Protocol)"
+        },
+        {
+          "requirement": "Experience applying software engineering fundamentals: writing tests, structuring user stories, managing iterative releases, and working with CI/CD pipelines.",
+          "evidence": "'Unravelling Blockchain's Future' — bylined article in Islamic Finance News (IFN), 2017"
+        },
+        {
+          "requirement": "experience with Python and modern AI frameworks (e.g., Lang",
+          "evidence": "Open-source games studio shipping developer-facing engines, Consumer SDKs, MCP tools, and documentation, built entirely using AI-augmented engineering workflows. Deployed the first board game engine MCP server and a full Developers section with API docs, SDK demos, and integration examples."
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4402730169/",
+      "applied_at": "2026-07-18",
+      "id": "lseg-ai-engineering-enablement-director-mtzhgv1y",
+      "added": "2026-07-18",
+      "reference": "R0116809",
+      "declined_date": "2026-09-11"
+    },
+    {
+      "id": "baillie-gifford-director-digital-assets--mte8ar4d",
+      "added": "2026-08-29",
+      "status": "declined",
+      "company": "Baillie Gifford",
+      "role": "Director, Digital Assets (Technical)",
+      "location": "Edinburgh, Scotland, United Kingdom",
+      "variant": "cto",
+      "score": 71,
+      "scores": {
+        "cto": 71,
+        "regtech": 78,
+        "devrel": 70
+      },
+      "confidence": "high",
+      "requirements_found": 32,
+      "matched": 13,
+      "gaps": [
+        "You'll be intellectually curious, well connected and highly collaborative.",
+        "We encourage you to ensure your application reflects your own voice,",
+        "experience, and motivations.",
+        "experiences, ideas and perspectives that this brings.",
+        "Strong relationships and credibility across the digital assets ecosystem, with",
+        "experience working with counterparties, such as custodians, De",
+        "experienced Digital Assets professional to help shape a strategically important capability within Baillie Gifford.",
+        "You'll be a self-starter who can create momentum in an ambiguous environment while remaining thoughtful about risk, implementation detail and long-term client outcomes."
+      ],
+      "proof_points": [
+        {
+          "requirement": "There will also be scope to grow direct-report responsibility as the team scales.Critical",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "combining deep blockchain/De",
+          "evidence": "UTXO scripting, Schnorr/Taproot, Ordinals, Inscriptions, Runes, BRC-20, BitcoinJS, digital assets"
+        },
+        {
+          "requirement": "experienced Digital Assets professional to help shape a strategically important capability within Baillie Gifford.",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a complete open-source product ecosystem (two engines, Consumer SDKs, 41 AI-callable MCP tools, 37 game families) at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "Fi expertise with product development, business development, and senior relationship management.",
+          "evidence": "Cross-functional team leadership, hiring, technical roadmap, stakeholder management, hands-on (P4→M3)"
+        },
+        {
+          "requirement": "Act as Baillie Gifford's senior technical representative with custodians, blockchain foundations, De",
+          "evidence": "Deepened UTXO expertise across Schnorr signatures, Taproot, Ordinals, Inscriptions, and Runes"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/director-digital-assets-technical-at-baillie-gifford-4458011956",
+      "source": "linkedin",
+      "linkedin_job_id": "4458011956",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-08-29. Posted: 2026-08-27. Applied 2026-09-02 via LinkedIn.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/director-digital-assets-technical-at-baillie-gifford-4458011956",
+        "contact_email": null,
+        "linkedin_job_id": "4458011956",
+        "freshness": {
+          "status": "aging",
+          "days_old": 12,
+          "added": "2026-08-29"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      },
+      "applied": "2026-09-02",
+      "declined_date": "2026-09-11"
+    },
+    {
+      "id": "airwallex-senior-software-engineer-new-p-mtzhgv90",
+      "added": "2026-09-13",
+      "company": "Airwallex",
+      "role": "Senior Software Engineer, New Products",
+      "location": null,
+      "status": "declined",
+      "source_url": null,
+      "reference": null,
+      "notes": "Ashby rejection email 2026-09-09 after resume review; application date not captured",
+      "jd_verified": false,
+      "score": null,
+      "scores": null,
+      "confidence": null,
+      "requirements_found": null,
+      "matched": null,
+      "proof_points": [],
+      "gaps": [],
+      "declined_date": "2026-09-09"
+    },
+    {
+      "id": "bny-senior-product-development-manager-b-mu0zciq1",
+      "added": "2026-09-14",
+      "status": "applied",
+      "company": "BNY",
+      "role": "Senior Product Development Manager - Blockchain/Digital Assets/Payments",
+      "location": "London, England, United Kingdom",
+      "variant": "cto",
+      "score": 45,
+      "scores": {
+        "cto": 45,
+        "regtech": 44,
+        "devrel": 29
+      },
+      "confidence": "high",
+      "requirements_found": 14,
+      "matched": 5,
+      "gaps": [
+        "Define operating model to enable client",
+        "experience working in payments, fintech and/or a depth of financial services",
+        "experience in designing payments/liquidity products that have a yield component.Proven",
+        "Define operating model to enable client",
+        "experience of novel products.To be successful in this role, we’re seeking the following:Able to demonstrate the relevant level of",
+        "experience working in payments, fintech and/or a depth of financial services",
+        "experience in designing payments/liquidity products that have a yield component.Proven"
+      ],
+      "proof_points": [
+        {
+          "requirement": "experience working with multi-disciplinary teams comprising product managers, designers, and engineers.Strong communication",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "experience of novel products.To be successful in this role, we’re seeking the following:Able to demonstrate the relevant level of",
+          "evidence": "Personally built the Ordzaar prototype that became CakeDefi's fifth business vertical. Led the engineering pivot at Oviato that secured DraperVC investment. First blockchain company admitted to the Securities Commission Malaysia regulatory sandbox. 15 years building and shipping production blockchain infrastructure (UTXO scripting, Schnorr/Taproot, Ordinals, passkey/WebAuthN, protocol design), equally comfortable writing cryptographic code and managing cross-functional engineering teams. Currently applying AI-augmented engineering methodology to ship framework-level architecture at solo-founder velocity. UK-based since 2025. Seeking a pre-seed to Series B engineering leadership role where technical depth and startup operator experience both matter."
+        },
+        {
+          "requirement": "experience in product design and development with deep technical aptitude in developing new products.Execution focused with",
+          "evidence": "Designed and deployed autonomous agent orchestration: Researcher and Builder routines on cloud infrastructure manage a 6-repo production pipeline via label-triggered coordination. Research agents investigate and verify sources; Builder agents branch, implement, test, and merge. The system ships rulebooks, resolves issues, and expands content continuously without a terminal open"
+        },
+        {
+          "requirement": "experience working with multi-disciplinary teams comprising product managers, designers, and engineers.Strong communication",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a five-repository product ecosystem (a micro-kernel game engine, a rulebook publishing pipeline, an MCP and REST API, a static site generator, and agent tooling) across roughly 2,900 commits at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "experience in product design and development with deep technical aptitude in developing new products.Execution focused with",
+          "evidence": "Designed a micro-kernel architecture in which a game is a configuration entry rather than code: 230 playable variants across 10 board-game families compose from shared movement primitives over six pluggable topologies, with native ESM serving browser, Worker, and Node.js from one source"
+        }
+      ],
+      "source_url": "https://www.linkedin.com/jobs/view/4414981405",
+      "source": "linkedin",
+      "linkedin_job_id": "4414981405",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-09-14. Posted: unknown.",
+      "channel": {
+        "source": "linkedin",
+        "method": "linkedin_apply",
+        "apply_url": "https://www.linkedin.com/jobs/view/4414981405",
+        "contact_email": null,
+        "linkedin_job_id": "4414981405",
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-09-14"
+        },
+        "action": "check_easy_apply",
+        "notes": null,
+        "_fetched": true
+      },
+      "applied_at": "2026-09-14"
+    },
+    {
+      "id": "grapple-ltd-product-manager-mu11b32n",
+      "added": "2026-09-14",
+      "status": "applied",
+      "company": "Grapple LTD",
+      "role": "Product Manager",
+      "location": "Remote, United Kingdom",
+      "variant": null,
+      "score": null,
+      "scores": null,
+      "confidence": null,
+      "requirements_found": null,
+      "matched": null,
+      "gaps": [],
+      "proof_points": [],
+      "source_url": "https://uk.indeed.com/viewjob?jk=81d374ed091539ca",
+      "source": "indeed",
+      "linkedin_job_id": "81d374ed091539ca",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-09-14. Posted: unknown.",
+      "channel": {
+        "source": "indeed",
+        "method": null,
+        "apply_url": null,
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-09-14"
+        },
+        "action": null,
+        "notes": null
+      },
+      "applied_at": "2026-09-14"
+    },
+    {
+      "id": "lloyds-banking-group-senior-software-eng-mu138zzi",
+      "added": "2026-09-14",
+      "company": "Lloyds Banking Group",
+      "role": "Senior Software Engineer",
+      "location": "Edinburgh (hybrid, 2 days/week)",
+      "status": "declined",
+      "source_url": "https://lbg.wd3.myworkdayjobs.com/en-US/lbg_Careers/job/Edinburgh/Senior-Software-Engineer_149710-3",
+      "reference": "149710",
+      "notes": "Digital Finance Lab, Payments Services Platform. CV: Senior-Engineer-Fintech. Cover: cover-lloyds-banking-group-149710.pdf. Java is core and not on CV; addressed in letter.",
+      "jd_verified": false,
+      "score": null,
+      "scores": null,
+      "confidence": null,
+      "requirements_found": null,
+      "matched": null,
+      "proof_points": [],
+      "gaps": [],
+      "applied_at": "2026-09-14",
+      "declined_date": "2026-09-15"
+    },
+    {
+      "id": "lloyds-banking-group-digital-assets-prod-mu2ops5u",
+      "added": "2026-09-15",
+      "status": "applied",
+      "company": "Lloyds Banking Group",
+      "role": "Digital Assets Product Manager (Associate Director)",
+      "location": "London, United Kingdom (hybrid)",
+      "variant": "cto",
+      "score": 53,
+      "scores": {
+        "cto": 53,
+        "regtech": 38,
+        "devrel": 48
+      },
+      "confidence": "high",
+      "requirements_found": 8,
+      "matched": 4,
+      "gaps": [
+        "Experience mentoring and coaching staff. *Strong",
+        "To apply, send your resume and cover letter in a Word document to: ESI International Recruiter 901 North Glebe Road, Suite 200 Arlington, VA 22203 fax- 703-558-4105 research@esi-intl.com",
+        "Experience mentoring and coaching staff. *Strong",
+        "To apply, send your resume and cover letter in a Word document to: ESI International Recruiter 901 North Glebe Road, Suite 200 Arlington, VA 22203 fax- 703-558-4105 research@esi-intl.com"
+      ],
+      "proof_points": [
+        {
+          "requirement": "ESI International has an opening for a Team Lead- Marketing Database Research responsible for the daily administrative tasks of the Marketing Research team.",
+          "evidence": "Founded and structured the Moonshot team (1 → 10 engineers): hiring, sprint cadence, product vision, and stakeholder reporting"
+        },
+        {
+          "requirement": "Will work with various departments to resolve any issues that would impede the staff from meeting production targets.",
+          "evidence": "Built and deployed the first board game MCP server ( tools.moddable.games ): 89 AI-callable tools, Cloudflare Worker with Durable Object sessions, MCP + REST + OpenAPI + llms.txt, serving 250K+ requests per week from external AI agents"
+        },
+        {
+          "requirement": "Summary:Responsible for daily administrative tasks of our Marketing Research team.",
+          "evidence": "AI-augmented engineering methodology applied to framework-level architecture. Built a five-repository product ecosystem (a micro-kernel game engine, a rulebook publishing pipeline, an MCP and REST API, a static site generator, and agent tooling) across roughly 2,900 commits at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams."
+        },
+        {
+          "requirement": "Work at our corporate headquarters in Arlington, VA, conveniently located just 3 blocks from the Ballston Metro station with a free, on-site fitness center.",
+          "evidence": "Designed a micro-kernel architecture in which a game is a configuration entry rather than code: 230 playable variants across 10 board-game families compose from shared movement primitives over six pluggable topologies, with native ESM serving browser, Worker, and Node.js from one source"
+        }
+      ],
+      "source_url": "https://lbg.wd3.myworkdayjobs.com/broadbean_external/job/London/Digital-Assets-Product-Manager--Associate-Director-_163276-1",
+      "source": "workday",
+      "linkedin_job_id": "163276",
+      "cover_letter": null,
+      "notes": "Auto-discovered 2026-09-15. Posted: unknown.",
+      "channel": {
+        "source": "workday",
+        "method": null,
+        "apply_url": null,
+        "contact_email": null,
+        "linkedin_job_id": null,
+        "freshness": {
+          "status": "fresh",
+          "days_old": 0,
+          "added": "2026-09-15"
+        },
+        "action": null,
+        "notes": null,
+        "_fetched": true
+      },
+      "applied_at": "2026-09-15"
     }
   ],
-  "updated": "2026-09-02"
+  "updated": "2026-09-15"
 }

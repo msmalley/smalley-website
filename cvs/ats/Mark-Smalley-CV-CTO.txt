@@ -47,7 +47,7 @@ CEO & Founder — Moddable Limited — United Kingdom
 
 AI-augmented engineering methodology applied to framework-level architecture. Built a five-repository product ecosystem (a micro-kernel game engine, a rulebook publishing pipeline, an MCP and REST API, a static site generator, and agent tooling) across roughly 2,900 commits at solo-founder velocity, demonstrating how LLM-driven workflows deliver CTO-grade architecture without CTO-sized teams.
 
-• Designed a micro-kernel architecture in which a game is a configuration entry rather than code: 204 playable variants across 10 board-game families compose from shared movement primitives over six pluggable topologies, with native ESM serving browser, Worker, and Node.js from one source
+• Designed a micro-kernel architecture in which a game is a configuration entry rather than code: 230 playable variants across 10 board-game families compose from shared movement primitives over six pluggable topologies, with native ESM serving browser, Worker, and Node.js from one source
 
 • Proved the architecture by retiring per-game engines into it: all 15 draughts variants now run on a single 483-line plugin with no variant-specific code, and Dungeon Chess was built entirely on the consumer APIs with zero engine forks
 

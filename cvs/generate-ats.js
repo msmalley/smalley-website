@@ -9,7 +9,24 @@ const cvs = [
   { file: 'cv_regtech.html', out: 'Mark-Smalley-CV-RegTech.txt' },
   { file: 'cv_devrel.html', out: 'Mark-Smalley-CV-DevRel.txt' },
   { file: 'cv_fullstack.html', out: 'Mark-Smalley-CV-FullStack.txt' },
+  { file: 'cv_generic.html', out: 'Mark-Smalley-CV.txt' },
+  { file: 'cv_ai_engineer.html', out: 'Mark-Smalley-AI-Engineer.txt' },
+  { file: 'cv_digital_assets_product.html', out: 'Mark-Smalley-Digital-Assets-Product.txt' },
+  { file: 'cv_ai_product_manager.html', out: 'Mark-Smalley-AI-Product-Manager.txt' },
+  { file: 'cv_senior_engineer_fintech.html', out: 'Mark-Smalley-Senior-Engineer-Fintech.txt' },
+  { file: 'cv_tech_lead_devex.html', out: 'Mark-Smalley-Tech-Lead-DevEx.txt' },
+  { file: 'cv_crypto_policy_specialist.html', out: 'Mark-Smalley-Crypto-Policy-Specialist.txt' },
+  { file: 'cv_digital_money_product.html', out: 'Mark-Smalley-Digital-Money-Product.txt' },
 ];
+
+// Pass names to rebuild only those CVs, e.g. `node generate-ats.js ai_product_manager`.
+// A name matches when it appears in the HTML file name; no names rebuilds every CV.
+const only = process.argv.slice(2).map(a => a.toLowerCase().replace(/\.html$/, ''));
+const selected = only.length ? cvs.filter(cv => only.some(name => cv.file.toLowerCase().includes(name))) : cvs;
+if (only.length && !selected.length) {
+  console.error(`No CV matches: ${only.join(', ')}`);
+  process.exit(1);
+}
 
 function stripHtml(html) {
   html = html.replace(/<head[\s\S]*?<\/head>/gi, '');
@@ -50,6 +67,19 @@ function stripHtml(html) {
   html = html.replace(/<span class="job-title">([^<]*?)(<em[^>]*>[^<]*<\/em>)?<\/span>\s*<span class="job-company">([^<]*)<\/span>/gi, (m, title, em, company) => `${title.trim()} — ${company.trim()}`);
   html = html.replace(/<span class="job-dates">([^<]*)<\/span>/gi, ' ($1)');
   html = html.replace(/<div class="section-title">([^<]*)<\/div>/gi, '\n\n=== $1 ===\n');
+  // Standard template: headings are real h2s, and the contact line is a run
+  // of spans that must stay on one pipe-separated line.
+  html = html.replace(/<h2 class="section-title">([^<]*)<\/h2>/gi, '\n\n=== $1 ===\n');
+  html = html.replace(/<div class="contact">([\s\S]*?)<\/div>/gi, (m, inner) => {
+    const parts = [];
+    inner.replace(/<span>([\s\S]*?)<\/span>/gi, (sm, part) => {
+      parts.push(part.replace(/<[^>]+>/g, '').trim());
+      return '';
+    });
+    return parts.join(' | ') + '\n';
+  });
+  html = html.replace(/<h3 class="job-title">/gi, '\n');
+  html = html.replace(/<span class="skill-label">([^<]*)<\/span>/gi, '$1');
   html = html.replace(/<div class="job-header">/gi, '\n');
   html = html.replace(/<br\s*\/?>/gi, '\n');
   html = html.replace(/<\/p>/gi, '\n\n');
@@ -92,7 +122,7 @@ function formatForAts(html) {
 
 if (!fs.existsSync(atsDir)) fs.mkdirSync(atsDir, { recursive: true });
 
-for (const cv of cvs) {
+for (const cv of selected) {
   const html = fs.readFileSync(path.join(htmlDir, cv.file), 'utf-8');
   const text = formatForAts(html);
   fs.writeFileSync(path.join(atsDir, cv.out), text, 'utf-8');

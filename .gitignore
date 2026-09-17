@@ -67,3 +67,14 @@ cvs/dist/prep-*.pdf
 cvs/html/deck_*.html
 cvs/slides-college.css
 cvs/dist/DeFi-Supervisory-College-Smalley.pdf
+
+# Job application trail: which roles were applied for, when, and with what.
+# Local only. The generators and templates stay tracked; their output does not.
+cvs/jobs.json
+cvs/jobs-archive.json
+cvs/jobs-filtered.json
+cvs/applicant-profile.json
+cvs/drafts/
+cvs/screenshots/
+cvs/dist/cover-*.html
+cvs/dist/cover-*.pdf

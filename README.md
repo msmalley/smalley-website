@@ -47,6 +47,7 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 ## Changelog
 
 #### 2026-09-17
+- Application trail removed from the repository and the live site: job tracker, drafts, applicant profile, portal screenshots and generated cover letters are now local-only. Generators, templates and stylesheets stay
 - Standard ATS-first CV template (`cv_standard.css`) with a generic CV and role-targeted forks, all reading as UK-local and employee-level; kept private and sent as attachments
 - Cover letter "standard" variant paired with that template: per-letter headline, prose paragraphs, and filenames keyed to the job reference so each letter maps to one posting
 - `generate-pdfs.js` and `generate-ats.js` accept CV names, so rebuilding one private CV no longer churns the public PDFs
@@ -58,14 +59,14 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 - `generate-pdfs.js` no longer wipes `dist/` on every run; it was deleting every generated cover letter alongside the CVs it rebuilt
 - ATS generator handles tabular and chip markup: build rows flatten to one self-describing line, stack keywords come out comma-separated
 - Moddable figures across all four CVs refreshed from the stats API: 89 MCP tools (the CVs claimed 41, and the ATS text still said 16), 204 playable variants across 10 families, ~2,900 commits. Replaces the retired "two engines" framing with the micro-kernel architecture, where a game is a configuration entry rather than code
-- 8 new job leads ingested (TraqCheck, Ethos BeathChapman, Skillsearch, InX, Keyrock, boxxe, Dex, Ihsan)
+- 8 new job leads ingested
 - Engine embeds now run through the Tools SDK via `sm-engine-embed.js`, fetching families and variants from the API at load. The modules it replaces hand-rolled iframes around a typed-in list and offered 6 chess variants where the engine serves 135
 - Workflow page gains a Moddable layer cake section covering the four-repository stack (rules, engine, tools, web), each layer live-bound and linking to the architecture write-up
 - Moddable case study consolidated onto one engine: a single embed frame carrying every family and variant, with the live frontmatter definition beside it
 - Retired `sm-chess-embed.js` and `sm-hex-embed.js`
 - Hex embed style lists corrected against the engine's own `registerGame()` declarations. Restored the theme-matched `bg` parameter and made embeds re-render when the theme flips
 - Fixed the underlying engine bug these embeds exposed: hex tile styles never reached the renderer, so every style except Twilight's rendered as flat colour. Fixed upstream in moddable-engine, which also restores tile art on moddable.games
-- CGI Solutions Architect decline and the Talensa Partners and Jobgether applications recorded; 84 applications sent, 19 responses
+- Decline and two applications recorded; 84 applications sent, 19 responses
 - Moddable statistics now derive from the stats endpoint site-wide instead of being typed into pages. `sm-live.js` binds values through `data-stat` attributes and `{{stat:key|fallback}}` tokens in JSON prose, caches for an hour, falls back to inline values when the endpoint is unreachable, and skips the network entirely on pages with no bindings
 - Corrected every stale Moddable figure across the homepage, portfolio, open-source pages and data files. `/workflow/` and the 16-days article keep their May 2026 snapshot as a historical record, with the contradiction between the intro and its own numbers grid resolved
 - `job-pipeline.js` gains `record`, for logging an outcome where no job description was ever captured. It stores no score rather than inventing one from a reconstructed description
@@ -79,13 +80,13 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 - Fixed dashboard "applications this week" counter to use `applied_at` instead of ingestion date
 
 #### 2026-07-13
-- Application sprint: 9 new applications (BNY, Mastercard, Wintermute, Sotheby's, Malt, Novera, Bestman, Sanderson King, Ably). 12 total, 0 responses.
+- Application sprint: 9 new applications, 12 total, 0 responses
 - DevRel cover letter template (plum/violet, Space Grotesk) matching cv_devrel styling
 - Cover letter generator now selects template by variant (CTO/RegTech use original, DevRel uses new)
 - Moddable stats refresh across entire site: 41 MCP tools, 37 games, 315 variants, 2,974 pages
 - Canonical tags added to all 38 pages (fixes Google Search Console "duplicate without canonical")
 - Bug fix: social_post now auto-persists platform_id to pipeline.json (was silently lost)
-- 7 new job leads ingested (ClearBank, Harrington Starr, Bullish, CoinDesk, Kast, TradingHub, Dex)
+- 7 new job leads ingested
 - 5 expired opportunities tracked, 8 rejected
 
 #### 2026-07-06
@@ -93,10 +94,10 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 - Variant-specific keyword expansion maps in match-job.js (CTO/RegTech/DevRel each have their own semantic neighbourhood)
 - Dashboard: tri-score support in top_leads filter, search includes title field
 - Blog article "Building the Machine That Builds Your Career": transparency angle, expansion map section, sidebar tags/nav
-- 6 fresh leads ingested and auto-scored (Xapo Bank 79, Wintermute 80, Google 70, Kast 69, Ciklo 79)
+- 6 fresh leads ingested and auto-scored, top score 80
 
 #### 2026-06-19
-- First job application sent via automated pipeline (Deel Head of Engineering, email-direct with CTO CV attached)
+- First job application sent via the automated pipeline, email-direct with the CTO CV attached
 - Email attachment support added to MCP email_send tool (nodemailer + file paths)
 - web3.career job search provider added (3 sources now: LinkedIn Guest API, crypto.jobs, web3.career)
 - Job enrichment engine: channel classification, email detection, freshness scoring (cvs/enrich-jobs.js)

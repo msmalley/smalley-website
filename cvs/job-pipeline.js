@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { matchJob } = require('./match-job.js');
 const { generate } = require('./generate-cover.js');
+const { ARCHIVE_STATUSES } = require('./job-archive.js');
 
 const jobsPath = path.resolve(__dirname, 'jobs.json');
 const archivePath = path.resolve(__dirname, 'jobs-archive.json');
@@ -184,7 +185,6 @@ function updateStatus(jobId, newStatus, outcomeDate) {
   return archived;
 }
 
-const ARCHIVE_STATUSES = ['closed', 'rejected', 'applied', 'withdrawn', 'declined'];
 
 // Terminal statuses belong in jobs-archive.json regardless of which command set
 // them, so the same status never lives in two files depending on the path taken.

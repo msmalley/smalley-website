@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { classifyAll, fetchAndEnrich } = require('./enrich-jobs.js');
 const { matchJob } = require('./match-job.js');
+const { sweepTerminal } = require('./job-archive.js');
 
 const jobsPath = path.resolve(__dirname, 'jobs.json');
 
@@ -10,6 +11,7 @@ function loadJobs() {
 }
 
 function saveJobs(data) {
+  sweepTerminal(data);
   fs.writeFileSync(jobsPath, JSON.stringify(data, null, 2) + '\n');
 }
 
@@ -61,7 +63,13 @@ function loadArchive() {
 
 const REJECT_COMPANIES = [
   'tether', 'tether operations limited',
+  // Declined sources
+  'jack & jill', 'jack and jill',
 ];
+
+// Exact-name blocks, for names too short to substring-match safely ("dex" is
+// inside "Index" and "Dexcom").
+const REJECT_COMPANIES_EXACT = ['dex', 'actai'];
 
 const REJECT_TITLES = [
   // Sales / BD / marketing
@@ -91,7 +99,11 @@ const REJECT_TITLES = [
   'frontend developer', 'integrations engineer',
   // Analyst-level roles
   'governance analyst', 'compliance analyst', 'compliance case analyst',
-  'research analyst', 'risk analyst'
+  'research analyst', 'risk analyst',
+  // Compliance-officer leadership (MLRO-track); RegTech targets technology roles
+  'head of compliance',
+  // Customer-embedded engineering, repeatedly declined
+  'forward deployed'
 ];
 
 const REJECT_PATTERNS = [
@@ -100,11 +112,17 @@ const REJECT_PATTERNS = [
   /product owner/i,
   // Legal practice roles, not legal-tech product or engineering roles
   /\blegal\b(?!.*\b(product|engineer|developer|ai|tech))/i,
-  /co-?founder/i
+  /co-?founder/i,
+  // AWS partner/specialist roles (vendor certification track)
+  /\baws\b/i,
+  // Compliance, financial crime and counsel roles of any seniority. Only
+  // engineering roles that build compliance systems get through.
+  /^(?!.*\b(engineer|developer|architect)\b).*(complian|\bmlro\b|financial crime|\bcounsel\b)/i
 ];
 
 function isIrrelevantRole(title, company) {
   if (company && REJECT_COMPANIES.some(r => company.toLowerCase().includes(r))) return true;
+  if (company && REJECT_COMPANIES_EXACT.includes(company.toLowerCase().trim())) return true;
   if (!title) return false;
   const t = title.toLowerCase();
   if (REJECT_TITLES.some(r => t.includes(r))) return true;

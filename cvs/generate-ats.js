@@ -17,6 +17,8 @@ const cvs = [
   { file: 'cv_tech_lead_devex.html', out: 'Mark-Smalley-Tech-Lead-DevEx.txt' },
   { file: 'cv_crypto_policy_specialist.html', out: 'Mark-Smalley-Crypto-Policy-Specialist.txt' },
   { file: 'cv_digital_money_product.html', out: 'Mark-Smalley-Digital-Money-Product.txt' },
+  { file: 'cv_founder_eir.html', out: 'Mark-Smalley-Entrepreneur-in-Residence.txt' },
+  { file: 'cv_devrel_engineer.html', out: 'Mark-Smalley-DevRel-Engineer.txt' },
 ];
 
 // Pass names to rebuild only those CVs, e.g. `node generate-ats.js ai_product_manager`.

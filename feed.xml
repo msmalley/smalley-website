@@ -7,6 +7,14 @@
   <language>en</language>
   <atom:link href="https://smalley.my/feed.xml" rel="self" type="application/rss+xml"/>
   <item>
+    <title>What AI Agents Taught Me About Building on Midnight</title>
+    <link>https://smalley.my/thoughts/building-on-midnight-with-ai-agents/</link>
+    <guid>https://smalley.my/thoughts/building-on-midnight-with-ai-agents/</guid>
+    <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
+    <category>Writing</category>
+    <description>A privacy contract written, deployed and claimed on Midnight's preview network by an AI agent in 84 minutes, a crew of three agents living in Midnight City, and why games are where agents and programmable privacy meet.</description>
+  </item>
+  <item>
     <title>The Moddable Layer Cake</title>
     <link>https://smalley.my/thoughts/the-moddable-layer-cake/</link>
     <guid>https://smalley.my/thoughts/the-moddable-layer-cake/</guid>

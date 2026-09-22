@@ -116,6 +116,10 @@ function buildSitemap() {
         if (prefix === '/cvs/' && (entry.name === 'html' || entry.name === 'dist' || entry.name === 'node_modules')) continue;
         walk(full, prefix + entry.name + '/');
       } else if (entry.name === 'index.html') {
+        // Drafts carry a noindex robots tag; a page that asks not to be indexed
+        // must not be advertised in the sitemap either
+        const html = fs.readFileSync(full, 'utf8');
+        if (/<meta\s+name="robots"\s+content="[^"]*noindex/i.test(html)) continue;
         pages.push(prefix);
       }
     }

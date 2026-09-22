@@ -15,6 +15,8 @@ const cvs = [
   { file: 'cv_tech_lead_devex.html', pdf: 'Mark-Smalley-Tech-Lead-DevEx.pdf', screenshot: 'cv_tech_lead_devex.png' },
   { file: 'cv_crypto_policy_specialist.html', pdf: 'Mark-Smalley-Crypto-Policy-Specialist.pdf', screenshot: 'cv_crypto_policy_specialist.png' },
   { file: 'cv_digital_money_product.html', pdf: 'Mark-Smalley-Digital-Money-Product.pdf', screenshot: 'cv_digital_money_product.png' },
+  { file: 'cv_founder_eir.html', pdf: 'Mark-Smalley-Entrepreneur-in-Residence.pdf', screenshot: 'cv_founder_eir.png' },
+  { file: 'cv_devrel_engineer.html', pdf: 'Mark-Smalley-DevRel-Engineer.pdf', screenshot: 'cv_devrel_engineer.png' },
 ];
 
 // Pass names to rebuild only those CVs, e.g. `node generate-pdfs.js ai_product_manager`.

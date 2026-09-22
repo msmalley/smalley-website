@@ -1,5 +1,19 @@
 [
   {
+    "slug": "building-on-midnight-with-ai-agents",
+    "title": "What AI Agents Taught Me About Building on Midnight",
+    "date": "2026-09-22",
+    "readingTime": "11 min",
+    "tags": [
+      "AI/LLM",
+      "MCP",
+      "Privacy",
+      "Games",
+      "Game design"
+    ],
+    "excerpt": "A privacy contract written, deployed and claimed on Midnight's preview network by an AI agent in 84 minutes, a crew of three agents living in Midnight City, and why games are where agents and programmable privacy meet."
+  },
+  {
     "slug": "the-moddable-layer-cake",
     "title": "The Moddable Layer Cake",
     "date": "2026-08-07",

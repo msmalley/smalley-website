@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
+const { sweepTerminal } = require('./job-archive.js');
 const jobsPath = path.resolve(__dirname, 'jobs.json');
 
 function loadJobs() {
@@ -8,6 +9,7 @@ function loadJobs() {
 }
 
 function saveJobs(data) {
+  sweepTerminal(data);
   fs.writeFileSync(jobsPath, JSON.stringify(data, null, 2) + '\n');
 }
 

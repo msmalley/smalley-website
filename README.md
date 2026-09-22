@@ -46,6 +46,13 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 
 ## Changelog
 
+#### 2026-09-22
+- New article: "What AI Agents Taught Me About Building on Midnight", covering a privacy contract built and claimed on Midnight's preview network by an AI agent, a three-agent crew running in Midnight City, and games as the proving ground for agents and programmable privacy
+- Sitemap generator skips pages marked `noindex`, so unpublished drafts are no longer advertised to search engines
+- Pipeline records with a final status now always move to the archive, whichever script set them (`cvs/job-archive.js`); dead listings found by the enrichment fetch were being left in the active tracker
+- Job ingest filters out compliance, MLRO, financial-crime and counsel roles (engineering titles excepted), forward-deployed and AWS-specialist roles, and a handful of declined sources
+- Two more role-targeted standard CVs (entrepreneur in residence, developer relations engineer), keeping original job titles
+
 #### 2026-09-17
 - Application trail removed from the repository and the live site: job tracker, drafts, applicant profile, portal screenshots and generated cover letters are now local-only. Generators, templates and stylesheets stay
 - Standard ATS-first CV template (`cv_standard.css`) with a generic CV and role-targeted forks, all reading as UK-local and employee-level; kept private and sent as attachments

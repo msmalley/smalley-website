@@ -11,10 +11,10 @@ const GRAPHQL_BASE = 'https://x.com/i/api/graphql';
 //   then grep for: queryId:"...",operationName:"CreateTweet|SearchTimeline|DeleteTweet"
 // Last updated: 2026-07-20
 const QUERY_IDS = {
-  CreateTweet: 'lYrkzD_-rtW5H3wDiwlcWA',
-  SearchTimeline: 'PusO6nN_nUSAsfJktZJd9w',
+  CreateTweet: 'GYdIGqVWfZNho79bQ2XDoA',
+  SearchTimeline: 'auLkqtmHqYEpRvflfvLhyQ',
   DeleteTweet: 'nxpZCY2K-I6QoFHAHeojFQ',
-  TweetResultByRestId: 'oZDZmKdLaZObfAE9qC17Lg',
+  TweetResultByRestId: 'Xl0tsHf4AzflMRjbw9e70A',
   FavoriteTweet: 'lI07N6Otwv1PhnEgXILM7A',
   CreateRetweet: 'mbRO74GrOvSfRcJnlMapnQ'
 };

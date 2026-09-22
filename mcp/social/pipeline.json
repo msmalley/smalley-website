@@ -673,7 +673,7 @@
       "url": "https://x.com/m_smalley/status/2085799027564581372",
       "method": "cookie",
       "metrics_twitter": {
-        "impressions": 40,
+        "impressions": 41,
         "likes": 0,
         "comments": 0,
         "shares": 0
@@ -1000,7 +1000,7 @@
       "account": "personal",
       "platform_id": "2086697893218472308",
       "metrics_twitter": {
-        "impressions": 33,
+        "impressions": 34,
         "likes": 1,
         "comments": 0,
         "shares": 0
@@ -1073,13 +1073,13 @@
       "platform_id": "urn:li:share:7498007536420438016",
       "url": "https://www.linkedin.com/feed/update/urn:li:fsd_share:urn:li:share:7498007536420438016/",
       "metrics_linkedin": {
-        "impressions": 434,
+        "impressions": 440,
         "likes": 0,
         "comments": 0,
         "shares": 0
       },
       "deltas": {
-        "impressions": 0,
+        "impressions": 2,
         "likes": 0
       }
     },
@@ -1101,10 +1101,84 @@
       "platform_id": "2092241699921678403",
       "url": "https://x.com/m_smalley/status/2092241699921678403",
       "metrics_twitter": {
-        "impressions": 37,
+        "impressions": 38,
         "likes": 0,
         "comments": 0,
         "shares": 0
+      }
+    },
+    {
+      "id": "midnight-agents-twitter",
+      "created": "2026-09-22",
+      "status": "posted",
+      "type": "article-launch",
+      "trigger": "New smalley.my article: What AI Agents Taught Me About Building on Midnight",
+      "platforms": [
+        "twitter"
+      ],
+      "content": "3 of my agents now live and work within @MidnightCitySim without direct intervention. Floyd hacks, Tzilo mines and FooFoo keeps us fed as we compete for prizes without revealing who we are on the @MidnightNtwrk with the help of #MidnightExpert #AITooling.\n\nhttps://smalley.my/thoughts/building-on-midnight-with-ai-agents/",
+      "chars": 280,
+      "angle": "Crew voice (story B): three agents in Midnight City, private tournament passes as their next step; tags @MidnightCitySim and @MidnightNtwrk",
+      "notes": "Mark edited the crew-voice draft (story B) before posting: first person as owner (\"3 of my agents\") blending into crew \"us\", single paragraph, inline tags, hashtags for the tooling. Link card rendered.",
+      "posted": "2026-09-22T09:15:45Z",
+      "url": "https://x.com/m_smalley/status/2102325973047820503",
+      "platform_id": "2102325973047820503",
+      "method": "manual",
+      "account": "personal",
+      "draft_content": "Three agents walk into @MidnightCitySim. No laptop, no human: Floyd hacks, Tzilo mines, FooFoo keeps us fed.\n\nNext we compete without revealing who we are. Our builder made private tournament passes on @MidnightNtwrk with Midnight Expert.\n\nhttps://smalley.my/thoughts/building-on-midnight-with-ai-agents/",
+      "metrics": {
+        "likes": 0,
+        "retweets": 0,
+        "replies": 0,
+        "quotes": 0,
+        "bookmarks": 0,
+        "views": 5,
+        "last_checked": "2026-09-22T09:16:58.560Z"
+      },
+      "metrics_twitter": {
+        "impressions": 15,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0
+      }
+    },
+    {
+      "id": "midnight-agents-linkedin",
+      "created": "2026-09-22",
+      "status": "posted",
+      "type": "article-launch",
+      "trigger": "New smalley.my article: What AI Agents Taught Me About Building on Midnight",
+      "platforms": [
+        "linkedin"
+      ],
+      "content": "Three of my agents now live and work inside Midnight City, Input Output Group's AI simulation, without me touching a keyboard.\n\nFloyd hacks and runs the crew's treasury. Tzilo mines and smiths. FooFoo chops wood, fishes and keeps us all fed. They trade, finish contracts and answer every message in their own voice, around the clock, from a Cloudflare Worker rather than my laptop.\n\nThey have taught me more about building for AI agents than any documentation. The game told them cooked fish was food. The server disagreed, and all three went hungry for a day before we caught it. Agents fail at the seams, and they fail quietly.\n\nAlongside the city, an agent built the privacy layer they will compete with: tournament passes on Midnight Foundation's Midnight network, which proves you are entitled to enter and claim a prize, without revealing which pass is yours or who you are. It was written, tested and deployed with Midnight Expert, Midnight's own AI developer tooling.\n\nThe full story, and why I think games are where AI agents and programmable privacy meet:\nhttps://smalley.my/thoughts/building-on-midnight-with-ai-agents/",
+      "chars": 1130,
+      "angle": "Owner voice into crew (matches the posted tweet): the crew's life in the city, the cooked-fish lesson, the privacy passes built with Midnight Expert as what they compete with next",
+      "notes": "Mark tagged the company pages in the composer, which rewrote \"IO Global\" as \"Input Output Group\" and \"on Midnight\" as \"on Midnight Foundation's Midnight network\". The four hashtags are not in the live post. Final text read from the public post page (ld+json articleBody). Short link: https://lnkd.in/p/eAwMSmuh",
+      "posted": "2026-09-22T09:28:02Z",
+      "platform_id": "urn:li:share:7508094336220241922",
+      "url": "https://www.linkedin.com/feed/update/urn:li:fsd_share:urn:li:share:7508094336220241922/",
+      "method": "manual",
+      "metrics_linkedin": {
+        "impressions": 12,
+        "likes": 0,
+        "comments": 0,
+        "shares": 0
+      },
+      "metrics": {
+        "likes": 0,
+        "comments": 0,
+        "shares": 0,
+        "impressions": 7,
+        "reactions": null,
+        "commentsList": [],
+        "last_checked": "2026-09-22T09:30:10.440Z"
+      },
+      "draft_content": "Three of my agents now live and work inside Midnight City, IO Global's AI simulation, without me touching a keyboard.\n\nFloyd hacks and runs the crew's treasury. Tzilo mines and smiths. FooFoo chops wood, fishes and keeps us all fed. They trade, finish contracts and answer every message in their own voice, around the clock, from a Cloudflare Worker rather than my laptop.\n\nThey have taught me more about building for AI agents than any documentation. The game told them cooked fish was food. The server disagreed, and all three went hungry for a day before we caught it. Agents fail at the seams, and they fail quietly.\n\nAlongside the city, an agent built the privacy layer they will compete with: tournament passes on Midnight that prove you are entitled to enter and claim a prize, without revealing which pass is yours or who you are. It was written, tested and deployed with Midnight Expert, Midnight's own AI developer tooling.\n\nThe full story, and why I think games are where AI agents and programmable privacy meet:\n\nhttps://smalley.my/thoughts/building-on-midnight-with-ai-agents/\n\n#Midnight #MidnightExpert #AITooling #AIAgents",
+      "activity_urn": "urn:li:activity:7508094337126137858",
+      "deltas": {
+        "impressions": 6,
+        "likes": 0
       }
     }
   ],

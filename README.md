@@ -48,6 +48,7 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 
 #### 2026-09-22
 - New article: "What AI Agents Taught Me About Building on Midnight", covering a privacy contract built and claimed on Midnight's preview network by an AI agent, a three-agent crew running in Midnight City, and games as the proving ground for agents and programmable privacy
+- Article share cards use the bare headline; the name suffix stays in browser tab titles only, since cards already show the site name
 - Sitemap generator skips pages marked `noindex`, so unpublished drafts are no longer advertised to search engines
 - Pipeline records with a final status now always move to the archive, whichever script set them (`cvs/job-archive.js`); dead listings found by the enrichment fetch were being left in the active tracker
 - Job ingest filters out compliance, MLRO, financial-crime and counsel roles (engineering titles excepted), forward-deployed and AWS-specialist roles, and a handful of declined sources

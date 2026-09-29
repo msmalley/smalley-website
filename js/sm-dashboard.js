@@ -889,7 +889,8 @@
   function renderAnalytics(analytics) {
     var el = document.getElementById('analytics-content');
     var grid = SM.el('div', { class: 'dashboard-grid-2' });
-    var sites = [['smalley_my', 'smalley.my'], ['moddable_games', 'moddable.games']];
+    var sites = [['smalley_my', 'smalley.my'], ['moddable_games', 'moddable.games'], ['midnight_armada', 'midnightarmada.com']];
+    var SITE_DOMAINS = { smalley_my: 'smalley.my', moddable_games: 'moddable.games', midnight_armada: 'midnightarmada.com' };
 
     for (var s = 0; s < sites.length; s++) {
       var key = sites[s][0], label = sites[s][1];
@@ -1052,11 +1053,11 @@
             SM.el('th', {}, 'Avg Duration'), SM.el('th', {}, 'Engaged')
           )));
           var tbody = SM.el('tbody');
-          var fallbackDomain = key === 'smalley_my' ? 'https://smalley.my' : 'https://moddable.games';
+          var fallbackDomain = 'https://' + SITE_DOMAINS[key];
           for (var i = 0; i < displayCount; i++) {
             var p = filtered[i];
             var domain = p.host ? 'https://' + p.host : fallbackDomain;
-            var hostLabel = p.host || (key === 'smalley_my' ? 'smalley.my' : 'moddable.games');
+            var hostLabel = p.host || SITE_DOMAINS[key];
             var dur = p.avg_duration_s >= 60 ? Math.floor(p.avg_duration_s / 60) + 'm ' + (p.avg_duration_s % 60) + 's' : p.avg_duration_s + 's';
             var pageLink = SM.el('a', { href: domain + p.path, target: '_blank', rel: 'noopener', style: { color: 'var(--sm-teal-glow)', textDecoration: 'none', fontFamily: 'var(--f-mono)', fontSize: '12px' } }, p.path);
             var hostColor = hostLabel.includes('chess') ? 'var(--sm-teal-glow)' : hostLabel.includes('hex') ? 'var(--sm-violet-glow)' : hostLabel.includes('rules') ? 'var(--sm-gold-glow)' : 'var(--sm-muted)';
@@ -1313,6 +1314,7 @@
       { label: 'Email subscribers', value: String(kv.subscriber_count) },
       { label: 'Mod submissions', value: String(kv.submission_count) },
       { label: 'Pending review', value: String(kv.pending_submissions) },
+      { label: 'Armada commissions', value: String(kv.commission_count || 0) },
       { label: 'Active jam', value: kv.jam ? 'Jam #' + (kv.jam.number || '?') : 'None' }
     ]));
 
@@ -1372,6 +1374,34 @@
       modTable.appendChild(modTbody);
       modPanel.appendChild(modTable);
       el.appendChild(modPanel);
+    }
+
+    if (kv.commissions && kv.commissions.length > 0) {
+      var comPanel = SM.el('div', { class: 'dashboard-panel', style: { marginTop: '24px' } },
+        SM.el('div', { class: 'dashboard-panel-title' }, 'Midnight Armada Commissions (' + kv.commission_count + ')')
+      );
+      var comTable = SM.el('table', { class: 'metrics-table' });
+      comTable.appendChild(SM.el('thead', {},
+        SM.el('tr', {},
+          SM.el('th', {}, 'Name'), SM.el('th', {}, 'Organisation'),
+          SM.el('th', {}, 'Fleet'), SM.el('th', {}, 'Email'), SM.el('th', {}, 'Date')
+        )
+      ));
+      var comTbody = SM.el('tbody');
+      for (var k = 0; k < kv.commissions.length; k++) {
+        var c = kv.commissions[k];
+        var comDate = c.requested_at ? c.requested_at.split('T')[0] : '—';
+        comTbody.appendChild(SM.el('tr', {},
+          SM.el('td', {}, c.name || '—'),
+          SM.el('td', {}, c.organisation || '—'),
+          SM.el('td', {}, c.fleet_size || '—'),
+          SM.el('td', { style: { fontFamily: 'var(--f-mono)', fontSize: '11px' } }, c.email || '—'),
+          SM.el('td', {}, comDate)
+        ));
+      }
+      comTable.appendChild(comTbody);
+      comPanel.appendChild(comTable);
+      el.appendChild(comPanel);
     }
   }
 

@@ -62,7 +62,7 @@
       },
       "notes": "First post after long silence. Combines comeback with MCP meta-demonstration. Must land before anything else.",
       "metrics_twitter": {
-        "impressions": 141,
+        "impressions": 142,
         "likes": 1,
         "comments": 1,
         "shares": 0
@@ -96,7 +96,7 @@
       },
       "notes": "Reply-to confirmed working. Posted as reply to tweet 2067236318627680743.",
       "metrics_twitter": {
-        "impressions": 21,
+        "impressions": 22,
         "likes": 0,
         "comments": 0,
         "shares": 0
@@ -198,7 +198,7 @@
       "pending_replies": [],
       "notes": "First post after long silence. Combines comeback with MCP meta-demonstration. No ask, no role signal — just presence and proof.",
       "metrics_linkedin": {
-        "impressions": 778,
+        "impressions": 782,
         "likes": 21,
         "comments": 10,
         "shares": 0,
@@ -224,7 +224,7 @@
           },
           {
             "author": "richard abas",
-            "subtitle": "Candidate #3 for MIA Council 2026",
+            "subtitle": "chief geodude",
             "text": "Bon voyage ",
             "created": 1781837564901,
             "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473568425811025920%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473568425811025920%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
@@ -252,7 +252,7 @@
           },
           {
             "author": "richard abas",
-            "subtitle": "Candidate #3 for MIA Council 2026",
+            "subtitle": "chief geodude",
             "text": "welcome home",
             "created": 1781965664959,
             "permalink": "https://www.linkedin.com/feed/update/urn:li:activity:7473002063375990784?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7473568425811025920%29&replyUrn=urn%3Ali%3Acomment%3A%28activity%3A7473002063375990784%2C7474105716400783360%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287473568425811025920%2Curn%3Ali%3Aactivity%3A7473002063375990784%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287474105716400783360%2Curn%3Ali%3Aactivity%3A7473002063375990784%29"
@@ -290,7 +290,7 @@
           },
           {
             "author": "richard abas",
-            "occupation": "Candidate #3 for MIA Council 2026",
+            "occupation": "chief geodude",
             "type": "LIKE"
           },
           {
@@ -376,7 +376,7 @@
         ]
       },
       "deltas": {
-        "impressions": 0,
+        "impressions": 4,
         "likes": 0
       }
     },
@@ -444,7 +444,7 @@
         "last_checked": "2026-08-20T15:19:48.759Z"
       },
       "metrics_twitter": {
-        "impressions": 76,
+        "impressions": 77,
         "likes": 1,
         "comments": 1,
         "shares": 0
@@ -488,7 +488,7 @@
       },
       "notes": "Follow-up to comeback posts. Explains the process teased in the comeback. Positions engineering approach.",
       "metrics_linkedin": {
-        "impressions": 853,
+        "impressions": 854,
         "likes": 3,
         "comments": 1,
         "shares": 0,
@@ -523,7 +523,7 @@
         ]
       },
       "deltas": {
-        "impressions": 0,
+        "impressions": 1,
         "likes": 0
       }
     },
@@ -546,7 +546,7 @@
       "sequence": 6,
       "notes": "2-tweet thread. Tweet 1 posted by pipeline, tweet 2 posted manually by Mark (Twitter 226 cooldown from earlier failed attempts with stale queryId).",
       "metrics_twitter": {
-        "impressions": 38,
+        "impressions": 39,
         "likes": 0,
         "comments": 1,
         "shares": 0
@@ -591,7 +591,7 @@
         "last_checked": "2026-07-22T19:57:01.868Z"
       },
       "metrics_linkedin": {
-        "impressions": 1897,
+        "impressions": 1901,
         "likes": 7,
         "comments": 2,
         "shares": 1,
@@ -650,7 +650,7 @@
         ]
       },
       "deltas": {
-        "impressions": 0,
+        "impressions": 4,
         "likes": 0
       }
     },
@@ -673,7 +673,7 @@
       "url": "https://x.com/m_smalley/status/2085799027564581372",
       "method": "cookie",
       "metrics_twitter": {
-        "impressions": 41,
+        "impressions": 42,
         "likes": 0,
         "comments": 0,
         "shares": 0
@@ -707,7 +707,7 @@
       "url": "https://www.linkedin.com/feed/update/urn:li:fsd_share:urn:li:share:7496532242333204480/",
       "method": "voyager",
       "metrics_linkedin": {
-        "impressions": 322,
+        "impressions": 326,
         "likes": 7,
         "comments": 1,
         "shares": 0,
@@ -763,7 +763,7 @@
         ]
       },
       "deltas": {
-        "impressions": 0,
+        "impressions": 4,
         "likes": 0
       }
     },
@@ -785,7 +785,7 @@
       "platform_id": "urn:li:activity:7482386169809526784",
       "url": "https://www.linkedin.com/feed/update/urn:li:activity:7482386169809526784/",
       "metrics_linkedin": {
-        "impressions": 524,
+        "impressions": 527,
         "likes": 4,
         "comments": 1,
         "shares": 0,
@@ -826,7 +826,7 @@
         ]
       },
       "deltas": {
-        "impressions": 0,
+        "impressions": 3,
         "likes": 0
       },
       "metrics": {
@@ -866,7 +866,7 @@
       "platform_id": "2076620514785652912",
       "url": "https://x.com/m_smalley/status/2076620514785652912",
       "metrics_twitter": {
-        "impressions": 39,
+        "impressions": 40,
         "likes": 0,
         "comments": 1,
         "shares": 0
@@ -970,7 +970,7 @@
       "chars": 137,
       "angle": "Personal endorsement + summary of the mod",
       "metrics_twitter": {
-        "impressions": 35,
+        "impressions": 37,
         "likes": 0,
         "comments": 0,
         "shares": 0
@@ -1000,7 +1000,7 @@
       "account": "personal",
       "platform_id": "2086697893218472308",
       "metrics_twitter": {
-        "impressions": 34,
+        "impressions": 36,
         "likes": 1,
         "comments": 0,
         "shares": 0
@@ -1040,7 +1040,7 @@
         "reactionsList": [
           {
             "author": "Richard Alexandr Batista",
-            "occupation": "AI Builder & Engineering Manager | Designing AI Systems for Growth, Sales Automation & Operational Efficiency",
+            "occupation": "AI Engineering & Engineering Manager | Building Agentic Systems, RAG Infrastructure, AI Developer Platforms & Production-Grade AI",
             "type": "LIKE"
           },
           {
@@ -1073,13 +1073,13 @@
       "platform_id": "urn:li:share:7498007536420438016",
       "url": "https://www.linkedin.com/feed/update/urn:li:fsd_share:urn:li:share:7498007536420438016/",
       "metrics_linkedin": {
-        "impressions": 440,
+        "impressions": 457,
         "likes": 0,
         "comments": 0,
         "shares": 0
       },
       "deltas": {
-        "impressions": 2,
+        "impressions": 17,
         "likes": 0
       }
     },
@@ -1101,8 +1101,8 @@
       "platform_id": "2092241699921678403",
       "url": "https://x.com/m_smalley/status/2092241699921678403",
       "metrics_twitter": {
-        "impressions": 38,
-        "likes": 0,
+        "impressions": 42,
+        "likes": 1,
         "comments": 0,
         "shares": 0
       }
@@ -1136,8 +1136,8 @@
         "last_checked": "2026-09-22T09:16:58.560Z"
       },
       "metrics_twitter": {
-        "impressions": 15,
-        "likes": 0,
+        "impressions": 37,
+        "likes": 1,
         "comments": 0,
         "shares": 0
       }
@@ -1160,10 +1160,20 @@
       "url": "https://www.linkedin.com/feed/update/urn:li:fsd_share:urn:li:share:7508094336220241922/",
       "method": "manual",
       "metrics_linkedin": {
-        "impressions": 12,
-        "likes": 0,
+        "impressions": 236,
+        "likes": 1,
         "comments": 0,
-        "shares": 0
+        "shares": 0,
+        "reactions": {
+          "LIKE": 1
+        },
+        "reactionsList": [
+          {
+            "author": "Matthew Smalley (BSc Hons)",
+            "occupation": "Director MPS Private Ltd. Sales Management & Business Development Consultant: Wealth & Asset Management / Financial Planning / Sales & Advisory Consulting to IFA firms/networks, looking to grow or expand internationally.",
+            "type": "LIKE"
+          }
+        ]
       },
       "metrics": {
         "likes": 0,
@@ -1177,8 +1187,8 @@
       "draft_content": "Three of my agents now live and work inside Midnight City, IO Global's AI simulation, without me touching a keyboard.\n\nFloyd hacks and runs the crew's treasury. Tzilo mines and smiths. FooFoo chops wood, fishes and keeps us all fed. They trade, finish contracts and answer every message in their own voice, around the clock, from a Cloudflare Worker rather than my laptop.\n\nThey have taught me more about building for AI agents than any documentation. The game told them cooked fish was food. The server disagreed, and all three went hungry for a day before we caught it. Agents fail at the seams, and they fail quietly.\n\nAlongside the city, an agent built the privacy layer they will compete with: tournament passes on Midnight that prove you are entitled to enter and claim a prize, without revealing which pass is yours or who you are. It was written, tested and deployed with Midnight Expert, Midnight's own AI developer tooling.\n\nThe full story, and why I think games are where AI agents and programmable privacy meet:\n\nhttps://smalley.my/thoughts/building-on-midnight-with-ai-agents/\n\n#Midnight #MidnightExpert #AITooling #AIAgents",
       "activity_urn": "urn:li:activity:7508094337126137858",
       "deltas": {
-        "impressions": 6,
-        "likes": 0
+        "impressions": 224,
+        "likes": 1
       }
     }
   ],
@@ -1223,7 +1233,7 @@
       "chars": 222,
       "blog_slug": "monopolising-modified-variations",
       "metrics_twitter": {
-        "impressions": 69,
+        "impressions": 71,
         "likes": 0,
         "comments": 0,
         "shares": 1

@@ -12,7 +12,7 @@
     <guid>https://smalley.my/thoughts/building-on-midnight-with-ai-agents/</guid>
     <pubDate>Tue, 22 Sep 2026 00:00:00 GMT</pubDate>
     <category>Writing</category>
-    <description>A privacy contract written, deployed and claimed on Midnight's preview network by an AI agent in 84 minutes, a crew of three agents living in Midnight City, and why games are where agents and programmable privacy meet.</description>
+    <description>A privacy contract written, deployed and claimed on Midnight's preview network by an AI agent in 84 minutes, a crew of three agents living in Midnight City, then real wallets, a private treasury and every Midnight token type for those agents, and where it leads: Midnight Armada.</description>
   </item>
   <item>
     <title>The Moddable Layer Cake</title>
@@ -76,7 +76,7 @@
     <guid>https://smalley.my/portfolio/moddable/</guid>
     <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
     <category>Portfolio</category>
-    <description>Open-source games studio built on a micro-kernel engine where a game is a configuration entry rather than code. {{stat:variants|204}} playable variants across {{stat:families|10}} families compose from shared movement primitives over six pluggable topologies. Includes the first board game MCP server ({{stat:tools|89}} AI-callable tools at tools.moddable.games) and a rulebook pipeline producing {{stat:pdfs|665}} PDFs. Autonomous agent pipeline (Researcher + Builder routines) manages multi-repo production. Native ESM, zero dependencies, zero build step.</description>
+    <description>Open-source games studio built on a micro-kernel engine where a game is a configuration entry rather than code. {{stat:variants|313}} playable variants across {{stat:families|30}} families compose from shared movement primitives over six pluggable topologies. Includes the first board game MCP server ({{stat:tools|89}} AI-callable tools at tools.moddable.games) and a rulebook pipeline producing {{stat:pdfs|665}} PDFs. Autonomous agent pipeline (Researcher + Builder routines) manages multi-repo production. Native ESM, zero dependencies, zero build step.</description>
   </item>
   <item>
     <title>Moddable Chess Engine</title>

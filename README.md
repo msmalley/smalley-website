@@ -46,6 +46,13 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 
 ## Changelog
 
+#### 2026-09-30
+- Midnight article extended with what followed the first two experiments: real wallets for the agents with spending limits, a private crew treasury audited with Midnight's own tools, all four Midnight token types issued and converted on preview, and Midnight Armada as where it leads
+- Moddable engine figures bind live in the Midnight article intro; stale fallback values (variants, families) refreshed across pages and data
+
+#### 2026-09-29
+- Dashboard: Midnight Armada commission requests appear in the community inbox, and midnightarmada.com has its own analytics
+
 #### 2026-09-22
 - New article: "What AI Agents Taught Me About Building on Midnight", covering a privacy contract built and claimed on Midnight's preview network by an AI agent, a three-agent crew running in Midnight City, and games as the proving ground for agents and programmable privacy
 - Article share cards use the bare headline; the name suffix stays in browser tab titles only, since cards already show the site name

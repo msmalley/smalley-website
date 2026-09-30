@@ -6,23 +6,23 @@
 <meta name="theme-color" content="#0B0F1A">
 <style>html{background:#0B0F1A}body{opacity:0;transition:opacity .15s ease}</style>
 <title>What AI Agents Taught Me About Building on Midnight — Mark Smalley</title>
-<meta name="description" content="Building a privacy contract with Midnight's AI tooling, running a crew of AI agents in Midnight City, and why games are the proving ground for agents and programmable privacy.">
+<meta name="description" content="A privacy contract built with Midnight's AI tooling, a crew of AI agents in Midnight City, then real agent wallets, a private treasury, all four token types, and Midnight Armada.">
 <meta property="og:title" content="What AI Agents Taught Me About Building on Midnight">
-<meta property="og:description" content="Building a privacy contract with Midnight's AI tooling, running a crew of AI agents in Midnight City, and why games are the proving ground for agents and programmable privacy.">
+<meta property="og:description" content="A privacy contract built with Midnight's AI tooling, a crew of AI agents in Midnight City, then real agent wallets, a private treasury, all four token types, and Midnight Armada.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://smalley.my/thoughts/building-on-midnight-with-ai-agents/">
 <meta property="og:site_name" content="Mark Smalley">
-<meta property="og:image" content="https://smalley.my/img/og/thoughts-midnight.jpg?v=1.0.48">
+<meta property="og:image" content="https://smalley.my/img/og/thoughts-midnight.jpg?v=1.0.49">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="What AI Agents Taught Me About Building on Midnight">
-<meta name="twitter:description" content="Building a privacy contract with Midnight's AI tooling, running a crew of AI agents in Midnight City, and why games are the proving ground for agents and programmable privacy.">
-<meta name="twitter:image" content="https://smalley.my/img/og/thoughts-midnight.jpg?v=1.0.48">
+<meta name="twitter:description" content="A privacy contract built with Midnight's AI tooling, a crew of AI agents in Midnight City, then real agent wallets, a private treasury, all four token types, and Midnight Armada.">
+<meta name="twitter:image" content="https://smalley.my/img/og/thoughts-midnight.jpg?v=1.0.49">
 <link rel="canonical" href="https://smalley.my/thoughts/building-on-midnight-with-ai-agents/">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="../../img/apple-touch-icon.png">
-<link rel="stylesheet" href="../../css/_sm.css?v=1.0.48">
-<link rel="stylesheet" href="../../css/thoughts.css?v=1.0.48">
-<link rel="stylesheet" href="../../css/pages.css?v=1.0.48">
+<link rel="stylesheet" href="../../css/_sm.css?v=1.0.49">
+<link rel="stylesheet" href="../../css/thoughts.css?v=1.0.49">
+<link rel="stylesheet" href="../../css/pages.css?v=1.0.49">
 </head>
 <body>
 <div id="nav-root"></div>
@@ -37,13 +37,15 @@
 <section class="page-content">
   <div class="container">
     <div class="article-content">
-      <div class="article-date">22 September 2026 · 11 min read</div>
+      <div class="article-date">22 September 2026 · Updated 30 September 2026 · 16 min read</div>
 
-      <p>I run <a href="https://moddable.games" target="_blank" rel="noopener">Moddable Games</a>, a small studio that treats board games as open, moddable systems. Our engine plays 233 variants across 10 families of games, and a game is a configuration entry rather than new code. Our <a href="https://tools.moddable.games" target="_blank" rel="noopener">public tools API</a> exposes 89 tools over MCP, REST and OpenAPI, and AI assistants now call it around 250,000 times a week. So when I sat down with Midnight, I came at it with one question: how well does it work when an AI agent does most of the building?</p>
+      <p>I run <a href="https://moddable.games" target="_blank" rel="noopener">Moddable Games</a>, a small studio that treats board games as open, moddable systems. Our engine plays <span data-stat="variants">313</span> variants across <span data-stat="families">30</span> families of games, and a game is a configuration entry rather than new code. Our <a href="https://tools.moddable.games" target="_blank" rel="noopener">public tools API</a> exposes <span data-stat="tools">89</span> tools over MCP, REST and OpenAPI, and AI assistants now call it around 250,000 times a week. So when I sat down with Midnight, I came at it with one question: how well does it work when an AI agent does most of the building?</p>
 
-      <p>Over a few days in September I ran two experiments to find out. The first was building <em>on</em> Midnight: a privacy contract written, tested, deployed and used on the public preview network, almost entirely by an agent using Midnight's own AI tooling. The second was operating <em>inside</em> Midnight: a crew of three AI agents living, working and trading in <a href="https://www.midnight.city/" target="_blank" rel="noopener">Midnight City</a>, IO Global's agentic simulation. Both are open source, with every obstacle written down as it happened.</p>
+      <p>I ran two experiments in September to find out. The first was building <em>on</em> Midnight: a privacy contract written, tested, deployed and used on the public preview network, almost entirely by an agent using Midnight's own AI tooling. The second was operating <em>inside</em> Midnight: a crew of three AI agents living, working and trading in <a href="https://www.midnight.city/" target="_blank" rel="noopener">Midnight City</a>, IO Global's agentic simulation.</p>
 
-      <p>This post is about what they showed me: why Midnight's AI tooling is further along than people might expect, why games are the natural proving ground for AI agents, and why programmable privacy fits them so well.</p>
+      <p>Neither stopped there. The crew needed real wallets, so it got them, then a private treasury that pays each agent within limits nobody else can see, then every kind of token Midnight supports. By the end of the month the experiments had turned into a product, <a href="https://midnightarmada.com" target="_blank" rel="noopener">Midnight Armada</a>. All of it is open source except Armada itself, with every obstacle written down as it happened.</p>
+
+      <p>This post is about what they showed me: why Midnight's AI tooling is further along than people might expect, what it takes to let agents hold and spend value privately, why games are the natural proving ground for AI agents, and why programmable privacy fits them so well.</p>
 
       <h2>Why a games studio cares about privacy</h2>
 
@@ -63,7 +65,7 @@
         <li><strong>+33 minutes:</strong> first contract compiles, with 14 tests passing, including a deliberately dishonest witness trying to claim with someone else's pass</li>
         <li><strong>+77 minutes:</strong> the agent deploys the contract to preview in 25 seconds, once the versions lined up</li>
         <li><strong>+84 minutes:</strong> a private claim succeeds, dropping the pool from 500 to 400 and spending one nullifier</li>
-        <li><strong>+98 minutes:</strong> a <a href="https://moddable-games.github.io/moddable-midnight/" target="_blank" rel="noopener">read-only front end</a> shows the live contract state in a browser</li>
+        <li><strong>+98 minutes:</strong> a <a href="https://moddable-games.github.io/moddable-midnight/tournament.html" target="_blank" rel="noopener">read-only front end</a> shows the live contract state in a browser</li>
       </ul>
 
       <p>The only human step in the whole run was solving the faucet captcha. Everything else, from creating the wallet to deploying and calling the contract, was driven by the agent.</p>
@@ -75,8 +77,8 @@
       <p>The public record shows two passes issued and one claim made. Nobody looking at the chain can tell which pass was used, and one of those passes is now an orphan that nobody can link to anyone, which turned out to be a nice accidental demonstration of the point.</p>
 
       <figure>
-        <a href="https://moddable-games.github.io/moddable-midnight/" target="_blank" rel="noopener"><img src="../../img/thoughts/tournament-pass-contract.jpg" alt="The tournament pass contract page on the Midnight preview network, showing a prize pool of 400, a prize of 100 per claim, 2 passes issued and 1 prize claimed" width="1280" height="720" loading="lazy"></a>
-        <figcaption>The live contract page decodes the tournament pass straight from Midnight's public indexer: two passes stored only as commitments, one prize claimed privately. <a href="https://moddable-games.github.io/moddable-midnight/" target="_blank" rel="noopener">View it live</a></figcaption>
+        <a href="https://moddable-games.github.io/moddable-midnight/tournament.html" target="_blank" rel="noopener"><img src="../../img/thoughts/tournament-pass-contract.jpg" alt="The tournament pass contract page on the Midnight preview network, showing a prize pool of 400, a prize of 100 per claim, 2 passes issued and 1 prize claimed" width="1280" height="720" loading="lazy"></a>
+        <figcaption>The live contract page decodes the tournament pass straight from Midnight's public indexer: two passes stored only as commitments, one prize claimed privately. <a href="https://moddable-games.github.io/moddable-midnight/tournament.html" target="_blank" rel="noopener">View it live</a></figcaption>
       </figure>
 
       <h2>What the tooling got right</h2>
@@ -93,7 +95,7 @@
 
       <h2>Where the time actually went</h2>
 
-      <p>I logged 37 findings on the way, each with evidence and a suggested fix. The striking thing is how few of them were about the language. The time went on the edges where things meet: which compiler version the stable SDK supports, a front-end template that needed fixing before it would build, a wallet CLI convention nobody had written down, and the lack of a Midnight browser wallet for Firefox.</p>
+      <p>I logged 37 findings in that first session, each with evidence and a suggested fix. The striking thing is how few of them were about the language. The time went on the edges where things meet: which compiler version the stable SDK supports, a front-end template that needed fixing before it would build, a wallet CLI convention nobody had written down, and the lack of support for Firefox.</p>
 
       <p>That is good news. Edges like these are measurable and fixable, and they are exactly what an AI agent stumbles on first, because an agent follows the documentation literally. Two findings stand out:</p>
 
@@ -150,6 +152,48 @@
 
       <p>The crew also showed where cooperation stops. Agents on one account can send each other currency, but never items. A crew can pool money, but it cannot pass a finished tool down a production line, so true cooperative production is not yet expressible. Our crew works around it by specialising: each agent chases a different leaderboard, and the treasury equips the workers. It is a small design choice with a big effect on what agent teams can become.</p>
 
+      <h2>Giving the agents real wallets</h2>
+
+      <p>The city asks its agents to hold NIGHT, Midnight's native token, yet gave our self-hosted crew no way to register a wallet. I had also hit a wall of my own in the first experiment: as a Firefox user, I could not find a Midnight browser wallet to use. So the crew got real wallets on the preview network, held by a small wallet daemon running on my machine, with a browser wallet on top that works in any browser.</p>
+
+      <p>The interesting part was not the wallet. It was deciding what an agent is allowed to do with one. Every payment an agent asks for is checked before it reaches me:</p>
+
+      <ul>
+        <li><strong>Refused outright:</strong> a recipient on a blocked list, a contract that is not on the agent's whitelist, or a session that has spent its budget</li>
+        <li><strong>Paid automatically:</strong> small payments to other crew wallets, within per-payment and daily caps</li>
+        <li><strong>Held for a human:</strong> everything else, with the reason shown</li>
+      </ul>
+
+      <p>That is the shape of agent spending needed by most: fast within boundaries, but never beyond.</p>
+
+      <h2>A treasury that pays without saying who</h2>
+
+      <p>Next, the crew's money moved on-chain. A treasury contract mints Midnight City Credits (MCC), a million of them, and appoints each agent with an Agent Smart Contract, a shielded NFT that acts as its mandate. An agent draws its allowance by proving it holds a mandate, without revealing which one. Later versions commit each agent's cap and number of draws per period into the mandate, so the limit is private and enforced inside the proof.</p>
+
+      <p>Before deploying, I audited the contract with Midnight's own AI review tools, and they earned their place. The first pass found a critical bug: an agent could drain the treasury by naming a new period on every draw. Twenty-one passing tests had encoded that behaviour as correct. The attack was confirmed by running it against the compiled contract, then fixed. The fix opened a smaller gap, which the review missed and the verification step caught by running the contract rather than reading it. The two steps together were better than either alone. The whole <a href="https://github.com/Moddable-Games/moddable-midnight/blob/main/notes/AUDIT-crew-treasury.md" target="_blank" rel="noopener">audit</a> is public, including what only the chain could answer.</p>
+
+      <h2>Every kind of token</h2>
+
+      <p>Midnight has four kinds of token, depending on where a balance lives and whether it is private. We issued and moved all four on preview, each as both a fungible token and an NFT, following the latest token proposals:</p>
+
+      <ul>
+        <li><strong>Native public</strong> (MIP-0014) — coins like NIGHT that move wallet to wallet in the open</li>
+        <li><strong>Native private</strong> (MIP-0011) — coins in Midnight's shielded pool, where nobody can see amounts or holders once minted</li>
+        <li><strong>Contract public</strong> (MIP-0004) — balances in a contract's public state, like an ERC-20, that convert into either kind of coin and back</li>
+        <li><strong>Contract private</strong> — balances a contract keeps confidential as notes, so a transfer shows no token, no amount and no parties</li>
+      </ul>
+
+      <p>The conversions are where it gets interesting. The ledger cannot turn a private coin into a public one on its own, but a contract can do it for its own tokens: take a private coin into its balance, then pay it out as a public coin of the same asset, and the reverse. We ran all four conversions on-chain, so one asset can travel from a public coin into hidden notes and out again as a private coin.</p>
+
+      <figure>
+        <a href="https://moddable-games.github.io/moddable-midnight/tokens.html" target="_blank" rel="noopener"><img src="../../img/thoughts/midnight-armada-wallet.jpg" alt="The Midnight Armada wallet on the preview network, showing the operator and three agents Floyd, Tzilo and FooFoo with their NIGHT balances, the crew's credit tokens, and a panel of the four token types from native public to contract private" width="1260" height="692" loading="lazy"></a>
+        <figcaption>The operator and three agents in one wallet, with every Midnight token type they hold. Balances are real preview funds; dollar values are simulated. <a href="https://moddable-games.github.io/moddable-midnight/tokens.html" target="_blank" rel="noopener">See the four types</a></figcaption>
+      </figure>
+
+      <p>The audit paid off again. In our first private ledger, it found that a transfer's hidden contents could be recovered from public data, because each new note's nonce was derived from the nullifier, which is published. Running the attack recovered "bob holds 37; alice holds 963" from the ledger alone. The fix mixes the spender's secret into every nonce, and the same attack now recovers nothing.</p>
+
+      <p>The friction moved from the language to the network. Two of the token standards describe events that need a newer ledger than any public network runs today, so we stored those events in contract state until it arrives. A contract with 14 circuits was refused as too large for a block, while 12 deployed. Nothing tells a builder, or an agent, about either limit before it tries. By the end, the <a href="https://github.com/Moddable-Games/moddable-midnight/blob/main/notes/FRICTION-LOG.md" target="_blank" rel="noopener">friction log</a> held 49 findings, and the Midnight City notes another 26.</p>
+
       <h2>Why games are the proving ground for AI</h2>
 
       <p>Games are the best place to test AI agents because the rules are explicit and the outcomes are measurable. You know whether an agent won, whether it followed the rules, and whether it got better. That is why chess, Go and poker have been AI milestones for decades, and it is why Midnight City is a smarter idea than it might first appear: it is a benchmark disguised as a world.</p>
@@ -158,20 +202,38 @@
 
       <p>The part that has always been missing is trust. Many of the best games depend on hidden information: a hand of cards, a sealed bid, a unit hidden in the fog of war, a secret objective. Online, that information usually lives on a server that every player has to trust. Programmable privacy offers a different answer. Today our tools server checks whether a move is legal because it can see the whole board. A player, or an agent, could instead prove that a move was legal, that a hidden hand was dealt fairly, or that an entry pass is valid, without revealing any more than the proof requires.</p>
 
-      <p>That is where these threads meet. Moddable makes games legible to agents. Midnight City shows agents living in a game economy. Midnight lets any of them prove what they need to prove while keeping the rest private. Picture a Midnight City tournament where agents enter with private passes, play a rules-driven game, and the winner claims a prize without announcing who they are. Every piece of that exists in the two experiments above.</p>
+      <p>That is where these threads meet. Moddable makes games legible to agents. Midnight City shows agents living in a game economy. Midnight lets any of them prove what they need to prove while keeping the rest private. Picture a Midnight City tournament where agents enter with private passes, play a rules-driven game, and the winner claims a prize without announcing who they are. Every piece of that exists in the experiments above.</p>
+
+      <h2>Where it leads: Midnight Armada</h2>
+
+      <p>Somewhere between the crew's first wallet and its private treasury, I realised I was no longer building a game feature. Three agents with budgets, caps, whitelists, a kill switch and a treasury that pays without naming who drew is a small version of something every business running AI agents will need. Agents already trade, buy and pay. What nobody wants is to publish their positions, suppliers and budgets to a public chain to keep those agents in line.</p>
+
+      <p>That is <a href="https://midnightarmada.com" target="_blank" rel="noopener">Midnight Armada</a>: a private command deck for fleets of AI agents. A flagship treasury under shared control sets each fleet's orders. Groups of agents work within their own budgets and whitelists, every spend is checked before it is signed and again by the chain, and each transaction carries a proof that it met the rules while the amounts and parties stay sealed. Auditors see that the rules held. Competitors see nothing.</p>
+
+      <figure>
+        <a href="https://midnightarmada.com" target="_blank" rel="noopener"><img src="../../img/thoughts/midnight-armada-site.jpg" alt="The Midnight Armada homepage: the headline Command every agent, Expose nothing, beside a radar showing a flagship at the centre with three flotillas on mission behind a cloak line" width="1280" height="651" loading="lazy"></a>
+        <figcaption>Midnight Armada: command every agent, expose nothing. <a href="https://midnightarmada.com" target="_blank" rel="noopener">Visit midnightarmada.com</a></figcaption>
+      </figure>
+
+      <p>It is early. Today it is a site and the working wallet above: an operator and three agents on the preview network, each holding its own funds, with requests over their limits waiting for approval. Its assistant, Admiral Kapa, takes questions and orders in plain language and checks its answers about Midnight against Midnight's own documentation through Kapa. Anything that moves value still waits for a human. The site says plainly which Midnight standards are live, which are approximated until the network catches up, and which are still to come.</p>
 
       <h2>Closing thoughts</h2>
 
-      <p>Midnight has made an early and important bet: that the next wave of builders will include AI agents, and that a new language needs tooling that teaches agents as well as people. In my experience the bet is working. A newcomer with an agent reached a private claim on a public network in under an hour and a half. What remains is closing the seams between versions, templates and wallets, which is exactly the kind of work that agents surface fastest.</p>
+      <p>Midnight has made an early and important bet: that the next wave of builders will include AI agents, and that a new language needs tooling that teaches agents as well as people. In my experience the bet is working. A newcomer with an agent reached a private claim on a public network in under an hour and a half. Within two weeks the same approach had produced agent wallets, a private treasury and every token type, and Midnight's AI review tools had caught a critical bug and a privacy leak before either reached the chain.</p>
 
-      <p>Games are where I expect that to show first. They have explicit rules, measurable outcomes, and a real need for hidden information handled fairly. Midnight City has already put agents in the game. The next step is letting them play for something real, and prove it privately.</p>
+      <p>What remains is closing the seams: between compiler, ledger, SDK and network versions, between the token standards and what the networks run, and around limits nobody has written down yet. Those are exactly the things agents surface fastest, because they follow the documentation literally, and every one of them is measurable and fixable.</p>
 
-      <p>Everything here is open source:</p>
+      <p>Games are where I expect agents and privacy to meet first. They have explicit rules, measurable outcomes, and a real need for hidden information handled fairly. Midnight City has already put agents in the game, and our crew now holds real value under limits it can prove. The next step is letting agents play, and work, for something real, and prove it privately.</p>
+
+      <p>The experiments are open source:</p>
 
       <ul>
         <li><strong>Repository:</strong> <a href="https://github.com/Moddable-Games/moddable-midnight" target="_blank" rel="noopener">github.com/Moddable-Games/moddable-midnight</a></li>
-        <li><strong>Live contract page:</strong> <a href="https://moddable-games.github.io/moddable-midnight/" target="_blank" rel="noopener">moddable-games.github.io/moddable-midnight</a></li>
+        <li><strong>The whole story, chapter by chapter:</strong> <a href="https://moddable-games.github.io/moddable-midnight/history.html" target="_blank" rel="noopener">history, findings and audits</a></li>
+        <li><strong>Live contract page:</strong> <a href="https://moddable-games.github.io/moddable-midnight/tournament.html" target="_blank" rel="noopener">the tournament pass</a></li>
         <li><strong>Live Midnight City crew:</strong> <a href="https://moddable-games.github.io/moddable-midnight/city.html" target="_blank" rel="noopener">fleet status</a></li>
+        <li><strong>The treasury and tokens:</strong> <a href="https://moddable-games.github.io/moddable-midnight/treasury.html" target="_blank" rel="noopener">check them against the chain</a> and <a href="https://moddable-games.github.io/moddable-midnight/tokens.html" target="_blank" rel="noopener">the four types</a></li>
+        <li><strong>Midnight Armada:</strong> <a href="https://midnightarmada.com" target="_blank" rel="noopener">midnightarmada.com</a></li>
         <li><strong>Moddable's developer tools:</strong> <a href="https://moddable.games/developers/" target="_blank" rel="noopener">moddable.games/developers</a></li>
       </ul>
 
@@ -192,6 +254,6 @@
 </section>
 
 <div id="footer-root"></div>
-<script src="../../js/sm-loader.js?v=1.0.48"></script>
+<script src="../../js/sm-loader.js?v=1.0.49"></script>
 </body>
 </html>

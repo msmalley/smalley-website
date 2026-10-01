@@ -144,13 +144,55 @@ function stampOutcomeDate(job, newStatus, outcomeDate) {
   if (newStatus === 'declined') job.declined_date = outcomeDate || today;
 }
 
-function updateStatus(jobId, newStatus, outcomeDate) {
+// A pass on a lead is only useful if it says why: the reasons are what tune the
+// search keywords, ingest filters and scoring. "Not interested" teaches nothing,
+// so a rejection needs a category from this list plus a specific explanation.
+const REJECTION_CATEGORIES = {
+  sector:       'Industry or domain is wrong (e.g. gaming, healthcare, adtech)',
+  seniority:    'Level is too junior or too senior for the target',
+  'role-fit':   'The actual work does not match (e.g. people manager only, pure infra)',
+  location:     'Office attendance, relocation or timezone does not work',
+  compensation: 'Pay, equity or contract terms are unacceptable',
+  company:      'The company itself (stage, reputation, product, culture)',
+  recruiter:    'Posted by a recruiter with no named client, or a known poor agency',
+  duplicate:    'Same role already tracked under another listing (needs --of)',
+  stale:        'Listing closed, expired or reposted'
+};
+
+const VAGUE_REASONS = /^(not (interested|suitable|a fit|right)|no|nah|pass|meh|n\/a|-)\.?$/i;
+
+function validateRejection(rejection) {
+  const categories = Object.keys(REJECTION_CATEGORIES);
+  const usage = 'A rejection needs --reason <category> --why "<specifics>" (and --of <job-id|linkedin-id> for duplicates).\n'
+    + 'Categories:\n' + categories.map(c => `  ${c.padEnd(13)} ${REJECTION_CATEGORIES[c]}`).join('\n');
+
+  if (!rejection || !rejection.category) return usage;
+  if (!categories.includes(rejection.category)) return `Unknown category "${rejection.category}".\n${usage}`;
+  if (rejection.category === 'duplicate') {
+    if (!rejection.duplicate_of) return `A duplicate needs --of naming the job it duplicates.\n${usage}`;
+    return null;
+  }
+  const why = (rejection.why || '').trim();
+  if (!why || VAGUE_REASONS.test(why) || why.split(/\s+/).length < 4) {
+    return `--why must say specifically what ruled it out (at least a few words), not just "not interested".\n${usage}`;
+  }
+  return null;
+}
+
+function updateStatus(jobId, newStatus, outcomeDate, rejection) {
+  if (newStatus === 'rejected') {
+    const problem = validateRejection(rejection);
+    if (problem) { console.error(problem); process.exit(1); }
+    rejection = { ...rejection, date: outcomeDate || new Date().toISOString().split('T')[0] };
+  }
+
   const data = loadJobs();
   const matches = j => j.id && (j.id === jobId || j.id.startsWith(jobId));
 
   const job = data.jobs.find(matches);
   if (job) {
     job.status = newStatus;
+    if (rejection) job.rejection = rejection;
     stampOutcomeDate(job, newStatus, outcomeDate);
     archiveIfTerminal(data, job);
     saveJobs(data);
@@ -169,6 +211,7 @@ function updateStatus(jobId, newStatus, outcomeDate) {
   }
 
   archived.status = newStatus;
+  if (rejection) archived.rejection = rejection;
   stampOutcomeDate(archived, newStatus, outcomeDate);
 
   if (ARCHIVE_STATUSES.includes(newStatus)) {
@@ -336,6 +379,10 @@ switch (command) {
       console.error('Usage: node job-pipeline.js record --company X --role Y --status declined [--ref R] [--applied YYYY-MM-DD] [--outcome-date YYYY-MM-DD] [--location L] [--url U] [--notes "..."]');
       process.exit(1);
     }
+    if (status === 'rejected') {
+      console.error('A rejection needs a reason: use `status <job-id> rejected --reason <category> --why "..."` instead of record.');
+      process.exit(1);
+    }
     recordOutcome({
       company, role, status,
       ref: flag('ref'), applied: flag('applied'), outcomeDate: flag('outcome-date'),
@@ -355,8 +402,29 @@ switch (command) {
     break;
   }
   case 'status': {
-    if (!arg || !process.argv[4]) { console.error('Usage: node job-pipeline.js status <job-id> <new-status> [outcome-date YYYY-MM-DD]'); process.exit(1); }
-    updateStatus(arg, process.argv[4], process.argv[5] || null);
+    if (!arg || !process.argv[4]) { console.error('Usage: node job-pipeline.js status <job-id> <new-status> [outcome-date YYYY-MM-DD] [--reason C --why "..." --of ID]'); process.exit(1); }
+    const flag = n => { const i = process.argv.indexOf('--' + n); return i > -1 ? process.argv[i + 1] : null; };
+    const date = process.argv[5] && !process.argv[5].startsWith('--') ? process.argv[5] : null;
+    const rejection = flag('reason') ? { category: flag('reason'), why: flag('why'), duplicate_of: flag('of') } : null;
+    updateStatus(arg, process.argv[4], date, rejection);
+    break;
+  }
+  case 'reasons': {
+    // Rejected leads are terminal, so they live in the archive alongside any
+    // still-active ones that were given a reason before archiving.
+    const rejected = [...loadJobs().jobs, ...loadArchive().jobs].filter(j => j.status === 'rejected');
+    const withReason = rejected.filter(j => j.rejection);
+    const byCategory = {};
+    for (const j of withReason) (byCategory[j.rejection.category] ||= []).push(j);
+
+    console.log(`${rejected.length} rejected leads, ${withReason.length} with a recorded reason.\n`);
+    for (const [category, jobs] of Object.entries(byCategory).sort((a, b) => b[1].length - a[1].length)) {
+      console.log(`${category} (${jobs.length})`);
+      for (const j of jobs) {
+        const detail = j.rejection.category === 'duplicate' ? `duplicate of ${j.rejection.duplicate_of}` : j.rejection.why;
+        console.log(`  [${j.score ?? '-'}] ${j.company} | ${j.role}\n        ${detail}`);
+      }
+    }
     break;
   }
   case 'enrich': {
@@ -386,6 +454,10 @@ switch (command) {
   node job-pipeline.js status <job-id> <new-status> [YYYY-MM-DD]
                                                         Update job status, dating the
                                                         outcome from the decline itself
+  node job-pipeline.js status <job-id> rejected --reason <category> --why "..." [--of <id>]
+                                                        Pass on a lead; the reason is
+                                                        required (see: reasons)
+  node job-pipeline.js reasons                          Summarise why leads were passed on
   node job-pipeline.js record --company X --role Y --status S   Record a historical
                                                         outcome with no verified JD
   node job-pipeline.js remove <job-id>                   Delete a mis-parsed record

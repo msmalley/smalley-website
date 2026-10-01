@@ -57,7 +57,7 @@ html{background:#0B0F1A}body{opacity:0;transition:opacity .15s ease}
 
       <h2>What is Moddable.Games</h2>
 
-      <p>At its core, Moddable is a collection of game engines, a rules library, and an AI-accessible tools layer. We currently have 45 published games with 333 playable variants, 458 oracle tables for tabletop RPGs, and 3,385 searchable entities. Six game families are fully playable online with AI opponents.</p>
+      <p>At its core, Moddable is a collection of game engines, a rules library, and an AI-accessible tools layer. We currently have <span data-stat="games">46</span> published games with <span data-stat="variants">313</span> playable variants, <span data-stat="oracleTables">458</span> oracle tables for tabletop RPGs, and <span data-stat="entities">3,385</span> searchable entities, across <span data-stat="families">30</span> playable game families.</p>
 
       <p>The key insight is that games are data, not code. A chess variant is a set of rules declared in structured frontmatter. The engine resolves those rules into legal moves, win conditions, and board states. No variant-specific code required beyond win conditions that rely upon hook and filters, with everything else as pure declarations that the engine interprets.</p>
 
@@ -219,7 +219,7 @@ html{background:#0B0F1A}body{opacity:0;transition:opacity .15s ease}
 
       <p>This architecture has an elegant commercial property. The bottom two layers (rules and engine) are fully open-source. Anyone can read the variant definitions. Anyone can run the engine locally. Anyone can fork, extend, contribute back.</p>
 
-      <p>The tools layer is where commercial value concentrates. 83 MCP tools across 9 namespaces, a JavaScript SDK, embeddable widgets, REST API. The orchestration that manages game state across sessions, runs AI opponents at scale, renders boards to PNG via WASM. You can see everything we build in the open layers. You just cannot run our infrastructure.</p>
+      <p>The tools layer is where commercial value concentrates. <span data-stat="tools">89</span> MCP tools across 8 namespaces, a JavaScript SDK, embeddable widgets, REST API. The orchestration that manages game state across sessions, runs AI opponents at scale, renders boards to PNG via WASM. You can see everything we build in the open layers. You just cannot run our infrastructure.</p>
 
       <p>This only works because the layers are genuinely independent. If the engine needed the tools layer to function, open-sourcing the engine would be theatre. Because each layer is complete in isolation, the open source is genuine and the commercial layer earns its value by providing services that individuals don't need locally.</p>
 

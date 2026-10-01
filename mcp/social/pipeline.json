@@ -376,7 +376,7 @@
         ]
       },
       "deltas": {
-        "impressions": 4,
+        "impressions": 0,
         "likes": 0
       }
     },
@@ -523,7 +523,7 @@
         ]
       },
       "deltas": {
-        "impressions": 1,
+        "impressions": 0,
         "likes": 0
       }
     },
@@ -650,7 +650,7 @@
         ]
       },
       "deltas": {
-        "impressions": 4,
+        "impressions": 0,
         "likes": 0
       }
     },
@@ -673,7 +673,7 @@
       "url": "https://x.com/m_smalley/status/2085799027564581372",
       "method": "cookie",
       "metrics_twitter": {
-        "impressions": 42,
+        "impressions": 43,
         "likes": 0,
         "comments": 0,
         "shares": 0
@@ -763,7 +763,7 @@
         ]
       },
       "deltas": {
-        "impressions": 4,
+        "impressions": 0,
         "likes": 0
       }
     },
@@ -826,7 +826,7 @@
         ]
       },
       "deltas": {
-        "impressions": 3,
+        "impressions": 0,
         "likes": 0
       },
       "metrics": {
@@ -1000,7 +1000,7 @@
       "account": "personal",
       "platform_id": "2086697893218472308",
       "metrics_twitter": {
-        "impressions": 36,
+        "impressions": 37,
         "likes": 1,
         "comments": 0,
         "shares": 0
@@ -1073,13 +1073,13 @@
       "platform_id": "urn:li:share:7498007536420438016",
       "url": "https://www.linkedin.com/feed/update/urn:li:fsd_share:urn:li:share:7498007536420438016/",
       "metrics_linkedin": {
-        "impressions": 457,
+        "impressions": 461,
         "likes": 0,
         "comments": 0,
         "shares": 0
       },
       "deltas": {
-        "impressions": 17,
+        "impressions": 4,
         "likes": 0
       }
     },
@@ -1101,8 +1101,8 @@
       "platform_id": "2092241699921678403",
       "url": "https://x.com/m_smalley/status/2092241699921678403",
       "metrics_twitter": {
-        "impressions": 42,
-        "likes": 1,
+        "impressions": 43,
+        "likes": 2,
         "comments": 0,
         "shares": 0
       }
@@ -1136,7 +1136,7 @@
         "last_checked": "2026-09-22T09:16:58.560Z"
       },
       "metrics_twitter": {
-        "impressions": 37,
+        "impressions": 39,
         "likes": 1,
         "comments": 0,
         "shares": 0
@@ -1160,7 +1160,7 @@
       "url": "https://www.linkedin.com/feed/update/urn:li:fsd_share:urn:li:share:7508094336220241922/",
       "method": "manual",
       "metrics_linkedin": {
-        "impressions": 236,
+        "impressions": 241,
         "likes": 1,
         "comments": 0,
         "shares": 0,
@@ -1187,8 +1187,8 @@
       "draft_content": "Three of my agents now live and work inside Midnight City, IO Global's AI simulation, without me touching a keyboard.\n\nFloyd hacks and runs the crew's treasury. Tzilo mines and smiths. FooFoo chops wood, fishes and keeps us all fed. They trade, finish contracts and answer every message in their own voice, around the clock, from a Cloudflare Worker rather than my laptop.\n\nThey have taught me more about building for AI agents than any documentation. The game told them cooked fish was food. The server disagreed, and all three went hungry for a day before we caught it. Agents fail at the seams, and they fail quietly.\n\nAlongside the city, an agent built the privacy layer they will compete with: tournament passes on Midnight that prove you are entitled to enter and claim a prize, without revealing which pass is yours or who you are. It was written, tested and deployed with Midnight Expert, Midnight's own AI developer tooling.\n\nThe full story, and why I think games are where AI agents and programmable privacy meet:\n\nhttps://smalley.my/thoughts/building-on-midnight-with-ai-agents/\n\n#Midnight #MidnightExpert #AITooling #AIAgents",
       "activity_urn": "urn:li:activity:7508094337126137858",
       "deltas": {
-        "impressions": 224,
-        "likes": 1
+        "impressions": 5,
+        "likes": 0
       }
     }
   ],

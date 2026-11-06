@@ -141,6 +141,10 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://smalley.my/thoughts/neon-knights-local-models/</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://smalley.my/thoughts/protocol-design-lessons/</loc>
     <priority>0.6</priority>
   </url>

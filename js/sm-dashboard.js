@@ -1,7 +1,9 @@
 (function() {
-  var snapshotUrl = SM.url('/dashboard/data/snapshot.json?v=' + SM.VERSION);
+  // Snapshots change with every refresh, not with the site version, so they are never
+  // served from the browser cache.
+  var snapshotUrl = SM.url('/dashboard/data/snapshot.json');
 
-  fetch(snapshotUrl).then(function(r) { return r.json(); }).then(render).catch(function(e) {
+  fetch(snapshotUrl, { cache: 'no-store' }).then(function(r) { return r.json(); }).then(render).catch(function(e) {
     document.getElementById('dashboard-meta').textContent = 'Failed to load snapshot: ' + e.message;
   });
 
@@ -9,11 +11,12 @@
     renderMeta(data._meta);
     renderAlerts(data);
     renderIndicators(data.indicators);
-    fetch(SM.url('/dashboard/data/trends.json?v=' + SM.VERSION)).then(function(r) { return r.json(); }).then(renderTrends).catch(function() {});
+    fetch(SM.url('/dashboard/data/trends.json'), { cache: 'no-store' }).then(function(r) { return r.json(); }).then(renderTrends).catch(function() {});
     if (data.employment) renderEmployment(data.employment);
     if (data.social) renderSocial(data.social);
     if (data.moddable_social) renderModdableSocial(data.moddable_social);
     if (data.analytics) renderAnalytics(data.analytics);
+    if (data.neon_events) renderNeonEvents(data.neon_events);
     if (data.agents) renderAgents(data.agents);
     if (data.github) renderGitHub(data.github);
     if (data.cloudflare) renderCloudflare(data.cloudflare, data.analytics, data.analytics?.mcp_tools_usage);
@@ -889,8 +892,8 @@
   function renderAnalytics(analytics) {
     var el = document.getElementById('analytics-content');
     var grid = SM.el('div', { class: 'dashboard-grid-2' });
-    var sites = [['smalley_my', 'smalley.my'], ['moddable_games', 'moddable.games'], ['midnight_armada', 'midnightarmada.com']];
-    var SITE_DOMAINS = { smalley_my: 'smalley.my', moddable_games: 'moddable.games', midnight_armada: 'midnightarmada.com' };
+    var sites = [['smalley_my', 'smalley.my'], ['moddable_games', 'moddable.games'], ['midnight_armada', 'midnightarmada.com'], ['neon_knights', 'neon.smalley.my']];
+    var SITE_DOMAINS = { smalley_my: 'smalley.my', moddable_games: 'moddable.games', midnight_armada: 'midnightarmada.com', neon_knights: 'neon.smalley.my' };
 
     for (var s = 0; s < sites.length; s++) {
       var key = sites[s][0], label = sites[s][1];
@@ -1180,6 +1183,47 @@
     el.appendChild(eventsGrid);
   }
 
+  // Neon Knights play events (neon.smalley.my -> Workers Analytics Engine, last 30 days).
+  function renderNeonEvents(ne) {
+    var el = document.getElementById('analytics-content');
+    var sessions = ne.sessions_30d === 1 ? '1 session' : (ne.sessions_30d || 0) + ' sessions';
+    var panel = SM.el('div', { class: 'dashboard-panel neon-play' },
+      SM.el('div', { class: 'dashboard-panel-title' }, 'Neon Knights play (30d): ' + sessions + ', ' + (ne.sessions_7d || 0) + ' this week'));
+    el.appendChild(panel);
+    if (ne.error || ne.note) {
+      panel.appendChild(SM.el('p', {}, ne.error || ne.note));
+      return;
+    }
+
+    var LABELS = { map_enter: 'Maps entered', weather: 'Weather asked for', dj_track: 'DJ tracks played', dj_set_complete: 'DJ sets completed', board_open: 'Boards opened', board_game: 'Board games finished or left', live_talk: 'Live conversations' };
+    var table = function (head, rows) {
+      var t = SM.el('table', { class: 'metrics-table' });
+      t.appendChild(SM.el('thead', {}, SM.el('tr', {}, ...head.map(function (h) { return SM.el('th', {}, h); }))));
+      var body = SM.el('tbody');
+      rows.forEach(function (r) { body.appendChild(SM.el('tr', {}, ...r.map(function (c) { return SM.el('td', {}, String(c)); }))); });
+      t.appendChild(body);
+      return t;
+    };
+
+    panel.appendChild(table(['Event', 'Count', 'Sessions'], (ne.events || []).map(function (e) {
+      return [LABELS[e.event] || e.event, e.n, e.sessions];
+    })));
+    panel.appendChild(table(['Event', 'Detail', 'Count'], (ne.subjects || []).slice(0, 30).map(function (e) {
+      return [LABELS[e.event] || e.event, e.subject, e.n];
+    })));
+    if (ne.board_variants && ne.board_variants.length) {
+      panel.appendChild(table(['Game', 'Variant', 'Opponent', 'Opened', 'Finished', 'Won'], ne.board_variants.map(function (b) {
+        return [b.family, b.variant, b.opponent || '—', b.opened, b.finished, b.won];
+      })));
+    }
+    if (ne.boards && ne.boards.length) {
+      panel.appendChild(table(['Game', 'Outcome', 'Count'], ne.boards.map(function (b) { return [b.family, b.outcome, b.n]; })));
+    }
+    if (ne.countries && ne.countries.length) {
+      panel.appendChild(table(['Country', 'Sessions'], ne.countries.map(function (c) { return [c.country || '?', c.sessions]; })));
+    }
+  }
+
   function renderAgents(agents) {
     var el = document.getElementById('agents-content');
     var grid = SM.el('div', { class: 'dashboard-grid-2' });
@@ -1315,6 +1359,7 @@
       { label: 'Mod submissions', value: String(kv.submission_count) },
       { label: 'Pending review', value: String(kv.pending_submissions) },
       { label: 'Armada commissions', value: String(kv.commission_count || 0) },
+      { label: 'Neon Knights talk lines', value: String(kv.talk_count || 0) },
       { label: 'Active jam', value: kv.jam ? 'Jam #' + (kv.jam.number || '?') : 'None' }
     ]));
 
@@ -1402,6 +1447,37 @@
       comTable.appendChild(comTbody);
       comPanel.appendChild(comTable);
       el.appendChild(comPanel);
+    }
+
+    // Neon Knights live NPC talk (neon.smalley.my /api/talk): one row per exchange.
+    if (kv.talks && kv.talks.length > 0) {
+      var talkPanel = SM.el('div', { class: 'dashboard-panel', style: { marginTop: '24px' } },
+        SM.el('div', { class: 'dashboard-panel-title' },
+          'Neon Knights Conversations (' + kv.talk_count + ' lines, ' + kv.talk_conversations + ' conversations, ' + kv.talk_week + ' this week)')
+      );
+      var talkTable = SM.el('table', { class: 'metrics-table' });
+      talkTable.appendChild(SM.el('thead', {},
+        SM.el('tr', {},
+          SM.el('th', {}, 'When'), SM.el('th', {}, 'Character'), SM.el('th', {}, 'Turn'),
+          SM.el('th', {}, 'Player said'), SM.el('th', {}, 'Reply'), SM.el('th', {}, 'ms')
+        )
+      ));
+      var talkTbody = SM.el('tbody');
+      for (var t = 0; t < kv.talks.length; t++) {
+        var line = kv.talks[t];
+        var when = line.at ? line.at.replace('T', ' ').slice(0, 16) : '—';
+        talkTbody.appendChild(SM.el('tr', {},
+          SM.el('td', { style: { whiteSpace: 'nowrap' } }, when),
+          SM.el('td', {}, line.character || '—'),
+          SM.el('td', {}, String(line.turn || '—')),
+          SM.el('td', {}, line.said || '—'),
+          SM.el('td', {}, line.reply || '—'),
+          SM.el('td', {}, String(line.ms || '—'))
+        ));
+      }
+      talkTable.appendChild(talkTbody);
+      talkPanel.appendChild(talkTable);
+      el.appendChild(talkPanel);
     }
   }
 

@@ -1,5 +1,33 @@
 [
   {
+    "slug": "neon-knights-local-models",
+    "title": "District 42: A Cyberpunk City Built by Scripts and Brought to Life on a Laptop",
+    "date": "2026-11-06",
+    "readingTime": "22 min",
+    "tags": [
+      "AI/LLM",
+      "Game design",
+      "JavaScript",
+      "Moddable Games",
+      "SDXL",
+      "ChatGPT",
+      "Kling v3 Omni",
+      "SAM 2",
+      "Depth Anything V2",
+      "Stable Audio Open",
+      "CLAP",
+      "MusicGen",
+      "LMMS",
+      "Kokoro",
+      "Qwen3",
+      "Ollama",
+      "Llama 3.2",
+      "MeloTTS",
+      "Workers AI"
+    ],
+    "excerpt": "Neon Knights is a cyberpunk RPG built in RPGJS Studio: nine street maps, 144 rooms, 159 voiced characters and five kinds of weather. Most of it was written by scripts, and its sound, voices and conversations come from open models run on a 16 GB laptop."
+  },
+  {
     "slug": "building-on-midnight-with-ai-agents",
     "title": "What AI Agents Taught Me About Building on Midnight",
     "date": "2026-09-22",

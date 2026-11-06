@@ -528,6 +528,14 @@
 .article-content figure img {
   margin: 0 0 8px;
 }
+.article-content figure video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--sm-border);
+  margin: 0 0 8px;
+}
 .article-content figcaption {
   font-size: 0.85rem;
   color: var(--sm-muted);

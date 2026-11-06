@@ -46,6 +46,12 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 
 ## Changelog
 
+#### 2026-11-06
+- New article: "District 42: A Cyberpunk City Built by Scripts and Brought to Life on a Laptop", on building the Neon Knights city in RPGJS Studio with scripts and local models, with playable music and voice samples in its tables
+- Article tables can carry play buttons for short audio clips (`js/sm-audio-samples.js`)
+- Dashboard: Neon Knights play events (maps, weather, DJ tracks, board games, conversations) from Workers Analytics Engine, and neon.smalley.my as its own analytics site, no longer counted in smalley.my's figures
+- Dashboard snapshots are always fetched fresh instead of from the browser cache
+
 #### 2026-09-30
 - Midnight article extended with what followed the first two experiments: real wallets for the agents with spending limits, a private crew treasury audited with Midnight's own tools, all four Midnight token types issued and converted on preview, and Midnight Armada as where it leads
 - Moddable engine figures bind live in the Midnight article intro; stale fallback values (variants, families) refreshed across pages and data

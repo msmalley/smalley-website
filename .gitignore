@@ -35,6 +35,8 @@ cvs/html/cv_crypto_policy_specialist.html
 cvs/html/cv_digital_money_product.html
 cvs/html/cv_founder_eir.html
 cvs/html/cv_devrel_engineer.html
+cvs/html/cv_engineering_manager_digital_assets.html
+cvs/html/cv_lead_engineer_architect_dlt.html
 cvs/dist/Mark-Smalley-CV.pdf
 cvs/dist/Mark-Smalley-AI-Engineer.pdf
 cvs/dist/Mark-Smalley-Digital-Assets-Product.pdf
@@ -45,6 +47,8 @@ cvs/dist/Mark-Smalley-Crypto-Policy-Specialist.pdf
 cvs/dist/Mark-Smalley-Digital-Money-Product.pdf
 cvs/dist/Mark-Smalley-Entrepreneur-in-Residence.pdf
 cvs/dist/Mark-Smalley-DevRel-Engineer.pdf
+cvs/dist/Mark-Smalley-Engineering-Manager-Digital-Assets.pdf
+cvs/dist/Mark-Smalley-Lead-Engineer-Architect-DLT.pdf
 cvs/dist/cv_generic.png
 cvs/dist/cv_ai_engineer.png
 cvs/dist/cv_digital_assets_product.png
@@ -55,6 +59,8 @@ cvs/dist/cv_crypto_policy_specialist.png
 cvs/dist/cv_digital_money_product.png
 cvs/dist/cv_founder_eir.png
 cvs/dist/cv_devrel_engineer.png
+cvs/dist/cv_engineering_manager_digital_assets.png
+cvs/dist/cv_lead_engineer_architect_dlt.png
 cvs/ats/Mark-Smalley-CV.txt
 cvs/ats/Mark-Smalley-AI-Engineer.txt
 cvs/ats/Mark-Smalley-Digital-Assets-Product.txt
@@ -65,6 +71,8 @@ cvs/ats/Mark-Smalley-Crypto-Policy-Specialist.txt
 cvs/ats/Mark-Smalley-Digital-Money-Product.txt
 cvs/ats/Mark-Smalley-Entrepreneur-in-Residence.txt
 cvs/ats/Mark-Smalley-DevRel-Engineer.txt
+cvs/ats/Mark-Smalley-Engineering-Manager-Digital-Assets.txt
+cvs/ats/Mark-Smalley-Lead-Engineer-Architect-DLT.txt
 
 # Interview prep sheets (private, never committed)
 cvs/interview-prep.css

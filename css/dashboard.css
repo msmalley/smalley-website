@@ -595,3 +595,12 @@
     padding: 5px 10px;
   }
 }
+
+/* Neon Knights play panel: several small tables, spaced apart */
+.neon-play .metrics-table + .metrics-table {
+  margin-top: 28px;
+}
+.neon-play .metrics-table th:not(:last-child),
+.neon-play .metrics-table td:not(:last-child) {
+  text-align: left;
+}

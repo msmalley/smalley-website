@@ -461,6 +461,60 @@ img { max-width: 100%; height: auto; display: block; }
   background: var(--sm-surface);
 }
 
+/* Audio sample play buttons (sm-audio-samples.js) */
+.article-content table td.audio-cell {
+  width: 1%;
+  white-space: nowrap;
+}
+.audio-cell-inner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: -5.5px 0;  /* centres the 32px button on the first 21px text line */
+  font-size: 12px;
+  color: var(--sm-muted);
+}
+.audio-sample {
+  position: relative;
+  flex: none;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--sm-violet-glow);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.audio-sample:hover,
+.audio-sample:focus-visible {
+  background: rgba(167, 139, 250, 0.15);
+}
+/* Play: a CSS triangle, nudged right to sit optically centred */
+.audio-sample::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -6px 0 0 -3px;
+  border-style: solid;
+  border-width: 6px 0 6px 10px;
+  border-color: transparent transparent transparent var(--sm-violet-glow);
+}
+/* Pause: two bars */
+.audio-sample.is-playing {
+  background: var(--sm-violet-glow);
+}
+.audio-sample.is-playing::before {
+  box-sizing: border-box;
+  width: 10px;
+  height: 12px;
+  margin: -6px 0 0 -5px;
+  border-width: 0 3px;
+  border-color: var(--sm-deep);
+  background: transparent;
+}
+
 .puzzle-embed {
   margin: 32px 0;
   padding: 24px;

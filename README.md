@@ -51,6 +51,7 @@ GitHub Pages with custom domain (`smalley.my`). Push to `main` to deploy.
 - Article tables can carry play buttons for short audio clips (`js/sm-audio-samples.js`)
 - Dashboard: Neon Knights play events (maps, weather, DJ tracks, board games, conversations) from Workers Analytics Engine, and neon.smalley.my as its own analytics site, no longer counted in smalley.my's figures
 - Dashboard snapshots are always fetched fresh instead of from the browser cache
+- Thoughts entries can carry a `shortTitle` for the thoughts index, where a long headline would wrap; the article itself, feeds and share cards keep the full title
 
 #### 2026-09-30
 - Midnight article extended with what followed the first two experiments: real wallets for the agents with spending limits, a private crew treasury audited with Midnight's own tools, all four Midnight token types issued and converted on preview, and Midnight Armada as where it leads

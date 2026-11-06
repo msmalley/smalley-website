@@ -27,7 +27,8 @@ SM.getData('thoughts').then(function(allPosts) {
   if (featuredEl && posts.length > 0) {
     var f = posts[0];
     featuredEl.href = SM.url('/thoughts/' + f.slug + '/');
-    featuredTitle.textContent = f.title;
+    // shortTitle: an optional shorter headline for this index only, where the full one wraps
+    featuredTitle.textContent = f.shortTitle || f.title;
     featuredExcerpt.textContent = f.excerpt;
     var fParts = f.date.split('-');
     var featNumEl = document.getElementById('featured-number');
@@ -63,7 +64,7 @@ SM.getData('thoughts').then(function(allPosts) {
       dateBlock,
       SM.el('div', { class: 'thought-card-body' },
         SM.el('div', { class: 'thought-card-date' }, meta),
-        SM.el('div', { class: 'thought-card-title' }, p.title),
+        SM.el('div', { class: 'thought-card-title' }, p.shortTitle || p.title),
         SM.el('div', { class: 'thought-card-excerpt' }, p.excerpt),
         tags
       )
